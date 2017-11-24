@@ -1,0 +1,22 @@
+﻿@using Newtonsoft.Json
+@model SAM.Web.Shop.Models.SearchSpoolResultsModel
+@{
+    Layout = "~/Views/Layouts/YardLayout.cshtml";
+}
+
+<div id="searchResults" data-search="@JsonConvert.SerializeObject(new { Model.Spool})">
+    <div class="list-group" id="rows">
+        @Html.Partial("_SpoolSearchResults", Model.Results.Records)
+    </div>
+    @Html.Partial("_Pager", Model.Results)
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function() {
+            var page = new sam.pages.yard.spoolSearchResults($("#searchResults"));
+            page.init();
+        });
+    </script>
+}

@@ -1,0 +1,2 @@
+
+    <add key="Sam.Ingenieria.WorkStatusReports" value="D:\Sieena\Development\SAM 2.0\Desarrollo\WebSolution\SAM.Web\ODT"/> 

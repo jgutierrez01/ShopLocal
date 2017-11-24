@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Sam.Reportes", "Sam.Reportes\Sam.Reportes.rptproj", "{7DC26855-03B8-410D-9058-93CB37B86EBD}"
+EndProject
+Project("{999D2CB9-9277-4465-A902-1604ED3686A3}") = "Sam.Modelos", "Sam.Modelos\Sam.Modelos.smdlproj", "{EE817B08-7ED3-4019-9ECF-00787870587B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Debug|Default.ActiveCfg = Debug
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Debug|Default.Build.0 = DebugLocal
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Debug|Default.Deploy.0 = DebugLocal
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.DebugLocal|Default.Build.0 = DebugLocal
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Production|Default.ActiveCfg = Release
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Production|Default.Build.0 = Release
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Production|Default.Deploy.0 = Release
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Release|Default.ActiveCfg = Release
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Release|Default.Build.0 = Release
+		{7DC26855-03B8-410D-9058-93CB37B86EBD}.Release|Default.Deploy.0 = Release
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Debug|Default.ActiveCfg = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Debug|Default.Build.0 = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Debug|Default.Deploy.0 = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.DebugLocal|Default.ActiveCfg = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.DebugLocal|Default.Build.0 = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.DebugLocal|Default.Deploy.0 = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Production|Default.ActiveCfg = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Production|Default.Build.0 = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Production|Default.Deploy.0 = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Release|Default.ActiveCfg = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Release|Default.Build.0 = Production
+		{EE817B08-7ED3-4019-9ECF-00787870587B}.Release|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

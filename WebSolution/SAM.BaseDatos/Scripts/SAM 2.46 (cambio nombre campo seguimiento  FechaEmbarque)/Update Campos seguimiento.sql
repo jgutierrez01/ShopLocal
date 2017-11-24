@@ -1,0 +1,2 @@
+UPDATE CampoSeguimientoJunta SET Nombre = 'Fecha RealEmbarque', NombreIngles = 'Shipping ActualDate' where Nombre = 'Fecha Embarque' 
+UPDATE CampoSeguimientoSpool SET Nombre = 'Fecha RealEmbarque', NombreIngles = 'Shipping ActualDate' where Nombre = 'Fecha Embarque' 

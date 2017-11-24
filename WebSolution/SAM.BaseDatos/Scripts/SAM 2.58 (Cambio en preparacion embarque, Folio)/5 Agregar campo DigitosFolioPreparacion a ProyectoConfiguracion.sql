@@ -1,0 +1,1 @@
+ALTER TABLE ProyectoConfiguracion ADD DigitosFolioPreparacion INT

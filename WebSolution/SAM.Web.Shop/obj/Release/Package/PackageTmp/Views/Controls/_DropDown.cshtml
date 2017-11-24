@@ -1,0 +1,21 @@
+﻿@using Newtonsoft.Json
+@using Resources.Views
+@using SAM.Web.Shop.Models
+@model DropDownModel
+
+
+<label class="control-label" for="@Model.Config.Name">@Model.Config.LabelText</label>
+<select class="@Html.Raw(Model.RenderErrorPrefix())form-control" id="@Model.Config.Name" name="@Model.Config.Name" @Html.Raw(Model.RenderValidationAttributtes())>
+    @if (Model.Config.IncludeEmptyOption)
+    {
+        <option value="">@ControlsStrings.SelectOne</option>   
+    }
+    @foreach (DropDownItem item in @Model.Items)
+    {
+        <option value="@item.Id" data-item="@JsonConvert.SerializeObject(item.Attributes)" @Html.Raw(Model.RenderSelected(item))>@item.Text</option>
+    }
+</select>
+@if (Model.Config.IsRequired)
+{
+    @Html.ValidationMessage(@Model.Config.Name)
+}

@@ -1,0 +1,1 @@
+update WorkstatusSpool SET FolioPreparacion = 0

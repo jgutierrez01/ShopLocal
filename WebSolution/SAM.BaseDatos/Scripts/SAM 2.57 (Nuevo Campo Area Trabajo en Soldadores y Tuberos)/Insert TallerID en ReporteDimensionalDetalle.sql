@@ -1,0 +1,2 @@
+ALTER TABLE ReporteDimensionalDetalle ADD TallerID INT NULL FOREIGN KEY (TallerID) REFERENCES Taller(TallerID)
+ALTER TABLE ReporteDimensionalDetalle ADD InspectorID INT NULL FOREIGN KEY (InspectorID) REFERENCES Inspector(InspectorID)

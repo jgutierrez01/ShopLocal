@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{794B70EF-E0A5-4529-B892-7BED8AA7FB37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAM.BusinessLogic</RootNamespace>
+    <AssemblyName>SAM.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dlls\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\Dlls\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Dlls\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\CalculoDestajoSoldadores.cs" />
+    <Compile Include="Administracion\CalculoDestajoTuberos.cs" />
+    <Compile Include="Administracion\CamposJuntaSpoolBL.cs" />
+    <Compile Include="Administracion\CamposMaterialSpoolBL.cs" />
+    <Compile Include="Administracion\CampoSpoolBL.cs" />
+    <Compile Include="Administracion\DestajoBL.cs" />
+    <Compile Include="Administracion\EspesorBL.cs" />
+    <Compile Include="Administracion\KgTeoricoBL.cs" />
+    <Compile Include="Administracion\PendienteBL.cs" />
+    <Compile Include="Administracion\PeqBL.cs" />
+    <Compile Include="Administracion\PesoItemCodeBL.cs" />
+    <Compile Include="Administracion\UsuarioBL.cs" />
+    <Compile Include="Calidad\CertificacionBL.cs" />
+    <Compile Include="Calidad\CaratulaBL.cs" />
+    <Compile Include="Calidad\DetalleJunta.cs" />
+    <Compile Include="Calidad\DetalleJuntaCampo.cs" />
+    <Compile Include="Calidad\DetalleJuntaWorkstatus.cs" />
+    <Compile Include="Calidad\SeguimientoJuntaBL.cs" />
+    <Compile Include="Calidad\SeguimientoSpoolBL.cs" />
+    <Compile Include="Cruce\CruceForzado.cs" />
+    <Compile Include="Cruce\CruceMaterial.cs" />
+    <Compile Include="Cruce\CruceProyecto.cs" />
+    <Compile Include="Cruce\CruceSpool.cs" />
+    <Compile Include="Cruce\UtileriasCruce.cs" />
+    <Compile Include="Delegados.cs" />
+    <Compile Include="Excel\ExcelPeqKgtEspNoEncontrados.cs" />
+    <Compile Include="Excel\MsgPeqKgtEspNoEncontrados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgPeqKgtEspNoEncontrados.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsItemCodePeso.Designer.cs">
+      <DependentUpon>MsgsItemCodePeso.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Excel\ExcelItemCodePeso.cs" />
+    <Compile Include="Excel\MsgsFaltantes.Designer.cs">
+      <DependentUpon>MsgsFaltantes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Excel\ExcelLstItemCode.cs" />
+    <Compile Include="Excel\ExcelLstNumeroUnico.cs" />
+    <Compile Include="Excel\ExcelReporteFaltantes.cs" />
+    <Compile Include="Excel\MsgsItemCodePeso.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsItemCodePeso.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsLstItemCode.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsLstItemCode.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsLstNumeroUnico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsLstNumeroUnico.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsNomina.en-US.Designer.cs">
+      <DependentUpon>MsgsNomina.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Excel\ExcelDestajos.cs" />
+    <Compile Include="Excel\ExcelEstimacionJuntas.cs" />
+    <Compile Include="Excel\ExcelEstimacionSpool.cs" />
+    <Compile Include="Excel\ExcelNomina.cs" />
+    <Compile Include="Excel\ExcelSeguimientoJuntas.cs" />
+    <Compile Include="Excel\ExcelSeguimientoSpool.cs" />
+    <Compile Include="Excel\MsgsDestajos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsDestajos.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsEstJunta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsEstJunta.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsEstSpool.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsEstSpool.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsNomina.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsNomina.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsSegJunta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsSegJunta.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\MsgsSegSpool.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgsSegSpool.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\UtileriasCsv.cs" />
+    <Compile Include="Excel\UtileriasExcel.cs" />
+    <Compile Include="Excepciones\ExcepcionNumeroUnicoMovimiento.cs" />
+    <Compile Include="Excepciones\ExcepcionCorte.cs" />
+    <Compile Include="Excepciones\ExcepcionCruce.cs" />
+    <Compile Include="Excepciones\ExcepcionDestajo.cs" />
+    <Compile Include="Excepciones\ExcepcionEspesor.cs" />
+    <Compile Include="Excepciones\ExcepcionItemCodeEquivalente.cs" />
+    <Compile Include="Excepciones\ExcepcionKgTeorico.cs" />
+    <Compile Include="Excepciones\ExcepcionMaterialInsuficiente.cs" />
+    <Compile Include="Excepciones\ExcepcionNumeroUnicoDespacho.cs" />
+    <Compile Include="Excepciones\ExcepcionPeq.cs" />
+    <Compile Include="Excepciones\ExcepcionProcesos.cs" />
+    <Compile Include="Excepciones\ExcepcionSeguimiento.cs" />
+    <Compile Include="Homologacion\HomologacionBL.cs" />
+    <Compile Include="Ingenieria\ArchivoSimple.cs" />
+    <Compile Include="Ingenieria\SpoollPendienteHelper.cs" />
+    <Compile Include="Ingenieria\CorteSpoolIng.cs" />
+    <Compile Include="Ingenieria\Excepciones\ExcepcionInterprete.cs" />
+    <Compile Include="Ingenieria\IngenieriaBL.cs" />
+    <Compile Include="Ingenieria\InterpreteDatos.cs" />
+    <Compile Include="Ingenieria\IRegistroValido.cs" />
+    <Compile Include="Ingenieria\JuntaSpoolIng.cs" />
+    <Compile Include="Ingenieria\MaterialPendienteHelper.cs" />
+    <Compile Include="Ingenieria\MaterialSpoolIng.cs" />
+    <Compile Include="Ingenieria\SpoolIng.cs" />
+    <Compile Include="Materiales\NumeroUnicoBL.cs" />
+    <Compile Include="Materiales\RecepcionBL.cs" />
+    <Compile Include="MensajesError.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensajesError.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\JuntaWorkstatusBL.cs" />
+    <Compile Include="Produccion\OrdenTrabajoBL.cs" />
+    <Compile Include="Produccion\OrdenTrabajoEspecialBL.cs" />
+    <Compile Include="Produccion\OrdenTrabajoEspecialSpoolBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proyectos\ItemCodeEquivalenteBL.cs" />
+    <Compile Include="Proyectos\ProyectoBL.cs" />
+    <Compile Include="Utilerias\EnvioCorreos.cs" />
+    <Compile Include="Utilerias\GeneradorCorreos.cs" />
+    <Compile Include="Utilerias\PivoteEstimacion.cs" />
+    <Compile Include="Utilerias\TitulosColumnaEstimacionJunta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TitulosColumnaEstimacionJunta.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilerias\TitulosColumnaEstimacionSpool.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TitulosColumnaEstimacionSpool.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Workstatus\SoldaduraBL.cs" />
+    <Compile Include="Workstatus\CorteBL.cs" />
+    <Compile Include="Workstatus\DespachoBL.cs" />
+    <Compile Include="Workstatus\ReportesBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mimo.Framework\Mimo.Framework.csproj">
+      <Project>{344217DB-C52B-4F73-9BBC-C06742FD38B2}</Project>
+      <Name>Mimo.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.BusinessObjects\SAM.BusinessObjects.csproj">
+      <Project>{B239B46F-7627-42EC-94F5-61B3FEF55AB2}</Project>
+      <Name>SAM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.Common\SAM.Common.csproj">
+      <Project>{AAF73BDC-FC91-40EB-9584-E039A241BB1E}</Project>
+      <Name>SAM.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.Entities\SAM.Entities.csproj">
+      <Project>{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}</Project>
+      <Name>SAM.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Excel\MsgPeqKgtEspNoEncontrados.en-US.resx" />
+    <EmbeddedResource Include="Excel\MsgPeqKgtEspNoEncontrados.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgPeqKgtEspNoEncontrados.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsItemCodePeso.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsItemCodePeso.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsItemCodePeso.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsItemCodePeso.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsFaltantes.en-US.resx" />
+    <EmbeddedResource Include="Excel\MsgsFaltantes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsFaltantes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsLstItemCode.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsLstItemCode.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsLstItemCode.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsLstNumeroUnico.en-US.resx" />
+    <EmbeddedResource Include="Excel\MsgsLstNumeroUnico.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsLstNumeroUnico.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsNomina.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsNomina.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsDestajos.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsDestajos.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsEstJunta.en-US.resx" />
+    <EmbeddedResource Include="Excel\MsgsEstJunta.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsEstJunta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsEstSpool.en-US.resx" />
+    <EmbeddedResource Include="Excel\MsgsEstSpool.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsEstSpool.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsNomina.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsNomina.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsSegJunta.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsSegJunta.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>MsgsSegJunta.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsSegSpool.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel\MsgsSegSpool.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgsSegSpool.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajesError.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajesError.resx">
+      <LastGenOutput>MensajesError.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilerias\TitulosColumnaEstimacionJunta.en-US.resx" />
+    <EmbeddedResource Include="Utilerias\TitulosColumnaEstimacionJunta.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TitulosColumnaEstimacionJunta.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilerias\TitulosColumnaEstimacionSpool.en-US.resx" />
+    <EmbeddedResource Include="Utilerias\TitulosColumnaEstimacionSpool.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TitulosColumnaEstimacionSpool.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

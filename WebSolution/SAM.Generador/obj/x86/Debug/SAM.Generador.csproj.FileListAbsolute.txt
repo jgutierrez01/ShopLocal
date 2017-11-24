@@ -1,0 +1,2 @@
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Generador\obj\x86\Debug\SAM.Generador.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Generador\obj\x86\Debug\SAM.Generador.csprojResolveAssemblyReference.cache

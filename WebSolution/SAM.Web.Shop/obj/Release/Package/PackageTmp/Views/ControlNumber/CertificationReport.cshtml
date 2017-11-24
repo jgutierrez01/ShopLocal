@@ -1,0 +1,500 @@
+﻿ @using Newtonsoft.Json 
+ @using Resources.Views 
+ @using SAM.Web.Shop.Resources.Models.Reports 
+ @using SAM.Web.Shop.Extensions 
+ @using SAM.Web.Shop.Models 
+ @model CertificationReportModel 
+ 
+ 
+ @{ 
+     ViewBag.Title = ControlNumberStrings.PageTitle; 
+     Layout = "~/Views/Layouts/ReportLayout.cshtml"; 
+ } 
+ <div  style="background-color:lightgray; width:100%; position:absolute;">
+     <p style="font-size:14px;">
+
+       @Model.Yard  /  @Model.Project  /  @Model.NumberControl
+       </p>
+    </div>
+ 
+ @using (Html.BeginForm()) 
+ {  
+     <fieldset> 
+         <legend></legend>
+   
+         <br />
+     <div class="form-group" style="float:right;"> 
+         <table style=""> 
+             <tbody> 
+                 <tr> 
+                     <td> 
+                         <button type="button" id="traveler" class="btn btn-primary btn-block" >@Html.Raw(CertificationReportStrings.ShowTraveler_Text)</button>                 
+                     </td> 
+                     <td> 
+                         <button type="button" id="instalacion" class="btn btn-primary btn-block" >@Html.Raw(CertificationReportStrings.ShowInstalation_Text)</button>                 
+                     </td> 
+                     <td> 
+                         <button type="button" id="dibujoCliente" class="btn btn-primary btn-block" >@Html.Raw(CertificationReportStrings.ShowDibujo_Text)</button>    
+                     </td> 
+                 </tr> 
+             </tbody>       
+         </table> 
+      </div> 
+         </fieldset> 
+    
+ <fieldset style="border-style:solid; border-color:gray;"> 
+     <legend>@Html.Raw(CertificationReportStrings.DetailSpool)</legend> 
+         
+        <div id="DetailSpool" >        
+             <div class="table-responsive"> 
+                 <table class="table table-striped table-condensed"> 
+                     <thead> 
+                         <tr> 
+                             <th>@Html.Raw(CertificationReportStrings.Isometric)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.Hold)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.DateHold)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.Joints)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.Weight)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.Area)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.PDI)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.PEQS)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.CustomerReview)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.Specification)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.PercentagePnd)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.DimensionalRelease)</th>                            
+                             <th>@Html.Raw(CertificationReportStrings.RTestHydrostatic)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.TestHydrostatic)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.NumberShipment)</th> 
+                             <th>@Html.Raw(CertificationReportStrings.DateShipment)</th> 
+                         </tr> 
+                     </thead> 
+                     <tbody> 
+                         <tr> 
+                             <td>@Model.DetailSpool.Isometric</td> 
+                             <td>@Model.DetailSpool.Hold</td> 
+                             <td>@Model.DetailSpool.HoldDate</td> 
+                             <td>@Model.DetailSpool.Joints</td> 
+                             <td>@Model.DetailSpool.Weight</td> 
+                             <td>@Model.DetailSpool.Area</td> 
+                             <td>@Model.DetailSpool.PDI</td> 
+                             <td>@Model.DetailSpool.PEQS</td> 
+                             <td>@Model.DetailSpool.CustomerReview</td> 
+                             <td>@Model.DetailSpool.Specification</td> 
+                             <td>@Model.DetailSpool.PercentagePND %</td>                         
+                             <td>@Model.DetailSpool.DimensionalLiberation</td>                            
+                             <td>@Model.DetailSpool.RequiredTestHydrostatic</td> 
+                             <td>@Model.DetailSpool.TestHydrostatic</td> 
+                             <td>@Model.DetailSpool.NumberShipment</td> 
+                             <td>@Model.DetailSpool.ShipmentDate</td> 
+                         </tr> 
+                     </tbody> 
+                 </table> 
+              </div> 
+           </div>        
+ </fieldset> 
+ 
+ 
+ <fieldset> 
+     <legend style="border-style:solid; border-color:gray;">@Html.Raw(CertificationReportStrings.DetailJoints)</legend> 
+      
+     <div id="DetailJoints" > 
+         <div class="table-responsive"> 
+             <table class="table table-striped table-condensed"> 
+                 <thead> 
+                     <tr> 
+                         <th>@Html.Raw(CertificationReportStrings.Joint)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Type)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Diameter)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Cedula)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Fitting)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Welding)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.WPS)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.WelderRoot)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.WelderFiller)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.DateVisualInspection)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.ResultVisualInspection)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.UniqueNumber + " 1")</th> 
+                         <th>@Html.Raw(CertificationReportStrings.UniqueNumber + " 2")</th> 
+                         <th>@Html.Raw(CertificationReportStrings.RT)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.PT)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.RequiredPWHT)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.PWHT)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Hardness)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.PMI)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.RTestNeumatic)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.TestNeumatic)</th> 
+                     </tr>            
+                 </thead> 
+                 <tbody>                                  
+                     @foreach (DetailJointModel dj in Model.DetailJoints) 
+                     {                                       
+                         <tr> 
+                             <td>@dj.Joint</td> 
+                             <td>@dj.TypeJoint</td> 
+                             <td>@dj.Diameter</td> 
+                             <td>@dj.Cedula</td> 
+                             <td>@dj.FittingDate</td> 
+                             <td>@dj.WeldingDate</td> 
+                             <td>@dj.WPS</td> 
+                             <td>@dj.WelderRoot</td> 
+                             <td>@dj.WelderFiller</td> 
+                             <td>@dj.VIDate</td> 
+                             <td>@dj.ResultVisualInspection</td> 
+                             <td>@dj.UniqueNumberOne</td> 
+                             <td>@dj.UniqueNumberTwo</td> 
+                             <td>@dj.RT</td> 
+                             <td>@dj.PT</td>  
+                             <td>@dj.RequiredPWHT</td>                            
+                             <td>@dj.PWHT</td> 
+                             <td>@dj.Hardness</td> 
+                             <td>@dj.PMI</td>
+                             <td>@dj.RequiredTestNeumatic</td> 
+                             <td>@dj.TestNeumatic</td> 
+                             
+                         </tr>  
+                         }  
+                     </tbody> 
+             </table> 
+         </div>      
+     </div>              
+ </fieldset> 
+ 
+      
+ <fieldset> 
+     <legend style="border-style:solid; border-color:gray;">@Html.Raw(CertificationReportStrings.DetailMaterials)</legend> 
+      
+     <div id="DetailMaterials" >      
+         <div class="table-responsive"> 
+             <table class="table table-striped table-condensed"> 
+                 <thead> 
+                     <tr> 
+                         <th>@Html.Raw(CertificationReportStrings.Label)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.UniqueNumber)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Heat)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Certified)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.ItemCode)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.DiameterOne)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.DiameterTwo)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Description)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Quantity)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Manufacturer)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Motion)</th> 
+                         <th>@Html.Raw(CertificationReportStrings.Notes)</th>                       
+ 
+ 
+                     </tr>            
+                 </thead> 
+                 <tbody>                                  
+                     @foreach (MaterialModel m in Model.DetailMaterials) 
+                     {                                       
+                         <tr> 
+                             <td>@m.Label</td> 
+                             <td>@m.UniqueNumber</td> 
+                             <td>@m.Heat</td>
+                             <td>@m.Certified</td> 
+                             <td>@m.ItemCode</td> 
+                             <td>@m.DiameterOne</td> 
+                             <td>@m.DiameterTwo</td> 
+                             <td>@m.Descprition</td> 
+                             <td style="text-align: right;width:10px;">@m.Quantity</td> 
+                             <td>@m.Manufacturer</td> 
+                             <td>@m.Motion</td> 
+                             <td>@m.Notes</td>                                 
+                         </tr>  
+                         }  
+                     </tbody> 
+             </table> 
+         </div>     
+     </div>              
+ </fieldset> 
+      
+      
+ <fieldset> 
+     <legend style="border-style:solid; border-color:gray;">@Html.Raw(CertificationReportStrings.Painting)</legend> 
+      
+     <div id="DetailPainting" >      
+        <div class="table-responsive"> 
+             <table class="table table-striped table-condensed"> 
+                 <thead> 
+                     <tr> 
+                         <th></th> 
+                         <th ></th>   
+                         <th style="text-align:center;" colspan="2" >@Html.Raw(CertificationReportStrings.Primario)</th>                     
+                         <th style="text-align:center;" colspan="2">@Html.Raw(CertificationReportStrings.Intermedio)</th>       
+                         <th style="text-align:center;" colspan="2">@Html.Raw(CertificationReportStrings.Acabado)</th>   
+                                  
+ 
+ 
+                     </tr>     
+                     <tr> 
+                         <th >@Html.Raw(CertificationReportStrings.System)</th> 
+                         <th >@Html.Raw(CertificationReportStrings.Color)</th>   
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Date)</th>                     
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Report)</th>   
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Date)</th>                     
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Report)</th>   
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Date)</th>                     
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Report)</th>   
+                     </tr>        
+                 </thead> 
+                 <tbody>                    
+                     <tr> 
+                         <td>@Model.DetailSpool.System</td> 
+                         <td>@Model.DetailSpool.Color</td> 
+                         <td style="text-align:center;">@Model.DetailSpool.PrimariotDate</td> 
+                         <td style="text-align:center;">@Model.DetailSpool.ReportePrimario</td> 
+                         <td style="text-align:center;">@Model.DetailSpool.IntermedioDate</td> 
+                         <td style="text-align:center;">@Model.DetailSpool.ReporteIntermedio</td>   
+                         <td style="text-align:center;">@Model.DetailSpool.AcabadoVisualDate</td> 
+                         <td style="text-align:center;">@Model.DetailSpool.ReporteAcabadoVisual</td>                                                           
+                     </tr>  
+                          
+                 </tbody> 
+             </table> 
+         </div>     
+     </div>              
+ </fieldset> 
+      
+     <fieldset> 
+           <legend style="border-style:solid; border-color:gray;">@Html.Raw(CertificationReportStrings.ChkLstShipping)</legend> 
+         <div  class="table-responsive"> 
+             <table class="table table-striped table-condensed"> 
+                 <thead> 
+                     <tr> 
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Hold)</th>                     
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.MIL)</th>   
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Dispatch)</th>                     
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Fitting)</th>   
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Welding)</th>  
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.VisualInspection)</th>  
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.DimensionalInspection)</th>   
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.PWHT)</th>    
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.PND)</th>                     
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.Paint)</th>   
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.OKMIL)</th>                     
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.OkPaint)</th>   
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.OkQuality)</th>                     
+                         <th style="text-align:center;" >@Html.Raw(CertificationReportStrings.PreparationShipping)</th>   
+                          
+                     </tr> 
+                 </thead> 
+                  <tbody>                    
+                     <tr> 
+                        <td style="text-align:center;">   
+                            @if(@Model.DetailCheckListShipping.Hold.Equals("NO")) 
+                            { 
+                                <img src="~/Content/Images/OK.png" />
+                            } 
+                            else 
+                            { 
+                                <label class="lbl-ERROR">@Model.DetailCheckListShipping.Hold</label> 
+                            }  
+                        </td>  
+
+                         <td style="text-align:center;">
+                              @if (@Model.DetailCheckListShipping.Materials.HasValue)
+                              {
+                                  if (@Model.DetailCheckListShipping.Materials.Value)
+                                 {
+                                    <img src="~/Content/Images/OK.png" />
+                                 }
+                                 else
+                                 { 
+                                     <img src="~/Content/Images/NO.png" />
+                                 } 
+                             }
+                         </td> 
+                         <td style="text-align:center;">
+                             @if (@Model.DetailCheckListShipping.Dispatch.HasValue)   
+                             {
+                                 if (@Model.DetailCheckListShipping.Dispatch.Value) 
+                                 {
+                                    <img src="~/Content/Images/OK.png" />
+                                 }
+                                 else
+                                 { 
+                                     <img src="~/Content/Images/NO.png" />
+                                 } 
+                            }
+                         </td> 
+                         <td style="text-align:center;">
+                             @if (@Model.DetailCheckListShipping.Fitting.HasValue)
+                             {
+                                 if (@Model.DetailCheckListShipping.Fitting.Value)
+                                 {
+                                    <img src="~/Content/Images/OK.png" />
+                                 }
+                                 else
+                                 { 
+                                     <img src="~/Content/Images/NO.png" />
+                                 } 
+                             }
+                         </td> 
+                         <td style="text-align:center;">
+                            @if(@Model.DetailCheckListShipping.Welding.HasValue) 
+                            { 
+                                if (@Model.DetailCheckListShipping.Welding == 1) 
+                                { 
+                                    <img src="~/Content/Images/OK.png" />
+                                } 
+                                else if (@Model.DetailCheckListShipping.Welding == 0) 
+                                {
+                                    <img src="~/Content/Images/NO.png" />
+                                }
+                                else if (@Model.DetailCheckListShipping.Welding == 2) 
+                                { 
+                                    <label class="lbl-ERROR">@Html.Raw(CertificationReportStrings.Soporte)</label> 
+                                }  
+                            }
+                         </td> 
+                         <td style="text-align:center;">
+                            @if (@Model.DetailCheckListShipping.VisualInspection.HasValue) 
+                            { 
+                                if (@Model.DetailCheckListShipping.VisualInspection.Value) 
+                                { 
+                                    <img src="~/Content/Images/OK.png" />
+                                }
+                                else
+                                { 
+                                    <img src="~/Content/Images/NO.png" />
+                                } 
+                            }
+                         </td> 
+                         <td style="text-align:center;">
+                            @if (@Model.DetailCheckListShipping.DimensionalInspection.HasValue) 
+                            { 
+                                if (@Model.DetailCheckListShipping.DimensionalInspection.Value) 
+                                { 
+                                    <img src="~/Content/Images/OK.png" />
+                                }
+                                else
+                                { 
+                                    <img src="~/Content/Images/NO.png" />
+                                } 
+                           }
+                         </td>   
+                         <td style="text-align:center;">                             
+                              @if (@Model.DetailCheckListShipping.PWHT.HasValue) 
+                               { 
+                                  if (@Model.DetailCheckListShipping.PWHT.Value == 1) 
+                                  { 
+                                      <img src="~/Content/Images/OK.png" /> 
+                                  } 
+                                  else if (@Model.DetailCheckListShipping.PWHT.Value== 0) 
+                                  {  
+                                     <img src="~/Content/Images/NO.png" />
+                                  }                                  
+                               } 
+                         </td> 
+                         <td style="text-align:center;">
+                              @if (@Model.DetailCheckListShipping.PND.HasValue) 
+                               { 
+                                  if (@Model.DetailCheckListShipping.PND.Value == 1) 
+                                  { 
+                                       <img src="~/Content/Images/NOSE.png" /> 
+                                  } 
+                                  else if (@Model.DetailCheckListShipping.PND.Value == 2) 
+                                  { 
+                                     <img src="~/Content/Images/OK.png" />
+                                  } 
+                                   else if (@Model.DetailCheckListShipping.PND.Value == 3) 
+                                  { 
+                                       <img src="~/Content/Images/NoAplica.png" />
+                                  } 
+                                  else if (@Model.DetailCheckListShipping.PND.Value == 4) 
+                                  { 
+                                      <img src="~/Content/Images/NO.png" /> 
+                                  }                                                             
+                                  else if (@Model.DetailCheckListShipping.PND.Value == 6) 
+                                  { 
+                                       <label class="lbl-OK">@Html.Raw(CertificationReportStrings.PT_MT)</label> 
+                                  }  
+                               } 
+                                                
+                         </td> 
+                         <td style="text-align:center;">
+
+                              @if (@Model.DetailCheckListShipping.Paint.HasValue) 
+                               { 
+                                  if (@Model.DetailCheckListShipping.Paint == 1) 
+                                  { 
+                                     <img src="~/Content/Images/OK.png" />
+                                  } 
+                                  else 
+                                  {  
+                                      if(@Model.DetailCheckListShipping.SistemaPintura.StartsWith("FCN") || 
+                                          (@Model.DetailCheckListShipping.SistemaPintura.Equals("No Paint")) || 
+                                          (@Model.DetailCheckListShipping.SistemaPintura.Equals("NoPaint") )) 
+                                      { 
+                                          <label class="lbl-OK">@Model.DetailCheckListShipping.SistemaPintura</label> 
+                                      } 
+                                      else 
+                                      { 
+                                           <label class="lbl-ERROR">@Model.DetailCheckListShipping.SistemaPintura</label> 
+                                      } 
+                                  }  
+                              }   
+
+                         <td style="text-align:center;" >
+                              @if (@Model.DetailCheckListShipping.OKMIL.HasValue) 
+                               { 
+                                   if (@Model.DetailCheckListShipping.OKMIL.Value) 
+                                   {
+                                      <img src="~/Content/Images/OK.png" />
+                                   }
+                                   else
+                                   { 
+                                       <img src="~/Content/Images/NO.png" />
+                                   }   
+                                }                             
+                         </td> 
+                         <td style="text-align:center;">
+                              @if (@Model.DetailCheckListShipping.OkPaint.HasValue) 
+                               { 
+                                   if (@Model.DetailCheckListShipping.OkPaint.Value) 
+                                  { 
+                                     <img src="~/Content/Images/OK.png" />
+                                  } 
+                                  else 
+                                  {  
+                                      <img src="~/Content/Images/NO.png" />
+                                  }  
+                              }                                   
+                         </td>   
+                         <td style="text-align:center;">
+                               @if (@Model.DetailCheckListShipping.OkQuality.HasValue) 
+                               { 
+                                  if (@Model.DetailCheckListShipping.OkQuality.Value) 
+                                  { 
+                                     <img src="~/Content/Images/OK.png" />
+                                  } 
+                                  else 
+                                  {  
+                                       <img src="~/Content/Images/NO.png" />
+                                  }   
+                              }   
+
+                         </td> 
+                         <td style="text-align:center;">
+                              @if (@Model.DetailCheckListShipping.PreparationShipping.HasValue) 
+                               { 
+                                  if (@Model.DetailCheckListShipping.PreparationShipping.Value) 
+                                  { 
+                                     <img src="~/Content/Images/OK.png" /> 
+                                  } 
+                                  else 
+                                  {  
+                                      <img src="~/Content/Images/NO.png" />
+                                  }                               
+                              }     
+ 
+                         </td>                                                           
+                     </tr>                          
+                 </tbody> 
+             </table> 
+         </div> 
+     </fieldset> 
+ 
+ 
+ } 
+

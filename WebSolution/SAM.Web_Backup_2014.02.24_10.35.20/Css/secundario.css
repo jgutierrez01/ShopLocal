@@ -1,0 +1,2188 @@
+﻿/***
+                                                                     .uuu
+    z@#"%c                      .uuzm**"""""*%mu..             z*"` .e@#N      
+   @!!!R.  #c              .z*"                    ^*c       z    dT!!!!!>     
+  '!!!!!!N   "i         u*"                            #s  :"   @?!!!!!!!R     
+  t!!!!!!!#u   "i    .@                                  ^$   :R!!!!!!!!!X     
+  '!!!!!!!!!#c   "i:#                                      ?> R!!!!!!!!!!X     
+  '!!!!!!!!!!!N   @                                         4W!!!!!!!!!!!>     
+  '!!!!!!!!!!!!Ru"                                           ?!!!!!!!!!!X      
+  'X!!!!!!!!!!!9~                                      .  .  'X!!!!!!!!!6      
+   R!!!!!!!!!!tF                                     z$#`   h &!!UR!!!!!F      
+   ?!!!!!$X!!!$                                    .@       X $WTR!!!!!X       
+    M!!!!!i#U!E  .                                @F        ! FdR!!!!!!f       
+    'X!!!!!#c'?u@#"*$N.                         :$          F'9!!!!!!!@        
+     9!!!!!!!?NM      ^*c                      dF          ' @!!!!!!!X>        
+      R!!!!!!!!&         "e                   d            K<!!!!!!!XF         
+      'X!!!!!!!M>          ^N                f            < E!!!!!!X"          
+        t!!!!!!!#            ^N            :"      .e$"^  Fn!!!!!XP            
+         #X!!!!!!ML             *c       z"    .e$$$$$   M'!!!!W*              
+           "*UX!!X@t  ^%u.         ""**#).zd$$#$$$$$$$  <\*@**"                
+                    'N    4$$$$$@$$$)$$#$$k4$$$$$$$$$E :$                      
+                       ?>  "$$$$$$":$$$W$$$ "$$$$$$$$   %                      
+                      :"           ? ^#*"  S  "$$$$$     ?                     
+                      F            L      d$L            X                     
+                      &           t$i    @$$$           f                      
+                       *          $$$$$$$$$$\&        @                        
+                        '*.      W'$$$$$$$$FM h    u#                          
+                           ^*muz* % $$$$$$":    `"                             
+                                   # ^**" d                                    
+                                     "***"
+                       CONQUISTAR EL MUNDO ENTERO PINKY!!!
+
+***/
+h4
+{
+    display: block;
+    clear: both;
+    font-size: 12px;
+    border-bottom: 1px solid #000000;
+    margin: 5px 0 10px 0;
+    color: #2e5d90;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+/********************************************/
+/**             HEADER TEXTO                */
+/********************************************/
+
+.paginaHeader
+{
+    background-image: url(../Imagenes/headerImg.png);
+    background-repeat: repeat-x;
+    height: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-top: 5px;
+}
+
+.paginaHeader .Titulo
+{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: Arial;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.paginaHeader .regresar
+{
+    float: right;
+    margin-right: 10px;
+}
+
+.paginaHeader a.regresar img
+{
+    margin-top: 6px;
+}
+
+.paginaHeader a.rgTxt
+{
+    float: right;
+    font-weight: bold;
+    margin-right: 4px;
+    margin-top: 9px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.paginaHeader a.rgTxt:hover
+{
+    text-decoration: underline;
+}
+
+.paginaHeader .link
+{
+    margin-left: 15px;
+}
+
+.paginaHeader .link:hover
+{
+    text-decoration: underline;
+}
+
+.paginaHeader .imgEncabezado
+{
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.contenedorCentral
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #f7f6f6;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+.cntCentralForma
+{
+    padding: 0 8px 15px 8px;
+    margin: 0;
+    background-color: #f7f6f6;
+    border: 1px solid #000000;
+    border-top-width: 0;
+}
+
+.pestanaBoton
+{
+    background-image: url('/imagenes/pestanaBoton.png');
+    width: 134px;
+    height: 34px;
+    margin-bottom: 15px;
+    padding: 4px 0 0 10px;
+}
+.pestanaBoton.mensaje
+{
+    display: inline-block;
+}
+
+.pestanaBotonLarga
+{
+    background-image: url('/imagenes/pestanaBotonLarga.png');
+    width: 340px;
+    height: 34px;
+    margin-bottom: 15px;
+    padding: 4px 0 0 10px;
+}
+
+.pestanaBotonMasLarga
+{
+    background-image: url('/imagenes/pestanaBotonMasLarga.png');
+    background-repeat: no-repeat;
+    width: 550px;
+    height: 34px;
+    margin-bottom: 15px;
+    padding: 4px 0 0 10px;
+}
+
+.popups
+{
+    background-color: #f7f6f6;
+}
+
+.popupsDegradado
+{
+    height: 42px;
+    width: 100%;
+    bottom: 0px;
+    background-image: url(../Imagenes/Popup/degradado.png);
+}
+
+.popupsImgLogoPopup
+{
+    float: right;
+    width: 70px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.popupsH4
+{
+    display: block;
+    clear: both;
+    font-size: 12px;
+    border-bottom: 1px solid #000000;
+    margin: 5px 0 10px 0;
+    color: #2e5d90;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titulo
+{
+    font-size: 18px;
+    color: #2e5d90;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+
+.textoCentrado
+{
+    text-align: center;
+}
+/********************************************/
+/**            DASHBOARD LISTS              */
+/********************************************/
+
+.headerDashboard
+{
+    background-image: url(/Imagenes/buttonBlue.png);
+    background-repeat: repeat-x;
+    border: 1px solid black;
+    color: White;
+    font-size: 12px;
+    font-weight: bold;
+    height: 29px;
+    min-height: 29px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+#dashBoard
+{
+    background-image: url(/Imagenes/Fondos/fondoGrisDegradado.png);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    border: 1px solid black;
+    border-top: none;
+    margin-top: -3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#dashBoard .divIzquierdo
+{
+    padding: 8px;
+    width: 212px;
+    min-width: 212px;
+    max-width: 212px;
+}
+.special
+{
+    width: 200px !important;
+    min-width: 200px !important;
+}
+
+#dashBoard .Elemento
+{
+    background-image: url(/Imagenes/Iconos/bulletHeader.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 15px;
+    width: 215px;
+    min-width: 215px;
+}
+
+#dashBoard .bordeDerecho
+{
+    border-right: 1px solid black;
+}
+
+.noBorders
+{
+    border: 0 solid black !important;
+}
+
+/********************************************/
+/**          COMANDOS ENCABEZADO            */
+/********************************************/
+
+.rgCommandCell .comandosEncabezado
+{
+    text-align: right;
+    margin-right: 10px;
+    line-height: 28px;
+    height: 30px;
+}
+
+.rgCommandCell .comandosEncabezado .link
+{
+    margin-left: 25px;
+    vertical-align: middle;
+}
+
+.rgCommandCell .comandosEncabezado .link:hover
+{
+    text-decoration: underline;
+}
+
+.rgCommandCell .comandosEncabezado .imgEncabezado
+{
+    vertical-align: middle;
+}
+
+.rgCommandCell .comandosEncabezado .imgEncabezado img
+{
+    margin-top: -2px;
+}
+
+.rgCommandCell .comandosEncabezado .tituloGrid
+{
+    float: left;
+    margin-left: 10px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.tituloGrid span
+{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/********************************************/
+/**          ESTRUCTURA DE OPCIONES         */
+/********************************************/
+
+.divIzquierdo
+{
+    float: left;
+}
+
+.divDerecho
+{
+    float: right;
+}
+
+.ancho100
+{
+    width: 100%;
+}
+
+.ancho95
+{
+    width: 95%;
+}
+
+.ancho90
+{
+    width: 90%;
+}
+
+.ancho80
+{
+    width: 80%;
+}
+
+.ancho70
+{
+    width: 70%;
+}
+
+.ancho65
+{
+    width: 65%;
+}
+
+.ancho60
+{
+    width: 60%;
+}
+
+.ancho50
+{
+    width: 50%;
+}
+
+.ancho45
+{
+    width: 45%;
+}
+
+.ancho40
+{
+    width: 40%;
+}
+
+.ancho35
+{
+    width: 35%;
+}
+
+.ancho30
+{
+    width: 30%;
+}
+
+.ancho25
+{
+    width: 25%;
+}
+
+.ancho20
+{
+    width: 20%;
+}
+
+.ancho5
+{
+    width: 5%;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.alto100
+{
+    height: 100%;
+}
+
+.altoMin
+{
+    height: 150px;
+}
+
+/********************************************/
+/**                BOTONES                  */
+/********************************************/
+
+.boton
+{
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    background-image: url(../Imagenes/buttonBlue.png);
+    background-position: left -1px;
+    border-style: double;
+    border-color: #2f5d90;
+    border-width: 1px;
+    color: White;
+    font: bold 12px arial;
+}
+
+
+/********************************************/
+/**                ESTILOS                  */
+/********************************************/
+
+.required
+{
+    font-family: arial;
+    font-size: 12px;
+}
+
+input.required
+{
+    color: #000000;
+    background-color: #dee8f4;
+}
+
+select.required
+{
+    background-color: #dee8f4;
+}
+
+span.required
+{
+    color: #ff0000;
+}
+
+
+.labelHack
+{
+    display: block;
+}
+
+.separador
+{
+    margin-top: 7px;
+    height: 40px;
+    min-height: 40px;
+}
+
+.separadorDashboard
+{
+    margin-top: 7px;
+}
+
+.oculto
+{
+    display: none;
+}
+
+.listaCheck input, .listaCheck label
+{
+    display: inline-block;
+    font-weight: normal;
+}
+
+.listaCheck label
+{
+    margin-right: 15px;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.boldUnderline
+{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.soloLectura input[type=text], input[type=text].soloLectura, .soloLectura textarea, textarea.soloLectura
+{
+    background-color: #f5f5f5;
+    border: 1px solid #555555;
+    font-size: 12px;
+    color: #666666;
+}
+
+.subrayado
+{
+    text-decoration: underline;
+}
+
+.checkBold input, .checkBold label
+{
+    display: inline-block;
+    font-weight: bold;
+}
+
+.checkBold label
+{
+    margin-right: 15px;
+}
+
+.center
+{
+    width: 100%;
+    margin: 10px auto 10px auto;
+}
+
+.inline input[type=radio], .inline label
+{
+    display: inline !important;
+}
+
+input.smaller
+{
+    width: 166px;
+}
+
+.textosChicos input
+{
+    width: 150px;
+}
+
+.fontChico
+{
+    font-size: 7pt;
+}
+
+input.grdMoneda
+{
+    width: 50px;
+    font-size: 11px;
+    text-align: right;
+}
+
+input.dentroGrid
+{
+    width: 150px;
+    font-size: 11px;
+}
+
+
+/***************************************/
+/*          P E R F I L E S            */
+/***************************************/
+
+.modulo
+{
+    float: left;
+    width: 200px;
+    padding: 0 0 0 15px;    
+}
+
+.modulo .titulo
+{
+    font-weight: bold;
+    color: #000000;
+}
+
+.modulo .lista
+{
+    background-color: #dee8f4;
+    border: 1px solid #2d5d8f;
+    padding: 5px;
+    height: 200px;
+    overflow: auto;
+}
+
+.modulo .lista input, .modulo .lista label
+{
+    display: inline-block;
+    font-weight: normal;
+}
+
+.modulo .lista label
+{
+    width: 120px;
+}
+
+.modulo .lista input
+{
+    vertical-align: top;
+    margin-right: 3px;
+}
+
+/***************************************/
+/*         P R O Y E C T O S           */
+/***************************************/
+
+.phc
+{
+    width: 100%;
+}
+
+.phc table
+{
+    width: 100%;
+}
+
+.phc td.Normal
+{
+    border-top: 1px solid #305f93;
+    border-bottom: 1px solid #305f93;
+    background-color: #b1c8e6;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.phc td.Normal .Titulo
+{
+    text-transform: uppercase;
+}
+
+.phc td.Normal .Label
+{
+    font-size: 16px !important;
+    color: #2e5d90;
+    font-weight: bold;
+}
+
+.tdLinea
+{
+    height: 25px;
+    padding: 3px 0 3px 0;
+    border-right: 2px solid #305f93;
+}
+
+.toUpper
+{
+    text-transform: uppercase;
+}
+
+.pnlColor
+{
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.phcColInicial
+{
+    height: 37px;
+    min-height: 37px;
+    max-height: 37px;
+    width: 18px;
+    min-width: 18px;
+    max-width: 18px;
+    background-image: url(../Imagenes/Iconos/trianguloIzq.png);
+}
+
+.phcColFinal
+{
+    height: 37px;
+    min-height: 37px;
+    max-height: 37px;
+    width: 18px;
+    min-width: 18px;
+    max-width: 18px;
+    background-image: url(../Imagenes/Iconos/trianguloDer.png);
+}
+
+tr .sombra
+{
+    background-image: url(../Imagenes/Iconos/sombra.png);
+    background-repeat: repeat-x;
+    height: 10px;
+    min-height: 10px;
+    max-height: 10px;
+}
+
+
+/***************************************/
+/*         D A S H B O A R D           */
+/***************************************/
+
+
+
+.cajaGris
+{
+    background-color: #d6d6d6;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: Black;
+}
+
+.cajaFiltros
+{
+    background-color: #dee8f4;
+    border: 1px solid #2d5d8f;
+    padding: 5px;
+}
+
+.cajaFiltros .divIzquierdo
+{
+    margin-right: 15px;
+}
+
+.cajaFiltros .boton
+{
+    margin-top: 6px;
+}
+
+.cajaAzul
+{
+    background-color: #dee8f4;
+    border: 1px solid #2d5d8f;
+    padding: 5px;
+}
+
+.cajaAzul input.required
+{
+    background-color: #ffffff;
+}
+
+.cajaNaranja
+{
+    background-color: #fbb24e;
+    border: 1px solid #df671f;
+    padding: 5px;
+}
+
+
+.linkDashboard
+{
+    width: 100%;
+    font-weight: bold;
+}
+
+.linkDashboard img
+{
+	padding-right: 5px;
+}
+
+
+.dashboardCentral
+{
+    width: 850px;
+}
+
+.dashboardElement
+{
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 240px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-right: 5px;
+    height: 270px;
+}
+
+.dashboardElementLeft
+{
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 233px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 270px;
+}
+
+/***************************************/
+/*         U S U A R I O S             */
+/***************************************/
+
+.detUsuario .ligas a
+{
+    display: block;
+    margin-bottom: 7px;
+}
+
+.notaPassword
+{
+    font-size: 11px;
+    font-style: italic;
+    width: 300px;
+}
+
+/********************************************/
+/**                INGENIERIA               */
+/********************************************/
+
+#paginaHeader
+{
+    margin-bottom: 20px;
+}
+
+.ddlProyecto
+{
+    width: 210px;
+    margin-left: 21px;
+}
+
+#contenedorEtiquetas
+{
+    min-width: 75px;
+}
+
+.ingRadPanelBar
+{
+    width: 850px !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.rpOut.repSam.repEncabezado
+{
+    background-image: url("../Imagenes/headerImg.png") !important;
+    background-repeat: repeat-x !important;
+    border-left: none !important;
+    border-right: none !important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+span.rpOut:hover, a.rpLink:hover
+{
+    background-image: none !important;
+}
+
+.RadPanelBar .rpLevel1 .rpFirst
+{
+    padding-top: 0 !important;
+}
+
+.ingRadPanelBar .rpSlide .rpOut
+{
+    width: 100% !important;
+}
+
+.ingRadPanelBar .rpItemAlt
+{
+    background-color: #ECEFF3 !important;
+}
+
+.ingRadPanelBar .rpSelected span
+{
+    background-color: #F6A63B;
+}
+
+.ingRadPanelBar li:hover, .ingRadPanelBar .rpItemAlt:hover
+{
+    background-color: #F6A63B !important;
+}
+
+.ingRadPanelBar .rpExpandHandle
+{
+    background-color: #B1C8E6 !important;
+}
+
+.divConfirmacion
+{
+    background: #B1C8E6;
+}
+
+.divConfirmacion input[type="checkbox"]
+{
+    float: right;
+}
+
+.lblProyecto
+{
+    display: block;
+    float: left;
+    min-width: 53px;
+    padding-top: 3px;
+}
+
+.ruButton
+{
+    background-image: url("../Imagenes/buttonBlue.png") !important;
+    background-position: left -1px !important;
+    padding-right:3px;
+    padding-left:3px;
+    border: 1px double #2F5D90 !important;
+    color: White !important;
+    font: bold 12px arial !important;
+    height: 22px !important;
+    min-width: 78px !important;
+    text-align: center !important;
+    background-repeat: repeat !important;
+    width: auto !important;
+}
+
+.importacionDatosSummary
+{
+    width: 90% !important;
+}
+
+/********************************************/
+/**                RADPANELBAR              */
+/********************************************/
+
+.radUpload
+{
+    padding-top: 7px;
+}
+
+.radUpload .ruButton
+{
+    width:170px;
+}
+
+li .rpItem .rpLink
+{
+    float: left;
+    min-width: 150px;
+}
+
+li .rpItem .rpTemplate
+{
+    float: left;
+    overflow: visible;
+}
+/********************************************/
+/**            T A B S T R I P              */
+/********************************************/
+
+.posicionTabstrip
+{
+    margin-top: -10px;
+    margin-left: -5px;
+}
+
+
+/**********************************************************/
+/** Repeater muy parecido al grid de Telerik              */
+/**********************************************************/
+.repSam
+{
+    border-collapse: collapse;
+    empty-cells: show;
+    table-layout: fixed;
+    border: 1px solid #999999;
+    color: Black;
+}
+
+
+.repSam .repEncabezado
+{
+    background-image: url('/Css/SAMOrange/Grid/headerImg.png');
+    background-position: 0 -1px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.repSam .repEncabezado th
+{
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.repSam .repPie td
+{
+    border-top: 1px solid #999999;
+    border-right: 1px solid #999999;
+    background-color: #b1c8e6;    
+    font-size: 11px;
+}
+
+.repSam .repEncabezado td
+{
+    border-bottom: #999999 1px solid;
+}
+
+.repSam .repEncabezado th span.tituloIzquierda
+{
+    float:left;
+    margin-left: 5px;
+}
+
+.repSam .repEncabezado th span.iconoDerecha
+{
+    float:right;
+    margin-right: 5px;
+}
+
+.repSam .repEncabezado th span.iconoDerecha a
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.repSam .repEncabezado th span.iconoDerecha a:hover
+{
+    text-decoration: underline;
+}
+
+.repSam .repEncabezado th span.iconoDerecha input,
+.repSam .repEncabezado th span.iconoDerecha img
+{
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.repSam .repTitulos
+{
+    background-color: #b1c8e6;
+}
+
+.repSam .repTitulos th
+{
+    text-align: left;
+    padding: 4px 7px 3px 7px;
+    border: #999999 1px solid;
+}
+
+.repSam .repTitulos .accion th
+{
+    width: 50px;
+}
+
+.repSam td
+{
+    empty-cells: show;
+}
+
+.repSam .accion td
+{
+    width: 50px;
+}
+
+.repSam .repFila, .repSam .repFilaPar
+{
+    line-height: 11px;
+    background-color: #ffffff;
+    height: 27px;
+    vertical-align: text-top;
+}
+
+.repSam .repFila td, .repSam .repFilaPar td
+{
+    border-bottom: 0px solid;
+    border-left: 1px solid #999999;
+    border-top: 0px solid;
+    border-right: 1px solid #999999;
+    padding: 4px 7px 3px 7px;
+    line-height: 11px;
+    font-size: 11px;
+}
+
+.repSam .repFilaPar
+{
+    background-color: #eceff3;
+}
+
+.repSam .repFilaPar:hover .repSam .repFila:hover
+{
+    background-color: #F6A63B;
+}
+
+.repSam td.rgt
+{
+    text-align: right;
+}
+
+.repSam td.ctr
+{
+    text-align: center;
+}
+
+.sinHover .repFilaPar:hover .sinHover .repFila:hover
+{
+}
+
+.sinHover .repPie td
+{
+    border-style: none;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 8px;
+}
+
+.repSam .repFilaPar td
+{
+    border-bottom-color: #f2f2f2;
+}
+
+.repSam td span
+{
+    font-size: 11px;
+}
+
+/********************************************/
+/**                CALIDAD                  */
+/********************************************/
+.checkYTexto input
+{
+    float: left;
+}
+
+.checkYTexto label
+{
+    float: left;
+    padding-top: 2px;
+}
+
+.textAreaSegJunta
+{
+    width: 97%;
+}
+
+.segJunta .rgHeader table
+{
+    border: 0px;
+    border-collapse: collapse;
+}
+
+.segJunta .rgHeader th
+{
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+.segJunta .rgHeader td
+{
+    text-align: center;
+}
+
+.segJunta .rgRow td table, .segJunta .rgAltRow td table
+{
+    height: 20px !important;
+    border: 0;
+    border-collapse: collapse;
+}
+
+.segJunta .rgRow :hover > table, .segJunta .rgAltRow :hover > table
+{
+    background-color: #F6A63B;
+}
+
+.segJunta .rgRow td table :hover, .segJunta .rgAltRow td table :hover
+{
+    background-color: #F6A63B;
+}
+
+
+.segJunta .rgRow, .segJunta .rgRow table, .segJunta .rgAltRow, .segJunta .rgRow table
+{
+    height: 20px !important;
+}
+
+.segJunta .rgRow td, .segJunta .rgAltRow td
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.segJunta .rgRow tr > td, .segJunta .rgAltRow tr > td, .segJunta .rgHeader td
+{
+    max-width: 125px;
+    min-width: 125px;
+    width: 125px;
+    padding: 0;
+}
+
+.segJunta .rgRow tr > td:first-child, .segJunta .rgAltRow tr > td:first-child, .segJunta .rgHeader td:first-child
+{
+    border-left: 0;
+}
+
+.segJuntaHeader
+{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.segJuntaDescripcion
+{
+    width: 450px !important;
+}
+
+
+.certificacion .rgHeader table
+{
+    border: 0px;
+    border-collapse: collapse;
+}
+
+.certificacion .rgHeader th
+{
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+.certificacion .rgHeader td
+{
+    text-align: center;
+}
+
+.certificacion .rgRow td table, .certificacion .rgAltRow td table
+{
+    height: 20px !important;
+    border: 0;
+    border-collapse: collapse;
+}
+
+.certificacion .rgRow :hover > table, .certificacion .rgAltRow :hover > table
+{
+    background-color: #F6A63B;
+}
+
+.certificacion .rgRow td table :hover, .certificacion .rgAltRow td table :hover
+{
+    background-color: #F6A63B;
+}
+
+
+.certificacion .rgRow, .segJunta .rgRow table, .certificacion .rgAltRow, .certificacion .rgRow table
+{
+    height: 20px !important;
+}
+
+.certificacion .rgRow td, .certificacion .rgAltRow td
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 3px !important;
+    padding-right: 0 !important;
+}
+
+.certificacion .rgRow td.dossier
+{
+    background-color:#dee8f4;
+}
+
+.certificacion .rgAltRow td.dossier
+{
+    background-color:#b1c8e6;
+}
+
+
+.certificacion .rgRow tr > td, .certificacion .rgAltRow tr > td, .certificacion .rgHeader td
+{
+    max-width: 20px;
+    min-width: 20px;
+    width: 20px;
+}
+
+.certificacion .rgRow tr > td:first-child, .certificacion .rgAltRow tr > td:first-child, .certificacion .rgHeader td:first-child
+{
+    border-left: 0;
+}
+
+.certHeader
+{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.RadPanelBar .rpLevel1 .rpFirst
+{
+    padding-top: 0 !important;
+}
+
+.calidadRadPanelBar .rpSlide .rpOut
+{
+    width: 100% !important;
+}
+
+.calidadRadPanelBar .rpItemAlt
+{
+    background-color: #ECEFF3 !important;
+}
+
+.calidadRadPanelBar .rpSelected span
+{
+    background-color: #DEE8F4;    
+    background-image: url("/Imagenes/buttonBlue.png");
+    background-repeat: repeat-x;
+    color: White;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.calidadRadPanelBar .rpExpandHandle
+{
+    background-color: #B1C8E6 !important;
+}
+
+.calidadRadPanelBar .rpRootGroup .rpItem .rpSlide .rpTemplate
+{
+    width: 100% !important;    
+}
+
+.popupSegRO .rtsLevel1
+{ 
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #000000;
+    border-top: none;
+    border-bottom: none;
+    background-color: #ffffff;
+}
+
+.popupSegRO 
+{
+    height: 466px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #000000;
+    border-top: none;
+    background-color: #ffffff;
+}
+
+.popupSegRO div .contenedorCentral
+{
+    background-color: #ffffff;
+}
+
+/**********************************************************/
+/**                V A L I D A C I O N E S               **/
+/**********************************************************/
+
+.validacionesRecuadro
+{
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 200px;
+}
+
+.validacionesHeader
+{
+    background-color: #d8d8d8;
+    color: Black;
+    height: 38px;
+}
+
+.validacionesMain
+{
+    background-color: #eaeaea;
+    color: #414142;
+    margin-top: 3px;
+    padding: 5px;
+    min-height: 100px;
+    background-image: url(../Imagenes/Logos/marcaAgua.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.summary
+{
+    margin-top: -40px;
+    padding-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    background-image: url(../Imagenes/Errores/error.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.summary ul
+{
+    margin-top: 25px;
+    margin-left: -55px;
+    font-size: 12px;
+    font-weight: normal;
+    min-height: 50px;
+    overflow-y: auto;
+}
+
+.summaryList
+{
+    height: 100px;
+    background-image: url(../Imagenes/Errores/validacionListas.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-top: 8px;
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #414142;
+    margin-bottom: 5px;
+}
+
+.summaryList ul
+{
+    margin: 10px 0 0 0;
+    padding-left: 15px;
+    height: 65px;
+    font-size: 12px;
+    font-weight: normal;
+    background-image: url(../Imagenes/Logos/marcaAgua.png);
+    background-position: 93% 0%;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+
+
+
+
+/*****************************************************
+ *
+ *          MENSAJE DE EXITO
+ *
+ ****************************************************/
+.mensajeExito
+{
+    border-collapse: collapse;
+    width: 800px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.small
+{
+    width: 400px;
+}
+
+.mensajeExito .icono
+{
+    width: 60px;
+    vertical-align: top;
+}
+
+.mensajeExito td.titulo, .mensajeExito td.titulo span
+{
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.mensajeExito td.cuerpo
+{
+    width: 740px;
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+.mensajeExito td.ligas
+{
+    width: 740px;
+}
+
+.small td.cuerpo, .small td.ligas
+{
+    width: 340px;
+}
+
+.mensajeExito .cuadroLigas
+{
+    margin: 10px 0 0 0;
+    border: 1px solid #000000;
+    padding: 0;
+    background-image: url(/Imagenes/Fondos/fondoGrisDegradado.png);
+    background-repeat: repeat-x;
+    height: 127px;
+}
+
+.mensajeExito .cuadroLigas ul
+{
+    margin: 20px 0 0 0;
+    padding: 0;
+    background-image: url(/Imagenes/Logos/marcaAgua.png);
+    background-repeat: no-repeat;
+    background-position: 540px 35px;
+    height: 100px;
+}
+
+.small .cuadroLigas ul
+{
+    background-position: 140px 35px;
+}
+
+.mensajeExito .cuadroLigas li
+{
+    list-style-type: square;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+
+
+.fijarPrioridad
+{
+    padding: 5px;
+    width: 500px;
+}
+
+/*******************************************
+ *
+ *  Popup spool juntas de campo
+ *
+ **********************************************/
+.popupJuntasCampo
+{
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: 1px solid #000000;
+    border-top: none;
+    background-color: rgb(247, 246, 246);
+}
+
+.popupJuntasCampo .controles
+{
+    padding: 8px 10px 0 10px;
+}
+
+
+/*******************************************
+ *
+ *  Popup spool solo lectura
+ *
+ **********************************************/
+.popupSpoolRO
+{
+    height: 380px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #000000;
+    border-top: none;
+    background-color: #ffffff;
+}
+
+.popupSpoolRO .controles
+{
+    padding: 8px 10px 0 10px;
+}
+
+.headerAzul
+{
+    background-image: url(/Imagenes/buttonBlue.png);
+    background-repeat: repeat-x;
+    height: 29px;
+    border: 1px solid #000000;
+}
+
+.tituloBlanco
+{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 29px;
+    padding-left: 10px;
+    color: #eeeeee;
+    text-transform: uppercase;
+}
+
+.icoReingEncabezado
+{
+    text-align: right;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.icoReingEncabezado img
+{
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.icoReingEncabezado span
+{
+    margin-right: 5px;
+    vertical-align: middle;
+    font-style: italic;
+}
+
+/**************************************************************
+ *
+ *          proyecto
+ *
+ ******************************************************************/
+
+.colorPicker
+{
+    float: left;
+    margin-right: 5px;
+}
+
+.edicionProyecto .validacionesMain
+{
+    height: 200px;
+}
+
+.edicionProyecto .summary ul
+{
+    height: 210px;
+    width: 230px;
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.headerCajaEspecial
+{
+	background-image:url(../Imagenes/Menu/menuSuperior.png);
+    background-repeat:repeat-x;
+    height:27px;
+    min-height:27px;
+    max-height:27px;
+    width:93%;
+    float:left;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-weight:bold;
+    line-height: 27px;
+    text-align:center;
+}
+
+/**************************************************************
+ *
+ *          DESTAJOS
+ *
+ ******************************************************************/
+.pieDestajo
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+}
+
+.pieDestajo .totales
+{
+    width: 260px;
+    float: left;
+}
+
+.pieDestajo .totales label, .pieDestajo .cmts .diasF label
+{
+    display: inline-block;
+    width: 140px;
+    font-weight: bold;
+    height: 26px;
+    vertical-align: middle;
+    line-height: 26px;
+}
+
+.pieDestajo .totales input, .pieDestajo .cmts .diasF input
+{
+    width: 100px;
+    font-size: 11px;
+    margin-top: 1px;
+    text-align: right;
+}
+
+.pieDestajo .cmts
+{
+    float: left;
+    width: 260px;
+}
+
+.pieDestajo .comentarios
+{
+    margin-top: 20px;
+}
+
+.pieDestajo .comentarios textarea
+{
+    width: 240px;
+}
+
+.pieDestajo .errores
+{
+    float: left;
+    width: 250px;
+}
+
+.detalleDestajo
+{
+    margin: 0 0 10px 0;
+}
+
+.detalleDestajo .col1, .detalleDestajo .col2, .detalleDestajo .col3
+{
+    width: 230px;
+}
+
+.exclamacion
+{
+    margin-right: 3px;
+    height:11px;
+}
+
+/**************************************************************
+ *
+ *          OVERLAY
+ *
+ ******************************************************************/
+.overlay
+{
+    background: transparent url(/Imagenes/overlay.png) repeat top left;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+}
+
+.msgProcesando
+{
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    right: 30%;
+    background-color: #fff;
+    color: #7F7F7F;
+    padding: 20px;
+    border: 2px solid #ccc;
+    z-index: 101;
+    text-align: center;
+}
+
+.msgProcesando .imgLoading
+{
+    padding:10px;
+    text-align:center;
+}
+
+/********************************************/
+/**                HOMOLOGACION             */
+/********************************************/
+.simplehighlight:hover
+{
+	background: #ffa517;
+}
+
+.homologacionSelected
+{
+	background-color: #ffa517 !important;
+	background: #ffa517 !important;
+}
+
+.homologacionTabla .repSam .repFila TD, .homologacionTabla .repSam .repFilaPar TD
+{
+	padding-left: 2px;
+	padding-right: 0px;
+}
+.repSam .homologacionDiferente
+{
+    background-color: #DEDF61 !important;
+}
+
+.repSam .homologacionNuevo, .repSam .homologacionNuevo .homologacionDiferente
+{
+    background-color: #61DF8A !important;
+}
+
+.repSam .homologacionEliminado, .repSam .homologacionEliminado .homologacionDiferente
+{
+    background-color: #DF6161 !important;
+}
+
+.homologacionLeyendaCambio
+{
+    background-color: #DEDF61 !important;
+    height: 20px;
+    width: 100px;
+    padding-left: 10px;
+    padding-top:5px;
+    font-weight:bold;
+    border: 1px solid #777777;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.homologacionLeyendaNuevo
+{
+    background-color: #61DF8A !important;
+    height: 20px;
+    width: 100px;
+    padding-left: 10px;
+    padding-top:5px;
+    font-weight:bold;
+    border: 1px solid #777777;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.homologacionLeyendaEliminado
+{
+    background-color: #DF6161 !important;
+    height: 20px;
+    width: 100px;
+    padding-left: 10px;
+    padding-top:5px;
+    font-weight:bold;
+    border: 1px solid #777777;
+    margin-top: 10px;
+    margin-right: 150px;
+}
+
+.homologacion .repSam .repTitulos td
+{
+    background-color: White;
+    border-bottom: 1px solid #999999;
+    padding-left: 10px;
+    border-right: 1px solid #999999;
+}
+
+.homologacionPopUp
+{    
+    background-color: #FFFFFF;
+    border-color: #000000;
+    border-right: 1px solid #000000;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.homologacionTabla
+{
+    max-height: 600px;    
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.homologacionTabla table
+{
+    border-bottom: none;
+    border-top: none;
+}
+
+.imgMiddle
+{
+    vertical-align:middle;
+}
+
+
+/********************************************/
+/**                PAGER                    */
+/********************************************/
+.paginador
+{
+    background-color: #b1c8e6;
+    border: 1px solid #999999;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.paginador .boton
+{
+    background-image: url('/Css/SAMOrange/Grid/sprite.gif');
+    width:22px;
+    height:22px;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align:middle;
+}
+
+.paginador .priBtn
+{
+    background-position:0 -550px;
+}
+
+.paginador .priBtn:hover
+{
+    background-position:0 -600px;
+}
+
+.paginador .sigBtn
+{
+    background-position:0 -850px;
+}
+
+.paginador .sigBtn:hover
+{
+    background-position:0 -900px;
+}
+
+.paginador .prevBtn
+{
+    background-position:0 -700px;
+}
+
+.paginador .prevBtn:hover
+{
+    background-position:0 -750px;
+}
+
+.paginador .ultBtn
+{
+    background-position:0 -1000px;   
+}
+
+.paginador .ultBtn:hover
+{
+    background-position:0 -1050px;   
+}
+
+.paginador .pag,
+.paginador .sigs,
+.paginador .prevs,
+.paginador .pagActiva
+{
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.paginador a
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.paginador a:hover
+{
+	border-color:#c98400;
+	background:#ffe79c;
+	color:#892500;
+}
+
+.paginador .pagActiva
+{
+    font-weight: bold;
+    color: #892500;
+}
+
+.paginador .botonesPaginador
+{
+    float: left;
+}
+
+.paginador .leyendaPaginador
+{
+    float: right;
+    text-align: right;
+    width: 350px;
+    padding-right:10px;
+}
+
+.paginador .leyendaPaginador strong
+{
+    font-weight:bold;
+}
+
+.paginador .previos,
+.paginador .siguientes
+{
+    float: left;
+    vertical-align:middle;
+}
+
+.paginador .previos
+{
+    margin-left: 30px;
+}
+
+.paginador .paginas
+{
+    float: left;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+
+/********************************************/
+/**                SEGUIMIENTOS             */
+/********************************************/
+.scrollHeaders
+{
+    overflow:hidden;
+}
+        
+.scrollTblVertical
+{
+    height:300px;
+    overflow:auto;
+}
+
+.scrollTblVerticalCert
+{
+    height:500px;
+    overflow:auto;
+}
+        
+.ellipsis
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+}
+        
+.altos
+{
+    height: 45px;
+}
+        
+.spHeader
+{
+    display:inline-block;
+    cursor: pointer;
+}
+
+.spHeader:hover
+{
+    text-decoration: underline;
+}
+        
+.layout
+{
+    padding:0;
+    margin:0;
+}
+
+.layout .repSam
+{
+    table-layout: auto;
+}
+        
+.congelados
+{
+    overflow:hidden;
+}
+        
+#ocultoInicio
+{
+    display:none;
+}
+
+.pnlFiltros
+{
+    padding:5px;
+    height: 175px;
+    overflow: auto;
+}
+
+.repSam .repTitulos th.icoVer,
+.repSam .repFila td.icoVer,
+.repSam .repFilaPar td.icoVer
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 21px;
+    min-width: 21px;
+}
+
+.repSam .repTitulos th.larga,
+.repSam .repFila td.larga,
+.repSam .repFilaPar td.larga
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 180px;
+    width: 180px;
+}
+
+.repSam .repTitulos th.mediana,
+.repSam .repFila td.mediana,
+.repSam .repFilaPar td.mediana
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 90px;
+    width: 90px;
+}
+
+.repSam .repTitulos th.corta,
+.repSam .repFila td.corta,
+.repSam .repFilaPar td.corta
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 21px;
+    width: 21px;
+}
+
+.repSam .repTitulos th.cortaSola,
+.repSam .repFila td.cortaSola,
+.repSam .repFilaPar td.cortaSola
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 49px;
+    width: 49px;
+}
+
+.repSam .repTitulos th.cortaSolaEsc
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 77px;
+    width: 77px;
+}
+
+.repSam .repFila td.dossierCortaSola
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 49px;
+    width: 49px;
+    background-color:#dee8f4;
+}
+.repSam .repFilaPar td.dossierCortaSola
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 49px;
+    width: 49px;
+    background-color:#b1c8e6;
+}
+
+.repSam .repFila td.dossiercorta
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 21px;
+    min-width: 21px;
+    background-color:#dee8f4;
+}
+.repSam .repFilaPar td.dossiercorta
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 21px;
+    width: 21px;
+    background-color:#b1c8e6;
+}
+
+.repSam tr.selected td
+{
+    background-color:#ffa517;
+    color:#892500;
+}
+
+.subtitulo
+{
+    text-transform:uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top:10px;
+}
+
+.subtitulo span
+{
+    font-size:14px;
+}

@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CedulaX_NoExiste" xml:space="preserve">
+    <value>Schedule not available</value>
+  </data>
+  <data name="CostoX_Invalido" xml:space="preserve">
+    <value>Error in line {0}, Cost {1} invalid</value>
+  </data>
+  <data name="CostoX_Rango" xml:space="preserve">
+    <value>Cost ({0}) is not in the allowed range {1}</value>
+  </data>
+  <data name="Cruce_SpoolsNoAprobados" xml:space="preserve">
+    <value>The spools you are trying to include in the work order are have not been revised by the engineering department or are not approved for material allocation.</value>
+  </data>
+  <data name="DiametroX_NoExiste" xml:space="preserve">
+    <value>Diameter not available</value>
+  </data>
+  <data name="EspesorX_Invalido" xml:space="preserve">
+    <value>Thickness not availabe</value>
+  </data>
+  <data name="EspesorX_Mayor" xml:space="preserve">
+    <value>Thickness {0} exceeds the maximum value on the line {0}</value>
+  </data>
+  <data name="EspesorX_Rango" xml:space="preserve">
+    <value>Thickness ({0}) is not in the allowed range {1}</value>
+  </data>
+  <data name="ExcepcionEliminarJuntaSinCorte" xml:space="preserve">
+    <value>Cannot delete a welding joint for which material has not been cut.</value>
+  </data>
+  <data name="ExcepcionRelaciones" xml:space="preserve">
+    <value>The selected information cannot be deleted because it is already related to other information.</value>
+  </data>
+  <data name="Excepcion_AlgunSpoolYaTieneOdt" xml:space="preserve">
+    <value>One of the spools selected is already in a work order.</value>
+  </data>
+  <data name="Excepcion_Concurrencia" xml:space="preserve">
+    <value>Concurrency excepction</value>
+  </data>
+  <data name="Excepcion_CorteConDespacho" xml:space="preserve">
+    <value>Cutting information cannot be cancelled because one of its segment has been dispatched.</value>
+  </data>
+  <data name="Excepcion_CorteSinCantidad" xml:space="preserve">
+    <value>At least one material has to be added to cutting.</value>
+  </data>
+  <data name="Excepcion_JuntaEnSpoolHold" xml:space="preserve">
+    <value>The welding joint is part of a spool that is on hold.</value>
+  </data>
+  <data name="Excepcion_NumeroDeOdtDuplicado" xml:space="preserve">
+    <value>The work order number specified already exists.</value>
+  </data>
+  <data name="Excepcion_RackInvalido" xml:space="preserve">
+    <value>The rack can't be empty</value>
+  </data>
+  <data name="Excepcion_SobranteSinRack" xml:space="preserve">
+    <value>You need to specify the rack number in which the surplus material is going to be located.</value>
+  </data>
+  <data name="Excepcion_SpoolEnHold" xml:space="preserve">
+    <value>System cannot do changes</value>
+  </data>
+  <data name="Excepcion_SpoolYaTieneOdt" xml:space="preserve">
+    <value>The spools specified is already part of a work order.</value>
+  </data>
+  <data name="IngenieraTipoJuntaEnBlanco" xml:space="preserve">
+    <value>Welding joint type is empty.</value>
+  </data>
+  <data name="IngenieriaArchivosEsperados" xml:space="preserve">
+    <value>Not all the expected files are being included.</value>
+  </data>
+  <data name="IngenieriaArchivoVacio" xml:space="preserve">
+    <value>{0} file contains no line</value>
+  </data>
+  <data name="IngenieriaCedulaEnBlanco" xml:space="preserve">
+    <value>Schedule is empty</value>
+  </data>
+  <data name="IngenieriaColumnasDeMas" xml:space="preserve">
+    <value>File:"{0}" line:"{1}" has more columns than expected</value>
+  </data>
+  <data name="IngenieriaColumnasDeMenos" xml:space="preserve">
+    <value>File:"{0}" line:"{1}" has less columns than expected</value>
+  </data>
+  <data name="IngenieriaColumnasIncorrectas" xml:space="preserve">
+    <value>File {0}, line {1} has more columns than expected</value>
+  </data>
+  <data name="IngenieriaConDespacho" xml:space="preserve">
+    <value>Spool {0} contains at least one material already dispatched.</value>
+  </data>
+  <data name="IngenieriaCorteDiametroCero" xml:space="preserve">
+    <value>Diameter can not be Cero</value>
+  </data>
+  <data name="IngenieriaDibujoEnBlanco" xml:space="preserve">
+    <value>Drawing is empty</value>
+  </data>
+  <data name="IngenieriaErrorGeneral" xml:space="preserve">
+    <value>Error, File, Line</value>
+  </data>
+  <data name="IngenieriaErrorInterprete" xml:space="preserve">
+    <value>The interpreter encountered an error on file {0}, line {0}, column {0}</value>
+  </data>
+  <data name="IngenieriaErrorJuntaDup" xml:space="preserve">
+    <value>Joint {0} is duplidated</value>
+  </data>
+  <data name="IngenieriaErrorMaterialDup" xml:space="preserve">
+    <value>Material {0} is duplicated</value>
+  </data>
+  <data name="IngenieriaErrorSpoolDup" xml:space="preserve">
+    <value>Spool {0} is duplicated</value>
+  </data>
+  <data name="IngenieriaErrorValidacionArchivo" xml:space="preserve">
+    <value> Validation file {0}, line {1}</value>
+  </data>
+  <data name="IngenieriaFabAreaNoEncontrada" xml:space="preserve">
+    <value>FabArea not found</value>
+  </data>
+  <data name="IngenieriaFamiliaInexistente" xml:space="preserve">
+    <value>Material Family not found for the spool locates in line {0}</value>
+  </data>
+  <data name="IngenieriaItemCodeNoencontrado" xml:space="preserve">
+    <value>The item code {0} was not found, file {0}, linea {2}</value>
+  </data>
+  <data name="IngenieriaJuntaDiametroCero" xml:space="preserve">
+    <value>Diameter can not be Cero</value>
+  </data>
+  <data name="IngenieriaLongitudEtiqueta" xml:space="preserve">
+    <value>Label length</value>
+  </data>
+  <data name="IngenieriaMaterialDiametroCero" xml:space="preserve">
+    <value>Diameter can not be Cero</value>
+  </data>
+  <data name="IngenieriaNoCoincidenRevisiones" xml:space="preserve">
+    <value>The file contains different revisions to the spools file.</value>
+  </data>
+  <data name="IngenieriaNoCoincidenRevisionesDetalle" xml:space="preserve">
+    <value>Different revision spool: {0} file {1}, line {2}</value>
+  </data>
+  <data name="IngenieriaRevisionCteMayor" xml:space="preserve">
+    <value>Spool {0} has a greater client revision in the DB.</value>
+  </data>
+  <data name="IngenieriaRevisionMayor" xml:space="preserve">
+    <value>Spool "{0}" has a greater revision in the DB.</value>
+  </data>
+  <data name="IngenieriaSpoolNoEncontrado" xml:space="preserve">
+    <value>Spool {0} in file {1} was not found in the spools file</value>
+  </data>
+  <data name="IngenieriaSpoolNoEnIsometrico" xml:space="preserve">
+    <value>Drawing {0} does not contain a spool named {1}</value>
+  </data>
+  <data name="ItemCodeEquivalenteDuplicado" xml:space="preserve">
+    <value>There is a duplicate item code</value>
+  </data>
+  <data name="ItemCodeEquivalenteYaExiste" xml:space="preserve">
+    <value>An equivalence already exists for the item code {0}, diameter 1 = {1} and diameter 2= {2}</value>
+  </data>
+  <data name="KgTeoricoX_Invalido" xml:space="preserve">
+    <value>Welding material theoretical weight (KG) {0} invalid</value>
+  </data>
+  <data name="KgTeoricoX_Mayor" xml:space="preserve">
+    <value>Welding material theoretical wieght (KG) exceeds the maximum value {0} on line {1}</value>
+  </data>
+  <data name="KgTeoricoX_Rango" xml:space="preserve">
+    <value>Kg ({0}) is not in the allowed range {1}</value>
+  </data>
+  <data name="LineasX_Invalido" xml:space="preserve">
+    <value>The file contains no lines</value>
+  </data>
+  <data name="MaterialInsuficiente_ParaReingenieria" xml:space="preserve">
+    <value>There is not sufficient material to carry out the reengineering of the selected spool</value>
+  </data>
+  <data name="MaterialInsuficiente_ParaSpool" xml:space="preserve">
+    <value>There is not enough material for the spool {0}</value>
+  </data>
+  <data name="Odt_ElNumeroDeControlYaExiste" xml:space="preserve">
+    <value>The control number already exists for the selected work order</value>
+  </data>
+  <data name="PeqX_Invalido" xml:space="preserve">
+    <value>Equivalent diametral inches {0} invalid</value>
+  </data>
+  <data name="PeqX_Mayor" xml:space="preserve">
+    <value>Equivalent diametral inches exceeds the maximum value {0} on line {1}</value>
+  </data>
+  <data name="PeqX_Rango" xml:space="preserve">
+    <value>Inch ({0}) is not in the allowed range {1}</value>
+  </data>
+  <data name="TipoCorteEnBlanco" xml:space="preserve">
+    <value>Cut type is empty</value>
+  </data>
+  <data name="Excepcion_SegimientoSpoolChk" xml:space="preserve">
+    <value>At least one field from the modules section must be selected</value>
+  </data>
+  <data name="MaterialInsuficiente_NumeroUnicoX" xml:space="preserve">
+    <value>There's not enough material of unique number {0} to be allocated</value>
+  </data>
+  <data name="Excepcion_DespachoConWorkstatusIniciado" xml:space="preserve">
+    <value>The material dispatch cannot be cancelled because the material has already been used in fitting.</value>
+  </data>
+  <data name="DescripcionPendiente_DespachoCancelado" xml:space="preserve">
+    <value>Dispach Canceled&lt;br/&gt;Unique Number: {0}&lt;br/&gt;Quantity: {1}</value>
+  </data>
+  <data name="Excepcion_SinReportesParaDescargar" xml:space="preserve">
+    <value>The system has not found any available report to download.</value>
+  </data>
+  <data name="Excepcion_SobranteMayor" xml:space="preserve">
+    <value>Remnant cannot be greater than {0}  in accordance to the generated cuts</value>
+  </data>
+  <data name="PeqX_Repetido" xml:space="preserve">
+    <value>The file contains duplicate values for Diameter {0}, Schedule {1}</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoTieneTranferencias" xml:space="preserve">
+    <value>The control number specified already has been dispatched to cut.</value>
+  </data>
+  <data name="Excepcion_MovimientoImposibleEliminar" xml:space="preserve">
+    <value>There is no enough inventory, can not undo this movement</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoConOtroCorte" xml:space="preserve">
+    <value>You can not cancel because there is a cut back</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoConOtroDespachoCorte" xml:space="preserve">
+    <value>You can not cancel because there is a dispatch to cut posterior</value>
+  </data>
+  <data name="DestajoDuplicado" xml:space="preserve">
+    <value>The file contains duplicate values for Diameter {0}, Schedule {1}</value>
+  </data>
+  <data name="Excepcion_SobranteMenor" xml:space="preserve">
+    <value>Remnant cannot be greater than {0}  in accordance to the generated cuts and the damaged</value>
+  </data>
+  <data name="IngenieriaErrorMaterialNoExiste" xml:space="preserve">
+    <value>Material named  {0} could not be found in Spool {1} </value>
+  </data>
+  <data name="IngenieriaMaterialCorteCampoNoCoincide" xml:space="preserve">
+    <value>Fields differ from materials file to Cut file, Spool {0}, Material {1}</value>
+  </data>
+  <data name="IngenieriaMaterialNoEncontradoCorte" xml:space="preserve">
+    <value>Material {0}  from Spool {1}   was found in cut file but not on material file</value>
+  </data>
+  <data name="Excepcion_CombinacionEtiquetasRepetida" xml:space="preserve">
+    <value>Conflict on welds merge, multiple label with the same id</value>
+  </data>
+  <data name="Excepcion_EliminaJuntaArmada" xml:space="preserve">
+    <value>Weld already being armed</value>
+  </data>
+  <data name="Excepcion_EtiquetasWorkstatus" xml:space="preserve">
+    <value>Workstatus labels mismatch</value>
+  </data>
+  <data name="Excepcion_SinSpoolsPendientes" xml:space="preserve">
+    <value>There is not any spool pending</value>
+  </data>
+  <data name="IngenieriaHomologacionErrorCampos" xml:space="preserve">
+    <value>Can´t mark materials as similar due they present differences between: Item code, Diameter 1 or Diameter 2</value>
+  </data>
+  <data name="IngenieriaHomologacionErrorCantidades" xml:space="preserve">
+    <value>Can´t mark materials as equal due they present differences between: Item Code, Quantity, Diameter 1 or Diameter 2</value>
+  </data>
+  <data name="IngenieriaHomologacionErrorMaterialMenor" xml:space="preserve">
+    <value>Can´t mark materials as similar due the new quantity is higher than the actual material. </value>
+  </data>
+  <data name="IngenieriaHomologacionInfoCambioEtiqueta" xml:space="preserve">
+    <value>Label and/or Quantity change</value>
+  </data>
+  <data name="IngenieriaErrorLocDup" xml:space="preserve">
+    <value>The spool {0} have localization {1}-{2} duplicated</value>
+  </data>
+  <data name="Excepcion_TipoMaterialNumeroUnico" xml:space="preserve">
+    <value>Can't edit material due the selected material type is different than the original and it has cut and/or dispatch</value>
+  </data>
+  <data name="IcConDescripcionMultiple" xml:space="preserve">
+    <value>The following Item Codes have multiple descriptions: {0}</value>
+  </data>
+  <data name="FamAcero_Invalido" xml:space="preserve">
+    <value>Error on line {0}, Family of Steel {1} invalid</value>
+  </data>
+  <data name="Diametro_FormatoInvalido" xml:space="preserve">
+    <value>Error on line {0}, format diameter {0} is invalid</value>
+  </data>
+  <data name="ItemCode_DescripcionNoUnica" xml:space="preserve">
+    <value>The item code {0} has different descriptions</value>
+  </data>
+  <data name="SpoolX_Invalido" xml:space="preserve">
+    <value>Error in line {0}, invalid Spool {1}</value>
+  </data>
+  <data name="TallerX_Invalido" xml:space="preserve">
+    <value>Error in line {0}, invalid Shop {1}</value>
+  </data>
+  <data name="ExcepcionCsv_SpoolYaTieneOdt" xml:space="preserve">
+    <value>Spool {0} in line {1}  is already part of a work order.</value>
+  </data>
+  <data name="PrioridadX_Invalido" xml:space="preserve">
+    <value>Error in line {0}, invalid Priority {1}</value>
+  </data>
+  <data name="OtX_Invalido" xml:space="preserve">
+    <value>Error in line {0}, invalid work order {1}</value>
+  </data>
+  <data name="CsvX_Invalido" xml:space="preserve">
+    <value>The following spools could not be added to work order::&lt;br /&gt;</value>
+  </data>
+  <data name="Csv_OtX_Duplicado" xml:space="preserve">
+    <value>Work order {0}: (name already exists)&lt;br /&gt;</value>
+  </data>
+  <data name="Csv_OtX_Invalido" xml:space="preserve">
+    <value>Line {0}, {1}: (invalid work order)&lt;br /&gt;</value>
+  </data>
+  <data name="Csv_SpoolMaterialX" xml:space="preserve">
+    <value>Spool {0}: (there is not enough material)&lt;br /&gt;</value>
+  </data>
+  <data name="Csv_SpoolOtX_Existe" xml:space="preserve">
+    <value>Line {0}, {1}: (spool already has work order)&lt;br /&gt;</value>
+  </data>
+  <data name="Csv_SpoolX_Invalido" xml:space="preserve">
+    <value>Line {0}, {1}: (invalid number)&lt;br /&gt;</value>
+  </data>
+  <data name="Csv_TallerX_Invalido" xml:space="preserve">
+    <value>Line {0}, {1}: (invalid shop)&lt;br /&gt;</value>
+  </data>
+  <data name="Csv_SpoolHold" xml:space="preserve">
+    <value>Spool {0} is on hold&lt;br /&gt;</value>
+  </data>
+  <data name="Csv_SpoolX_AprobadoCruce" xml:space="preserve">
+    <value>Spool {0} has not been revised by the engineering department or are not approved for material allocation.</value>
+  </data>
+  <data name="JuntaSpoolX_Invalido" xml:space="preserve">
+    <value>Error in line {0}, joint {1} was not found in spool {2}</value>
+  </data>
+  <data name="MaterialSpoolX_Invalido" xml:space="preserve">
+    <value>Error in line {0}, material label {1} was not found in spool {2}</value>
+  </data>
+  <data name="MaterialSpoolX_CamposInvalidos" xml:space="preserve">
+    <value>The contents of the file. "Csv" does not match the specified format, check the file format and then try again.</value>
+  </data>
+  <data name="JuntaSpoolX_CamposInvalidos" xml:space="preserve">
+    <value>The contents of the file. "Csv" does not match the specified format, check the file format and then try again.</value>
+  </data>
+  <data name="SpoolX_CamposInvalidos" xml:space="preserve">
+    <value>The contents of the file. "Csv" does not match the specified format, check the file format and then try again.</value>
+  </data>
+  <data name="Csv_ODTFueraDeRango" xml:space="preserve">
+    <value>The Work Order number {0}, is greater than the maximum allowed for the project.</value>
+  </data>
+  <data name="Exception_BaseDeDatos" xml:space="preserve">
+    <value>An error has occurred in accessing data.</value>
+  </data>
+  <data name="Exception_GeneracionCertificacion" xml:space="preserve">
+    <value>There was an error in generating the information.</value>
+  </data>
+</root>

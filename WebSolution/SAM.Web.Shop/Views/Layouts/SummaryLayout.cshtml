@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Layouts/MasterLayout.cshtml";
+}
+
+
+
+
+@section menus{
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li> 
+         @*<li>@Html.ActionLink(Resources.Views.CommonStrings.Fitting, "Index", "Home")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.Welding, "Index", "Home")</li>        
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.RequisitionPainting, "Index", "RequisitionPainting")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.Painting, "Index", "Painting")</li>       
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.QualityRelease, "Index", "Quality")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.OkPND, "Index", "OkPND")</li>  
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.PreparationShipment, "Index", "PreparationShipment")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.Shipment, "Index", "Shipment")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.ShipmentOut, "Index", "ShipmentOut")</li>         
+       <li>@Html.ActionLink(Resources.Views.CommonStrings.Yards, "Index", "Home")</li>*@
+    </ul>
+ }      
+ @section breadcrumbs
+{
+    @Html.Action("ProjectBreadcrumbLabel", "Controls")
+    
+}
+@RenderBody()
+@section scripts
+{
+    @RenderSection("scripts", false)
+}

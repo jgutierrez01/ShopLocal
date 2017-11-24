@@ -1,0 +1,11 @@
+﻿<%@ Master Language="C#"  MasterPageFile="~/Masters/Principal.Master" AutoEventWireup="true" CodeBehind="Calidad.Master.cs" Inherits="SAM.Web.Masters.Calidad" %>
+<%@ MasterType VirtualPath="~/Masters/Principal.Master" %>
+
+<asp:Content ID="cntHead" ContentPlaceHolderID="cphHead" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="cphHeadInner">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cntBody" ContentPlaceHolderID="cphBody" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="cphBodyInner">
+    </asp:ContentPlaceHolder>
+</asp:Content>

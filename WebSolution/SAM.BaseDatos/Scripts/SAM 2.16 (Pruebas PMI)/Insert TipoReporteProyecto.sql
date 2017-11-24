@@ -1,0 +1,1 @@
+insert into TipoReporteProyecto (TipoReporteProyectoID, Nombre, NombreIngles, OrdenUI) values (17,'PMI','PMI',17)

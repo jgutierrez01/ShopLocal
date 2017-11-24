@@ -1,0 +1,219 @@
+﻿@using Newtonsoft.Json
+@using Resources.Views
+@using SAM.Web.Shop.Resources.Models.Reports
+@using SAM.Web.Shop.Extensions
+@using SAM.Web.Shop.Models
+@model SummarySpoolModel
+
+
+@{
+    ViewBag.Title = ControlNumberStrings.PageTitle;
+    Layout = "~/Views/Layouts/SummaryLayout.cshtml";
+    string NumeroControId = ViewContext.HttpContext.Request.QueryString.Get("controlNumberId");
+
+}
+
+@using (Html.BeginForm(new { role = "form", id = "summary-form" }))
+{
+    <br />
+    <fieldset>
+        <div id="DetailJoints">
+            <div class="table-responsive">
+                <table class="table ">
+
+                    <tr>
+                        <th>@Html.Raw(SummarySpoolStrings.NumberControl)</th>
+                        <th>@Html.Raw(SummarySpoolStrings.Spool)   </th>
+                        <th>@Html.Raw(SummarySpoolStrings.LargDiam)   </th>
+                        <th>@Html.Raw(SummarySpoolStrings.Kg)   </th>
+                        <th>@Html.Raw(SummarySpoolStrings.KGSGRUPO)   </th>
+                       
+                        
+                        <th> @Html.Raw(SummarySpoolStrings.RequierePWHT)    </th>
+                        <th> @Html.Raw(SummarySpoolStrings.PorcentajePND)     </th>
+                        <th>@Html.Raw(SummarySpoolStrings.Hold)      </th>
+                        <th> @Html.Raw(SummarySpoolStrings.Campo54)          </th>
+                        <th> @Html.Raw(SummarySpoolStrings.Quadrant)          </th>
+                        <th> @Html.Raw(SummarySpoolStrings.DateOkPnd)          </th>
+                        <th>@Html.Raw(SummarySpoolStrings.NumeroEmbarque) </th>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayTextFor(m => m.NumberControl)</td>
+                        <td>@Html.DisplayTextFor(m => m.Spool)</td>
+                        <td>@Html.DisplayTextFor(m => m.DiametroMayor)</td>
+                        <td>@Html.DisplayTextFor(m => m.Kg)</td>
+                        <td>@Html.DisplayTextFor(m => m.KGSGRUPO)</td>
+                       
+                        <td>@Html.DisplayTextFor(m => m.RequierePWHT)</td>
+                        <td>@Html.DisplayTextFor(m => m.PorcentajePND) %</td>
+                        <td>@Html.DisplayTextFor(m => m.Hold)</td>
+                        <td>@Html.DisplayTextFor(m => m.Campo54)</td>
+                        <td>@Html.DisplayTextFor(m => m.Cuadrante)</td>
+                        <td>@Html.DisplayTextFor(m => m.DateOkPnd)</td>
+                        <td>@Html.DisplayTextFor(m => m.NumeroEmbarque)</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend style="border-style:solid; border-color:gray;">@Html.Raw(CertificationReportStrings.DetailJoints)</legend>
+
+        <div id="DetailJoints">
+            <div class="table-responsive">
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th>@Html.Raw(CertificationReportStrings.Joint)</th>
+                            <th>@Html.Raw(CertificationReportStrings.Diameter)</th>
+                            <th>@Html.Raw(CertificationReportStrings.Type)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.DateWelding)</th>
+                            <th>@Html.Raw(CertificationReportStrings.DateVisualInspection)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.InspectorVisual)</th>
+                            <th>@Html.Raw(CertificationReportStrings.RequiredPWHT)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.ClasifPND)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.DateReqRT)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.NumberRT)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.AprobadoRT)</th>
+                            @*<th>@Html.Raw(SummarySpoolStrings.NumberReqRT)</th>*@
+
+                            <th>@Html.Raw(SummarySpoolStrings.DateReqPT)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.NumberPT)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.AprobadoPT)</th>
+                            @*<th>@Html.Raw(SummarySpoolStrings.NumberReqPT)</th>*@
+
+                            <th>@Html.Raw(CertificationReportStrings.PWHT)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (DetailSummaryJointModel dj in Model.DetailJoints)
+                        {
+                            <tr>
+                                <td>@dj.Joint</td>
+                                <td>@dj.Diameter</td>
+                                <td>@dj.TypeJoint</td>
+                                <td>@dj.WeldingDate</td>
+                                <td>@dj.VIDate</td>
+                                <td>@dj.InspectorVisual</td>
+                                <td>@dj.RequiredPWHT</td>
+                                <td>@dj.ClasifPND</td>
+
+                                <td>@dj.ReqRTDate</td>
+                                <td>@dj.ReporteRT</td>
+                                <td>@dj.AprobadoRT</td>
+
+                                <td>@dj.ReqPTDate</td>
+                                <td>@dj.ReportePT</td>
+                                <td>@dj.AprobadoPT</td>
+
+                                <td>@dj.ReportePWHT</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+
+
+                <fieldset>
+                    <legend style="border-style:solid; border-color:gray;">@Html.Raw(SummarySpoolStrings.LiberacionDimencional)</legend>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>@Html.Raw(SummarySpoolStrings.DateLibDimentional)</th>
+                                    <th>@Html.Raw(SummarySpoolStrings.RepLibDimentional)</th>
+                                    <th>@Html.Raw(SummarySpoolStrings.InspectorLibDim)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Model.LibDimFecha</td>
+                                    <td>@Model.ReporteLiberacionDimensional</td>
+                                    <td>@Model.InspectorLiberacionDimensional</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend style="border-style:solid; border-color:gray;">@Html.Raw(SummarySpoolStrings.Painting)</legend>
+
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-condensed">
+                            <tr>
+                                <td> <label>@Html.Raw(SummarySpoolStrings.M2)</label></td>
+                                <td>@Model.M2</td>
+                            </tr>
+                            <tr>
+                                <td> <label>@Html.Raw(SummarySpoolStrings.SystemPaint)</label></td>
+                                <td>@Model.SistemaPintura</td>
+                            </tr>
+                            <tr>
+                                <td> <label>@Html.Raw(SummarySpoolStrings.DatePrimary)</label></td>
+                                <td>@Model.PrimarioFecha</td>
+                            </tr>
+                            <tr>
+                                <td>   <label>@Html.Raw(SummarySpoolStrings.DateFinished)</label></td>
+                                <td>@Model.AcabadoFecha</td>
+                            </tr>
+                        </table>
+                    </div>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend style="border-style:solid; border-color:gray;">@Html.Raw(CertificationReportStrings.DetailMaterials)</legend>
+
+                    <div id="DetailMaterials">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>@Html.Raw(SummarySpoolStrings.Codigo)</th>
+                                        <th>@Html.Raw(SummarySpoolStrings.Materials)</th>
+                                        <th style="text-align:center;">@Html.Raw(SummarySpoolStrings.Cantidad)</th>
+                                        <th>@Html.Raw(SummarySpoolStrings.NumeroUnico)</th>
+                                        <th>@Html.Raw(SummarySpoolStrings.Motion1)</th>
+                                        <th>@Html.Raw(SummarySpoolStrings.Motion2)</th>
+                                        <th>@Html.Raw(SummarySpoolStrings.Bill1)</th>
+                                        <th>@Html.Raw(SummarySpoolStrings.MTR)</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (DetailMaterialSummaryModel m in Model.DetailMaterials)
+                                    {
+                                        <tr>
+                                            <td>@m.Codigo</td>
+                                            <td>@m.Material</td>
+                                            <td style="text-align:center;">@m.Cantidad</td>
+                                            <td>@m.NumeroUnico</td>
+                                            <td>@m.Motion1</td>
+                                            <td>@m.Motion2</td>
+                                            <td>@m.Bill</td>
+                                            <td>@m.MTR</td>
+                                           
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </fieldset>
+                <a class="btn btn-primary btn-block" href='@Url.Action("Index","Location")'> @Html.Raw(SummarySpoolStrings.QuadrantChange)</a>@*
+                    <div  class="form-group">
+                         <div class="input-group col-xs-6 col-md-6 pull-left">
+
+                         </div>
+                         <div class="input-group col-xs-6 col-md-6 pull-right">
+                             <a class="btn btn-primary btn-block"  href='@Url.Action("CertificationReports", "ControlNumber", new { controlNumberId = NumeroControId })'> @Html.Raw(CommonStrings.DetalleSpool)</a>
+                         </div>
+                     </div>*@
+}
+

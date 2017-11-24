@@ -1,0 +1,1 @@
+UPDATE ProyectoConfiguracion SET DigitosFolioPreparacion = 3

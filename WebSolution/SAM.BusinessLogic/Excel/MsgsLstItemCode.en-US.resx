@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CantidadCongeladaEquivalente" xml:space="preserve">
+    <value>Asignado para IC Equivalente</value>
+  </data>
+  <data name="CantidadDanada" xml:space="preserve">
+    <value>Total damaged</value>
+  </data>
+  <data name="CantidadDespachadaEquivalente" xml:space="preserve">
+    <value>Entries from Equivalent IC</value>
+  </data>
+  <data name="CantidadDespachadaEquivalente2" xml:space="preserve">
+    <value>Dispatched from Equivalent IC</value>
+  </data>
+  <data name="CantidadEnPreparacionEquivalente" xml:space="preserve">
+    <value>Dispatched for Cut for Equivalent IC</value>
+  </data>
+  <data name="CantidadEnCorteEquivalente" xml:space="preserve">
+    <value>Cut for IC Equivalente</value>
+  </data>
+  <data name="CantidadOrdenTrabajo" xml:space="preserve">
+    <value>Total Work Order</value>
+  </data>
+  <data name="CantidadRecibida" xml:space="preserve">
+    <value>Total Received</value>
+  </data>
+  <data name="Descripcion" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Diametro1" xml:space="preserve">
+    <value>Diameter1</value>
+  </data>
+  <data name="Diametro2" xml:space="preserve">
+    <value>Diameter2</value>
+  </data>
+  <data name="InventarioCongelado" xml:space="preserve">
+    <value>Inventory allocated</value>
+  </data>
+  <data name="InventarioCongeladoEquivalente" xml:space="preserve">
+    <value>Inventory allocated for Equivalent IC</value>
+  </data>
+  <data name="InventarioDisponibleCruce" xml:space="preserve">
+    <value>Material Available for Crossing Process</value>
+  </data>
+  <data name="InventarioDisponibleCruceEquivalente" xml:space="preserve">
+    <value>Equivalent IC Available</value>
+  </data>
+  <data name="InventarioFisico" xml:space="preserve">
+    <value>Total in store</value>
+  </data>
+  <data name="InventarioTransferenciaCorte" xml:space="preserve">
+    <value>Dispatched for cut</value>
+  </data>
+  <data name="ItemCode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Nombre_Hoja_Excel" xml:space="preserve">
+    <value>IC List</value>
+  </data>
+  <data name="RecibidoNeto" xml:space="preserve">
+    <value>Net Received</value>
+  </data>
+  <data name="TipoMaterial" xml:space="preserve">
+    <value>Type of Material</value>
+  </data>
+  <data name="TotalCondicionada" xml:space="preserve">
+    <value>Total conditioned inventory</value>
+  </data>
+  <data name="TotalCorteSinDespacho" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="TotalDespachado" xml:space="preserve">
+    <value>Total dispatched</value>
+  </data>
+  <data name="TotalDespachadoParaICE" xml:space="preserve">
+    <value>Output for Equivalent IC</value>
+  </data>
+  <data name="TotalDisponibleCruce" xml:space="preserve">
+    <value>Total Available for crossing process</value>
+  </data>
+  <data name="TotalEntradaOtrosProcesos" xml:space="preserve">
+    <value>Other entries</value>
+  </data>
+  <data name="TotalIngenieria" xml:space="preserve">
+    <value>Total Engineering</value>
+  </data>
+  <data name="TotalMerma" xml:space="preserve">
+    <value>Total Waste</value>
+  </data>
+  <data name="TotalOtrasSalidas" xml:space="preserve">
+    <value>Other processes outputs</value>
+  </data>
+  <data name="TotalPorDespachar" xml:space="preserve">
+    <value>Total missing to dispatch</value>
+  </data>
+  <data name="TotalRechazada" xml:space="preserve">
+    <value>Total Rejected</value>
+  </data>
+  <data name="TotalSalidasTemporales" xml:space="preserve">
+    <value>Temporary Output</value>
+  </data>
+  <data name="TransferenciaACorte" xml:space="preserve">
+    <value>TransferenciaACorte</value>
+  </data>
+</root>

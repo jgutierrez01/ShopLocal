@@ -1,0 +1,257 @@
+﻿
+/************************************************/
+/**                LOGIN                       **/
+/************************************************/
+html
+{
+    overflow:auto;    
+}
+
+body
+{
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+
+.Central
+{
+    vertical-align:top;
+}
+
+.tablaEstructura td.CentralLogin
+{
+    background-image:url(../Imagenes/Encabezado/enc.png);
+    background-repeat:repeat-x;
+}
+
+.tablaEstructuraLogin td.CentralLogin
+{
+    background-image:url(../Imagenes/Encabezado/enc.png);
+    background-repeat:repeat-x;
+    width:704px;
+    min-width:704px;
+}
+
+.CentralLogin
+{
+    vertical-align:top;
+}
+
+.CentralLogin .menuSuperior
+{
+    margin-left:0px;
+    margin-top:25px;
+}
+
+.Central .menuSuperior
+{
+    width:100%;
+    margin-left:0px;
+    margin-top:6px;
+}
+
+.CentralLogin .samLogoLogin
+{
+    margin-top:10px;
+}
+
+.Central .samLogo
+{
+    margin-top:5px;
+}
+
+.CentralLogin .recuadroUsuarioLogin
+{
+    background-image:url(../Imagenes/Encabezado/perfilLogin.png);
+    background-repeat:no-repeat;
+    width:70px;
+    height:31px;
+    margin-top:-123px;
+    float:right;
+}
+
+/************************************************/
+/**              USUARIO LOGIN                 **/
+/************************************************/
+
+.recuadroUsuario
+{
+    background-image:url(../Imagenes/Encabezado/perfil.png);
+    width:300px;
+    min-width:300px;
+    max-width:300px;
+    height:27px;
+    min-height:27px;
+    max-height:27px;
+    margin-top:0px;
+    float:right;
+}
+
+.Header .texto
+{
+    font-family:Arial;
+    font-size:12px;
+    color:White;
+    font-weight:bold;
+    text-align:center;
+}
+
+.recuadroUsuario .link
+{
+    color:White;
+    text-decoration:none;
+    height:21px;
+    line-height:21px;
+    vertical-align:top;
+}
+
+.recuadroUsuario .link:hover
+{
+    text-decoration:underline;
+}
+
+.recuadroUsuario .imgSalir
+{
+    margin-left:20px;
+}
+
+/************************************************/
+/**               SUB MENU                     **/
+/************************************************/
+
+.menuInferior
+{
+    background-image:url(../Imagenes/Menu/menuInferior.png);
+    background-repeat:repeat-x;
+    background-color:#EAE9E9;
+    height:24px;
+    min-height:24px;
+    max-height:24px;
+    width:100%;
+    float:left;
+    margin-bottom:0px;
+}
+
+.menuInferior a,
+.menuInferior a:visited
+{
+    color: #434b4d;
+    text-decoration: none;
+    font-size:11px;
+    font-weight: bold;
+}
+
+.menuInferior .Elemento
+{
+    margin-top:0px;
+   /** margin-left:1px;**/
+}
+
+.menuInferior .Elemento ul
+{
+    list-style-image:none;
+    /**list-style-image:url(../Imagenes/Menu/bltGris.png);**/
+    list-style-type:circle;
+}
+
+.menuInferior .Elemento ul li
+{
+    margin-left:10px;
+}
+
+.menuInferior .Elemento ul li:hover a, .menuInferior .Elemento ul li .Activo
+{
+    list-style-image:none;
+    list-style-type:circle;
+    /**list-style-image:url(../Imagenes/Menu/bltNaranja.png);**/
+}
+
+.menuInferior .Elemento ul li:hover 
+{
+    list-style-image:none;
+    list-style-type:circle;
+    /**list-style-image:url(../Imagenes/Menu/bltNaranja.png);**/
+}
+
+/************************************************/
+/**                REGRESAR                    **/
+/************************************************/
+
+
+.paginaHeader a.regresar img
+{
+    margin-top: -25px;
+}
+
+.paginaHeader a.rgTxt
+{
+    margin-top: -22px;
+}
+
+
+/************************************************/
+/**                PROYECTOS                   **/
+/************************************************/
+
+.headerCajaEspecial
+{
+    width:263px;
+    display:block;
+}
+
+.dashboardElement
+{
+    width:241px;
+    clear:both;
+}
+
+.dashboardElementLeft
+{
+    width:231px;
+    clear:both;
+}
+.pnlColor
+{
+    display:inline;
+}
+
+
+
+.validacionesMain .summary ul
+{
+    margin-left:0px;
+    list-style-type:square;
+    list-style-image:none;
+}
+
+/************************************************/
+/**                CERTIFICACION               **/
+/************************************************/
+.certificacion .rgHeader{
+    padding-left:3px !important;
+    padding-right:0 !important;
+}
+
+.certificacion .rgRow TD,.certificacion .rgAltRow TD{
+    padding-left: 3px !important;
+}
+
+.certificacion .rgFilterBox{
+    width: 70px !important;
+}
+
+.segJunta .rgRow td, .segJunta .rgAltRow td
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.segJunta .rgHeader 
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

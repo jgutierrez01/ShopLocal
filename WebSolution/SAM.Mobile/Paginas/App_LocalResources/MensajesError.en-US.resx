@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Armado_CamposVacios" xml:space="preserve">
+    <value>At least one field must be filled</value>
+  </data>
+  <data name="Armado_ErrorBasedeDatos" xml:space="preserve">
+    <value>Error while saving to Database</value>
+  </data>
+  <data name="Armado_FechaInvalida" xml:space="preserve">
+    <value>Invalid Date.</value>
+  </data>
+  <data name="Armado_JuntaArmada" xml:space="preserve">
+    <value>Joint was fitted</value>
+  </data>
+  <data name="Armado_NoPermisos" xml:space="preserve">
+    <value>Permissions requiered to access spool</value>
+  </data>
+  <data name="Armado_OK" xml:space="preserve">
+    <value>Fitt Success</value>
+  </data>
+  <data name="Armado_SeleccionIncompleta" xml:space="preserve">
+    <value>You must select from all combos</value>
+  </data>
+  <data name="Armado_SeleccionJunta" xml:space="preserve">
+    <value>You must select a joint</value>
+  </data>
+  <data name="Armado_SeleccionYActualización" xml:space="preserve">
+    <value>Select a joint and click Refresh</value>
+  </data>
+  <data name="Armado_SpoolNoExiste" xml:space="preserve">
+    <value>Spool was not found</value>
+  </data>
+  <data name="Armado_SpoolTieneHold" xml:space="preserve">
+    <value>Spool its blocked bay hold</value>
+  </data>
+  <data name="Armado_TodasJuntasAprobadas" xml:space="preserve">
+    <value>All joints have been approved</value>
+  </data>
+  <data name="Soldadora_SeleccionarWPS" xml:space="preserve">
+    <value>You need to select a WPS</value>
+  </data>
+  <data name="Soldadura_AgregarColada" xml:space="preserve">
+    <value>Must insert a heat number</value>
+  </data>
+  <data name="Soldadura_AlMenosUnSoldadorRaiz" xml:space="preserve">
+    <value>At least one root welder must be added</value>
+  </data>
+  <data name="Soldadura_AlMenosUnSoldadorRelleno" xml:space="preserve">
+    <value>At least one fill welder must be added</value>
+  </data>
+  <data name="Soldadura_CamposVacios" xml:space="preserve">
+    <value>At least one field is requiered</value>
+  </data>
+  <data name="Soldadura_ColadaNoExiste" xml:space="preserve">
+    <value>Heat number does not exist for this yard</value>
+  </data>
+  <data name="Soldadura_ErrorBD" xml:space="preserve">
+    <value>Error at inserting weld on database</value>
+  </data>
+  <data name="Soldadura_FechaInvalida" xml:space="preserve">
+    <value>Invalid Date</value>
+  </data>
+  <data name="Soldadura_JuntaSoldada" xml:space="preserve">
+    <value>Joint was weld.</value>
+  </data>
+  <data name="Soldadura_OK" xml:space="preserve">
+    <value>Weld succesfully inserted.</value>
+  </data>
+  <data name="Soldadura_SeleccionarProcesoRaiz" xml:space="preserve">
+    <value>You must select a root process</value>
+  </data>
+  <data name="Soldadura_SeleccionarProcesoRelleno" xml:space="preserve">
+    <value>You must select a fill process</value>
+  </data>
+  <data name="Soldadura_SeleccionarSoldadorRaiz" xml:space="preserve">
+    <value>You must select a root welder</value>
+  </data>
+  <data name="Soldadura_SeleccionarSoldadorRelleno" xml:space="preserve">
+    <value>You must select a fill welder</value>
+  </data>
+  <data name="Soldadura_SeleccionarTaller" xml:space="preserve">
+    <value>You must select a yard</value>
+  </data>
+  <data name="Soldadura_SeleccionJunta" xml:space="preserve">
+    <value>Ther is no joint selected</value>
+  </data>
+  <data name="Soldadura_SeleccionYActualización" xml:space="preserve">
+    <value>You must select a joint and press refresh</value>
+  </data>
+  <data name="Soldadura_SoldadorColadaDuplicado" xml:space="preserve">
+    <value>You cant add the same welder on the same process</value>
+  </data>
+  <data name="Soldadura_SpoolNoExiste" xml:space="preserve">
+    <value>Spool not found</value>
+  </data>
+  <data name="Soldadura_SpoolTieneHold" xml:space="preserve">
+    <value>Spool is in hold</value>
+  </data>
+  <data name="Soldadura_TodasSoldadurasAprobadas" xml:space="preserve">
+    <value>All welders have been approved</value>
+  </data>
+  <data name="Soldadura_WPSNoCoincide" xml:space="preserve">
+    <value>WPS does not match</value>
+  </data>
+  <data name="InsVisual_CamposVacios" xml:space="preserve">
+    <value>At least one field is requiered</value>
+  </data>
+  <data name="InsVisual_ErrorBD" xml:space="preserve">
+    <value>Error at inserting visual inspection on database</value>
+  </data>
+  <data name="InsVisual_FechaInvalida" xml:space="preserve">
+    <value>Invalid date format.</value>
+  </data>
+  <data name="InsVisual_InspeccionRealizada" xml:space="preserve">
+    <value>Visual Inspection was already added.</value>
+  </data>
+  <data name="InsVisual_OK" xml:space="preserve">
+    <value>Visual Inspection inserted succesfully.</value>
+  </data>
+  <data name="InsVisual_ReprobadoNoErrores" xml:space="preserve">
+    <value>At least one defect must be added</value>
+  </data>
+  <data name="InsVisual_SeleccionarDefectoDisponible" xml:space="preserve">
+    <value>You must select and available defect</value>
+  </data>
+  <data name="InsVisual_SeleccionarDefectoEncontrado" xml:space="preserve">
+    <value>You must select a found defect</value>
+  </data>
+  <data name="InsVisual_SeleccionDeResultado" xml:space="preserve">
+    <value>You must select the result of the visual inspection</value>
+  </data>
+  <data name="InsVisual_SeleccionJunta" xml:space="preserve">
+    <value>You must select a joint</value>
+  </data>
+  <data name="InsVisual_SeleccionYActualización" xml:space="preserve">
+    <value>You must select a joint</value>
+  </data>
+  <data name="InsVisual_SpoolNoExiste" xml:space="preserve">
+    <value>Spool was not found</value>
+  </data>
+  <data name="InsVisual_SpoolTieneHold" xml:space="preserve">
+    <value>Spool has a hold</value>
+  </data>
+  <data name="InsVisual_TodasAprobadas" xml:space="preserve">
+    <value>All Visual Inspections had been made</value>
+  </data>
+  <data name="InsVisual_VaciarErrores" xml:space="preserve">
+    <value>You must empty found defects list to continue</value>
+  </data>
+  <data name="InsDimensional_NoCumple" xml:space="preserve">
+    <value>The spool does not have welding in all joints.</value>
+  </data>
+  <data name="InsDimensional_OK" xml:space="preserve">
+    <value>Dimensional Liberation added succesfully</value>
+  </data>
+  <data name="InsDimensional_SpoolYaTieneInspeccionDimensional" xml:space="preserve">
+    <value>Spool already had  dimensional liberation</value>
+  </data>
+  <data name="Tabla_Codigo" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Tabla_Colada" xml:space="preserve">
+    <value>Heat Number</value>
+  </data>
+  <data name="Tabla_Nombre" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="InsDimensional_ErrorBD" xml:space="preserve">
+    <value>Error when trying to save dimentional liberation in data base.</value>
+  </data>
+  <data name="InsVisual_JuntaSinArmar" xml:space="preserve">
+    <value>There are no joints with welding</value>
+  </data>
+  <data name="Armado_FechaMayorSoldadura" xml:space="preserve">
+    <value>Date of fitting is greater than date of welding</value>
+  </data>
+  <data name="InsDimensional_TieneInspeccionDimensional" xml:space="preserve">
+    <value>The Dimensional Inspection already exist</value>
+  </data>
+  <data name="EstatusReporteRechazado" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="EstatusReporteAprobado" xml:space="preserve">
+    <value>Aproved</value>
+  </data>
+  <data name="InsDimensional_ModificacionOK" xml:space="preserve">
+    <value>Dimensional Liberation updated succesfully</value>
+  </data>
+  <data name="InsVisual_ModificadaOK" xml:space="preserve">
+    <value>Visual Inspection updated succesfully.</value>
+  </data>
+  <data name="Excepcion_FechaProcAnteriorMayorLiberacion" xml:space="preserve">
+    <value>The date can't be greater than the dimensional liberation.</value>
+  </data>
+</root>

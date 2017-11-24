@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Area" xml:space="preserve">
+    <value>Área</value>
+  </data>
+  <data name="Cedula" xml:space="preserve">
+    <value>Cedula</value>
+  </data>
+  <data name="DateHold" xml:space="preserve">
+    <value>Fecha Hold</value>
+  </data>
+  <data name="DateShipment" xml:space="preserve">
+    <value>Fecha Embarque</value>
+  </data>
+  <data name="DateVisualInspection" xml:space="preserve">
+    <value>Fecha Insp Vis</value>
+  </data>
+  <data name="DetailJoints" xml:space="preserve">
+    <value>Detalle Juntas</value>
+  </data>
+  <data name="DetailSpool" xml:space="preserve">
+    <value>Detalle Spool</value>
+  </data>
+  <data name="Diameter" xml:space="preserve">
+    <value>Diametro</value>
+  </data>
+  <data name="DimensionalRelease" xml:space="preserve">
+    <value>Liberación Dimensional</value>
+  </data>
+  <data name="Fitting" xml:space="preserve">
+    <value>Armado</value>
+  </data>
+  <data name="Hardness" xml:space="preserve">
+    <value>Durezas</value>
+  </data>
+  <data name="Hold" xml:space="preserve">
+    <value>Hold</value>
+  </data>
+  <data name="Isometric" xml:space="preserve">
+    <value>Isométrico</value>
+  </data>
+  <data name="Joint" xml:space="preserve">
+    <value>Junta</value>
+  </data>
+  <data name="Joints" xml:space="preserve">
+    <value>Juntas</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Materiales</value>
+  </data>
+  <data name="NumberShipment" xml:space="preserve">
+    <value>Número Embarque</value>
+  </data>
+  <data name="PDI" xml:space="preserve">
+    <value>PDI</value>
+  </data>
+  <data name="PEQS" xml:space="preserve">
+    <value>PEQS</value>
+  </data>
+  <data name="PMI" xml:space="preserve">
+    <value>PMI</value>
+  </data>
+  <data name="PT" xml:space="preserve">
+    <value>PT</value>
+  </data>
+  <data name="RequiredTestHydrostatic" xml:space="preserve">
+    <value>Requiere Prueba Hisdrostática</value>
+  </data>
+  <data name="ResultVisualInspection" xml:space="preserve">
+    <value>Resultado Inspección Visual</value>
+  </data>
+  <data name="RT" xml:space="preserve">
+    <value>RT</value>
+  </data>
+  <data name="RTestHydrostatic" xml:space="preserve">
+    <value>Requiere Prueba Hidrostática</value>
+  </data>
+  <data name="RTestNeumatic" xml:space="preserve">
+    <value>Requiere P Neumática</value>
+  </data>
+  <data name="TestHydrostatic" xml:space="preserve">
+    <value>Prueba Hidrostática</value>
+  </data>
+  <data name="TestNeumatic" xml:space="preserve">
+    <value>Prueba Neumática</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="WelderFiller" xml:space="preserve">
+    <value>Soldador Relleno</value>
+  </data>
+  <data name="WelderRoot" xml:space="preserve">
+    <value>Soldador Raíz</value>
+  </data>
+  <data name="Welding" xml:space="preserve">
+    <value>Soldadura</value>
+  </data>
+  <data name="WPS" xml:space="preserve">
+    <value>WPS</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="DiameterOne" xml:space="preserve">
+    <value>Diametro 1</value>
+  </data>
+  <data name="DiameterTwo" xml:space="preserve">
+    <value>Diametro 2</value>
+  </data>
+  <data name="ItemCode" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="Label" xml:space="preserve">
+    <value>Etiqueta</value>
+  </data>
+  <data name="Motion" xml:space="preserve">
+    <value>Pedimento</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Cantidad</value>
+  </data>
+  <data name="UniqueNumber" xml:space="preserve">
+    <value>Número Único</value>
+  </data>
+  <data name="Manufacturer" xml:space="preserve">
+    <value>Fabricante</value>
+  </data>
+  <data name="DetailMaterials" xml:space="preserve">
+    <value>Detalle Materiales</value>
+  </data>
+  <data name="ChkLstShipping" xml:space="preserve">
+    <value>Check List Embarque</value>
+  </data>
+  <data name="DimensionalInspection" xml:space="preserve">
+    <value>Lib Dim</value>
+  </data>
+  <data name="Dispatch" xml:space="preserve">
+    <value>Despachos</value>
+  </data>
+  <data name="MIL" xml:space="preserve">
+    <value>Materiales</value>
+  </data>
+  <data name="OKMIL" xml:space="preserve">
+    <value>OK Materiales</value>
+  </data>
+  <data name="OkPaint" xml:space="preserve">
+    <value>OK Pintura</value>
+  </data>
+  <data name="OkQuality" xml:space="preserve">
+    <value>OK Calidad</value>
+  </data>
+  <data name="Paint" xml:space="preserve">
+    <value>Pintura</value>
+  </data>
+  <data name="PND" xml:space="preserve">
+    <value>PND</value>
+  </data>
+  <data name="CustomerReview" xml:space="preserve">
+    <value>Revisión</value>
+  </data>
+  <data name="PercentagePnd" xml:space="preserve">
+    <value>Porcentaje PND</value>
+  </data>
+  <data name="Specification" xml:space="preserve">
+    <value>Especificación</value>
+  </data>
+  <data name="PWHT" xml:space="preserve">
+    <value>PWHT</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Intermedio" xml:space="preserve">
+    <value>Intermedio</value>
+  </data>
+  <data name="Primario" xml:space="preserve">
+    <value>Primario</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Reporte</value>
+  </data>
+  <data name="Painting" xml:space="preserve">
+    <value>Pintura</value>
+  </data>
+  <data name="Certified" xml:space="preserve">
+    <value>Certificado</value>
+  </data>
+  <data name="Acabado" xml:space="preserve">
+    <value>Acabado</value>
+  </data>
+  <data name="ShowDibujo_Text" xml:space="preserve">
+    <value>Dibujo Cliente</value>
+  </data>
+  <data name="ShowInstalation_Text" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="ShowTraveler_Text" xml:space="preserve">
+    <value>Traveler</value>
+  </data>
+  <data name="PreparationShipping" xml:space="preserve">
+    <value>Pre Embarque</value>
+  </data>
+  <data name="VisualInspection" xml:space="preserve">
+    <value>Ins Visual</value>
+  </data>
+  <data name="Heat" xml:space="preserve">
+    <value>Colada</value>
+  </data>
+  <data name="RequiredPWHT" xml:space="preserve">
+    <value>Req. PWHT</value>
+  </data>
+  <data name="Falta" xml:space="preserve">
+    <value>FALTA</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="No_Se" xml:space="preserve">
+    <value>NO SE</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PT_MT" xml:space="preserve">
+    <value>PT/MT</value>
+  </data>
+  <data name="Soporte" xml:space="preserve">
+    <value>SOPORTE</value>
+  </data>
+</root>

@@ -1,0 +1,2 @@
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop.Tests\obj\Debug\SAM.Web.Shop.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop.Tests\obj\Debug\SAM.Web.Shop.Tests.csprojResolveAssemblyReference.cache

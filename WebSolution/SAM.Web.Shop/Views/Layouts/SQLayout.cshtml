@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Layouts/MasterLayout.cshtml";
+}
+
+
+
+
+@section menus{
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
+    </ul>
+}
+@section breadcrumbs
+{
+    @Html.Action("YardBreadcrumb", "Controls")
+
+}
+@RenderBody()
+@section scripts
+{
+    @RenderSection("scripts", false)
+}

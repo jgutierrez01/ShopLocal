@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  This file contains basic settings needed for most web apps.
+  For full Combres settings (with explanation), refer to the sample definition file: combres_full_with_annotation.xml
+  Also, refer to Combres' documentation: http://combres.codeplex.com/documentation	
+-->
+<combres xmlns='urn:combres'>
+  <filters>
+    <filter type="Combres.Filters.FixUrlsInCssFilter, Combres" />
+  </filters>
+  <resourceSets url="~/combres.axd"
+                defaultDuration="30"
+                defaultVersion="auto"
+                defaultDebugEnabled="false"
+                defaultIgnorePipelineWhenDebug="true"
+                localChangeMonitorInterval="30"
+                remoteChangeMonitorInterval="60"
+                >
+    <resourceSet name="siteCss" type="css">
+      <resource path="~/content/css/bootstrap-datepicker/datepicker3.css" />
+      <resource path="~/content/css/site.css" />
+      <resource path="~/content/css/components.css" />
+    </resourceSet>
+    <resourceSet name="frameworkJs" type="js" minifierRef="off">
+      <!-- We just want bundling but not minification for these ones -->
+      <resource path="~/scripts/framework/bootstrap.min.js" />
+      <resource path="~/scripts/framework/jquery.validate.min.js" />
+      <resource path="~/scripts/framework/jquery.validate.unobtrusive.min.js" />
+    </resourceSet>
+    <resourceSet name="extensionsJs" type="js">
+      <resource path="~/scripts/extensions/namespace.js" />
+      <resource path="~/scripts/extensions/remedial.js" />
+    </resourceSet>
+    <resourceSet name="pluginsJs" type="js">
+      <resource path="~/scripts/plugins/i18next-1.7.1/i18next-1.7.1.js" />
+      <resource path="~/scripts/plugins/globalize/globalize.js" />
+      <resource path="~/scripts/plugins/globalize/cultures/globalize.culture.es.js" />
+      <resource path="~/scripts/plugins/globalize/cultures/globalize.culture.es-MX.js" />
+      <resource path="~/scripts/plugins/bootstrap-datepicker/bootstrap-datepicker.js" />
+      <resource path="~/scripts/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.es.js" />
+      <resource path="~/scripts/plugins/jquery.cookie.js" />
+    </resourceSet>
+    <resourceSet name="appJs" type="js" minifierRef="off">
+      <resource path="~/scripts/application/sam.init.js" />
+      <resource path="~/scripts/application/sam.utils.js" />
+      <resource path="~/scripts/application/controls/sam.controls.pager.js" />
+      <resource path="~/scripts/application/yard/sam.pages.yard.index.js" />
+      <resource path="~/scripts/application/sq/sam.pages.sq.add.index.js" />
+      <resource path="~/scripts/application/sq/sam.pages.sq.opciones.index.js" />
+      <resource path="~/scripts/application/sq/sam.pages.sq.editar.index.js" />
+      <resource path="~/scripts/application/yard/sam.pages.yard.spoolSearchResults.js" />
+      <resource path="~/scripts/application/shipment/sam.pages.shipment.prepare.js" />
+      <resource path="~/scripts/application/shipment/sam.pages.shipment.out.js" />
+      <resource path="~/scripts/application/workstatus/sam.pages.workstatus.index.js" />
+      <resource path="~/scripts/application/workstatus/sam.pages.workstatus.results.js" />
+      <resource path="~/scripts/application/yard/sam.pages.home.index.js" />
+    </resourceSet>
+  </resourceSets>
+</combres>

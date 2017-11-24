@@ -1,0 +1,19 @@
+﻿<div>
+<p>
+<span style="color:black; font-weight:bold">Estimado(a) {0},</span>
+</p>
+<p>
+Se le ha asignado un pendiente del proyecto <b>{1}</b> dentro de SAM Control.<br/>
+Por favor ingrese al sistema y vaya al listado de pendientes para ver el detalle.
+</p>
+</p>
+<b>Pendiente:</b> {2}<br/>
+<b>Detalle:</b> {3}
+</p>
+</p>
+<p><span style="color:black;">
+Atentamente -
+Equipo de SAM Control</span>
+</p>
+<p>&nbsp;</p>
+</div>

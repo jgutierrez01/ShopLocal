@@ -1,0 +1,90 @@
+﻿@using SAM.Web.Shop.Factories
+@using SAM.Web.Shop.Models
+@using Resources.Views
+@using SAM.Web.Shop.Extensions
+@model SearchControlNumberModel
+
+
+@{
+    Layout = "~/Views/Layouts/YardLayout.cshtml";
+    string projectId = ViewContext.HttpContext.Request.QueryString.Get("ProjectId");
+    
+    if(string.IsNullOrEmpty(projectId ))
+    {
+        projectId = "0";
+    }
+    if(Model != null)
+    {
+        
+    }
+}
+
+@using (Html.BeginForm("Search", "Yard", FormMethod.Get, new { role = "form", id="yard-index-form" }))
+{
+    <fieldset>
+        <legend></legend>
+         <div class="form-group">
+                @Html.Action("ProjectDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequired(Model, ViewContext.ViewData.ModelState) })   
+         </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.SearchType, new { @class = "show"})
+            <label class="radio-inline">
+                @Html.RadioButtonFor(x => x.SearchType, "cn")
+                @Html.Raw(CommonStrings.ControlNumber)
+            </label>
+            <label class="radio-inline">
+                @Html.RadioButtonFor(x => x.SearchType, "sp")
+                @Html.Raw(CommonStrings.Spool)
+            </label>
+        </div>
+        <div id="cnContainer" class="form-group clearfix">
+            @Html.StyledLabelFor(x => x.WorkOrderNumber, new { @class ="show"})
+            <div class="input-group col-xs-6 col-md-6 pull-left">
+                <span class="input-group-addon" id="wo-addon-text"></span>
+                @Html.StyledTextBoxFor(x => x.WorkOrderNumber, new { placeholder = CommonStrings.WoNumberWatermark, type="tel"})
+            </div>
+            <div class="input-group col-xs-6 col-md-6 pull-left">
+                <span class="input-group-addon">-</span>
+                @Html.StyledTextBoxFor(x => x.ControlNumber, new { placeholder = CommonStrings.ControlNumberWatermark, type = "tel" })
+            </div>
+            @Html.ValidationMessageFor(x => x.WorkOrderNumber)
+            @Html.ValidationMessageFor(x => x.ControlNumber)
+        </div>
+        <div id="spContainer" class="form-group">
+            @Html.StyledLabelFor(x => x.SpoolName)
+            @Html.StyledTextBoxFor(x => x.SpoolName)
+            @Html.ValidationMessageFor(x => x.SpoolName)
+        </div>
+        
+        @Html.ValidationSummary(false, string.Empty, new { @class = "alert alert-danger" })
+
+
+          <button type="submit" id="resumenSpool" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.ResumenSpool)</button>
+    @*   <div  class="form-group">
+                     <div class="input-group col-xs-6 col-md-6 pull-left">
+               
+            </div>      
+            <div class="input-group col-xs-6 col-md-6 pull-right">       
+                <button type="submit" id="detailSpool" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.DetalleSpool)</button> 
+            </div>   
+        </div> *@ 
+
+    </fieldset>
+     <fieldset id="yard-form" role="form"> 
+        <legend></legend>
+        <div id="date" style="display:none" >     
+           @Html.HiddenFor(x => x.ProjectId, new { @class = "form-control", type = "int", id = "projectId" })    
+            @Html.HiddenFor(x=> x.TypeSearch, new { @class="form-control", type = "int", id = "typeSearch"})  
+         </div> 
+       
+    </fieldset>     
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(function() {
+            var index = new sam.pages.yard.index($("#yard-index-form"));
+            index.init();
+        });
+    </script>
+}

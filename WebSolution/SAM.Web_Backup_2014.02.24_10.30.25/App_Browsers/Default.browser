@@ -1,0 +1,7 @@
+﻿<browsers>
+  <browser refID="Default">
+    <controlAdapters>
+      <adapter controlType="SAM.Web.Classes.SamPaginaPrincipal" adapterType="Telerik.Web.UI.RadSessionPageStateCompression" />
+    </controlAdapters>
+  </browser>
+</browsers>

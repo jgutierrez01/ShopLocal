@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAgregarCuadrante.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnAgregarSector.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnGenerar.Text" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="imgBorrar.ToolTip" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="lblDefecto.Text" xml:space="preserve">
+    <value>Defect:</value>
+  </data>
+  <data name="lblFechaPrueba.Text" xml:space="preserve">
+    <value>Test date:</value>
+  </data>
+  <data name="lblFechaReporte.Text" xml:space="preserve">
+    <value>Report date:</value>
+  </data>
+  <data name="lblReporte.Text" xml:space="preserve">
+    <value>Generate NDT report:</value>
+  </data>
+  <data name="lblResultado.Text" xml:space="preserve">
+    <value>Result:</value>
+  </data>
+  <data name="lblTipoDefecto.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="litA.Text" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="litCuadrante.Text" xml:space="preserve">
+    <value>Quadrant</value>
+  </data>
+  <data name="litDe.Text" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="litDefecto.Text" xml:space="preserve">
+    <value>Defect</value>
+  </data>
+  <data name="litSector.Text" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="lstAprobado.Text" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="lstAprobado.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lstReprobado.Text" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="lstReprobado.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="valDefecto.HeaderText" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="valDefectoCuadrante.ErrorMessage" xml:space="preserve">
+    <value>Defect is required</value>
+  </data>
+  <data name="valDefectoSector.ErrorMessage" xml:space="preserve">
+    <value>Defect is required</value>
+  </data>
+  <data name="valFechaPrueba.ErrorMessage" xml:space="preserve">
+    <value>Test date is required</value>
+  </data>
+  <data name="valFechaReporte.ErrorMessage" xml:space="preserve">
+    <value>Report date is required</value>
+  </data>
+  <data name="valReporte.HeaderText" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="valResultado.ErrorMessage" xml:space="preserve">
+    <value>Result is required</value>
+  </data>
+  <data name="valTipoDefecto.ErrorMessage" xml:space="preserve">
+    <value>Type of defect is required</value>
+  </data>
+  <data name="txtA.ErrorMessage" xml:space="preserve">
+    <value>It is necessary to indicate the final value which is defective.</value>
+  </data>
+  <data name="txtCuadrante.ErrorMessage" xml:space="preserve">
+    <value>Quadrant is required</value>
+  </data>
+  <data name="txtCuadrante.Label" xml:space="preserve">
+    <value>Quadrant:</value>
+  </data>
+  <data name="txtDe.ErrorMessage" xml:space="preserve">
+    <value>It is necessary to indicate the initial value where the defect is presented.</value>
+  </data>
+  <data name="txtNumeroReporte.ErrorMessage" xml:space="preserve">
+    <value>Report number is required</value>
+  </data>
+  <data name="txtNumeroReporte.Label" xml:space="preserve">
+    <value>Report number:</value>
+  </data>
+  <data name="txtObservaciones.Label" xml:space="preserve">
+    <value>Comments:</value>
+  </data>
+  <data name="txtSector.ErrorMessage" xml:space="preserve">
+    <value>Sector is required</value>
+  </data>
+  <data name="txtSector.Label" xml:space="preserve">
+    <value>Sector:</value>
+  </data>
+  <data name="lstCuadrante.Text" xml:space="preserve">
+    <value>Quadrant</value>
+  </data>
+  <data name="lstSector.Text" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="txtA.Label" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="txtDe.Label" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="litPlaca.Text" xml:space="preserve">
+    <value>Plaque</value>
+  </data>
+  <data name="txtPlaca.ErrorMessage" xml:space="preserve">
+    <value>Plaque is required</value>
+  </data>
+  <data name="txtPlaca.Label" xml:space="preserve">
+    <value>Placa:</value>
+  </data>
+  <data name="lblMensajeExito.Text" xml:space="preserve">
+    <value>The report of non-destructive testing has been created successfully.</value>
+  </data>
+  <data name="lblTituloExito.Text" xml:space="preserve">
+    <value>Report Generated Successfully</value>
+  </data>
+  <data name="lblMensajeExitoReporte.Text" xml:space="preserve">
+    <value> &lt;br /&gt; &lt;br /&gt; If you want to download the report generated NDT click the link below, otherwise close this window to continue.</value>
+  </data>
+  <data name="lnkReporte.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="lblMensajeExitoRechazo.Text" xml:space="preserve">
+    <value>The report of non-destructive testing has been created successfully.&lt;br/&gt;&lt;br/&gt; Rejection on NDT represents rewelding and reinspecting the weld.</value>
+  </data>
+  <data name="lblMensajeExitoTercerRechazo.Text" xml:space="preserve">
+    <value>The report of non-destructive testing has been created successfully.&lt;br/&gt;&lt;br/&gt;This is the third rejection on NDT for the joint weld, therefore it should be cut and restart its process from the begining.</value>
+  </data>
+  <data name="tituloConfirmacion.Title" xml:space="preserve">
+    <value>Do you want to save the report?</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="btnOk.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="lblJunta1.Text" xml:space="preserve">
+    <value>Joint tracing 1</value>
+  </data>
+  <data name="lblJunta2.Text" xml:space="preserve">
+    <value>Joint tracing 2</value>
+  </data>
+</root>

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnGuardar.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnGuardar.ToolTip" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="cusPeriodos.ErrorMessage" xml:space="preserve">
+    <value>Invalid  data entered for periods, please review</value>
+  </data>
+  <data name="imgAgregar.ToolTip" xml:space="preserve">
+    <value>Add period</value>
+  </data>
+  <data name="imgBorrar.ToolTip" xml:space="preserve">
+    <value>Delete period</value>
+  </data>
+  <data name="lblContrato.Text" xml:space="preserve">
+    <value>By contract</value>
+  </data>
+  <data name="lblDetPrograma.Text" xml:space="preserve">
+    <value>Project program</value>
+  </data>
+  <data name="lblFechaInicial.Text" xml:space="preserve">
+    <value>Project start date:</value>
+  </data>
+  <data name="lblRango.Text" xml:space="preserve">
+    <value>Range:</value>
+  </data>
+  <data name="lblReprogramaciones.Text" xml:space="preserve">
+    <value>Reprogrammed</value>
+  </data>
+  <data name="lblUnidades.Text" xml:space="preserve">
+    <value>Units:</value>
+  </data>
+  <data name="liDia.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="liKg.Text" xml:space="preserve">
+    <value>Kg</value>
+  </data>
+  <data name="liM2.Text" xml:space="preserve">
+    <value>m2</value>
+  </data>
+  <data name="liMes.Text" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="liPdis.Text" xml:space="preserve">
+    <value>Pdis</value>
+  </data>
+  <data name="liSemana.Text" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="litFechaFinal.Text" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="litFechaInicial.Text" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="litNum.Text" xml:space="preserve">
+    <value>Num.</value>
+  </data>
+  <data name="litPeriodos.Text" xml:space="preserve">
+    <value>Periods</value>
+  </data>
+  <data name="litPorContrato.Text" xml:space="preserve">
+    <value>By contract</value>
+  </data>
+  <data name="litRepro.Text" xml:space="preserve">
+    <value>Reprogrammed</value>
+  </data>
+  <data name="lnkAgregar.Text" xml:space="preserve">
+    <value>Add period</value>
+  </data>
+  <data name="reqContratoPeriodo.ErrorMessage" xml:space="preserve">
+    <value>Value by contract is required</value>
+  </data>
+  <data name="reqFecha.ErrorMessage" xml:space="preserve">
+    <value>Date is required</value>
+  </data>
+  <data name="reqRango.ErrorMessage" xml:space="preserve">
+    <value>Range is required</value>
+  </data>
+  <data name="reqReproPeriodo.ErrorMessage" xml:space="preserve">
+    <value>Reprogrammed value is required</value>
+  </data>
+  <data name="reqUnidades.ErrorMessage" xml:space="preserve">
+    <value>Units are required</value>
+  </data>
+  <data name="rngContratoPeriodo.ErrorMessage" xml:space="preserve">
+    <value>By contract value must be greater than or equal to zero and less than 99999999</value>
+  </data>
+  <data name="rngIsosPlaneados.ErrorMessage" xml:space="preserve">
+    <value>Planned isometrics must be greater than or equal to zero and less than 99999999</value>
+  </data>
+  <data name="rngIsosRepro.ErrorMessage" xml:space="preserve">
+    <value>Reprogrammed isometrics must be greater than or equal to zero and less than 99999999</value>
+  </data>
+  <data name="rngReproPeriodo.ErrorMessage" xml:space="preserve">
+    <value>Reprogrammed value must be greater than or equal to zero and less than 99999999</value>
+  </data>
+  <data name="rngSpoolsPlaneados.ErrorMessage" xml:space="preserve">
+    <value>Planned spools must be greater than or equal to zero and less than 99999999</value>
+  </data>
+  <data name="rngSpoolsRepro.ErrorMessage" xml:space="preserve">
+    <value>Reprogrammed spools must be greater than or equal to zero and less than 99999999</value>
+  </data>
+  <data name="txtIsosPlaneados.Label" xml:space="preserve">
+    <value>Planned isometrics:</value>
+  </data>
+  <data name="txtIsosReprogramaciones.Label" xml:space="preserve">
+    <value>Reprogrammed isometrics:</value>
+  </data>
+  <data name="txtSpoolsPlaneados.Label" xml:space="preserve">
+    <value>Planned spools:</value>
+  </data>
+  <data name="txtSpoolsReprogramaciones.Label" xml:space="preserve">
+    <value>Reprogrammed spools:</value>
+  </data>
+  <data name="valGlobal.HeaderText" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="valSummary.HeaderText" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+</root>

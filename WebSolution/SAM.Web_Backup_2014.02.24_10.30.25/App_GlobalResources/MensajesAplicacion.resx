@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Destajos_ProcesoRaizEquipo" xml:space="preserve">
+    <value>El proceso raíz se llevó a cabo entre {0} soldadores por lo que el destajo ha sido dividido en partes iguales</value>
+  </data>
+  <data name="Destajos_ProcesoRellenoEquipo" xml:space="preserve">
+    <value>El proceso de relleno se llevó a cabo entre {0} soldadores por lo que el destajo ha sido dividido en partes iguales</value>
+  </data>
+  <data name="Destajos_TextoAprobado" xml:space="preserve">
+    <value>Aprobado</value>
+  </data>
+  <data name="Destajos_TextoEstatusPeriodoAbierto" xml:space="preserve">
+    <value>Abierto</value>
+  </data>
+  <data name="Destajos_TextoEstatusPeriodoCerrado" xml:space="preserve">
+    <value>Cerrado</value>
+  </data>
+  <data name="Destajos_TextoNoAprobado" xml:space="preserve">
+    <value>No aprobado</value>
+  </data>
+  <data name="Destajos_TextoPager" xml:space="preserve">
+    <value>Mostrando &lt;b&gt;{0}&lt;/b&gt; de &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="Destajos_TextoSoldador" xml:space="preserve">
+    <value>Soldador</value>
+  </data>
+  <data name="Destajos_TextoTubero" xml:space="preserve">
+    <value>Tubero</value>
+  </data>
+  <data name="Etiqueta_Certificado" xml:space="preserve">
+    <value>Certificado:</value>
+  </data>
+  <data name="Etiqueta_Colada" xml:space="preserve">
+    <value>Colada:</value>
+  </data>
+  <data name="Etiqueta_Descripcion" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="Etiqueta_Diametro1" xml:space="preserve">
+    <value>Diam 1:</value>
+  </data>
+  <data name="Etiqueta_Diametro2" xml:space="preserve">
+    <value>Diam 2:</value>
+  </data>
+  <data name="Etiqueta_Especificacion" xml:space="preserve">
+    <value>Spec</value>
+  </data>
+  <data name="Etiqueta_Isometrico" xml:space="preserve">
+    <value>Isométrico:</value>
+  </data>
+  <data name="Etiqueta_NumeroControl" xml:space="preserve">
+    <value>No. Control:</value>
+  </data>
+  <data name="Etiqueta_NumeroUnico" xml:space="preserve">
+    <value>Número Único:</value>
+  </data>
+  <data name="Etiqueta_Part" xml:space="preserve">
+    <value>Part:</value>
+  </data>
+  <data name="Etiqueta_PDI" xml:space="preserve">
+    <value>Dia. Inch:</value>
+  </data>
+  <data name="Etiqueta_Peso" xml:space="preserve">
+    <value>Peso:</value>
+  </data>
+  <data name="Etiqueta_Revision" xml:space="preserve">
+    <value>Rev.</value>
+  </data>
+  <data name="Generico_MensajeBorrar" xml:space="preserve">
+    <value>¿Está seguro que desea borrar el registro?</value>
+  </data>
+  <data name="Seguridad_FormatoContrasena" xml:space="preserve">
+    <value>La contraseña debe ser de al menos 6 caracteres, contener un número, una minúscula y una mayúscula.</value>
+  </data>
+  <data name="Seguridad_NoTieneAcceso" xml:space="preserve">
+    <value>No tiene acceso al módulo seleccionado</value>
+  </data>
+  <data name="Usuario_CorreoActivacionEnviadoMensaje" xml:space="preserve">
+    <value>Se ha vuelto a enviar el correo de activación al usuario solicitado.  Al recibirlo el usuario podrá completar su proceso de registro en el sistema para tener acceso al mismo.</value>
+  </data>
+  <data name="Usuario_CorreoActivacionEnviadoTitulo" xml:space="preserve">
+    <value>Correo de activación enviado</value>
+  </data>
+  <data name="Usuario_CuentaDesactivadaMensaje" xml:space="preserve">
+    <value>Se ha desactivado la cuenta del usuario seleccionado.  El mismo no será capaz de entrar al sistema ni realizar ninguna actividad dentro del mismo a partir de este momento.  En caso que se desee volver a dar acceso al usuario habrá que reactivar su cuenta.</value>
+  </data>
+  <data name="Usuario_CuentaDesactivadaTitulo" xml:space="preserve">
+    <value>Cuenta desactivada</value>
+  </data>
+  <data name="Usuario_CuentaDesbloqueadaMensaje" xml:space="preserve">
+    <value>La cuenta del usuario ha sido desbloqueada. Se le sugiere ponerse en contacto con la persona indicada e informarle que ya puede entrar nuevamente al sistema.</value>
+  </data>
+  <data name="Usuario_CuentaDesbloqueadaTitulo" xml:space="preserve">
+    <value>Cuenta desbloqueada</value>
+  </data>
+  <data name="Usuario_CuentaReactivadaMensaje" xml:space="preserve">
+    <value>La cuenta del usuario seleccionado ha sido reactivada.  A partir de este momento el usuario puede hacer uso del sistema nuevamente.  Se le sugiere ponerse en contacto con la persona e informarle lo anterior.</value>
+  </data>
+  <data name="Usuario_CuentaReactivadaTitulo" xml:space="preserve">
+    <value>Cuenta reactivada</value>
+  </data>
+  <data name="Usuario_ListadoDeUsuarios" xml:space="preserve">
+    <value>Lista de usuarios</value>
+  </data>
+  <data name="Usuario_RegresarUsuarioAnterior" xml:space="preserve">
+    <value>Regresar al usuario anterior</value>
+  </data>
+  <data name="Usuario_ReseteoPasswordMensaje" xml:space="preserve">
+    <value>La contraseña ha sido reiniciada de manera exitosa.  Se ha enviado un correo al usuario en cuestión informándole sobre su nueva contraseña.</value>
+  </data>
+  <data name="Usuario_ReseteoPasswordTitulo" xml:space="preserve">
+    <value>Contraseña reiniciada</value>
+  </data>
+  <data name="Pager_PaginaXdeY" xml:space="preserve">
+    <value>&lt;strong&gt;Página&lt;/strong&gt; {0} &lt;strong&gt;de&lt;/strong&gt; {1}, &lt;strong&gt;registros&lt;/strong&gt; {2} &lt;strong&gt;a&lt;/strong&gt; {3} &lt;strong&gt;de&lt;/strong&gt; {4}.</value>
+  </data>
+  <data name="Etiqueta_Cedula1" xml:space="preserve">
+    <value>Cédula Ref:</value>
+  </data>
+  <data name="Etiqueta_Cedula2" xml:space="preserve">
+    <value>Cédula 2:</value>
+  </data>
+  <data name="Etiqueta_MaterialID" xml:space="preserve">
+    <value>Material ID:</value>
+  </data>
+  <data name="Reporte_NoEncontrado" xml:space="preserve">
+    <value>La ruta especificada para la generación de etiquetas, por favor contacte a su Administrador.</value>
+  </data>
+  <data name="JuntaCampo_AmbosMaterialesEncontrados" xml:space="preserve">
+    <value>Ambos materiales son parte del spool, revisar la ingeniería</value>
+  </data>
+  <data name="JuntaCampo_EtiquetaLocalizacionInvalida" xml:space="preserve">
+    <value>La etiqueta de localización es inválida</value>
+  </data>
+  <data name="JuntaCampo_NoEncuentraMaterial" xml:space="preserve">
+    <value>El spool no contiene ninguno de los materiales de la etiqueta de localización</value>
+  </data>
+</root>

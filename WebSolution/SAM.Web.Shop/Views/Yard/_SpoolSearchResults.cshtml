@@ -1,0 +1,12 @@
+﻿@using SAM.Entities.Busqueda
+@model IEnumerable<NumeroControlBusqueda>
+@foreach (NumeroControlBusqueda controlNumber in Model)
+{
+    <a href="@Url.Action("Index", "ControlNumber", new { controlNumberId = controlNumber.OrdenTrabajoSpoolID})" class="list-group-item">
+        <h4 class="list-group-item-heading">@controlNumber.Spool<span class="glyphicon glyphicon-chevron-right pull-right"></span></h4>
+        <p class="list-group-item-text">@controlNumber.NumeroControl</p>
+    </a>
+}
+
+
+

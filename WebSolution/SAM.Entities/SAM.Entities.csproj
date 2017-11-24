@@ -1,0 +1,1084 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAM.Entities</RootNamespace>
+    <AssemblyName>SAM.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Acero.cs">
+      <Link>Acero.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\AgrupadoresPorJunta.cs">
+      <Link>AgrupadoresPorJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\AgrupadoresSpoolPND.cs">
+      <Link>AgrupadoresSpoolPND.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\BastonSpool.cs">
+      <Link>BastonSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\BastonSpoolJunta.cs">
+      <Link>BastonSpoolJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CampoSeguimientoJunta.cs">
+      <Link>CampoSeguimientoJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CampoSeguimientoSpool.cs">
+      <Link>CampoSeguimientoSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CategoriaPendiente.cs">
+      <Link>CategoriaPendiente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Cedula.cs">
+      <Link>Cedula.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Cliente.cs">
+      <Link>Cliente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Colada.cs">
+      <Link>Colada.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Color.cs">
+      <Link>Color.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ConceptoEstimacion.cs">
+      <Link>ConceptoEstimacion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CongeladoParcial.cs">
+      <Link>CongeladoParcial.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Consumible.cs">
+      <Link>Consumible.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Contacto.cs">
+      <Link>Contacto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ContactoCliente.cs">
+      <Link>ContactoCliente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Cortador.cs">
+      <Link>Cortador.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Corte.cs">
+      <Link>Corte.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CorteDetalle.cs">
+      <Link>CorteDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CorteSpool.cs">
+      <Link>CorteSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CorteSpoolDeleted.cs">
+      <Link>CorteSpoolDeleted.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CorteSpoolHistorico.cs">
+      <Link>CorteSpoolHistorico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CorteSpoolPendiente.cs">
+      <Link>CorteSpoolPendiente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CostoArmado.cs">
+      <Link>CostoArmado.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CostoProcesoRaiz.cs">
+      <Link>CostoProcesoRaiz.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CostoProcesoRelleno.cs">
+      <Link>CostoProcesoRelleno.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Cuadrante.cs">
+      <Link>Cuadrante.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\CuadranteHistorico.cs">
+      <Link>CuadranteHistorico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Defecto.cs">
+      <Link>Defecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Despachador.cs">
+      <Link>Despachador.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Despacho.cs">
+      <Link>Despacho.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\DestajoSoldador.cs">
+      <Link>DestajoSoldador.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\DestajoSoldadorDetalle.cs">
+      <Link>DestajoSoldadorDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\DestajoTubero.cs">
+      <Link>DestajoTubero.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\DestajoTuberoDetalle.cs">
+      <Link>DestajoTuberoDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Destino.cs">
+      <Link>Destino.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\DetallePersonalizacionSeguimientoJunta.cs">
+      <Link>DetallePersonalizacionSeguimientoJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\DetallePersonalizacionSeguimientoSpool.cs">
+      <Link>DetallePersonalizacionSeguimientoSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Diametro.cs">
+      <Link>Diametro.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\DTSSummaryLog.cs">
+      <Link>DTSSummaryLog.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Embarque.cs">
+      <Link>Embarque.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\EmbarqueSpool.cs">
+      <Link>EmbarqueSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Espesor.cs">
+      <Link>Espesor.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Estacion.cs">
+      <Link>Estacion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\EstatusOrden.cs">
+      <Link>EstatusOrden.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Estimacion.cs">
+      <Link>Estimacion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\EstimacionJunta.cs">
+      <Link>EstimacionJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\EstimacionJuntaCompuesto.cs">
+      <Link>EstimacionJuntaCompuesto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\EstimacionSpool.cs">
+      <Link>EstimacionSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\EstimacionSpoolCompuesto.cs">
+      <Link>EstimacionSpoolCompuesto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\FabArea.cs">
+      <Link>FabArea.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Fabricante.cs">
+      <Link>Fabricante.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\FabricanteProyecto.cs">
+      <Link>FabricanteProyecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\FamiliaAcero.cs">
+      <Link>FamiliaAcero.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\FamiliaMaterial.cs">
+      <Link>FamiliaMaterial.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\GrupoGenerico.cs">
+      <Link>GrupoGenerico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\HistoricoWorkstatus.cs">
+      <Link>HistoricoWorkstatus.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\InspeccionDimensionalPatio.cs">
+      <Link>InspeccionDimensionalPatio.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\InspeccionVisual.cs">
+      <Link>InspeccionVisual.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\InspeccionVisualCampo.cs">
+      <Link>InspeccionVisualCampo.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\InspeccionVisualPatio.cs">
+      <Link>InspeccionVisualPatio.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\InspeccionVisualPatioDefecto.cs">
+      <Link>InspeccionVisualPatioDefecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Inspector.cs">
+      <Link>Inspector.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ItemCode.cs">
+      <Link>ItemCode.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ItemCodeEquivalente.cs">
+      <Link>ItemCodeEquivalente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaArmado.cs">
+      <Link>JuntaArmado.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampo.cs">
+      <Link>JuntaCampo.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoArmado.cs">
+      <Link>JuntaCampoArmado.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoInspeccionVisual.cs">
+      <Link>JuntaCampoInspeccionVisual.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoInspeccionVisualDefecto.cs">
+      <Link>JuntaCampoInspeccionVisualDefecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoReportePND.cs">
+      <Link>JuntaCampoReportePND.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoReportePNDCuadrante.cs">
+      <Link>JuntaCampoReportePNDCuadrante.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoReportePNDSector.cs">
+      <Link>JuntaCampoReportePNDSector.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoReporteTT.cs">
+      <Link>JuntaCampoReporteTT.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoRequisicion.cs">
+      <Link>JuntaCampoRequisicion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoSoldadura.cs">
+      <Link>JuntaCampoSoldadura.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaCampoSoldaduraDetalle.cs">
+      <Link>JuntaCampoSoldaduraDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaInspeccionVisual.cs">
+      <Link>JuntaInspeccionVisual.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaInspeccionVisualDefecto.cs">
+      <Link>JuntaInspeccionVisualDefecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaReportePnd.cs">
+      <Link>JuntaReportePnd.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaReportePndCuadrante.cs">
+      <Link>JuntaReportePndCuadrante.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaReportePndSector.cs">
+      <Link>JuntaReportePndSector.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaReporteTt.cs">
+      <Link>JuntaReporteTt.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaRequisicion.cs">
+      <Link>JuntaRequisicion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaSoldadura.cs">
+      <Link>JuntaSoldadura.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaSoldaduraDetalle.cs">
+      <Link>JuntaSoldaduraDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaSpool.cs">
+      <Link>JuntaSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaSpoolDeleted.cs">
+      <Link>JuntaSpoolDeleted.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaSpoolHistorico.cs">
+      <Link>JuntaSpoolHistorico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaSpoolPendiente.cs">
+      <Link>JuntaSpoolPendiente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\JuntaWorkstatus.cs">
+      <Link>JuntaWorkstatus.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\KgTeorico.cs">
+      <Link>KgTeorico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Maquina.cs">
+      <Link>Maquina.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\MaterialSpool.cs">
+      <Link>MaterialSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\MaterialSpoolDeleted.cs">
+      <Link>MaterialSpoolDeleted.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\MaterialSpoolHistorico.cs">
+      <Link>MaterialSpoolHistorico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\MaterialSpoolPendiente.cs">
+      <Link>MaterialSpoolPendiente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Modulo.cs">
+      <Link>Modulo.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ModuloSeguimientoJunta.cs">
+      <Link>ModuloSeguimientoJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ModuloSeguimientoSpool.cs">
+      <Link>ModuloSeguimientoSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\NumeroUnico.cs">
+      <Link>NumeroUnico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\NumeroUnicoCompuesto.cs">
+      <Link>NumeroUnicoCompuesto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\NumeroUnicoCorte.cs">
+      <Link>NumeroUnicoCorte.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\NumeroUnicoInventario.cs">
+      <Link>NumeroUnicoInventario.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\NumeroUnicoMovimiento.cs">
+      <Link>NumeroUnicoMovimiento.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\NumeroUnicoSegmento.cs">
+      <Link>NumeroUnicoSegmento.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\OrdenTrabajo.cs">
+      <Link>OrdenTrabajo.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\OrdenTrabajoJunta.cs">
+      <Link>OrdenTrabajoJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\OrdenTrabajoMaterial.cs">
+      <Link>OrdenTrabajoMaterial.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\OrdenTrabajoSpool.cs">
+      <Link>OrdenTrabajoSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Pagina.cs">
+      <Link>Pagina.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Patio.cs">
+      <Link>Patio.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Pendiente.cs">
+      <Link>Pendiente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\PendienteDetalle.cs">
+      <Link>PendienteDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Peq.cs">
+      <Link>Peq.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Perfil.cs">
+      <Link>Perfil.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\PerfilPermiso.cs">
+      <Link>PerfilPermiso.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\PeriodoDestajo.cs">
+      <Link>PeriodoDestajo.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\PeriodoPrograma.cs">
+      <Link>PeriodoPrograma.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Permiso.cs">
+      <Link>Permiso.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\PersonalizacionSeguimientoJunta.cs">
+      <Link>PersonalizacionSeguimientoJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\PersonalizacionSeguimientoSpool.cs">
+      <Link>PersonalizacionSeguimientoSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\PinturaNumeroUnico.cs">
+      <Link>PinturaNumeroUnico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\PinturaSpool.cs">
+      <Link>PinturaSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProcesoRaiz.cs">
+      <Link>ProcesoRaiz.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProcesoRelleno.cs">
+      <Link>ProcesoRelleno.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Proveedor.cs">
+      <Link>Proveedor.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProveedorProyecto.cs">
+      <Link>ProveedorProyecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Proyecto.cs">
+      <Link>Proyecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProyectoCamposRecepcion.cs">
+      <Link>ProyectoCamposRecepcion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProyectoConfiguracion.cs">
+      <Link>ProyectoConfiguracion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProyectoConsecutivo.cs">
+      <Link>ProyectoConsecutivo.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProyectoDossier.cs">
+      <Link>ProyectoDossier.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProyectoNomenclaturaSpool.cs">
+      <Link>ProyectoNomenclaturaSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProyectoPendiente.cs">
+      <Link>ProyectoPendiente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProyectoPrograma.cs">
+      <Link>ProyectoPrograma.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ProyectoReporte.cs">
+      <Link>ProyectoReporte.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Recepcion.cs">
+      <Link>Recepcion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\RecepcionNumeroUnico.cs">
+      <Link>RecepcionNumeroUnico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ReporteCampoPND.cs">
+      <Link>ReporteCampoPND.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ReporteCampoTT.cs">
+      <Link>ReporteCampoTT.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ReporteDimensional.cs">
+      <Link>ReporteDimensional.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ReporteDimensionalDetalle.cs">
+      <Link>ReporteDimensionalDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ReporteDimensionalDetalleDeleted.cs">
+      <Link>ReporteDimensionalDetalleDeleted.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ReportePnd.cs">
+      <Link>ReportePnd.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ReporteSpoolPnd.cs">
+      <Link>ReporteSpoolPnd.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\ReporteTt.cs">
+      <Link>ReporteTt.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Requisicion.cs">
+      <Link>Requisicion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\RequisicionCampo.cs">
+      <Link>RequisicionCampo.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\RequisicionNumeroUnico.cs">
+      <Link>RequisicionNumeroUnico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\RequisicionNumeroUnicoDetalle.cs">
+      <Link>RequisicionNumeroUnicoDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\RequisicionPintura.cs">
+      <Link>RequisicionPintura.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\RequisicionPinturaDetalle.cs">
+      <Link>RequisicionPinturaDetalle.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\RequisicionSpool.cs">
+      <Link>RequisicionSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\SamDbSelfTrackingTemplate.cs">
+      <Link>SamDbSelfTrackingTemplate.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Soldador.cs">
+      <Link>Soldador.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Spool.cs">
+      <Link>Spool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\SpoolHistorico.cs">
+      <Link>SpoolHistorico.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\SpoolHold.cs">
+      <Link>SpoolHold.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\SpoolHoldHistorial.cs">
+      <Link>SpoolHoldHistorial.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\SpoolPendiente.cs">
+      <Link>SpoolPendiente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\SpoolReportePnd.cs">
+      <Link>SpoolReportePnd.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\SpoolRequisicion.cs">
+      <Link>SpoolRequisicion.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\SpoolsDeleted.cs">
+      <Link>SpoolsDeleted.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Taller.cs">
+      <Link>Taller.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TecnicaSoldador.cs">
+      <Link>TecnicaSoldador.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoCorte.cs">
+      <Link>TipoCorte.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoJunta.cs">
+      <Link>TipoJunta.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoMaterial.cs">
+      <Link>TipoMaterial.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoMovimiento.cs">
+      <Link>TipoMovimiento.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoPendiente.cs">
+      <Link>TipoPendiente.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoPrueba.cs">
+      <Link>TipoPrueba.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoPruebaSpool.cs">
+      <Link>TipoPruebaSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoRechazo.cs">
+      <Link>TipoRechazo.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoReporteDimensional.cs">
+      <Link>TipoReporteDimensional.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TipoReporteProyecto.cs">
+      <Link>TipoReporteProyecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Transferencia.cs">
+      <Link>Transferencia.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TransferenciaSpool.cs">
+      <Link>TransferenciaSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Transportista.cs">
+      <Link>Transportista.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\TransportistaProyecto.cs">
+      <Link>TransportistaProyecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Tubero.cs">
+      <Link>Tubero.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\UbicacionFisica.cs">
+      <Link>UbicacionFisica.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\UltimoProceso.cs">
+      <Link>UltimoProceso.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Usuario.cs">
+      <Link>Usuario.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\UsuarioProyecto.cs">
+      <Link>UsuarioProyecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\WorkstatusSpool.cs">
+      <Link>WorkstatusSpool.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Wpq.cs">
+      <Link>Wpq.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\Wps.cs">
+      <Link>Wps.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\SAM.BusinessObjects\Modelo\WpsProyecto.cs">
+      <Link>WpsProyecto.cs</Link>
+      <DependentUpon>SamDbSelfTrackingTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Busqueda\NumeroControlBusqueda.cs" />
+    <Compile Include="Busqueda\SQ.cs" />
+    <Compile Include="Cache\AceroCache.cs" />
+    <Compile Include="Cache\CampoSeguimientoSpoolCache.cs" />
+    <Compile Include="Cache\CategoriaPendienteCache.cs" />
+    <Compile Include="Cache\CedulaCache.cs" />
+    <Compile Include="Cache\ClienteCache.cs" />
+    <Compile Include="Cache\ColorCache.cs" />
+    <Compile Include="Cache\ConceptoEstimacionCache.cs" />
+    <Compile Include="Cache\ContactoStruct.cs" />
+    <Compile Include="Cache\CampoSeguimientoJuntaCache.cs" />
+    <Compile Include="Cache\CortadorCache.cs" />
+    <Compile Include="Cache\DespachadorCache.cs" />
+    <Compile Include="Cache\InspectorCache.cs" />
+    <Compile Include="Cache\ModuloSeguimientoJuntaCache.cs" />
+    <Compile Include="Cache\DefectoCache.cs" />
+    <Compile Include="Cache\DiametroCache.cs" />
+    <Compile Include="Cache\EntidadBase.cs" />
+    <Compile Include="Cache\EspesorCache.cs" />
+    <Compile Include="Cache\FabAreaCache.cs" />
+    <Compile Include="Cache\FabricanteCache.cs" />
+    <Compile Include="Cache\FamAceroCache.cs" />
+    <Compile Include="Cache\FamMaterialCache.cs" />
+    <Compile Include="Cache\KgTeoricoCache.cs" />
+    <Compile Include="Cache\MaquinaCache.cs" />
+    <Compile Include="Cache\ModuloSeguimientoSpoolCache.cs" />
+    <Compile Include="Cache\NomenclaturaStruct.cs" />
+    <Compile Include="Cache\NumeroUnicoCache.cs" />
+    <Compile Include="Cache\PaginaCache.cs" />
+    <Compile Include="Cache\PatioCache.cs" />
+    <Compile Include="Cache\PerfilCache.cs" />
+    <Compile Include="Cache\PermisoCache.cs" />
+    <Compile Include="Cache\ProcesoRaizCache.cs" />
+    <Compile Include="Cache\ProcesoRellenoCache.cs" />
+    <Compile Include="Cache\ProveedorBase.cs" />
+    <Compile Include="Cache\ProveedorCache.cs" />
+    <Compile Include="Cache\ProyectoCache.cs" />
+    <Compile Include="Cache\ProyectoReporteCache.cs" />
+    <Compile Include="Cache\TallerCache.cs" />
+    <Compile Include="Cache\TipoCorteCache.cs" />
+    <Compile Include="Cache\TipoJuntaCache.cs" />
+    <Compile Include="Cache\TipoMaterialCache.cs" />
+    <Compile Include="Cache\TipoMovimientoCache.cs" />
+    <Compile Include="Cache\TipoPruebaCache.cs" />
+    <Compile Include="Cache\TipoPruebaSpoolCache.cs" />
+    <Compile Include="Cache\TipoReporteDimensionalCache.cs" />
+    <Compile Include="Cache\TipoReporteProyectoCache.cs" />
+    <Compile Include="Cache\TransportistaCache.cs" />
+    <Compile Include="Cache\UltimoProcesoCache.cs" />
+    <Compile Include="Cache\WpsCache.cs" />
+    <Compile Include="Destajos\DestajoArmadoGrupo.cs" />
+    <Compile Include="Destajos\DestajoSoldaduraGrupo.cs" />
+    <Compile Include="Enumeraciones.cs" />
+    <Compile Include="Grid\GrdBaston.cs" />
+    <Compile Include="Grid\GrdCongeladoParcial.cs" />
+    <Compile Include="Grid\GrdCongeladosOrdenTrabajo.cs" />
+    <Compile Include="Grid\GrdCongeladosNumeroUnico.cs" />
+    <Compile Include="Grid\GrdDetReporteCampo.cs" />
+    <Compile Include="Grid\GrdDetReporteSpoolPnd.cs" />
+    <Compile Include="Grid\GrdDetRequisicionesSpool.cs" />
+    <Compile Include="Grid\GrdHistWorkstatus.cs" />
+    <Compile Include="Grid\GrdInspeccionVisualCampo.cs" />
+    <Compile Include="Grid\GrdJuntaCampo.cs" />
+    <Compile Include="Grid\GrdMobileDetalleSeguimientoSpool.cs" />
+    <Compile Include="Grid\GrdCliente.cs" />
+    <Compile Include="Grid\GrdMobileDetalleLiberaciónDimensional.cs" />
+    <Compile Include="Grid\GrdCertificacion.cs" />
+    <Compile Include="Grid\GrdConfinarSpool.cs" />
+    <Compile Include="Grid\GrdDetalleDestajoSoldador.cs" />
+    <Compile Include="Grid\GrdDetalleDestajoSoldadorExcel.cs" />
+    <Compile Include="Grid\GrdDetalleDestajoTubero.cs" />
+    <Compile Include="Grid\GrdDetalleDestajoTuberoExcel.cs" />
+    <Compile Include="Grid\GrdDetInspeccionDimensional.cs" />
+    <Compile Include="Grid\GrdDetInspeccionVisual.cs" />
+    <Compile Include="Grid\GrdDetReportePnd.cs" />
+    <Compile Include="Grid\GrdDetReporteReqPintura.cs" />
+    <Compile Include="Grid\GrdDetReporteTt.cs" />
+    <Compile Include="Grid\GrdDetRequisiciones.cs" />
+    <Compile Include="Grid\GrdEmbarque.cs" />
+    <Compile Include="Grid\GrdInspeccionDimensional.cs" />
+    <Compile Include="Grid\GrdItemCode.cs" />
+    <Compile Include="Grid\GrdItemCodeEquivalente.cs" />
+    <Compile Include="Grid\GrdLiberacionDimansionalPatio.cs" />
+    <Compile Include="Grid\GrdLiberacionVisualPatio.cs" />
+    <Compile Include="Grid\GrdMobileJuntasSeguimientoSpool.cs" />
+    <Compile Include="Grid\GrdOdtReqMateial.cs" />
+    <Compile Include="Grid\GrdPendienteDetalle.cs" />
+    <Compile Include="Grid\GrdPendientes.cs" />
+    <Compile Include="Grid\GrdPeqNoEncontrados.cs" />
+    <Compile Include="Grid\GrdPeriodoDestajo.cs" />
+    <Compile Include="Grid\GrdLstMatItemCode.cs" />
+    <Compile Include="Grid\GrdPersonaDestajo.cs" />
+    <Compile Include="Grid\GrdPersonaDestajoExcel.cs" />
+    <Compile Include="Grid\GrdPintura.cs" />
+    <Compile Include="Grid\GrdRepInspeccionDimensional.cs" />
+    <Compile Include="Grid\GrdRepInspeccionVisual.cs" />
+    <Compile Include="Grid\GrdReportePnd.cs" />
+    <Compile Include="Grid\GrdProyecto.cs" />
+    <Compile Include="Grid\GrdReporteReqPintura.cs" />
+    <Compile Include="Grid\GrdReporteSpoolPnd.cs" />
+    <Compile Include="Grid\GrdReporteTt.cs" />
+    <Compile Include="Grid\GrdRepRequisicion.cs" />
+    <Compile Include="Grid\GrdRepRequisicionSpool.cs" />
+    <Compile Include="Grid\GrdRequisiciones.cs" />
+    <Compile Include="Grid\GrdRequisicionesCampo.cs" />
+    <Compile Include="Grid\GrdRequisicionesSpool.cs" />
+    <Compile Include="Grid\GrdRequisicionPintura.cs" />
+    <Compile Include="Grid\GrdRequisicionPruebas.cs" />
+    <Compile Include="Grid\GrdRequisicionSpoolPruebas.cs" />
+    <Compile Include="Grid\GrdSoldadorProceso.cs" />
+    <Compile Include="Destajos\DestajoArmadoDetalle.cs" />
+    <Compile Include="Destajos\DestajoSoldaduraDetalle.cs" />
+    <Compile Include="Grid\GrdTipoReporte.cs" />
+    <Compile Include="Grid\GrdTransferenciaSpool.cs" />
+    <Compile Include="Grid\GrdWps.cs" />
+    <Compile Include="Homologacion\ArchivosWorkstatus.cs" />
+    <Compile Include="Parciales\Homologacion\Parciales.cs" />
+    <Compile Include="Parciales\OrdenTabajoMaterialParcial.cs" />
+    <Compile Include="Parciales\OrdenTrabajoMaterialCruceInfo.cs" />
+    <Compile Include="Personalizadas\CaratulaColada.cs" />
+    <Compile Include="Personalizadas\CaratulaJunta.cs" />
+    <Compile Include="Personalizadas\CaratulaSpool.cs" />
+    <Compile Include="Personalizadas\DetSpoolHold.cs" />
+    <Compile Include="Personalizadas\FechasEmbarque.cs" />
+    <Compile Include="Personalizadas\ListaFechaNumeroControl.cs" />
+    <Compile Include="Personalizadas\NumeroUnicoEdicionEspecial.cs" />
+    <Compile Include="Personalizadas\ReporteTransferencia.cs" />
+    <Compile Include="Personalizadas\Shop\CertificationReport.cs" />
+    <Compile Include="Personalizadas\Shop\CheckListShipping.cs" />
+    <Compile Include="Personalizadas\Shop\DetailReport.cs" />
+    <Compile Include="Personalizadas\Shop\DetailReportSummary.cs" />
+    <Compile Include="Personalizadas\Shop\DetailSummaryJoint.cs" />
+    <Compile Include="Personalizadas\Shop\DetailJoint.cs" />
+    <Compile Include="Personalizadas\Shop\DetailMaterial.cs" />
+    <Compile Include="Personalizadas\Shop\DetailSpool.cs" />
+    <Compile Include="Personalizadas\Shop\DetailMaterialSummary.cs" />
+    <Compile Include="Personalizadas\Shop\NumeroControlSQ.cs" />
+    <Compile Include="Personalizadas\Shop\SummarySpool.cs" />
+    <Compile Include="Personalizadas\Shop\ToDataTable.cs" />
+    <Compile Include="Personalizadas\SimpleString.cs" />
+    <Compile Include="Personalizadas\JuntaCampoArmadoInfo.cs" />
+    <Compile Include="Personalizadas\JuntasCampoDTO.cs" />
+    <Compile Include="Personalizadas\JuntaSpoolProduccion.cs" />
+    <Compile Include="Personalizadas\Segmentos.cs" />
+    <Compile Include="Personalizadas\SpoolPendientePorHomologar.cs" />
+    <Compile Include="Personalizadas\DetCorteSpoolHistorico.cs" />
+    <Compile Include="Personalizadas\DetMaterialSpoolHistorico.cs" />
+    <Compile Include="Personalizadas\DetJuntaSpoolHistorico.cs" />
+    <Compile Include="Personalizadas\DetSpoolHistorico.cs" />
+    <Compile Include="Personalizadas\CongeladosODT.cs" />
+    <Compile Include="Personalizadas\CruceItemCode.cs" />
+    <Compile Include="Personalizadas\DetSpoolMobile.cs" />
+    <Compile Include="Personalizadas\MaterialPendientePorHomologar.cs" />
+    <Compile Include="Personalizadas\ParForzado.cs" />
+    <Compile Include="Personalizadas\SimpleDecimal.cs" />
+    <Compile Include="Personalizadas\SoldadorMobile.cs" />
+    <Compile Include="Personalizadas\DetGrdSeguimientoSpool.cs" />
+    <Compile Include="Personalizadas\GrdDetSegSpoolRep.cs" />
+    <Compile Include="Grid\GrdSeguimientoSpool.cs" />
+    <Compile Include="Grid\GrdArmado.cs" />
+    <Compile Include="Grid\GrdCorte.cs" />
+    <Compile Include="Grid\GrdCorteAjuste.cs" />
+    <Compile Include="Grid\GrdCruce.cs" />
+    <Compile Include="Grid\GrdDespacho.cs" />
+    <Compile Include="Grid\GrdDetalleCorte.cs" />
+    <Compile Include="Grid\GrdDetReqPinturaNumUnico.cs" />
+    <Compile Include="Grid\GrdDiametro.cs" />
+    <Compile Include="Grid\GrdEstimacionJunta.cs" />
+    <Compile Include="Grid\GrdEstimacionJuntaCompleta.cs" />
+    <Compile Include="Grid\GrdEstimacionSpool.cs" />
+    <Compile Include="Grid\GrdEstimacionSpoolCompleta.cs" />
+    <Compile Include="Grid\GrdEstimado.cs" />
+    <Compile Include="Grid\GrdIngSpool.cs" />
+    <Compile Include="Grid\GrdIcEquivalenteAgrupado.cs" />
+    <Compile Include="Grid\GrdInspeccionVisual.cs" />
+    <Compile Include="Grid\GrdJuntaWorkstatus.cs" />
+    <Compile Include="Grid\GrdMaterialesDespacho.cs" />
+    <Compile Include="Grid\GrdNumerosUnicos.cs" />
+    <Compile Include="Grid\GrdNumerosUnicosCompleto.cs" />
+    <Compile Include="Grid\GrdNumerosUnicosEnCorte.cs" />
+    <Compile Include="Grid\GrdOdt.cs" />
+    <Compile Include="Grid\GrdPinturaNumUnico.cs" />
+    <Compile Include="Grid\GrdRecepcion.cs" />
+    <Compile Include="Grid\GrdRepReqPinturaNumUnico.cs" />
+    <Compile Include="Grid\GrdReqPinturaNumUnico.cs" />
+    <Compile Include="Grid\GrdSegJuntaDetPNDCuad.cs" />
+    <Compile Include="Grid\GrdSegJuntaDetPNDSector.cs" />
+    <Compile Include="Grid\GrdSegJuntaDetSoldadura.cs" />
+    <Compile Include="Grid\GrdSeguimientoJunta.cs" />
+    <Compile Include="Grid\GrdSoldadura.cs" />
+    <Compile Include="Grid\GrdSpoolOdt.cs" />
+    <Compile Include="Mensajes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensajes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Parciales\MaterialSpoolCruceInfo.cs" />
+    <Compile Include="Parciales\MaterialSpoolParcial.cs" />
+    <Compile Include="Parciales\NumeroUnicoCruceInfo.cs" />
+    <Compile Include="Parciales\NumeroUnicoInventarioCruceInfo.cs" />
+    <Compile Include="Parciales\NumeroUnicoInventarioParcial.cs" />
+    <Compile Include="Parciales\NumeroUnicoParcial.cs" />
+    <Compile Include="Parciales\NumeroUnicoSegmentoCruceInfo.cs" />
+    <Compile Include="Parciales\NumeroUnicoSegmentoParcial.cs" />
+    <Compile Include="Parciales\SpoolCruceInfo.cs" />
+    <Compile Include="Parciales\SpoolParcial.cs" />
+    <Compile Include="Personalizadas\DetCorteSpool.cs" />
+    <Compile Include="Personalizadas\DetHoldSpool.cs" />
+    <Compile Include="Personalizadas\DetJuntaSpool.cs" />
+    <Compile Include="Personalizadas\DetJuntaSpoolOdt.cs" />
+    <Compile Include="Personalizadas\DetMaterialSpool.cs" />
+    <Compile Include="Personalizadas\DetMaterialSpoolOdt.cs" />
+    <Compile Include="Personalizadas\DetSpool.cs" />
+    <Compile Include="Personalizadas\DetSpoolOdt.cs" />
+    <Compile Include="Personalizadas\InfoCorteDespacho.cs" />
+    <Compile Include="Personalizadas\Simple.cs" />
+    <Compile Include="Personalizadas\TransferenciaGroupFechas.cs" />
+    <Compile Include="RadCombo\RadColada.cs" />
+    <Compile Include="RadCombo\RadCortador.cs" />
+    <Compile Include="RadCombo\RadDespachador.cs" />
+    <Compile Include="RadCombo\RadInspector.cs" />
+    <Compile Include="RadCombo\RadItemCode.cs" />
+    <Compile Include="RadCombo\RadMaterialParaCorte.cs" />
+    <Compile Include="RadCombo\RadNumeroUnico.cs" />
+    <Compile Include="RadCombo\RadNumeroUnicoParaDespacho.cs" />
+    <Compile Include="RadCombo\RadSoldador.cs" />
+    <Compile Include="RadCombo\RadSpool.cs" />
+    <Compile Include="RadCombo\RadTubero.cs" />
+    <Compile Include="RadCombo\RadUsuario.cs" />
+    <Compile Include="Reportes\CondensadoItemCode.cs" />
+    <Compile Include="Reportes\FaltanteCruce.cs" />
+    <Compile Include="Personalizadas\Grupo.cs" />
+    <Compile Include="Personalizadas\ItemCodeIntegrado.cs" />
+    <Compile Include="Personalizadas\PreguntaSecreta.cs" />
+    <Compile Include="Personalizadas\ResumenIsometrico.cs" />
+    <Compile Include="Personalizadas\ResumenSpool.cs" />
+    <Compile Include="Personalizadas\SpoolCruce.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioMembership.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SAM.BusinessObjects\Modelo\SamDbSelfTrackingTemplate.tt">
+      <Link>SamDbSelfTrackingTemplate.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SamDbSelfTrackingTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sesion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mensajes.en-US.resx" />
+    <EmbeddedResource Include="Mensajes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensajes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mimo.Framework\Mimo.Framework.csproj">
+      <Project>{344217DB-C52B-4F73-9BBC-C06742FD38B2}</Project>
+      <Name>Mimo.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

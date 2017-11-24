@@ -1,0 +1,23 @@
+﻿@using SAM.Web.Shop.Factories
+@using SAM.Web.Shop.Models
+@using Resources.Views
+@using SAM.Web.Shop.Extensions
+
+
+@{
+    Layout = "~/Views/Layouts/MasterLayout.cshtml";
+}
+<div style="align-content:center; text-align:center;">
+    <table style="width:auto">
+        <tr>
+            <td style="align-content:center; text-align:center;">
+                <img id="imgAdvertencia" alt="" src="~/Content/Images/denegado.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td style="align-content:center; text-align:center;">
+                <h1>@ViewBag.MensajeError</h1>
+            </td>
+        </tr>
+    </table>
+</div>

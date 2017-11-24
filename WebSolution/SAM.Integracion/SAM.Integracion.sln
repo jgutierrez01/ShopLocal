@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D183A3D8-5FD8-494B-B014-37F57B35E655}") = "SAM.Integracion", "SAM.Integracion\SAM.Integracion.dtproj", "{69C883B1-CFFF-4077-8153-C2CC78236315}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{39BAB2F1-3EB9-43DB-A632-05657EED6787}"
+	ProjectSection(SolutionItems) = preProject
+		SAM.Integracion\Config\ConfigFile.dtsConfig = SAM.Integracion\Config\ConfigFile.dtsConfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69C883B1-CFFF-4077-8153-C2CC78236315}.Development|Default.ActiveCfg = Development
+		{69C883B1-CFFF-4077-8153-C2CC78236315}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Inspector]
+(
+	[InspectorID] [INT] IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	TallerID INT NOT NULL FOREIGN KEY (TallerID) REFERENCES Taller(TallerID),
+	PatioID INT NOT NULL FOREIGN KEY (PatioID) REFERENCES Patio(PatioID),
+	Nombre NVARCHAR(50) NOT NULL,
+	ApPaterno NVARCHAR(50) NOT NULL,
+	ApMaterno NVARCHAR(50),
+	NumeroEmpleado NVARCHAR(20),
+	UsuarioModifica UNIQUEIDENTIFIER,
+	FechaModificacion DATETIME,
+	VersionRegistro TIMESTAMP NOT NULL	
+)

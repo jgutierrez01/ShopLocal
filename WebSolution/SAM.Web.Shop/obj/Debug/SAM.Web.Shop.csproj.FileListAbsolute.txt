@@ -1,0 +1,771 @@
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.config
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\en\SAM.Web.Shop.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.CodeAnalysisLog.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.lastcodeanalysissucceeded
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\AjaxMin.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Autofac.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Combres.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\dotless.Core.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\EcmaScript.NET.modified.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Fasterflect.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\log4net.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\RouteJs.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\RouteJs.Mvc5.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Http.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\WebActivator.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Yahoo.Yui.Compressor.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Ghostscript.NET.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Autofac.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Combres.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Fasterflect.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Http.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Web.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\bin\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\en\SAM.Web.Shop.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.config
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en\SAM.Web.Shop.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.CodeAnalysisLog.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.lastcodeanalysissucceeded
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\AjaxMin.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\dotless.Core.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\EcmaScript.NET.modified.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Fasterflect.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\log4net.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\RouteJs.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\RouteJs.Mvc5.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\WebActivator.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Yahoo.Yui.Compressor.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Ghostscript.NET.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Fasterflect.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Web.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\en\SAM.Web.Shop.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\GridMvc.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.en.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.config
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\en\SAM.Web.Shop.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.CodeAnalysisLog.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.lastcodeanalysissucceeded
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\AjaxMin.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Autofac.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Combres.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\dotless.Core.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\EcmaScript.NET.modified.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Fasterflect.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\GridMvc.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\log4net.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\RouteJs.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\RouteJs.Mvc5.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Http.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\WebActivator.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Yahoo.Yui.Compressor.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Ghostscript.NET.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Autofac.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Combres.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Fasterflect.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Http.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Web.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\bin\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.Web.Shop\obj\Debug\en\SAM.Web.Shop.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.config
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en\SAM.Web.Shop.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.CodeAnalysisLog.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.lastcodeanalysissucceeded
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\AjaxMin.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\dotless.Core.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\EcmaScript.NET.modified.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Fasterflect.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\GridMvc.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\log4net.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\RouteJs.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\RouteJs.Mvc5.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Entities.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\WebActivator.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Yahoo.Yui.Compressor.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\itextsharp.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Ghostscript.NET.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Common.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Entities.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Fasterflect.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Common.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Web.Common.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csprojResolveAssemblyReference.cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.en.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csproj.GenerateResource.Cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\en\SAM.Web.Shop.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en\SAM.Web.Shop.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.CodeAnalysisLog.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.lastcodeanalysissucceeded
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\AjaxMin.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\dotless.Core.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\EcmaScript.NET.modified.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Fasterflect.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\GridMvc.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.Web.Infrastructure.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\RouteJs.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\RouteJs.Mvc5.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\WebActivator.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Yahoo.Yui.Compressor.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\ICSharpCode.SharpZipLib.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\itextsharp.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Ghostscript.NET.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Fasterflect.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Web.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\bin\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\en\SAM.Web.Shop.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\en\SAM.Web.Shop.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.CodeAnalysisLog.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Web.Shop.dll.lastcodeanalysissucceeded
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\AjaxMin.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Autofac.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Combres.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\dotless.Core.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\EcmaScript.NET.modified.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Fasterflect.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\GridMvc.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Microsoft.Web.Infrastructure.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\RouteJs.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\RouteJs.Mvc5.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Http.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\WebActivator.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Yahoo.Yui.Compressor.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\ICSharpCode.SharpZipLib.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\itextsharp.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Ghostscript.NET.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\SAM.Web.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Autofac.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.Mvc.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Autofac.Integration.WebApi.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Combres.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Combres.Mvc.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Fasterflect.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Net.Http.Formatting.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Helpers.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Http.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Http.WebHost.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Mvc.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.Razor.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Deployment.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\System.Web.WebPages.Razor.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\en-US\SAM.Web.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\bin\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Controllers.Yard.YardStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Exception.ExceptionString.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.ControlNumber.ControlNumberStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Login.LoginStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.CertificationReportStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Reports.SummarySpoolStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.SearchControlNumber.SearchStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Shared.CommonStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Models.Workstatus.WorkstatusString.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Scripts.CommonStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.ControlNumberStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.DrawingsCarouselStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.ControlNumber.WeldingJointsStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Controls.ControlsStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Home.HomeStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Login.LoginStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Quality.QualityString.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.Shared.CommonStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.Resources.Views.WorkStatus.WorkStatusStrings.en.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\en\SAM.Web.Shop.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Shop\obj\Debug\SAM.Web.Shop.pdb

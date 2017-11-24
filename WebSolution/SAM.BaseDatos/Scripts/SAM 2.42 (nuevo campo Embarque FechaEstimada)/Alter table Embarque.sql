@@ -1,0 +1,2 @@
+ALTER TABLE Embarque
+ADD FechaEstimada DATETIME NULL

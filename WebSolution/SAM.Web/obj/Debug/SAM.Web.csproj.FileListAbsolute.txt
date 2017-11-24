@@ -1,0 +1,271 @@
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Usuarios.CambiaPassword.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.en-us.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\SAM.Web.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\RdlCompile.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Web\obj\Debug\RdlCompile.compiled
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Web.dll.config
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Web.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Web.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\en-US\SAM.Web.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\DocumentFormat.OpenXml.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\log4net.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Web.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.Server.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Telerik.Web.Design.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Telerik.Web.UI.Skins.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Ghostscript.NET.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\SAM.Web.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\bin\en-US\SAM.Web.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Usuarios.CambiaPassword.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.en-us.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\RdlCompile.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\RdlCompile.compiled
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\en-US\SAM.Web.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.Web\obj\Debug\SAM.Web.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.dll.config
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.Web.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\DocumentFormat.OpenXml.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\itextsharp.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\log4net.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Mimo.Framework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Newtonsoft.Json.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.BusinessLogic.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.BusinessObjects.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Entities.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.Server.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Telerik.Web.Design.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Telerik.Web.UI.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Telerik.Web.UI.Skins.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Ghostscript.NET.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Mimo.Framework.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.BusinessLogic.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.BusinessObjects.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Common.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Entities.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.Common.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Newtonsoft.Json.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Telerik.Web.UI.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.Common.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.Web.Common.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.csprojResolveAssemblyReference.cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Usuarios.CambiaPassword.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.en-us.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.csproj.GenerateResource.Cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\en-US\SAM.Web.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.Web.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\DocumentFormat.OpenXml.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\itextsharp.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Telerik.Web.Design.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Telerik.Web.UI.Skins.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\ICSharpCode.SharpZipLib.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Ghostscript.NET.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\SAM.Web.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\bin\en-US\SAM.Web.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Usuarios.CambiaPassword.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.en-us.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\RdlCompile.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\RdlCompile.compiled
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\en-US\SAM.Web.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.Web\obj\Debug\SAM.Web.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Web.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Web.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Web.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\en-US\SAM.Web.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\DocumentFormat.OpenXml.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\itextsharp.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Web.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.EntityFramework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.Hosting.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\System.ServiceModel.DomainServices.Server.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Telerik.Web.Design.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Telerik.Web.UI.Skins.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\ICSharpCode.SharpZipLib.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Ghostscript.NET.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\SAM.Web.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\bin\en-US\SAM.Web.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Usuarios.CambiaPassword.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesActivaCuenta.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.App_LocalResources.MensajesRecuperaPassword.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Ingenieria.MensajesToolTip.en-us.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Controles.Spool.MensajesErrorUI.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Ingenieria.MensajesErrorUI.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupHistoricoOdt.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesProduccion.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.Produccion.App_LocalResources.MensajesPopupImpresion.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\RdlCompile.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\RdlCompile.compiled
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\en-US\SAM.Web.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web\obj\Debug\SAM.Web.pdb

@@ -1,0 +1,127 @@
+﻿@using SAM.Web.Shop.Factories
+@using SAM.Web.Shop.Models
+@using SAM.Web.Shop.Resources.Views.WorkStatus
+@using SAM.Web.Shop.Resources.Views.Quality
+@using Resources.Views
+@using SAM.Entities.Busqueda
+
+@model LocationModel
+
+@{
+    Layout = "~/Views/Layouts/YardLayout.cshtml";
+}
+
+
+@using (@Html.BeginForm("OverwriteLocation", "Location", new { role = "form", id = "location-results-from" }))
+{
+    <fieldset id="location-results-from" >      
+        
+        <div style="display:none">
+            @Html.TextBoxFor(x => x.ProcessDate, Model.ProcessDate, new { @class = "form-control", type = "string",  id="datepicker" })
+            @Html.TextBoxFor(x => x.ProjectId, Convert.ToString(Model.ProjectId), new { @class = "form-control", type = "int", id = "projectId" })   
+            @Html.TextBox("Process", CommonStrings.RequisitionPainting, new { type = "string", id="process" })     
+            @Html.TextBoxFor(x => x.QuadrantId, Convert.ToString(Model.QuadrantId), new { @class = "form-control", type = "int", id ="qdt"})        
+        </div>
+        @if (Model != null)
+        {
+            <div id="controlNumberWhitProcess" >                
+                @if (Model.ControlNumberWhitProcess != null && Model.ControlNumberWhitProcess.Count > 0)
+                {
+                    <label class="caption">@Html.Raw(WorkStatusStrings.HaveLocation)</label>
+                    <label class="caption"@Html.Raw(WorkStatusStrings.WishOverWrite)></label>
+          
+                    <div >                      
+                            <div class="table-responsive">
+                                <table class="table table-striped table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th style="display:none" >ordenSpoolId</th>
+                                            <th></th>
+                                            <th>@Html.Raw(WorkStatusStrings.ControlNumber)</th>
+                                            <th>@Html.Raw(WorkStatusStrings.Spool)</th>
+                                            <th>@Html.Raw(WorkStatusStrings.SteelFamily)</th>
+                                            <th>@Html.Raw(WorkStatusStrings.MaximumDiameter)</th>                                                                                     
+                                            <th>@Html.Raw(WorkStatusStrings.Quadrant)</th>                                                   
+                                        </tr>
+                                    </thead>
+                                    <tbody>                       
+                                            @foreach (NumeroControlBusqueda cn in Model.ControlNumberWhitProcess)
+                                            {                                      
+                                                <tr>
+                                                    <td style="display:none" >@cn.OrdenTrabajoSpoolID</td> 
+                                                    <td>@Html.ActionLink("...", "DeleteLocationResults", "Location", new { id = cn.SpoolID, projectId = Model.ProjectId,  quadrantId = Model.QuadrantId, processDate = Model.ProcessDate , dateProcess = Model.ProcessDate  }, new { @class = "deleteResults" })</td>                                                                                                     
+                                                    <td><a href="#">@cn.NumeroControl</a></td>
+                                                    <td>@cn.Spool</td> 
+                                                    <td>@cn.FamiliaAcero</td>
+                                                    <td>@cn.DiametroMaximo</td>
+                                                    <td>@cn.Cuadrante</td>                                                
+                                                </tr>  
+                                            }                            
+                                    </tbody>
+                                </table>
+                            </div>                     
+                    </div> 
+                    <div  class="form-group">
+                        <div class="input-group col-xs-6 col-md-6 pull-left">
+                            <button type="submit" id="overwrite" class="btn btn-primary btn-block" >@Html.Raw(CommonStrings.OverwriteButton_Text)</button>
+                        </div>               
+                        <div class="input-group col-xs-6 col-md-6 pull-right">       
+                            @Html.ActionLink(CommonStrings.CancelButton_Text, "CancelLocation", "Location", null, new { @class = "btn btn-primary btn-block" })
+                        </div>    
+                     </div>   
+                }                
+        </div>   
+
+        @Html.ValidationSummary(false, string.Empty, new { @class = "alert alert-danger" }) 
+            
+        <div id="controlNumberProcessed">
+            @if (Model.ControlNumberToProcess != null && Model.ControlNumberToProcess.Count > 0)
+            {                  
+                <hr color="gray"/> 
+                <label class="caption">@Html.Raw(WorkStatusStrings.NumbersControl_Processed)</label>
+                
+                    <div >
+                        <div class="table-responsive">
+                            <table class="table table-striped table-condensed">
+                                <thead>
+                                    <tr>  
+                                        <th style="display:none" >ordenSpoolId</th>
+                                        <th>@Html.Raw(WorkStatusStrings.ControlNumber)</th>
+                                        <th>@Html.Raw(WorkStatusStrings.Spool)</th>   
+                                        <th>@Html.Raw(WorkStatusStrings.SteelFamily)</th>
+                                        <th>@Html.Raw(WorkStatusStrings.MaximumDiameter)</th>                                                                                     
+                                        <th>@Html.Raw(WorkStatusStrings.Quadrant)</th>                                                
+                                    </tr>
+                                </thead>
+                                <tbody>                       
+                                        @foreach (NumeroControlBusqueda cn in Model.ControlNumberToProcess)
+                                        {                                      
+                                            <tr>
+                                                <td style="display:none" >@cn.OrdenTrabajoSpoolID</td>                                          
+                                                <td><a href="#">@cn.NumeroControl</a></td>
+                                                <td>@cn.Spool</td> 
+                                                <td>@cn.FamiliaAcero</td>
+                                                <td>@cn.DiametroMaximo</td>
+                                                <td>@cn.Cuadrante</td>                                                
+                                            </tr>  
+                                        }                            
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>            
+            }
+            
+        </div>
+
+        }
+    </fieldset>
+}
+ @section scripts{
+    <script type="text/javascript">
+        $(function () {
+            var result = new sam.pages.workstatus.results($("location-results-from"));
+            result.init();
+        });
+
+    </script>
+}

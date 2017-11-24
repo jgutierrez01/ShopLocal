@@ -1,0 +1,53 @@
+CREATE TABLE AgrupadoresPND(
+	AgrupadorPNDID INT NOT NULL PRIMARY KEY IDENTITY,
+	JuntaSpoolID INT NOT NULL,
+	UltimoProceso VARCHAR(MAX) NULL,
+	AreaGrupo VARCHAR(MAX) NULL,
+	KgsGrupo VARCHAR(MAX) NULL,
+	DiamGrupo VARCHAR(MAX) NULL,
+	PeqGrupo VARCHAR(MAX) NULL,
+	SistemaPinturaFinal VARCHAR(MAX) NULL,
+	PaintNoPaint VARCHAR(MAX) NULL,
+	DiametroPromedio VARCHAR(MAX) NULL,
+	PaintLine VARCHAR(MAX) NULL,
+	AreaEQ VARCHAR(MAX) NULL,
+	InoxNoInox VARCHAR(MAX) NULL,
+	ClsifInox VARCHAR(MAX) NULL,
+	FOREIGN KEY (JuntaSpoolID) REFERENCES JuntaSpool(JuntaSpoolID)
+)
+
+CREATE TABLE AgrupadoresSoportes(
+	AgrupadorSoporteID INT NOT NULL PRIMARY KEY IDENTITY,
+	JuntaSpoolID INT NOT NULL,
+	UltimoProceso VARCHAR(MAX) NULL,
+	AreaGrupo VARCHAR(MAX) NULL,
+	KgsGrupo VARCHAR(MAX) NULL,
+	DiamGrupo VARCHAR(MAX) NULL,
+	PeqGrupo VARCHAR(MAX) NULL,
+	SistemaPinturaFinal VARCHAR(MAX) NULL,
+	PaintNoPaint VARCHAR(MAX) NULL,
+	DiametroPromedio VARCHAR(MAX) NULL,
+	PaintLine VARCHAR(MAX) NULL,
+	AreaEQ VARCHAR(MAX) NULL,
+	InoxNoInox VARCHAR(MAX) NULL,
+	ClsifInox VARCHAR(MAX) NULL,
+	FOREIGN KEY (JuntaSpoolID) REFERENCES JuntaSpool(JuntaSpoolID)
+)
+
+CREATE TABLE AgrupadoresReparaciones(
+	AgrupadorReparacionID INT NOT NULL PRIMARY KEY IDENTITY,
+	JuntaSpoolID INT NOT NULL,
+	UltimoProceso VARCHAR(MAX) NULL,
+	AreaGrupo VARCHAR(MAX) NULL,
+	KgsGrupo VARCHAR(MAX) NULL,
+	DiamGrupo VARCHAR(MAX) NULL,
+	PeqGrupo VARCHAR(MAX) NULL,
+	SistemaPinturaFinal VARCHAR(MAX) NULL,
+	PaintNoPaint VARCHAR(MAX) NULL,
+	DiametroPromedio VARCHAR(MAX) NULL,
+	PaintLine VARCHAR(MAX) NULL,
+	AreaEQ VARCHAR(MAX) NULL,
+	InoxNoInox VARCHAR(MAX) NULL,
+	ClsifInox VARCHAR(MAX) NULL,
+	FOREIGN KEY (JuntaSpoolID) REFERENCES JuntaSpool(JuntaSpoolID)
+)

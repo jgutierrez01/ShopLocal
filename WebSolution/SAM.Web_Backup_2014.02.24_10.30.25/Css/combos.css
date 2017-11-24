@@ -1,0 +1,221 @@
+﻿/*******************************************
+ *
+ *    RadComboBo del popup de despachos
+ *
+ *******************************************/
+.nuDespachoAccesorio
+{
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.nuDespachoAccesorio td
+{
+	border-bottom: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	padding: 2px;
+}
+.nuDespachoAccesorio td.cod, .headerRcbNu th.cod
+{
+	width: 60px;
+}
+.nuDespachoAccesorio td.inv, .headerRcbNu th.inv
+{
+	width: 30px;
+}
+.nuDespachoAccesorio td.diam, .headerRcbNu th.diam
+{
+	width: 30px;
+}
+.nuDespachoAccesorio td.ind, .headerRcbNu th.ind
+{
+	width: 5px;
+}
+.nuDespachoAccesorio td.codIc, .headerRcbNu th.codIc
+{
+	width: 80px;
+}
+.nuDespachoAccesorio td.last, .headerRcbNu th.last
+{
+	border-right: none;
+}
+.liDespacho li.rcbItem
+{
+	padding: 0;
+	margin: 0;
+}
+.liDespacho li.rcbHovered
+{
+	padding: 0;
+	margin: 0;
+}
+.liDespacho .rcbHeader
+{
+	padding-left: 0 !important; /*si no, lo sobre-escribe el de telerik*/
+	padding-right: 0 !important;
+}
+.headerRcbNu
+{
+	border-collapse: collapse;
+	border: 0;
+	margin: 0;
+	width: 100%;
+}
+.headerRcbNu th
+{
+	font-weight: bold;
+	padding: 2px;
+}
+
+/*******************************************
+ *
+ *    RadComboBo Generico
+ *
+ *******************************************/
+.sys-template
+{
+	display: none;
+	visibility: hidden;
+}
+.rcbGenerico
+{
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.rcbGenerico tr
+{
+}
+.rcbGenerico td
+{
+	border-bottom: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	padding: 2px;
+}
+.liGenerico li.rcbItem
+{
+	padding: 0;
+	margin: 0;
+}
+.liGenerico li.rcbHovered
+{
+	padding: 0;
+	margin: 0;
+}
+.headerRcbGenerico
+{
+	border-collapse: collapse;
+	border: 0;
+	margin: 0;
+	width: 100%;
+}
+.headerRcbGenerico th
+{
+	font-weight: bold;	
+	border-right: 1px solid #cccccc;
+	padding: 2px;
+}
+
+/*********************************
+*
+*  Columnas Etiqueta Material Corte
+*
+*********************************/
+.headerRcbGenerico th.etiqueta
+{	
+	width:70px;
+}
+
+.rcbGenerico td.etiqueta
+{	
+	width:70px;
+}
+
+.headerRcbGenerico th.itemCode
+{	
+	width:120px;
+}
+
+.rcbGenerico td.itemCode
+{	
+	width:120px;
+}
+
+.headerRcbGenerico th.descripcion
+{	
+	width:170px;
+}
+
+.rcbGenerico td.descripcion
+{	
+	width:170px;
+}
+
+/*********************************
+*
+*  Columnas ItemCode
+*
+*********************************/
+.headerRcbGenerico th.codigo,
+.rcbGenerico td.codigo
+{	
+	width:100px;
+}
+
+/*********************************
+*
+*  Columnas NumeroUnico
+*
+*********************************/
+.headerRcbGenerico th.codigo,
+.rcbGenerico td.codigo
+{	
+	width:80px;
+}
+.headerRcbGenerico th.diam1,
+.rcbGenerico td.diam1
+{	
+	width:50px;
+}
+.headerRcbGenerico th.diam2,
+.rcbGenerico td.diam2
+{	
+	width:50px;
+}
+
+
+/*********************************
+*
+*  Columnas Colada
+*
+*********************************/
+.headerRcbGenerico th.colada,
+.headerRcbGenerico th.certificado,
+.rcbGenerico td.colada,
+.rcbGenerico td.certificado
+{
+    width: 100px;
+}
+
+/*********************************
+*
+*  Columnas Spool
+*
+*********************************/
+.headerRcbGenerico th.spool,
+.rcbGenerico td.spool
+{
+    width: 200px;
+}
+
+/********************************
+ *
+ * Override al estilo default del combo
+ *
+ *********************************/
+.RadComboBoxDropDown .rcbHeader
+{
+    padding: 0 0 0 0 !important;
+}

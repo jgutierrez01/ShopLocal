@@ -1,0 +1,1038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ArmadoFecha" xml:space="preserve">
+    <value>Fitting date</value>
+  </data>
+  <data name="ArmadoFechaReporte" xml:space="preserve">
+    <value>Fitting report date</value>
+  </data>
+  <data name="ArmadoNumeroUnico1" xml:space="preserve">
+    <value>Fitting material id 1</value>
+  </data>
+  <data name="ArmadoNumeroUnico2" xml:space="preserve">
+    <value>Fitting material id 2</value>
+  </data>
+  <data name="ArmadoTaller" xml:space="preserve">
+    <value>Shop</value>
+  </data>
+  <data name="ArmadoTubero" xml:space="preserve">
+    <value>Fitter</value>
+  </data>
+  <data name="Cedula" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Diametro" xml:space="preserve">
+    <value>Diameter</value>
+  </data>
+  <data name="EmbarqueEtiqueta" xml:space="preserve">
+    <value>Shipping label</value>
+  </data>
+  <data name="EmbarqueFechaEmbarque" xml:space="preserve">
+    <value>Shipping ActualDate</value>
+  </data>
+  <data name="EmbarqueFechaEtiqueta" xml:space="preserve">
+    <value>Label print date</value>
+  </data>
+  <data name="EmbarqueFolioPreparacion" xml:space="preserve">
+    <value>Preparation Folio</value>
+  </data>
+  <data name="EmbarqueNumeroEmbarque" xml:space="preserve">
+    <value>Shipment number</value>
+  </data>
+  <data name="Espesor" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="InspeccionDimensionalFecha" xml:space="preserve">
+    <value>Dimensional inspection date</value>
+  </data>
+  <data name="InspeccionDimensionalFechaReporte" xml:space="preserve">
+    <value>Dimensional inspection report date</value>
+  </data>
+  <data name="InspeccionDimensionalHoja" xml:space="preserve">
+    <value>Dimensional inspection sheet</value>
+  </data>
+  <data name="InspeccionDimensionalNumeroReporte" xml:space="preserve">
+    <value>Dimensional inspection report number</value>
+  </data>
+  <data name="InspeccionDimensionalResultado" xml:space="preserve">
+    <value>Dimensional inspection results</value>
+  </data>
+  <data name="InspeccionEspesoresFecha" xml:space="preserve">
+    <value>Inspection Thickness Reading Date</value>
+  </data>
+  <data name="InspeccionEspesoresFechaReporte" xml:space="preserve">
+    <value>Inspection Thickness Reading Report Date</value>
+  </data>
+  <data name="InspeccionEspesoresHoja" xml:space="preserve">
+    <value>Inspection Thickness Reading Sheet</value>
+  </data>
+  <data name="InspeccionEspesoresNumeroReporte" xml:space="preserve">
+    <value>Inspection Thickness Reading Report Number</value>
+  </data>
+  <data name="InspeccionEspesoresResultado" xml:space="preserve">
+    <value>Inspection Thickness Reading Result</value>
+  </data>
+  <data name="InspeccionVisualDefecto" xml:space="preserve">
+    <value>Visual Inspection defect</value>
+  </data>
+  <data name="InspeccionVisualFecha" xml:space="preserve">
+    <value>Visual Inspection date</value>
+  </data>
+  <data name="InspeccionVisualFechaReporte" xml:space="preserve">
+    <value>Visual Inspection report date</value>
+  </data>
+  <data name="InspeccionVisualHoja" xml:space="preserve">
+    <value>Visual Inspection sheet</value>
+  </data>
+  <data name="InspeccionVisualNumeroReporte" xml:space="preserve">
+    <value>Visual Inspection report number</value>
+  </data>
+  <data name="InspeccionVisualResultado" xml:space="preserve">
+    <value>Visual Inspection result</value>
+  </data>
+  <data name="Junta" xml:space="preserve">
+    <value>Joint</value>
+  </data>
+  <data name="Localizacion" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Nombre_Hoja_Excel" xml:space="preserve">
+    <value>Follow-up</value>
+  </data>
+  <data name="NumeroControl" xml:space="preserve">
+    <value>Control Number</value>
+  </data>
+  <data name="OrdenDeTrabajo" xml:space="preserve">
+    <value>Work Order</value>
+  </data>
+  <data name="PinturaCodigo" xml:space="preserve">
+    <value>Painting Paint code</value>
+  </data>
+  <data name="PinturaColor" xml:space="preserve">
+    <value>Painting Color</value>
+  </data>
+  <data name="PinturaFechaAcabadoVisual" xml:space="preserve">
+    <value>Visual finish date</value>
+  </data>
+  <data name="PinturaFechaAdherencia" xml:space="preserve">
+    <value>Adhesion Date</value>
+  </data>
+  <data name="PinturaFechaIntermedios" xml:space="preserve">
+    <value>Painting Intermediate coating date</value>
+  </data>
+  <data name="PinturaFechaPrimarios" xml:space="preserve">
+    <value>Painting primary coating date</value>
+  </data>
+  <data name="PinturaFechaPullOff" xml:space="preserve">
+    <value>Painting pulloff date</value>
+  </data>
+  <data name="PinturaFechaRequisicion" xml:space="preserve">
+    <value>Painting requisition date</value>
+  </data>
+  <data name="PinturaFechaSandBlast" xml:space="preserve">
+    <value>Painting sandblast date</value>
+  </data>
+  <data name="PinturaNumeroRequisicion" xml:space="preserve">
+    <value>Painting requisition number</value>
+  </data>
+  <data name="PinturaReporteAcabadoVisual" xml:space="preserve">
+    <value>Visual finish report</value>
+  </data>
+  <data name="PinturaReporteAdherencia" xml:space="preserve">
+    <value>Bond report</value>
+  </data>
+  <data name="PinturaReporteIntermedios" xml:space="preserve">
+    <value>Interim report</value>
+  </data>
+  <data name="PinturaReportePrimarios" xml:space="preserve">
+    <value>Painting primary coating report</value>
+  </data>
+  <data name="PinturaReportePullOff" xml:space="preserve">
+    <value>Pullof report</value>
+  </data>
+  <data name="PinturaReporteSandBlast" xml:space="preserve">
+    <value>Sandblast report</value>
+  </data>
+  <data name="PinturaSistema" xml:space="preserve">
+    <value>Paint system</value>
+  </data>
+  <data name="Proyecto" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="PruebaPTCodigoRequisicion" xml:space="preserve">
+    <value>NDT PT Requisition Code</value>
+  </data>
+  <data name="PruebaPTDefecto" xml:space="preserve">
+    <value>NDT PT Defect</value>
+  </data>
+  <data name="PruebaPTFechaPrueba" xml:space="preserve">
+    <value>NDT PT Test Date</value>
+  </data>
+  <data name="PruebaPTFechaReporte" xml:space="preserve">
+    <value>NDT PT report date</value>
+  </data>
+  <data name="PruebaPTFechaRequisicion" xml:space="preserve">
+    <value>NDT PT Requisition Date</value>
+  </data>
+  <data name="PruebaPTHoja" xml:space="preserve">
+    <value>NDT PT Sheet</value>
+  </data>
+  <data name="PruebaPTNumeroReporte" xml:space="preserve">
+    <value>NDT PT Report number</value>
+  </data>
+  <data name="PruebaPTNumeroRequisicion" xml:space="preserve">
+    <value>NDT PT Requisition Number</value>
+  </data>
+  <data name="PruebaPTPostTTCodigoRequisicion" xml:space="preserve">
+    <value>NDT PT Post-PWHT Requisition Code</value>
+  </data>
+  <data name="PruebaPTPostTTDefecto" xml:space="preserve">
+    <value>NDT PT Post-PWHT Defect</value>
+  </data>
+  <data name="PruebaPTPostTTFechaPrueba" xml:space="preserve">
+    <value>NDT PT Post-PWHT Test Date</value>
+  </data>
+  <data name="PruebaPTPostTTFechaReporte" xml:space="preserve">
+    <value>NDT PT Post-PWHT Report Date</value>
+  </data>
+  <data name="PruebaPTPostTTFechaRequisicion" xml:space="preserve">
+    <value>NDT PT Post-PHWT Requisition Date</value>
+  </data>
+  <data name="PruebaPTPostTTHoja" xml:space="preserve">
+    <value>NDT PT Post-PWHT Sheet</value>
+  </data>
+  <data name="PruebaPTPostTTNumeroReporte" xml:space="preserve">
+    <value>NDT PT Post-PWHT Report Number</value>
+  </data>
+  <data name="PruebaPTPostTTNumeroRequisicion" xml:space="preserve">
+    <value>NDT PT Post-PWHT Requisition Number</value>
+  </data>
+  <data name="PruebaPTPostTTResultado" xml:space="preserve">
+    <value>NDT PT Post-PWHT Result</value>
+  </data>
+  <data name="PruebaPTResultado" xml:space="preserve">
+    <value>NDT PT Result</value>
+  </data>
+  <data name="PruebaRTCodigoRequisicion" xml:space="preserve">
+    <value>NDT RT Requisition Code</value>
+  </data>
+  <data name="PruebaRTDefecto" xml:space="preserve">
+    <value>NDT RT Defect</value>
+  </data>
+  <data name="PruebaRTFechaPrueba" xml:space="preserve">
+    <value>NDT RT Test Date</value>
+  </data>
+  <data name="PruebaRTFechaReporte" xml:space="preserve">
+    <value>NDT RT Report Date</value>
+  </data>
+  <data name="PruebaRTFechaRequisicion" xml:space="preserve">
+    <value>NDT RT Requisition Date</value>
+  </data>
+  <data name="PruebaRTHoja" xml:space="preserve">
+    <value>NDT RT Sheet</value>
+  </data>
+  <data name="PruebaRTNumeroReporte" xml:space="preserve">
+    <value>NDT RT Report Number</value>
+  </data>
+  <data name="PruebaRTNumeroRequisicion" xml:space="preserve">
+    <value>NDT RT Requisition Number</value>
+  </data>
+  <data name="PruebaRTPostTTCodigoRequisicion" xml:space="preserve">
+    <value>NDT RT Post-PWHT Requisition Code</value>
+  </data>
+  <data name="PruebaRTPostTTDefecto" xml:space="preserve">
+    <value>NDT RT Post-PWHT Defect</value>
+  </data>
+  <data name="PruebaRTPostTTFechaPrueba" xml:space="preserve">
+    <value>NDT RT Post-PWHT Test Date</value>
+  </data>
+  <data name="PruebaRTPostTTFechaReporte" xml:space="preserve">
+    <value>NDT RT Post-PWHT Report Date</value>
+  </data>
+  <data name="PruebaRTPostTTFechaRequisicion" xml:space="preserve">
+    <value>NDT RT Post-PWHT Requisition Date</value>
+  </data>
+  <data name="PruebaRTPostTTHoja" xml:space="preserve">
+    <value>NDT RT Post-PWHT Sheet</value>
+  </data>
+  <data name="PruebaRTPostTTNumeroReporte" xml:space="preserve">
+    <value>NDT RT Post-PWHT Report Number</value>
+  </data>
+  <data name="PruebaRTPostTTNumeroRequisicion" xml:space="preserve">
+    <value>NDT RT Post-PWHT Requisition Number</value>
+  </data>
+  <data name="PruebaRTPostTTResultado" xml:space="preserve">
+    <value>NDT RT Post-TT Result</value>
+  </data>
+  <data name="PruebaRTResultado" xml:space="preserve">
+    <value>NDT RT Result</value>
+  </data>
+  <data name="PruebaUTCodigoRequisicion" xml:space="preserve">
+    <value>NDT UT Requisition Code</value>
+  </data>
+  <data name="PruebaUTDefecto" xml:space="preserve">
+    <value>NDT UT Defect</value>
+  </data>
+  <data name="PruebaUTFechaPrueba" xml:space="preserve">
+    <value>NDT UT Test Date</value>
+  </data>
+  <data name="PruebaUTFechaReporte" xml:space="preserve">
+    <value>NDT UT Report Date</value>
+  </data>
+  <data name="PruebaUTFechaRequisicion" xml:space="preserve">
+    <value>NDT UT Requisition Date</value>
+  </data>
+  <data name="PruebaUTHoja" xml:space="preserve">
+    <value>NDT UT Sheet</value>
+  </data>
+  <data name="PruebaUTNumeroReporte" xml:space="preserve">
+    <value>NDT UT Report Number</value>
+  </data>
+  <data name="PruebaUTNumeroRequisicion" xml:space="preserve">
+    <value>NDT UT Requisition Number</value>
+  </data>
+  <data name="PruebaUTResultado" xml:space="preserve">
+    <value>NDT UT Result</value>
+  </data>
+  <data name="SoldaduraConsumiblesRelleno" xml:space="preserve">
+    <value>Welding Welding Material Heat Number</value>
+  </data>
+  <data name="SoldaduraFecha" xml:space="preserve">
+    <value>Welding Date</value>
+  </data>
+  <data name="SoldaduraFechaReporte" xml:space="preserve">
+    <value>Welding Report Date</value>
+  </data>
+  <data name="SoldaduraProcesoRaiz" xml:space="preserve">
+    <value>Welding Root Pass Welding Process</value>
+  </data>
+  <data name="SoldaduraProcesoRelleno" xml:space="preserve">
+    <value>Welding Filler Welding Process</value>
+  </data>
+  <data name="SoldaduraSoldadorRaiz" xml:space="preserve">
+    <value>Welding Root Pass Welder</value>
+  </data>
+  <data name="SoldaduraSoldadorRelleno" xml:space="preserve">
+    <value>Welding Filler Welder</value>
+  </data>
+  <data name="SoldaduraTaller" xml:space="preserve">
+    <value>Welding Shop</value>
+  </data>
+  <data name="SoldaduraWPS" xml:space="preserve">
+    <value>Welding Root WPS</value>
+  </data>
+  <data name="Spool" xml:space="preserve">
+    <value>Spool</value>
+  </data>
+  <data name="TieneHold" xml:space="preserve">
+    <value>On Hold</value>
+  </data>
+  <data name="TipoJunta" xml:space="preserve">
+    <value>Welding Joint Type</value>
+  </data>
+  <data name="TratamientoDurezasCodigoRequisicion" xml:space="preserve">
+    <value>Heat Treatment Hardness Test Requisition Code</value>
+  </data>
+  <data name="TratamientoDurezasFechaReporte" xml:space="preserve">
+    <value>Heat Treatment Hardness Test Report Date</value>
+  </data>
+  <data name="TratamientoDurezasFechaRequisicion" xml:space="preserve">
+    <value>Heat Treatment Hardness Test Requisition Date</value>
+  </data>
+  <data name="TratamientoDurezasFechaTratamiento" xml:space="preserve">
+    <value>Heat Treament Hardness Test Date</value>
+  </data>
+  <data name="TratamientoDurezasGrafica" xml:space="preserve">
+    <value>Heat Treatment Hardness Test Chart</value>
+  </data>
+  <data name="TratamientoDurezasHoja" xml:space="preserve">
+    <value>Heat Treatment Hardness Test Sheet</value>
+  </data>
+  <data name="TratamientoDurezasNumeroReporte" xml:space="preserve">
+    <value>Heat Treatment Hardness Test Report Number</value>
+  </data>
+  <data name="TratamientoDurezasNumeroRequisicion" xml:space="preserve">
+    <value>Heat Treatment Hardness Test Requisition Number</value>
+  </data>
+  <data name="TratamientoDurezasResultado" xml:space="preserve">
+    <value>Heat Treatment Hardness Test Result</value>
+  </data>
+  <data name="TratamientoPreheatCodigoRequisicion" xml:space="preserve">
+    <value>Heat Treatment Preheat Requisition Code</value>
+  </data>
+  <data name="TratamientoPreheatFechaReporte" xml:space="preserve">
+    <value>Heat Treatment Preheat Report Date</value>
+  </data>
+  <data name="TratamientoPreheatFechaRequisicion" xml:space="preserve">
+    <value>Heat Treatment Preheat Requisition Date</value>
+  </data>
+  <data name="TratamientoPreheatFechaTratamiento" xml:space="preserve">
+    <value>Heat Treatment Preheat Date</value>
+  </data>
+  <data name="TratamientoPreheatGrafica" xml:space="preserve">
+    <value>Heat Treatment Preheat Chart</value>
+  </data>
+  <data name="TratamientoPreheatHoja" xml:space="preserve">
+    <value>Heat Treatment Preheat Sheet</value>
+  </data>
+  <data name="TratamientoPreheatNumeroReporte" xml:space="preserve">
+    <value>Heat Treatment Preheat Report Number</value>
+  </data>
+  <data name="TratamientoPreheatNumeroRequisicion" xml:space="preserve">
+    <value>Heat Treatment Preheat Requisition Number</value>
+  </data>
+  <data name="TratamientoPreheatResultado" xml:space="preserve">
+    <value>Heat Treatment Preheat Result</value>
+  </data>
+  <data name="TratamientoPWHTCodigoRequisicion" xml:space="preserve">
+    <value>Heat Treatment PWHT Requisition Code</value>
+  </data>
+  <data name="TratamientoPWHTFechaReporte" xml:space="preserve">
+    <value>Heat Treatment PWHT Report Date</value>
+  </data>
+  <data name="TratamientoPWHTFechaRequisicion" xml:space="preserve">
+    <value>Heat Treatment PWHT Requisition Date</value>
+  </data>
+  <data name="TratamientoPWHTFechaTratamiento" xml:space="preserve">
+    <value>Heat Treatment PWHT date</value>
+  </data>
+  <data name="TratamientoPWHTGrafica" xml:space="preserve">
+    <value>Heat treatment PWHT Chart</value>
+  </data>
+  <data name="TratamientoPWHTHoja" xml:space="preserve">
+    <value>heat Treatment PWHT Sheet</value>
+  </data>
+  <data name="TratamientoPWHTNumeroReporte" xml:space="preserve">
+    <value>Heat Treatment PWHT Report Number</value>
+  </data>
+  <data name="TratamientoPWHTNumeroRequisicion" xml:space="preserve">
+    <value>Heat Treatment PWHT Requisition Number</value>
+  </data>
+  <data name="TratamientoPWHTResultado" xml:space="preserve">
+    <value>Heat Treatment PWHT Result</value>
+  </data>
+  <data name="UltimoProceso" xml:space="preserve">
+    <value>Fabrication process of last input</value>
+  </data>
+  <data name="ArmadoCedMat1" xml:space="preserve">
+    <value>Schedule Material 1</value>
+  </data>
+  <data name="ArmadoCedMat2" xml:space="preserve">
+    <value>Schedule Material 2</value>
+  </data>
+  <data name="DiamMat1" xml:space="preserve">
+    <value>DiamMat1</value>
+  </data>
+  <data name="DiamMat2" xml:space="preserve">
+    <value>DiamMat2</value>
+  </data>
+  <data name="Especificacion" xml:space="preserve">
+    <value>Specification</value>
+  </data>
+  <data name="EspMat1" xml:space="preserve">
+    <value>SpecMat1</value>
+  </data>
+  <data name="EspMat2" xml:space="preserve">
+    <value>SpecMat2</value>
+  </data>
+  <data name="FamiliaDeAcero1" xml:space="preserve">
+    <value>Family of steel 1</value>
+  </data>
+  <data name="FamiliaDeAcero2" xml:space="preserve">
+    <value>Family of steel 2</value>
+  </data>
+  <data name="FamiliaDeMaterial1" xml:space="preserve">
+    <value>family of material 1</value>
+  </data>
+  <data name="FamiliaDeMaterial2" xml:space="preserve">
+    <value>family of material 2</value>
+  </data>
+  <data name="Peqs" xml:space="preserve">
+    <value>Peqs</value>
+  </data>
+  <data name="PorcentajePnd" xml:space="preserve">
+    <value>NDT %</value>
+  </data>
+  <data name="FabArea" xml:space="preserve">
+    <value>Fab Area</value>
+  </data>
+  <data name="Isometrico" xml:space="preserve">
+    <value>Isometric</value>
+  </data>
+  <data name="KgTeoricos" xml:space="preserve">
+    <value>Theoretical Kg</value>
+  </data>
+  <data name="PorcentajeArmado" xml:space="preserve">
+    <value>Fitted %</value>
+  </data>
+  <data name="PorcentajeSoldado" xml:space="preserve">
+    <value>Welded %</value>
+  </data>
+  <data name="Prioridad" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revision</value>
+  </data>
+  <data name="RevisionCliente" xml:space="preserve">
+    <value>Client Revision</value>
+  </data>
+  <data name="SoldaduraWPSRelleno" xml:space="preserve">
+    <value>Welding Fill WPS</value>
+  </data>
+  <data name="FechaHold" xml:space="preserve">
+    <value>Hold date</value>
+  </data>
+  <data name="ObservacionesHold" xml:space="preserve">
+    <value>Hold observations</value>
+  </data>
+  <data name="DiametroPlano" xml:space="preserve">
+    <value>Drawing Diameter</value>
+  </data>
+  <data name="JuntaMaterialPendiente" xml:space="preserve">
+    <value>Missing Material in Weld</value>
+  </data>
+  <data name="MaterialPendiente" xml:space="preserve">
+    <value>Missing Material in Spool</value>
+  </data>
+  <data name="ArmadoEtiquetaMaterial1" xml:space="preserve">
+    <value>Fitting material 1 label</value>
+  </data>
+  <data name="ArmadoEtiquetaMaterial2" xml:space="preserve">
+    <value>Fitting material 2 label</value>
+  </data>
+  <data name="ArmadoSpool1" xml:space="preserve">
+    <value>Fitting Spool 1</value>
+  </data>
+  <data name="ArmadoSpool2" xml:space="preserve">
+    <value>Fitting Spool 2</value>
+  </data>
+  <data name="Despachado1" xml:space="preserve">
+    <value>Unique Number 1 Dispatched</value>
+  </data>
+  <data name="Despachado2" xml:space="preserve">
+    <value>Unique Number 2 Dispatched</value>
+  </data>
+  <data name="RequierePWHT" xml:space="preserve">
+    <value>PWHT Required?</value>
+  </data>
+  <data name="PruebaRTCuadrante" xml:space="preserve">
+    <value>Quadrant</value>
+  </data>
+  <data name="PruebaRTSector" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="Baston" xml:space="preserve">
+    <value>Stick</value>
+  </data>
+  <data name="Estacion" xml:space="preserve">
+    <value>Station</value>
+  </data>
+  <data name="SegundaFabricacion" xml:space="preserve">
+    <value>SecondFabrication</value>
+  </data>
+  <data name="ObservacionesArmado" xml:space="preserve">
+    <value>Fitting Observations</value>
+  </data>
+  <data name="ObservacionesSoldadura" xml:space="preserve">
+    <value>Welding Observations</value>
+  </data>
+  <data name="Campo1" xml:space="preserve">
+    <value>FabLine</value>
+  </data>
+  <data name="Campo2" xml:space="preserve">
+    <value>Field 2</value>
+  </data>
+  <data name="Campo3" xml:space="preserve">
+    <value>Field 3</value>
+  </data>
+  <data name="Campo4" xml:space="preserve">
+    <value>Field 4</value>
+  </data>
+  <data name="Campo5" xml:space="preserve">
+    <value>Field 5</value>
+  </data>
+  <data name="NumeroUnico1Pendiente" xml:space="preserve">
+    <value>Unique number 1 pending?</value>
+  </data>
+  <data name="NumeroUnico2Pendiente" xml:space="preserve">
+    <value>Unique number 2 pending?</value>
+  </data>
+  <data name="Nota1" xml:space="preserve">
+    <value>Note 1</value>
+  </data>
+  <data name="Nota2" xml:space="preserve">
+    <value>Note 2</value>
+  </data>
+  <data name="Nota3" xml:space="preserve">
+    <value>Note 3</value>
+  </data>
+  <data name="Nota4" xml:space="preserve">
+    <value>Note 4</value>
+  </data>
+  <data name="Nota5" xml:space="preserve">
+    <value>Note 5</value>
+  </data>
+  <data name="CampoJunta2" xml:space="preserve">
+    <value>Joint field 2</value>
+  </data>
+  <data name="CampoJunta3" xml:space="preserve">
+    <value>Joint field 3</value>
+  </data>
+  <data name="CampoJunta4" xml:space="preserve">
+    <value>Joint field 4</value>
+  </data>
+  <data name="CampoJunta5" xml:space="preserve">
+    <value>Joint field 5</value>
+  </data>
+  <data name="FabClas" xml:space="preserve">
+    <value>FabClas</value>
+  </data>
+  <data name="DiametroMayor" xml:space="preserve">
+    <value>Maximum Diameter</value>
+  </data>
+  <data name="UltimaLocalizacion" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="EmbarqueFechaEstimada" xml:space="preserve">
+    <value>Shipping Estimated Date</value>
+  </data>
+  <data name="PruebaHidroAprobado" xml:space="preserve">
+    <value>Hydrostatic test Passed</value>
+  </data>
+  <data name="PruebaHidroFechaPrueba" xml:space="preserve">
+    <value>Hydrostatic test Test Date</value>
+  </data>
+  <data name="PruebaHidroFechaReporte" xml:space="preserve">
+    <value>Hydrostatic test Report Date</value>
+  </data>
+  <data name="PruebaHidroFechaRequisicion" xml:space="preserve">
+    <value>Hydrostatic test Requisition Date</value>
+  </data>
+  <data name="PruebaHidroHoja" xml:space="preserve">
+    <value>Hydrostatic test Sheet</value>
+  </data>
+  <data name="PruebaHidroNumeroReporte" xml:space="preserve">
+    <value>Hydrostatic test Report Number</value>
+  </data>
+  <data name="PruebaHidroNumeroRequisicion" xml:space="preserve">
+    <value>Hydrostatic test Requisition Number</value>
+  </data>
+  <data name="GeneralFechaLiberacionCalidad" xml:space="preserve">
+    <value>Quality release date</value>
+  </data>
+  <data name="GeneralUsuarioLiberacionCalidad" xml:space="preserve">
+    <value>User quality release</value>
+  </data>
+  <data name="FechaEmision" xml:space="preserve">
+    <value>Date of Issue</value>
+  </data>
+  <data name="EmbarqueVigenciaAduana" xml:space="preserve">
+    <value>Validity Customs</value>
+  </data>
+  <data name="GeneralEsRevision" xml:space="preserve">
+    <value>Is Review</value>
+  </data>
+  <data name="GeneralNumerocontrolEspecial" xml:space="preserve">
+    <value>Special Control Number</value>
+  </data>
+  <data name="GeneralOrdenTrabajoEspecial" xml:space="preserve">
+    <value>Special Work Order</value>
+  </data>
+  <data name="PruebaHidroPresion" xml:space="preserve">
+    <value>Pressure</value>
+  </data>
+  <data name="GeneralJuntaRequirePwht" xml:space="preserve">
+    <value>Joint requires PWHT</value>
+  </data>
+  <data name="GeneralFechaLiberacionMaterial" xml:space="preserve">
+    <value>Material Release Date</value>
+  </data>
+  <data name="GeneralUsuarioLiberacionMaterial" xml:space="preserve">
+    <value>User Material Release</value>
+  </data>
+  <data name="EmbarqueFechaCarga" xml:space="preserve">
+    <value>Upload date</value>
+  </data>
+  <data name="PinturaLiberado" xml:space="preserve">
+    <value>Paint Release</value>
+  </data>
+  <data name="GeneralFechaOkPnd" xml:space="preserve">
+    <value>Ok PND Date</value>
+  </data>
+  <data name="GeneralUsuarioOkPnd" xml:space="preserve">
+    <value>Ok PND User</value>
+  </data>
+  <data name="PruebaNeumaticaResultado" xml:space="preserve">
+    <value>Neumatic test Passed</value>
+  </data>
+  <data name="PruebaNeumaticaFechaPrueba" xml:space="preserve">
+    <value>Neumatic test Test Date</value>
+  </data>
+  <data name="PruebaNeumaticaFechaReporte" xml:space="preserve">
+    <value>Neumatic test Report Date</value>
+  </data>
+  <data name="PruebaNeumaticaFechaRequisicion" xml:space="preserve">
+    <value>Neumatic test Requisition Date</value>
+  </data>
+  <data name="PruebaNeumaticaHoja" xml:space="preserve">
+    <value>Neumatic test Sheet</value>
+  </data>
+  <data name="PruebaNeumaticaNumeroReporte" xml:space="preserve">
+    <value>Neumatic test Report Number</value>
+  </data>
+  <data name="PruebaNeumaticaNumeroRequisicion" xml:space="preserve">
+    <value>Neumatic test Requisition Number</value>
+  </data>
+  <data name="PruebaNeumaticaCuadrante" xml:space="preserve">
+    <value>Quadrant</value>
+  </data>
+  <data name="PruebaNeumaticaDefecto" xml:space="preserve">
+    <value>Defect</value>
+  </data>
+  <data name="PruebaNeumaticaSector" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="GeneralJuntaRequirePruebaNeumatica" xml:space="preserve">
+    <value>Required neumatic test</value>
+  </data>
+  <data name="GeneralRequierePruebaHidrostatica" xml:space="preserve">
+    <value>Required Hydrostatic test </value>
+  </data>
+  <data name="GeneralKgsGroup" xml:space="preserve">
+    <value>Kgs Group</value>
+  </data>
+  <data name="AgrupadoresAreaEQ" xml:space="preserve">
+    <value>EQ Area</value>
+  </data>
+  <data name="AgrupadoresAreaGrupo" xml:space="preserve">
+    <value>Area Group</value>
+  </data>
+  <data name="AgrupadoresClasifInox" xml:space="preserve">
+    <value>Clasification Inox</value>
+  </data>
+  <data name="AgrupadoresDiametroPromedio" xml:space="preserve">
+    <value>Average Diameter</value>
+  </data>
+  <data name="AgrupadoresDiamGrupo" xml:space="preserve">
+    <value>Diameter Group</value>
+  </data>
+  <data name="AgrupadoresInoxNoInox" xml:space="preserve">
+    <value>Inox/NoInox</value>
+  </data>
+  <data name="AgrupadoresKgsGrupo" xml:space="preserve">
+    <value>Kgs Group</value>
+  </data>
+  <data name="AgrupadoresPaintLine" xml:space="preserve">
+    <value>Paint Line</value>
+  </data>
+  <data name="AgrupadoresPaintNoPaint" xml:space="preserve">
+    <value>Paint/NoPaint</value>
+  </data>
+  <data name="AgrupadoresPeqGrupo" xml:space="preserve">
+    <value>PEQ Group</value>
+  </data>
+  <data name="AgrupadoresSistemaPinturaFinal" xml:space="preserve">
+    <value>Final Paint System</value>
+  </data>
+  <data name="AgrupadoresSpoolUltimoProceso" xml:space="preserve">
+    <value>Last Process</value>
+  </data>
+  <data name="AgrupadoresPNDAreaEQ" xml:space="preserve">
+    <value>PND Groupers EQ Area</value>
+  </data>
+  <data name="AgrupadoresPNDAreaGrupo" xml:space="preserve">
+    <value>PND Groupers Group Area</value>
+  </data>
+  <data name="AgrupadoresPNDClasifInox" xml:space="preserve">
+    <value>PND Groupers Clasif Inox</value>
+  </data>
+  <data name="AgrupadoresPNDDiametroPromedio" xml:space="preserve">
+    <value>PND Groupers Average Diameter</value>
+  </data>
+  <data name="AgrupadoresPNDDiamGrupo" xml:space="preserve">
+    <value>PND Groupers Diam Group</value>
+  </data>
+  <data name="AgrupadoresPNDInoxNoInox" xml:space="preserve">
+    <value>PND Groupers Inox/NoInox</value>
+  </data>
+  <data name="AgrupadoresPNDKgsGrupo" xml:space="preserve">
+    <value>PND Groupers KGS Group</value>
+  </data>
+  <data name="AgrupadoresPNDPaintLine" xml:space="preserve">
+    <value>PND Groupers PaintLine</value>
+  </data>
+  <data name="AgrupadoresPNDPaintNoPaint" xml:space="preserve">
+    <value>PND Groupers Paint/NoPaint</value>
+  </data>
+  <data name="AgrupadoresPNDPEQGrupo" xml:space="preserve">
+    <value>PND Groupers PEQ Group</value>
+  </data>
+  <data name="AgrupadoresPNDSistemaPinturaFinal" xml:space="preserve">
+    <value>PND Groupers Final System Paint</value>
+  </data>
+  <data name="AgrupadoresPNDUltimoProceso" xml:space="preserve">
+    <value>PND Groupers Last Process</value>
+  </data>
+  <data name="AgrupadoresRepAreaEQ" xml:space="preserve">
+    <value>Repairs Groupers EQ Area</value>
+  </data>
+  <data name="AgrupadoresRepAreaGrupo" xml:space="preserve">
+    <value>Repairs Groupers Area Group</value>
+  </data>
+  <data name="AgrupadoresRepClasifInox" xml:space="preserve">
+    <value>Repairs Groupers Clasif Inox</value>
+  </data>
+  <data name="AgrupadoresRepDiametroPromedio" xml:space="preserve">
+    <value>Repairs Groupers Average Diameter</value>
+  </data>
+  <data name="AgrupadoresRepDiamGrupo" xml:space="preserve">
+    <value>Repairs Groupers Diam Group</value>
+  </data>
+  <data name="AgrupadoresRepInoxNoInox" xml:space="preserve">
+    <value>Repairs Groupers Inox/NoInox</value>
+  </data>
+  <data name="AgrupadoresRepKgsGrupo" xml:space="preserve">
+    <value>Repairs Groupers Kgs Group</value>
+  </data>
+  <data name="AgrupadoresRepPaintLine" xml:space="preserve">
+    <value>Repairs Groupers PaintLine</value>
+  </data>
+  <data name="AgrupadoresRepPaintNoPaint" xml:space="preserve">
+    <value>Repairs Groupers Paint/NoPaint</value>
+  </data>
+  <data name="AgrupadoresRepPEQGrupo" xml:space="preserve">
+    <value>Repairs Groupers PEQ Group</value>
+  </data>
+  <data name="AgrupadoresRepSistemaPinturaFinal" xml:space="preserve">
+    <value>Repairs Groupers Final System Paint</value>
+  </data>
+  <data name="AgrupadoresRepUltimoProceso" xml:space="preserve">
+    <value>Repairs Groupers Last Process</value>
+  </data>
+  <data name="AgrupadoresSopAreaEQ" xml:space="preserve">
+    <value>Mounting Groupers EQ Area</value>
+  </data>
+  <data name="AgrupadoresSopAreaGrupo" xml:space="preserve">
+    <value>Mounting Groupers Area Group</value>
+  </data>
+  <data name="AgrupadoresSopClasifInox" xml:space="preserve">
+    <value>Mounting Groupers Clasif Inox</value>
+  </data>
+  <data name="AgrupadoresSopDiametroPromedio" xml:space="preserve">
+    <value>Mounting Groupers Average Diameter</value>
+  </data>
+  <data name="AgrupadoresSopDiamGrupo" xml:space="preserve">
+    <value>Mounting Groupers Diam Group</value>
+  </data>
+  <data name="AgrupadoresSopInoxNoInox" xml:space="preserve">
+    <value>Mounting Groupers Inox/NoInox</value>
+  </data>
+  <data name="AgrupadoresSopKgsGrupo" xml:space="preserve">
+    <value>Mounting Groupers Kgs Group</value>
+  </data>
+  <data name="AgrupadoresSopPaintLine" xml:space="preserve">
+    <value>Mounting Groupers PaintLine</value>
+  </data>
+  <data name="AgrupadoresSopPaintNoPaint" xml:space="preserve">
+    <value>Mounting Groupers Paint/NoPaint</value>
+  </data>
+  <data name="AgrupadoresSopPEQGrupo" xml:space="preserve">
+    <value>Mounting Groupers PEQ Group</value>
+  </data>
+  <data name="AgrupadoresSopSistemaPinturaFinal" xml:space="preserve">
+    <value>Mounting Groupers Final System Paint</value>
+  </data>
+  <data name="AgrupadoresSopUltimoProceso" xml:space="preserve">
+    <value>Mounting Groupers Last Process</value>
+  </data>
+  <data name="AgrupadoresPorJuntaClasifPND" xml:space="preserve">
+    <value>PND Classification</value>
+  </data>
+  <data name="AgrupadoresPorJuntaClasifReparacion" xml:space="preserve">
+    <value>Repair Classification</value>
+  </data>
+  <data name="AgrupadoresPorJuntaClasifSoporte" xml:space="preserve">
+    <value>Mounting Classification</value>
+  </data>
+  <data name="AgrupadoresPorJuntaGrupo1" xml:space="preserve">
+    <value>Group 1</value>
+  </data>
+  <data name="AgrupadoresPorJuntaGrupo2" xml:space="preserve">
+    <value>Group 2</value>
+  </data>
+  <data name="AgrupadoresPorJuntaGrupo3" xml:space="preserve">
+    <value>Group 3</value>
+  </data>
+  <data name="AgrupadoresPorJuntaGrupo4" xml:space="preserve">
+    <value>Group 4</value>
+  </data>
+  <data name="AgrupadoresPorJuntaGrupo5" xml:space="preserve">
+    <value>Group 5</value>
+  </data>
+  <data name="GeneralFechaLocalizacion" xml:space="preserve">
+    <value>Quadarant Date</value>
+  </data>
+  <data name="GeneralCortador" xml:space="preserve">
+    <value>Cutter</value>
+  </data>
+  <data name="GeneralDespachador" xml:space="preserve">
+    <value>Dispatcher</value>
+  </data>
+  <data name="NumeroTransferencia" xml:space="preserve">
+    <value>Transfer number</value>
+  </data>
+  <data name="PreparacionTransferencia" xml:space="preserve">
+    <value>Preparation Date</value>
+  </data>
+  <data name="Transferencia" xml:space="preserve">
+    <value>Transfer Date</value>
+  </data>
+  <data name="GeneralReferenciaSeguimiento" xml:space="preserve">
+    <value>Tracing Reference</value>
+  </data>
+  <data name="PruebaRTJuntaSeguimiento1" xml:space="preserve">
+    <value>Joint Tracing 1</value>
+  </data>
+  <data name="PruebaRTJuntaSeguimiento2" xml:space="preserve">
+    <value>Joint Tracing  2</value>
+  </data>
+  <data name="PruebaRTReferenciaSeguimiento" xml:space="preserve">
+    <value>Original Tracing Joint</value>
+  </data>
+  <data name="EmbarqueFechaCarga" xml:space="preserve">
+    <value>Upload date</value>
+  </data>
+  <data name="AreaTrabajoRelleno" xml:space="preserve">
+    <value>Working Area - Filler Welder</value>
+  </data>
+  <data name="AreaTrabajoRaiz" xml:space="preserve">
+    <value>Working Area - Root Welder</value>
+  </data>
+  <data name="AreaTrabajoTubero" xml:space="preserve">
+    <value>Working Area - Fitter</value>
+  </data>
+  <data name="InspeccionDimensionalInspector" xml:space="preserve">
+    <value>Dimensional Inspection Inspector</value>
+  </data>
+  <data name="InspeccionVisualInspector" xml:space="preserve">
+    <value>Visual Inspection Inspector</value>
+  </data>
+</root>

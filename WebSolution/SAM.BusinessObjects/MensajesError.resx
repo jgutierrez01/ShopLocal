@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Excepcion_CodigoDuplicado" xml:space="preserve">
+    <value>El Código capturado ya existe en el catálogo.</value>
+  </data>
+  <data name="Excepcion_ColadaDuplicada" xml:space="preserve">
+    <value>El número de colada y certificado ya existen para ese fabricante dentro del proyecto.</value>
+  </data>
+  <data name="Excepcion_CorteConDespacho" xml:space="preserve">
+    <value>No se puede cancelar el corte debido a que uno de sus detalles ya ha sido despachado.</value>
+  </data>
+  <data name="Excepcion_CorteFueraDeTolerancia" xml:space="preserve">
+    <value>No es posible realizar el corte ya que la cantidad real se encuentra fuera de la tolerancia permitida por el proyecto.</value>
+  </data>
+  <data name="Excepcion_CorteFueraInventario" xml:space="preserve">
+    <value>El corte no se puede realizar ya que la cantidad real es mayor a la cantidad contenida en inventario</value>
+  </data>
+  <data name="Excepcion_DiametroNoExiste" xml:space="preserve">
+    <value>El diámetro capturado no existe en el catálogo. </value>
+  </data>
+  <data name="Excepcion_ErrorConcurrencia" xml:space="preserve">
+    <value>Error de concurrencia</value>
+  </data>
+  <data name="Excepcion_FechaInconsistente" xml:space="preserve">
+    <value>La fecha capturada no coincide con los registros en la Base de Datos.</value>
+  </data>
+  <data name="Excepcion_ExisteEstimacion" xml:space="preserve">
+    <value>Ya existe una estimacion con ese numero</value>
+  </data>
+  <data name="Excepcion_ItemCodeDuplicado" xml:space="preserve">
+    <value>El Código del Item Code capturado ya existe.</value>
+  </data>
+  <data name="Excepcion_JuntaEstimacionConceptos" xml:space="preserve">
+    <value>Selecciona por lo menos un Concepto</value>
+  </data>
+  <data name="Excepcion_JuntaWorkStatusSinConcepto" xml:space="preserve">
+    <value>Ya existe un concepto para alguna junta</value>
+  </data>
+  <data name="Excepcion_NombreDuplicado" xml:space="preserve">
+    <value>La combinación de nombre, material1 y material2 capturado ya existe en el catálogo.</value>
+  </data>
+  <data name="Excepcion_NomenclaturaDuplicada" xml:space="preserve">
+    <value>La nomenclatura capturada ya existe en el catálogo.</value>
+  </data>
+  <data name="Excepcion_NumControlTieneCortes" xml:space="preserve">
+    <value>El número de control seleccionado ya tiene cortes registrados</value>
+  </data>
+  <data name="Excepcion_NumControlTieneDespachos" xml:space="preserve">
+    <value>El número de control seleccionado ya tiene despachos asociados</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoCongelado" xml:space="preserve">
+    <value>El número único ha sido congelado por algún cruce por lo que no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoConMovimientos" xml:space="preserve">
+    <value>Algún número único perteneciente a la recepción ya ha sido utilizado dentro del sistema. La recepción ya no puede ser eliminada.</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoConRelaciones" xml:space="preserve">
+    <value>El número único ya ha sido utilizado dentro del sistema por lo que no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoNoEdicion" xml:space="preserve">
+    <value>El número único ya presenta movimientos por lo que no puede ser editado.</value>
+  </data>
+  <data name="Excepcion_OdtTieneCortes" xml:space="preserve">
+    <value>La orden de trabajo ya tiene cortes</value>
+  </data>
+  <data name="Excepcion_OdtTieneDespachos" xml:space="preserve">
+    <value>La orden de trabajo ya tiene despachos</value>
+  </data>
+  <data name="Excepcion_OdtTieneNusEnCorte" xml:space="preserve">
+    <value>Existen números únicos que se transfirieron a corte para la orden de trabajo seleccionada.</value>
+  </data>
+  <data name="Excepcion_PerfilRelaciones" xml:space="preserve">
+    <value>El perfil tiene usuarios relacionados por lo cual no puede ser eliminado</value>
+  </data>
+  <data name="Excepcion_PrioridadInvalida" xml:space="preserve">
+    <value>La prioridad debe estar entre cero (0) y noventa y nueve (99)</value>
+  </data>
+  <data name="Excepcion_RelacionDefecto" xml:space="preserve">
+    <value>El defecto tiene una relación y no puede ser eliminado</value>
+  </data>
+  <data name="Excepcion_RelacionDiametro" xml:space="preserve">
+    <value>El Diámetro esta siendo utilizado en otra tabla</value>
+  </data>
+  <data name="Excepcion_RelacionFabricanteProyecto" xml:space="preserve">
+    <value>El Fabricante ya tiene Fabricante Proyecto relacionados y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionAcero" xml:space="preserve">
+    <value>La familia acero ya tiene aceros relacionados  y no puede ser eliminada.</value>
+  </data>
+  <data name="Excepcion_RelacionFamMaterial" xml:space="preserve">
+    <value>La familia material ya tiene familias de acero relacionados y no puede ser eliminada.</value>
+  </data>
+  <data name="Excepcion_RelacionPatioMaquina" xml:space="preserve">
+    <value>El patio ya tiene maquinas relacionadas y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionPatioSoldador" xml:space="preserve">
+    <value>El patio ya tiene soldadores relacionadas y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionPatioTaller" xml:space="preserve">
+    <value>El patio ya tiene talleres relacionados y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionPatioTubero" xml:space="preserve">
+    <value>El patio ya tiene tuberos relacionadas y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionProveedorProyecto" xml:space="preserve">
+    <value>El Proveedor ya tiene Proveedor Proyecto relacionados y no puedes ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionTipoCorte" xml:space="preserve">
+    <value>El tipo corte ya tiene cortes relacionados y no puede ser eliminado</value>
+  </data>
+  <data name="Excepcion_RelacionTransportistaProyecto" xml:space="preserve">
+    <value>El Transportista tiene Transportista Proyecto relacionados y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionWpsProRaiz" xml:space="preserve">
+    <value>El proceso raíz ya tiene wps relacionados y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionWpsProRelleno" xml:space="preserve">
+    <value>El proceso relleno ya tiene wps relacionados y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_SobranteSinRack" xml:space="preserve">
+    <value>Es necesario que especifique el rack al que se trasladará el sobrante.</value>
+  </data>
+  <data name="Excepcion_WpsWpq" xml:space="preserve">
+    <value>El Wps ya tiene Wpq relacionados y no puede ser eliminado.</value>
+  </data>
+  <data name="Material_YaTieneArmado" xml:space="preserve">
+    <value>El material seleccionado ya ha sido utilizado para armar una junta</value>
+  </data>
+  <data name="Usuario_NoPuedeCambiarPassword" xml:space="preserve">
+    <value>Contraseña/datos incorrectos, si escribe su password mal tres (3) veces su cuenta será bloqueada.</value>
+  </data>
+  <data name="Usuario_NoPuedeCambiarPregunta" xml:space="preserve">
+    <value>Contraseña/datos incorrectos, si escribe su password mal tres (3) veces, su cuenta será bloqueada.</value>
+  </data>
+  <data name="Excepcion_RecepcionConCongelado" xml:space="preserve">
+    <value>La recepción cuenta con un número único que ya ha sido congelado en algún cruce por lo que no puede ser eliminada.</value>
+  </data>
+  <data name="Excepcion_EstimacionSpoolConceptos" xml:space="preserve">
+    <value>Selecciona por lo menos un Concepto</value>
+  </data>
+  <data name="Excepcion_WorkStatusSpoolSinConcepto" xml:space="preserve">
+    <value>Ya existe un concepto para algun Spool</value>
+  </data>
+  <data name="Excepcion_RequisicionNumeroUnicoRelacion" xml:space="preserve">
+    <value>Es necesario que se eliminen los números únicos relacionados con la requisición antes borrar la requisición.</value>
+  </data>
+  <data name="Excepcion_RequisicionNumeroUnicoDetalleRelacion" xml:space="preserve">
+    <value>No se puede eliminar el numero único de la requisición ya que ya cuenta con un reporte.</value>
+  </data>
+  <data name="Excepcion_DefectoDuplicado" xml:space="preserve">
+    <value>El defecto seleccionado ya se encuentra agregado dentro del listado.</value>
+  </data>
+  <data name="Excepcion_RechazadoSinDefectos" xml:space="preserve">
+    <value>Si el resultado es rechazado es necesario que por lo menos se de de alta un defecto.</value>
+  </data>
+  <data name="Excepcion_ReporteExistenteConFechaDiferente" xml:space="preserve">
+    <value>El número de reporte ya se encuentra dado de alta en el sistema, sin embargo la fecha no concuerda con la introducida en el sistema {0}. &lt;br /&gt; Favor de verificar la fecha o cambiar el número de reporte e intentar de nuevo.</value>
+  </data>
+  <data name="Excepcion_TieneJuntasReporte" xml:space="preserve">
+    <value>Es necesario que se eliminen las juntas relacionadas con el reporte antes borrarlo</value>
+  </data>
+  <data name="Proyecto_TieneConsumibles" xml:space="preserve">
+    <value>El proyecto tiene consumibles relacionados</value>
+  </data>
+  <data name="Proyecto_TieneFabricantes" xml:space="preserve">
+    <value>El proyecto tiene fabricantes relacionados</value>
+  </data>
+  <data name="Proyecto_TieneItemCodes" xml:space="preserve">
+    <value>El proyecto tiene item codes relacionados</value>
+  </data>
+  <data name="Proyecto_TieneNumerosUnicos" xml:space="preserve">
+    <value>El proyecto tiene números únicos relacionados</value>
+  </data>
+  <data name="Proyecto_TieneProveedores" xml:space="preserve">
+    <value>El proyecto tiene proveedores relacionados</value>
+  </data>
+  <data name="Proyecto_TieneRecepciones" xml:space="preserve">
+    <value>El proyecto tiene recepciones relacionadas</value>
+  </data>
+  <data name="Proyecto_TieneSpools" xml:space="preserve">
+    <value>El proyecto tiene spools relacionados</value>
+  </data>
+  <data name="Proyecto_TieneTransportistas" xml:space="preserve">
+    <value>El proyecto tiene transportistas relacionados</value>
+  </data>
+  <data name="Proyecto_TieneWps" xml:space="preserve">
+    <value>El proyecto tiene wps relacionados</value>
+  </data>
+  <data name="Excepcion_RelacionItemCode" xml:space="preserve">
+    <value>El item code seleccionado tiene relaciones por lo cual no puede ser eliminado</value>
+  </data>
+  <data name="Excepcion_ColadaTieneRelaciones" xml:space="preserve">
+    <value>La colada seleccionada tiene relaciones por lo tanto no puede ser eliminada</value>
+  </data>
+  <data name="Excepcion_DiametroDuplicado" xml:space="preserve">
+    <value>El diámetro especificado ya existe</value>
+  </data>
+  <data name="Excepcion_TieneRelacionSoldaduraeInspeccionVisual" xml:space="preserve">
+    <value>El registro ya cuenta con la soldadura o la inspeccion visual aprobadas</value>
+  </data>
+  <data name="Excepcion_ConsumibleTieneRelaciones" xml:space="preserve">
+    <value>El consumible seleccionado tiene relaciones por lo tanto no puede ser eliminado</value>
+  </data>
+  <data name="Excepcion_CedulaDuplicado" xml:space="preserve">
+    <value>La Cedula ya existe</value>
+  </data>
+  <data name="Excepcion_TipoCorteDuplicado" xml:space="preserve">
+    <value>El Tipo Corte ya existe</value>
+  </data>
+  <data name="Excepcion_TipoJuntaDuplicado" xml:space="preserve">
+    <value>El Tipo Junta ya existe</value>
+  </data>
+  <data name="Excepcion_TieneDetallePintura" xml:space="preserve">
+    <value>Es necesario que se eliminen los spools relacionados con la requisición antes borrar la requisición</value>
+  </data>
+  <data name="Excepcion_SpoolEnHold" xml:space="preserve">
+    <value>El spool se encuentra en hold por lo que el sistema no puede realizar cambios al mismo.</value>
+  </data>
+  <data name="Excepcion_TienePinturaSpool" xml:space="preserve">
+    <value>No se puede eliminar la junta de la requisición ya que ya cuenta con un reporte</value>
+  </data>
+  <data name="Excepcion_ExisteInspeccionVisual" xml:space="preserve">
+    <value>Ya existe ese numero de reporte</value>
+  </data>
+  <data name="Excepcion_ExisteInspeccionDimensional" xml:space="preserve">
+    <value>Ya existe ese numero de reporte</value>
+  </data>
+  <data name="Excepcion_ReporteConDetalleDuplicado" xml:space="preserve">
+    <value>El reporte especificado ya cuenta con un resultado {0} para el spool {1}</value>
+  </data>
+  <data name="Excepcion_ReporteVisualConDetalleDuplicado" xml:space="preserve">
+    <value>El reporte especificado ya cuenta con un resultado  para una de las juntas seleccionadas {0}</value>
+  </data>
+  <data name="Excepcion_TieneRelacionJuntaInspeccionVisual" xml:space="preserve">
+    <value>Es necesario que se eliminen las juntas relacionadas con el reporte antes borrar el reporte</value>
+  </data>
+  <data name="Excepcion_ReportePostSinPWHT" xml:space="preserve">
+    <value>Es necesario que todas las juntas tengan un reporte PWHT aprobado previamente.</value>
+  </data>
+  <data name="Excepcion_RequisicionExistenteConFechaDiferente" xml:space="preserve">
+    <value>El número de requisición ya se encuentra dado de alta en el sistema, sin embargo la fecha no concuerda con la introducida en el sistema. &lt;br /&gt; Favor de verificar la fecha o cambiar el número de requisición e intentar de nuevo.</value>
+  </data>
+  <data name="Excepcion_RequisicionPruebaDuplicada" xml:space="preserve">
+    <value>La junta {0} ya cuenta con requisicion para este tipo de prueba.</value>
+  </data>
+  <data name="Excepcion_TieneReporteDimensionalDetalle" xml:space="preserve">
+    <value>Es necesario que se eliminen los spools relacionadas con el reporte antes borrar el reporte.</value>
+  </data>
+  <data name="Excepcion_TieneJuntaRequisicion" xml:space="preserve">
+    <value>Es necesario que se eliminen las juntas relacionadas con la requisición antes borrar la requisición.</value>
+  </data>
+  <data name="Excepcion_TieneColada" xml:space="preserve">
+    <value>El acero tiene por lo menos una colada relacionada y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_InspeccionVisualAprobada" xml:space="preserve">
+    <value>La junta ya cuenta con la inspección visual aprobada por lo que no puede cancelarse la soldadura.</value>
+  </data>
+  <data name="Excepcion_DebeAprobarTodosLosDestajos" xml:space="preserve">
+    <value>Para cerrar el periodo es necesario que todos los destajos individuales hayan sido aprobados</value>
+  </data>
+  <data name="Excepcion_JuntaConSoldadura" xml:space="preserve">
+    <value>La junta ya cuenta con un reporte de soldadura aprobado por lo que el armado no puede ser cancelado.</value>
+  </data>
+  <data name="Excepcion_SoldadorDuplicado" xml:space="preserve">
+    <value>El soldador ya se encuentra agregado en el listado.</value>
+  </data>
+  <data name="Excepcion_RelacionCostoProcesoRaiz" xml:space="preserve">
+    <value>El proceso raiz tiene relacion por lo menos con un costo proceso raiz y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionJuntaSoldadura" xml:space="preserve">
+    <value>El registro tiene relacion con Junta Soldadura y no puede ser elimindado.</value>
+  </data>
+  <data name="Excepcion_RelacionProcesoRelleno" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con un proceso relleno y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionColada" xml:space="preserve">
+    <value>El registro se encuentra relacionado por lo menos con una colada y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionConsumible" xml:space="preserve">
+    <value>El registro se encuentra relacionado por lo menos con un consumible y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionNumeroUnico" xml:space="preserve">
+    <value>El registro se encuentra relacionado por lo menos con un número único y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionProyecto" xml:space="preserve">
+    <value>El registro se encuentra relacionado por lo menos con un proyecto y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionTubero" xml:space="preserve">
+    <value>El registro se encuentra relacionado por lo menos con un tubero y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionUbicacionFisica" xml:space="preserve">
+    <value>El registro se encuentra relacionado por lo menos con una ubicación física y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionWpsProyecto" xml:space="preserve">
+    <value>El registro se encuentra relacionado por lo menos con un WpsProyecto y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_SoldadoresFaltantes" xml:space="preserve">
+    <value>Es necesario que por lo menos se agregue un soldador para el proceso raíz y un soldador para el proceso relleno.</value>
+  </data>
+  <data name="Excepcion_SoldadorSinWpq" xml:space="preserve">
+    <value>El soldador {0} no cuenta con el WPQ necesario.</value>
+  </data>
+  <data name="Excepcion_RelacionDestajoSoldador" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con un Destajo Soldador y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionDestajoTubero" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con un Destajo Tubero y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionJuntaArmado" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con una Junta Armado y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionRecepcion" xml:space="preserve">
+    <value>El registro se encuentra relacionado por lo menos con una Recepción y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionWpq" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con un Wpq y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_SoldaduraDetallle" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con una Soldadura Detalle y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_PeriodoDestajo_YaAprobado" xml:space="preserve">
+    <value>El periodo ya se encuentra cerrado</value>
+  </data>
+  <data name="Excepcion_RechazoParaMasJuntas" xml:space="preserve">
+    <value>El rechazo de PND sólo permite capturar la información una junta a la vez.</value>
+  </data>
+  <data name="Excepcion_TercerRechazoPND" xml:space="preserve">
+    <value>Este es el tercer rechazo para la junta. Es necesario que se genere un corte manualmente</value>
+  </data>
+  <data name="Excepcion_RelacionCostoArmado" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con un costo armado y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionCostoProcesoRelleno" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con un costo proceso relleno y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionJuntaSpool" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con una junta spool y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionPeq" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con una pulgada equivalente y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionSpool" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con un spool y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_RelacionWps" xml:space="preserve">
+    <value>El registro tiene relacion por lo menos con un wps y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_TipoJuntaTieneRelaciones" xml:space="preserve">
+    <value>El tipo de junta seleccionado tiene relaciones por lo cual no puede ser eliminado</value>
+  </data>
+  <data name="Excepcion_TieneOrdenTrabajo" xml:space="preserve">
+    <value>El registro tiene orden de trabajo y no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_ImpresionEtiquetasSinFiltros" xml:space="preserve">
+    <value>Debe proporcionar al menos un filtro para la impresión de las etiquetas.</value>
+  </data>
+  <data name="Excepcion_ImpresionSinResultados" xml:space="preserve">
+    <value>Los filtros proporcionados no arrojan ningún spool por lo que no hay etiquetas para imprimir.</value>
+  </data>
+  <data name="Excepcion_NumeroControlInexistente" xml:space="preserve">
+    <value>El número de control no existe dentro del proyecto.</value>
+  </data>
+  <data name="Excepcion_OrdenTrabajoInexistente" xml:space="preserve">
+    <value>La órden de trabajo no existe dentro del proyecto.</value>
+  </data>
+  <data name="Excepcion_EmbarqueExistenteConFechaDiferente" xml:space="preserve">
+    <value>El número de embarque ya se encuentra dado de alta en el sistema, sin embargo la fecha no concuerda con la introducida en el sistema. &lt;br /&gt; Favor de verificar la fecha o cambiar el número de embarque e intentar de nuevo.</value>
+  </data>
+  <data name="Excepcion_RelacionCedula" xml:space="preserve">
+    <value>La Cédula tiene una relación y no puede ser eliminado</value>
+  </data>
+  <data name="Excepcion_NumUnicosInsuficientesConsecutivos" xml:space="preserve">
+    <value>El número de consecutivos disponibles a partir del número que se indicó es insuficiente para crear los numeros únicos solicitados</value>
+  </data>
+  <data name="Excepcion_ResponsableRequerido" xml:space="preserve">
+    <value>El responsable del pendiente es requerido en todos los casos.</value>
+  </data>
+  <data name="Exception_EquivalentesCero" xml:space="preserve">
+    <value>No existen equivalencias a exportar</value>
+  </data>
+  <data name="Excepcion_DestajosSinValores" xml:space="preserve">
+    <value>El proyecto seleccionado no cuenta con tablas de destajos.</value>
+  </data>
+  <data name="Excepcion_EquivalenciaExistente" xml:space="preserve">
+    <value>Las siguientes equivalencias ya existen dadas de alta por lo que no se puede proceder a importar:&lt;br/&gt;{0}&lt;br/&gt;Favor de eliminar dichas equivalencias de la selección e intentar de nuevo.</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoTieneTranferencias" xml:space="preserve">
+    <value>Número Único en despacho a corte</value>
+  </data>
+  <data name="Excepcion_RequisicionConReporte" xml:space="preserve">
+    <value>La junta que se desea eliminar de la requisición ya cuenta con reporte por lo que no puede ser eliminada.</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoSinInventario" xml:space="preserve">
+    <value>El número único seleccionado no cuenta con la información de recepción necesaria por lo que aún no cuenta con inventarios. Favor de actualizar su información e intentar de nuevo.</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoDespacho" xml:space="preserve">
+    <value>No se puede cancelar el numero unico debido a que ya ha sido despachado.</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoConOtroCorte" xml:space="preserve">
+    <value>No se puede cancelar por que existe un corte posterior</value>
+  </data>
+  <data name="Excepcion_NumeroUnicoConOtroDespachoCorte" xml:space="preserve">
+    <value>No se puede cancelar por que existe un despacho a corte posterior</value>
+  </data>
+  <data name="Excepcion_CuentaConEmbarque" xml:space="preserve">
+    <value>No se puede elminar ya que el spool ya cuenta con registro de embarque.</value>
+  </data>
+  <data name="Excepcion_OdtConArmadoSoldado" xml:space="preserve">
+    <value>No se puede eliminar la orden de trabajo ya que cuenta con reportes de Armado y/o Soldado.</value>
+  </data>
+  <data name="Excepcion_OdtConEmbarque" xml:space="preserve">
+    <value>No se puede eliminar la orden de trabajo ya que cuenta con embarque.</value>
+  </data>
+  <data name="Excepcion_OdtConLiberacionDimensional" xml:space="preserve">
+    <value>No se puede eliminar la orden de trabajo ya que algún spool ya cuenta con liberación dimensional.</value>
+  </data>
+  <data name="Excepcion_OdtRequisiciones" xml:space="preserve">
+    <value>No se puede eliminar la orden de trabajo ya que cuenta con requisiciones para pruebas.</value>
+  </data>
+  <data name="Excpecion_OdtConRequisicionPintura" xml:space="preserve">
+    <value>No se puede eliminar la orden de trabajo ya que cuenta con requisiciones para pintura.</value>
+  </data>
+  <data name="Excepcion_Cantidades" xml:space="preserve">
+    <value>La cantidad seleccionada sobrepasa la cantidad del material a congelar</value>
+  </data>
+  <data name="Excepcion_NumControlSeleccionados" xml:space="preserve">
+    <value>Se debe seleccionar al menos 1 número de control.</value>
+  </data>
+  <data name="Excepcion_CantidadesCongeladosParcial" xml:space="preserve">
+    <value>La cantidad de materiales disponibles para el cruce no es suficiente</value>
+  </data>
+  <data name="Excepcion_SeleccionarCongeladoParcial" xml:space="preserve">
+    <value>Debe seleccionar al menos un número único para proceder</value>
+  </data>
+  <data name="Excepcion_InspeccionVisualFaltante" xml:space="preserve">
+    <value>La junta aún no cuenta con Inspección Visual Aprobada. Es necesario se inspeccione y apruebe antes de proceder.</value>
+  </data>
+  <data name="Excepcion_JuntaCampoSinArmado" xml:space="preserve">
+    <value>La junta aún no se encuentra armada. Es necesario que se arme antes de proceder.</value>
+  </data>
+  <data name="Excepcion_JuntaCampoSinSoldadura" xml:space="preserve">
+    <value>La junta no cuenta con Soldadura aprobada. Es necesario se suelde antes de proceder.</value>
+  </data>
+  <data name="Excepcion_JuntaCampoNumeroUnico" xml:space="preserve">
+    <value>El material aun no se encuentra despachado por lo que el armado no puede proceder</value>
+  </data>
+  <data name="Excepcion_JuntaCampoEliminarInspVisual" xml:space="preserve">
+    <value>No se puede eliminar el reporte de inspección visual ya que cuenta con requisiciones para pruebas.</value>
+  </data>
+  <data name="Excepcion_JuntaCampoEliminarRequisicoines" xml:space="preserve">
+    <value>No se puede eliminar la requisición seleccionada ya que cuenta con un reporte relacionado</value>
+  </data>
+  <data name="Excepcion_JuntaDeRechazoArmada" xml:space="preserve">
+    <value>La junta cuenta con un rechazo de PND, no se puede eliminar el armado sin antes eliminar el reporte con el rechazo de PND.</value>
+  </data>
+  <data name="Excepcion_DefectoRequerido" xml:space="preserve">
+    <value>El defecto es requerido</value>
+  </data>
+  <data name="Excepcion_JuntaTieneInspeccionVisual" xml:space="preserve">
+    <value>La junta ya cuenta con inspección visual aprobada</value>
+  </data>
+  <data name="Excepcion_PWHTDiferente" xml:space="preserve">
+    <value>El reporte de soldadura no puede grabarse ya que no coincide el PWHT para la junta y el WPS seleccionado.</value>
+  </data>
+  <data name="Excepcion_IVRequisicion" xml:space="preserve">
+    <value>La Inspeccion Visual cuenta con requisiciones de pruebas por lo cual no puede ser eliminado</value>
+  </data>
+  <data name="Excepcion_NumControlTieneEmbarque" xml:space="preserve">
+    <value>El número de control seleccionado tiene embarque</value>
+  </data>
+  <data name="Excepcion_NumControlTieneRequisicionesPintura" xml:space="preserve">
+    <value>El número de control seleccionado tiene requisiciones de pintura pendientes</value>
+  </data>
+  <data name="Excepcion_FechaArmadoMayorSoldadura" xml:space="preserve">
+    <value>La fecha de armado {0} no puede ser mayor que la fecha de soldadura {1}.</value>
+  </data>
+  <data name="Excepcion_TieneFechaMenorQueProcesoAnterior" xml:space="preserve">
+    <value>Las fechas de las siguientes juntas son menores que las de soldadura: {0}</value>
+  </data>
+  <data name="Excepcion_FechaIVMenorSoldadura" xml:space="preserve">
+    <value>La fecha de Inspección Visual no puede ser menor que la de Soldadura</value>
+  </data>
+  <data name="Excepcion_FechaSoldaduraMenorArmado" xml:space="preserve">
+    <value>La fecha de Soldadura no puede ser menor que la de Armado</value>
+  </data>
+  <data name="Excepcion_FechaLDMenorSoldadura" xml:space="preserve">
+    <value>La fecha de Inspección Dimensional no puede ser menor que Soldadura</value>
+  </data>
+  <data name="Excepcion_CantidadDespacho" xml:space="preserve">
+    <value>No se puede modificar el Estatus del Número Único ya que cuenta con despacho</value>
+  </data>
+  <data name="Excepcion_DimensionalAprobada" xml:space="preserve">
+    <value>El spool {0} ya cuenta con liberacion dimensional aprobada, favor de verificar</value>
+  </data>
+  <data name="Excepcion_IVAprobada" xml:space="preserve">
+    <value>La junta {0} ya cuenta con reporte de inspección visual aprobada, favor de verificar</value>
+  </data>
+  <data name="Excepcion_EdicionCongeladoParcial" xml:space="preserve">
+    <value>El numero único cuenta con congelado parcial. Favor de eliminar los congelados parciales para poder proceder con el cambio de estatus</value>
+  </data>
+  <data name="Excepcion_EdicionConMaterialCongelado" xml:space="preserve">
+    <value>El numero único cuenta con material congelado. Favor de eliminar el/los numero(s) de control {0} para poder proceder con el cambio de estatus</value>
+  </data>
+  <data name="Excepcion_RelacionEstacion" xml:space="preserve">
+    <value>La estación seleccionada tiene relaciones por lo tanto no puede ser eliminada</value>
+  </data>
+  <data name="Excepcion_FechasJuntaArmado" xml:space="preserve">
+    <value>La fecha del informe no puede ser menor que la fecha del ensamblado</value>
+  </data>
+  <data name="Excepcion_TieneLiberacionDimensional" xml:space="preserve">
+    <value>La soldadura no se puede eliminar. Ya se ha aprobado la inspección dimensional.</value>
+  </data>
+  <data name="Excepcion_NombreFabDuplicado" xml:space="preserve">
+    <value>El nombre del fabricante ya existe en el catálogo.</value>
+  </data>
+  <data name="Excepcion_TieneSpoolRequisicion" xml:space="preserve">
+    <value>Es necesario que se eliminen los spools relacionados con la requisición antes de borrar la requisición.</value>
+  </data>
+  <data name="Excepcion_RequisicionSpoolConReporte" xml:space="preserve">
+    <value>El spool que se desea eliminar de la requisición ya cuenta con reporte por lo que no puede ser eliminado.</value>
+  </data>
+  <data name="Excepcion_TieneSpoolsReporte" xml:space="preserve">
+    <value>Es necesario que se eliminen los spools relacionados con el reporte antes borrarlo</value>
+  </data>
+  <data name="Excepcion_MateriaCongeladoParcial" xml:space="preserve">
+    <value>Los Spools no se pueden eliminar, porque tienen material congelado parcial: {0}</value>
+  </data>
+  <data name="Excepcion_TienenOTSpools" xml:space="preserve">
+    <value>Los Spools no se pueden eliminar, porque tienen orden de trabajo: {0}</value>
+  </data>
+  <data name="Excepcion_InspeccionVisual" xml:space="preserve">
+    <value>La junta ya cuenta con la inspección visual por lo que no puede cancelarse la soldadura.</value>
+  </data>
+  <data name="Excepcion_TieneRequiPintura" xml:space="preserve">
+    <value>No se puede eliminar, porque tiene requisición de pintura y/o reporte pintura.</value>
+  </data>
+  <data name="Excepcion_TienePreparacion" xml:space="preserve">
+    <value>No se puede eliminar porque tiene reporte de preparación.</value>
+  </data>
+  <data name="Excepcion_FechaReporteMayorFechaProceso" xml:space="preserve">
+    <value>La fecha del reporte no puede ser menor a la fecha del proceso {0}  {1}.</value>
+  </data>
+  <data name="Excepcion_FechaReportePintura" xml:space="preserve">
+    <value>El reporte {0} {1} ya existe con otra fecha {2}.</value>
+  </data>
+  <data name="Excepcion_NumeroReporteVacio" xml:space="preserve">
+    <value>El número de reporte {0} es requerido.</value>
+  </data>
+  <data name="Excepcion_NingunReportePintura" xml:space="preserve">
+    <value>Es necesario que llene los datos de alguno de los reportes.</value>
+  </data>
+  <data name="Excepcion_TieneInspeccionDimensional" xml:space="preserve">
+    <value>El Spool  {0} ya se encuentra en el reporte {1}.</value>
+  </data>
+  <data name="SpoolsReporteGenerado" xml:space="preserve">
+    <value>Los demás spool se agregaron correctamente al reporte {0}.</value>
+  </data>
+  <data name="Excepcion_SpoolConReporte" xml:space="preserve">
+    <value>El spool {0} ya tiene resultado {1} en el reporte {2}</value>
+  </data>
+  <data name="Excepcion_FechaSoldaduraMenorSoldaduraAnterior" xml:space="preserve">
+    <value>La fecha de la soldadura es menor a la fecha de la soldadura anterior {0}.</value>
+  </data>
+  <data name="EstatusReporteAprobado" xml:space="preserve">
+    <value>Aprobado</value>
+  </data>
+  <data name="EstatusReporteRechazado" xml:space="preserve">
+    <value>Rechazado</value>
+  </data>
+  <data name="Excpecion_TieneReporteRechazado" xml:space="preserve">
+    <value>El spool ya cuenta con reporte {0}</value>
+  </data>
+  <data name="Excepcion_TieneInspeccionDimensionalHH" xml:space="preserve">
+    <value>Ya se cuenta con Inspeccion Dimensional capturada en HH</value>
+  </data>
+  <data name="Excepcion_FechaInspDimesionalMayorFechaReporte" xml:space="preserve">
+    <value>La fecha de la Inspección Dimensional del spool {0} es mayor a la decha del reporte {1}</value>
+  </data>
+  <data name="Excepcion_ExisteInspeccionVisualHH" xml:space="preserve">
+    <value>Ya se capturo Inspección Visual en HH</value>
+  </data>
+  <data name="Excepcion_ReporteVisualConDetalleDuplicadoOtroReporte" xml:space="preserve">
+    <value>The join has approved result in the report {0}</value>
+  </data>
+  <data name="Excepcion_FechaCargaMayorFechaEmbarque" xml:space="preserve">
+    <value>La fecha de embarque no puede ser menor a la fecha de carga.</value>
+  </data>
+  <data name="Excepcion_FechaMenorFechaProcesoAnterior" xml:space="preserve">
+    <value>Los siguientes spools no fueron procesados porque la fecha de carga es menor a la fecha del proceso anterior: {0}.</value>
+  </data>
+  <data name="Excepcion_FechaProcAnteriorMayorLiberacion" xml:space="preserve">
+    <value>La fecha  del proceso {0} no puede ser mayor que la fecha de liberación {1}.</value>
+  </data>
+  <data name="Excepcion_SpoolDuplicado" xml:space="preserve">
+    <value>Ya existe el spool {0}</value>
+  </data>
+  <data name="Excepcion_CuadranteRequerido" xml:space="preserve">
+    <value>El Cuadrante es Requerido.</value>
+  </data>
+  <data name="Excepcion_FechaCuadranteRequerida" xml:space="preserve">
+    <value>La fecha es requerida.</value>
+  </data>
+  <data name="Excepcion_NumeroControlRequerido" xml:space="preserve">
+    <value>EL número de control es requerido.</value>
+  </data>
+  <data name="Excepcion_PatioSinCuadranteEmbarque" xml:space="preserve">
+    <value>La fecha de embarque se actualizo correctamente, no se pudo actualizar la localizacion debido a  que  el patio no cuenta con localización de embarcado.</value>
+  </data>
+  <data name="Exception_FechaProcesosPintura" xml:space="preserve">
+    <value>A los siguientes spools no se les actualizaron los datos de los procesos de pintura porque la fecha del proceso es menor a la fecha de la requisición. {0}</value>
+  </data>
+  <data name="Excepcion_FechaMayorReportePintura" xml:space="preserve">
+    <value>La fecha del proceso es mayor a la fecha de los siguientes procesos de pintura {0}.</value>
+  </data>
+  <data name="Excepcion_FechaTransferenciaMenorFechaPreparacion" xml:space="preserve">
+    <value>La fecha de transferencia no puede ser menor a la de preparacion: {0}.</value>
+  </data>
+  <data name="Excepcion_ReportePruebaDuplicada" xml:space="preserve">
+    <value>La junta {0} ya cuenta con reporte aprobado para este tipo de prueba.</value>
+  </data>
+  <data name="Excepcion_ReporteConRequisicionDetalleDuplicado" xml:space="preserve">
+    <value>El spool {0} ya tiene requisición en este reporte </value>
+  </data>
+  <data name="Excepcion_ReporteConRequisicionDetalleDuplicadoEnOtroReporte" xml:space="preserve">
+    <value>El spool {0} ya tiene requisicón en el reporte {1}</value>
+  </data>
+  <data name="Excepcion_TransferenciaExistente" xml:space="preserve">
+    <value>El número de Transferencia ya se encuentra dado de alta en el sistema. &lt;br /&gt; Favor de cambiar el número de Transferencia e intentar de nuevo. {0}</value>
+  </data>
+  <data name="Excepcion_CuentaConTransferencia" xml:space="preserve">
+    <value>No se puede eliminar ya que el spool ya cuenta con registro de transferencia.</value>
+  </data>
+  <data name="Excepcion_TransferenciaExistenteConFechaDiferente" xml:space="preserve">
+    <value>El número de transferencia ya se encuentra dado de alta en el sistema, sin embargo la fecha no concuerda con la introducida en el sistema. &lt;br /&gt; Favor de verificar la fecha o cambiar el número de transferencia e intentar de nuevo.</value>
+  </data>
+  <data name="Excepcion_FechaSoldaduraMenorFechaReportePND" xml:space="preserve">
+    <value>La fecha de soldadura de la junta reparación debe ser mayor o igual a la fecha {0} del reporte PND</value>
+  </data>
+  <data name="Exception_FechaAnio" xml:space="preserve">
+    <value>El año no puede ser menor a {0}  ni mayor a {1}.</value>
+  </data>
+  <data name="Exception_FechaInspDimensionalMenorFechaReqPintura" xml:space="preserve">
+    <value>Los siguientes spool cuentan con requisición pintura, la fecha del reporte Dimensional no puede ser menor a la fecha de la requisición: {0}</value>
+  </data>
+  <data name="Exception_FechaProcesosPinturaMayorReq" xml:space="preserve">
+    <value>A los siguientes spools no se les genero requisición, porque la fecha es mayor a los procesos de pintura existentes. {0}</value>
+  </data>
+  <data name="Exception_SpoolTienenRequisicion" xml:space="preserve">
+    <value>Los siguientes spools ya tienen requisición de pintura, favor de consultar de nuevo para que se actualice. {0}</value>
+  </data>
+  <data name="Excepcion_FechaPruebaMenorFechaSoldadura" xml:space="preserve">
+    <value>La fecha de {0} no puede ser menor o a la fecha {1}  de la soldadura de la junta reparación {2} del spool {3}</value>
+  </data>
+  <data name="Exception_AnioFecha" xml:space="preserve">
+    <value>Fecha invalida. solo es valida entre {0} a {1}</value>
+  </data>
+  <data name="Excepcion_FechaRequiMayorFechaPintura" xml:space="preserve">
+    <value>No se genero la requisición, porque la fecha es mayor a los procesos de pintura existentes. {0}.</value>
+  </data>
+  <data name="Excepcion_JuntaTieneRequisicionReporte" xml:space="preserve">
+    <value>La junta {0} del Spool {1} ya tiene requisición {2} para la este tipo de prueba. Actualizar página.</value>
+  </data>
+</root>

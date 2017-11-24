@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{255F1840-6EBE-4DF1-9499-D23E12712FCB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAM.Mobile</RootNamespace>
+    <AssemblyName>SAM.Mobile</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mobile">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controles\Menu.ascx" />
+    <Content Include="Css\principal.css" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Imagenes\Iconos\mexico.jpg" />
+    <Content Include="Imagenes\Iconos\mexico.png" />
+    <Content Include="Imagenes\Iconos\salir.jpg" />
+    <Content Include="Imagenes\Iconos\salir.png" />
+    <Content Include="Imagenes\Iconos\us.jpg" />
+    <Content Include="Imagenes\Iconos\us.png" />
+    <Content Include="Imagenes\Logos\Actualizar-EN.jpg" />
+    <Content Include="Imagenes\Logos\Actualizar-ES.jpg" />
+    <Content Include="Imagenes\Logos\Add.jpg" />
+    <Content Include="Imagenes\Logos\Agregar-EN.jpg" />
+    <Content Include="Imagenes\Logos\Agregar-ES.jpg" />
+    <Content Include="Imagenes\Logos\Armado-EN.jpg" />
+    <Content Include="Imagenes\Logos\Armado-ES.jpg" />
+    <Content Include="Imagenes\Logos\BuscarSoldadores-EN.jpg" />
+    <Content Include="Imagenes\Logos\BuscarSoldadores-ES.jpg" />
+    <Content Include="Imagenes\Logos\BuscarWPS-EN.jpg" />
+    <Content Include="Imagenes\Logos\BuscarWPS-ES.jpg" />
+    <Content Include="Imagenes\Logos\ButtonTemplate.png" />
+    <Content Include="Imagenes\Logos\ButtonTemplateLetters.png" />
+    <Content Include="Imagenes\Logos\CambiarPatio-EN.jpg" />
+    <Content Include="Imagenes\Logos\CambiarPatio-ES.jpg" />
+    <Content Include="Imagenes\Logos\Entrar-EN.jpg" />
+    <Content Include="Imagenes\Logos\Entrar-ES.jpg" />
+    <Content Include="Imagenes\Logos\InspeccionVisual-EN.jpg" />
+    <Content Include="Imagenes\Logos\InspeccionVisual-ES.jpg" />
+    <Content Include="Imagenes\Logos\LiberacionDimensional-EN.jpg" />
+    <Content Include="Imagenes\Logos\LiberacionDimensional-ES.jpg" />
+    <Content Include="Imagenes\Logos\logo.png" />
+    <Content Include="Imagenes\Logos\logogif.gif" />
+    <Content Include="Imagenes\Logos\logojpg.jpg" />
+    <Content Include="Imagenes\Logos\logomenu.jpg" />
+    <Content Include="Imagenes\Logos\OK.jpg" />
+    <Content Include="Imagenes\Logos\Remove.jpg" />
+    <Content Include="Imagenes\Logos\SeguimientoSpool-EN.jpg" />
+    <Content Include="Imagenes\Logos\SeguimientoSpool-ES.jpg" />
+    <Content Include="Imagenes\Logos\SeleccionarPatio-EN.jpg" />
+    <Content Include="Imagenes\Logos\SeleccionarPatio-ES.jpg" />
+    <Content Include="Imagenes\Logos\SeleccionarProyecto-EN.jpg" />
+    <Content Include="Imagenes\Logos\SeleccionarProyecto-ES.jpg" />
+    <Content Include="Imagenes\Logos\Soldadura-EN.jpg" />
+    <Content Include="Imagenes\Logos\Soldadura-ES.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Paginas\CambioPatio.aspx" />
+    <Content Include="Paginas\Armado.aspx" />
+    <Content Include="Paginas\DetalleArmado.aspx" />
+    <Content Include="Paginas\DetalleInspeccionDimensional.aspx" />
+    <Content Include="Paginas\DetalleInspeccionVisual.aspx" />
+    <Content Include="Paginas\DetalleSeguimientoSpool.aspx" />
+    <Content Include="Paginas\DetalleSoldadura.aspx" />
+    <Content Include="Paginas\SeleccionarProyecto.aspx" />
+    <Content Include="Paginas\Soldadura.aspx" />
+    <Content Include="Paginas\SeguimientoSpool.aspx" />
+    <Content Include="Paginas\InspeccionDimensional.aspx" />
+    <Content Include="Paginas\InspeccionVisual.aspx" />
+    <Content Include="Script\jquery-1.7-vsdoc.js" />
+    <Content Include="Script\jquery-1.7.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\ErroresMobile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErroresMobile.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ErroresMobile.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErroresMobile.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MensajesMobile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensajesMobile.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MensajesMobile.en-US1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensajesMobile.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\PaginaMovil.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clases\PaginaMovilAutenticado.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clases\SeguridadWeb.cs" />
+    <Compile Include="Clases\SessionFacade.cs" />
+    <Compile Include="Clases\UserScope.cs" />
+    <Compile Include="Clases\WebConstants.cs" />
+    <Compile Include="Controles\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\App_LocalResources\MensajesError.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensajesError.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\App_LocalResources\MensajesError.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensajesError.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\CambioPatio.aspx.cs">
+      <DependentUpon>CambioPatio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\CambioPatio.aspx.designer.cs">
+      <DependentUpon>CambioPatio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Armado.aspx.cs">
+      <DependentUpon>Armado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Armado.aspx.designer.cs">
+      <DependentUpon>Armado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\DetalleArmado.aspx.cs">
+      <DependentUpon>DetalleArmado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\DetalleArmado.aspx.designer.cs">
+      <DependentUpon>DetalleArmado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\DetalleInspeccionDimensional.aspx.cs">
+      <DependentUpon>DetalleInspeccionDimensional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\DetalleInspeccionDimensional.aspx.designer.cs">
+      <DependentUpon>DetalleInspeccionDimensional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\DetalleInspeccionVisual.aspx.cs">
+      <DependentUpon>DetalleInspeccionVisual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\DetalleInspeccionVisual.aspx.designer.cs">
+      <DependentUpon>DetalleInspeccionVisual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\DetalleSeguimientoSpool.aspx.cs">
+      <DependentUpon>DetalleSeguimientoSpool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\DetalleSeguimientoSpool.aspx.designer.cs">
+      <DependentUpon>DetalleSeguimientoSpool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\DetalleSoldadura.aspx.cs">
+      <DependentUpon>DetalleSoldadura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\DetalleSoldadura.aspx.designer.cs">
+      <DependentUpon>DetalleSoldadura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\SeleccionarProyecto.aspx.cs">
+      <DependentUpon>SeleccionarProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\SeleccionarProyecto.aspx.designer.cs">
+      <DependentUpon>SeleccionarProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Soldadura.aspx.cs">
+      <DependentUpon>Soldadura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Soldadura.aspx.designer.cs">
+      <DependentUpon>Soldadura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\SeguimientoSpool.aspx.cs">
+      <DependentUpon>SeguimientoSpool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\SeguimientoSpool.aspx.designer.cs">
+      <DependentUpon>SeguimientoSpool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\InspeccionDimensional.aspx.cs">
+      <DependentUpon>InspeccionDimensional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\InspeccionDimensional.aspx.designer.cs">
+      <DependentUpon>InspeccionDimensional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\InspeccionVisual.aspx.cs">
+      <DependentUpon>InspeccionVisual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\InspeccionVisual.aspx.designer.cs">
+      <DependentUpon>InspeccionVisual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mimo.Framework\Mimo.Framework.csproj">
+      <Project>{344217DB-C52B-4F73-9BBC-C06742FD38B2}</Project>
+      <Name>Mimo.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.BusinessLogic\SAM.BusinessLogic.csproj">
+      <Project>{794B70EF-E0A5-4529-B892-7BED8AA7FB37}</Project>
+      <Name>SAM.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.BusinessObjects\SAM.BusinessObjects.csproj">
+      <Project>{B239B46F-7627-42EC-94F5-61B3FEF55AB2}</Project>
+      <Name>SAM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.Common\SAM.Common.csproj">
+      <Project>{AAF73BDC-FC91-40EB-9584-E039A241BB1E}</Project>
+      <Name>SAM.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.Entities\SAM.Entities.csproj">
+      <Project>{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}</Project>
+      <Name>SAM.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Login.aspx.resx" />
+    <Content Include="Controles\App_LocalResources\Menu.ascx.resx" />
+    <Content Include="Controles\App_LocalResources\Menu.ascx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\CambioPatio.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\CambioPatio.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\Armado.aspx.resx" />
+    <Content Include="App_LocalResources\Error.aspx.resx" />
+    <Content Include="App_LocalResources\Error.aspx.en-US.resx" />
+    <Content Include="App_GlobalResources\ErroresMobile.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ErroresMobile.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\MensajesMobile.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MensajesMobile.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ErroresMobile.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ErroresMobile.en-US.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\MensajesMobile.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MensajesMobile.en-US1.designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Paginas\App_LocalResources\Armado.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleArmado.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleArmado.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\Soldadura.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleSoldadura.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleSoldadura.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\InspeccionVisual.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\InspeccionVisual.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleInspeccionVisual.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleInspeccionVisual.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\InspeccionDimensional.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\InspeccionDimensional.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleInspeccionDimensional.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleInspeccionDimensional.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\SeguimientoSpool.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleSeguimientoSpool.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\DetalleSeguimientoSpool.aspx.en-US.resx" />
+    <Content Include="Paginas\App_LocalResources\SeleccionarProyecto.aspx.en-US.resx" />
+    <EmbeddedResource Include="Paginas\App_LocalResources\MensajesError.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MensajesError.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\App_LocalResources\MensajesError.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MensajesError.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Paginas\App_LocalResources\Soldadura.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\SeguimientoSpool.aspx.resx" />
+    <Content Include="Paginas\App_LocalResources\SeleccionarProyecto.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Login.aspx.en-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Paginas\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Dashboard.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Dashboard.aspx.en-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\movil.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>42239</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://sammovil.sieena.dev</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://mobilesam.sieena.dev</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

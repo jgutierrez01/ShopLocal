@@ -1,0 +1,2 @@
+ALTER TABLE JuntaInspeccionVisual ADD TallerID INT NULL FOREIGN KEY (TallerID) REFERENCES Taller(TallerID)
+ALTER TABLE JuntaInspeccionVisual ADD InspectorID INT NULL FOREIGN KEY (InspectorID) REFERENCES Inspector(InspectorID)

@@ -1,0 +1,722 @@
+﻿body
+{
+    background-color:#2e5d90;
+    margin:0;
+    padding: 0;
+    font-family:Arial;
+    font-size: 12px;
+    overflow-y:scroll;
+}
+
+a,
+a:visited,
+a:hover,
+a:active
+{
+    text-decoration:underline;
+    margin:0;
+    color:#df671f;
+    border:none;
+    font-family:Arial;
+    font-size:12px;
+}
+
+a img
+{
+    border:none;
+}
+
+input[type=text],
+textarea
+{
+    width:200px;
+}
+
+textarea
+{
+    font-family:Arial;
+    font-size: 12px;
+}
+
+input[type=text].blue
+{
+    background-color:#dee8f4;
+}
+
+input[type=password]
+{
+    width:200px;
+    background-color:#dee8f4;
+}
+
+select
+{
+    width:204px;
+}
+
+select.required
+{
+    background-color:#dee8f4;
+}
+
+p
+{
+    clear:both;
+}
+
+label, span
+{
+    font-size: 12px;
+}
+
+span.tituloError
+{
+    font-family: Arial;
+    font-weight: bold;
+    color: #E0691F;
+    font-size: 16px !important;
+    margin-top:20px;
+}
+
+.mensajeError
+{
+    font-family: Arial;
+    color: Black;
+    font-size: 16px !important;
+}
+
+label
+{
+    display:block;
+    font-weight:bold;
+}
+
+h5
+{
+    display: block;
+    clear: both;
+    font-size: 12px;
+    border-bottom: 1px solid #2d5d8f;
+    margin: 5px 0 10px 0;
+    background-image: url(/Imagenes/Iconos/bulletHeader.png);
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    padding-left: 15px;
+    height: 15px;
+    line-height: 15px;
+}
+
+h5 span
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #2d5d8f;   
+    vertical-align: middle; 
+}
+
+.padding
+{
+    padding-top:10px; 
+    padding-bottom:10px;
+}
+
+
+/********************************************/
+/**        ESTRUCTURA DEL LOGIN             */
+/********************************************/
+
+.tablaEstructuraLogin
+{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    width:750px;
+    max-width:750px;
+    border:0px;
+    padding:0px;
+    border-width:0px;
+    border-style:none;
+}
+
+.footerImgIzq
+{
+    background-image:url(../Imagenes/Menu/loginFooterIzq.png);
+    background-repeat:no-repeat;
+    width:23px;
+    min-width:23px;
+    max-width:23px;
+    height:35px;
+}
+
+.footerImgDer
+{
+    background-image:url(../Imagenes/Menu/loginFooterDer.png);
+    background-repeat:no-repeat;
+    width:23px;
+    min-width:23px;
+    max-width:23px;
+    height:35px;
+}
+
+.tablaEstructuraLogin .sinEspacios
+{
+    padding:0px;
+    margin:0px;
+}
+
+.tablaEstructuraLogin tr.Header
+{
+    height:122px;
+    min-height:122px;
+    max-height:122px;
+}
+
+.tablaEstructuraLogin td.AnchoLaterales
+{
+    width:23px;
+    border:none;
+}
+
+.tablaEstructuraLogin td.FondoIzquierdo
+{
+    background-image:url(../Imagenes/Encabezado/encIzq.png);
+    background-repeat:no-repeat;
+    background-position:left top;
+}
+
+.tablaEstructuraLogin td.FondoDerecho
+{
+    background-image:url(../Imagenes/Encabezado/encDer.png);
+    background-repeat:no-repeat;
+    background-position:right top;
+}
+
+.tablaEstructuraLogin td.Central, .tablaEstructuraLogin td.CentralLogin
+{
+    background-image:url(../Imagenes/Encabezado/enc.png);
+    background-repeat:repeat-x;
+    width:704px;
+    min-width:704px;
+}
+
+.tablaEstructuraLogin td.fondoGris
+{
+    background-color:#edecec;
+}
+
+.tablaEstructuraLogin td.fondoBlanco
+{
+    background-color:#ffffff;
+}
+
+.tablaEstructuraLogin td.fondoFooter
+{
+    background-color:#b4cae7;    
+    color:#295380;
+    font:verdana;
+    font-size:12px;
+}
+
+.tablaEstructuraLogin td.altoFooterLogin
+{
+    height:55px;
+    min-height:55px;
+    max-height:55px;
+}
+
+.bordeNegroFull
+{
+    border:1px solid #274d77;
+}
+
+.bordeNegro
+{
+    border-bottom: 1px solid #274d77;
+    border-left: 1px solid #274d77;
+    border-right: 1px solid #274d77;
+    border-top:none;
+}
+.recuadroUsuarioLogin
+{
+    background-image:url(../Imagenes/Encabezado/perfilLogin.png);
+    width:100px;
+    min-width:100px;
+    max-width:100px;
+    height:27px;
+    min-height:27px;
+    max-height:27px;
+    margin-top:-122px;
+    float:right;
+}
+
+.samLogoLogin
+{
+    background-image:url('/Imagenes/Logos/logo.png');
+    width:170px;
+    height:60px;
+}
+
+.bgMenuLogin
+{
+    background-image:url(../Imagenes/Menu/menuLogin.png);
+    width:545px;
+    height:26px;
+}
+
+.ieLeyenda
+{
+	color: #434b4d;
+	font-size: xx-small;
+}
+
+.menuSteelgo
+{
+    width:100%;
+    padding-left:5px;
+    padding-right:25px;
+    line-height:25px;
+    text-align:center;
+    color:#414143;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.menuSteelgo a,
+.menuSteelgo a:visited,
+.menuSteelgo a:hover,
+.menuSteelgo a:active
+{
+    color: #434b4d;
+    text-decoration:none;
+}
+
+.menuSteelgo .barraIzquierda
+{
+    background-image:url(../Imagenes/Menu/barraGrisLogin.png);
+    background-position: right center;
+    background-repeat:no-repeat;
+}
+
+.bandaAzul
+{
+    background-image:url(../Imagenes/Menu/barraAzulLogin.png);
+    background-position: right 24px;
+    background-repeat:no-repeat;
+}
+
+
+/********************************************/
+/**        ESTRUCTURA DEL SITIO             */
+/********************************************/
+
+
+.tablaEstructura
+{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5px;
+    width:98%;
+    min-width:974px;
+    border:0px;
+    padding:0px;
+    border-width:0px;
+    border-style:none;
+}
+
+.tablaEstructura .sinEspacios
+{
+    padding:0px;
+    margin:0px;
+}
+
+.tablaEstructura tr.Header
+{
+    height:122px;
+    min-height:122px;
+    max-height:122px;
+}
+
+.tablaEstructura td.AnchoLaterales
+{
+    width:32px;
+    min-width:32px;
+    max-width:32px;
+    border:none;
+}
+
+.tablaEstructura td.FondoIzquierdo
+{
+    background-image:url(../Imagenes/Encabezado/encIzq.png);
+    background-repeat:no-repeat;
+    background-position:left top;
+}
+
+.tablaEstructura td.FondoDerecho
+{
+    background-image:url(../Imagenes/Encabezado/encDer.png);
+    background-repeat:no-repeat;
+    background-position:right top;
+}
+
+.tablaEstructura td.Central, .tablaEstructura td.CentralLogin
+{
+    background-image:url(../Imagenes/Encabezado/enc.png);
+    background-repeat:repeat-x;
+}
+
+.tablaEstructura td.fondoGris
+{
+    background-color:#edecec;
+    min-height:320px;
+    vertical-align:top;
+}
+
+.tablaEstructura td.fondoFooter
+{
+    background-color:#b4cae7;
+}
+
+.tablaEstructura td.altoFooter
+{
+    height:115px;
+    min-height:115px;
+    max-height:115px;
+}
+
+/********************************************/
+/**            LOGO DE SAM                  */
+/********************************************/
+
+.samLogo
+{
+    background-image:url(../Imagenes/Logos/logo.png);
+    width:170px;
+    min-width:170px;
+    max-width:170px;
+    height:60px;
+    min-height:60px;
+    max-height:60px;
+    margin-top:-15px;
+    float:left;
+}
+
+/********************************************/
+/**          RECUADRO USUARIO               */
+/********************************************/
+
+.recuadroUsuario
+{
+    background-image:url(../Imagenes/Encabezado/perfil.png);
+    width:300px;
+    min-width:300px;
+    max-width:300px;
+    height:27px;
+    min-height:27px;
+    max-height:27px;
+    margin-top:-30px;
+    float:right;
+}
+
+.Header .texto
+{
+    font-family:Arial;
+    font-size:12px;
+    color:White;
+    font-weight:bold;
+    text-align:center;
+}
+
+.recuadroUsuario .link
+{
+    color:White;
+    text-decoration:none;
+    height:21px;
+    line-height:21px;
+    vertical-align:top;
+}
+
+.recuadroUsuario .link:hover
+{
+    text-decoration:underline;
+}
+
+.recuadroUsuario .imgSalir
+{
+    margin-left:20px;
+}
+
+/********************************************/
+/**             MENU GENERAL                */
+/********************************************/
+
+.menuSuperior
+{
+    background-image:url(../Imagenes/Menu/menuSuperior.png);
+    background-repeat:repeat-x;
+    height:27px;
+    min-height:27px;
+    max-height:27px;
+    width:100%;
+    float:left;
+    margin-left:-1px;
+}
+
+.menuSuperior a,
+.menuSuperior a:visited,
+.menuSuperior a:hover
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menuSuperior .Elemento
+{
+    background-image:url(../Imagenes/Menu/menuDivision.png);
+    background-repeat:no-repeat;
+    background-position:left top;
+    float:left;
+    text-align:center;
+    vertical-align:baseline;
+    color: White;
+    min-width:85px;
+    cursor:pointer;
+    line-height:27px;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.menuSuperior .ElementoEspecial
+{
+    background-image:url(../Imagenes/Menu/menuDivision.png);
+    background-repeat:no-repeat;
+    background-position:left top;
+    float:left;
+    text-align:center;
+    vertical-align:baseline;
+    color: White;
+    min-width:110px;
+    cursor:pointer;
+    line-height:27px;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;    
+}
+
+.menuSuperior .Activo a
+{  
+    background-image:url(../Imagenes/Menu/activo.png);
+    background-repeat:no-repeat;
+    background-position:left top;
+    float:left;
+    text-align:center;
+    vertical-align:baseline;
+    color: #585858 !important;
+    min-width:85px;
+    cursor:pointer;
+    line-height:27px;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;      
+}
+
+.menuSuperior .ElementoEspecialActive a
+{ 
+   background-image:url(../Imagenes/Menu/activo.png);
+    background-repeat:no-repeat;
+    background-position:left top;
+    float:left;
+    text-align:center;
+    vertical-align:baseline;
+    color: #585858 !important;
+    min-width:110px;
+    cursor:pointer;
+    line-height:27px;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;    
+}
+
+.menuSuperior .Inicial
+{
+    background-image:url(../Imagenes/Menu/menuInicial.png);
+    background-repeat:no-repeat;
+    background-position:left top;
+    text-align:center;
+    float:left;
+    color: White;
+    cursor:pointer;
+    min-width:85px;
+    line-height:27px;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.menuSuperior div.Cierre
+{
+    background-image:url(../Imagenes/Menu/menuCierre.png);
+    background-repeat:no-repeat;
+    background-position:right top;
+    float:right;
+    color: White;
+    cursor:pointer;
+    line-height:27px;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    width:2px;
+    min-width:2px;
+    max-width:2px;
+    height:27px;
+    min-height:27px;
+    max-height:27px;
+}
+.menuSuperior .ElementoFlotante
+{   
+    float:right;
+    padding-right:10px;
+    margin-top:-35px;
+}
+
+
+/********************************************/
+/**               SUB MENU                  */
+/********************************************/
+
+.menuInferior
+{
+    background-image:url(../Imagenes/Menu/menuInferior.png);
+    background-repeat:repeat-x;
+    height:21px;
+    min-height:21px;
+    max-height:21px;
+    width:100%;
+    float:left;
+    margin-bottom:0px;
+}
+
+.menuInferior a,
+.menuInferior a:visited
+{
+    color: #434b4d;
+    text-decoration: none;
+    font-size:11px;
+    font-weight: bold;
+}
+
+.menuInferior .Elemento
+{
+    border-bottom: 1px solid #2e5d90;
+    border-left: 1px solid #2e5d90;
+    border-right:1px solid #2e5d90;
+    height:20px;
+    min-width:890px;
+    margin-top:-12px;
+   /** margin-left:1px;**/
+}
+
+.menuInferior .Elemento ul
+{
+    display:block;
+    list-style-image:url(../Imagenes/Menu/bltGris.png);
+    padding-left:5px;
+    padding-top: 2px;
+}
+
+.menuInferior .Elemento ul li
+{
+    color:#585858;
+    cursor:pointer;
+    float:left;
+    line-height:17px;
+    margin-left:20px;
+}
+
+.menuInferior .Elemento ul li:hover a, .menuInferior .Elemento ul li .Activo
+{
+    color:#b85300;
+    list-style-image:url(../Imagenes/Menu/bltNaranja.png);
+    text-decoration:underline;
+}
+
+.menuInferior .Elemento ul li:hover 
+{
+    color:#b85300;
+    list-style-image:url(../Imagenes/Menu/bltNaranja.png);
+    text-decoration:underline;
+}
+
+.menuInferior .Elemento ul li:active
+{
+    color:#b85300;
+}
+
+/********************************************/
+/**            FOOTER MENU                  */
+/********************************************/
+
+.FooterIzquierda
+{
+    margin-top:10px;
+    margin-bottom:10px;
+    width:84%;
+    float:left;
+    font-size:10px;
+}
+
+.FooterIzquierda .Elemento a
+{
+    color:#43515b;
+    text-decoration:none;
+    font-size:10px;
+}
+
+.FooterIzquierda .Elemento
+{
+    min-width:106px;
+    float:left;
+}
+
+.FooterIzquierda .Elemento .Titulo
+{
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:10px;
+    color:#042952;
+}
+
+.FooterDerecha
+{
+    background-image:url(../Imagenes/Menu/footerDivision.png);
+    background-position:left center;
+    background-repeat: no-repeat;
+    width:16%;
+    float:right;
+}
+
+.FooterDerecha .Elemento a
+{
+    color:#43515b;
+    float:right;
+    font-size:10px;
+    text-transform:uppercase;
+    margin:0px;
+}
+
+.FooterDerecha .LogoSteelgo
+{
+    float:right;
+}
+
+.bgFooterIzquierdo
+{
+    background-image:url(../Imagenes/Menu/footerLeft.png);
+    background-position:right bottom;
+}
+
+.bgFooterDerecho
+{
+    background-image:url(../Imagenes/Menu/footerRight.png);
+    background-position:left bottom;
+}

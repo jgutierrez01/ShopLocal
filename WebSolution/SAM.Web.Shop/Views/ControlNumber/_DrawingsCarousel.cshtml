@@ -1,0 +1,26 @@
+﻿@using Resources.Views
+@using SAM.Web.Common
+@model DrawingPage []
+
+<h3>@Html.Raw(DrawingsCarouselStrings.Header)</h3>           
+<div id="carousel-drawings" class="carousel" data-interval="false">
+    <div class="carousel-inner">
+        @for (int i = 0; i < Model.Length; i++)
+        {
+            DrawingPage page = Model[i];
+            <div class="item @(i == 0 ? "active": string.Empty)">
+                <img src="@Url.Action("DrawingPageImage", "ControlNumber", new { page.ProjectName, page.DrawingName, page.PageName, page.Extension })" alt="@Html.Raw(DrawingsCarouselStrings.Page) @int.Parse(page.PageName)" />
+                <div class="carousel-caption">
+                    @Html.Raw(@DrawingsCarouselStrings.Page) @int.Parse(page.PageName)
+                </div>
+            </div>
+        }
+    </div>
+    <a class="left carousel-control" href="#carousel-drawings" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-drawings" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+

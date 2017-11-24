@@ -1,0 +1,34 @@
+﻿@using SAM.Web.Shop.Extensions
+@using Resources.Views
+@model SAM.Web.Shop.Models.LoginModel
+
+@{
+    ViewBag.Title = LoginStrings.PageTitle;
+    Layout = "~/Views/Layouts/MasterLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "Login", null, FormMethod.Post, new { role = "form" }))
+{
+    <fieldset>
+        <div class="form-group">
+            @Html.StyledLabelFor(x => x.Username)
+            @Html.StyledTextBoxFor(x => x.Username)
+            @Html.ValidationMessageFor(x => x.Username)
+        </div>
+        <div class="form-group">
+            @Html.StyledLabelFor(x => x.Password)
+            @Html.StyledPasswordFor(x => x.Password)
+            @Html.ValidationMessageFor(x => x.Password)
+        </div>
+        <div class="checkbox">
+            <label>
+                @Html.CheckBoxFor(x => x.RememberMe)
+                @Html.Raw(LoginStrings.RememberMe)
+            </label>
+        </div>
+
+        @Html.ValidationSummary(false, string.Empty, new { @class = "alert alert-danger" })
+
+        <button type="submit" class="btn btn-primary btn-block">@Html.Raw(LoginStrings.LoginButton_Text)</button>
+    </fieldset>
+}

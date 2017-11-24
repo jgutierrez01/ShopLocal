@@ -1,0 +1,165 @@
+﻿@using SAM.Web.Shop.Factories
+@using SAM.Entities.Busqueda
+@using SAM.Web.Shop.Models
+@using SAM.Web.Shop.Resources.Views.Quality
+@using SAM.Web.Shop.Resources.Views.WorkStatus
+@using Resources.Views
+@using SAM.Web.Shop.Extensions
+@using Newtonsoft.Json
+@model SearchControlNumberModel
+
+
+@{ 
+    Layout = "~/Views/Layouts/YardLayout.cshtml";
+
+
+    string dateProcess = ViewContext.HttpContext.Request.QueryString.Get("DateProcess");
+    string projectId = ViewContext.HttpContext.Request.QueryString.Get("ProjectId");
+    string quadrantId = ViewContext.HttpContext.Request.Params.Get("QuadrantId");
+    string DateProcess = string.Empty;
+    
+    LocationModel location = new LocationModel(projectId, quadrantId, dateProcess);
+    if (Model == null)
+    {
+        DateProcess = DateTime.Now.ToShortDateString();
+    }
+    else
+    {
+        DateProcess = string.IsNullOrEmpty(Model.DateProcess) ? dateProcess : Model.DateProcess;
+        DateProcess = string.IsNullOrEmpty(DateProcess) ? DateTime.Now.ToShortDateString() : DateProcess;       
+    }
+ }
+<h4 class="header">@Html.Raw(WorkStatusStrings.PageHeader_Location)</h4>
+
+
+@using (Html.BeginForm("AddLocation", "Location", FormMethod.Get, new { role = "form", id = "location-physical-form" }))
+{
+    <fieldset id="location-physical-form" >
+        <legend></legend>   
+            <div class="form-group">
+                @Html.Action("ProjectDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequired(Model, ViewContext.ViewData.ModelState) })       
+            </div>
+            <div class="form-group">            	             
+                @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration(){Name="QuadrantId",PreselectIfOnlyOne=true,SelectedId =location.QuadrantId.ToString() } , @class = "form-control"})                                 
+                <div style="display:none">@Html.Hidden("QuadrantIDH", null, new { @class = "form-control", type = "string", id="QuadrantIDH" })</div>                                       	                            
+            </div>                      
+       
+            <div class="form-group">
+                <label class="caption">@Html.Raw(WorkStatusStrings.DateLocation)</label>
+	            <div class='input-group date' id='datepicker' >
+                   @Html.TextBox("DateProcess", DateProcess, new { @class = "form-control", type = "string", id = "datepicker", @readonly = "true" })                          
+	               <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+	            </div>                      	            
+            </div>     
+    
+            <div class="form-group">
+                 @Html.LabelFor(x => x.SearchType, new { @class = "show" })
+                <label class="radio-inline">                
+              
+                    @Html.RadioButtonFor(x => x.SearchType, "cn")
+                    @Html.Raw(CommonStrings.ControlNumber)
+                </label>
+                <label class="radio-inline">
+                    @Html.RadioButtonFor(x => x.SearchType, "sp")
+                    @Html.Raw(CommonStrings.Spool)
+                </label>
+            </div>  
+
+
+            <div id="cnContainer" class="form-group clearfix">
+                @Html.StyledLabelFor(x => x.WorkOrderNumber, new { @class = "show" })
+                <div class="input-group col-xs-6 col-md-6 pull-left">
+                    <span class="input-group-addon" id="wo-addon-text"></span>
+                    @Html.StyledTextBoxFor(x => x.WorkOrderNumber, new { placeholder = CommonStrings.WoNumberWatermark, type = "tel" })
+                </div>
+                <div class="input-group col-xs-6 col-md-6 pull-left">
+                    <span class="input-group-addon">-</span>
+                    @Html.StyledTextBoxFor(x => x.ControlNumber, new { placeholder = CommonStrings.ControlNumberWatermark, type = "tel" })
+                </div>
+                @Html.ValidationMessageFor(x => x.WorkOrderNumber)
+                @Html.ValidationMessageFor(x => x.ControlNumber)           
+            </div>    
+
+            <div id="spContainer" class="form-group">
+                @Html.StyledLabelFor(x => x.SpoolName)
+                @Html.StyledTextBoxFor(x => x.SpoolName)
+                @Html.ValidationMessageFor(x => x.SpoolName)
+            </div>
+        
+        
+            @Html.ValidationSummary(false, string.Empty, new { @class = "alert alert-danger" })
+            @if (Model != null && Model.Exit)
+            {
+                <div class ="alert alert-info">
+                    @Html.Raw(CommonStrings.SuccessfulEdition)
+                </div>
+            }
+            <button type="submit" class="btn btn-primary btn-block" id="add"  >@Html.Raw(CommonStrings.AddButton_Text)</button>   
+          <div id="hidden" style="display:none" >     
+           @* @Html.HiddenFor(x => x.SaveType, new { @class = "form-control", type = "string", id = "SaveType" })             *@
+        </div>
+    </fieldset>
+}
+
+@using (Html.BeginForm("SaveLocation", "Location", new { role = "form", id = "location-form" }))
+{  
+    <fieldset id="location-form" role="form"> 
+        <legend></legend>
+        <div id="date" style="display:none" >     
+            @Html.TextBox("ProcessDate", location.ProcessDate, new { @class = "form-control", type = "string", id = "datepicker" })              
+            @Html.Hidden("ProjectId", location.ProjectId, new { @class = "form-control", type = "int", id = "projectId" }) 
+            @Html.Hidden("QuadrantId", location.QuadrantId, new { @class = "form-control", type = "int", id = "qdt" })             
+        </div>
+    
+        <div id="spoolsContainer" class="form-group">
+            @if (Model != null)
+            {
+                if (Model.Spools != null && Model.Spools.Count > 0)
+                {                                    
+                    <div class="table-responsive">
+                        <table class="table table-striped table-condensed">
+                            <thead>
+                                <tr>
+                                    <th style="display:none" >ordenSpoolId</th>
+                                    <th>    </th>   
+                                    <th>@Html.Raw(WorkStatusStrings.ControlNumber)</th>
+                                    <th>@Html.Raw(WorkStatusStrings.Spool)</th>      
+                                    <th>@Html.Raw(WorkStatusStrings.SteelFamily)</th>
+                                    <th>@Html.Raw(WorkStatusStrings.MaximumDiameter)</th>                                                                                     
+                                    <th>@Html.Raw(WorkStatusStrings.Quadrant)</th>
+                                </tr>
+                            </thead>
+                            <tbody>                       
+                                    @foreach (NumeroControlBusqueda cn in Model.Spools)
+                                    {                                      
+                                        <tr>
+                                            <td style="display:none" >@cn.OrdenTrabajoSpoolID</td>         
+                                            <td >@Html.ActionLink(string.Empty+"...", "DeleteLocation", "Location", new { id = cn.SpoolID, projectId = Model.ProjectId, quadrantId = "QTE", dateProcess = "DP" }, new { @class = "delete" })</td>
+                                            <td><a href="#">@cn.NumeroControl</a></td>
+                                            <td>@cn.Spool</td> 
+                                            <td>@cn.FamiliaAcero</td>
+                                            <td>@cn.DiametroMaximo</td>
+                                            <td>@cn.Cuadrante</td>
+                                        </tr>  
+                                    }                            
+                            </tbody>
+                        </table>
+                    </div>          
+                    <button type="submit" class="btn btn-primary btn-block" id="savequadrant" >@Html.Raw(CommonStrings.SaveButton_Text)</button>                     
+                }
+            } 
+        </div>
+    </fieldset>
+}
+
+ @section scripts{
+    <script type="text/javascript">
+      
+        $(function () {
+           
+            var prepare = new sam.pages.workstatus.index($("#location-physical-form"), $("#location-form"));
+            prepare.init();
+        
+         });       
+    </script>
+}

@@ -1,0 +1,1 @@
+ALTER TABLE Maquina ADD MermaTeorica INT NULL

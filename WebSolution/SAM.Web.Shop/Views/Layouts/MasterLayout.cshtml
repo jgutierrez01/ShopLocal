@@ -1,0 +1,59 @@
+﻿@using Combres.Mvc
+@using Resources.Views
+<!DOCTYPE html>
+<html lang="@System.Globalization.CultureInfo.CurrentUICulture.Name">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM control @(ViewBag.Title != null ? "- " + ViewBag.Title : string.Empty)</title>
+    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/bootstrap-theme.min.css" rel="stylesheet" />
+    @Url.CombresLink("siteCss")
+    <script src="~/Scripts/Framework/modernizr-2.7.1.js"></script>
+    <script src="~/Scripts/Framework/jquery-1.11.0.min.js"></script>
+</head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menus">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">SAM</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="menus">
+                    @RenderSection("menus", false)                   
+                    <ul class="nav navbar-nav navbar-right" style="display:inline">
+                         <li>
+                             <a class="nav navbar-nav" href='@Url.Action("Logout","Login")'>
+                                 <img src="~/Content/Images/salir.png" />
+                             </a>                           
+                         </li>
+                         <li class="dropdown" id="languajeMenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >@Html.Raw(CommonStrings.Language) <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="spanish">Español</a></li>
+                                <li><a href="#" id="english">English</a></li>
+                            </ul>                          
+                        </li>                        
+                    </ul>   
+                </div>  
+                      
+            </div>
+        </nav>
+        @RenderSection("breadcrumbs", false)
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+        @Url.CombresLink("frameworkJs")
+        @Url.CombresLink("extensionsJs")
+        @Url.CombresLink("pluginsJs")
+        <script src="@RouteJs.RouteJsHandler.HandlerUrl" type="text/javascript"></script>
+        @Url.CombresLink("appJs")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

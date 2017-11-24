@@ -1,0 +1,51 @@
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.dll.config
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\log4net.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\bin\Release\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.Resources.MimossRadGridMessages.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.Resources.MimossRadGridMessages.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\obj\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.dll.config
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\log4net.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\Telerik.Web.UI.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\bin\Release\Telerik.Web.UI.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.csprojResolveAssemblyReference.cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.Resources.MimossRadGridMessages.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.Resources.MimossRadGridMessages.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.csproj.GenerateResource.Cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\obj\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\bin\Release\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.Resources.MimossRadGridMessages.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.Resources.MimossRadGridMessages.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.pdb

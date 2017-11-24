@@ -1,0 +1,2 @@
+ALTER TABLE Spool
+ADD EsRevision BIT NULL

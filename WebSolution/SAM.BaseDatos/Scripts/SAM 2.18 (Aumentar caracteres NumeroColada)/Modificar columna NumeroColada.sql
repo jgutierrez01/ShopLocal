@@ -1,0 +1,1 @@
+ALTER TABLE Colada ALTER COLUMN NumeroColada nvarchar(20) NOT NULL

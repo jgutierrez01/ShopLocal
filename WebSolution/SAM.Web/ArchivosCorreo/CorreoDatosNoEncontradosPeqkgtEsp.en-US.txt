@@ -1,0 +1,9 @@
+<div>
+<p>
+<span style="color:black;">Proyect:</span> <span style="color:#456490">{0}</span>
+</p>
+<p>
+When upgrading PEQs, kg, thickness was generated an excel, Please check the attachment to the email
+</p>
+<p>&nbsp;</p>
+</div>

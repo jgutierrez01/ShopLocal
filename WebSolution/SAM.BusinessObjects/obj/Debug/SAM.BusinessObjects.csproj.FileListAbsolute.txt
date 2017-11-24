@@ -1,0 +1,210 @@
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll.config
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll.config
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll.config
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll.config
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessObjects\obj\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll.config
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\log4net.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csproj.GenerateResource.Cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\bin\Debug\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.MensajesError.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.Procesos.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Debug\SAM.BusinessObjects.pdb

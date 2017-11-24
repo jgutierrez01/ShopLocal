@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddNewRecordImageUrl" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AddNewRecordText" xml:space="preserve">
+    <value>Add new record</value>
+  </data>
+  <data name="BetweenText" xml:space="preserve">
+    <value>between</value>
+  </data>
+  <data name="Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChangePageSizeLabelText" xml:space="preserve">
+    <value>Page size</value>
+  </data>
+  <data name="ChangePageSizeLinkButtonText" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="CollapseTooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ColumnResizeTooltipFormatString" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContainsText" xml:space="preserve">
+    <value>contains</value>
+  </data>
+  <data name="CustomText" xml:space="preserve">
+    <value>Personalize</value>
+  </data>
+  <data name="DoesNotContainText" xml:space="preserve">
+    <value>does not contain</value>
+  </data>
+  <data name="DragToGroupOrReorder" xml:space="preserve">
+    <value>Drag to order or group</value>
+  </data>
+  <data name="DragToResize" xml:space="preserve">
+    <value>Drag to change size</value>
+  </data>
+  <data name="DropHereToReorder" xml:space="preserve">
+    <value>Drag here to order</value>
+  </data>
+  <data name="EndsWithText" xml:space="preserve">
+    <value>ends with</value>
+  </data>
+  <data name="EqualToText" xml:space="preserve">
+    <value>equal to</value>
+  </data>
+  <data name="ExpandTooltip" xml:space="preserve">
+    <value>Expand group</value>
+  </data>
+  <data name="ExportToCsvImageUrl" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExportToCsvText" xml:space="preserve">
+    <value>export to CSV</value>
+  </data>
+  <data name="ExportToExcelImageUrl" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExportToExcelText" xml:space="preserve">
+    <value>export to excel</value>
+  </data>
+  <data name="ExportToPdfImageUrl" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExportToPdfText" xml:space="preserve">
+    <value>export to pdf</value>
+  </data>
+  <data name="ExportToWordImageUrl" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExportToWordText" xml:space="preserve">
+    <value>export to word</value>
+  </data>
+  <data name="FilterExpression" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FilterImageToolTip" xml:space="preserve">
+    <value>filter</value>
+  </data>
+  <data name="FirstPageText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FirstPageToolTip" xml:space="preserve">
+    <value>first page</value>
+  </data>
+  <data name="GoToPageLabelText" xml:space="preserve">
+    <value>page</value>
+  </data>
+  <data name="GoToPageLinkButtonText" xml:space="preserve">
+    <value>go to</value>
+  </data>
+  <data name="GreaterThanOrEqualToText" xml:space="preserve">
+    <value>greater than or equal to</value>
+  </data>
+  <data name="GreaterThanText" xml:space="preserve">
+    <value>greater than</value>
+  </data>
+  <data name="GroupByFieldsSeparator" xml:space="preserve">
+    <value>;</value>
+  </data>
+  <data name="GroupContinuedFormatString" xml:space="preserve">
+    <value>… group continued from the previous page.</value>
+  </data>
+  <data name="GroupContinuesFormatString" xml:space="preserve">
+    <value>Group, continued on the next page.</value>
+  </data>
+  <data name="GroupPanelText" xml:space="preserve">
+    <value>Drag a column title to group by that column.</value>
+  </data>
+  <data name="GroupSplitDisplayFormat" xml:space="preserve">
+    <value>Showing {0} of {1} records.</value>
+  </data>
+  <data name="GroupSplitFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HeaderContextMenuAndLabel" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="HeaderContextMenuClearButton" xml:space="preserve">
+    <value>Remove filters</value>
+  </data>
+  <data name="HeaderContextMenuColumns" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="HeaderContextMenuFilterButton" xml:space="preserve">
+    <value>filter</value>
+  </data>
+  <data name="HeaderContextMenuFilterItemText" xml:space="preserve">
+    <value>filter</value>
+  </data>
+  <data name="HeaderContextMenuGroupBy" xml:space="preserve">
+    <value>Group by</value>
+  </data>
+  <data name="HeaderContextMenuRowsLabel" xml:space="preserve">
+    <value>Show records with values that</value>
+  </data>
+  <data name="HeaderContextMenuSortAsc" xml:space="preserve">
+    <value>sort in ascending order</value>
+  </data>
+  <data name="HeaderContextMenuSortClear" xml:space="preserve">
+    <value>Delete sort</value>
+  </data>
+  <data name="HeaderContextMenuSortDesc" xml:space="preserve">
+    <value>Sort in descending order.</value>
+  </data>
+  <data name="HeaderContextMenuUnGroupBy" xml:space="preserve">
+    <value>Ungroup</value>
+  </data>
+  <data name="HierarchyCollapseTooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HierarchyExpandTooltip" xml:space="preserve">
+    <value>expand</value>
+  </data>
+  <data name="HierarchySelfCollapseTooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HierarchySelfExpandTooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsEmptyText" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="IsNullText" xml:space="preserve">
+    <value>null</value>
+  </data>
+  <data name="LastPageText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LastPageToolTip" xml:space="preserve">
+    <value>Last page</value>
+  </data>
+  <data name="LessThanOrEqualToText" xml:space="preserve">
+    <value>less than or equal to</value>
+  </data>
+  <data name="LessThanText" xml:space="preserve">
+    <value>less than</value>
+  </data>
+  <data name="LoadingText" xml:space="preserve">
+    <value>Loading…</value>
+  </data>
+  <data name="NextPagesToolTip" xml:space="preserve">
+    <value>Next Pages</value>
+  </data>
+  <data name="NextPageText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NextPageToolTip" xml:space="preserve">
+    <value>next page</value>
+  </data>
+  <data name="NoDetailRecordsText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NoFilterText" xml:space="preserve">
+    <value>No filter</value>
+  </data>
+  <data name="NoMasterRecordsText" xml:space="preserve">
+    <value>No records to show.</value>
+  </data>
+  <data name="NotBetweenText" xml:space="preserve">
+    <value>Out of</value>
+  </data>
+  <data name="NotEqualToText" xml:space="preserve">
+    <value>not equal to</value>
+  </data>
+  <data name="NotIsEmptyText" xml:space="preserve">
+    <value>Not empty</value>
+  </data>
+  <data name="NotIsNullText" xml:space="preserve">
+    <value>not null</value>
+  </data>
+  <data name="PageOfLabelText" xml:space="preserve">
+    <value>of {0}</value>
+  </data>
+  <data name="PagerTextFormat" xml:space="preserve">
+    <value>Change page: {4} &amp;nbsp;Page &lt;strong&gt;{0}&lt;/strong&gt; of &lt;strong&gt;{1}&lt;/strong&gt;, rows &lt;strong&gt;{2}&lt;/strong&gt; to &lt;strong&gt;{3}&lt;/strong&gt; of &lt;strong&gt;{5}&lt;/strong&gt;.</value>
+  </data>
+  <data name="PagerTooltipFormatString" xml:space="preserve">
+    <value>Page &lt;strong&gt;{0}&lt;/strong&gt; of &lt;strong&gt;{1}&lt;/strong&gt;</value>
+  </data>
+  <data name="PageSizeLabelText" xml:space="preserve">
+    <value>Page size</value>
+  </data>
+  <data name="PrevPagesToolTip" xml:space="preserve">
+    <value>previous pages</value>
+  </data>
+  <data name="PrevPageText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PrevPageToolTip" xml:space="preserve">
+    <value>previous page</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="RefreshImageUrl" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReservedResource" xml:space="preserve">
+    <value>please do not remove this key.</value>
+  </data>
+  <data name="SortedAscToolTip" xml:space="preserve">
+    <value>Sorted in ascending order</value>
+  </data>
+  <data name="SortedDescToolTip" xml:space="preserve">
+    <value>sorted in descending order</value>
+  </data>
+  <data name="SortToolTip" xml:space="preserve">
+    <value>click here to sort</value>
+  </data>
+  <data name="StartsWithText" xml:space="preserve">
+    <value>begins with</value>
+  </data>
+  <data name="StatusReadyText" xml:space="preserve">
+    <value>ready</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnGroupButtonTooltip" xml:space="preserve">
+    <value>click here to ungroup</value>
+  </data>
+  <data name="UnGroupTooltip" xml:space="preserve">
+    <value>drag outside of the bar to ungroup</value>
+  </data>
+</root>

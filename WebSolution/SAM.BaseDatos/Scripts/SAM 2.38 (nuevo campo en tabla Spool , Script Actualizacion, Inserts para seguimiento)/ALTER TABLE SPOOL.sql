@@ -1,0 +1,2 @@
+ALTER TABLE Spool 
+ADD DiametroMayor DECIMAL(10,4) NULL

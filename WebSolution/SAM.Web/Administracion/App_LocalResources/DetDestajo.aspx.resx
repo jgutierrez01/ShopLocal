@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAprobar.Text" xml:space="preserve">
+    <value>Aprobar</value>
+  </data>
+  <data name="btnCancelarAprobacion.Text" xml:space="preserve">
+    <value>Cancelar aprobación</value>
+  </data>
+  <data name="btnCmts.Text" xml:space="preserve">
+    <value>Guardar comentarios</value>
+  </data>
+  <data name="hlCmtsPartida.ToolTip" xml:space="preserve">
+    <value>Ver/editar comentarios de la partida</value>
+  </data>
+  <data name="hlCmtsVerArmado.ToolTip" xml:space="preserve">
+    <value>Ver comentarios de armado</value>
+  </data>
+  <data name="hlVerCmtsSoldadura.ToolTip" xml:space="preserve">
+    <value>Ver comentarios de soldadura</value>
+  </data>
+  <data name="imgAnterior.ToolTip" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="imgExclamacionArmado.ToolTip" xml:space="preserve">
+    <value>No se encontró el costo de armado</value>
+  </data>
+  <data name="imgExclamacionRaiz.ToolTip" xml:space="preserve">
+    <value>No se encontró el costo de raíz</value>
+  </data>
+  <data name="imgExclamacionRelleno.ToolTip" xml:space="preserve">
+    <value>No se encontró el costo de relleno</value>
+  </data>
+  <data name="imgSiguiente.ToolTip" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="lblAjuste.Text" xml:space="preserve">
+    <value>Ajuste</value>
+  </data>
+  <data name="lblAjuste.ToolTip" xml:space="preserve">
+    <value>Ajuste x junta</value>
+  </data>
+  <data name="lblAprobadoTexto.Text" xml:space="preserve">
+    <value>Estatus aprobación:</value>
+  </data>
+  <data name="lblCategoriaTexto.Text" xml:space="preserve">
+    <value>Puesto:</value>
+  </data>
+  <data name="lblCodigoTexto.Text" xml:space="preserve">
+    <value>Código:</value>
+  </data>
+  <data name="lblComentarios.Text" xml:space="preserve">
+    <value>Comentarios:</value>
+  </data>
+  <data name="lblCostoCuadroTexto.Text" xml:space="preserve">
+    <value>Cuadro correspondiente:</value>
+  </data>
+  <data name="lblCuadro.Text" xml:space="preserve">
+    <value>Cuadro</value>
+  </data>
+  <data name="lblCuadro.ToolTip" xml:space="preserve">
+    <value>Prorrateo cuadro</value>
+  </data>
+  <data name="lblDestajo.Text" xml:space="preserve">
+    <value>Destajo</value>
+  </data>
+  <data name="lblDestajo.ToolTip" xml:space="preserve">
+    <value>Destajo x junta</value>
+  </data>
+  <data name="lblDestajoRaiz.Text" xml:space="preserve">
+    <value>Raíz</value>
+  </data>
+  <data name="lblDestajoRaiz.ToolTip" xml:space="preserve">
+    <value>Costo proceso raíz</value>
+  </data>
+  <data name="lblDestajoRelleno.Text" xml:space="preserve">
+    <value>Relleno</value>
+  </data>
+  <data name="lblDestajoRelleno.ToolTip" xml:space="preserve">
+    <value>Costo proceso relleno</value>
+  </data>
+  <data name="lblDiasF.Text" xml:space="preserve">
+    <value>Días Fest.</value>
+  </data>
+  <data name="lblDiasF.ToolTip" xml:space="preserve">
+    <value>Prorrateo días festivos</value>
+  </data>
+  <data name="lblDiasFestPeriodoTexto.Text" xml:space="preserve">
+    <value>Días festivos periodo:</value>
+  </data>
+  <data name="lblEstatusPeriodoTexto.Text" xml:space="preserve">
+    <value>Estatus periodo:</value>
+  </data>
+  <data name="lblEt.Text" xml:space="preserve">
+    <value>Et.</value>
+  </data>
+  <data name="lblEt.ToolTip" xml:space="preserve">
+    <value>Etiqueta junta</value>
+  </data>
+  <data name="lblFa.Text" xml:space="preserve">
+    <value>Fam. Ac.</value>
+  </data>
+  <data name="lblFa.ToolTip" xml:space="preserve">
+    <value>Familia de acero</value>
+  </data>
+  <data name="lblFechasTexto.Text" xml:space="preserve">
+    <value>Fechas:</value>
+  </data>
+  <data name="lblNombreTexto.Text" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="lblNumCtrl.Text" xml:space="preserve">
+    <value># Control</value>
+  </data>
+  <data name="lblNumCtrl.ToolTip" xml:space="preserve">
+    <value>Número de control</value>
+  </data>
+  <data name="lblNumEmpleadoTexto.Text" xml:space="preserve">
+    <value>Núm. de empleado:</value>
+  </data>
+  <data name="lblOtros.Text" xml:space="preserve">
+    <value>Otros</value>
+  </data>
+  <data name="lblOtros.ToolTip" xml:space="preserve">
+    <value>Prorrateo otros</value>
+  </data>
+  <data name="lblPdis.Text" xml:space="preserve">
+    <value>Pdis</value>
+  </data>
+  <data name="lblPdis.ToolTip" xml:space="preserve">
+    <value>Pulgadas diametrales</value>
+  </data>
+  <data name="lblSemanaTexto.Text" xml:space="preserve">
+    <value>Periodo:</value>
+  </data>
+  <data name="lblSpool.Text" xml:space="preserve">
+    <value>Spool</value>
+  </data>
+  <data name="lblSpool.ToolTip" xml:space="preserve">
+    <value>Spool</value>
+  </data>
+  <data name="lblTitulo.Text" xml:space="preserve">
+    <value>Cálculo de destajo</value>
+  </data>
+  <data name="lblTj.Text" xml:space="preserve">
+    <value>T.J.</value>
+  </data>
+  <data name="lblTj.ToolTip" xml:space="preserve">
+    <value>Tijo de junta</value>
+  </data>
+  <data name="lblTotal.Text" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="lblTotal.ToolTip" xml:space="preserve">
+    <value>Total x junta</value>
+  </data>
+  <data name="litDetJuntasArmadas.Text" xml:space="preserve">
+    <value>Juntas armadas</value>
+  </data>
+  <data name="lnkEliminar.ToolTip" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="txtAjuste.Label" xml:space="preserve">
+    <value>Total ajuste:</value>
+  </data>
+  <data name="txtCantidadDiasF.Label" xml:space="preserve">
+    <value>Días festivos:</value>
+  </data>
+  <data name="txtCostoDiaF.Label" xml:space="preserve">
+    <value>Costo x día festivo:</value>
+  </data>
+  <data name="txtCuadro.Label" xml:space="preserve">
+    <value>Total cuadro:</value>
+  </data>
+  <data name="txtDestajo.Label" xml:space="preserve">
+    <value>Total destajo:</value>
+  </data>
+  <data name="txtDestajoRaiz.Label" xml:space="preserve">
+    <value>Total destajo raíz:</value>
+  </data>
+  <data name="txtDestajoRelleno.Label" xml:space="preserve">
+    <value>Total destajo relleno:</value>
+  </data>
+  <data name="txtDiasFestivos.Label" xml:space="preserve">
+    <value>Total días festivos:</value>
+  </data>
+  <data name="txtOtros.Label" xml:space="preserve">
+    <value>Total otros:</value>
+  </data>
+  <data name="txtTotal.Label" xml:space="preserve">
+    <value>Gran total:</value>
+  </data>
+  <data name="valSummary.HeaderText" xml:space="preserve">
+    <value>Errores</value>
+  </data>
+</root>

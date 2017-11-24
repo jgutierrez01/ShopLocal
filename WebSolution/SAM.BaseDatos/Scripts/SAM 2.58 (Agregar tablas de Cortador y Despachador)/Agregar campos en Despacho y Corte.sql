@@ -1,0 +1,3 @@
+ALTER TABLE Despacho ADD DespachadorID INT NULL 
+ALTER TABLE Corte ADD CortadorID INT NULL 
+

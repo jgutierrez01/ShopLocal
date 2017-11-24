@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnRegistar.Text" xml:space="preserve">
+    <value>Finalizar</value>
+  </data>
+  <data name="btnRevertir.Text" xml:space="preserve">
+    <value>Revertir</value>
+  </data>
+  <data name="btnSubmit.Text" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="cusChecks.ErrorMessage" xml:space="preserve">
+    <value>Para que el diseño pueda ser importado exitosamente, es necesario que todos los catalogos sean seleccionados.</value>
+  </data>
+  <data name="cusChecks.Text" xml:space="preserve">
+    <value>Para que el diseño pueda ser importado exitosamente, es necesario que todos los catalogos sean seleccionados.</value>
+  </data>
+  <data name="cusDdnProyectoReq.ErrorMessage" xml:space="preserve">
+    <value>Seleccione Proyecto</value>
+  </data>
+  <data name="cusDdnProyectoReq.Text" xml:space="preserve">
+    <value>Seleccione Proyecto</value>
+  </data>
+  <data name="cusExtensionArchivos.ErrorMessage" xml:space="preserve">
+    <value>Solo se admiten archivos con extension CSV</value>
+  </data>
+  <data name="cusExtensionArchivos.Text" xml:space="preserve">
+    <value>Solo se admiten archivos con extension CSV</value>
+  </data>
+  <data name="cusFamiliaAceros.ErrorMessage" xml:space="preserve">
+    <value>Favor de seleccionar la familia material para cada familia de acero.</value>
+  </data>
+  <data name="cusFamiliaAceros.Text" xml:space="preserve">
+    <value>Favor de seleccionar la familia material para cada familia de acero.</value>
+  </data>
+  <data name="cusHomologacion.ErrorMessage" xml:space="preserve">
+    <value>Debe de Seleccionar una accion para todos los spools a Homologar</value>
+  </data>
+  <data name="cusHomologacion.Text" xml:space="preserve">
+    <value>Debe de Seleccionar una accion para todos los spools a Homologar</value>
+  </data>
+  <data name="cusValidaRadUploader.ErrorMessage" xml:space="preserve">
+    <value>Error en los nombres de los archivos</value>
+  </data>
+  <data name="cusValidaRadUploader.Text" xml:space="preserve">
+    <value>Error en los nombres de los archivos</value>
+  </data>
+  <data name="lblConfirmarAlta.Text" xml:space="preserve">
+    <value>Confirme:</value>
+  </data>
+  <data name="lblCortes.Text" xml:space="preserve">
+    <value>Cortes:</value>
+  </data>
+  <data name="lblFamiliaAceroEncabezado.Text" xml:space="preserve">
+    <value>Familias de Acero a Registrar</value>
+  </data>
+  <data name="lblInstruccionesAceptar1.Text" xml:space="preserve">
+    <value>Si &lt;strong&gt;desea importar/actualizar los spools y los datos de catalogos&lt;/strong&gt; haga clic en &lt;strong&gt;Finalizar&lt;/strong&gt;.</value>
+  </data>
+  <data name="lblInstruccionesAceptar2.Text" xml:space="preserve">
+    <value>En caso que &lt;strong&gt;no desee importar/actualizar&lt;/strong&gt; haga clic en &lt;strong&gt;Revertir&lt;/strong&gt; para regresar a la pantalla anterior.</value>
+  </data>
+  <data name="lblItemCodeNoEncontrados.Text" xml:space="preserve">
+    <value>Item Codes A Registrar</value>
+  </data>
+  <data name="lblJuntas.Text" xml:space="preserve">
+    <value>Juntas:</value>
+  </data>
+  <data name="lblMaterial.Text" xml:space="preserve">
+    <value>Materiales:</value>
+  </data>
+  <data name="lblProyecto.Text" xml:space="preserve">
+    <value>Proyecto:</value>
+  </data>
+  <data name="lblSpoolDespachos.Text" xml:space="preserve">
+    <value>&lt;strong&gt;{0}&lt;/strong&gt; de ellos cuentan ya con orden de trabajo y su diseño ha cambiado, de los cuales &lt;strong&gt;{1}&lt;/strong&gt; son homologables y &lt;strong&gt;{2}&lt;/strong&gt; no son homologables</value>
+  </data>
+  <data name="lblSpoolInfo.Text" xml:space="preserve">
+    <value>Spools:</value>
+  </data>
+  <data name="lblSpoolsConflicto.Text" xml:space="preserve">
+    <value>Los spools con conflicto son los siguientes y deberan de ser actualizados manualmente:</value>
+  </data>
+  <data name="lblSpoolsImportables.Text" xml:space="preserve">
+    <value>&lt;strong&gt;{0}&lt;/strong&gt; de ellos pueden ser &lt;strong&gt;importados directamente&lt;/strong&gt;.</value>
+  </data>
+  <data name="lblSpoolsImportados.Text" xml:space="preserve">
+    <value>Existen &lt;strong&gt;{0}&lt;/strong&gt; spools en el diseño importado.</value>
+  </data>
+  <data name="lblSpoolsInstrucciones.Text" xml:space="preserve">
+    <value>A continuación se presentan los datos que no se encontraron dentro de los catálogos del sistema por lo que es necesario que se den de alta.</value>
+  </data>
+  <data name="lblSpoolsInstrucciones1.Text" xml:space="preserve">
+    <value>Si usted desea que se den de alta automáticamente por favor seleccione todos los catálogos.</value>
+  </data>
+  <data name="lblTipoCortesNoEncontrados.Text" xml:space="preserve">
+    <value>Tipos de Cortes a Registrar</value>
+  </data>
+  <data name="lblTitulo.Text" xml:space="preserve">
+    <value>Ingenieria importacion de Datos</value>
+  </data>
+  <data name="litAcero.Text" xml:space="preserve">
+    <value>Acero</value>
+  </data>
+  <data name="litFamilia.Text" xml:space="preserve">
+    <value>Familia Acero</value>
+  </data>
+  <data name="litResolverManualmente.Text" xml:space="preserve">
+    <value>Imposible Homologar Proceder manualmente</value>
+  </data>
+  <data name="radBarAceros.Text" xml:space="preserve">
+    <value>Familia Acero</value>
+  </data>
+  <data name="radBarAceros.ToolTip" xml:space="preserve">
+    <value>Familia Acero</value>
+  </data>
+  <data name="radBarCedulas.Text" xml:space="preserve">
+    <value>Cedulas</value>
+  </data>
+  <data name="radBarCedulas.ToolTip" xml:space="preserve">
+    <value>Cedulas</value>
+  </data>
+  <data name="radBarCortes.Text" xml:space="preserve">
+    <value>Cortes</value>
+  </data>
+  <data name="radBarCortes.ToolTip" xml:space="preserve">
+    <value>Cortes</value>
+  </data>
+  <data name="radBarDiametros.Text" xml:space="preserve">
+    <value>Diametros</value>
+  </data>
+  <data name="radBarDiametros.ToolTip" xml:space="preserve">
+    <value>Diametros</value>
+  </data>
+  <data name="radBarErrores.Text" xml:space="preserve">
+    <value>Errores</value>
+  </data>
+  <data name="radBarErrores.ToolTip" xml:space="preserve">
+    <value>Errores</value>
+  </data>
+  <data name="radBarFabAreas.Text" xml:space="preserve">
+    <value>Areas de Fabricacion</value>
+  </data>
+  <data name="radBarFabAreas.ToolTip" xml:space="preserve">
+    <value>Areas de Fabricacion</value>
+  </data>
+  <data name="radBarItemCodes.Text" xml:space="preserve">
+    <value>Item Codes</value>
+  </data>
+  <data name="radBarItemCodes.ToolTip" xml:space="preserve">
+    <value>Item Codes</value>
+  </data>
+  <data name="radBarJuntas.Text" xml:space="preserve">
+    <value>Juntas</value>
+  </data>
+  <data name="radBarJuntas.ToolTip" xml:space="preserve">
+    <value>Juntas</value>
+  </data>
+  <data name="valSummary.HeaderText" xml:space="preserve">
+    <value>Errores</value>
+  </data>
+</root>

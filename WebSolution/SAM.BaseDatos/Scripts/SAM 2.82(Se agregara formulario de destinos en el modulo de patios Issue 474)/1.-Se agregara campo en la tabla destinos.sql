@@ -1,0 +1,15 @@
+ALTER TABLE Destino
+ADD PatioID INT
+
+ALTER TABLE [dbo].[Destino]  WITH CHECK ADD  CONSTRAINT [FK_Destino_Patio] FOREIGN KEY([PatioID])
+REFERENCES [dbo].[Patio] ([PatioID])
+GO
+
+ALTER TABLE [dbo].[Destino] CHECK CONSTRAINT [FK_Destino_Patio]
+GO
+
+
+UPDATE Destino SET PatioID=0 WHERE PatioID IS NULL
+
+ALTER TABLE Destino ALTER COLUMN PatioID INTEGER NOT NULL
+

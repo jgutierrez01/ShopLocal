@@ -1,0 +1,168 @@
+﻿body
+{
+    background-color:#f7f6f6;
+    margin:0;
+    padding: 0;
+    font-family:Arial;
+    font-size: 12px;
+}
+
+a,
+a:visited,
+a:hover,
+a:active
+{
+    text-decoration:underline;
+    margin:0;
+    color:#df671f;
+    border:none;
+    font-family:Arial;
+    font-size:12px;
+}
+
+a img
+{
+    border:none;
+}
+
+input[type=text],
+textarea
+{
+    width:200px;
+}
+
+input[type=password]
+{
+    width:200px;
+    background-color:#dee8f4;
+}
+
+textarea
+{
+    font-family:Arial;
+    font-size: 12px;
+}
+
+select
+{
+    width:204px;
+}
+
+p
+{
+    clear:both;
+}
+
+label, span
+{
+    font-size: 12px;
+}
+
+label
+{
+    display:block;
+    font-weight:bold;
+}
+
+h3
+{
+	display: block;
+    clear: both;
+    font-size: 12px;
+    border-bottom: 1px solid #2d5d8f;
+    margin: 5px 40px 10px 0;
+    background-image: url(/Imagenes/Iconos/bulletHeader.png);
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    padding-left: 15px;
+    height: 15px;
+    line-height: 15px;
+}
+
+h5
+{
+    display: block;
+    clear: both;
+    font-size: 12px;
+    border-bottom: 1px solid #000000;
+    margin: 5px 0 10px 0;
+}
+
+.degradado
+{
+    position:fixed;
+    height:42px;
+    width:100%;
+    bottom:0px;
+    background-image:url(../Imagenes/Popup/degradado.png);
+}
+
+.imgLogoPopup
+{
+    float:right;
+    width:70px;
+    height:25px;
+    margin-right:10px;
+}
+
+.popupArmado
+{
+    width: 600px;
+    margin: 0 auto 0 auto;
+}
+
+
+.popupDespacho
+{
+    width: 670px;
+    margin: 0 auto 0 auto;
+}
+
+.popupDespacho .col1,
+.popupDespacho .col2
+{
+    width: 225px;
+}
+
+.popupDespacho .col2 .cajaAzul
+{
+    width: 190px;
+}
+
+.popupDespacho .col3
+{
+    width: 200px;
+}
+
+.popupDespacho .etDespacho
+{
+    font-style: italic;
+    padding-right: 3px;
+    font-weight: bold;
+}
+
+.bandaAzul
+{
+    background-image:url(../Imagenes/Menu/barraAzulLogin.png);
+    background-position: right center;
+    background-repeat:no-repeat;
+}
+
+span.displayInline label
+{
+    display:inline;
+    max-width:150px;
+    width:150px;    
+}
+
+table.displayInline tr td label
+{
+    display:inline;
+    max-width:150px;
+    width:150px;    
+}
+
+.boldElements span
+{
+    font-weight:bold;
+}

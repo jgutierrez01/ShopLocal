@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+<DTSConfigurationHeading>
+<DTSConfigurationFileInfo GeneratedBy="HSLT-WSTDT01\Hector Sven Lopez" GeneratedFromPackageName="CargaIngenieria" GeneratedFromPackageID="{C717DF0E-25BF-4C57-905E-AB4C9E4408EC}" GeneratedDate="12/12/2011 11:58:49 a.m."/>
+</DTSConfigurationHeading>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMAppDBConnString].Properties[Value]" ValueType="String">
+
+<ConfiguredValue>Data Source=mtysqldev-v01;User ID=sam;Password=sam123!;Initial Catalog=SAMAltamira;Provider=SQLOLEDB.1;Auto Translate=False;</ConfiguredValue></Configuration>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMDTSPackPathName].Properties[Value]" ValueType="String"><ConfiguredValue>D:\Sieena\Repositories\SAM\SAM.Integracion\SAM.Integracion\CargaIngenieria.dtsx</ConfiguredValue></Configuration>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMDTSRawFilesDirectoryPath].Properties[Value]" ValueType="String"><ConfiguredValue>D:\Sieena\Projects\SAM\Del Cliente\Ingenieria\error en materiales\solo un spool\</ConfiguredValue></Configuration>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMDTSValidaCatalogos].Properties[Value]" ValueType="Boolean"><ConfiguredValue>0</ConfiguredValue></Configuration>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMDTSValidaIntegridad].Properties[Value]" ValueType="Boolean"><ConfiguredValue>0</ConfiguredValue></Configuration>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMWebProjectID].Properties[Value]" ValueType="Int32"><ConfiguredValue>20</ConfiguredValue></Configuration>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMWebSessionID].Properties[Value]" ValueType="String"><ConfiguredValue>Pruebas</ConfiguredValue></Configuration>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMWebUploadedFilesDirectoryPath].Properties[Value]" ValueType="String"><ConfiguredValue>D:\Sieena\Development\SAM 2.0\Desarrollo\SAM.Integracion\SAM.Integracion\ArchivosIngenierias\</ConfiguredValue></Configuration>
+
+<Configuration ConfiguredType="Property" Path="\Package.Variables[User::SAMWebUsuarioModificaID].Properties[Value]" ValueType="String"><ConfiguredValue>8039BC13-4B93-49B3-AECB-E5E0ECF38D58</ConfiguredValue></Configuration>
+</DTSConfiguration>

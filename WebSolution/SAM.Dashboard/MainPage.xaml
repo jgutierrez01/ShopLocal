@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="SAM.Dashboard.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+    xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+    xmlns:tk="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Docking"
+             xmlns:local="clr-namespace:SAM.Dashboard"
+    mc:Ignorable="d"
+    d:DesignHeight="282" d:DesignWidth="1236" Loaded="UserControl_Loaded">
+
+
+    <Grid x:Name="LayoutRoot" Background="#F7F6F6">
+
+        <StackPanel HorizontalAlignment="Stretch">
+            <Border MinWidth="900" MaxWidth="2000" Name="bdFiltros"  Style="{StaticResource BordeCajaFiltros}" Margin="5,5,5,0" Canvas.ZIndex="2">
+                <controlsToolkit:DockPanel>
+                    <!-- Elementos Del Lado Izquierdo -->
+                    <StackPanel controlsToolkit:DockPanel.Dock="Left" 
+                                    HorizontalAlignment="Left" 
+                                    Height="50">
+                        <TextBlock x:Name="txtPatio" Text="{Binding txtPatio}" Style="{StaticResource LabelBold}"></TextBlock>
+                        <ComboBox Name="cbPatio" Style="{StaticResource ComboNormal}" ItemsSource="{Binding}" SelectionChanged="cbPatio_SelectionChanged" DisplayMemberPath="Nombre" SelectedValuePath="PatioID">
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" 
+                                    controlsToolkit:DockPanel.Dock="Left" Height="50">
+                        <TextBlock x:Name="txtProyecto" Text="{Binding txtProyecto}" Style="{StaticResource LabelBold}"></TextBlock>
+                        <ComboBox Name="cbProyecto" Style="{StaticResource ComboNormal}" ItemsSource="{Binding}" DisplayMemberPath="Nombre" SelectedValuePath="ProyectoID" ></ComboBox>
+                    </StackPanel>
+                    <Button Name="btnMostrar" Content="{Binding Mostrar}" Style="{StaticResource SimpleButton}" controlsToolkit:DockPanel.Dock="Left" Click="btnMostrar_Click"></Button>
+                    <Image Height="20" Stretch="Fill" Width="20" Source="/SAM.Dashboard;component/Imagenes/error.png" Margin="10,0,0,0" Visibility="Collapsed" Name="imgError" />
+                    <TextBlock controlsToolkit:DockPanel.Dock="Left" Text="{Binding errPatio}" Visibility="Collapsed" Name="txtError" Height="20" VerticalAlignment="Center" Padding="5,0,0,0" />
+                    <!-- Elementos Del Lado Derecho -->
+                    <Canvas HorizontalAlignment="Right" Width="430">
+                        <StackPanel Height="50">
+                            <TextBlock x:Name="txtVentana" Text="{Binding txtVentana}" Style="{StaticResource LabelBold}"></TextBlock>
+                            <ComboBox Style="{StaticResource ComboNormal}" Name="cbVentanas" IsEnabled="False">
+                                <ComboBoxItem>
+                                    <CheckBox Name="chkProyecto" Content="{Binding Proyecto}" Checked="chk_Checked"  Unchecked="chk_Unchecked" Tag="Proyecto"></CheckBox>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <CheckBox Name="chkIngenieria" Content="{Binding Ingenieria}" Checked="chk_Checked" Unchecked="chk_Unchecked" Tag="Ingenieria"  ></CheckBox>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <CheckBox Name="chkMateriales" Content="{Binding Materiales}" Checked="chk_Checked" Unchecked="chk_Unchecked" Tag="Materiales"  ></CheckBox>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <CheckBox Name="chkProduccion" Content="{Binding Produccion}" Checked="chk_Checked" Unchecked="chk_Unchecked" Tag="Produccion"  ></CheckBox>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <CheckBox Name="chkCalidad" Content="{Binding Calidad}" Checked="chk_Checked" Unchecked="chk_Unchecked" Tag="Calidad"  ></CheckBox>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <CheckBox Name="chkPintura" Content="{Binding Pintura}" Checked="chk_Checked" Unchecked="chk_Unchecked" Tag="Pintura"  ></CheckBox>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <CheckBox Name="chkComercial" Content="{Binding Comercial}" Checked="chk_Checked" Unchecked="chk_Unchecked" Tag="Comercial" ></CheckBox>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <CheckBox Name="chkReportes" Content="{Binding Reportes}" Checked="chk_Checked" Unchecked="chk_Unchecked" Tag="Reportes" ></CheckBox>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                        <Button Name="btnGuardar" Canvas.Left="205" Canvas.Top="5" Content="{Binding GuardarVista}" Style="{StaticResource SimpleButton}"  HorizontalAlignment="Right" controlsToolkit:DockPanel.Dock="Right" Click="btnGuardar_Click" IsEnabled="False"></Button>
+                        <Button Name="btnDefault" Canvas.Left="305" Canvas.Top="5" Content="{Binding VistaDefault}" Style="{StaticResource SimpleButton}"  HorizontalAlignment="Right" controlsToolkit:DockPanel.Dock="Right" Click="btnVistaDefault_Click" IsEnabled="False"></Button>
+                        <local:Mensaje Width="130"  Height="45" Canvas.Top="50" Canvas.Left="130" HorizontalAlignment="Right" Canvas.ZIndex="2" x:Name="ctrMensaje" ></local:Mensaje>
+                    </Canvas>
+                </controlsToolkit:DockPanel>
+            </Border >
+
+            <tk:RadDocking MinWidth="900" MaxWidth="2000" Height="430" BorderBrush="#FFF7F6F6" Margin="0,5,0,0" telerik:StyleManager.Theme="Summer"  Name="mainDock" ElementLoading="Dock_ElementLoading" ElementLoaded="Dock_ElementLoaded" >
+                <tk:RadDocking.DocumentHost>
+                    <tk:RadSplitContainer Name="splitMain" tk:RadDocking.SerializationTag="mainSplit" >
+                        <tk:RadPaneGroup Name="rpgMain" tk:RadDocking.SerializationTag="mainGroup"></tk:RadPaneGroup>
+                    </tk:RadSplitContainer>
+                </tk:RadDocking.DocumentHost>
+
+
+                <tk:RadDocking.Background>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="#003B76B6" Offset="0" />
+                        <GradientStop Color="#0024476E" Offset="1" />
+                    </LinearGradientBrush>
+                </tk:RadDocking.Background>
+            </tk:RadDocking>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

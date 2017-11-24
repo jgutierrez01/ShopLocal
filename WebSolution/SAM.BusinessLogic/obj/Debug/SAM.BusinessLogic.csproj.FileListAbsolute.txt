@@ -1,0 +1,399 @@
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsDestajos.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsDestajos.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsDestajos.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsDestajos.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.en-US.resources
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csproj.GenerateResource.Cache
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\Anbintec_Steelgo_SamShop - copia\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\itextsharp.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\log4net.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsDestajos.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.en-US.resources
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csproj.GenerateResource.Cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\itextsharp.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsDestajos.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\itextsharp.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\log4net.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\bin\Debug\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsDestajos.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgPeqKgtEspNoEncontrados.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsItemCodePeso.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsFaltantes.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstItemCode.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsLstNumeroUnico.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsNomina.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstJunta.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsEstSpool.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegJunta.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Excel.MsgsSegSpool.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.MensajesError.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionJunta.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.Utilerias.TitulosColumnaEstimacionSpool.en-US.resources
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.csproj.GenerateResource.Cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessLogic\obj\Debug\SAM.BusinessLogic.pdb

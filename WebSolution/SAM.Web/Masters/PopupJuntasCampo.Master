@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PopupJuntasCampo.master.cs" Inherits="SAM.Web.Masters.PopupJuntasCampo" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>SAM Control</title>
+    <asp:ContentPlaceHolder ID="cphHeader" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="javascript" type="text/javascript" src="/Scripts/MensajesUI.js"></script>
+    <script language="javascript" type="text/javascript" src="/Scripts/Sam.Popup.js"></script>
+    <script language="javascript" type="text/javascript" src="/Scripts/Sam.Framework.js"></script>
+    <link href="/Css/popup.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/secundario.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/SAMOrange/Grid.SAMOrange.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/SAMOrange/Calendar.SAMOrange.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/SAMOrange/Menu.SAMOrange.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="mainOverlay" class="overlay" style="display:none;"></div>
+    <div id="msgProcesando" class="msgProcesando" style="display:none;">
+        <asp:Literal runat="server" ID="litMsgProcesando" meta:resourcekey="litMsgProcesando" />
+              <div class="imgLoading">
+            <img src="/Imagenes/loading.gif" alt="loading" />
+        </div>
+    </div>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="radJsManager" runat="server">
+        <Scripts>
+            <%--Needed for JavaScript IntelliSense in VS2010--%>
+            <%--For VS2008 replace RadScriptManager with ScriptManager--%>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+            <asp:ScriptReference Path="~/Scripts/MicrosoftAjaxTemplate.js" />
+            <asp:ScriptReference Path="~/Scripts/scrollSync.js" />
+        </Scripts>
+    </telerik:RadScriptManager>
+    <div>
+        <asp:ContentPlaceHolder ID="cphBody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>    
+    </form>
+</body>
+</html>

@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B239B46F-7627-42EC-94F5-61B3FEF55AB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAM.BusinessObjects</RootNamespace>
+    <AssemblyName>SAM.BusinessObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\CategoriaPendienteBO.cs" />
+    <Compile Include="Administracion\CostoArmadoBO.cs" />
+    <Compile Include="Administracion\CostoProcesoRaizBO.cs" />
+    <Compile Include="Administracion\CostoProcesoRellenoBO.cs" />
+    <Compile Include="Administracion\DestajoBO.cs" />
+    <Compile Include="Administracion\EspesorBO.cs" />
+    <Compile Include="Administracion\ModuloBO.cs" />
+    <Compile Include="Administracion\PaginaBO.cs" />
+    <Compile Include="Administracion\PendienteBO.cs" />
+    <Compile Include="Administracion\PendienteDetalleBO.cs" />
+    <Compile Include="Administracion\PeqBO.cs" />
+    <Compile Include="Administracion\PerfilBO.cs" />
+    <Compile Include="Administracion\PermisoBO.cs" />
+    <Compile Include="Administracion\PreguntaSecretaBO.cs" />
+    <Compile Include="Administracion\TipoPendienteBO.cs" />
+    <Compile Include="Administracion\TipoReporteProyectoBO.cs" />
+    <Compile Include="Administracion\UsuarioBO.cs" />
+    <Compile Include="Catalogos\AceroBO.cs" />
+    <Compile Include="Catalogos\BastonBO.cs" />
+    <Compile Include="Catalogos\CedulaBO.cs" />
+    <Compile Include="Catalogos\ClienteBO.cs" />
+    <Compile Include="Catalogos\ColadasBO.cs" />
+    <Compile Include="Catalogos\ColorBO.cs" />
+    <Compile Include="Catalogos\ConceptoEstimacionBO.cs" />
+    <Compile Include="Catalogos\ConsumiblesBO.cs" />
+    <Compile Include="Catalogos\CortadorBO.cs" />
+    <Compile Include="Catalogos\CuadranteBO.cs" />
+    <Compile Include="Catalogos\DestinoBO.cs" />
+    <Compile Include="Catalogos\DespachadorBO.cs" />
+    <Compile Include="Catalogos\EstacionBO.cs" />
+    <Compile Include="Catalogos\InspectorBO.cs" />
+    <Compile Include="Catalogos\ItemCodeEquivalentesBO.cs" />
+    <Compile Include="Catalogos\KgTeoricoBO.cs" />
+    <Compile Include="Catalogos\MaquinaBO.cs" />
+    <Compile Include="Catalogos\TipoPruebaSpoolBO.cs" />
+    <Compile Include="Excepciones\ExcepcionArmado.cs" />
+    <Compile Include="Excepciones\ExcepcionCuadrante.cs" />
+    <Compile Include="Excepciones\ExcepcionFechas.cs" />
+    <Compile Include="Excepciones\ExcepcionPintura.cs" />
+    <Compile Include="Excepciones\ExceptionJuntaCampo.cs" />
+    <Compile Include="Catalogos\UbicacionFisicaBO.cs" />
+    <Compile Include="Catalogos\TipoMaterialBO.cs" />
+    <Compile Include="Catalogos\UltimoProcesoBO.cs" />
+    <Compile Include="Excepciones\ExcepcionCantidades.cs" />
+    <Compile Include="Excepciones\ExcepcionCorte.cs" />
+    <Compile Include="Excepciones\ExcepcionDespacho.cs" />
+    <Compile Include="Excepciones\ExcepcionDetReportePnd.cs" />
+    <Compile Include="Excepciones\ExcepcionEmbarque.cs" />
+    <Compile Include="Excepciones\ExcepcionEnHold.cs" />
+    <Compile Include="Excepciones\ExcepcionEstimacionJunta.cs" />
+    <Compile Include="Excepciones\ExcepcionEstimacionSpool.cs" />
+    <Compile Include="Excepciones\ExcepcionInspeccionDimensionalPatio.cs" />
+    <Compile Include="Excepciones\ExcepcionInspeccionVisualPatio.cs" />
+    <Compile Include="Excepciones\ExcepcionOdt.cs" />
+    <Compile Include="Excepciones\ExcepcionConcordancia.cs" />
+    <Compile Include="Excepciones\ExcepcionPrioridad.cs" />
+    <Compile Include="Excepciones\ExcepcionReportes.cs" />
+    <Compile Include="Excepciones\ExcepcionSoldadura.cs" />
+    <Compile Include="Excepciones\ExcepcionTolerancia.cs" />
+    <Compile Include="Excepciones\UsuarioBloqueadoException.cs" />
+    <Compile Include="Ingenieria\MaterialSpoolBO.cs" />
+    <Compile Include="Ingenieria\JuntaSpoolBO.cs" />
+    <Compile Include="Ingenieria\CorteSpoolBO.cs" />
+    <Compile Include="Ingenieria\SpoolBO.cs" />
+    <Compile Include="Catalogos\ContactoClienteBO.cs" />
+    <Compile Include="Catalogos\DefectoBO.cs" />
+    <Compile Include="Catalogos\DiametroBO.cs" />
+    <Compile Include="Catalogos\FabAreaBO.cs" />
+    <Compile Include="Catalogos\FabricanteBO.cs" />
+    <Compile Include="Catalogos\FamiliaAceroBO.cs" />
+    <Compile Include="Catalogos\FamiliaMaterialBO.cs" />
+    <Compile Include="Catalogos\ItemCodeBO.cs" />
+    <Compile Include="Catalogos\PatioBO.cs" />
+    <Compile Include="Catalogos\ProcesoRaizBO.cs" />
+    <Compile Include="Catalogos\ProcesoRellenoBO.cs" />
+    <Compile Include="Catalogos\ProveedorBO.cs" />
+    <Compile Include="Catalogos\SoldadorBO.cs" />
+    <Compile Include="Catalogos\TipoCorteBO.cs" />
+    <Compile Include="Catalogos\TipoJuntaBO.cs" />
+    <Compile Include="Catalogos\TipoPruebaBO.cs" />
+    <Compile Include="Catalogos\TransportistaBO.cs" />
+    <Compile Include="Catalogos\TuberoBO.cs" />
+    <Compile Include="Catalogos\WpsBO.cs" />
+    <Compile Include="Delegados.cs" />
+    <Compile Include="Excepciones\ExcepcionConcurrencia.cs" />
+    <Compile Include="Excepciones\ExcepcionDuplicados.cs" />
+    <Compile Include="Excepciones\ExcepcionRelaciones.cs" />
+    <Compile Include="Ingenieria\SpoolHoldBO.cs" />
+    <Compile Include="Materiales\NumeroUnicoBO.cs" />
+    <Compile Include="Materiales\PinturaNumeroUnicoBO.cs" />
+    <Compile Include="Materiales\RecepcionBO.cs" />
+    <Compile Include="Materiales\RequisicionNumeroUnicoBO.cs" />
+    <Compile Include="Materiales\RequisicionNumeroUnicoDetalleBO.cs" />
+    <Compile Include="MensajesError.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensajesError.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SamDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SamDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SamDbSelfTrackingTemplate.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SamDbSelfTrackingTemplate.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SamDbSelfTrackingTemplate.Context.Extensions.cs">
+      <DependentUpon>SamDbSelfTrackingTemplate.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Procesos.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Procesos.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\CongeladosBO.cs" />
+    <Compile Include="Produccion\CorteDetalleBO.cs" />
+    <Compile Include="Produccion\EstimacionBO.cs" />
+    <Compile Include="Produccion\EstimacionJuntaBO.cs" />
+    <Compile Include="Produccion\EstimacionSpoolBO.cs" />
+    <Compile Include="Produccion\JuntaCampoArmadoBO.cs" />
+    <Compile Include="Produccion\JuntaCampoBO.cs" />
+    <Compile Include="Produccion\JuntaWorkstatusBO.cs" />
+    <Compile Include="Produccion\NumeroUnicoInventarioBO.cs" />
+    <Compile Include="Produccion\NumeroUnicoMovimientoBO.cs" />
+    <Compile Include="Produccion\NumeroUnicoSegmentoBO.cs" />
+    <Compile Include="Produccion\OrdenTrabajoBO.cs" />
+    <Compile Include="Produccion\OrdenTrabajoMaterialBO.cs" />
+    <Compile Include="Produccion\OrdenTrabajoSpoolBO.cs" />
+    <Compile Include="Produccion\TallerBO.cs" />
+    <Compile Include="Produccion\TipoMovimientoBO.cs" />
+    <Compile Include="Produccion\ValidaFechasJuntasCampoBO.cs" />
+    <Compile Include="Produccion\WorkStatusSpoolBO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proyectos\ContactoBO.cs" />
+    <Compile Include="Proyectos\ProgramaBO.cs" />
+    <Compile Include="Proyectos\ProyectoBO.cs" />
+    <Compile Include="Proyectos\ProyectoConfiguracionBO.cs" />
+    <Compile Include="Proyectos\ProyectoPendienteBO.cs" />
+    <Compile Include="Proyectos\ProyectoReporteBO.cs" />
+    <Compile Include="Sql\Constantes.cs" />
+    <Compile Include="Sql\ObjetosSQL.cs" />
+    <Compile Include="Utilerias\CacheCatalogos.cs" />
+    <Compile Include="Utilerias\EntityConverter.cs" />
+    <Compile Include="Utilerias\EtiquetasMaterialUtil.cs" />
+    <Compile Include="Utilerias\Mapper.cs" />
+    <Compile Include="Utilerias\RechazosCortesUtil.cs" />
+    <Compile Include="Utilerias\TraductorEnumeraciones.cs" />
+    <Compile Include="Validations\ValidacionesAcero.cs" />
+    <Compile Include="Validations\ValidacionesCantidades.cs" />
+    <Compile Include="Validations\ValidacionesCedula.cs" />
+    <Compile Include="Validations\ValidacionesCliente.cs" />
+    <Compile Include="Validations\ValidacionesColada.cs" />
+    <Compile Include="Validations\ValidacionesConsumible.cs" />
+    <Compile Include="Validations\ValidacionesContacto.cs" />
+    <Compile Include="Validations\ValidacionesDefecto.cs" />
+    <Compile Include="Validations\ValidacionesDespachador.cs" />
+    <Compile Include="Validations\ValidacionesDestajo.cs" />
+    <Compile Include="Validations\ValidacionesDiametro.cs" />
+    <Compile Include="Validations\ValidacionesEstacion.cs" />
+    <Compile Include="Validations\ValidacionesEstimacionJunta.cs" />
+    <Compile Include="Validations\ValidacionesEstimacionSpool.cs" />
+    <Compile Include="Validations\ValidacionesFabricante.cs" />
+    <Compile Include="Validations\ValidacionesFamiliaAcero.cs" />
+    <Compile Include="Validations\ValidacionesFamiliaMaterial.cs" />
+    <Compile Include="Validations\ValidacionesFechas.cs" />
+    <Compile Include="Validations\ValidacionesIngenieria.cs" />
+    <Compile Include="Validations\ValidacionesInspeccionDimensionalPatio.cs" />
+    <Compile Include="Validations\ValidacionesInspeccionVisual.cs" />
+    <Compile Include="Validations\ValidacionesInspeccionVisualPatio.cs" />
+    <Compile Include="Validations\ValidacionesInspector.cs" />
+    <Compile Include="Validations\ValidacionesItemCode.cs" />
+    <Compile Include="Validations\ValidacionesJuntaCampo.cs" />
+    <Compile Include="Validations\ValidacionesJuntaInspeccionVisual.cs" />
+    <Compile Include="Validations\ValidacionesJuntaReportePnd.cs" />
+    <Compile Include="Validations\ValidacionesJuntaSpool.cs" />
+    <Compile Include="Validations\ValidacionesMaterialSpool.cs" />
+    <Compile Include="Validations\ValidacionesNumeroUnico.cs" />
+    <Compile Include="Validations\ValidacionesNumeroUnicoSegmento.cs" />
+    <Compile Include="Validations\ValidacionesOdt.cs" />
+    <Compile Include="Validations\ValidacionesPatio.cs" />
+    <Compile Include="Validations\ValidacionesPerfil.cs" />
+    <Compile Include="Validations\ValidacionesProcesoRaiz.cs" />
+    <Compile Include="Validations\ValidacionesProcesoRelleno.cs" />
+    <Compile Include="Validations\ValidacionesProyecto.cs" />
+    <Compile Include="Validations\ValidacionesProveedor.cs" />
+    <Compile Include="Validations\ValidacionesRecepcion.cs" />
+    <Compile Include="Validations\ValidacionesReporteDimensional.cs" />
+    <Compile Include="Validations\ValidacionesReportePnd.cs" />
+    <Compile Include="Validations\ValidacionesReporteTt.cs" />
+    <Compile Include="Validations\ValidacionesRequisicion.cs" />
+    <Compile Include="Validations\ValidacionesRequisicionNumeroUnico.cs" />
+    <Compile Include="Validations\ValidacionesRequisicionNumeroUnicoDetalle.cs" />
+    <Compile Include="Validations\ValidacionesRequisicionPintura.cs" />
+    <Compile Include="Validations\ValidacionesRequisicionPinturaDetalle.cs" />
+    <Compile Include="Validations\ValidacionesSoldador.cs" />
+    <Compile Include="Validations\ValidacionesEstimacion.cs" />
+    <Compile Include="Validations\ValidacionesSpool.cs" />
+    <Compile Include="Validations\ValidacionesTipoCorte.cs" />
+    <Compile Include="Validations\ValidacionesTipoJunta.cs" />
+    <Compile Include="Validations\ValidacionesTipoPrueba.cs" />
+    <Compile Include="Validations\ValidacionesTransportista.cs" />
+    <Compile Include="Validations\ValidacionesTubero.cs" />
+    <Compile Include="Validations\ValidacionesUsuario.cs" />
+    <Compile Include="Validations\ValidacionesWps.cs" />
+    <Compile Include="Validations\ValidationBase.cs" />
+    <Compile Include="Workstatus\ArmadoBO.cs" />
+    <Compile Include="Workstatus\CampoSeguimientoJuntaBO.cs" />
+    <Compile Include="Workstatus\CampoSeguimientoSpoolBO.cs" />
+    <Compile Include="Workstatus\CorteBO.cs" />
+    <Compile Include="Workstatus\DespachoBO.cs" />
+    <Compile Include="Workstatus\DetRequisicionPinturaBO.cs" />
+    <Compile Include="Workstatus\EmbarqueBO.cs" />
+    <Compile Include="Workstatus\InspeccionDimensionalBO.cs" />
+    <Compile Include="Workstatus\InspeccionVisualBO.cs" />
+    <Compile Include="Workstatus\JuntaInspeccionVisualBO.cs" />
+    <Compile Include="Workstatus\JuntaReportePndBO.cs" />
+    <Compile Include="Workstatus\JuntaReporteTtBO.cs" />
+    <Compile Include="Workstatus\JuntaRequisicionBO.cs" />
+    <Compile Include="Workstatus\LiberacionDimensionalPatioBO.cs" />
+    <Compile Include="Workstatus\LiberacionVisualPatioBO.cs" />
+    <Compile Include="Workstatus\ModuloSeguimientoJuntaBO.cs" />
+    <Compile Include="Workstatus\ModuloSeguimientoSpoolBO.cs" />
+    <Compile Include="Workstatus\OkPNDBO.cs" />
+    <Compile Include="Workstatus\PinturaBO.cs" />
+    <Compile Include="Workstatus\ReporteDimensionalBO.cs" />
+    <Compile Include="Workstatus\ReporteDimensionalDetalleBO.cs" />
+    <Compile Include="Workstatus\ReportePndBO.cs" />
+    <Compile Include="Workstatus\ReporteRequisicionPinturaBO.cs" />
+    <Compile Include="Workstatus\ReporteTtBO.cs" />
+    <Compile Include="Workstatus\RequisicionBO.cs" />
+    <Compile Include="Workstatus\RequisicionPinturaBO.cs" />
+    <Compile Include="Workstatus\RequisicionPruebasBO.cs" />
+    <Compile Include="Workstatus\RevisionHoldsBO.cs" />
+    <Compile Include="Workstatus\SeguimientoSpoolBO.cs" />
+    <Compile Include="Workstatus\SoldadorProcesoBO.cs" />
+    <Compile Include="Workstatus\SoldaduraBO.cs" />
+    <Compile Include="Workstatus\SpoolReportePndBO.cs" />
+    <Compile Include="Workstatus\SpoolRequisicionBO.cs" />
+    <Compile Include="Workstatus\TransferenciaSpoolBO.cs" />
+    <Compile Include="Workstatus\ValidaFechasBO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mimo.Framework\Mimo.Framework.csproj">
+      <Project>{344217DB-C52B-4F73-9BBC-C06742FD38B2}</Project>
+      <Name>Mimo.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.Common\SAM.Common.csproj">
+      <Project>{AAF73BDC-FC91-40EB-9584-E039A241BB1E}</Project>
+      <Name>SAM.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.Entities\SAM.Entities.csproj">
+      <Project>{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}</Project>
+      <Name>SAM.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\SamDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SamDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo\SamDbSelfTrackingTemplate.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SamDbSelfTrackingTemplate.Context.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MensajesError.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>MensajesError.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajesError.en-US.resx">
+      <LastGenOutput>MensajesError.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Procesos.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Procesos.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

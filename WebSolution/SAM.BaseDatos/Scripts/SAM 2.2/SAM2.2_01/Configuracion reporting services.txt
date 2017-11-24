@@ -1,0 +1,10 @@
+OLD SERVER
+D:\MSSQLServer\SQLData\MSRS10.MSSQLSERVER\Reporting Services\ReportServer
+
+NEW SERVER
+C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer
+
+
+<appSettings>
+		<add key="Sam.CodigoBarras" value="http://sam.mimoss.dev/CodigoBarras.aspx" />
+	</appSettings>

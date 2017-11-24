@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DescargarReportes.aspx.cs" Inherits="SAM.Web.Calidad.DescargarReportes" %>

@@ -1,0 +1,1 @@
+insert into FabArea (Codigo) values ('JACKET')

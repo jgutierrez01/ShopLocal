@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnMostrar.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="btnMostrar.Text1" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="hdDespachadoICE.HeaderText" xml:space="preserve">
+    <value>Despachado desde IC Equivalente</value>
+  </data>
+  <data name="hdDiametro1.HeaderText" xml:space="preserve">
+    <value>Diámetro 1 ('')</value>
+  </data>
+  <data name="hdDiametro2.HeaderText" xml:space="preserve">
+    <value>Diámetro 2 ('')</value>
+  </data>
+  <data name="hdDisponible.HeaderText" xml:space="preserve">
+    <value>Inventario Disponible</value>
+  </data>
+  <data name="hdEntradasICE.HeaderText" xml:space="preserve">
+    <value>Entradas desde IC Equivalente</value>
+  </data>
+  <data name="hdEnTransferencia.HeaderText" xml:space="preserve">
+    <value>Total Despachado por cortar (pz/mm)</value>
+  </data>
+  <data name="hdICDescripcion.DataField" xml:space="preserve">
+    <value>DescripcionEspanol</value>
+  </data>
+  <data name="hdICDescripcion.HeaderText" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="hdInventarioActual.HeaderText" xml:space="preserve">
+    <value>Total Físico en Almacén (pz/mm)</value>
+  </data>
+  <data name="hdInventarioActualEquivalente.HeaderText" xml:space="preserve">
+    <value>Inventario Actual Equivalente (pz/mm)</value>
+  </data>
+  <data name="hdInventarioCongelado.HeaderText" xml:space="preserve">
+    <value>Total Congelado (pz/mm)</value>
+  </data>
+  <data name="hdInventarioCongeladoEquivalente.HeaderText" xml:space="preserve">
+    <value>Asignado para IC Equivalente (pz/mm)</value>
+  </data>
+  <data name="hdInventarioDisponibleCruce.HeaderText" xml:space="preserve">
+    <value>Inventario Disponible Cruce (pz/mm)</value>
+  </data>
+  <data name="hdInventarioDisponibleCruceEquivalente.HeaderText" xml:space="preserve">
+    <value>Disponible de IC Equivalente (pz/mm)</value>
+  </data>
+  <data name="hdItemCode.HeaderText" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="hdPreparacionICE.HeaderText" xml:space="preserve">
+    <value>Despachado por Cortar para IC Equivalente</value>
+  </data>
+  <data name="hdRecibidoNeto.HeaderText" xml:space="preserve">
+    <value>Recibido Neto (pz/mm)</value>
+  </data>
+  <data name="hdSalidaICE.HeaderText" xml:space="preserve">
+    <value>Salida para IC Equivalente</value>
+  </data>
+  <data name="hdSalidasTemporales.HeaderText" xml:space="preserve">
+    <value>Salidas Temporales</value>
+  </data>
+  <data name="hdTipoMaterial.DataField" xml:space="preserve">
+    <value>TipoMaterialNombreEspañol</value>
+  </data>
+  <data name="hdTipoMaterial.HeaderText" xml:space="preserve">
+    <value>Tipo Material</value>
+  </data>
+  <data name="hdTotalCondicionada.HeaderText" xml:space="preserve">
+    <value>Total Condicionado (pz/mm)</value>
+  </data>
+  <data name="hdTotalCorteSinDespachado.HeaderText" xml:space="preserve">
+    <value>Total Cortado (pz/mm)</value>
+  </data>
+  <data name="hdTotalDanado.HeaderText" xml:space="preserve">
+    <value>Total Dañado (pz/mm)</value>
+  </data>
+  <data name="hdTotalDespachado.HeaderText" xml:space="preserve">
+    <value>Despachado a Producción (pz/mm)</value>
+  </data>
+  <data name="hdTotalDespachadoEquivalente.HeaderText" xml:space="preserve">
+    <value>Total Despachado / Cortado Equivalente (pz/mm)</value>
+  </data>
+  <data name="hdTotalDisponibleCruce.HeaderText" xml:space="preserve">
+    <value>Total Disponible para Cruce</value>
+  </data>
+  <data name="hdTotalIngenieria.HeaderText" xml:space="preserve">
+    <value>Total Ingeniería (pz/mm)</value>
+  </data>
+  <data name="hdTotalMermas.HeaderText" xml:space="preserve">
+    <value>Total Merma (pz/mm)</value>
+  </data>
+  <data name="hdTotalOrdenTrabajo.HeaderText" xml:space="preserve">
+    <value>Total Orden Trabajo (pz/mm)</value>
+  </data>
+  <data name="hdTotalOtrasEntradas.HeaderText" xml:space="preserve">
+    <value>Otras Entradas (pz/mm)</value>
+  </data>
+  <data name="hdTotalOtrasSalidas.HeaderText" xml:space="preserve">
+    <value>Total Otras Salidas (pz/mm)</value>
+  </data>
+  <data name="hdTotalPorDespachar.HeaderText" xml:space="preserve">
+    <value>Total por Despachar</value>
+  </data>
+  <data name="hdTotalRechazada.HeaderText" xml:space="preserve">
+    <value>Total Rechazado (pz/mm)</value>
+  </data>
+  <data name="hdTotalRecibida.HeaderText" xml:space="preserve">
+    <value>Total Recibido (pz/mm)</value>
+  </data>
+  <data name="imgExportar.ToolTip" xml:space="preserve">
+    <value>Exportar a Excel</value>
+  </data>
+  <data name="lblListaNumeroUnico.Text" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="lblProyecto.Text" xml:space="preserve">
+    <value>Proyecto:</value>
+  </data>
+  <data name="lblProyecto.Text1" xml:space="preserve">
+    <value>Proyecto:</value>
+  </data>
+  <data name="lblTitulo.Text" xml:space="preserve">
+    <value>Materiales por Item Code</value>
+  </data>
+  <data name="lnkActualizar.Text" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="lnkExportar.Text" xml:space="preserve">
+    <value>Exportar a Excel</value>
+  </data>
+  <data name="valProyecto.ErrorMessage" xml:space="preserve">
+    <value>El proyecto es requerido</value>
+  </data>
+  <data name="valSummaryResource1.HeaderText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="hdCorteICE.HeaderText" xml:space="preserve">
+    <value>Cortado para IC Equivalente</value>
+  </data>
+  <data name="imgActualizar.ToolTip" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="hdCorteDesdeICE.HeaderText" xml:space="preserve">
+    <value>Cortado desde IC Equivalente</value>
+  </data>
+  <data name="hdPreparacionDesdeICE.HeaderText" xml:space="preserve">
+    <value>Despachado por Cortar desde IC Equivalente</value>
+  </data>
+</root>

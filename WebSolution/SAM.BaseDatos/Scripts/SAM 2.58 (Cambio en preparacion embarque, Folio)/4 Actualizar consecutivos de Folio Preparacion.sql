@@ -1,0 +1,1 @@
+UPDATE ProyectoConsecutivo SET ConsecutivoFolioPreparacion = 0

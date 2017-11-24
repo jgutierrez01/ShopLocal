@@ -1,0 +1,1 @@
+alter table ProyectoDossier add ReportePMI bit not null default 0

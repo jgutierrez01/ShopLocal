@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAM.Mobile", "SAM.Mobile\SAM.Mobile.csproj", "{255F1840-6EBE-4DF1-9499-D23E12712FCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mimo.Framework", "Mimo.Framework\Mimo.Framework.csproj", "{344217DB-C52B-4F73-9BBC-C06742FD38B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAM.Entities", "SAM.Entities\SAM.Entities.csproj", "{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAM.BusinessObjects", "SAM.BusinessObjects\SAM.BusinessObjects.csproj", "{B239B46F-7627-42EC-94F5-61B3FEF55AB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAM.Common", "SAM.Common\SAM.Common.csproj", "{AAF73BDC-FC91-40EB-9584-E039A241BB1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAM.BusinessLogic", "SAM.BusinessLogic\SAM.BusinessLogic.csproj", "{794B70EF-E0A5-4529-B892-7BED8AA7FB37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{255F1840-6EBE-4DF1-9499-D23E12712FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255F1840-6EBE-4DF1-9499-D23E12712FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255F1840-6EBE-4DF1-9499-D23E12712FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255F1840-6EBE-4DF1-9499-D23E12712FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{344217DB-C52B-4F73-9BBC-C06742FD38B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344217DB-C52B-4F73-9BBC-C06742FD38B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344217DB-C52B-4F73-9BBC-C06742FD38B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344217DB-C52B-4F73-9BBC-C06742FD38B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B239B46F-7627-42EC-94F5-61B3FEF55AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B239B46F-7627-42EC-94F5-61B3FEF55AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B239B46F-7627-42EC-94F5-61B3FEF55AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B239B46F-7627-42EC-94F5-61B3FEF55AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF73BDC-FC91-40EB-9584-E039A241BB1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF73BDC-FC91-40EB-9584-E039A241BB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF73BDC-FC91-40EB-9584-E039A241BB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF73BDC-FC91-40EB-9584-E039A241BB1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794B70EF-E0A5-4529-B892-7BED8AA7FB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794B70EF-E0A5-4529-B892-7BED8AA7FB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794B70EF-E0A5-4529-B892-7BED8AA7FB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794B70EF-E0A5-4529-B892-7BED8AA7FB37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

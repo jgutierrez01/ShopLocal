@@ -1,0 +1,49 @@
+﻿@using Resources.Views
+@using SAM.Web.Shop.Factories
+@using SAM.Web.Shop.Resources.Views.WorkStatus
+@using SAM.Web.Shop.Models
+@model ShipmentOutModel
+
+
+@{
+    ViewBag.Title = "ShipOut";
+    Layout = "~/Views/Layouts/YardLayout.cshtml";
+}
+
+
+<h4 class="header">@Html.Raw(WorkStatusStrings.ShipOut)</h4>
+
+
+@using (Html.BeginForm("SaveOut", "ShipmentOut", new { role="form", id="shipment-out-form"}))
+{    
+    <fieldset id="shipment-out-form">
+
+
+        <legend></legend>        
+        
+        <div class="form-group">
+            @Html.Action("ShipmentDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequired(Model, ViewContext.ViewData.ModelState) })  
+        </div>
+     
+        @Html.ValidationSummary(false, string.Empty, new { @class = "alert alert-danger" })
+         @if(Model != null && Model.Exit ){
+            <div class ="alert alert-info">
+                @Html.Raw(CommonStrings.SuccessfulEdition)
+            </div>
+        }
+        <button type="submit" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
+    </fieldset>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        
+        $(function () {
+
+            var out = new sam.pages.shipment.out($("#shipment-out-form"));
+            out.init();
+
+        });
+ 
+    </script>
+}

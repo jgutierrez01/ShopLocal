@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Publico.master.cs" Inherits="SAM.Web.Masters.Publico" %>
+<%@ Register Src="~/Controles/Login/PerfilLogin.ascx" TagName="Perfil" TagPrefix="ctrl" %>
+<%@ Register Src="~/Controles/Login/MenuLogin.ascx" TagName="Menu" TagPrefix="ctrl" %>
+<%@ Register Src="~/Controles/Login/SteelgoMenu.ascx" TagName="Steelgo" TagPrefix="ctrl" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SAM Control</title>
+    <telerik:RadStyleSheetManager ID="radCssManager" runat="server" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="/Css/principal.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/secundario.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="userAgentDependant" runat="server">
+        <link rel="stylesheet" type="text/css" href="../Css/ie7.css" />
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <telerik:RadScriptManager ID="radJsManager" runat="server">
+        <Scripts>
+            <%--Needed for JavaScript IntelliSense in VS2010--%>
+            <%--For VS2008 replace RadScriptManager with ScriptManager--%>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+        </Scripts>
+    </telerik:RadScriptManager>
+     <table class="tablaEstructuraLogin" border="0" cellpadding="0" cellspacing="0">
+        <tr class="Header sinEspacios">
+            <td class="AnchoLaterales FondoIzquierdo">
+            </td>
+            <td class="CentralLogin" valign="bottom">
+                <div class="samLogoLogin">
+                </div>
+                <ctrl:Menu runat="server" ID="ctrlMenu" />
+                <ctrl:Perfil runat="server" ID="ctrlPerfil" />
+            </td>
+            <td class="AnchoLaterales FondoDerecho">
+            </td>
+        </tr>
+        <tr>
+            <td class="AnchoLaterales fondoGris">
+            </td>
+            <td class="fondoGris padding" style="padding-top:10px; padding-bottom:10px;">
+                <asp:ContentPlaceHolder ID="cphBody" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+            <td class="AnchoLaterales fondoGris" valign="top">
+            </td>
+        </tr>        
+        <tr>
+            <td class="AnchoLaterales footerImgIzq" style="width:23px; min-width:23px; max-width:23px;">            
+            </td>
+            <td class="fondoFooter textFooter">
+                <asp:Literal runat="server" ID="litFooter" meta:resourcekey="litFooter" />
+            </td>
+            <td class="AnchoLaterales footerImgDer" style="width:23px; min-width:23px; max-width:23px;">   
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="divDerecho bgMenuLogin">
+                    <ctrl:Steelgo runat="server" ID="ctrlSteelgo" />
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    </div>
+    </form>
+</body>
+</html>

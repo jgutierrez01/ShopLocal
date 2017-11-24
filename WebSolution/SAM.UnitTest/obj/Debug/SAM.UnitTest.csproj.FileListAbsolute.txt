@@ -1,0 +1,164 @@
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll.config
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\log4net.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll.config
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\itextsharp.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.dll
+C:\Users\Maftec_07\Source\Repos\SAM - original - revision\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll.config
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\itextsharp.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.pdb
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.dll
+C:\Users\Maftec09\Downloads\SHOP\Actual\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\DocumentFormat.OpenXml.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\itextsharp.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll.config
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\DocumentFormat.OpenXml.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\itextsharp.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.pdb
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.xml
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\en-US\Mimo.Framework.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Common.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Entities.resources.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.csprojResolveAssemblyReference.cache
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.dll
+D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.pdb

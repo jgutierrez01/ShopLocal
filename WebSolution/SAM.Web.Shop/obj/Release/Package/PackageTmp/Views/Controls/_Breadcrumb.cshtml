@@ -1,0 +1,16 @@
+﻿@using SAM.Web.Shop.Models
+@model BreadcrumbModel
+
+<ol class="breadcrumb">
+    @foreach (BreadcrumbItem item in Model.Items)
+    {
+        if (string.IsNullOrWhiteSpace(item.Link))
+        {
+            <li>@item.DisplayText</li>
+        }
+        else
+        {
+            <li><a href="@item.Link">@item.DisplayText</a></li>  
+        }
+    }
+</ol>

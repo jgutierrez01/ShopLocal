@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{344217DB-C52B-4F73-9BBC-C06742FD38B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mimo.Framework</RootNamespace>
+    <AssemblyName>Mimo.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\Dlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI, Version=2013.3.1324.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dlls\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Config.cs" />
+    <Compile Include="Common\DataUtils.cs" />
+    <Compile Include="Common\Expressions.cs" />
+    <Compile Include="Common\IOUtils.cs" />
+    <Compile Include="Common\LanguageHelper.cs" />
+    <Compile Include="Common\MyReportServerCredentials.cs" />
+    <Compile Include="Common\NumeroALetra.cs" />
+    <Compile Include="Common\ProcessorsUtils.cs" />
+    <Compile Include="Common\RandomPassword.cs" />
+    <Compile Include="Common\ReportUtils.cs" />
+    <Compile Include="Common\TextUtils.cs" />
+    <Compile Include="Common\UrlEncoderDecoder.cs" />
+    <Compile Include="Common\WebUtils.cs" />
+    <Compile Include="Cryptography\ConvertUtils.cs" />
+    <Compile Include="Cryptography\Crypter.cs" />
+    <Compile Include="Cryptography\CrypterConstants.cs" />
+    <Compile Include="Cryptography\HashUtils.cs" />
+    <Compile Include="Cryptography\RijndaelImpl.cs" />
+    <Compile Include="Cryptography\RijndaelParameters.cs" />
+    <Compile Include="Cryptography\RsaDecrypter.cs" />
+    <Compile Include="Cryptography\RsaEncrypter.cs" />
+    <Compile Include="Cryptography\RsaUtils.cs" />
+    <Compile Include="Data\BaseEntity.cs" />
+    <Compile Include="Data\DataAccess.cs" />
+    <Compile Include="Data\DataAccessFactory.cs" />
+    <Compile Include="Data\ObjectSetFilter.cs" />
+    <Compile Include="Data\ObjectSetOrder.cs" />
+    <Compile Include="DynamicQueryable.cs" />
+    <Compile Include="Exceptions\BaseValidationException.cs" />
+    <Compile Include="Extensions\GridExtensions.cs" />
+    <Compile Include="Extensions\ObjectSetExtensions.cs" />
+    <Compile Include="Extensions\OrderByHelper.cs" />
+    <Compile Include="Extensions\PrimitiveDataTypeExtensions.cs" />
+    <Compile Include="Mail\Email.cs" />
+    <Compile Include="Mail\MailToken.cs" />
+    <Compile Include="Mail\Smtp.cs" />
+    <Compile Include="Resources\MimossRadGridMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MimossRadGridMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\AutoDisableButton.cs" />
+    <Compile Include="WebControls\LanguageDropDown.cs" />
+    <Compile Include="WebControls\MimossRadGrid.cs" />
+    <Compile Include="WebControls\DynamicControlsPlaceHolder.cs" />
+    <Compile Include="WebControls\IMappable.cs" />
+    <Compile Include="WebControls\IMappableField.cs" />
+    <Compile Include="WebControls\LabeledTextBox.cs" />
+    <Compile Include="WebControls\MappableCheckBox.cs" />
+    <Compile Include="WebControls\MappableControl.cs" />
+    <Compile Include="WebControls\MappableDatePicker.cs" />
+    <Compile Include="WebControls\MappableDropDown.cs" />
+    <Compile Include="WebControls\MappablePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ReflectionUtils.cs" />
+    <Compile Include="WebControls\RequiredLabeledTextBox.cs" />
+    <Compile Include="Extensions\WebExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MimossRadGridMessages.en-US.resx" />
+    <EmbeddedResource Include="Resources\MimossRadGridMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MimossRadGridMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

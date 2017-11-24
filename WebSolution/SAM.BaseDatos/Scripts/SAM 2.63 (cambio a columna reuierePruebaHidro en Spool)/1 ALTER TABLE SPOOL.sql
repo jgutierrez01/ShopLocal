@@ -1,0 +1,1 @@
+ALTER TABLE Spool ALTER COLUMN RequierePruebaHidrostatica VARCHAR(10)

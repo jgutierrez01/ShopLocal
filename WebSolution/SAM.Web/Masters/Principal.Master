@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs"
+    Inherits="SAM.Web.Masters.Principal" %>
+
+<%@ Register Src="~/Controles/Navegacion/Menu.ascx" TagName="Menu" TagPrefix="sam" %>
+<%@ Register Src="~/Controles/Navegacion/PiePagina.ascx" TagName="PiePagina" TagPrefix="sam" %>
+<%@ Register Src="~/Controles/Navegacion/PerfilUsuario.ascx" TagName="PerfilUsuario"
+    TagPrefix="sam" %>
+<%@ Register Src="~/Controles/Navegacion/SubMenu.ascx" TagName="SubMenu" TagPrefix="sam" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SAM Control</title>
+    <telerik:RadStyleSheetManager ID="radCssManager" runat="server" />
+    <script language="javascript" type="text/javascript" src="/Scripts/Sam.Framework.js"></script>
+    <script language="javascript" type="text/javascript" src="/Scripts/MensajesUI.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="/Css/principal.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/secundario.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/SAMOrange/Grid.SAMOrange.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/SAMOrange/Calendar.SAMOrange.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/SAMOrange/Menu.SAMOrange.css" rel="stylesheet" type="text/css" />
+    <link href="/Css/SAMOrange/ComboBox.SAMOrange.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="userAgentDependant" runat="server">
+        <link rel="stylesheet" type="text/css" href="../Css/ie7.css" />
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="mainOverlay" class="overlay" style="display: none;">
+    </div>
+    <div id="msgProcesando" class="msgProcesando" style="display: none;">
+        <asp:Literal runat="server" ID="litMsgProcesando" meta:resourcekey="litMsgProcesando" />
+        <div class="imgLoading">
+            <img src="/Imagenes/loading.gif" alt="loading" />
+        </div>
+    </div>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="radJsManager" runat="server" LoadScriptsBeforeUI="true" AsyncPostBackTimeout="300">
+        <Scripts>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+            <asp:ScriptReference Path="~/Scripts/MicrosoftAjaxTemplate.js" />
+            <asp:ScriptReference Path="~/Scripts/scrollSync.js" />
+            <asp:ScriptReference Path="~/Scripts/jquery-migrate-1.2.1.js" />
+        </Scripts>
+    </telerik:RadScriptManager>
+    <telerik:RadWindowManager runat="server" ID="wndMgr" VisibleOnPageLoad="false" ReloadOnShow="false"
+        ShowContentDuringLoad="false" VisibleStatusbar="false">
+        <Windows>
+            <telerik:RadWindow runat="server" ID="genericWindow" />
+        </Windows>
+    </telerik:RadWindowManager>
+    <table class="tablaEstructura" border="0" cellspacing="0" cellpadding="0">
+        <tr class="Header sinEspacios">
+            <td class="AnchoLaterales FondoIzquierdo">
+            </td>
+            <td class="Central" valign="bottom">
+                <div class="samLogo">
+                </div>
+                <sam:PerfilUsuario ID="perfil" runat="server" />
+                <p style="clear: both; height: 0px; margin: 0px; display: none;">
+                </p>
+                <sam:Menu ID="menu" runat="server" />
+                <sam:SubMenu ID="subMenu" runat="server" />
+            </td>
+            <td class="AnchoLaterales FondoDerecho">
+            </td>
+        </tr>
+        <tr>
+            <td class="AnchoLaterales fondoGris" valign="top">
+            </td>
+            <td class="fondoGris padding">
+                <asp:Panel ClientIDMode="Static" ID="autoWrapper" runat="server">
+                    <asp:ContentPlaceHolder ID="cphBody" runat="server">
+                    </asp:ContentPlaceHolder>
+                </asp:Panel>
+            </td>
+            <td class="AnchoLaterales fondoGris" valign="top">
+            </td>
+        </tr>
+        <tr>
+            <td class="altoFooter fondoFooter bgFooterIzquierdo">
+            </td>
+            <td class="altoFooter fondoFooter">
+                <sam:PiePagina ID="piePagina" runat="server" />
+            </td>
+            <td class="altoFooter fondoFooter bgFooterDerecho">
+            </td>
+        </tr>
+    </table>
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            //Pingear cada 5 minutos
+            setInterval(Sam.Utilerias.PingSession, 300000);
+            if ($("#autoWrapper").css("width") === "auto") {
+                Sam.Utilerias.Resize();
+            }
+        });
+        $(window).resize(Sam.Utilerias.Resize);
+    </script>
+    <asp:ContentPlaceHolder runat="server" ID="cphFoot">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

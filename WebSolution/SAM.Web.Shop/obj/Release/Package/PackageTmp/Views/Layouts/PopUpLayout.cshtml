@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Layouts/ReportLayout.cshtml";
+}
+
+
+@section breadcrumbs
+{
+    @Html.Action("ControlNumberBreadcrumb", "Controls")
+}
+@RenderBody()
+@section scripts
+{
+    @RenderSection("scripts", false)
+}

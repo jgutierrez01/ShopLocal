@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SamSqlDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=mtysqldev-v01\;Initial Catalog=SAM</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>9cdf3851-1ecd-4c4b-89ed-678122049768</DataSourceID>
+</RptDataSource>

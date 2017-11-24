@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnDocumentoAprobado.Text" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="btnDocumentoAprobado.ToolTip" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="btnAprobadoParaCruce.Text" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="btnAprobadoParaCruce.ToolTip" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="btnFijarPrioridad.Text" xml:space="preserve">
+    <value>Set Priority</value>
+  </data>
+  <data name="btnHold.Text" xml:space="preserve">
+    <value>Hold</value>
+  </data>
+  <data name="btnMostrar.Text" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="gbcDocumentoAprobado.HeaderText" xml:space="preserve">
+    <value>Engineering Review</value>
+  </data>
+  <data name="gbcAprobadoCruce.HeaderText" xml:space="preserve">
+    <value>Approved for material allocation</value>
+  </data>
+  <data name="gbcArea.HeaderText" xml:space="preserve">
+    <value>m²</value>
+  </data>
+  <data name="gbcCedula.HeaderText" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="gbcConfinado.HeaderText" xml:space="preserve">
+    <value>Confined</value>
+  </data>
+  <data name="gbcDiametroPlano.HeaderText" xml:space="preserve">
+    <value>Drawing Diameter</value>
+  </data>
+  <data name="gbcDibujo.HeaderText" xml:space="preserve">
+    <value>Drawing</value>
+  </data>
+  <data name="gbcEspecificacion.HeaderText" xml:space="preserve">
+    <value>Specification</value>
+  </data>
+  <data name="gbcFechaHold.HeaderText" xml:space="preserve">
+    <value>Hold date</value>
+  </data>
+  <data name="gbcHold.HeaderText" xml:space="preserve">
+    <value>Hold?</value>
+  </data>
+  <data name="gbcHoldIngenieria.HeaderText" xml:space="preserve">
+    <value>Hold Engineering</value>
+  </data>
+  <data name="gbcKgs.HeaderText" xml:space="preserve">
+    <value>Kg's</value>
+  </data>
+  <data name="gbcMaterial.HeaderText" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="gbcNumControl.HeaderText" xml:space="preserve">
+    <value>Ctrl No.</value>
+  </data>
+  <data name="gbcObservacionesHold.HeaderText" xml:space="preserve">
+    <value>Hold observations</value>
+  </data>
+  <data name="gbcPdi.HeaderText" xml:space="preserve">
+    <value>Diametral inches</value>
+  </data>
+  <data name="gbcPnd.HeaderText" xml:space="preserve">
+    <value>NDT %</value>
+  </data>
+  <data name="gbcPrioridad.HeaderText" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="gbcPwht.HeaderText" xml:space="preserve">
+    <value>PWHT Required</value>
+  </data>
+  <data name="gbcRevCliente.HeaderText" xml:space="preserve">
+    <value>Client Revision</value>
+  </data>
+  <data name="gbcRevIngenieria.HeaderText" xml:space="preserve">
+    <value>Engineering Review</value>
+  </data>
+  <data name="gbcRevSteelGo.HeaderText" xml:space="preserve">
+    <value>Revision</value>
+  </data>
+  <data name="gbcSegmento1.HeaderText" xml:space="preserve">
+    <value>Segment 1</value>
+  </data>
+  <data name="gbcSegmento2.HeaderText" xml:space="preserve">
+    <value>Segment 2</value>
+  </data>
+  <data name="gbcSegmento3.HeaderText" xml:space="preserve">
+    <value>Segment 3</value>
+  </data>
+  <data name="gbcSegmento4.HeaderText" xml:space="preserve">
+    <value>Segment 4</value>
+  </data>
+  <data name="gbcSegmento5.HeaderText" xml:space="preserve">
+    <value>Segment 5</value>
+  </data>
+  <data name="gbcSegmento6.HeaderText" xml:space="preserve">
+    <value>Segment 6</value>
+  </data>
+  <data name="gbcSegmento7.HeaderText" xml:space="preserve">
+    <value>Segment 7</value>
+  </data>
+  <data name="gbcSpool.HeaderText" xml:space="preserve">
+    <value>Spool</value>
+  </data>
+  <data name="gbcTieneHold.HeaderText" xml:space="preserve">
+    <value>On Hold</value>
+  </data>
+  <data name="gbcTotalPeq.HeaderText" xml:space="preserve">
+    <value>Inch Eq</value>
+  </data>
+  <data name="hypPonerHold.ToolTip" xml:space="preserve">
+    <value>Mark as On Hold</value>
+  </data>
+  <data name="hypQuitarHold.ToolTip" xml:space="preserve">
+    <value>Remove On Hold</value>
+  </data>
+  <data name="imgActualizar.ToolTip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="imgActualizarDatos.ToolTip" xml:space="preserve">
+    <value>Update Peq, KgT, Esp</value>
+  </data>
+  <data name="imgBorrar.ToolTip" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="imgEditar.ToolTip" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="imgPrioridad.ToolTip" xml:space="preserve">
+    <value>Set priority</value>
+  </data>
+  <data name="imgPrioridadSeleccionados.Text" xml:space="preserve">
+    <value>Set priority to selected spools</value>
+  </data>
+  <data name="imgPrioridadSeleccionados.ToolTip" xml:space="preserve">
+    <value>Set priority to selected spools</value>
+  </data>
+  <data name="lblAprobadoParaCruce.Text" xml:space="preserve">
+    <value>Approved for material allocation</value>
+  </data>
+  <data name="lblArea.Text" xml:space="preserve">
+    <value>Area (m²):</value>
+  </data>
+  <data name="lblCedula.Text" xml:space="preserve">
+    <value>Schedule:</value>
+  </data>
+  <data name="lblEspecificacion.Text" xml:space="preserve">
+    <value>Specification:</value>
+  </data>
+  <data name="lblIngenieria.Text" xml:space="preserve">
+    <value>ENGINEERING PROJECTS</value>
+  </data>
+  <data name="lblMaterial.Text" xml:space="preserve">
+    <value>Material:</value>
+  </data>
+  <data name="lblMotivo.Label" xml:space="preserve">
+    <value>Motive:</value>
+  </data>
+  <data name="lblPdi.Text" xml:space="preserve">
+    <value>Diametral inches:</value>
+  </data>
+  <data name="lblPeso.Text" xml:space="preserve">
+    <value>Weight (Kg):</value>
+  </data>
+  <data name="lblPnd.Text" xml:space="preserve">
+    <value>% NDT:</value>
+  </data>
+  <data name="lblPrioridad.ErrorMessage" xml:space="preserve">
+    <value>Priority is required</value>
+  </data>
+  <data name="lblPrioridad.Label" xml:space="preserve">
+    <value>Priority:</value>
+  </data>
+  <data name="lblProyecto.Text" xml:space="preserve">
+    <value>Project:</value>
+  </data>
+  <data name="lblSpool.Text" xml:space="preserve">
+    <value>Spool:</value>
+  </data>
+  <data name="lblTitulo.Text" xml:space="preserve">
+    <value>Set spool priority</value>
+  </data>
+  <data name="litPrioridad.Text" xml:space="preserve">
+    <value>Set priority</value>
+  </data>
+  <data name="lnkActualizar.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="lnkActualizar.ToolTip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="lnkActualizarDatos.Text" xml:space="preserve">
+    <value>Update Peq, KgT, Esp</value>
+  </data>
+  <data name="lnkAprobadoParaCruce.Text" xml:space="preserve">
+    <value>Set Approved for material allocation</value>
+  </data>
+  <data name="lnkPrioridad.Text" xml:space="preserve">
+    <value>Set priority</value>
+  </data>
+  <data name="lnkPrioridadSeleccionados.Text" xml:space="preserve">
+    <value>Set priority to selected spools</value>
+  </data>
+  <data name="rdCortes.Text" xml:space="preserve">
+    <value>Cuts</value>
+  </data>
+  <data name="rdJuntas.Text" xml:space="preserve">
+    <value>Joints</value>
+  </data>
+  <data name="rdMateriales.Text" xml:space="preserve">
+    <value>Materials</value>
+  </data>
+  <data name="rfvProyecto.ErrorMessage" xml:space="preserve">
+    <value>Project is required</value>
+  </data>
+  <data name="rngPrioridad.ErrorMessage" xml:space="preserve">
+    <value>The priority must be a numer between 0 and 99.</value>
+  </data>
+  <data name="valPrioridad.HeaderText" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="valSummary.HeaderText" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="lblDocumentoAprobado.Text" xml:space="preserve">
+    <value>Engineering Review</value>
+  </data>
+  <data name="litDocumento.Text" xml:space="preserve">
+    <value>Set Engineering Review</value>
+  </data>
+  <data name="lnkDocumentoAprobado.Text" xml:space="preserve">
+    <value>Set Engineering Review</value>
+  </data>
+  <data name="gbcHoldCalidad.HeaderText" xml:space="preserve">
+    <value>Hold QA</value>
+  </data>
+  <data name="imgActualizarSpool.ToolTip" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="lnkActualizaSpool.Text" xml:space="preserve">
+    <value>Additional fields</value>
+  </data>
+  <data name="imgPlanchadoPrioridades.ToolTip" xml:space="preserve">
+    <value>Update priorities</value>
+  </data>
+  <data name="lnkPlanchadoPrioridades.Text" xml:space="preserve">
+    <value>Priorities by CSV</value>
+  </data>
+  <data name="gbcDiametroMayor.HeaderText" xml:space="preserve">
+    <value>Maximum Diameter</value>
+  </data>
+  <data name="gbcFechaImportacion.HeaderText" xml:space="preserve">
+    <value>Import Date</value>
+  </data>
+  <data name="lnkEliminacionMasiva" xml:space="preserve">
+    <value>Delete Spools</value>
+  </data>
+  <data name="btnEliminarSpools.ToolTip" xml:space="preserve">
+    <value>Deleted Spools</value>
+    </data>
+  <data name="gbcEsRevision.HeaderText" xml:space="preserve">
+    <value>Is review</value>
+  </data>
+</root>

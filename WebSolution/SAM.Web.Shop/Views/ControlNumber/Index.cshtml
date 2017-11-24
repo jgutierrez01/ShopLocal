@@ -1,0 +1,33 @@
+﻿@using Newtonsoft.Json
+@using Resources.Views
+@using SAM.Web.Shop.Extensions
+@using SAM.Web.Shop.Models
+
+@model ControlNumberModel
+
+@{
+    ViewBag.Title = ControlNumberStrings.PageTitle;
+    Layout = "~/Views/Layouts/ControlNumberLayout.cshtml";
+}
+
+<div class="row" data-item="@JsonConvert.SerializeObject(new { Model.ControlNumberId })">
+    <div class="form-group col-md-4 col-sm-4 col-xs-6">
+        @Html.StyledLabelFor(m => m.ControlNumber)
+        <span class="show">@Html.DisplayTextFor(m => m.ControlNumber)</span>
+    </div>
+    <div class="form-group col-md-4 col-sm-4 col-xs-6">
+        @Html.StyledLabelFor(m => m.Spool)
+        <span class="show">@Html.DisplayTextFor(m => m.Spool)</span>
+    </div>
+    <div class="form-group col-md-4 col-sm-4 col-xs-6">
+        @Html.StyledLabelFor(m => m.Drawing)
+        <span class="show">@Html.DisplayTextFor(m => m.Drawing)</span>
+    </div>
+</div>
+
+@Html.Partial("_WeldingJoints", Model.Joints)
+
+@if (Model.Drawings.Any())
+{
+    @Html.Partial("_DrawingsCarousel", Model.Drawings)
+}

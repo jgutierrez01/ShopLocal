@@ -1,0 +1,9 @@
+<div>
+<p>
+<span style="color:black;">Proyecto:</span> <span style="color:#456490">{0}</span>
+</p>
+<p>
+Al actualizar peqs, kg's ,Espesores se genero un excel, favor de revisar el archivo anexo al correo.
+</p>
+<p>&nbsp;</p>
+</div>

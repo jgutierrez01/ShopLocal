@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78077665-A34F-4411-8EA8-7730CF3650A7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAM.Generador</RootNamespace>
+    <AssemblyName>SAM.Generador</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneradorPintura.cs" />
+    <Compile Include="GeneradorRequisicionesPintura.cs" />
+    <Compile Include="GeneradorPruebasTT.cs" />
+    <Compile Include="Generador.cs" />
+    <Compile Include="GeneradorArmado.cs" />
+    <Compile Include="GeneradorCortes.cs" />
+    <Compile Include="GeneradorDespachos.cs" />
+    <Compile Include="GeneradorLiberacionDimensional.cs" />
+    <Compile Include="GeneradorInspeccionVisual.cs" />
+    <Compile Include="GeneradorOdts.cs" />
+    <Compile Include="GeneradorPruebasPdn.cs" />
+    <Compile Include="GeneradorRequisicionesDePruebas.cs" />
+    <Compile Include="GeneradorSoldadura.cs" />
+    <Compile Include="KeyboardUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mimo.Framework\Mimo.Framework.csproj">
+      <Project>{344217DB-C52B-4F73-9BBC-C06742FD38B2}</Project>
+      <Name>Mimo.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.BusinessLogic\SAM.BusinessLogic.csproj">
+      <Project>{794B70EF-E0A5-4529-B892-7BED8AA7FB37}</Project>
+      <Name>SAM.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.BusinessObjects\SAM.BusinessObjects.csproj">
+      <Project>{B239B46F-7627-42EC-94F5-61B3FEF55AB2}</Project>
+      <Name>SAM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.Entities\SAM.Entities.csproj">
+      <Project>{CA1B2EBA-5E65-49C8-819C-BD81D7C8A0B6}</Project>
+      <Name>SAM.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

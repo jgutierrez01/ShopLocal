@@ -1,0 +1,1 @@
+insert into TipoPrueba (TipoPruebaID, Nombre,NombreIngles,Categoria) values (10, 'Reporte PMI','PMI Report','PND')

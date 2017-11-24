@@ -1,0 +1,11 @@
+CREATE TABLE AgrupadoresSpoolPND(
+	AgrupadorSpoolPNDID INT NOT NULL IDENTITY PRIMARY KEY,
+	SpoolID INT NOT NULL,
+	TipoJuntaID INT NOT NULL,
+	Clasificacion VARCHAR(MAX) NULL,
+	FechaModificacion DATETIME NULL,
+	UsuarioModifica UNIQUEIDENTIFIER NULL,
+	VersionRegistro TIMESTAMP NOT NULL,
+	FOREIGN KEY (SpoolID) REFERENCES Spool(SpoolID),
+	FOREIGN KEY (TipoJuntaID) REFERENCES TipoJunta(TipoJuntaID)
+)

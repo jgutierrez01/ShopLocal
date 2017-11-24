@@ -1,0 +1,33 @@
+﻿@using SAM.Web.Shop.Models
+@model List<YardModel>
+
+@{
+    ViewBag.Title = Resources.Views.HomeStrings.PageTitle;
+    Layout = "~/Views/Layouts/MasterLayout.cshtml";
+}
+
+<h3>@Html.Raw(Resources.Views.HomeStrings.PageHeader)</h3>
+
+@using (Html.BeginForm(null, null,FormMethod.Get, new { role = "form", id = "home-index-form" }))
+{
+  
+<div class="list-group">
+    @foreach (YardModel yard in Model)
+    {
+        <a href="@Url.Action("Index", "Yard", new { yardId = @yard.YardId})" class="list-group-item">@yard.Name<span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+    }
+</div>
+}
+
+
+ @section scripts{
+    <script type="text/javascript">
+      
+        $(function () {
+           
+            var prepare = new sam.pages.home.index($("#home-index-form"));
+            prepare.init();
+        
+         });       
+    </script>
+}

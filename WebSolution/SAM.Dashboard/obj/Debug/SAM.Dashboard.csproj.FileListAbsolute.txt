@@ -1,0 +1,9 @@
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\SAM.Dashboard.csprojResolveAssemblyReference.cache
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\App.g.cs
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\MainPage.g.cs
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\Mensaje.g.cs
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\Ventanas\Proyecto.g.cs
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\SAM.Dashboard.g.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\SAM.Dashboard.Resources.MainPage.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\SAM.Dashboard.Resources.MainPage.en-US.resources
+C:\Users\Maftec_07\Source\Repos\SAM - original\WebSolution\SAM.Dashboard\obj\Debug\SAM.Dashboard.csproj.GenerateResource.Cache

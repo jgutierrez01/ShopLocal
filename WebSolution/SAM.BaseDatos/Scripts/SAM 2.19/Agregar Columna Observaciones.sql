@@ -1,0 +1,1 @@
+alter table NumeroUnico add Observaciones varchar (200)

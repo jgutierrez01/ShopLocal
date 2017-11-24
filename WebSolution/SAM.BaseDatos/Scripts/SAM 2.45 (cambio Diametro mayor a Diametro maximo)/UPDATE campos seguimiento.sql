@@ -1,0 +1,2 @@
+UPDATE CampoSeguimientoJunta SET Nombre = 'Diametro Máximo', NombreIngles = 'Maximum Diameter' where Nombre = 'Diametro Mayor'
+UPDATE CampoSeguimientoSpool SET Nombre = 'Diametro Máximo', NombreIngles = 'Maximum Diameter' where Nombre = 'Diametro Mayor'
