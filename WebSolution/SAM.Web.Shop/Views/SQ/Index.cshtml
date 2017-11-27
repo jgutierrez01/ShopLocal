@@ -25,15 +25,22 @@
     string controlNumberADD = ViewContext.HttpContext.Request.Params.Get("controlNumberADD");
     string controlNumberEDIT = ViewContext.HttpContext.Request.Params.Get("controlNumberEDIT");
     string CuadranteID = ViewContext.HttpContext.Request.Params.Get("CuadranteID");
-    string[] ArrayCuadrante = CuadranteID.Split(',');
-    int[] A = new int[ArrayCuadrante.Length];
-    for(int i = 0; i < ArrayCuadrante.Length; i++)
+    if(CuadranteID == null)
     {
-        A[i] = int.Parse(ArrayCuadrante[i]);
+        CuadranteID = "0";
+    }else
+    {
+        string[] ArrayCuadrante = CuadranteID.Split(',');
+        int[] A = new int[ArrayCuadrante.Length];
+        for (int i = 0; i < ArrayCuadrante.Length; i++)
+        {
+            A[i] = int.Parse(ArrayCuadrante[i]);
+        }
+
+        int[] B = A.Distinct().ToArray();
+        CuadranteID = B[0].ToString();
     }
-    
-    int[] B = A.Distinct().ToArray();
-    CuadranteID = B[0].ToString();
+
     iniciaModelo = new SQModel(seleccionAgregarEditar, quadrantIdCADD, quadrantIdNCADD, quadrantIdCEdit, quadrantIdNCEdit, projectIdADD, projectIdEdit, searchTypeADD, searchTypeEdit, sQ, workOrderNumberADD, workOrderNumberEdit, controlNumberADD, controlNumberEDIT, CuadranteID);
 
 }

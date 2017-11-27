@@ -72,24 +72,37 @@ namespace SAM.Web.Shop.Models
             this.QuadrantIdCEdit = quadrantIdCEdit == "" || quadrantIdCEdit==null ? 0 : int.Parse(quadrantIdCEdit);
             this.QuadrantIdNCEdit = quadrantIdNCEdit == ""|| quadrantIdNCEdit==null ? 0 : int.Parse(quadrantIdNCEdit);
             this.QuadrantIdNCADD = quadrantIdNCADD == ""|| quadrantIdNCADD == null ? 0 : int.Parse(quadrantIdNCADD);
-            string[] ArrayProyectoAdd = projectIdADD.Split(',');
-            int[] A = new int[ArrayProyectoAdd.Length];
-            for (int i = 0; i < ArrayProyectoAdd.Length; i++)
+            if(projectIdADD != null)
             {
-                A[i] = int.Parse(ArrayProyectoAdd[i]);
-            }
+                string[] ArrayProyectoAdd = projectIdADD.Split(',');
+                int[] A = new int[ArrayProyectoAdd.Length];
+                for (int i = 0; i < ArrayProyectoAdd.Length; i++)
+                {
+                    A[i] = int.Parse(ArrayProyectoAdd[i]);
+                }
 
-            int[] B = A.Distinct().ToArray();
-            this.ProjectIdADD = B[0];
-            string[] ArrayProyectoEdit = projectIdADD.Split(',');
-            int[] C = new int[ArrayProyectoAdd.Length];
-            for (int i = 0; i < ArrayProyectoEdit.Length; i++)
+                int[] B = A.Distinct().ToArray();
+                this.ProjectIdADD = B[0];
+            }else
             {
-                A[i] = int.Parse(ArrayProyectoEdit[i]);
+                this.ProjectIdADD = 0;
             }
+            if(projectIdEdit != null)
+            {
+                string[] ArrayProyectoEdit = projectIdEdit.Split(',');
+                int[] C = new int[ArrayProyectoEdit.Length];
+                for (int i = 0; i < ArrayProyectoEdit.Length; i++)
+                {
+                    C[i] = int.Parse(ArrayProyectoEdit[i]);
+                }
 
-            int[] D = A.Distinct().ToArray();
-            this.ProjectIdEditar = D[0];
+                int[] D = C.Distinct().ToArray();
+                this.ProjectIdEditar = D[0];
+            }else
+            {
+                this.ProjectIdEditar = 0;
+            }
+           
             //this.ProjectIdADD = (projectIdADD == "" || projectIdADD == null) ? 0 : int.Parse(projectIdADD);
             //this.ProjectIdEditar = (projectIdEdit == ""|| projectIdEdit==null) ? 0 : (int.TryParse(cadenaProyecto, out a) ? int.Parse(cadenaProyecto) : 0) ;
             this.SearchTypeADD = searchTypeADD;
