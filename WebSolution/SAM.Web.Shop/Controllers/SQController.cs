@@ -27,14 +27,17 @@ namespace SAM.Web.Shop.Controllers
         {
             SQModel sqmodel = new SQModel();
             try
-            {
-                NavContext.SetNumbersControl("");
-                NavContext.SetNumbersControlCuadranteSQ("");
-                NavContext.SetNumbersControlCuadranteSQEditar("");
+            {                
+                NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
+                NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                 if (NavContext.GetCurrentProject().ID > 0)
                 {
                     sqmodel.ProjectIdADD = NavContext.GetCurrentProject().ID;
                     sqmodel.ProjectIdEditar = NavContext.GetCurrentProject().ID;
+                }
+                if(NavContext.getCuadranteID() != "")
+                {
+                    sqmodel.CuadranteID = int.Parse(NavContext.getCuadranteID());
                 }
             }
             catch (Exception e)
@@ -48,19 +51,50 @@ namespace SAM.Web.Shop.Controllers
         [HttpGet]
         public ActionResult AddNC(SQModel model)
         {
-
             model.SeleccionAgregarEditar = "1";
-            ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);
-            if (NavContext.GetCurrentProjectSQ() == null || (model.ProjectIdADD != NavContext.GetCurrentProjectSQ().ID))
+            if(model.QuadrantIdCADD == 0)
             {
-                NavContext.SetProject(project.ID);
-                NavContext.SetNumbersControlCuadranteSQ("");
-                model.ListaElementos = new List<LayoutGridSQ>();
+                if(model.QuadrantIdNCADD == 0)
+                {
+                    if(model.QuadrantIdCEdit == 0)
+                    {
+                        if(model.QuadrantIdNCEdit != 0)
+                        {
+                            model.CuadranteID = model.QuadrantIdNCEdit;
+                        }
+                    }
+                    else
+                    {
+                        model.CuadranteID = model.QuadrantIdCEdit;
+                    }
+                }
+                else
+                {
+                    model.CuadranteID = model.QuadrantIdNCADD;
+                }
             }
             else
             {
+                model.CuadranteID = model.QuadrantIdCADD;
+            }
+            NavContext.setCuadranteID(model.CuadranteID.ToString());
+            ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);
+            if (NavContext.GetCurrentProjectSQ() == null || (model.ProjectIdADD != NavContext.GetCurrentProjectSQ().ID))
+            {                
+                NavContext.SetProject(project.ID);
+                NavContext.SetProjectEdit(project.ID);
+                NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
                 model.ListaElementos = new List<LayoutGridSQ>();
-                model.ListaElementos.AddRange(Helps.GetListadoCuadrantesNumeroControlSQ(NavContext.GetCurrentNCSQ()));
+            }
+            else
+            {                
+                model.ListaElementos = new List<LayoutGridSQ>();
+                List<LayoutGridSQ> Lista = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd"));
+                if(Lista == null)
+                {
+                    Lista = new List<LayoutGridSQ>();
+                }                
+                model.ListaElementos.AddRange(Lista);
                 if (model.ListaElementos.Count > 0) model.TieneDatosGridAdd = true;
             }
 
@@ -88,14 +122,15 @@ namespace SAM.Web.Shop.Controllers
                             controlNumbers.Add(project.PrefijoOdt + model.WorkOrderNumberADD.ToString().PadLeft(i, '0') +
                                                     "-" + model.ControlNumberADD.ToString().PadLeft(3, '0'));
                         }
-
-                        List<int> controlNumberId = OrdenTrabajoSpoolBO.Instance.ObtenerOrdenTrabajoSpoolIDsPorNumeroDeControlYProyectoSQ(controlNumbers, project.ID);
-
+                        List<int> controlNumberId = OrdenTrabajoSpoolBO.Instance.ObtenerOrdenTrabajoSpoolIDsPorNumeroDeControlYProyectoSQ(controlNumbers, model.ProjectIdADD);                        
                         if (controlNumberId.Count > 0)
                         {
 
                             OrdenTrabajoSpoolSQ ots = OrdenTrabajoSpoolBO.Instance.ObtenerOrdenTrabajoSpoolConSQ(controlNumberId[0]);
-                            CuadranteSQ cuadrante = OrdenTrabajoSpoolBO.Instance.BuscarCuadrante(model.QuadrantIdNCADD, project.ID);
+                            CuadranteSQ cuadrante = OrdenTrabajoSpoolBO.Instance.BuscarCuadrante(model.QuadrantIdNCADD, model.ProjectIdADD);
+                            NavContext.setCuadranteID(cuadrante.CuadranteID.ToString());
+                            
+                             
                             List<LayoutGridSQ> listaElementos = new List<LayoutGridSQ>();
                             if (cuadrante != null)
                             {
@@ -113,108 +148,7 @@ namespace SAM.Web.Shop.Controllers
                                 });
                             }
                             string datosAsignados = "";
-                            List<LayoutGridSQ> listaSoloNumeroControlNuevos = (from p in listaElementos
-                                                                               where !(from ex in model.ListaElementos
-                                                                                       select ex.OrdenTrabajoSpoolID).Contains(p.OrdenTrabajoSpoolID)
-                                                                               select p).ToList();
-
-                            List<LayoutGridSQ> ListaTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
-                            List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
-                            for (int a = 0; a < ListaTieneSQCliente.Count; a++)
-                            {
-                                datosAsignados += " el Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SQ Cliente Agregado <br>";
-                            }
-
-                            List<LayoutGridSQ> ListaTieneHold = (from a in ListaNoTieneSQCliente where a.TieneHoldIngenieria == true select a).ToList();
-                            List<LayoutGridSQ> ListaNoTieneHold = (from a in ListaNoTieneSQCliente where a.TieneHoldIngenieria == false select a).ToList();
-                            for (int i = 0; i < ListaTieneHold.Count; i++)
-                            {
-                                datosAsignados += " el Spool " + ListaTieneHold[i].NumeroControl + " se encuentra en hold  " + "<br>";
-                            }
-
-                            List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneHold where (a.SQ != "" && a.SQ != null) select a).ToList();
-                            List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneHold where (a.SQ == "" || a.SQ == null) select a).ToList();
-                            for (int i = 0; i < ListaTieneSQInterno.Count; i++)
-                            {
-                                datosAsignados += " el Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en el SQ " + ListaTieneSQInterno[i].SQ + "<br>";
-                            }
-
-                            if (datosAsignados != "")
-                            {
-                                TempData["errorAdd"] += datosAsignados;
-                            }
-
-                            if (ListaNoTieneSQInterno.Count > 0)
-                            {                               
-                                var Lista = ListaNoTieneSQInterno;
-                                List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).OrderBy(c => c.NumeroControl).ToList();
-                                string auxString = NavContext.GetCurrentNCSQ();
-                                string numerosControl = "";
-                                List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
-                                if (auxString != "" && auxString != "[]")
-                                {
-                                    NavContext.SetNumbersControlCuadranteSQ("");
-                                    ListaTmp.InsertRange(0, ListaSinRepetidos);                                    
-                                    numerosControl = JsonConvert.SerializeObject(ListaTmp);
-                                    NavContext.SetNumbersControlCuadranteSQ(numerosControl);                                    
-                                    model.ListaElementos = ListaTmp;
-
-                                }
-                                else
-                                {
-                                    string numeroControlCuadranteSQ = NavContext.GetCurrentNCSQ();
-                                    numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementos);                                    
-                                    NavContext.SetNumbersControlCuadranteSQ(numeroControlCuadranteSQ);
-                                }                                                          
-                                model.TieneDatosGridAdd = true;
-
-                                //string numeroControlCuadranteSQ = NavContext.GetCurrentNCSQ();
-                                //numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaNoTieneSQInterno, model.ListaElementos);                                
-                                //NavContext.SetNumbersControlCuadranteSQ(numeroControlCuadranteSQ);
-                            }
-                            else
-                            {
-                                //NavContext.SetNumbersControlCuadranteSQ("");
-                                model.TieneDatosGridAdd = false;
-                            }
-                        }
-                        else
-                        {
-                            TempData["sinDatos"] += "No se encontraron datos que coincidieran con su busqueda";
-                            //ModelState.AddModelError(string.Empty, WorkStatusStrings.Mensaje_NumeroControlCuadrante);
-                        }
-                    }
-                    break;
-                case "c":
-                    if (model.QuadrantIdCADD != 0)
-                    {
-                        List<CuadranteNumeroControlSQ> numeroControl = OrdenTrabajoSpoolBO.Instance.BuscarPorCuadranteSQ(model.QuadrantIdCADD, project.ID);
-
-                        if (numeroControl.Count > 0)
-                        {
-                            // model.ListaElementos = new List<LayoutGridSQ>();
-                            List<LayoutGridSQ> listaElementos = new List<LayoutGridSQ>();
-                            for (int i = 0; i < numeroControl.Count; i++)
-                            {
-                                listaElementos.Add(new LayoutGridSQ
-                                {
-                                    Accion = numeroControl[i].Accion,
-                                    Cuadrante = numeroControl[i].Cuadrante,
-                                    CuadranteID = numeroControl[i].CuadranteID,
-                                    NumeroControl = numeroControl[i].NumeroControl,
-                                    SpoolID = numeroControl[i].SpoolID,
-                                    OrdenTrabajoSpoolID = numeroControl[i].OrdenTrabajoSpoolID,
-                                    SqCliente = numeroControl[i].SqCliente,
-                                    SQ = numeroControl[i].SQ,
-                                    TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria
-                                });
-                            }
-                            string datosAsignados = "";
-                            //List<LayoutGridSQ> listaSoloNumeroControlNuevos = (from p in listaElementos
-                            //                                                   where !(from ex in model.ListaElementos
-                            //                                                           select ex.OrdenTrabajoSpoolID).Contains(p.OrdenTrabajoSpoolID)
-                            //                                                   select p).ToList();
-
+                            
                             List<LayoutGridSQ> ListaTieneSQCliente = (from a in listaElementos where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
                             List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in listaElementos where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
                             for (int a = 0; a < ListaTieneSQCliente.Count; a++)
@@ -240,38 +174,134 @@ namespace SAM.Web.Shop.Controllers
                             {
                                 TempData["errorAdd"] += datosAsignados;
                             }
+
                             if (ListaNoTieneSQInterno.Count > 0)
                             {
-                                var Lista = ListaNoTieneSQInterno;
-                                List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).OrderBy(c => c.NumeroControl).ToList();
-                                string auxString = NavContext.GetCurrentNCSQ();
-                                string numerosControl = "";
-                                List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
-                                if (auxString != "" && auxString != "[]")
+                                if (model.QuadrantIdNCADD != 0)
                                 {
-                                    NavContext.SetNumbersControlCuadranteSQ("");
-                                    ListaTmp.InsertRange(0, ListaSinRepetidos);                                    
-                                    numerosControl = JsonConvert.SerializeObject(ListaTmp);
-                                    NavContext.SetNumbersControlCuadranteSQ(numerosControl);
-                                    model.ListaElementos = ListaTmp;
+                                    NavContext.setCuadranteID(model.QuadrantIdNCADD.ToString());
                                 }
                                 else
                                 {
-                                    string numeroControlCuadranteSQ = NavContext.GetCurrentNCSQ();
-                                    numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementos);
-                                    NavContext.SetNumbersControlCuadranteSQ(numeroControlCuadranteSQ);
+                                    NavContext.setCuadranteID(model.QuadrantIdCADD.ToString());
                                 }
-                                model.TieneDatosGridAdd = true;                               
-                                //string numeroControlCuadranteSQ = NavContext.GetCurrentNCSQ();
-                                //numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaNoTieneSQInterno, model.ListaElementos);
-                                //NavContext.SetNumbersControlCuadranteSQ(numeroControlCuadranteSQ);
+                                var Lista = ListaNoTieneSQInterno;
+                                List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList();//.OrderBy(c => c.NumeroControl).ToList();
+                                string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd");                                
+                                string numerosControl = "";
+                                List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
+                                if(ListaTmp == null)
+                                {
+                                    ListaTmp = new List<LayoutGridSQ>();
+                                }
+                                if (auxString != "" && auxString != "[]" && auxString != null)
+                                {
+                                    NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
+                                    ListaTmp.InsertRange(0, ListaSinRepetidos);
+                                    numerosControl = JsonConvert.SerializeObject(ListaTmp);                                
+                                    NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", numerosControl);
+                                    model.ListaElementos = ListaTmp;                                    
+                                }
+                                else
+                                {                                    
+                                    string numeroControles = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementos);
+                                    NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", numeroControles);                                   
+                                }                                                          
+                                model.TieneDatosGridAdd = true;                                
+                            }
+                            else
+                            {                                
+                                model.TieneDatosGridAdd = false;
+                            }
+                        }
+                        else
+                        {
+                            TempData["sinDatos"] += "No se encontraron datos que coincidieran con su busqueda";                            
+                        }
+                    }
+                    break;
+                case "c":
+                    if (model.QuadrantIdCADD != 0)
+                    {
+                        NavContext.setCuadranteID(model.QuadrantIdCADD.ToString());
+                        List<CuadranteNumeroControlSQ> numeroControl = OrdenTrabajoSpoolBO.Instance.BuscarPorCuadranteSQ(model.QuadrantIdCADD, model.ProjectIdADD, 1);                        
+                        if (numeroControl.Count > 0)
+                        {                            
+                            List<LayoutGridSQ> listaElementos = new List<LayoutGridSQ>();
+                            for (int i = 0; i < numeroControl.Count; i++)
+                            {
+                                listaElementos.Add(new LayoutGridSQ
+                                {
+                                    Accion = numeroControl[i].Accion,
+                                    Cuadrante = numeroControl[i].Cuadrante,
+                                    CuadranteID = numeroControl[i].CuadranteID,
+                                    NumeroControl = numeroControl[i].NumeroControl,
+                                    SpoolID = numeroControl[i].SpoolID,
+                                    OrdenTrabajoSpoolID = numeroControl[i].OrdenTrabajoSpoolID,
+                                    SqCliente = numeroControl[i].SqCliente,
+                                    SQ = numeroControl[i].SQ,
+                                    TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria
+                                });
+                            }
+                            string datosAsignados = "";
+                            
+                            List<LayoutGridSQ> ListaTieneSQCliente = (from a in listaElementos where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
+                            List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in listaElementos where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
+                            for (int a = 0; a < ListaTieneSQCliente.Count; a++)
+                            {
+                                datosAsignados += " el Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SQ Cliente Agregado <br>";
+                            }
+
+                            List<LayoutGridSQ> ListaTieneHold = (from a in ListaNoTieneSQCliente where a.TieneHoldIngenieria == true select a).ToList();
+                            List<LayoutGridSQ> ListaNoTieneHold = (from a in ListaNoTieneSQCliente where a.TieneHoldIngenieria == false select a).ToList();
+                            for (int i = 0; i < ListaTieneHold.Count; i++)
+                            {
+                                datosAsignados += " el Spool " + ListaTieneHold[i].NumeroControl + " se encuentra en hold  " + "<br>";
+                            }
+
+                            List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneHold where (a.SQ != "" && a.SQ != null) select a).ToList();
+                            List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneHold where (a.SQ == "" || a.SQ == null) select a).ToList();
+                            for (int i = 0; i < ListaTieneSQInterno.Count; i++)
+                            {
+                                datosAsignados += " el Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en el SQ " + ListaTieneSQInterno[i].SQ + "<br>";
+                            }
+
+                            if (datosAsignados != "")
+                            {
+                                TempData["errorAdd"] += datosAsignados;                                
+                            }
+                            if (ListaNoTieneSQInterno.Count > 0)
+                            {
+                                var Lista = ListaNoTieneSQInterno;
+                                List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); //.OrderBy(c => c.NumeroControl).ToList();                                
+                                string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd");                                
+                                string numerosControl = "";
+                                List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);                              
+                                if (auxString != "" && auxString != "[]" && auxString != null)
+                                {                                    
+                                    NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
+                                    if(ListaTmp == null)
+                                    {
+                                        ListaTmp = new List<LayoutGridSQ>();
+                                    }
+                                    ListaTmp.InsertRange(0, ListaSinRepetidos);
+                                    var Lista2 = ListaTmp;
+                                    ListaTmp = Lista2.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); //.OrderBy(c => c.NumeroControl).ToList();
+                                    numerosControl = JsonConvert.SerializeObject(ListaTmp);                                    
+                                    NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", numerosControl);
+                                    model.ListaElementos = ListaTmp;                                    
+                                }
+                                else
+                                {                                    
+                                    string numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementos); 
+                                    NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", numeroControlCuadranteSQ);
+                                }
+                                model.TieneDatosGridAdd = true;                                                               
                             }
                             else
                             {
-                                model.TieneDatosGridAdd = false;
-                                //NavContext.SetNumbersControlCuadranteSQ("");
+                                model.TieneDatosGridAdd = false;                                
                             }
-
                         }
                         else
                         {
@@ -291,26 +321,61 @@ namespace SAM.Web.Shop.Controllers
         {
             model.SeleccionAgregarEditar = "2";
             ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdEditar);
+            if (model.QuadrantIdCEdit == 0)
+            {
+                if (model.QuadrantIdNCEdit == 0)
+                {
+                    if (model.QuadrantIdCADD == 0)
+                    {
+                        if (model.QuadrantIdNCADD != 0)
+                        {
+                            model.CuadranteID = model.QuadrantIdNCADD;
+                        }
+                    }
+                    else
+                    {
+                        model.CuadranteID = model.QuadrantIdCADD;
+                    }
+                }
+                else
+                {
+                    model.CuadranteID = model.QuadrantIdNCEdit;
+                }
+            }
+            else
+            {
+                model.CuadranteID = model.QuadrantIdCADD;
+            }
+            NavContext.setCuadranteID(model.CuadranteID.ToString());
+            NavContext.SetProject(project.ID);
+            NavContext.SetProjectEdit(project.ID);
 
             if (NavContext.GetCurrentProjectSQEditar() == null || (model.ProjectIdEditar != NavContext.GetCurrentProjectSQ().ID))
             {
                 NavContext.SetProjectEdit(project.ID);
-                NavContext.SetNumbersControlCuadranteSQEditar("");
+                NavContext.SetProject(project.ID);                
+                NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                 model.ListaElementosPorSQ = new List<LayoutGridSQ>();
             }
 
             //limpiar la lista sq en memoria.
             if (model.SQ != NavContext.GetSQ())
             {
-                NavContext.SetSQ(model.SQ);
-                NavContext.SetNumbersControlCuadranteSQEditar("");
+                NavContext.SetSQ(model.SQ);                
+                NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                 model.ListaElementosPorSQ = new List<LayoutGridSQ>();
             }
             else
             {
+
                 model.ListaElementosPorSQ = new List<LayoutGridSQ>();
-                model.ListaElementosPorSQ.AddRange(Helps.GetListadoCuadrantesNumeroControlSQEditar(NavContext.GetCurrentNCSQEditar()));
-                if (model.ListaElementosPorSQ.Count > 0) model.TieneDatosGrid = true;
+                List<LayoutGridSQ> Lista = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
+                if (Lista == null)
+                {
+                    Lista = new List<LayoutGridSQ>();
+                }
+                model.ListaElementosPorSQ.AddRange(Lista);
+                if (model.ListaElementosPorSQ.Count > 0) model.TieneDatosGridEdit = true;               
             }
 
             if (Command != null && Command.Equals("BuscarSQ"))
@@ -339,33 +404,40 @@ namespace SAM.Web.Shop.Controllers
                         var Lista = listaElementos;
                         if (Lista != null)
                         {
-
-                            List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).OrderBy(c => c.NumeroControl).ToList();
-                            string auxString = NavContext.GetCurrentNCSQEditar();
-                            string numerosControl = "";
-                            List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
-                            if (auxString != "")
+                            if(model.QuadrantIdCEdit != 0)
                             {
-                                NavContext.SetNumbersControlCuadranteSQEditar("");
-                                ListaTmp.InsertRange(0, ListaSinRepetidos);
-                                //numerosControl = Helps.GetNumberControlsSQCookies(ListaTmp, model.ListaElementos);
-                                var aux = ListaTmp;
-                                List<LayoutGridSQ> NoRepetidos = aux.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).OrderBy(c => c.NumeroControl).ToList(); 
-                                numerosControl = JsonConvert.SerializeObject(NoRepetidos);
-                                NavContext.SetNumbersControlCuadranteSQEditar(numerosControl);
-                                model.ListaElementosPorSQ = NoRepetidos;
+                                NavContext.setCuadranteID(model.QuadrantIdCEdit.ToString());
                             }
                             else
                             {
-                                string numeroControlCuadranteSQ = NavContext.GetCurrentNCSQEditar();
-                                numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementosPorSQ);
-                                NavContext.SetNumbersControlCuadranteSQEditar(numeroControlCuadranteSQ);
-                            }                           
-                            //List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList();
-                            //model.ListaElementosPorSQ = ListaSinRepetidos;
-                            //string Result = JsonConvert.SerializeObject(ListaSinRepetidos);
-                            //NavContext.SetNumbersControlCuadranteSQEditar(Result);
-                            model.TieneDatosGrid = true;
+                                NavContext.setCuadranteID(model.QuadrantIdNCEdit.ToString());
+                            }
+
+                            List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); // .OrderBy(c => c.NumeroControl).ToList();
+                            //string auxString = NavContext.GetCurrentNCSQEditar();
+                            string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit");
+                            string numerosControl = "";
+                            List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
+                            if (auxString != "" && auxString != null)
+                            {
+                                NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
+                                if (ListaTmp == null)
+                                {
+                                    ListaTmp = new List<LayoutGridSQ>();
+                                }
+                                ListaTmp.InsertRange(0, ListaSinRepetidos);
+                                var Lista2 = ListaTmp;
+                                ListaTmp = Lista2.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); //.OrderBy(c => c.NumeroControl).ToList();
+                                numerosControl = JsonConvert.SerializeObject(ListaTmp);
+                                NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", numerosControl);
+                                model.ListaElementosPorSQ = ListaTmp;                                
+                            }
+                            else
+                            {
+                                string numeroControles = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementosPorSQ);
+                                NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", numeroControles);                               
+                            }                                                       
+                            model.TieneDatosGridEdit = true;
                         }
                     }
                     else
@@ -381,217 +453,224 @@ namespace SAM.Web.Shop.Controllers
             else
             {
                 //Agregar
-                switch (model.SearchTypeEdit)
+                if(model.SQ != null && model.SQ != "")
                 {
-                    case "nc":
+                    switch (model.SearchTypeEdit)
+                    {
+                        case "nc":
 
-                        if (model.WorkOrderNumberEdit == 0 || model.WorkOrderNumberEdit == null)
-                        {
-                            TempData["MsgError"] += "Ingrese Orden de Trabajo <br>";
-                        }
-                        if (model.ControlNumberEDIT == 0 || model.ControlNumberEDIT == null)
-                        {
-                            TempData["MsgError"] += "Ingrese Numero De Control <br>";
-                        }
-                        if (model.QuadrantIdNCEdit == 0 || model.QuadrantIdNCEdit.ToString() == null)
-                        {
-                            TempData["MsgError"] += "Seleccione Un Cuadrante <br>";
-                        }
-                        if (TempData["MsgError"] == null)
-                        {
-                            List<string> controlNumbers = new List<string>();
-                            for (int i = 1; i <= project.DigitosOdt; i++)
+                            if (model.WorkOrderNumberEdit == 0 || model.WorkOrderNumberEdit == null)
                             {
-                                controlNumbers.Add(project.PrefijoOdt + model.WorkOrderNumberEdit.ToString().PadLeft(i, '0') +
-                                                        "-" + model.ControlNumberEDIT.ToString().PadLeft(3, '0'));
+                                TempData["MsgError"] += "Ingrese Orden de Trabajo <br>";
                             }
-                            List<int> controlNumberId = OrdenTrabajoSpoolBO.Instance.ObtenerOrdenTrabajoSpoolIDsPorNumeroDeControlYProyectoSQ(controlNumbers, model.ProjectIdEditar);
-                            if (controlNumberId.Count > 0)
+                            if (model.ControlNumberEDIT == 0 || model.ControlNumberEDIT == null)
                             {
-                                OrdenTrabajoSpoolSQ ots = OrdenTrabajoSpoolBO.Instance.ObtenerOrdenTrabajoSpoolConSQ(controlNumberId[0]);
-                                CuadranteSQ cuadrante = OrdenTrabajoSpoolBO.Instance.BuscarCuadrante(model.QuadrantIdNCEdit, model.ProjectIdEditar);
-                                List<LayoutGridSQ> listaElementos = new List<LayoutGridSQ>();
-                                if (cuadrante != null)
+                                TempData["MsgError"] += "Ingrese Numero De Control <br>";
+                            }
+                            if (model.QuadrantIdNCEdit == 0 || model.QuadrantIdNCEdit.ToString() == null)
+                            {
+                                TempData["MsgError"] += "Seleccione Un Cuadrante <br>";
+                            }
+                            if (TempData["MsgError"] == null)
+                            {
+                                List<string> controlNumbers = new List<string>();
+                                for (int i = 1; i <= project.DigitosOdt; i++)
                                 {
-                                    listaElementos.Add(new LayoutGridSQ
+                                    controlNumbers.Add(project.PrefijoOdt + model.WorkOrderNumberEdit.ToString().PadLeft(i, '0') +
+                                                            "-" + model.ControlNumberEDIT.ToString().PadLeft(3, '0'));
+                                }
+                                List<int> controlNumberId = OrdenTrabajoSpoolBO.Instance.ObtenerOrdenTrabajoSpoolIDsPorNumeroDeControlYProyectoSQ(controlNumbers, model.ProjectIdEditar);
+                                if (controlNumberId.Count > 0)
+                                {
+                                    OrdenTrabajoSpoolSQ ots = OrdenTrabajoSpoolBO.Instance.ObtenerOrdenTrabajoSpoolConSQ(controlNumberId[0]);
+                                    CuadranteSQ cuadrante = OrdenTrabajoSpoolBO.Instance.BuscarCuadrante(model.QuadrantIdNCEdit, model.ProjectIdEditar);
+                                    List<LayoutGridSQ> listaElementos = new List<LayoutGridSQ>();
+                                    if (cuadrante != null)
                                     {
-                                        //Accion = 1,
-                                        Accion = 2,
-                                        Cuadrante = cuadrante.Cuadrante,
-                                        CuadranteID = cuadrante.CuadranteID,
-                                        NumeroControl = ots.NumeroControl,
-                                        OrdenTrabajoSpoolID = ots.OrdenTrabajoSpoolID,
-                                        SqCliente = ots.SqCliente,
-                                        SQ = ots.sqinterno,
-                                        TieneHoldIngenieria = ots.TieneHoldIngenieria
-                                    });
-                                }
-                                string datosAsignados = "";
-                                List<LayoutGridSQ> listaSoloNumeroControlNuevos = (from p in listaElementos
-                                                                                   where !(from ex in model.ListaElementosPorSQ
-                                                                                           select ex.OrdenTrabajoSpoolID).Contains(p.OrdenTrabajoSpoolID)
-                                                                                   select p).ToList();
+                                        listaElementos.Add(new LayoutGridSQ
+                                        {
+                                            //Accion = 1,
+                                            Accion = 2,
+                                            Cuadrante = cuadrante.Cuadrante,
+                                            CuadranteID = cuadrante.CuadranteID,
+                                            NumeroControl = ots.NumeroControl,
+                                            SpoolID = ots.SpoolID,
+                                            OrdenTrabajoSpoolID = ots.OrdenTrabajoSpoolID,
+                                            SqCliente = ots.SqCliente,
+                                            SQ = ots.sqinterno,
+                                            TieneHoldIngenieria = ots.TieneHoldIngenieria
+                                        });
+                                    }
+                                    string datosAsignados = "";
+                                    List<LayoutGridSQ> listaSoloNumeroControlNuevos = (from p in listaElementos
+                                                                                       where !(from ex in model.ListaElementosPorSQ
+                                                                                               select ex.OrdenTrabajoSpoolID).Contains(p.OrdenTrabajoSpoolID)
+                                                                                       select p).ToList();
 
-                                List<LayoutGridSQ> ListaTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
-                                List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
-                                for (int a = 0; a < ListaTieneSQCliente.Count; a++)
-                                {
-                                    datosAsignados += " el Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SQ Cliente Agregado <br>";
-                                }
-                                
-                                List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ != "" && a.SQ != null) select a).ToList();
-                                List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ == "" || a.SQ == null) select a).ToList();
-                                for (int i = 0; i < ListaTieneSQInterno.Count; i++)
-                                {
-                                    datosAsignados += " el Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en el SQ " + ListaTieneSQInterno[i].SQ + "<br>";
-                                }
-
-                                if (datosAsignados != "")
-                                {
-                                    TempData["errorEditar"] += datosAsignados;
-                                }
-
-                                if (ListaNoTieneSQInterno.Count > 0)
-                                {
-                                    var Lista = ListaNoTieneSQInterno;
-                                    List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).OrderBy(c => c.NumeroControl).ToList();
-                                    string auxString = NavContext.GetCurrentNCSQEditar();
-                                    string numerosControl = "";
-                                    List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
-                                    if (auxString != "")
+                                    List<LayoutGridSQ> ListaTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
+                                    List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
+                                    for (int a = 0; a < ListaTieneSQCliente.Count; a++)
                                     {
-                                        NavContext.SetNumbersControlCuadranteSQEditar("");
-                                        ListaTmp.InsertRange(0, ListaSinRepetidos);
-                                        //numerosControl = Helps.GetNumberControlsSQCookies(ListaTmp, model.ListaElementos);
-                                        numerosControl = JsonConvert.SerializeObject(ListaTmp);
-                                        NavContext.SetNumbersControlCuadranteSQEditar(numerosControl);
-                                        model.ListaElementosPorSQ = ListaTmp;
+                                        datosAsignados += " el Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SQ Cliente Agregado <br>";
+                                    }
+
+                                    List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ != "" && a.SQ != null) select a).ToList();
+                                    List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ == "" || a.SQ == null) select a).ToList();
+                                    for (int i = 0; i < ListaTieneSQInterno.Count; i++)
+                                    {
+                                        datosAsignados += " el Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en el SQ " + ListaTieneSQInterno[i].SQ + "<br>";
+                                    }
+
+                                    if (datosAsignados != "")
+                                    {
+                                        TempData["errorEditar"] += datosAsignados;
+                                    }
+
+                                    if (ListaNoTieneSQInterno.Count > 0)
+                                    {
+                                        if (model.QuadrantIdCEdit != 0)
+                                        {
+                                            NavContext.setCuadranteID(model.QuadrantIdCEdit.ToString());
+                                        }
+                                        else
+                                        {
+                                            NavContext.setCuadranteID(model.QuadrantIdNCEdit.ToString());
+                                        }
+
+                                        var Lista = ListaNoTieneSQInterno;
+                                        List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList();//.OrderBy(c => c.NumeroControl).ToList();
+                                        string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit");
+                                        string numerosControl = "";
+                                        List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
+                                        if (ListaTmp == null)
+                                        {
+                                            ListaTmp = new List<LayoutGridSQ>();
+                                        }
+                                        if (auxString != "" && auxString != "[]" && auxString != null)
+                                        {
+                                            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
+                                            ListaTmp.InsertRange(0, ListaSinRepetidos);
+                                            numerosControl = JsonConvert.SerializeObject(ListaTmp);
+                                            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", numerosControl);
+                                            model.ListaElementosPorSQ = ListaTmp;
+                                        }
+                                        else
+                                        {
+                                            string numeroControles = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementosPorSQ);
+                                            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", numeroControles);
+                                        }
+                                        model.TieneDatosGridEdit = true;
                                     }
                                     else
                                     {
-                                        string numeroControlCuadranteSQ = NavContext.GetCurrentNCSQEditar();
-                                        numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementosPorSQ);
-                                        NavContext.SetNumbersControlCuadranteSQEditar(numeroControlCuadranteSQ);
+                                        if (TempData["errorEditar"] == null)
+                                        {
+                                            TempData["Repetido"] = "El Spool " + listaElementos[0].NumeroControl + " ya existe en el Grid";
+                                        }
+                                        model.TieneDatosGridEdit = false;
                                     }
-
-                                    //string numeroControlCuadranteSQEditar = NavContext.GetCurrentNCSQEditar();
-                                    //numeroControlCuadranteSQEditar = Helps.GetNumberControlsSQCookies(ListaNoTieneSQInterno, model.ListaElementosPorSQ);
-                                    //NavContext.SetNumbersControlCuadranteSQEditar(numeroControlCuadranteSQEditar);
-                                    model.TieneDatosGrid = true;
                                 }
                                 else
                                 {
-                                    //NavContext.SetNumbersControlCuadranteSQEditar("");
-                                    if(TempData["errorEditar"] == null)
-                                    {
-                                        TempData["Repetido"] = "El Spool " + listaElementos[0].NumeroControl + " ya existe en el Grid";
-                                    }                                    
-                                    model.TieneDatosGrid = false;
+                                    TempData["sinDatos"] += "No se encontraron datos que coincidieran con su busqueda";
                                 }
                             }
-                            else
+                            break;
+                        case "c":
+                            if (model.QuadrantIdCEdit != 0)
                             {
-                                TempData["sinDatos"] += "No se encontraron datos que coincidieran con su busqueda";
-                                //ModelState.AddModelError(string.Empty, WorkStatusStrings.Mensaje_NumeroControlCuadrante);
-                            }
-                        }
-                        break;
-                    case "c":
-                        if (model.QuadrantIdCEdit != 0)
-                        {
-                            List<CuadranteNumeroControlSQ> numeroControl = OrdenTrabajoSpoolBO.Instance.BuscarPorCuadranteSQ(model.QuadrantIdCEdit, model.ProjectIdEditar);
-                            if (numeroControl.Count > 0)
-                            {
-                                List<LayoutGridSQ> listaElementos = new List<LayoutGridSQ>();
-                                for (int i = 0; i < numeroControl.Count; i++)
+                                NavContext.setCuadranteID(model.QuadrantIdCEdit.ToString());
+                                List<CuadranteNumeroControlSQ> numeroControl = OrdenTrabajoSpoolBO.Instance.BuscarPorCuadranteSQ(model.QuadrantIdCEdit, model.ProjectIdEditar, 2);
+                                if (numeroControl.Count > 0)
                                 {
-                                    listaElementos.Add(new LayoutGridSQ
+                                    List<LayoutGridSQ> listaElementos = new List<LayoutGridSQ>();
+                                    for (int i = 0; i < numeroControl.Count; i++)
                                     {
-                                        Accion = numeroControl[i].Accion,
-                                        Cuadrante = numeroControl[i].Cuadrante,
-                                        CuadranteID = numeroControl[i].CuadranteID,
-                                        NumeroControl = numeroControl[i].NumeroControl,
-                                        OrdenTrabajoSpoolID = numeroControl[i].OrdenTrabajoSpoolID,
-                                        SqCliente = numeroControl[i].SqCliente,
-                                        SQ = numeroControl[i].SQ,
-                                        TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria
-                                    });
-                                }
-                                string datosAsignados = "";
-                                List<LayoutGridSQ> listaSoloNumeroControlNuevos = (from p in listaElementos
-                                                                                   where !(from ex in model.ListaElementosPorSQ
-                                                                                           select ex.OrdenTrabajoSpoolID).Contains(p.OrdenTrabajoSpoolID)
-                                                                                   select p).ToList();
+                                        listaElementos.Add(new LayoutGridSQ
+                                        {
+                                            Accion = numeroControl[i].Accion,
+                                            Cuadrante = numeroControl[i].Cuadrante,
+                                            CuadranteID = numeroControl[i].CuadranteID,
+                                            NumeroControl = numeroControl[i].NumeroControl,
+                                            SpoolID = numeroControl[i].SpoolID,
+                                            OrdenTrabajoSpoolID = numeroControl[i].OrdenTrabajoSpoolID,
+                                            SqCliente = numeroControl[i].SqCliente,
+                                            SQ = numeroControl[i].SQ,
+                                            TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria
+                                        });
+                                    }
+                                    string datosAsignados = "";
+                                    List<LayoutGridSQ> listaSoloNumeroControlNuevos = (from p in listaElementos
+                                                                                       where !(from ex in model.ListaElementosPorSQ
+                                                                                               select ex.OrdenTrabajoSpoolID).Contains(p.OrdenTrabajoSpoolID)
+                                                                                       select p).ToList();
 
-                                List<LayoutGridSQ> ListaTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
-                                List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
-                                for (int a = 0; a < ListaTieneSQCliente.Count; a++)
-                                {
-                                    datosAsignados += " el Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SQ Cliente Agregado <br>";
-                                }
-
-                                //List<LayoutGridSQ> ListaTieneHold = (from a in ListaNoTieneSQCliente where a.TieneHoldIngenieria == true select a).ToList();
-                                //List<LayoutGridSQ> ListaNoTieneHold = (from a in ListaNoTieneSQCliente where a.TieneHoldIngenieria == false select a).ToList();
-                                //for (int i = 0; i < ListaTieneHold.Count; i++)
-                                //{
-                                //    datosAsignados += " el Spool " + ListaTieneHold[i].NumeroControl + " se encuentra en hold  " + "<br>";
-                                //}
-
-                                List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ != "" && a.SQ != null) select a).ToList();
-                                List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ == "" || a.SQ == null) select a).ToList();
-                                for (int i = 0; i < ListaTieneSQInterno.Count; i++)
-                                {
-                                    datosAsignados += " el Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en el SQ " + ListaTieneSQInterno[i].SQ + "<br>";
-                                }
-
-                                if (datosAsignados != "")
-                                {
-                                    TempData["errorAdd"] += datosAsignados;
-                                }
-                                if (ListaNoTieneSQInterno.Count > 0)
-                                {
-
-                                    var Lista = ListaNoTieneSQInterno;
-                                    List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).OrderBy(c => c.NumeroControl).ToList();
-                                    string auxString = NavContext.GetCurrentNCSQEditar();
-                                    string numerosControl = "";
-                                    List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
-                                    if (auxString != "")
+                                    List<LayoutGridSQ> ListaTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
+                                    List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
+                                    for (int a = 0; a < ListaTieneSQCliente.Count; a++)
                                     {
-                                        NavContext.SetNumbersControlCuadranteSQEditar("");
-                                        ListaTmp.InsertRange(0, ListaSinRepetidos);
-                                        //numerosControl = Helps.GetNumberControlsSQCookies(ListaTmp, model.ListaElementos);
-                                        numerosControl = JsonConvert.SerializeObject(ListaTmp);
-                                        NavContext.SetNumbersControlCuadranteSQEditar(numerosControl);
-                                        model.ListaElementosPorSQ = ListaTmp;
+                                        datosAsignados += " el Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SQ Cliente Agregado <br>";
+                                    }
+
+                                    List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ != "" && a.SQ != null) select a).ToList();
+                                    List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ == "" || a.SQ == null) select a).ToList();
+                                    for (int i = 0; i < ListaTieneSQInterno.Count; i++)
+                                    {
+                                        datosAsignados += " el Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en el SQ " + ListaTieneSQInterno[i].SQ + "<br>";
+                                    }
+
+                                    if (datosAsignados != "")
+                                    {
+                                        TempData["errorAdd"] += datosAsignados;
+                                    }
+                                    if (ListaNoTieneSQInterno.Count > 0)
+                                    {
+                                        var Lista = ListaNoTieneSQInterno;
+                                        List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); //.OrderBy(c => c.NumeroControl).ToList();                                
+                                        string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit");
+                                        string numerosControl = "";
+                                        List<LayoutGridSQ> ListaTmp = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(auxString);
+                                        if (auxString != "" && auxString != "[]" && auxString != null)
+                                        {
+                                            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
+                                            if (ListaTmp == null)
+                                            {
+                                                ListaTmp = new List<LayoutGridSQ>();
+                                            }
+                                            ListaTmp.InsertRange(0, ListaSinRepetidos);
+                                            var Lista2 = ListaTmp;
+                                            ListaTmp = Lista2.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); //.OrderBy(c => c.NumeroControl).ToList();
+                                            numerosControl = JsonConvert.SerializeObject(ListaTmp);
+                                            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", numerosControl);
+                                            model.ListaElementosPorSQ = ListaTmp;
+                                        }
+                                        else
+                                        {
+                                            string numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementosPorSQ);
+                                            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", numeroControlCuadranteSQ);
+                                        }
+                                        model.TieneDatosGridEdit = true;
                                     }
                                     else
                                     {
-                                        string numeroControlCuadranteSQ = NavContext.GetCurrentNCSQEditar();
-                                        numeroControlCuadranteSQ = Helps.GetNumberControlsSQCookies(ListaSinRepetidos, model.ListaElementosPorSQ);
-                                        NavContext.SetNumbersControlCuadranteSQEditar(numeroControlCuadranteSQ);
+                                        model.TieneDatosGridEdit = false;
                                     }
-                                    //string numeroControlCuadranteSQEditar = NavContext.GetCurrentNCSQEditar();
-                                    //numeroControlCuadranteSQEditar = Helps.GetNumberControlsSQCookies(ListaNoTieneSQInterno, model.ListaElementosPorSQ);
-                                    //NavContext.SetNumbersControlCuadranteSQEditar(numeroControlCuadranteSQEditar);
-                                    model.TieneDatosGrid = true;                                   
                                 }
                                 else
                                 {
-                                    //NavContext.SetNumbersControlCuadranteSQEditar("");
-                                    model.TieneDatosGrid = false;
+                                    TempData["sinDatos"] += "No se encontraron datos que coincidieran con su busqueda";
                                 }
                             }
-                            else
-                            {
-                                TempData["sinDatos"] += "No se encontraron datos que coincidieran con su busqueda";
-                            }
-                        }
-                        break;
+                            break;
 
-                    default:
-                        break;
+                        default:
+                            break;
+                    }
                 }
+                else
+                {
+                    TempData["FaltaSQ"] += "Porfavor Ingrese Sol. Inspect";
+                }                                
             }
             return View("Index", model);
         }       
@@ -624,8 +703,9 @@ namespace SAM.Web.Shop.Controllers
                 }
                 else
                 {
-                    ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);
-                    List<LayoutGridSQ> currentControlNumbers = Helps.GetListadoCuadrantesNumeroControlSQ(NavContext.GetCurrentNCSQ());
+                    
+                    ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);                    
+                    List<LayoutGridSQ> currentControlNumbers = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd"));
                     //Obtener SpoolID
                     List<LayoutGridSQ> ListaConDatosNumeroControl = OrdenTrabajoSpoolBO.Instance.ListaNumControlConSpoolID(ToDataTable.Instance.toDataTable(currentControlNumbers));
                     if(ListaConDatosNumeroControl != null)
@@ -662,10 +742,9 @@ namespace SAM.Web.Shop.Controllers
                             if (ListaNoTieneSQInterno.Count > 0)
                             {
                                 try
-                                {
-                                    //string SQConsecutivo = OrdenTrabajoSpoolBO.Instance.GuardarNumeroControlSQ(ToDataTable.Instance.toDataTable(currentControlNumbers), SessionFacade.UserId, project.ID, "");
-                                    string SQConsecutivo = OrdenTrabajoSpoolBO.Instance.GuardarNumeroControlSQ(ToDataTable.Instance.toDataTable(ListaNoTieneSQInterno), SessionFacade.UserId, SessionFacade.NombreCompleto, project.ID, "");
-                                    NavContext.SetNumbersControlCuadranteSQ("");//cuando guardo elimino la lista en memoria de los spools cargados
+                                {                                    
+                                    string SQConsecutivo = OrdenTrabajoSpoolBO.Instance.GuardarNumeroControlSQ(ToDataTable.Instance.toDataTable(ListaNoTieneSQInterno), SessionFacade.UserId, SessionFacade.NombreCompleto, project.ID, "");                                   
+                                    NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
                                     if (SQConsecutivo == model.SQ)
                                     {
                                         TempData["ActualizadoCorrecto"] = "SQ: " + model.SQ + " Actualizado Correctamente";
@@ -674,6 +753,16 @@ namespace SAM.Web.Shop.Controllers
                                     {
                                         TempData["success"] = SQConsecutivo;
                                     }
+                                    
+                                    if(model.QuadrantIdCADD != 0)
+                                    {
+                                        NavContext.setCuadranteID(model.QuadrantIdCADD.ToString());
+                                    }
+                                    else
+                                    {
+                                        NavContext.setCuadranteID(model.QuadrantIdNCADD.ToString());
+                                    }
+                                    
                                 }
                                 catch (Exception e)
                                 {
@@ -682,8 +771,8 @@ namespace SAM.Web.Shop.Controllers
                                 }
                             }
                             else
-                            {
-                                NavContext.SetNumbersControlCuadranteSQ("");
+                            {                                
+                                NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
                             }
                         }
                     }
@@ -695,21 +784,36 @@ namespace SAM.Web.Shop.Controllers
 
         [HttpPost]
         public ActionResult SaveNCSQADDEdit(SQModel model)
-        {            
+        {
+            bool FaltaDatoC = false, FaltaDatoNC = false;
             model.SeleccionAgregarEditar = "2";
-            if (ModelState.IsValid/* && ValidaModel(model)*/&& model.ProjectIdEditar > 0)
-            {                
-                if (model.SQ == "" || model.SQ == null)
+            if (ModelState.IsValid /*&& ValidaModel(model)*/&& model.ProjectIdEditar > 0)
+            {
+                if (model.SearchTypeEdit == "c")
                 {
-                    TempData["errorSaveEdit"] = "Porfavor Ingrese SOL. INSPECT";
+                    if (model.QuadrantIdCEdit == 0)
+                    {
+                        FaltaDatoC = true;
+                    }
+                }
+                else
+                {
+                    if (model.QuadrantIdNCEdit == 0)
+                    {
+                        FaltaDatoNC = true;
+                    }
+                }
+
+                if (FaltaDatoC || FaltaDatoNC)
+                {
+                    TempData["errorSaveEdit"] = "Porfavor Seleccione Un Cuadrante";
                 }
                 else
                 {
                     ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdEditar);
-                    List<LayoutGridSQ> currentControlNumbers = Helps.GetListadoCuadrantesNumeroControlSQEditar(NavContext.GetCurrentNCSQEditar());
+                    List<LayoutGridSQ> currentControlNumbers = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
                     List<LayoutGridSQ> ListaConDatosNumeroControl = OrdenTrabajoSpoolBO.Instance.ListaNumControlConSpoolID(ToDataTable.Instance.toDataTable(currentControlNumbers));
                     string datosAsignados = "";
-                    //List<LayoutGridSQ> listaSoloNumeroControlNuevos = (from a in currentControlNumbers join b in ListaConDatosNumeroControl on a.OrdenTrabajoSpoolID equals b.OrdenTrabajoSpoolID select b).ToList();
 
                     List<LayoutGridSQ> ListaTieneSQCliente = (from a in ListaConDatosNumeroControl where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
                     List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in ListaConDatosNumeroControl where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
@@ -717,38 +821,31 @@ namespace SAM.Web.Shop.Controllers
                     {
                         datosAsignados += " El Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SQ Cliente Agregado, se ignora guardado. <br>";
                     }
-                    int cont = 0;
-                    foreach(var item in ListaNoTieneSQCliente)
+                    
+                    List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ != "" && a.SQ != null && a.SQ != model.SQ) select a).ToList();
+                    List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ == "" || a.SQ == null) select a).ToList();
+                    for (int i = 0; i < ListaTieneSQInterno.Count; i++)
                     {
-                        if(item.SQ != "" && item.SQ != null)
-                        {
-                            cont++;
-                        }
+                        datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en el SQ " + ListaTieneSQInterno[i].SQ + ", se ignora guardado. <br>";
                     }
-                    //Condicion que evalua si todos los spools de un sq son iguales solamente muestra mensaje de editado correcto ya que no hay cambios
-                    if(cont > 0) 
+
+                    if (datosAsignados != "")
+                    {
+                        TempData["errorSaveEdit"] += datosAsignados;
+                    }
+                    List<LayoutGridSQ> ListaMismos = (from a in ListaNoTieneSQCliente where a.SQ == model.SQ select a).ToList();
+                    if(ListaNoTieneSQCliente.Count == ListaMismos.Count && ListaNoTieneSQInterno.Count == 0)
                     {
                         TempData["ActualizadoCorrecto"] = "SQ: " + model.SQ + " Actualizado Correctamente";
                     }
                     else
                     {
-                        List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ != "" && a.SQ != null && a.SQ != model.SQ) select a).ToList();
-                        List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneSQCliente where (a.SQ == "" || a.SQ == null) select a).ToList();
-                        for (int i = 0; i < ListaTieneSQInterno.Count; i++)
-                        {
-                            datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en el SQ " + ListaTieneSQInterno[i].SQ + ", se ignora guardado. <br>";
-                        }
-
-                        if (datosAsignados != "")
-                        {
-                            TempData["errorSaveEdit"] += datosAsignados;
-                        }
                         if (ListaNoTieneSQInterno.Count > 0)
                         {
                             try
                             {
                                 string SQConsecutivo = OrdenTrabajoSpoolBO.Instance.GuardarNumeroControlSQ(ToDataTable.Instance.toDataTable(ListaNoTieneSQInterno), SessionFacade.UserId, SessionFacade.NombreCompleto, model.ProjectIdEditar, model.SQ);
-                                NavContext.SetNumbersControlCuadranteSQEditar("");//cuando guardo elimino la lista en memoria de los spools cargados
+                                NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                                 if (SQConsecutivo == model.SQ)
                                 {
                                     TempData["ActualizadoCorrecto"] = "SQ: " + model.SQ + " Actualizado Correctamente";
@@ -757,64 +854,88 @@ namespace SAM.Web.Shop.Controllers
                                 {
                                     TempData["success"] = SQConsecutivo;
                                 }
+                                if (model.QuadrantIdCEdit != 0)
+                                {
+                                    NavContext.setCuadranteID(model.QuadrantIdCEdit.ToString());
+                                }
+                                else
+                                {
+                                    NavContext.setCuadranteID(model.QuadrantIdNCEdit.ToString());
+                                }
                             }
                             catch (Exception e) { }
                         }
                         else
                         {
-                            NavContext.SetNumbersControlCuadranteSQEditar("");
+                            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                         }
-                    }                    
+                    }                                                        
                 }
             }
             return View("Index", model);
         }
        
-        public ActionResult DeleteNumeroControlSQ(string numeroControlSQ)
+        public ActionResult DeleteNumeroControlSQ(string numeroControlSQ, int ProyectoID, string SQ)
         {
-            string ncSQ = NavContext.GetCurrentNCSQ();
-            List<LayoutGridSQ> listaNcSQ = Helps.GetListadoCuadrantesNumeroControlSQ(NavContext.GetCurrentNCSQ());
+            //string ncSQ = NavContext.GetCurrentNCSQ();
+            List<LayoutGridSQ> listaNcSQ = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd"));
+            //List<LayoutGridSQ> listaNcSQ = Helps.GetListadoCuadrantesNumeroControlSQ(NavContext.GetCurrentNCSQ());
             LayoutGridSQ ncActualSQ = listaNcSQ.Where(x => x.NumeroControl == numeroControlSQ).FirstOrDefault();
             if (ncActualSQ != null)
             {
                 listaNcSQ.Remove(ncActualSQ);
+                OrdenTrabajoSpoolBO.Instance.EliminarSpool(numeroControlSQ, ProyectoID, SQ);
             }                                      
-            NavContext.SetNumbersControlCuadranteSQ(Helps.GetNumberControlsSQCookies(listaNcSQ));
+            //NavContext.SetNumbersControlCuadranteSQ(Helps.GetNumberControlsSQCookies(listaNcSQ));
+            NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", JsonConvert.SerializeObject(listaNcSQ));
 
             return View("Index", GetModelSQ());
         }
-        public ActionResult DeleteNumeroControlSQEditar(string numeroControlSQ)
+        public ActionResult DeleteNumeroControlSQEditar(string numeroControlSQ, int ProyectoID, string SQ)
         {
-            string ncSQ = NavContext.GetCurrentNCSQEditar();
-            List<LayoutGridSQ> listaNcSQ = Helps.GetListadoCuadrantesNumeroControlSQEditar(NavContext.GetCurrentNCSQEditar());
+            //string ncSQ = NavContext.GetCurrentNCSQEditar();
+            //List<LayoutGridSQ> listaNcSQ = Helps.GetListadoCuadrantesNumeroControlSQEditar(NavContext.GetCurrentNCSQEditar());
+            List<LayoutGridSQ> listaNcSQ = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
             LayoutGridSQ ncActualSQ = listaNcSQ.Where(x => x.NumeroControl == numeroControlSQ).FirstOrDefault();
             if (ncActualSQ != null)
             {
                 listaNcSQ.Remove(ncActualSQ);
+                OrdenTrabajoSpoolBO.Instance.EliminarSpool(numeroControlSQ, ProyectoID, SQ);                
             }
-
-            NavContext.SetNumbersControlCuadranteSQEditar(Helps.GetNumberControlsSQCookies(listaNcSQ));
-
+            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", JsonConvert.SerializeObject(listaNcSQ));
+            //NavContext.SetNumbersControlCuadranteSQEditar(Helps.GetNumberControlsSQCookies(listaNcSQ));
             return View("Index", GetModelSQEditar());
         }
 
         private SQModel GetModelSQ()
         {
-            List<LayoutGridSQ> listaElementos = Helps.GetListadoCuadrantesNumeroControlSQ(NavContext.GetCurrentNCSQ());
+            //List<LayoutGridSQ> listaElementos = Helps.GetListadoCuadrantesNumeroControlSQ(NavContext.GetCurrentNCSQ());
+            List<LayoutGridSQ> listaElementos = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd"));
             SQModel sqlModel = new SQModel();
             sqlModel.ListaElementos = listaElementos;
             sqlModel.SeleccionAgregarEditar = "1";
-            sqlModel.ProjectIdADD = NavContext.GetCurrentProjectSQ().ID;            
+            sqlModel.ProjectIdADD = NavContext.GetCurrentProjectSQ().ID;
+            sqlModel.ProjectIdEditar = NavContext.GetCurrentProjectSQ().ID;
+            if (NavContext.getCuadranteID() != "")
+            {
+                sqlModel.CuadranteID = int.Parse(NavContext.getCuadranteID());
+            }
             return sqlModel;
         }
 
         private SQModel GetModelSQEditar()
         {
-            List<LayoutGridSQ> listaElementos = Helps.GetListadoCuadrantesNumeroControlSQEditar(NavContext.GetCurrentNCSQEditar());
+            //List<LayoutGridSQ> listaElementos = Helps.GetListadoCuadrantesNumeroControlSQEditar(NavContext.GetCurrentNCSQEditar());
+            List<LayoutGridSQ> listaElementos = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
             SQModel sqlModel = new SQModel();
             sqlModel.ListaElementosPorSQ = listaElementos;
             sqlModel.SeleccionAgregarEditar = "2";
-            sqlModel.ProjectIdEditar = NavContext.GetCurrentProjectSQEditar().ID;                               
+            sqlModel.ProjectIdEditar = NavContext.GetCurrentProjectSQEditar().ID;
+            sqlModel.ProjectIdADD = NavContext.GetCurrentProjectSQEditar().ID;
+            if (NavContext.getCuadranteID() != "")
+            {
+                sqlModel.CuadranteID = int.Parse(NavContext.getCuadranteID());
+            }            
             sqlModel.SQ = NavContext.GetSQ();
             return sqlModel;
         }

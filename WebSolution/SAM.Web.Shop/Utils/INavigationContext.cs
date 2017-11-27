@@ -2,7 +2,7 @@
 using SAM.Entities.Cache;
 using SAM.Web.Shop.Models;
 using System.Collections.Generic;
-
+using System.Web;
 
 namespace SAM.Web.Shop.Utils
 {
@@ -62,6 +62,9 @@ namespace SAM.Web.Shop.Utils
         /// <param name="sq"></param>
         void SetSQ(string sq);
 
+        void setCuadranteID(string CuadranteID);
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -107,6 +110,13 @@ namespace SAM.Web.Shop.Utils
 
         string GetSQ();
 
+        string getCuadranteID();
 
+        void setNumerosControlAdd(string NumerosControl);
+        void setNumerosControlEdit(string NumerosControl);
+        string getNumerosControlAdd();
+        string getNumerosControlEdit();
+        T GetDataFromSession<T>(HttpSessionStateBase session, string key);
+        void SetDataToSession<T>(HttpSessionStateBase session, string key, object value);
     }
 }

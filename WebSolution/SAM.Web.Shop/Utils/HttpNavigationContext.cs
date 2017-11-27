@@ -10,7 +10,7 @@ using SAM.Entities.Cache;
 using SAM.Web.Shop.Models;
 using System.Collections.Generic;
 using Mimo.Framework;
-
+using SAM.Entities.Personalizadas.Shop;
 
 namespace SAM.Web.Shop.Utils
 {
@@ -20,7 +20,10 @@ namespace SAM.Web.Shop.Utils
         {
             get { return HttpContext.Current.Response; }
         }
-
+        private HttpRequest Request
+        {
+            get { return HttpContext.Current.Request; }
+        }
 
         private void WriteCookie(string key, string value)
         {
@@ -29,19 +32,14 @@ namespace SAM.Web.Shop.Utils
                 Value = value,
                 HttpOnly = true
             };
-
-
             Response.SetCookie(cookie);
-        }
-
-
+        }       
         private void WriteCookie(string key, NameValueCollection values)
         {
             HttpCookie cookie = new HttpCookie(key)
             {
                 HttpOnly = true
             };
-
 
             foreach (string kvp in values.AllKeys)
             {
@@ -204,8 +202,7 @@ namespace SAM.Web.Shop.Utils
 
 
             WriteCookie("ListaElementosEditados", numeroControlCuadranteSQ);
-        }
-
+        }        
 
         public void SetSQ(string sq)
         {
@@ -239,10 +236,7 @@ namespace SAM.Web.Shop.Utils
 
             WriteCookie("projectIdEditar", projectId.ToString(CultureInfo.CurrentCulture));
         }
-
-
-
-
+        
         public void SetControlNumber(OrdenTrabajoSpool controlNumber)
         {
             NameValueCollection nvc = new NameValueCollection
@@ -375,7 +369,84 @@ namespace SAM.Web.Shop.Utils
             return sq;
         }
 
+        public void setCuadranteID(string CuadranteID)
+        {
+            if (CuadranteID == null || CuadranteID == "")
+            {
+                throw new SecurityException(string.Format("The requested projectId {0} is not available for the looged user {1}", CuadranteID, SessionFacade.Username));
+            }
+            WriteCookie("CuadranteID", CuadranteID);
+        }
+        public string getCuadranteID()
+        {
+            return GetFromCookie("CuadranteID");
+        }
 
+        public void setNumerosControlAdd(string NumerosControl)
+        {
+            if (NumerosControl == null)
+            {
+                throw new SecurityException(string.Format("The requested numberconrol {0} is not available for the looged user {1}", NumerosControl, SessionFacade.Username));
+            }
+            /* HttpCookie cookie = new HttpCookie(key)
+            {
+                Value = value,
+                HttpOnly = true
+            };
+            Response.SetCookie(cookie);*/
+            HttpCookie cookie = new HttpCookie("NumerosControlAdd");
+            cookie.HttpOnly = true;
+            cookie.Value = NumerosControl;
+            //Request.Cookies.Add(cookie);
+            Response.Cookies.Add(cookie);
+            //WriteCookie("NumerosControlAdd", NumerosControl);
+        }
+        public void setNumerosControlEdit(string NumerosControl)
+        {
+            if (NumerosControl == null)
+            {
+                throw new SecurityException(string.Format("The requested numberconrol {0} is not available for the looged user {1}", NumerosControl, SessionFacade.Username));
+            }
+            WriteCookie("NumerosControlEdit", NumerosControl);
+        }
+        
+        public string getNumerosControlAdd()
+        {
+            //return GetFromCookie("NumerosControlAdd");
+            HttpCookie cookie;
+            string result = "";
+            if (Request.Cookies.AllKeys.Contains("NumerosControlAdd"))
+            {
+                cookie = Request.Cookies["NumerosControlAdd"];
+                if (cookie != null)
+                {
+                    result = cookie.Value;
+                }
+            }
+
+            if (Response.Cookies.AllKeys.Contains("NumerosControlAdd"))
+            {
+                cookie = Response.Cookies["NumerosControlAdd"];
+                if (cookie != null)
+                {
+                    result = cookie.Value;
+                }
+            }
+            return result;
+        }
+        public string getNumerosControlEdit()
+        {
+            return GetFromCookie("NumerosControlEdit");
+        }
+
+        public T GetDataFromSession<T>(HttpSessionStateBase session, string key)
+        {
+            return (T)session[key];
+        }
+        public void SetDataToSession<T>(HttpSessionStateBase session, string key, object value)
+        {
+            session[key] = value;
+        }
 
     }
 }

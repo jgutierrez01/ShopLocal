@@ -331,7 +331,7 @@ namespace SAM.BusinessObjects.Produccion
                         {
                             NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),
                             OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),
-                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
+                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),                            
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
                             sqinterno = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
                             TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString())
@@ -690,7 +690,7 @@ namespace SAM.BusinessObjects.Produccion
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
-                string query = "select c.CuadranteID,c.Nombre,odts.NumeroControl,OrdenTrabajoSpoolID,sqinterno, sq SqCliente from OrdenTrabajoSpool odts WITH(NOLOCK)";
+                string query = "select c.CuadranteID,c.Nombre,odts.NumeroControl,OrdenTrabajoSpoolID,sqinterno, s.SpoolID, sq SqCliente from OrdenTrabajoSpool odts WITH(NOLOCK)";
                 query += " inner join  Spool s WITH(NOLOCK) on odts.SpoolID = s.SpoolID";
                 query += "     inner join Cuadrante c WITH(NOLOCK) on s.CuadranteID = c.CuadranteID";
                 query += " where s.sqinterno = '" + Sq + "'" + " and s.proyectoID=" + proyectoID;
@@ -712,6 +712,7 @@ namespace SAM.BusinessObjects.Produccion
                             CuadranteID = int.Parse(ds.Tables[0].Rows[i]["CuadranteID"].ToString()),
                             Cuadrante = ds.Tables[0].Rows[i]["Nombre"].ToString(),
                             NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),
+                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
                             OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
                             SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString()                            
@@ -749,12 +750,19 @@ namespace SAM.BusinessObjects.Produccion
             }
         }
 
-        public List<CuadranteNumeroControlSQ> BuscarPorCuadranteSQ(int cuadranteid, int? proyectoID)
+        public List<CuadranteNumeroControlSQ> BuscarPorCuadranteSQ(int cuadranteid, int? proyectoID, int Opcion)
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
-                //string query = " SELECT 1 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria";
-                string query = " SELECT 2 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria";
+                string query = "";
+                if(Opcion == 1)
+                {
+                    query += " SELECT 1 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria";
+                }
+                else
+                {
+                    query += " SELECT 2 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria";
+                }                
                 query += "     FROM OrdenTrabajoSpool A WITH(NOLOCK)";
                 query += " INNER JOIN Spool B ON A.SpoolID = B.SpoolID";
                 query += " INNER JOIN Cuadrante C WITH(NOLOCK) ON B.CuadranteID = C.CuadranteID";
@@ -905,17 +913,14 @@ namespace SAM.BusinessObjects.Produccion
             return ListaRetorna;
         }
 
-        public int EliminarSpool(string NumeroControl, int ProyectoID)
-        {
-            int result = 0;
+        public void EliminarSpool(string NumeroControl, int ProyectoID, string SQ)
+        {            
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {          
                 ObjetosSQL _SQL = new ObjetosSQL();
-                string[,] parametro = { { "@NumeroControl", NumeroControl }, { "@ProyectoID", ProyectoID.ToString() } };
-                result = _SQL.EjecutaInsertUpdate(Stords.EliminarSpool, parametro);
-                      
-            }
-            return result;
+                string[,] parametro = { { "@NumeroControl", NumeroControl }, { "@ProyectoID", ProyectoID.ToString() }, { "@SQ", SQ } };
+                _SQL.EjecutaInsertUpdate(Stords.EliminarSpool, parametro);                      
+            }            
         }
 
         public string GuardarNumeroControlSQ(DataTable listaLayoutSQ, Guid userID, string inspector, int proyectoid, string sq)

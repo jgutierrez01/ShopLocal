@@ -20,6 +20,131 @@
             $cuadranteContainer = $cnt.find("#cuadranteEditarContainer");
             $numeroControlContainer = $cnt.find("#numeroControlEditarContainer");
 
+            $("#resumenSpool1Edit, #resumenSpool2Edit").click(function (e) {
+                var msg = "";
+                var cont = 0;
+                //input[id ^= 'ProjectIdEditar']
+                //if ($("input[name^='SearchTypeEdit']:checked").val() == "c") {
+                if ($("input[name='SearchTypeEdit']:checked").val() == "c") {
+                    if ($("#ProjectIdEditar").val() == 0) {
+                        cont++;
+                        msg += "Seleccione Proyecto <br>";
+                    }
+
+                    if ($("#QuadrantIdCEdit").val() == 0) {
+                        cont++;
+                        msg += "Ingrese Cuadrante <br>";
+                    }
+
+                    if (cont > 0) {
+                        $("#errorClientEdit").css("display", "block");
+                        $("#errorClientEdit").html("");
+                        $("#errorClientEdit").append(msg);
+                        e.preventDefault();
+                    } else {
+                        $("#errorClientEdit").css("display", "none");
+                        $("#errorClientEdit").append("");
+                    }
+                } else {
+                    if ($("#ProjectIdEditar").val() == 0) {
+                        cont++;
+                        msg += "Seleccione Proyecto <br>";
+                    }
+                    if ($("#WorkOrderNumberEdit").val() == "") {
+                        cont++;
+                        msg += "Ingrese Orden de Trabajo <br>";
+                    }
+                    if ($("#ControlNumberEDIT").val() == "") {
+                        cont++;
+                        msg += "Ingrese Numero de Control <br>";
+                    }
+
+                    if ($("#QuadrantIdNCEdit").val() == 0) {
+                        cont++;
+                        msg += "Ingrese Cuadrante <br>";
+                    }
+
+                    if (cont > 0) {
+                        $("#errorClientEdit").css("display", "block");
+                        $("#errorClientEdit").html("");
+                        $("#errorClientEdit").append("");
+                        $("#errorClientEdit").append(msg);
+                        e.preventDefault();
+                    } else {
+                        $("#errorClientEdit").css("display", "none");
+                        $("#errorClientEdit").append("");
+                    }
+                }
+            });
+
+            $("#GuardarEdicion").click(function (e) {
+                var msg = "";
+                var cont = 0;
+                if ($("#SQ").val() == "") {
+                    cont++;
+                    msg += "Ingrese Sol. Inspect <br>";
+                } else {
+                    cont = 0;
+                }
+                if ($("#QuadrantIdCEdit").val() == 0) {
+                    cont++;
+                    msg += "Ingrese Cuadrante <br>";
+                } else {
+                    $("#errorClientEdit").css("display", "none");
+                    $("#errorClientEdit").append("");
+                    cont = 0;
+                }
+                if ($("#gridEditar").find("table").find("tbody").length > 0 ){
+                //if ($("table#gridEditar tbody tr").length > 0) {
+                    cont = 0;
+                } else {
+                    cont++;
+                    msg += "No Hay Datos Para Editar <br>";
+                }
+                if (cont > 0) {
+                    $("#errorClientEdit").css("display", "block");
+                    $("#errorClientEdit").html("");
+                    $("#errorClientEdit").append("");
+                    $("#errorClientEdit").append(msg);
+                    e.preventDefault();
+                } else {
+                    $("#errorClientEdit").css("display", "none");
+                    $("#errorClientEdit").append("");
+                }
+            });
+
+            $("#QuadrantIdCEdit").change(function () {                
+                if ($(this).val() != 0) {
+                    var CuadranteID = $(this).val();                              
+                    $.getJSON('/Controls/UpdateCuadranteID', { CuadranteID: CuadranteID }, function (data) {
+                        $.each(data, function (i, item) {
+                            if (item.result == "OK") {
+                                console.log('cuadrante Actualizdao : ', item.result);
+                                $("#QuadrantIdNCEdit").val(CuadranteID);
+                                $("#QuadrantIdCEdit").val(CuadranteID);
+                            }
+                        });
+                    });
+
+                }
+            });
+            $cnt.find("#QuadrantIdNCEdit").change(function () {
+                if ($(this).val() != 0) {
+                    var CuadranteID = $(this).val();                   
+                    $.getJSON('/Controls/UpdateCuadranteID', { CuadranteID: CuadranteID }, function (data) {
+                        $.each(data, function (i, item) {
+                            if (item.result == "OK") {
+                                console.log('cuadrante Actualizdao : ', item.result);
+                                $("#QuadrantIdNCEdit").val(CuadranteID);
+                                $("#QuadrantIdCEdit").val(CuadranteID);
+                            }
+                        });                        
+                    });
+                }
+            });
+
+
+
             $cnt.find("#ProjectIdEditar").change(function () {
                 var item;
                 if ($("#TieneDatosGrid").prop("checked")) {
@@ -36,6 +161,7 @@
                         item = $(this).find("option:selected").data("item");
                         $cnt.find("#wo-addon-text").text(item.WorkOrderPrefix);
                         var projectId = $(this).val();
+                        $("#ProjectIdADD").val(projectId);
                         $cntWkS.find("input[id^='ProjectIdEditar']").val(projectId);
                         $.getJSON('/Controls/LimpiarGrid', { ProyectoID: projectId }, function (data) {
                             $.each(data, function (i, item) {
@@ -46,6 +172,7 @@
                     } else {                        
                         var projectId = ProyectoIDEditarAnterior;
                         $("select#ProjectIdEditar").val(projectId).prop("selected", true);
+                        $("#ProjectIdADD").val(projectId);
                         $cntWkS.find("input[id^='ProjectIdEditar']").val(projectId);
                         item = $(this).find("option:selected").data("item");
                         $cnt.find("#wo-addon-text").text(item.WorkOrderPrefix);                                               
@@ -61,6 +188,7 @@
                         item = $(this).find("option:selected").data("item");
                         $cnt.find("#wo-addon-text").text(item.WorkOrderPrefix);
                         var projectId = $(this).val();
+                        $("#ProjectIdADD").val(projectId);
                         $cntWkS.find("input[id^='ProjectIdEditar']").val(projectId);
                         $.getJSON('/Controls/UpdateProjetId', { ID: projectId }, function (data) {
                             $.each(data, function (i, item) {
@@ -76,7 +204,8 @@
             });
 
             $cnt.find("input[id^='SearchType']").click(function () {
-
+                $("#errorClient").css("display", "none");
+                $("#errorClient").append("");
                 switch ($(this).val()) {
                     case "c":
                         $cuadranteContainer.show();

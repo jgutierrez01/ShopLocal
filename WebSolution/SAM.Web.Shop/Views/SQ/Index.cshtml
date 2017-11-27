@@ -24,8 +24,17 @@
     string workOrderNumberEdit = ViewContext.HttpContext.Request.Params.Get("workOrderNumberEdit");
     string controlNumberADD = ViewContext.HttpContext.Request.Params.Get("controlNumberADD");
     string controlNumberEDIT = ViewContext.HttpContext.Request.Params.Get("controlNumberEDIT");
-
-    iniciaModelo = new SQModel(seleccionAgregarEditar, quadrantIdCADD, quadrantIdNCADD, quadrantIdCEdit, quadrantIdNCEdit, projectIdADD, projectIdEdit, searchTypeADD, searchTypeEdit, sQ, workOrderNumberADD, workOrderNumberEdit, controlNumberADD, controlNumberEDIT);
+    string CuadranteID = ViewContext.HttpContext.Request.Params.Get("CuadranteID");
+    string[] ArrayCuadrante = CuadranteID.Split(',');
+    int[] A = new int[ArrayCuadrante.Length];
+    for(int i = 0; i < ArrayCuadrante.Length; i++)
+    {
+        A[i] = int.Parse(ArrayCuadrante[i]);
+    }
+    
+    int[] B = A.Distinct().ToArray();
+    CuadranteID = B[0].ToString();
+    iniciaModelo = new SQModel(seleccionAgregarEditar, quadrantIdCADD, quadrantIdNCADD, quadrantIdCEdit, quadrantIdNCEdit, projectIdADD, projectIdEdit, searchTypeADD, searchTypeEdit, sQ, workOrderNumberADD, workOrderNumberEdit, controlNumberADD, controlNumberEDIT, CuadranteID);
 
 }
 @using (Html.BeginForm("OpcionesNC", "SQ", FormMethod.Get, new { id = "sq-opciones-form" }))
@@ -95,17 +104,18 @@
                 {
                     <p class="alert alert-warning" id="error"> @Html.Raw(@TempData["FaltaCuadrante"])</p>
                 }
+                <p class="alert alert-warning" id="errorClient" style="display: none;"></p>
             </div>            
 
             <div id="cuadranteContainer" class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin:0px;border:0px;padding:0px;">
                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin:0px;border:0px;padding:0px;">
-                    @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration() { LabelText = "Cuadrante", Name = "QuadrantIdCADD", PreselectIfOnlyOne = true, SelectedId = iniciaModelo.QuadrantIdCADD.ToString() }, @class = "form-control" })                    
+                    @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration() { LabelText = "Cuadrante", Name = "QuadrantIdCADD", PreselectIfOnlyOne = true, SelectedId = iniciaModelo.CuadranteID.ToString() }, @class = "form-control" })                    
                     @*@Html.Action("QuadrantsDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredCuadrante(iniciaModelo, ViewContext.ViewData.ModelState, 1) })*@                                        
                     <div style="display:none">@Html.Hidden("QuadrantIDH", null, new { @class = "form-control", type = "string", id = "QuadrantIDH" })</div>
                 </div>
                 <div class="form-group col-xs-2 col-sm-2 col-md-2 col-lg-2">
                     &nbsp;
-                    <button type="submit" id="resumenSpool" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.AddButton_Text)</button>
+                    <button type="submit" id="resumenSpool1Add" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.AddButton_Text)</button>
                 </div>
             </div>            
                                                   
@@ -124,14 +134,14 @@
                     @Html.ValidationMessageFor(x => x.ControlNumberADD)
                 </div>
                 <div class="form-group col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration() { LabelText = "Cuadrante", Name = "QuadrantIdNCADD", PreselectIfOnlyOne = true, SelectedId = iniciaModelo.QuadrantIdNCADD.ToString() }, @class = "form-group" })
+                    @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration() { LabelText = "Cuadrante", Name = "QuadrantIdNCADD", PreselectIfOnlyOne = true, SelectedId = iniciaModelo.CuadranteID.ToString() }, @class = "form-group" })
                     @*@Html.Action("QuadrantsDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredCuadrante(iniciaModelo, ViewContext.ViewData.ModelState, 2) })*@
                     
                     <div style="display:none">@Html.Hidden("QuadrantIDH", null, new { @class = "form-control", type = "string", id = "QuadrantIDH" })</div>
                 </div>
                 <div class="form-group col-xs-2 col-sm-2 col-md-2 col-lg-2">
                     &nbsp;
-                    <button type="submit" id="resumenSpool" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.AddButton_Text)</button>
+                    <button type="submit" id="resumenSpool2Add" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.AddButton_Text)</button>
                 </div>                
             </div>
         </div>
@@ -196,17 +206,18 @@
                 @if (@TempData["Repetido"] != null)
                 {
                     <p class="alert alert-warning" id="error">@Html.Raw(@TempData["Repetido"])</p>
-                }
+                }            
+                <p class="alert alert-warning" id="errorClientEdit" style="display: none;"></p>
             </div>
             <div id="cuadranteEditarContainer" class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin:0px;border:0px;padding:0px;">
                 <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin:0px;border:0px;padding:0px;">
-                    @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration() { LabelText = "Cuadrante", Name = "QuadrantIdCEdit", PreselectIfOnlyOne = true, SelectedId = iniciaModelo.QuadrantIdCEdit.ToString() }, @class = "form-control" })
+                    @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration() { LabelText = "Cuadrante", Name = "QuadrantIdCEdit", PreselectIfOnlyOne = true, SelectedId = iniciaModelo.CuadranteID.ToString() }, @class = "form-control" })
                     <div style="display:none">@Html.Hidden("QuadrantIDH", null, new { @class = "form-control", type = "string", id = "QuadrantIDH" })</div>
                 </div>
 
                 <div class="form-group col-xs-2 col-sm-2 col-md-2 col-lg-2">
                     &nbsp;
-                    <button type="submit" id="resumenSpoolEditar" name="Command" value="Agregar" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.AddButton_Text)</button>
+                    <button type="submit" id="resumenSpool1Edit" name="Command" value="Agregar" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.AddButton_Text)</button>
 
                 </div>
 
@@ -227,12 +238,12 @@
                 </div>
 
                 <div class="form-group col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration() { LabelText = "Cuadrante", Name = "QuadrantIdNCEdit", PreselectIfOnlyOne = true, SelectedId = iniciaModelo.QuadrantIdNCEdit.ToString() }, @class = "form-group" })
+                    @Html.Action("QuadrantsDropDown", "Controls", new { config = new DropDownConfiguration() { LabelText = "Cuadrante", Name = "QuadrantIdNCEdit", PreselectIfOnlyOne = true, SelectedId = iniciaModelo.CuadranteID.ToString() }, @class = "form-group" })
                     <div style="display:none">@Html.Hidden("QuadrantIDH", null, new { @class = "form-control", type = "string", id = "QuadrantIDH" })</div>
                 </div>
                 <div class="form-group col-xs-2 col-sm-2 col-md-2 col-lg-2">
                     &nbsp;
-                    <button type="submit" id="resumenSpool" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.AddButton_Text)</button>
+                    <button type="submit" id="resumenSpool2Edit" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.AddButton_Text)</button>
                 </div>
             </div>
         </div>      
@@ -274,22 +285,22 @@
             @if (Model != null)
             {
 
-            <div>
+            <div>                
                 @if (Model.ListaElementos != null && Model.ListaElementos.Count > 0)
-                    {
+                {
                     @Html.Grid(Model.ListaElementos).Columns(columns =>
-               {
+                    {
 
-                   columns.Add(C => C.Accion).Titled("Eliminar")
-                   .Encoded(false)
-                   .Sanitized(false)
-                   .SetWidth(30)
-                    .RenderValueAs(c => Html.ActionLink(string.Empty + "...", "DeleteNumeroControlSQ", "SQ", new { numeroControlSQ = c.NumeroControl }, new { @class = "delete" }))
-                    .Filterable(true);
-                   columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(30);
-                   columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(30);
-               }).WithPaging(10).Sortable(true).EmptyText(" ");
-                    }
+                        columns.Add(C => C.Accion).Titled("Eliminar")
+                        .Encoded(false)
+                        .Sanitized(false)
+                        .SetWidth(30)
+                        .RenderValueAs(c => Html.ActionLink(string.Empty + "...", "DeleteNumeroControlSQ", "SQ", new { numeroControlSQ = c.NumeroControl, ProyectoID = Model.ProjectIdADD, SQ = c.SQ == null ? "" : c.SQ }, new { @class = "delete" }))
+                        .Filterable(true);
+                        columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(30);
+                        columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(30);
+                    }).WithPaging(10).Sortable(true).EmptyText(" ");
+                }
             </div>
             <div>
                 <button type="submit" id="resumenSpool" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
@@ -318,7 +329,7 @@
             }
         </div>
         @* Check Oculto para saber si esta lleno el grid *@
-        <input id="TieneDatosGrid" type="checkbox" checked="@Model.TieneDatosGrid" style="display:none;" />
+        <input id="TieneDatosGrid" type="checkbox" checked="@Model.TieneDatosGridEdit" style="display:none;" />
         <input id="ProyectoAnterior" type="text" style="display:none;" value="@Model.ProjectIdEditar" />
         <div id="date" style="display:none">
             @Html.Hidden("SeleccionAgregarEditar", iniciaModelo.SeleccionAgregarEditar, new { @class = "form-control", type = "string", id = "VistaSeleccionada" })
@@ -343,7 +354,7 @@
                                .Encoded(false)
                                .Sanitized(false)
                                .SetWidth(30)
-                               .RenderValueAs(c => Html.ActionLink(string.Empty + "...", "DeleteNumeroControlSQEditar", "SQ", new { numeroControlSQ = c.NumeroControl }, new { @class = "delete" }))
+                               .RenderValueAs(c => Html.ActionLink(string.Empty + "...", "DeleteNumeroControlSQEditar", "SQ", new { numeroControlSQ = c.NumeroControl, ProyectoID = Model.ProjectIdEditar, SQ = c.SQ == null ? "" : c.SQ }, new { @class = "delete" }))
                                .Filterable(true);
                                columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(30);
                                columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(30);                               

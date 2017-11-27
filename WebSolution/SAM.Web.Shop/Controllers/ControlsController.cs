@@ -246,6 +246,15 @@ namespace SAM.Web.Shop.Controllers
         public JsonResult UpdateProjetId(int ID)
         {
             NavContext.SetProject(ID);
+            NavContext.SetProjectEdit(ID);
+            var myData = new[] { new { result = "OK" } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult UpdateCuadranteID(string CuadranteID)
+        {
+            NavContext.setCuadranteID(CuadranteID);
             var myData = new[] { new { result = "OK" } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
