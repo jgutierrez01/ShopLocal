@@ -698,27 +698,27 @@ namespace SAM.Web.Shop.Controllers
             if (ModelState.IsValid /*&& ValidaModel(model)*/&& model.ProjectIdADD > 0)
             {
                 ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);
-                if (model.SearchTypeADD == "c")
-                {
-                    if (model.QuadrantIdCADD == 0)
-                    {
-                        FaltaDatoC = true;
-                    }
-                }
-                else
-                {
-                    if (model.QuadrantIdNCADD == 0)
-                    {
-                        FaltaDatoNC = true;
-                    }
-                }
+                //if (model.SearchTypeADD == "c")
+                //{
+                //    if (model.QuadrantIdCADD == 0)
+                //    {
+                //        FaltaDatoC = true;
+                //    }
+                //}
+                //else
+                //{
+                //    if (model.QuadrantIdNCADD == 0)
+                //    {
+                //        FaltaDatoNC = true;
+                //    }
+                //}
 
-                if (FaltaDatoC || FaltaDatoNC)
-                {
-                    TempData["errorSaveAdd"] = "Porfavor Seleccione Un Cuadrante";
-                }
-                else
-                {                                        
+                //if (FaltaDatoC || FaltaDatoNC)
+                //{
+                //    TempData["errorSaveAdd"] = "Porfavor Seleccione Un Cuadrante";
+                //}
+                //else
+                //{                                        
                     List<LayoutGridSQ> currentControlNumbers = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd"));
                     //Obtener SpoolID
                     List<LayoutGridSQ> ListaConDatosNumeroControl = OrdenTrabajoSpoolBO.Instance.ListaNumControlConSpoolID(ToDataTable.Instance.toDataTable(currentControlNumbers));
@@ -790,7 +790,7 @@ namespace SAM.Web.Shop.Controllers
                             }
                         }
                     }
-                }
+                //}
                 if (project != null)
                 {
                     NavContext.SetProject(project.ID);
@@ -810,27 +810,27 @@ namespace SAM.Web.Shop.Controllers
             if (ModelState.IsValid /*&& ValidaModel(model)*/&& model.ProjectIdEditar > 0)
             {
                 ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdEditar);
-                if (model.SearchTypeEdit == "c")
-                {
-                    if (model.QuadrantIdCEdit == 0)
-                    {
-                        FaltaDatoC = true;
-                    }
-                }
-                else
-                {
-                    if (model.QuadrantIdNCEdit == 0)
-                    {
-                        FaltaDatoNC = true;
-                    }
-                }
+                //if (model.SearchTypeEdit == "c")
+                //{
+                //    if (model.QuadrantIdCEdit == 0)
+                //    {
+                //        FaltaDatoC = true;
+                //    }
+                //}
+                //else
+                //{
+                //    if (model.QuadrantIdNCEdit == 0)
+                //    {
+                //        FaltaDatoNC = true;
+                //    }
+                //}
 
-                if (FaltaDatoC || FaltaDatoNC)
-                {
-                    TempData["errorSaveEdit"] = "Porfavor Seleccione Un Cuadrante";
-                }
-                else
-                {                    
+                //if (FaltaDatoC || FaltaDatoNC)
+                //{
+                //    TempData["errorSaveEdit"] = "Porfavor Seleccione Un Cuadrante";
+                //}
+                //else
+                //{                    
                     List<LayoutGridSQ> currentControlNumbers = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
                     List<LayoutGridSQ> ListaConDatosNumeroControl = OrdenTrabajoSpoolBO.Instance.ListaNumControlConSpoolID(ToDataTable.Instance.toDataTable(currentControlNumbers));
                     string datosAsignados = "";
@@ -890,7 +890,7 @@ namespace SAM.Web.Shop.Controllers
                             NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                         }
                     }                                                        
-                }
+                //}
                 if (project != null)
                 {
                     NavContext.SetProject(project.ID);

@@ -918,7 +918,7 @@ namespace SAM.BusinessObjects.Produccion
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {          
                 ObjetosSQL _SQL = new ObjetosSQL();
-                string[,] parametro = { { "@NumeroControl", NumeroControl }, { "@ProyectoID", ProyectoID.ToString() }, { "@SQ", SQ } };
+                string[,] parametro = { { "@NumeroControl", NumeroControl }, { "@ProyectoID", ProyectoID.ToString() }, { "@SQ", SQ == null ? "" : SQ } };
                 _SQL.EjecutaInsertUpdate(Stords.EliminarSpool, parametro);                      
             }            
         }
