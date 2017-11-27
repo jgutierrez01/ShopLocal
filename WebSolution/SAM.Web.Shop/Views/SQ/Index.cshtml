@@ -42,25 +42,17 @@
     <fieldset id="sq-opciones-form" style="margin:0px;border:0px;padding:0px;">
         <div id="OpcionAgregarEditar" class="row" style="margin:0px;border:0px;padding:0px;">
             <div class="form-group col-xs-12 col-sm-4 col-md-2 col-lg-3">
-                @*@Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Add", Model.SeleccionAgregarEditar == "1" ? new { @checked = true } : null)*@
-                @Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Add", new { id= "radioAdd",  @checked = true })                                
-                @*@Html.Raw(CommonStrings.Add)*@
-                <label for="radioAdd">@Html.Raw(CommonStrings.Add)</label>                
-                @Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Edit", Model.SeleccionAgregarEditar == "2" ? new { id="radioEdit", @checked = true } : null)
-                @*@Html.Raw(CommonStrings.Edit)*@                
-                @Html.LabelFor(n => n.SeleccionAgregarEditar, CommonStrings.Edit)
-
-                @*<div class="btn-group " data-toggle="buttons" role="group">
-                        <div class="btn btn-primary">
-                            @Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Add", new { id = "Add" })
-                            @Html.Raw(CommonStrings.Add)
-                        </div>
-                        <div class="btn btn-primary">
-                            @Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Edit", new { id = "Edit" })
-                            @Html.Raw(CommonStrings.Edit)
-                        </div>
-                    </div>*@
-
+                <label>                    
+                    @Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Add", Model.SeleccionAgregarEditar == "1" ? new { id = "radioAdd", @checked = true } : null)
+                    &nbsp;
+                    @Html.Raw(CommonStrings.Add)
+                </label>                               
+                &nbsp;
+                <label>                    
+                    @Html.RadioButtonFor(a => a.SeleccionAgregarEditar, "Edit", Model.SeleccionAgregarEditar == "2" ? new { id = "radioEdit", @checked = true } : null)
+                    &nbsp;
+                    @Html.Raw(CommonStrings.Edit)
+                </label>                
             </div>
         </div>
     </fieldset>

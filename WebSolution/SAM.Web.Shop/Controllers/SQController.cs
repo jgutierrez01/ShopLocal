@@ -27,7 +27,8 @@ namespace SAM.Web.Shop.Controllers
         {
             SQModel sqmodel = new SQModel();
             try
-            {                
+            {
+                sqmodel.SeleccionAgregarEditar = "1";          
                 NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
                 NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                 if (NavContext.GetCurrentProject().ID > 0)
@@ -312,6 +313,13 @@ namespace SAM.Web.Shop.Controllers
 
                 default:
                     break;
+            }
+            if(project != null)
+            {
+                NavContext.SetProject(project.ID);
+                NavContext.SetProjectEdit(project.ID);
+                model.ProjectIdADD = project.ID;
+                model.ProjectIdEditar = project.ID;
             }
             return View("Index", model);
         }
@@ -672,6 +680,13 @@ namespace SAM.Web.Shop.Controllers
                     TempData["FaltaSQ"] += "Porfavor Ingrese Sol. Inspect";
                 }                                
             }
+            if (project != null)
+            {
+                NavContext.SetProject(project.ID);
+                NavContext.SetProjectEdit(project.ID);
+                model.ProjectIdADD = project.ID;
+                model.ProjectIdEditar = project.ID;
+            }
             return View("Index", model);
         }       
 
@@ -682,6 +697,7 @@ namespace SAM.Web.Shop.Controllers
             model.SeleccionAgregarEditar = "1";
             if (ModelState.IsValid /*&& ValidaModel(model)*/&& model.ProjectIdADD > 0)
             {
+                ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);
                 if (model.SearchTypeADD == "c")
                 {
                     if (model.QuadrantIdCADD == 0)
@@ -702,9 +718,7 @@ namespace SAM.Web.Shop.Controllers
                     TempData["errorSaveAdd"] = "Porfavor Seleccione Un Cuadrante";
                 }
                 else
-                {
-                    
-                    ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);                    
+                {                                        
                     List<LayoutGridSQ> currentControlNumbers = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd"));
                     //Obtener SpoolID
                     List<LayoutGridSQ> ListaConDatosNumeroControl = OrdenTrabajoSpoolBO.Instance.ListaNumControlConSpoolID(ToDataTable.Instance.toDataTable(currentControlNumbers));
@@ -777,7 +791,13 @@ namespace SAM.Web.Shop.Controllers
                         }
                     }
                 }
-                    
+                if (project != null)
+                {
+                    NavContext.SetProject(project.ID);
+                    NavContext.SetProjectEdit(project.ID);
+                    model.ProjectIdADD = project.ID;
+                    model.ProjectIdEditar = project.ID;
+                }
             }
             return View("Index", model);
         }
@@ -789,6 +809,7 @@ namespace SAM.Web.Shop.Controllers
             model.SeleccionAgregarEditar = "2";
             if (ModelState.IsValid /*&& ValidaModel(model)*/&& model.ProjectIdEditar > 0)
             {
+                ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdEditar);
                 if (model.SearchTypeEdit == "c")
                 {
                     if (model.QuadrantIdCEdit == 0)
@@ -809,8 +830,7 @@ namespace SAM.Web.Shop.Controllers
                     TempData["errorSaveEdit"] = "Porfavor Seleccione Un Cuadrante";
                 }
                 else
-                {
-                    ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdEditar);
+                {                    
                     List<LayoutGridSQ> currentControlNumbers = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
                     List<LayoutGridSQ> ListaConDatosNumeroControl = OrdenTrabajoSpoolBO.Instance.ListaNumControlConSpoolID(ToDataTable.Instance.toDataTable(currentControlNumbers));
                     string datosAsignados = "";
@@ -871,6 +891,13 @@ namespace SAM.Web.Shop.Controllers
                         }
                     }                                                        
                 }
+                if (project != null)
+                {
+                    NavContext.SetProject(project.ID);
+                    NavContext.SetProjectEdit(project.ID);
+                    model.ProjectIdADD = project.ID;
+                    model.ProjectIdEditar = project.ID;
+                }
             }
             return View("Index", model);
         }
@@ -887,9 +914,8 @@ namespace SAM.Web.Shop.Controllers
                 OrdenTrabajoSpoolBO.Instance.EliminarSpool(numeroControlSQ, ProyectoID, SQ);
             }                                      
             //NavContext.SetNumbersControlCuadranteSQ(Helps.GetNumberControlsSQCookies(listaNcSQ));
-            NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", JsonConvert.SerializeObject(listaNcSQ));
-
-            return View("Index", GetModelSQ());
+            NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", JsonConvert.SerializeObject(listaNcSQ));           
+            return View("Index", GetModelSQ(ProyectoID));
         }
         public ActionResult DeleteNumeroControlSQEditar(string numeroControlSQ, int ProyectoID, string SQ)
         {
@@ -904,10 +930,10 @@ namespace SAM.Web.Shop.Controllers
             }
             NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", JsonConvert.SerializeObject(listaNcSQ));
             //NavContext.SetNumbersControlCuadranteSQEditar(Helps.GetNumberControlsSQCookies(listaNcSQ));
-            return View("Index", GetModelSQEditar());
+            return View("Index", GetModelSQEditar(ProyectoID));
         }
 
-        private SQModel GetModelSQ()
+        private SQModel GetModelSQ(int ProyectoID)
         {
             //List<LayoutGridSQ> listaElementos = Helps.GetListadoCuadrantesNumeroControlSQ(NavContext.GetCurrentNCSQ());
             List<LayoutGridSQ> listaElementos = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd"));
@@ -920,10 +946,18 @@ namespace SAM.Web.Shop.Controllers
             {
                 sqlModel.CuadranteID = int.Parse(NavContext.getCuadranteID());
             }
+            ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == ProyectoID);
+            if (project != null)
+            {
+                NavContext.SetProject(project.ID);
+                NavContext.SetProjectEdit(project.ID);
+                sqlModel.ProjectIdADD = project.ID;
+                sqlModel.ProjectIdEditar = project.ID;
+            }
             return sqlModel;
         }
 
-        private SQModel GetModelSQEditar()
+        private SQModel GetModelSQEditar(int ProyectoID)
         {
             //List<LayoutGridSQ> listaElementos = Helps.GetListadoCuadrantesNumeroControlSQEditar(NavContext.GetCurrentNCSQEditar());
             List<LayoutGridSQ> listaElementos = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
@@ -937,6 +971,14 @@ namespace SAM.Web.Shop.Controllers
                 sqlModel.CuadranteID = int.Parse(NavContext.getCuadranteID());
             }            
             sqlModel.SQ = NavContext.GetSQ();
+            ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == ProyectoID);
+            if (project != null)
+            {
+                NavContext.SetProject(project.ID);
+                NavContext.SetProjectEdit(project.ID);
+                sqlModel.ProjectIdADD = project.ID;
+                sqlModel.ProjectIdEditar = project.ID;
+            }
             return sqlModel;
         }
 

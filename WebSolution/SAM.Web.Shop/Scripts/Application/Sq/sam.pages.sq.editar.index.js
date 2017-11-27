@@ -80,31 +80,45 @@
             $("#GuardarEdicion").click(function (e) {
                 var msg = "";
                 var cont = 0;
+
+                if ($("#ProjectIdEditar").val() == 0) {
+                    cont++;
+                    msg += "Seleccione Proyecto";
+                }
+
                 if ($("#SQ").val() == "") {
                     cont++;
                     msg += "Ingrese Sol. Inspect <br>";
-                } else {
-                    cont = 0;
                 }
-                if ($("#QuadrantIdCEdit").val() == 0) {
+
+                if ($("#gridEditar").find("table").find("tbody").length == 0 ){                    
                     cont++;
-                    msg += "Ingrese Cuadrante <br>";
-                } else {
-                    $("#errorClientEdit").css("display", "none");
-                    $("#errorClientEdit").append("");
-                    cont = 0;
+                    msg += "No Hay Datos Por Guardar <br>";
                 }
-                if ($("#gridEditar").find("table").find("tbody").length > 0 ){
-                //if ($("table#gridEditar tbody tr").length > 0) {
-                    cont = 0;
+
+                if ($("input[name='SearchTypeEdit']:checked").val() == "c") {
+                    if ($("#QuadrantIdCEdit").val() == 0) {
+                        cont++;
+                        msg += "Ingrese Cuadrante <br>";
+                    } 
                 } else {
-                    cont++;
-                    msg += "No Hay Datos Para Editar <br>";
+                    if ($("#WorkOrderNumberEdit").val()) {
+                        cont++;
+                        msg += "Ingrese Orden De Trabajo";
+                    }
+                    if ($("#ControlNumberEDIT").val()) {
+                        cont++;
+                        msg += "Ingrese Numero De Control";
+                    }
+                    if ($("#QuadrantIdNCEdit").val() == 0) {
+                        cont++;
+                        msg += "Ingrese Cuadrante <br>";
+                    }                    
                 }
+                                              
                 if (cont > 0) {
                     $("#errorClientEdit").css("display", "block");
-                    $("#errorClientEdit").html("");
-                    $("#errorClientEdit").append("");
+                    $("#errorClientEdit").html("");                    
                     $("#errorClientEdit").append(msg);
                     e.preventDefault();
                 } else {
