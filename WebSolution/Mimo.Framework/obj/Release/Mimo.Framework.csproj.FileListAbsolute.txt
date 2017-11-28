@@ -49,3 +49,20 @@ D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\R
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\en-US\Mimo.Framework.resources.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.dll.config
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\Mimo.Framework.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\log4net.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\Telerik.Web.UI.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Release\Telerik.Web.UI.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.csprojResolveAssemblyReference.cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.Resources.MimossRadGridMessages.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.Resources.MimossRadGridMessages.en-US.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.csproj.GenerateResource.Cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Release\Mimo.Framework.pdb

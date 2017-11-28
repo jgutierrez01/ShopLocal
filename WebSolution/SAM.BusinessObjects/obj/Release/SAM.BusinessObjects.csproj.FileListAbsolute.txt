@@ -148,3 +148,33 @@ D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Release\en-US\SAM.BusinessObjects.resources.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\SAM.BusinessObjects.dll.config
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\SAM.BusinessObjects.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\SAM.BusinessObjects.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\log4net.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Mimo.Framework.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Newtonsoft.Json.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\SAM.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\SAM.Entities.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Telerik.Web.UI.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Mimo.Framework.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\SAM.Common.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\SAM.Entities.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Newtonsoft.Json.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\Telerik.Web.UI.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\en-US\SAM.Common.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\en-US\SAM.Entities.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.MensajesError.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.Procesos.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.MensajesError.en-US.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.Procesos.en-US.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.csproj.GenerateResource.Cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.pdb

@@ -131,3 +131,22 @@ D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Entities\obj\Deb
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Entities\obj\Debug\en-US\SAM.Entities.resources.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Entities\obj\Debug\SAM.Entities.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Entities\obj\Debug\SAM.Entities.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\SAM.Entities.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\SAM.Entities.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\Mimo.Framework.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\log4net.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\Mimo.Framework.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\obj\Debug\SAM.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\obj\Debug\SAM.Entities.Mensajes.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\obj\Debug\SAM.Entities.Mensajes.en-US.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\obj\Debug\SAM.Entities.csproj.GenerateResource.Cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\obj\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\obj\Debug\SAM.Entities.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Entities\obj\Debug\SAM.Entities.pdb

@@ -40,8 +40,7 @@
                         $cntWkS.find("input[id^='ProjectIdADD']").val(projectId);
                         $("#ProjectIdEditar").val(projectId);
                         $.getJSON('/Controls/LimpiarGridAdd', { ProyectoID: projectId }, function (data) {
-                            $.each(data, function (i, item) {
-                                //window.location = "/SQ/AddNC?ProjectId=" + projectId;
+                            $.each(data, function (i, item) {                                
                                 window.location = "/SQ/";
                                 $("#ProyectoAnteriorAdd").val(projectId);
                             });
@@ -83,10 +82,29 @@
             });
                   
 
-            $("#resumenSpool1Add, #resumenSpool2Add").click(function (e) {
+            $("#resumenSpool").click(function (e) { //Boton Guardar
                 var msg = "";
                 var cont = 0;
-                //$("input[name=bedStatus]")
+                if ($("#gridAdd").find("table").find("tbody").length == 0) {
+                    cont++;
+                    msg += "No Hay Datos Por Guardar <br>";
+                }
+
+                if (cont > 0) {
+                    $("#errorClient").css("display", "block");
+                    $("#errorClient").html("");
+                    $("#errorClient").append(msg);
+                    e.preventDefault();
+                } else {
+                    $("#errorClient").css("display", "none");
+                    $("#errorClient").append("");
+                }
+            });
+
+
+            $("#resumenSpool1Add, #resumenSpool2Add").click(function (e) {
+                var msg = "";
+                var cont = 0;                
                 if ($("input[name=SearchTypeADD]:checked").val() == "c") {
                     if ($("#ProjectIdADD").val() == 0) {
                         cont++;
@@ -178,11 +196,7 @@
                 switch ($(this).val()) {
                     case "c":
                         $cuadranteContainer.show();
-                        $numeroControlContainer.hide();                        
-                        //$cnt.find("input[id^='ControlNumber']").val('');
-                        //$cnt.find("input[id^='WorkOrderNumber']").val('');
-                        //$cnt.find("#ProjectId").trigger("change");
-                        //$cnt.find("input[id^='WorkOrderNumber']").focus();
+                        $numeroControlContainer.hide();                                             
                         break;
                     case "nc":
                         $cuadranteContainer.hide();
@@ -192,22 +206,12 @@
                             $cnt.find("#wo-addon-text").text(item.WorkOrderPrefix);
                         } else {
                             $cnt.find("#wo-addon-text").text("");
-                        }
-                        //$cnt.find("input[id^='SpoolName']").val('');
-                        //$cnt.find("input[id^='SpoolName']").focus();
+                        }                        
                         break;
                     default:
                         throw new Error("Invalid option");
                 }
             });
-
-            //$('#resumenSpool').on('click', function (e) {
-            //    $cntWkS.find("input[id^='typeSearch']").val('1');
-            //});
-
-            //$('#detailSpool').on('click', function (e) {
-            //    $cntWkS.find("input[id^='typeSearch']").val('2');
-            //});
 
             $selectedRadio = $cnt.find("input[id^='SearchType']:checked");
             

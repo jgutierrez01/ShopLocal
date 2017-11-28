@@ -162,3 +162,36 @@ D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\bin\Deb
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.csprojResolveAssemblyReference.cache
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll.config
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.UnitTest.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\itextsharp.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Mimo.Framework.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessLogic.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.BusinessObjects.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.Common.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\SAM.Entities.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\en-US\Mimo.Framework.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessLogic.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Common.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\bin\Debug\en-US\SAM.Entities.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.UnitTest\obj\Debug\SAM.UnitTest.pdb

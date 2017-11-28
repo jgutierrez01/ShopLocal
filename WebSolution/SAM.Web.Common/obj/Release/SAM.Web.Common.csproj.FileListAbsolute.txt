@@ -153,3 +153,34 @@ D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Common\obj\R
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Common\obj\Release\en-US\SAM.Web.Common.resources.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\SAM.Web.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\SAM.Web.Common.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\en-US\SAM.Web.Common.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Ghostscript.NET.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Mimo.Framework.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\SAM.BusinessObjects.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\SAM.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\SAM.Entities.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Telerik.Web.UI.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\log4net.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Newtonsoft.Json.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Mimo.Framework.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\SAM.BusinessObjects.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\SAM.Common.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\SAM.Entities.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Telerik.Web.UI.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\Newtonsoft.Json.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\en-US\SAM.BusinessObjects.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\en-US\SAM.Common.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\en-US\SAM.Entities.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.csprojResolveAssemblyReference.cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.Resources.MensajesLogin.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.Resources.MensajesLogin.en-US.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.csproj.GenerateResource.Cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\en-US\SAM.Web.Common.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.pdb

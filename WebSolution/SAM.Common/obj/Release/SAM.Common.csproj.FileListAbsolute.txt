@@ -93,3 +93,22 @@ D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Common\obj\Relea
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Common\obj\Release\en-US\SAM.Common.resources.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Common\obj\Release\SAM.Common.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\SAM.Common\obj\Release\SAM.Common.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\SAM.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\SAM.Common.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\en-US\SAM.Common.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\Mimo.Framework.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\Telerik.Web.UI.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\log4net.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\Mimo.Framework.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\Telerik.Web.UI.xml
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\bin\Release\en-US\Mimo.Framework.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\obj\Release\SAM.Common.csprojResolveAssemblyReference.cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\obj\Release\SAM.Common.Mensajes.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\obj\Release\SAM.Common.Mensajes.en-US.resources
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\obj\Release\SAM.Common.csproj.GenerateResource.Cache
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\obj\Release\en-US\SAM.Common.resources.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\obj\Release\SAM.Common.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Common\obj\Release\SAM.Common.pdb
