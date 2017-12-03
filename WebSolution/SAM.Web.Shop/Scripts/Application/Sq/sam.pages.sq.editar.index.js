@@ -36,9 +36,20 @@
                         msg += "Ingrese Cuadrante <br>";
                     }
 
+                    if ($("#SQ").val() == "") {
+                        cont++;
+                        msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
+                    }
+
+                    if ($("#SQ").val() != "" && $(".grid-mvc").find("table").find('tr').length == 0) {
+                        cont++;
+                        msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
+                    }
+
                     if (cont > 0) {
-                        $("#errorClientEdit").css("display", "block");
-                        $("#errorClientEdit").html("");
+                        $("#errorClientEdit").append("");
+                        $("#errorClientEdit").css("display", "none");
+                        $("#errorClientEdit").css("display", "block");                        
                         $("#errorClientEdit").append(msg);
                         e.preventDefault();
                     } else {
@@ -49,7 +60,16 @@
                     if ($("#ProjectIdEditar").val() == 0) {
                         cont++;
                         msg += "Seleccione Proyecto <br>";
+                    }                   
+                    if ($("#SQ").val() == "" ) {
+                        cont++;
+                        msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
                     }
+                    
+                    if ($("#SQ").val() != "" && $(".grid-mvc").find("table").find('tr').length == 0) {
+                        cont++;
+                        msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
+                    }                    
                     if ($("#WorkOrderNumberEdit").val() == "") {
                         cont++;
                         msg += "Ingrese Orden de Trabajo <br>";
@@ -103,6 +123,8 @@
                         $.each(data, function (i, item) {
                             if (item.result == "OK") {
                                 console.log('cuadrante Actualizdao : ', item.result);
+                                $("#QuadrantIdCADD").val(CuadranteID);
+                                $("#QuadrantIdNCADD").val(CuadranteID);
                                 $("#QuadrantIdNCEdit").val(CuadranteID);
                                 $("#QuadrantIdCEdit").val(CuadranteID);
                             }
@@ -118,6 +140,8 @@
                         $.each(data, function (i, item) {
                             if (item.result == "OK") {
                                 console.log('cuadrante Actualizdao : ', item.result);
+                                $("#QuadrantIdCADD").val(CuadranteID);
+                                $("#QuadrantIdNCADD").val(CuadranteID);
                                 $("#QuadrantIdNCEdit").val(CuadranteID);
                                 $("#QuadrantIdCEdit").val(CuadranteID);
                             }

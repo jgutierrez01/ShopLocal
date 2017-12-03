@@ -24,11 +24,15 @@ namespace SAM.Web.Shop.Controllers
         public SQController(INavigationContext navContext) : base(navContext) { }
         // GET: SQ
         public ActionResult Index()
-        {
+        {            
             SQModel sqmodel = new SQModel();
             try
             {
-                sqmodel.SeleccionAgregarEditar = "1";          
+                sqmodel.SeleccionAgregarEditar = "1";
+                sqmodel.ViewFormAdd = true;
+                sqmodel.ViewFormEdit = false;
+                sqmodel.ViewGridAdd = false;
+                sqmodel.ViewGridEdit = false;
                 NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
                 NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                 if (NavContext.GetCurrentProject().ID > 0)
@@ -49,7 +53,7 @@ namespace SAM.Web.Shop.Controllers
             return View(sqmodel);
         }
 
-        [HttpGet]
+        [HttpGet]        
         public ActionResult AddNC(SQModel model)
         {
             model.SeleccionAgregarEditar = "1";
@@ -78,7 +82,18 @@ namespace SAM.Web.Shop.Controllers
             {
                 model.CuadranteID = model.QuadrantIdCADD;
             }
-            NavContext.setCuadranteID(model.CuadranteID.ToString());
+            if (model.CuadranteID == 0)
+            {
+                if (NavContext.getCuadranteID() != "" && NavContext.getCuadranteID() != null)
+                {
+                    model.CuadranteID = int.Parse(NavContext.getCuadranteID());
+                }
+            }
+            else
+            {
+                NavContext.setCuadranteID(model.CuadranteID.ToString());
+            }
+            
             ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);
             if (NavContext.GetCurrentProjectSQ() == null || (model.ProjectIdADD != NavContext.GetCurrentProjectSQ().ID))
             {                
@@ -326,13 +341,24 @@ namespace SAM.Web.Shop.Controllers
                 default:
                     break;
             }
+            model.ViewFormEdit = false;
+            model.ViewFormAdd = true;
+            model.ViewGridEdit = false;
+            if(model.ListaElementos.Count > 0)
+            {
+                model.ViewGridAdd = true;
+            }else
+            {
+                model.ViewGridAdd = false;
+            }
+            
             if(project != null)
             {
                 NavContext.SetProject(project.ID);
                 NavContext.SetProjectEdit(project.ID);
                 model.ProjectIdADD = project.ID;
                 model.ProjectIdEditar = project.ID;
-            }
+            }            
             return View("Index", model);
         }
 
@@ -366,7 +392,17 @@ namespace SAM.Web.Shop.Controllers
             {
                 model.CuadranteID = model.QuadrantIdCADD;
             }
-            NavContext.setCuadranteID(model.CuadranteID.ToString());
+            if(model.CuadranteID == 0)
+            {
+                if (NavContext.getCuadranteID() != "" && NavContext.getCuadranteID() != null)
+                {                                       
+                    model.CuadranteID = int.Parse(NavContext.getCuadranteID());
+                }
+            }else
+            {
+                NavContext.setCuadranteID(model.CuadranteID.ToString());
+            }            
+            
             NavContext.SetProject(project.ID);
             NavContext.SetProjectEdit(project.ID);
 
@@ -424,15 +460,7 @@ namespace SAM.Web.Shop.Controllers
                         var Lista = listaElementos;
                         if (Lista != null)
                         {
-                            if(model.QuadrantIdCEdit != 0)
-                            {
-                                NavContext.setCuadranteID(model.QuadrantIdCEdit.ToString());
-                            }
-                            else
-                            {
-                                NavContext.setCuadranteID(model.QuadrantIdNCEdit.ToString());
-                            }
-
+                          
                             List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); // .OrderBy(c => c.NumeroControl).ToList();                            
                             string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit");
                             string numerosControl = "";
@@ -447,9 +475,11 @@ namespace SAM.Web.Shop.Controllers
                                 ListaTmp.InsertRange(0, ListaSinRepetidos);
                                 var Lista2 = ListaTmp;
                                 ListaTmp = Lista2.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); //.OrderBy(c => c.NumeroControl).ToList();
-                                numerosControl = JsonConvert.SerializeObject(ListaTmp);
+                                //numerosControl = JsonConvert.SerializeObject(ListaTmp);
+                                numerosControl = JsonConvert.SerializeObject(ListaSinRepetidos);
                                 NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", numerosControl);
-                                model.ListaElementosPorSQ = ListaTmp;                                
+                                model.ListaElementosPorSQ = ListaSinRepetidos;
+                                //model.ListaElementosPorSQ = ListaTmp;                                
                             }
                             else
                             {
@@ -547,15 +577,7 @@ namespace SAM.Web.Shop.Controllers
 
                                     if (ListaNoTieneSQInterno.Count > 0)
                                     {
-                                        if (model.QuadrantIdCEdit != 0)
-                                        {
-                                            NavContext.setCuadranteID(model.QuadrantIdCEdit.ToString());
-                                        }
-                                        else
-                                        {
-                                            NavContext.setCuadranteID(model.QuadrantIdNCEdit.ToString());
-                                        }
-
+                                        
                                         var Lista = ListaNoTieneSQInterno;
                                         List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList();//.OrderBy(c => c.NumeroControl).ToList();
                                         string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit");
@@ -599,8 +621,7 @@ namespace SAM.Web.Shop.Controllers
                             break;
                         case "c":
                             if (model.QuadrantIdCEdit != 0)
-                            {
-                                NavContext.setCuadranteID(model.QuadrantIdCEdit.ToString());
+                            {                                
                                 List<CuadranteNumeroControlSQ> numeroControl = OrdenTrabajoSpoolBO.Instance.BuscarPorCuadranteSQ(model.QuadrantIdCEdit, model.ProjectIdEditar, 2);
                                 if (numeroControl.Count > 0)
                                 {
@@ -642,7 +663,7 @@ namespace SAM.Web.Shop.Controllers
 
                                     if (datosAsignados != "")
                                     {
-                                        TempData["errorAdd"] += datosAsignados;
+                                        TempData["errorEditar"] += datosAsignados;
                                     }
                                     if (ListaNoTieneSQInterno.Count > 0)
                                     {
@@ -693,6 +714,14 @@ namespace SAM.Web.Shop.Controllers
                     TempData["FaltaSQ"] += "Porfavor Ingrese Sol. Inspect";
                 }                                
             }
+            if (model.ListaElementosPorSQ.Count > 0)
+            {
+                model.ViewGridEdit = true;                
+            }
+            else
+            {
+                model.ViewGridEdit = false;
+            }
             if (project != null)
             {
                 NavContext.SetProject(project.ID);
@@ -707,6 +736,43 @@ namespace SAM.Web.Shop.Controllers
         public ActionResult SaveNCSQADD(SQModel model)
         {            
             model.SeleccionAgregarEditar = "1";
+            if (model.QuadrantIdCADD == 0)
+            {
+                if (model.QuadrantIdNCADD == 0)
+                {
+                    if (model.QuadrantIdCEdit == 0)
+                    {
+                        if (model.QuadrantIdNCEdit != 0)
+                        {
+                            model.CuadranteID = model.QuadrantIdNCEdit;
+                        }
+                    }
+                    else
+                    {
+                        model.CuadranteID = model.QuadrantIdCEdit;
+                    }
+                }
+                else
+                {
+                    model.CuadranteID = model.QuadrantIdNCADD;
+                }
+            }
+            else
+            {
+                model.CuadranteID = model.QuadrantIdCADD;
+            }
+            if (model.CuadranteID == 0)
+            {
+                if (NavContext.getCuadranteID() != "" && NavContext.getCuadranteID() != null)
+                {
+                    model.CuadranteID = int.Parse(NavContext.getCuadranteID());
+                }
+            }
+            else
+            {
+                NavContext.setCuadranteID(model.CuadranteID.ToString());
+            }
+
             if (ModelState.IsValid /*&& ValidaModel(model)*/&& model.ProjectIdADD > 0)
             {
                 ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdADD);                                             
@@ -780,7 +846,8 @@ namespace SAM.Web.Shop.Controllers
                             NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
                         }
                     }
-                }     
+                }
+               
                 if (project != null)
                 {
                     NavContext.SetProject(project.ID);
@@ -796,9 +863,46 @@ namespace SAM.Web.Shop.Controllers
         public ActionResult SaveNCSQADDEdit(SQModel model)
         {            
             model.SeleccionAgregarEditar = "2";
-            if (ModelState.IsValid /*&& ValidaModel(model)*/&& model.ProjectIdEditar > 0)
+            if (model.QuadrantIdCEdit == 0)
             {
-                ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdEditar);                                 
+                if (model.QuadrantIdNCEdit == 0)
+                {
+                    if (model.QuadrantIdCADD == 0)
+                    {
+                        if (model.QuadrantIdNCADD != 0)
+                        {
+                            model.CuadranteID = model.QuadrantIdNCADD;
+                        }
+                    }
+                    else
+                    {
+                        model.CuadranteID = model.QuadrantIdCADD;
+                    }
+                }
+                else
+                {
+                    model.CuadranteID = model.QuadrantIdNCEdit;
+                }
+            }
+            else
+            {
+                model.CuadranteID = model.QuadrantIdCADD;
+            }
+            if (model.CuadranteID == 0)
+            {
+                if (NavContext.getCuadranteID() != "" && NavContext.getCuadranteID() != null)
+                {
+                    model.CuadranteID = int.Parse(NavContext.getCuadranteID());
+                }
+            }
+            else
+            {
+                NavContext.setCuadranteID(model.CuadranteID.ToString());
+            }
+            ProyectoCache project = UserScope.MisProyectos.Single(p => p.ID == model.ProjectIdEditar);
+           
+            if (ModelState.IsValid /*&& ValidaModel(model)*/&& model.ProjectIdEditar > 0)
+            {                                               
                 List<LayoutGridSQ> currentControlNumbers = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
                 List<LayoutGridSQ> ListaConDatosNumeroControl = OrdenTrabajoSpoolBO.Instance.ListaNumControlConSpoolID(ToDataTable.Instance.toDataTable(currentControlNumbers));
                 string datosAsignados = "";
@@ -857,7 +961,8 @@ namespace SAM.Web.Shop.Controllers
                     {
                         NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                     }
-                }                                                                        
+                }
+               
                 if (project != null)
                 {
                     NavContext.SetProject(project.ID);
@@ -878,7 +983,7 @@ namespace SAM.Web.Shop.Controllers
                 listaNcSQ.Remove(ncActualSQ);
                 OrdenTrabajoSpoolBO.Instance.EliminarSpool(numeroControlSQ, ProyectoID, SQ);
             }                                                  
-            NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", JsonConvert.SerializeObject(listaNcSQ));           
+            NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", JsonConvert.SerializeObject(listaNcSQ));            
             return View("Index", GetModelSQ(ProyectoID));
         }
         public ActionResult DeleteNumeroControlSQEditar(string numeroControlSQ, int ProyectoID, string SQ)

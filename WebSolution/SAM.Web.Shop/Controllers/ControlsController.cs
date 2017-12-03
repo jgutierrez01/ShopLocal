@@ -20,6 +20,7 @@ using SAM.BusinessObjects.Catalogos;
 using SAM.Entities.Personalizadas;
 using SAM.Entities.Personalizadas.Shop;
 using SAM.BusinessObjects.Produccion;
+using Newtonsoft.Json;
 
 namespace SAM.Web.Shop.Controllers
 {
@@ -280,7 +281,43 @@ namespace SAM.Web.Shop.Controllers
             return Json(mydata, JsonRequestBehavior.AllowGet);
         }
 
-       
+        [HttpPost]
+        public JsonResult EliminarSpoolAdd(string NumeroControl, string ProyectoID, string SQ)
+        {
+            List<LayoutGridSQ> listaNcSQ = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd"));
+            LayoutGridSQ ncActualSQ = listaNcSQ.Where(x => x.NumeroControl == NumeroControl).FirstOrDefault();
+            if (ncActualSQ != null)
+            {
+                listaNcSQ.Remove(ncActualSQ);
+                if(ProyectoID != null)
+                {
+                    OrdenTrabajoSpoolBO.Instance.EliminarSpool(NumeroControl, int.Parse(ProyectoID), SQ);
+                }                
+            }
+            NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", JsonConvert.SerializeObject(listaNcSQ));
+            var mydata = new[] { new { result = "OK" } };
+            return Json(mydata, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult EliminarSpoolEdit(string NumeroControl, string ProyectoID, string SQ)
+        {
+            List<LayoutGridSQ> listaNcSQ = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
+            LayoutGridSQ ncActualSQ = listaNcSQ.Where(x => x.NumeroControl == NumeroControl).FirstOrDefault();
+            if (ncActualSQ != null)
+            {
+                listaNcSQ.Remove(ncActualSQ);
+                if (ProyectoID != null)
+                {
+                    OrdenTrabajoSpoolBO.Instance.EliminarSpool(NumeroControl, int.Parse(ProyectoID), SQ);
+                }
+            }
+            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", JsonConvert.SerializeObject(listaNcSQ));
+            var mydata = new[] { new { result = "OK" } };
+            return Json(mydata, JsonRequestBehavior.AllowGet);
+        }
+
+
         [HttpGet]
         public JsonResult UpdateYardId(int ID)
         {

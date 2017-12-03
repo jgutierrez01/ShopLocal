@@ -168,6 +168,8 @@
                                 console.log('cuadrante Actualizdao : ', item.result);
                                 $("#QuadrantIdCADD").val(CuadranteID);
                                 $("#QuadrantIdNCADD").val(CuadranteID);
+                                $("#QuadrantIdNCEdit").val(CuadranteID);
+                                $("#QuadrantIdCEdit").val(CuadranteID);
                             }
                         });
                     });
@@ -183,6 +185,8 @@
                                 console.log('cuadrante Actualizdao : ', item.result);
                                 $("#QuadrantIdCADD").val(CuadranteID);
                                 $("#QuadrantIdNCADD").val(CuadranteID);
+                                $("#QuadrantIdNCEdit").val(CuadranteID);
+                                $("#QuadrantIdCEdit").val(CuadranteID);
                             }
                         });
                     });
@@ -225,62 +229,69 @@
 
 
 
-            $("a.delete").on('click', function (s) {
-                var currentCulture = $("html").prop("lang");
-                var answer = '';
-                if (currentCulture == "en-US") {
-                    answer = confirm('Confirm delete of this control number?');
-                }
-                else {
-                    answer = confirm('¿Confirma la eliminación del Número de Control?');
-                }
-                if (answer) {
+            //$("a.delete").on('click', function (s) {
+            //    var currentCulture = $("html").prop("lang");
+            //    var answer = '';
+            //    if (currentCulture == "en-US") {
+            //        answer = confirm('Confirm delete of this control number?');
+            //    }
+            //    else {
+            //        answer = confirm('¿Confirma la eliminación del Número de Control?');
+            //    }
+            //    if (answer) {
 
-                    //var dateProcess = $cnt.find("input[id^='datepicker']").val();
-                    //var numberProcess = $cnt.find("input[id^='NumberProcess']").val();
-                    //var typeReport = $cnt.find("select[id^='TypeReportId']").val();
-                    //var quadrant = $cnt.find("select[id^='QuadrantId']").val();
+            //        //var dateProcess = $cnt.find("input[id^='datepicker']").val();
+            //        //var numberProcess = $cnt.find("input[id^='NumberProcess']").val();
+            //        //var typeReport = $cnt.find("select[id^='TypeReportId']").val();
+            //        //var quadrant = $cnt.find("select[id^='QuadrantId']").val();
 
 
-                    //if (dateProcess) {
-                    //    var date = new Date(dateProcess);
-                    //    this.href = this.href.replace("DP", dateProcess);
-                    //}
-                    //else {
-                    //    var date = new Date();
-                    //    this.href = this.href.replace("DP", dateProcess);
-                    //}
+            //        //if (dateProcess) {
+            //        //    var date = new Date(dateProcess);
+            //        //    this.href = this.href.replace("DP", dateProcess);
+            //        //}
+            //        //else {
+            //        //    var date = new Date();
+            //        //    this.href = this.href.replace("DP", dateProcess);
+            //        //}
 
-                    //if (numberProcess) {
-                    //    this.href = this.href.replace("NP", numberProcess);
-                    //}
-                    //else {
-                    //    this.href = this.href.replace("NP", "");
-                    //}
+            //        //if (numberProcess) {
+            //        //    this.href = this.href.replace("NP", numberProcess);
+            //        //}
+            //        //else {
+            //        //    this.href = this.href.replace("NP", "");
+            //        //}
 
-                    //if (typeReport) {
-                    //    this.href = this.href.replace("TR", typeReport);
-                    //}
-                    //else {
-                    //    this.href = this.href.replace("TR", "0");
-                    //}
+            //        //if (typeReport) {
+            //        //    this.href = this.href.replace("TR", typeReport);
+            //        //}
+            //        //else {
+            //        //    this.href = this.href.replace("TR", "0");
+            //        //}
 
-                    //if (quadrant) {
-                    //    this.href = this.href.replace("QTE", quadrant);
-                    //}
-                    //else {
-                    //    this.href = this.href.replace("QTE", "0");
-                    //}
-                }
+            //        //if (quadrant) {
+            //        //    this.href = this.href.replace("QTE", quadrant);
+            //        //}
+            //        //else {
+            //        //    this.href = this.href.replace("QTE", "0");
+            //        //}
+            //    } else {
+            //        //$("#gridEditar").find("table").find("tbody") );
+            //        //var initialRowToSelect = $('#gridAgregar .grid-mvc table tbody tr:not(.grid-empty-text):first');
+            //        var initialRowToSelect = $('#gridAgregar .grid-mvc table tbody tr:first');
+            //        if (initialRowToSelect.length > 0) {
+            //            self.NumeroControl = $("#gridAgregar .grid-mvc table tbody tr:not(.grid-empty-text):first td[data-name='NumeroControl']").text();
+            //            //pageGrids.contactsGrid.markRowSelected(initialRowToSelect);
+            //            Remove(self.NumeroControl);
+            //        } 
+            //    }
 
-                $ejecutar = false;
+            //    $ejecutar = false;
 
-                return answer;
+            //    return answer;
 
-            });
-            
-        };
-
+            //});            
+        };       
         return {
             init: init
         };

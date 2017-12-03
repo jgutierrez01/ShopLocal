@@ -63,6 +63,11 @@ namespace SAM.Web.Shop.Models
         public bool? TieneDatosGridEdit { get; set; }
         public bool? TieneDatosGridAdd { get; set; }
 
+        public bool ViewFormAdd { get; set; }
+        public bool ViewFormEdit { get; set; }
+        public bool ViewGridAdd { get; set; }
+        public bool ViewGridEdit { get; set; }
+
         public SQModel(string seleccionAgregarEditar, string quadrantIdCADD, string quadrantIdNCADD, string quadrantIdCEdit, string quadrantIdNCEdit, string projectIdADD, string projectIdEdit, string searchTypeADD, string searchTypeEdit, string sQ, string workOrderNumberADD, string workOrderNumberEdit, string controlNumberADD, string controlNumberEDIT, string CuadranteID)
         {
             int a;
@@ -113,6 +118,10 @@ namespace SAM.Web.Shop.Models
             this.ControlNumberADD = controlNumberADD == ""|| controlNumberADD==null ? 0 : (int.TryParse(controlNumberADD, out a) ? int.Parse(controlNumberADD) : 0)  ;
             this.ControlNumberEDIT = controlNumberEDIT == ""|| controlNumberEDIT==null ? 0 : (int.TryParse(controlNumberEDIT, out a) ? int.Parse(controlNumberEDIT) : 0)   ;
             this.CuadranteID = CuadranteID == "" || CuadranteID == null ? 0 : (int.TryParse(CuadranteID, out a) ? int.Parse(CuadranteID) : 0);
+            this.ViewFormAdd = true;
+            this.ViewFormEdit = false;
+            this.ViewGridAdd = false;
+            this.ViewGridEdit = false;
         }
 
         public SQModel()
