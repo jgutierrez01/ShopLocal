@@ -49,10 +49,13 @@
     <fieldset id="sq-opciones-form" style="margin:0px;border:0px;padding:0px;">
         <div id="OpcionAgregarEditar" class="row" >
             @*<div class="form-group col-xs-12 col-sm-4 col-md-2 col-lg-3">*@
-            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-                <div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                <div class="form-group col-xs-4 col-sm-4 col-md-3 col-lg-4">
                     <label class="btn btn-primary btn-block">
-                        @Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Add", Model.SeleccionAgregarEditar == "1" ? new { @checked = true } : null)
+                        <span id="radioButtonAdd">
+                            @Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Add", Model.SeleccionAgregarEditar == "1" ? new { @checked = true } : null)                            
+                        </span>
+                        
                         &nbsp;
                         @Html.Raw(CommonStrings.Add)
                     </label>
@@ -60,7 +63,9 @@
                 </div>
                 <div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <label class="btn btn-primary btn-block">
-                        @Html.RadioButtonFor(a => a.SeleccionAgregarEditar, "Edit", Model.SeleccionAgregarEditar == "2" ? new { @checked = true } : null)
+                        <span id="radioButtonEdit">
+                            @Html.RadioButtonFor(a => a.SeleccionAgregarEditar, "Edit", Model.SeleccionAgregarEditar == "2" ? new { @checked = true } : null)
+                        </span>                        
                         &nbsp;
                         @Html.Raw(CommonStrings.Edit)
                     </label>
@@ -387,7 +392,9 @@
 
 @section scripts{
     <script type="text/javascript">
-        $(function () {            
+        $(function () {
+            $("#radioButtonAdd").css("display", "none");
+            $("#radioButtonEdit").css("display", "none");
             var opciones = new sam.pages.sq.opciones.index($("#sq-opciones-form"));
             opciones.init();
             var add = new sam.pages.sq.add.index($("#sq-add-form"));
