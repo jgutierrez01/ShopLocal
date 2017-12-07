@@ -42,9 +42,11 @@
             //        $("#gridAdd-form").css("display", "none");
             //    }
             //});
-        
+            $("#botonAgregarStyle").addClass("active");
             $('input:radio[name=SeleccionAgregarEditar]').click(function () {
                 if ($('input:radio[name=SeleccionAgregarEditar]:checked').val() == "Add") {
+                    $("#botonAgregarStyle").addClass("active");
+                    $("#botonEditarStyle").removeClass("active");
                     $("#sq-editar-form").hide();
                     $("#gridEditar-form").hide();
                     $("#sq-add-form").show();
@@ -55,6 +57,8 @@
                     }                    
                 }
                 else if ($('input:radio[name=SeleccionAgregarEditar]:checked').val() == "Edit") {
+                    $("#botonAgregarStyle").removeClass("active");
+                    $("#botonEditarStyle").addClass("active");
                     $("#sq-add-form").hide();
                     $("#gridAdd-form").hide();                    
                     $("#sq-editar-form").show();                    

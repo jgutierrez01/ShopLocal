@@ -823,6 +823,9 @@ namespace SAM.Web.Shop.Controllers
                                 else if (SQConsecutivo != "0")
                                 {
                                     TempData["success"] = SQConsecutivo;
+                                }else
+                                {
+                                    TempData["errorSaveAdd"] = "Ocurrió Un Error Al Guardar SI";
                                 }
                                     
                                 if(model.QuadrantIdCADD != 0)
@@ -945,6 +948,9 @@ namespace SAM.Web.Shop.Controllers
                             else if (SQConsecutivo != "0")
                             {
                                 TempData["success"] = SQConsecutivo;
+                            }else
+                            {
+                                TempData["errorSaveEdit"] = "Ocurrió Un Error Al Guardar SI";
                             }
                             if (model.QuadrantIdCEdit != 0)
                             {

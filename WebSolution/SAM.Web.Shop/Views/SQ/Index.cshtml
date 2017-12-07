@@ -51,7 +51,7 @@
             @*<div class="form-group col-xs-12 col-sm-4 col-md-2 col-lg-3">*@
             <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
                 <div class="form-group col-xs-4 col-sm-4 col-md-3 col-lg-4">
-                    <label class="btn btn-primary btn-block">
+                    <label class="btn btn-primary btn-block" id="botonAgregarStyle">
                         <span id="radioButtonAdd">
                             @Html.RadioButtonFor(x => x.SeleccionAgregarEditar, "Add", Model.SeleccionAgregarEditar == "1" ? new { @checked = true } : null)                            
                         </span>
@@ -62,7 +62,7 @@
                     &nbsp;
                 </div>
                 <div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <label class="btn btn-primary btn-block">
+                    <label class="btn btn-primary btn-block" id="botonEditarStyle">
                         <span id="radioButtonEdit">
                             @Html.RadioButtonFor(a => a.SeleccionAgregarEditar, "Edit", Model.SeleccionAgregarEditar == "2" ? new { @checked = true } : null)
                         </span>                        
@@ -462,5 +462,5 @@
             }
         }
         
-    </script>
+    </script>        
 }
