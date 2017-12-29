@@ -18,7 +18,40 @@
             var ProyectoIDEditarAnterior = ($("#ProjectIdEditar").val() == null || $("#ProjectIdEditar").val() == undefined) ? 0 : $("#ProjectIdEditar").val();
             
             $cuadranteContainer = $cnt.find("#cuadranteEditarContainer");
-            $numeroControlContainer = $cnt.find("#numeroControlEditarContainer");
+            $numeroControlContainer = $cnt.find("#numeroControlEditarContainer");           
+
+            $("#SQ").on("focusout", function () {                
+                $.getJSON('/Controls/UpdateSQ', { SI: $("#SQ").val() }, function (data) {
+                    $.each(data, function (i, item) {
+                        if (item.result == "OK") {
+                            console.log("SI Actualizado");
+                        }
+                    });
+                });               
+            });
+            
+            $("#BuscarSQ").click(function (e) {
+                var cont = 0, msg = "";
+                if ($("#SQ").val() == "") {
+                    cont++;
+                    msg += "Ingrese Sol. Inspect <br>";
+                }
+                if ($("#TieneConsecutivoEdit").val() == "0") {
+                    cont++;
+                    msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                }
+                if (cont > 0) {
+                    $("#errorClientEdit").css("display", "block");
+                    $("#errorClientEdit").html("");
+                    $("#errorClientEdit").append("");
+                    $("#errorClientEdit").append(msg);
+                    e.preventDefault();
+
+                } else {
+                    $("#errorClientEdit").css("display", "none");
+                    $("#errorClientEdit").append("");
+                }
+            });
 
             $("#resumenSpool1Edit, #resumenSpool2Edit").click(function (e) {
                 var msg = "";
@@ -26,6 +59,10 @@
                 //input[id ^= 'ProjectIdEditar']
                 //if ($("input[name^='SearchTypeEdit']:checked").val() == "c") {
                 if ($("input[name='SearchTypeEdit']:checked").val() == "c") {
+                    if ($("#TieneConsecutivoEdit").val() == "0") {
+                        cont++;
+                        msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                    }
                     if ($("#ProjectIdEditar").val() == 0) {
                         cont++;
                         msg += "Seleccione Proyecto <br>";
@@ -36,15 +73,15 @@
                         msg += "Ingrese Cuadrante <br>";
                     }
 
-                    if ($("#SQ").val() == "") {
-                        cont++;
-                        msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
-                    }
+                    //if ($("#SQ").val() == "") {
+                    //    cont++;
+                    //    msg += "Por favor Ingrese Sol. Inspect  <br>";
+                    //}
 
-                    if ($("#SQ").val() != "" && $(".grid-mvc").find("table").find('tr').length == 0) {
-                        cont++;
-                        msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
-                    }
+                    //if ($("#SQ").val() != "" && $(".grid-mvc").find("table").find('tr').length == 0) {
+                    //    cont++;
+                    //    msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
+                    //}
 
                     if (cont > 0) {
                         $("#errorClientEdit").append("");
@@ -57,19 +94,24 @@
                         $("#errorClientEdit").append("");
                     }
                 } else {
+                    if ($("#TieneConsecutivoEdit").val() == "0") {
+                        cont++;
+                        msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                    }
+
                     if ($("#ProjectIdEditar").val() == 0) {
                         cont++;
                         msg += "Seleccione Proyecto <br>";
                     }                   
-                    if ($("#SQ").val() == "" ) {
-                        cont++;
-                        msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
-                    }
+                    //if ($("#SQ").val() == "" ) {
+                    //    cont++;
+                    //    msg += "Porfavor Ingrese Sol. Inspect <br>";
+                    //}
                     
-                    if ($("#SQ").val() != "" && $(".grid-mvc").find("table").find('tr').length == 0) {
-                        cont++;
-                        msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
-                    }                    
+                    //if ($("#SQ").val() != "" && $(".grid-mvc").find("table").find('tr').length == 0) {
+                    //    cont++;
+                    //    msg += "Porfavor Realize La Busqueda Del SQ Antes De Agregar Nuevos Spools <br>";
+                    //}                    
                     if ($("#WorkOrderNumberEdit").val() == "") {
                         cont++;
                         msg += "Ingrese Orden de Trabajo <br>";
@@ -99,11 +141,22 @@
 
             $("#GuardarEdicion").click(function (e) {
                 var msg = "";
-                var cont = 0;              
+                var cont = 0;
+                if ($("#TieneConsecutivoEdit").val() == "0") {
+                    cont++;
+                    msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                }
+
+                if ($("#SQ").val() == "") {
+                    cont++;
+                    msg += "Por Favor Ingrese Sol. Inspect";
+                }                               
+
                 if ($("#gridEditar").find("table").find("tbody").length == 0 ){                    
                     cont++;
                     msg += "No Hay Datos Por Guardar <br>";
                 }
+
                                                             
                 if (cont > 0) {
                     $("#errorClientEdit").css("display", "block");
@@ -207,7 +260,34 @@
                     } else {
                         $cnt.find("#wo-addon-text").text("");
                     }
-                }                
+                }
+
+                //Verifico si el proyecto tiene inicializado algun consecutivo
+                if ($("#ProjectIdEditar").val() != "" && $("#ProjectIdEditar").val() != undefined) {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/SQ/VerificarConsecutivoProyecto/',
+                        dataType: 'json',
+                        data: { ProyectoID: $("#ProjectIdEditar").val() },
+                        success: function (data) {
+                            if (data[0].result == "0") {
+                                $("#errorClientEdit").css("display", "block");
+                                $("#errorClientEdit").html("");
+                                $("#errorClientEdit").append("Este Proyecto No Tiene Inicializado Ningun Consecutivo <br>");
+                                $("#TieneConsecutivoEdit").val("0");
+                            } else {
+                                $("#TieneConsecutivoEdit").val("1");
+                                $("#errorClientEdit").html("");
+                                $("#errorClientEdit").append("");
+                                $("#errorClientEdit").css("display", "none");
+
+                            }
+                        },
+                        error: function () {
+                            alert("Ocurrio un error");
+                        }
+                    });
+                } 
             });
 
             $cnt.find("input[id^='SearchType']").click(function () {

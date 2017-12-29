@@ -75,6 +75,33 @@
                             });
                         });
 
+                        //Verifico si el proyecto tiene inicializado algun consecutivo
+                        if ($("#ProjectIdADD").val() != "" && $("#ProjectIdADD").val() != undefined) {
+                            $.ajax({
+                                type: 'GET',
+                                url: '/SQ/VerificarConsecutivoProyecto/',
+                                dataType: 'json',
+                                data: { ProyectoID: $("#ProjectIdADD").val() },
+                                success: function (data) {
+                                    if (data[0].result == "0") {
+                                        $("#errorClient").css("display", "block");
+                                        $("#errorClient").html("");
+                                        $("#errorClient").append("Este Proyecto No Tiene Inicializado Ningun Consecutivo <br>");
+                                        $("#TieneConsecutivoAdd").val("0");
+                                    } else {
+                                        $("#TieneConsecutivoAdd").val("1");
+                                        $("#errorClient").html("");
+                                        $("#errorClient").append("");
+                                        $("#errorClient").css("display", "none");
+
+                                    }
+                                },
+                                error: function () {
+                                    alert("Ocurrio un error");
+                                }
+                            });
+                        }
+                        
                     } else {
                         $cnt.find("#wo-addon-text").text("");
                     }
@@ -85,6 +112,11 @@
             $("#resumenSpool").click(function (e) { //Boton Guardar
                 var msg = "";
                 var cont = 0;
+                if ($("#TieneConsecutivoAdd").val() == "0") {
+                    cont++;
+                    msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                }
+
                 if ($("#gridAdd").find("table").find("tbody").length == 0) {
                     cont++;
                     msg += "No Hay Datos Por Guardar <br>";
@@ -106,6 +138,11 @@
                 var msg = "";
                 var cont = 0;                
                 if ($("input[name=SearchTypeADD]:checked").val() == "c") {
+                    if ($("#TieneConsecutivoAdd").val() == "0") {
+                        cont++;
+                        msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                    }
+
                     if ($("#ProjectIdADD").val() == 0) {
                         cont++;
                         msg += "Seleccione Proyecto <br>";
@@ -127,6 +164,10 @@
                         $("#errorClient").append("");
                     }
                 } else {
+                    if ($("#TieneConsecutivoAdd").val() == "0") {
+                        cont++;
+                        msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                    }
                     if ($("#ProjectIdADD").val() == 0) {
                         cont++;
                         msg += "Seleccione Proyecto <br>";

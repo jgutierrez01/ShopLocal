@@ -300,23 +300,28 @@ namespace SAM.BusinessObjects.Produccion
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
-                string query = "select";
-                query += " A.OrdenTrabajoSpoolID,";
-                query += " A.OrdenTrabajoID,";
-                query += " A.SpoolID,";
-                query += " A.Partida,";
-                query += " A.NumeroControl,";
-                query += " A.UsuarioModifica,";
-                query += " A.FechaModificacion,";
-                query += " A.VersionRegistro,";
-                query += " A.EsAsignado,";
-                query += " B.sq SqCliente, ";
-                query += " B.sqinterno,";
-                query += " C.TieneHoldIngenieria";
-                query += " from OrdenTrabajoSpool A WITH(NOLOCK) LEFT JOIN Spool B WITH(NOLOCK) ON A.SpoolID = B.SpoolID";
-                query += " LEFT JOIN SpoolHold C WITH(NOLOCK) ON B.SpoolID=C.SpoolID";
-                query += " WHERE A.OrdenTrabajoSpoolID =" + ordenTrabajoSpoolID;
-
+                string query = "SELECT " +
+                                    " A.OrdenTrabajoSpoolID, " +
+                                    " A.OrdenTrabajoID, " +
+                                    " A.SpoolID, " +
+                                    " A.Partida, " +
+                                    " A.NumeroControl, " +
+                                    " A.UsuarioModifica, " +
+                                    " A.FechaModificacion, " +
+                                    " A.VersionRegistro, " +
+                                    " A.EsAsignado, " +
+                                    " B.sq SqCliente, " +
+                                    " B.sqinterno, " +
+                                    " C.TieneHoldIngenieria, " +
+                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd" +
+                                " FROM " +
+                                    " OrdenTrabajoSpool A WITH(NOLOCK) " +
+                                    " LEFT JOIN Spool B WITH(NOLOCK) ON A.SpoolID = B.SpoolID " +
+                                    " LEFT JOIN SpoolHold C WITH(NOLOCK) ON B.SpoolID = C.SpoolID " +
+                                    " LEFT JOIN WorkstatusSpool W WITH(NOLOCK) ON A.OrdenTrabajoSpoolID = W.OrdenTrabajoSpoolID " +
+                                " WHERE " +
+                                    " A.OrdenTrabajoSpoolID = " + ordenTrabajoSpoolID;
+                
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -331,10 +336,11 @@ namespace SAM.BusinessObjects.Produccion
                         {
                             NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),
                             OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),
-                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),                            
+                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
                             sqinterno = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
-                            TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString())
+                            TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
+                            OkPnd = ds.Tables[0].Rows[i]["OkPnd"].ToString() == "0" ? false : true
                         };
                         lista.Add(objeto);
                     }
@@ -342,54 +348,7 @@ namespace SAM.BusinessObjects.Produccion
                 }
             }
         }
-
-        public CuadranteNumeroControlSQ ObtenerOrdenTrabajoSpoolConSQyCuadrante(int ordenTrabajoSpoolID)
-        {
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
-            {
-                string query = "select";
-                query += " A.OrdenTrabajoSpoolID,";
-                query += " A.OrdenTrabajoID,";
-                query += " A.SpoolID,";
-                query += " A.Partida,";
-                query += " A.NumeroControl,";
-                query += " A.UsuarioModifica,";
-                query += " A.FechaModificacion,";
-                query += " A.VersionRegistro,";
-                query += " A.EsAsignado,";
-                query += " B.sq SqCliente, ";
-                query += " B.sqinterno,";
-                query += " C.TieneHoldIngenieria, D.CuadranteID, D.Nombre Cuadrante ";
-                query += " from OrdenTrabajoSpool A WITH(NOLOCK) LEFT JOIN Spool B WITH(NOLOCK) ON A.SpoolID = B.SpoolID";
-                query += " LEFT JOIN SpoolHold C WITH(NOLOCK) ON B.SpoolID=C.SpoolID LEFT JOIN Cuadrante D ON B.CuadranteID = D.CuadranteID ";
-                query += " WHERE A.OrdenTrabajoSpoolID =" + ordenTrabajoSpoolID;
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-
-                    List<CuadranteNumeroControlSQ> lista = new List<CuadranteNumeroControlSQ>();
-                    CuadranteNumeroControlSQ objeto;
-                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-                    {
-                        objeto = new CuadranteNumeroControlSQ
-                        {
-                            NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),
-                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
-                            OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),                            
-                            SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
-                            SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
-                            TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString())
-                        };
-                        lista.Add(objeto);
-                    }
-                    return lista.Count > 0 ? lista[0] : null;                    
-                }
-            }
-        }
-
+       
         /// <summary>
         /// Lista Numeros de Control por ODT
         /// Y que contengan materiales afines al numero unico recibido.
@@ -690,10 +649,29 @@ namespace SAM.BusinessObjects.Produccion
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
-                string query = "select c.CuadranteID,c.Nombre,odts.NumeroControl,OrdenTrabajoSpoolID,sqinterno, s.SpoolID, sq SqCliente from OrdenTrabajoSpool odts WITH(NOLOCK)";
-                query += " inner join  Spool s WITH(NOLOCK) on odts.SpoolID = s.SpoolID";
-                query += "     inner join Cuadrante c WITH(NOLOCK) on s.CuadranteID = c.CuadranteID";
-                query += " where s.sqinterno = '" + Sq + "'" + " and s.proyectoID=" + proyectoID;
+                string query = " SELECT " +
+                                    " C.CuadranteID, " +
+                                    " C.Nombre, " +
+                                    " OS.NumeroControl, " +
+                                    " OS.OrdenTrabajoSpoolID, " +
+                                    " S.sqinterno,  " +
+                                    " S.SpoolID,  " +
+                                    " S.sq SqCliente, " +
+                                    " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END TieneHoldIngenieria, " +
+                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd " +
+                                " FROM " +
+                                    "   OrdenTrabajoSpool OS WITH(NOLOCK) " +
+                                    " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID " +
+                                    " INNER JOIN Cuadrante C WITH(NOLOCK) ON S.CuadranteID = C.CuadranteID " +
+                                    " LEFT JOIN SpoolHold H WITH(NOLOCK) ON S.SpoolID = H.SpoolID " +
+                                    " LEFT JOIN WorkstatusSpool W WITH(NOLOCK) ON OS.OrdenTrabajoSpoolID = W.OrdenTrabajoSpoolID " +
+                                " WHERE " +
+                                    " S.sqinterno = '" + Sq + "' AND S.proyectoID = " + proyectoID +
+                                " ORDER BY OS.NumeroControl ASC";
+                //string query = "select c.CuadranteID,c.Nombre,odts.NumeroControl,OrdenTrabajoSpoolID,sqinterno, s.SpoolID, sq SqCliente from OrdenTrabajoSpool odts WITH(NOLOCK)";
+                //query += " inner join  Spool s WITH(NOLOCK) on odts.SpoolID = s.SpoolID";
+                //query += "     inner join Cuadrante c WITH(NOLOCK) on s.CuadranteID = c.CuadranteID";
+                //query += " where s.sqinterno = '" + Sq + "'" + " and s.proyectoID=" + proyectoID;
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -715,7 +693,62 @@ namespace SAM.BusinessObjects.Produccion
                             SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
                             OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
-                            SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString()                            
+                            SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
+                            TieneHoldIngenieria = bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
+                            OkPnd = bool.Parse(ds.Tables[0].Rows[i]["OkPnd"].ToString())                            
+                        };
+                        lista.Add(cuadranteNumeroControlSQ);
+                    }
+                    return lista;
+                }
+            }
+        }
+
+        public List<CuadranteNumeroControlSQ> ObtenerSpoolsPorSQyProyecto(string Sq, int proyectoID)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = " SELECT " +
+                                    " C.CuadranteID, " +
+                                    " C.Nombre, " +
+                                    " OS.NumeroControl, " +
+                                    " OS.OrdenTrabajoSpoolID, " +
+                                    " S.sqinterno,  " +
+                                    " S.SpoolID,  " +
+                                    " S.sq SqCliente, " +
+                                    " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END TieneHoldIngenieria, " +
+                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd " +
+                                " FROM " +
+                                    "   OrdenTrabajoSpool OS WITH(NOLOCK) " +
+                                    " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID " +
+                                    " INNER JOIN Cuadrante C WITH(NOLOCK) ON S.CuadranteID = C.CuadranteID " +
+                                    " LEFT JOIN SpoolHold H WITH(NOLOCK) ON S.SpoolID = H.SpoolID " +
+                                    " LEFT JOIN WorkstatusSpool W WITH(NOLOCK) ON OS.OrdenTrabajoSpoolID = W.OrdenTrabajoSpoolID " +
+                                " WHERE " +
+                                    " S.sqinterno = '" + Sq + "' AND S.proyectoID = " + proyectoID +
+                                " ORDER BY OS.NumeroControl ASC";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    List<CuadranteNumeroControlSQ> lista = new List<CuadranteNumeroControlSQ>();
+                    CuadranteNumeroControlSQ cuadranteNumeroControlSQ;
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        cuadranteNumeroControlSQ = new CuadranteNumeroControlSQ
+                        {                            
+                            Accion = 2,
+                            CuadranteID = int.Parse(ds.Tables[0].Rows[i]["CuadranteID"].ToString()),
+                            Cuadrante = ds.Tables[0].Rows[i]["Nombre"].ToString(),
+                            NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),
+                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
+                            OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),
+                            SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
+                            SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
+                            TieneHoldIngenieria = bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
+                            OkPnd = bool.Parse(ds.Tables[0].Rows[i]["OkPnd"].ToString())
                         };
                         lista.Add(cuadranteNumeroControlSQ);
                     }
@@ -750,6 +783,25 @@ namespace SAM.BusinessObjects.Produccion
             }
         }
 
+        public string ObtenerConsecutivoProyecto(int ProyectoID)
+        {
+            string consecutivo = "", query = "";
+
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                query = "SELECT ISNULL(ConsecutivoSQ, 0) Consecutivo FROM ProyectoConsecutivo WHERE ProyectoID = " + ProyectoID;
+                SqlCommand cmd = new SqlCommand(query, con);
+                if (con.State == ConnectionState.Closed) con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    consecutivo = dr["Consecutivo"].ToString();
+                }
+                if (con.State == ConnectionState.Open) con.Close();
+            }
+            return consecutivo;
+        }
+
         public List<CuadranteNumeroControlSQ> BuscarPorCuadranteSQ(int cuadranteid, int? proyectoID, int Opcion)
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
@@ -757,20 +809,22 @@ namespace SAM.BusinessObjects.Produccion
                 string query = "";
                 if(Opcion == 1)
                 {
-                    query += " SELECT 1 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria";
+                    query += " SELECT 1 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd ";
                 }
                 else
                 {
-                    query += " SELECT 2 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria";
-                }                
-                query += "     FROM OrdenTrabajoSpool A WITH(NOLOCK)";
-                query += " INNER JOIN Spool B ON A.SpoolID = B.SpoolID";
-                query += " INNER JOIN Cuadrante C WITH(NOLOCK) ON B.CuadranteID = C.CuadranteID";
-                query += " LEFT JOIN SpoolHold D WITH(NOLOCK) ON B.SpoolID=D.SpoolID";
-                query += " WHERE B.ProyectoID =" + proyectoID;
-                query += " AND C.CuadranteID =" + cuadranteid;
-                query += " order by CuadranteID ";
-
+                    query += " SELECT 2 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd ";
+                }
+                query += " FROM " +
+                            " OrdenTrabajoSpool A WITH(NOLOCK) " +
+                            " INNER JOIN Spool B ON A.SpoolID = B.SpoolID " +
+                            " INNER JOIN Cuadrante C WITH(NOLOCK) ON B.CuadranteID = C.CuadranteID " +
+                            " LEFT JOIN SpoolHold D WITH(NOLOCK) ON B.SpoolID = D.SpoolID " +
+                            " LEFT JOIN WorkstatusSpool W WITH(NOLOCK) ON A.OrdenTrabajoSpoolID = W.OrdenTrabajoSpoolID " +
+                        " WHERE " +
+                            " B.ProyectoID = " + proyectoID + " AND C.CuadranteID = " + cuadranteid +
+                        " ORDER BY CuadranteID ";
+                                             
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -791,7 +845,8 @@ namespace SAM.BusinessObjects.Produccion
                             OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
                             SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
-                            TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString())
+                            TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
+                            OkPnd = ds.Tables[0].Rows[i]["OkPnd"].ToString() == "0" ? false : true
                         };
                         lista.Add(objeto);
                     }
@@ -886,6 +941,7 @@ namespace SAM.BusinessObjects.Produccion
             {
                 DataSet ds = null;                
                 Lista.Columns.Remove("TieneHoldIngenieria");
+                Lista.Columns.Remove("OkPnd");
                 ObjetosSQL _SQL = new ObjetosSQL();
                 string[,] parametro = null;
                 if (Lista.Rows.Count > 0)
@@ -904,7 +960,8 @@ namespace SAM.BusinessObjects.Produccion
                             OrdenTrabajoSpoolID = row.Field<int>("OrdenTrabajoSpoolID"),
                             SqCliente = row.Field<string>("SqCliente"),
                             SQ = row.Field<string>("SQ"),
-                            TieneHoldIngenieria = row.Field<bool>("TieneHoldIngenieria")
+                            TieneHoldIngenieria = row.Field<bool>("TieneHoldIngenieria"),
+                            OkPnd = row.Field<int>("OkPnd") == 0 ? false : true
                         }).ToList();
                         ListaRetorna = result;
                     }
@@ -930,10 +987,12 @@ namespace SAM.BusinessObjects.Produccion
                 //using (SamContext ctx = new SamContext())
                 //{
                 listaLayoutSQ.Columns.Remove("TieneHoldIngenieria");
+                listaLayoutSQ.Columns.Remove("OkPnd");
                 ObjetosSQL _SQL = new ObjetosSQL();
                 string[,] parametro = { { "@Usuario", userID.ToString() }, { "@Inspector", inspector }, { "@ProyectoID", proyectoid.ToString() }, { "@SQBuscar", sq }, { "@UltimoSQInternoEncontrado", "" } };
                 if (listaLayoutSQ.Rows.Count > 0)
-                    return _SQL.Ejecuta(Stords.GuardarNumeroControlSQ, listaLayoutSQ, "@tablaNumeroControlSQ", parametro).ToString();
+                    //return _SQL.Ejecuta(Stords.GuardarNumeroControlSQ, listaLayoutSQ, "@tablaNumeroControlSQ", parametro).ToString();
+                    return _SQL.EjecutaRetornaString(Stords.GuardarNumeroControlSQ, listaLayoutSQ, "@tablaNumeroControlSQ", parametro).ToString();
                 else
                     return "0";
                 //}

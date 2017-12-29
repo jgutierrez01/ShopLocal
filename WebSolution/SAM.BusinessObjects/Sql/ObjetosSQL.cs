@@ -93,6 +93,35 @@ namespace SAM.BusinessObjects.Sql
             }
         }
 
+        public string EjecutaRetornaString(string Stord, DataTable TablaSube, String NombreTabla, string[,] Parametros = null)
+        {
+            using (SqlCommand cmd = new SqlCommand(Stord, Conexion()))
+            {
+
+                cmd.Parameters.AddWithValue("@Usuario", Parametros[0, Numeros.UNO].ToString());
+                cmd.Parameters.AddWithValue("@Inspector", Parametros[1, Numeros.UNO].ToString());
+                cmd.Parameters.AddWithValue("@ProyectoID", Parametros[2, Numeros.UNO].ToString());
+                cmd.Parameters.AddWithValue("@SQBuscar", Parametros[3, Numeros.UNO].ToString());
+                cmd.Parameters.Add("@UltimoSQInternoEncontrado", SqlDbType.VarChar, -1).Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(new SqlParameter(NombreTabla, TablaSube));
+                cmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    cmd.CommandTimeout = 0;
+                    cmd.Connection.Open();
+                    cmd.ExecuteNonQuery();
+                    string contractID = cmd.Parameters["@UltimoSQInternoEncontrado"].Value.ToString();
+                    cmd.Connection.Close();
+                    return contractID;
+                }
+                catch (Exception e)
+                {
+                    cmd.Connection.Close();
+                    throw new Exception(e.Message);
+                }
+            }
+        }
+
         public int EjecutaInsertUpdate(string Stord, DataTable TablaSube, String NombreTabla, string[,] Parametros = null)
         {
             using (SqlCommand cmd = new SqlCommand(Stord, Conexion()))

@@ -28,6 +28,7 @@ namespace SAM.Entities.Busqueda
         public string SQ { get; set; }
         [DataMember]
         public bool TieneHoldIngenieria { get; set; }
+        public bool OkPnd { get; set; }
     }
 
     [Serializable]
@@ -54,6 +55,8 @@ namespace SAM.Entities.Busqueda
         public string sqinterno { get; set; }
         [DataMember]
         public bool TieneHoldIngenieria { get; set; }
+        [DataMember]
+        public bool OkPnd { get; set; }
         
     }
 

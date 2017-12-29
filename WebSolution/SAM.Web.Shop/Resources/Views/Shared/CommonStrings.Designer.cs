@@ -79,6 +79,15 @@ namespace Resources.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AUTORIZAR SOL. INSPECT.
+        /// </summary>
+        public static string AutorizaSI {
+            get {
+                return ResourceManager.GetString("AutorizaSI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
         public static string Buscar {
@@ -174,6 +183,15 @@ namespace Resources.Views {
         public static string marcaAguaSolInspect {
             get {
                 return ResourceManager.GetString("marcaAguaSolInspect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nuevo.
+        /// </summary>
+        public static string New {
+            get {
+                return ResourceManager.GetString("New", resourceCulture);
             }
         }
         

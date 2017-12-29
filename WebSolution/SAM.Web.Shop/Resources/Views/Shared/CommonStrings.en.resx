@@ -210,4 +210,10 @@
   <data name="marcaAguaSolInspect" xml:space="preserve">
     <value>SOL. INSPECT</value>
   </data>
+  <data name="AutorizaSI" xml:space="preserve">
+    <value>AUTHORIZE SOL. INSPECT</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
 </root>

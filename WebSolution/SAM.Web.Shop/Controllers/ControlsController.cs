@@ -251,6 +251,13 @@ namespace SAM.Web.Shop.Controllers
             var myData = new[] { new { result = "OK" } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
+        [HttpGet]
+        public JsonResult UpdateSQ(string SI)
+        {
+            NavContext.SetDataToSession<string>(Session, "SI", SI);
+            var myData = new[] { new { result = "OK" } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
 
         [HttpGet]
         public JsonResult UpdateCuadranteID(string CuadranteID)

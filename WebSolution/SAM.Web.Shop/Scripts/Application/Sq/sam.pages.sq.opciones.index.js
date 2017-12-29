@@ -42,7 +42,19 @@
             //        $("#gridAdd-form").css("display", "none");
             //    }
             //});
-            $("#botonAgregarStyle").addClass("active");
+            if ($("#OpcionVista").val() != undefined) {
+                if ($("#OpcionVista").val() == "1") {
+                    $("#botonAgregarStyle").addClass("active");
+                    $("#botonEditarStyle").removeClass("active");
+                } else {
+                    $("#botonAgregarStyle").removeClass("active");
+                    $("#botonEditarStyle").addClass("active");
+                }
+            } else {
+                $("#botonAgregarStyle").addClass("active");
+            }
+            
+            //$("#botonAgregarStyle").addClass("active");
             $('input:radio[name=SeleccionAgregarEditar]').click(function () {
                 if ($('input:radio[name=SeleccionAgregarEditar]:checked').val() == "Add") {
                     $("#botonAgregarStyle").addClass("active");
