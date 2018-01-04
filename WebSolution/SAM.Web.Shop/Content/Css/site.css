@@ -82,5 +82,53 @@
  .lbl-ERROR { 
      color:red; 
  }
+ 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url(/Content/images/loading.gif) 50% 50% no-repeat;
+    pointer-events: none;
+}
 
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+    pointer-events: none;
+}
 
+/* Anytime the body has the loading class, our
+modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+.k-grid tbody tr td a.k-button.k-grid-Cancelar,
+.k-grid tbody tr td a.k-button.k-grid-Cancel {
+    background-image: url("/Content/images/borrar.png");
+    padding-right: 10px;
+    height: 20px;
+    min-width: 20px !important;
+    margin: 0px;
+}
+ .k-grid tbody tr td a.k-button {
+        display: block;
+        color: transparent !important;
+        height: 27px;
+        max-width: 18px;
+        padding: 0;
+        margin: 0 4px;
+        font-size: 0;
+        border: none;
+        outline: none;
+        background: none;
+        background-color: transparent !important;
+        background-repeat: no-repeat;
+        background-position: center !important;
+        box-shadow: none !important;
+    }   

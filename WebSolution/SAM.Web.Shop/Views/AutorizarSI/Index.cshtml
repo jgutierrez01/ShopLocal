@@ -22,7 +22,7 @@
         <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
     </ul>
 }
-<div id="contenedor">
+<div id="contenedor" style="padding-bottom: 20px;" class="row">
     <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="width:100%; margin: 0 auto;">    
         <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
             <div id="divproyecto" class="form-group">
@@ -44,13 +44,19 @@
         </div>
     </div>
 </div>
-<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" id="contieneGrid" style="display:none; padding-top: 20px; margin: 0 auto;">
-    <div id="grid" ></div>
-</div>
+@*<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" id="contieneGrid" style="display:none; padding-top: 20px; margin: 0 auto;">*@
+@*<div class="row" id="contieneGrid" style="display:none; padding-top: 20px; margin: 0 auto;">*@
+    <div id="contieneGrid" style="display:none;">
+        <div id="grid" style="padding-top: 20px; margin: 0 auto;"></div>
+    </div>
+@*</div>*@
 
 <script>
     $(document).ready(function () {        
         IniciaGrid();
+        if ($("#grid").hasClass("k-widget")) {
+            $("#grid").removeClass("k-widget");
+        }
         $("#BuscarSI").click(function (e) {
             if (($("#ProjectIdADD").val() == "0" || $("#ProjectIdADD").val() == 0) && $("#txtSI").val() == "") {
                 if ($("html").prop("lang") == "en-US") {
@@ -63,6 +69,7 @@
                     if ($("#txtSI").val() != "") {
                         //Mostrar Spools          
                         BorrarSeccionError();
+                        loadingStart();
                         $.ajax(
                         {
                             type: 'GET',
@@ -71,12 +78,17 @@
                             data: { SI: $("#txtSI").val(), ProyectoID: $("#ProjectIdADD").val() },
                             success: function (data) {
                                 if (data[0].result == "NODATA") {
+                                    loadingStop();
                                     if ($("html").prop("lang") == "en-US") {
                                         MostrarError("No Information Was Found With Sol. Inspect: " + $("#txtSI").val());
                                     } else {
                                         MostrarError("No Se Encontró Información Con La Sol. Inspect: " + $("#txtSI").val());
                                     }
                                 } else {
+                                    if ($("#grid").hasClass("k-widget")) {
+                                        $("#grid").removeClass("k-widget");
+                                    }
+                                    loadingStop();
                                     var result = JSON.parse(data[0].result);
                                     $("#grid").data("kendoGrid").dataSource.data([]);
                                     $("#grid").data("kendoGrid").dataSource.data(result);
@@ -86,6 +98,7 @@
                                 }
                             },
                             error: function () {
+                                loadingStop();
                                 alert("Ocurrio un error");
                             }
                         });
@@ -169,13 +182,13 @@
                 serverFiltering: false,
                 serverSorting: false
             },
+            filterable: false,
             navigatable: true,
-            editable: true,
-            autoHeight: false,
-            autoWidth: false,            
-            mobile: true,
+            editable: true,                        
+            autoWidth: true,
+            autoHeigth: true,
             sortable: true,
-            scrollable: false,
+            scrollable: false,            
             pageable: {
                 refresh: false,
                 pageSizes: [10, 25, 50, 100],
@@ -186,17 +199,18 @@
             columns: [
                 { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", width: "20px" },
                 { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", width: "20px" },
-                { field: "TieneHoldIngenieria", title: $("html").prop("lang") != "en-US" ? "Hold Ingenieria" : "Engineering Hold", template: "#=TieneHoldIngenieria ? 'Si' : 'No' #", width: "20px" },
+                { field: "TieneHoldIngenieria", title: "Hold", template: "#=TieneHoldIngenieria ? 'Si' : 'No' #", width: "10px" },
                 {
                     command: {
                         text: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-                         click: function (e) {
-                             e.preventDefault();                           
+                        click: function (e) {
+                            alert("Clic eliminar");
+                            //e.preventDefault();
                          }
-                     },
+                    },
                     title: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-                     width: "30px",
-                     attributes: { style: "text-align:center;" }
+                    width: "10px",
+                    attributes: { style: "text-align: center;" }
                  }
 
             ],
@@ -204,29 +218,21 @@
                 var grid = $("#grid").data("kendoGrid");
                 var gridData = grid.dataSource.view();
                 for (var i = 0; i < gridData.length; i++) {
-                    var currentUid = gridData[i].uid;                   
+                    var currentUid = gridData[i].uid;
                     var currenRow = grid.table.find("tr[data-uid='" + currentUid + "']");
                     var editButton = $(currenRow).find(".k-button");                    
                     var classDescarga = $("html").prop("lang") == "es-MX" ? "k-grid-Cancelar" : "k-grid-Cancel";
-                    editButton[0].outerHTML = '<a class="k-button k-button-icontext ' + classDescarga + '" href="#/" style="margin: 0 auto;"><span class=""></span>' + $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete" + '</a>';                    
-                }            
+                    editButton[0].outerHTML = '<a class="k-button k-button-icontext ' + classDescarga + '" href="#/"></a>';
+                }                                       
             }
         });          
     }
 </script>
 <style>
-    #grid > .k-grid-header > div > table,
-    #grid > .k-grid-content > table {
-        width: 100% !important;
-    }
-    .k-grid tbody tr td a.k-button.k-grid-Cancelar,
-    .k-grid tbody tr td a.k-button.k-grid-Cancel {
-        background-image: url("/Content/images/borrar.png");
-        padding-right: 10px;
-        height: 20px;
-        min-width: 20px !important;
-        margin: 0px;
-    }
+    .adaptive-grid-wrapper {
+        position: relative;
+        height: 130px;
+     }
 </style>
 
 
