@@ -36,7 +36,8 @@
                 @Html.StyledTextBoxFor(x => x.SQ, new { placeholder = CommonStrings.marcaAguaSolInspect, type = "text", id = "txtSI" })
             </div>
         </div>
-        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">            
+            <p class="alert alert-info" id="seccionAviso" style="display: none; padding-top: 10px;"><img src="~/Content/Images/rotate36X36.gif" /></p>
             <p class="alert alert-warning" id="seccionError" style="display: none; padding-top: 10px;"></p>
         </div>
         <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
@@ -44,195 +45,27 @@
         </div>
     </div>
 </div>
-@*<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" id="contieneGrid" style="display:none; padding-top: 20px; margin: 0 auto;">*@
-@*<div class="row" id="contieneGrid" style="display:none; padding-top: 20px; margin: 0 auto;">*@
-    <div id="contieneGrid" style="display:none;">
-        <div id="grid" style="padding-top: 20px; margin: 0 auto;"></div>
-    </div>
-@*</div>*@
+<div id="contieneGrid" style="display:none;">
+    <div id="grid" style="padding-top: 20px; margin: 0 auto;"></div>
+</div>
 
+<script src="~/Scripts/Application/AutorizarSI/Captura.js"></script>
+<script src="~/Scripts/Application/AutorizarSI/Handler.js"></script>
+<script src="~/Scripts/Application/AutorizarSI/Ajax.js"></script>
 <script>
-    $(document).ready(function () {        
-        IniciaGrid();
+    $(document).ready(function () {       
+        ActivarEventos();
         if ($("#grid").hasClass("k-widget")) {
             $("#grid").removeClass("k-widget");
         }
-        $("#BuscarSI").click(function (e) {
-            if (($("#ProjectIdADD").val() == "0" || $("#ProjectIdADD").val() == 0) && $("#txtSI").val() == "") {
-                if ($("html").prop("lang") == "en-US") {
-                    MostrarError("Please Select A Project And Enter Sol. Inspect");
-                } else {
-                    MostrarError("Por Favor Seleccione un Proyecto E Ingrese Sol. Inspect");
-                }
-            } else {                
-                if ($("#ProjectIdADD").val() != "0" && $("#ProjectIdADD").val() != 0) {
-                    if ($("#txtSI").val() != "") {
-                        //Mostrar Spools          
-                        BorrarSeccionError();
-                        loadingStart();
-                        $.ajax(
-                        {
-                            type: 'GET',
-                            url: '/AutorizarSI/ObtenerSpools/',
-                            dataType: 'json',
-                            data: { SI: $("#txtSI").val(), ProyectoID: $("#ProjectIdADD").val() },
-                            success: function (data) {
-                                if (data[0].result == "NODATA") {
-                                    loadingStop();
-                                    if ($("html").prop("lang") == "en-US") {
-                                        MostrarError("No Information Was Found With Sol. Inspect: " + $("#txtSI").val());
-                                    } else {
-                                        MostrarError("No Se Encontró Información Con La Sol. Inspect: " + $("#txtSI").val());
-                                    }
-                                } else {
-                                    if ($("#grid").hasClass("k-widget")) {
-                                        $("#grid").removeClass("k-widget");
-                                    }
-                                    loadingStop();
-                                    var result = JSON.parse(data[0].result);
-                                    $("#grid").data("kendoGrid").dataSource.data([]);
-                                    $("#grid").data("kendoGrid").dataSource.data(result);
-                                    $("#contieneGrid").css("display", "block");
-                                    $(".k-grid-pager").css("width", "100%");
-                                    //$("#grid").data("kendoGrid").dataSource.sync();
-                                }
-                            },
-                            error: function () {
-                                loadingStop();
-                                alert("Ocurrio un error");
-                            }
-                        });
-                    } else {
-                        //Falta SI
-                        if ($("html").prop("lang") == "en-US") {
-                            MostrarError("Please Enter Sol. Inspect");
-                        } else {
-                            MostrarError("Por Favor Ingrese Sol. Inspect");
-                        }
-                    }
-                } else {
-                    //Falta Proyecto
-                    if ($("html").prop("lang") == "en-US") {
-                        MostrarError("Please Select A Project.");
-                    } else {
-                        MostrarError("Por Favor Seleccione un Proyecto");
-                    }
-                }
-            }
-        });
-
-    });
-    function MostrarError(Error) {
-        $("#seccionError").append("");
-        $("#seccionError").html("");
-        $("#seccionError").css("display", "block");
-        $("#seccionError").append(Error);
-    }
-    function BorrarSeccionError(Error) {
-        $("#seccionError").append("");
-        $("#seccionError").html("");
-        $("#seccionError").css("display", "none");        
-    }
-    function IniciaGrid() {
-        kendo.ui.Grid.fn.editCell = (function (editCell) {
-            return function (cell) {
-                cell = $(cell);
-
-                var that = this,
-                    column = that.columns[that.cellIndex(cell)],
-                    model = that._modelForContainer(cell),
-                    event = {
-                        container: cell,
-                        model: model,
-                        preventDefault: function () {
-                            this.isDefaultPrevented = true;
-                        }
-                    };
-
-                if (model && typeof this.options.beforeEdit === "function") {
-                    this.options.beforeEdit.call(this, event);
-                    if (event.isDefaultPrevented) return;
-                }
-
-                editCell.call(this, cell);
-            };
-        })(kendo.ui.Grid.fn.editCell);
-        $("#grid").kendoGrid({
-            autoBind: true,
-            dataSource: {
-                data: [],
-                schema: {
-                    model: {
-                        fields: {                            
-                            NumeroControl: { type: "string", editable: false },
-                            SpoolID: { type: "int", editable: false },
-                            CuadranteID: {type: "int", editable: false},
-                            Cuadrante: { type: "string", editable: false },
-                            Accion: { type: "int", editable: false },
-                            OrdenTrabajoSpoolID: { type: "int", editable: false },
-                            SqCliente: { type: "string", editable: false },
-                            SQ: { type: "string", editable: false },
-                            TieneHoldIngenieria: { type: "boolean", editable: false },
-                            OkPnd: {type: "boolean", editable: false}
-                        }
-                    }
-                },                
-                pageSize: 10,
-                serverPaging: false,
-                serverFiltering: false,
-                serverSorting: false
-            },
-            filterable: false,
-            navigatable: true,
-            editable: true,                        
-            autoWidth: true,
-            autoHeigth: true,
-            sortable: true,
-            scrollable: false,            
-            pageable: {
-                refresh: false,
-                pageSizes: [10, 25, 50, 100],
-                info: false,
-                input: false,
-                numeric: true,
-            },
-            columns: [
-                { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", width: "20px" },
-                { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", width: "20px" },
-                { field: "TieneHoldIngenieria", title: "Hold", template: "#=TieneHoldIngenieria ? 'Si' : 'No' #", width: "10px" },
-                {
-                    command: {
-                        text: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-                        click: function (e) {
-                            alert("Clic eliminar");
-                            //e.preventDefault();
-                         }
-                    },
-                    title: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-                    width: "10px",
-                    attributes: { style: "text-align: center;" }
-                 }
-
-            ],
-            dataBound: function (e) {
-                var grid = $("#grid").data("kendoGrid");
-                var gridData = grid.dataSource.view();
-                for (var i = 0; i < gridData.length; i++) {
-                    var currentUid = gridData[i].uid;
-                    var currenRow = grid.table.find("tr[data-uid='" + currentUid + "']");
-                    var editButton = $(currenRow).find(".k-button");                    
-                    var classDescarga = $("html").prop("lang") == "es-MX" ? "k-grid-Cancelar" : "k-grid-Cancel";
-                    editButton[0].outerHTML = '<a class="k-button k-button-icontext ' + classDescarga + '" href="#/"></a>';
-                }                                       
-            }
-        });          
-    }
+        $(".k-header").css("text-align", "center");//Centrar titulo de columnas                              
+    });               
 </script>
 <style>
-    .adaptive-grid-wrapper {
+    /*.adaptive-grid-wrapper {
         position: relative;
         height: 130px;
-     }
+     }*/
 </style>
 
 

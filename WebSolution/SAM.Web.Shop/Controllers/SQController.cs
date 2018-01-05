@@ -194,19 +194,19 @@ namespace SAM.Web.Shop.Controllers
                                 datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en la SI: " + ListaTieneSQInterno[i].SQ + "<br>";
                             }
 
-                            List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaNoTieneSQInterno where !a.OkPnd select a).ToList();//Muestro Warning de que le falta OkPnd
-                            List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaNoTieneSQInterno where a.OkPnd select a).ToList();//Permito agregar todos aquellos que tienen okpnd
-                            for(int i = 0; i < ListaNoTieneOkPnd.Count; i++)
-                            {
-                                datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
-                            }
+                            //List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaNoTieneSQInterno where !a.OkPnd select a).ToList();//Muestro Warning de que le falta OkPnd
+                            //List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaNoTieneSQInterno where a.OkPnd select a).ToList();//Permito agregar todos aquellos que tienen okpnd
+                            //for(int i = 0; i < ListaNoTieneOkPnd.Count; i++)
+                            //{
+                            //    datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
+                            //}
 
                             if (datosAsignados != "")
                             {
                                 TempData["errorAdd"] += datosAsignados;
                             }
 
-                            if (ListaTieneOkPnd.Count > 0)
+                            if (ListaNoTieneSQInterno.Count > 0)
                             {
                                 if (model.QuadrantIdNCADD != 0)
                                 {
@@ -216,7 +216,7 @@ namespace SAM.Web.Shop.Controllers
                                 {
                                     NavContext.setCuadranteID(model.QuadrantIdCADD.ToString());
                                 }
-                                var Lista = ListaTieneOkPnd;
+                                var Lista = ListaNoTieneSQInterno;
                                 List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList();//.OrderBy(c => c.NumeroControl).ToList();
                                 string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd");                                
                                 string numerosControl = "";
@@ -305,20 +305,20 @@ namespace SAM.Web.Shop.Controllers
                                 datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en la SI: " + ListaTieneSQInterno[i].SQ + "<br>";
                             }
 
-                            List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaNoTieneSQInterno where !a.OkPnd select a).ToList(); //Muestro warning aquellos que le falta okpnd
-                            List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaNoTieneSQInterno where a.OkPnd select a).ToList(); //Solo Agrego aquellos que tienen OkPnd
-                            for(int i = 0; i < ListaNoTieneOkPnd.Count; i++)
-                            {
-                                datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
-                            }
+                            //List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaNoTieneSQInterno where !a.OkPnd select a).ToList(); //Muestro warning aquellos que le falta okpnd
+                            //List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaNoTieneSQInterno where a.OkPnd select a).ToList(); //Solo Agrego aquellos que tienen OkPnd
+                            //for(int i = 0; i < ListaNoTieneOkPnd.Count; i++)
+                            //{
+                            //    datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
+                            //}
 
                             if (datosAsignados != "")
                             {
                                 TempData["errorAdd"] += datosAsignados;                                
                             }
-                            if (ListaTieneOkPnd.Count > 0)
+                            if (ListaNoTieneSQInterno.Count > 0)
                             {
-                                var Lista = ListaTieneOkPnd;
+                                var Lista = ListaNoTieneSQInterno;
                                 List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); //.OrderBy(c => c.NumeroControl).ToList();                                
                                 string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlAdd");                                
                                 string numerosControl = "";
@@ -603,22 +603,22 @@ namespace SAM.Web.Shop.Controllers
                                         datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en la SI: " + ListaTieneSQInterno[i].SQ + "<br>";
                                     }                                    
 
-                                    List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaNoTieneSQInterno where !a.OkPnd select a).ToList();//Muestro Warning a los que le falta okPnd
-                                    List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaNoTieneSQInterno where a.OkPnd select a).ToList();//Agrego solo aquellos que tiene okpnd
-                                    for(int i = 0; i < ListaNoTieneOkPnd.Count; i++)
-                                    {
-                                        datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
-                                    }
+                                    //List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaNoTieneSQInterno where !a.OkPnd select a).ToList();//Muestro Warning a los que le falta okPnd
+                                    //List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaNoTieneSQInterno where a.OkPnd select a).ToList();//Agrego solo aquellos que tiene okpnd
+                                    //for(int i = 0; i < ListaNoTieneOkPnd.Count; i++)
+                                    //{
+                                    //    datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
+                                    //}
                                     
                                     if (datosAsignados != "")
                                     {
                                         TempData["errorEditar"] += datosAsignados;
                                     }
 
-                                    if (ListaTieneOkPnd.Count > 0)
+                                    if (ListaNoTieneSQInterno.Count > 0)
                                     {
                                         
-                                        var Lista = ListaTieneOkPnd;
+                                        var Lista = ListaNoTieneSQInterno;
                                         List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList();//.OrderBy(c => c.NumeroControl).ToList();
                                         string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit");
                                         string numerosControl = "";
@@ -702,18 +702,18 @@ namespace SAM.Web.Shop.Controllers
                                         datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en la SI: " + ListaTieneSQInterno[i].SQ + "<br>";
                                     }
 
-                                    List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaNoTieneSQInterno where !a.OkPnd select a).ToList(); //Muestro warning a los que le falta okpnd
-                                    List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaNoTieneSQInterno where a.OkPnd select a).ToList(); //Agrego aquellos que tiene okpnd
-                                    for (int i = 0; i < ListaNoTieneOkPnd.Count; i++) {
-                                        datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
-                                    }
+                                    //List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaNoTieneSQInterno where !a.OkPnd select a).ToList(); //Muestro warning a los que le falta okpnd
+                                    //List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaNoTieneSQInterno where a.OkPnd select a).ToList(); //Agrego aquellos que tiene okpnd
+                                    //for (int i = 0; i < ListaNoTieneOkPnd.Count; i++) {
+                                    //    datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
+                                    //}
                                     if (datosAsignados != "")
                                     {
                                         TempData["errorEditar"] += datosAsignados;
                                     }
-                                    if (ListaTieneOkPnd.Count > 0)
+                                    if (ListaNoTieneSQInterno.Count > 0)
                                     {
-                                        var Lista = ListaTieneOkPnd;
+                                        var Lista = ListaNoTieneSQInterno;
                                         List<LayoutGridSQ> ListaSinRepetidos = Lista.GroupBy(a => a.OrdenTrabajoSpoolID).Select(b => b.First()).ToList(); //.OrderBy(c => c.NumeroControl).ToList();                                
                                         string auxString = NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit") == null ? "" : NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit");
                                         string numerosControl = "";
@@ -833,15 +833,15 @@ namespace SAM.Web.Shop.Controllers
                         string datosAsignados = "";
                         List<LayoutGridSQ> listaSoloNumeroControlNuevos = (from a in currentControlNumbers join b in ListaConDatosNumeroControl on a.OrdenTrabajoSpoolID equals b.OrdenTrabajoSpoolID select b).ToList();
 
-                        List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in listaSoloNumeroControlNuevos where !a.OkPnd select a).ToList(); //Muestro warning a los que le falta okpnd
-                        List<LayoutGridSQ> ListaTieneOkPnd = (from a in listaSoloNumeroControlNuevos where a.OkPnd select a).ToList(); //Agrego aquellos que tiene okpnd
-                        for (int i = 0; i < ListaNoTieneOkPnd.Count; i++)
-                        {
-                            datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd, Se Ignora Guardado. <br>";
-                        }
+                        //List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in listaSoloNumeroControlNuevos where !a.OkPnd select a).ToList(); //Muestro warning a los que le falta okpnd
+                        //List<LayoutGridSQ> ListaTieneOkPnd = (from a in listaSoloNumeroControlNuevos where a.OkPnd select a).ToList(); //Agrego aquellos que tiene okpnd
+                        //for (int i = 0; i < ListaNoTieneOkPnd.Count; i++)
+                        //{
+                        //    datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd, Se Ignora Guardado. <br>";
+                        //}
 
-                        List<LayoutGridSQ> ListaTieneSQCliente = (from a in ListaTieneOkPnd where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
-                        List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in ListaTieneOkPnd where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
+                        List<LayoutGridSQ> ListaTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
+                        List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in listaSoloNumeroControlNuevos where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
                         for (int a = 0; a < ListaTieneSQCliente.Count; a++)
                         {
                             datosAsignados += " El Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SI Agregado, se ignora guardado.  <br>";
@@ -973,15 +973,15 @@ namespace SAM.Web.Shop.Controllers
                 List<LayoutGridSQ> ListaConDatosNumeroControl = OrdenTrabajoSpoolBO.Instance.ListaNumControlConSpoolID(ToDataTable.Instance.toDataTable(currentControlNumbers));
                 string datosAsignados = "";
 
-                List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaConDatosNumeroControl where !a.OkPnd select a).ToList(); //Muestro warning a los que le falta okpnd
-                List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaConDatosNumeroControl where a.OkPnd select a).ToList(); //Agrego aquellos que tiene okpnd
-                for (int i = 0; i < ListaNoTieneOkPnd.Count; i++)
-                {
-                    datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd Se Ignora Guardado. <br>";
-                }
+                //List<LayoutGridSQ> ListaNoTieneOkPnd = (from a in ListaConDatosNumeroControl where !a.OkPnd select a).ToList(); //Muestro warning a los que le falta okpnd
+                //List<LayoutGridSQ> ListaTieneOkPnd = (from a in ListaConDatosNumeroControl where a.OkPnd select a).ToList(); //Agrego aquellos que tiene okpnd
+                //for (int i = 0; i < ListaNoTieneOkPnd.Count; i++)
+                //{
+                //    datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd Se Ignora Guardado. <br>";
+                //}
 
-                List<LayoutGridSQ> ListaTieneSQCliente = (from a in ListaTieneOkPnd where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
-                List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in ListaTieneOkPnd where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
+                List<LayoutGridSQ> ListaTieneSQCliente = (from a in ListaConDatosNumeroControl where (a.SqCliente != "" && a.SqCliente != null) select a).ToList();
+                List<LayoutGridSQ> ListaNoTieneSQCliente = (from a in ListaConDatosNumeroControl where (a.SqCliente == "" || a.SqCliente == null) select a).ToList();
                 for (int a = 0; a < ListaTieneSQCliente.Count; a++)
                 {
                     datosAsignados += " El Spool " + ListaTieneSQCliente[a].NumeroControl + " tiene SI Agregada, se ignora guardado. <br>";

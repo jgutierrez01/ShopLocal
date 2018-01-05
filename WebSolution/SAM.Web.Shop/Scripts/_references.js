@@ -1,4 +1,7 @@
 ﻿/// <autosync enabled="true" />
+/// <reference path="application/autorizarsi/ajax.js" />
+/// <reference path="application/autorizarsi/captura.js" />
+/// <reference path="application/autorizarsi/handler.js" />
 /// <reference path="application/controls/sam.controls.pager.js" />
 /// <reference path="application/general.js" />
 /// <reference path="application/sam.init.js" />

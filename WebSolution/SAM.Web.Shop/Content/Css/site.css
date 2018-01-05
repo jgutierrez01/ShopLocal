@@ -114,7 +114,7 @@ body.loading .modal {
     padding-right: 10px;
     height: 20px;
     min-width: 20px !important;
-    margin: 0px;
+    margin: 0 auto;
 }
  .k-grid tbody tr td a.k-button {
         display: block;
@@ -131,4 +131,4 @@ body.loading .modal {
         background-repeat: no-repeat;
         background-position: center !important;
         box-shadow: none !important;
-    }   
+    }
