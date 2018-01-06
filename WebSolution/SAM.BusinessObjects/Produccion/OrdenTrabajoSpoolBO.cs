@@ -704,7 +704,7 @@ namespace SAM.BusinessObjects.Produccion
             }
         }
 
-        public List<CuadranteNumeroControlSQ> ObtenerSpoolsPorSQyProyecto(string Sq, int proyectoID)
+        public List<AutorizarSI> ObtenerSpoolsPorSQyProyecto(string Sq, int proyectoID)
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
@@ -717,7 +717,9 @@ namespace SAM.BusinessObjects.Produccion
                                     " S.SpoolID,  " +
                                     " S.sq SqCliente, " +
                                     " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END TieneHoldIngenieria, " +
-                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd " +
+                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd, " +
+                                    " CAST(1 AS BIT) Autorizado, " +
+                                    " CAST(0 AS BIT) NoAutorizado " +
                                 " FROM " +
                                     "   OrdenTrabajoSpool OS WITH(NOLOCK) " +
                                     " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID " +
@@ -733,11 +735,11 @@ namespace SAM.BusinessObjects.Produccion
                     DataSet ds = new DataSet();
                     da.Fill(ds);
 
-                    List<CuadranteNumeroControlSQ> lista = new List<CuadranteNumeroControlSQ>();
-                    CuadranteNumeroControlSQ cuadranteNumeroControlSQ;
+                    List<AutorizarSI> lista = new List<AutorizarSI>();
+                    AutorizarSI Autorizar;
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                     {
-                        cuadranteNumeroControlSQ = new CuadranteNumeroControlSQ
+                        Autorizar = new AutorizarSI
                         {                            
                             Accion = 2,
                             CuadranteID = int.Parse(ds.Tables[0].Rows[i]["CuadranteID"].ToString()),
@@ -746,11 +748,13 @@ namespace SAM.BusinessObjects.Produccion
                             SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
                             OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
-                            SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
-                            TieneHoldIngenieria = bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
-                            OkPnd = bool.Parse(ds.Tables[0].Rows[i]["OkPnd"].ToString())
+                            SI = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
+                            Hold = bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
+                            OkPnd = bool.Parse(ds.Tables[0].Rows[i]["OkPnd"].ToString()),
+                            Autorizado = bool.Parse(ds.Tables[0].Rows[i]["Autorizado"].ToString()),
+                            NoAutorizado = bool.Parse(ds.Tables[0].Rows[i]["NoAutorizado"].ToString())
                         };
-                        lista.Add(cuadranteNumeroControlSQ);
+                        lista.Add(Autorizar);
                     }
                     return lista;
                 }

@@ -56,10 +56,34 @@ namespace SAM.Entities.Busqueda
         [DataMember]
         public bool TieneHoldIngenieria { get; set; }
         [DataMember]
-        public bool OkPnd { get; set; }
-        
+        public bool OkPnd { get; set; }        
     }
-
-   
-
+    [Serializable]
+    public class AutorizarSI
+    {
+        [DataMember]
+        public int SpoolID { get; set; }
+        [DataMember]
+        public int OrdenTrabajoSpoolID { get; set; }
+        [DataMember]
+        public string NumeroControl { get; set; }
+        [DataMember]
+        public int CuadranteID { get; set; }
+        [DataMember]
+        public string Cuadrante { get; set; }
+        [DataMember]
+        public string SI { get; set; }
+        [DataMember]
+        public string SqCliente { get; set; }
+        [DataMember]
+        public bool Hold { get; set; }
+        [DataMember]
+        public bool OkPnd { get; set; }
+        [DataMember]
+        public bool Autorizado { get; set; }
+        [DataMember]
+        public bool NoAutorizado { get; set; }
+        [DataMember]
+        public int Accion { get; set; }                     
+    }   
 }

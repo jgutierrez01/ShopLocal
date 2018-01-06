@@ -13,17 +13,19 @@ function IniciaGrid() {
             data: [],
             schema: {
                 model: {
-                    fields: {
-                        NumeroControl: { type: "string", editable: false },
+                    fields: {                     
                         SpoolID: { type: "int", editable: false },
+                        OrdenTrabajoSpoolID: { type: "int", editable: false },
+                        NumeroControl: { type: "string", editable: false },                        
                         CuadranteID: { type: "int", editable: false },
                         Cuadrante: { type: "string", editable: false },
-                        Accion: { type: "int", editable: false },
-                        OrdenTrabajoSpoolID: { type: "int", editable: false },
-                        SqCliente: { type: "string", editable: false },
-                        SQ: { type: "string", editable: false },
-                        TieneHoldIngenieria: { type: "boolean", editable: false },
-                        OkPnd: { type: "boolean", editable: false }
+                        SI: { type: "string", editable: false },
+                        SqCliente: { type: "string", editable: false },                        
+                        Hold: { type: "boolean", editable: false },
+                        OkPnd: { type: "boolean", editable: false },                                                                        
+                        Autorizado: { type: "boolean", editable: true },
+                        NoAutorizado: { type: "boolean", editable: true },
+                        Accion: { type: "int", editable: false }
                     }
                 }
             },
@@ -49,22 +51,42 @@ function IniciaGrid() {
         columns: [
             { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", width: "20px" },
             { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", width: "20px" },
-            { field: "TieneHoldIngenieria", title: "Hold", template: "#=TieneHoldIngenieria ? 'Si' : 'No' #", width: "10px" },
-
+            { field: "Hold", title: "Hold", template: "#=Hold ? 'Si' : 'No' #", width: "10px" },
+            {
+                field: "Autorizado", title: $("html").prop("lang") != "en-US" ? "Autorizado" : "Authorized", filterable: {
+                    multi: true,
+                    messages: {
+                        isTrue: $("html").prop("lang") != "en-US" ? "V" : "T",
+                        isFalse: "F",
+                        style: "max-width:20px;"
+                    },
+                    dataSource: [{ Autorizado: true }, { Autorizado: false }]
+                }, template: '<input class="chkbx" type="checkbox" name="Autorizado" #= Autorizado ? "checked=checked" : ""# ></input>', width: "20px", attributes: { style: "text-align:center;" }
+            },
+            {
+                field: "NoAutorizado", title: $("html").prop("lang") != "en-US" ? "No Autorizado" : "Not Authorized", filterable: {
+                    multi: true,
+                    messages: {
+                        isTrue: $("html").prop("lang") != "en-US" ? "V" : "T",
+                        isFalse: "F",
+                        style: "max-width:20px;"
+                    },
+                    dataSource: [{ NoAutorizado: true }, { NoAutorizado: false }]
+                }, template: '<input class="chkbx" type="checkbox" name="NoAutorizado" #= NoAutorizado ? "checked=checked" : ""# ></input>', width: "20px", attributes: { style: "text-align:center;" }
+            },
             {
                 command: {
-                    text: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-                    className: "k-button k-button-icontext k-grid-Cancel ",
+                    text: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
+                    className: "k-button k-button-icontext k-grid-Incidencias ",
                     click: function (e) {
                         e.preventDefault();
                         var grid = $("#grid").data("kendoGrid");
                         var ds = grid.dataSource;
-                        var dataItem = grid.dataItem($(e.target).closest("tr"));
-                        ds.remove(dataItem);
-                        ds.sync();
-                    }
+                        var dataItem = grid.dataItem($(e.target).closest("tr"));                        
+                        alert("Numero de Control: " + dataItem.NumeroControl );
+                    }                    
                 },
-                title: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
+                title: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
                 width: "10px",
                 attributes: { style: "text-align: center; margin: 0 auto" }
             }

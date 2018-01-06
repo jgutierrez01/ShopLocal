@@ -58,10 +58,17 @@
         if ($("#grid").hasClass("k-widget")) {
             $("#grid").removeClass("k-widget");
         }
-        $(".k-header").css("text-align", "center");//Centrar titulo de columnas                              
+        //$(".k-header").css("text-align", "center");//Centrar titulo de columnas                              
     });               
 </script>
 <style>
+    .k-grid  .k-grid-header  .k-header  .k-link {
+        height: auto;
+        overflow-wrap: normal;
+    }  
+    .k-grid  .k-grid-header  .k-header {
+        white-space: normal;
+    }    
     /*.adaptive-grid-wrapper {
         position: relative;
         height: 130px;

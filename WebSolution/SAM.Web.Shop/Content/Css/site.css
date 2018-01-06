@@ -116,6 +116,14 @@ body.loading .modal {
     min-width: 20px !important;
     margin: 0 auto;
 }
+
+.k-grid tbody tr td a.k-button.k-grid-Incidencias {
+    background-image: url("/Content/images/Info16x16.png");
+    padding-right: 10px;
+    height: 20px;
+    min-width: 20px !important;
+    margin: 0 auto;
+}
  .k-grid tbody tr td a.k-button {
         display: block;
         color: transparent !important;

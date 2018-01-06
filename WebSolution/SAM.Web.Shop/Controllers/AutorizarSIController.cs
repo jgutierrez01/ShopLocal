@@ -21,7 +21,7 @@ namespace SAM.Web.Shop.Controllers
         [HttpGet]
         public JsonResult ObtenerSpools(string SI, int ProyectoID)        
         {
-            List<CuadranteNumeroControlSQ> ListaSpools = OrdenTrabajoSpoolBO.Instance.ObtenerSpoolsPorSQyProyecto(SI, ProyectoID);
+            List<AutorizarSI> ListaSpools = OrdenTrabajoSpoolBO.Instance.ObtenerSpoolsPorSQyProyecto(SI, ProyectoID);
             string resultado = "";            
             if(ListaSpools != null && ListaSpools.Count > 0)
             {                
