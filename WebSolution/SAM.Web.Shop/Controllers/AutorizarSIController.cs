@@ -56,5 +56,38 @@ namespace SAM.Web.Shop.Controllers
             var myData = new[] { new { result = ProyectoID.ToString() } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
+        [HttpGet]
+        public JsonResult ObtenerTipoIncidencias()
+        {
+            List<TipoIncidencia> ListaIncidencias = OrdenTrabajoSpoolBO.Instance.ObtenerTipoIncidencias();
+            string resultado = "";
+            if (ListaIncidencias != null && ListaIncidencias.Count > 0)
+            {
+                resultado = JsonConvert.SerializeObject(ListaIncidencias);
+            }
+            else
+            {
+                resultado = "NODATA";
+            }
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult ObtenerDetalleIncidencias(int TipoIncidenciaID, int SpoolID)
+        {
+            List<IncidenciaDetalle> Detalle = OrdenTrabajoSpoolBO.Instance.ObtenerDetalleIncidencias(TipoIncidenciaID, SpoolID);
+            string resultado = "";
+            if (Detalle != null && Detalle.Count > 0)
+            {
+                resultado = JsonConvert.SerializeObject(Detalle);
+            }
+            else
+            {
+                resultado = "NODATA";
+            }
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
     }   
 }

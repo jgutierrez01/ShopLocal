@@ -24,9 +24,7 @@ function ObtenerCacheProyecto() {
         success: function (data) {
             if (data[0].result != 0) {
                 $("#ProjectIdADD").val(data[0].result);
-            } else {
-                console.log("no hay cache de proyecto");
-            }
+            } 
         },
         error: function (xhr, textStatus, errorThrown) {
             loadingStop();
@@ -66,6 +64,49 @@ function AjaxObtenerSpools() {
         error: function (xhr, textStatus, errorThrown) {
             loadingStop();
             alert("Error Obteniendo Información: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
+}
+
+function AjaxObtenerTipoIncidencias() {    
+    $.ajax({
+        type: 'GET',
+        url: '/AutorizarSI/ObtenerTipoIncidencias/',
+        dataType: 'json',
+        data: {},
+        success: function (data) {
+            if (data[0].result != "NODATA") {
+                var result = JSON.parse(data[0].result);
+                $("#cmbTipoIncidencia").data("kendoComboBox").dataSource.data([]);
+                $("#cmbTipoIncidencia").data("kendoComboBox").dataSource.data(result);
+                $("#cmbTipoIncidencia").data("kendoComboBox").select(0);
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop
+            alert("Error Obteniendo Tipos de Incidencias: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
+}
+
+
+function AjaxObtenerDetalleIncidencias(TipoIncidencia) {
+    $.ajax({
+        type: 'GET',
+        url: '/AutorizarSI/ObtenerDetalleIncidencias/',
+        dataType: 'json',
+        data: { TipoIncidenciaID: TipoIncidencia, SpoolID: SpoolIDGlobal },
+        success: function (data) {
+            if (data[0].result != "NODATA") {
+                var result = JSON.parse(data[0].result);
+                $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data([]);
+                $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data(result);
+                $("#cmbDetalleIncidencia").data("kendoComboBox").select(0);
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop
+            alert("Error Obteniendo Tipos de Incidencias: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
         }
     });
 }

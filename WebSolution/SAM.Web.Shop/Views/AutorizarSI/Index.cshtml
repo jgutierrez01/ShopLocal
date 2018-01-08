@@ -45,8 +45,40 @@
         </div>
     </div>
 </div>
-<div id="contieneGrid" style="display:none;">
-    <div id="grid" style="padding-top: 20px; margin: 0 auto;"></div>
+<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" >
+    <div id="contieneGrid" style="display:none;">
+        <div id="grid" style="padding-top: 20px; margin: 0 auto;"></div>
+    </div>
+</div>
+
+@*GRID POPUP*@
+<div id="windowGrid" style="display: none; z-index:inherit;">    
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="width:100%; padding-right:20px;">
+        <div class="row col-lg-5 col-md-5 col-xs-5 col-sm-5">
+            <div id="divproyecto" class="form-group">
+                @*@Html.Action("ProjectDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredADD(Model, ViewContext.ViewData.ModelState) })*@
+                <input id="cmbTipoIncidencia" />
+            </div>
+        </div>
+        &nbsp;&nbsp;
+        <div class="row col-lg-5 col-md-5 col-xs-5 col-sm-5" style="margin-left: 15px;">
+            <div id="divproyecto" class="form-group">
+                @*@Html.Action("ProjectDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredADD(Model, ViewContext.ViewData.ModelState) })*@
+                <input id="cmbDetalleIncidencia" />
+            </div>
+        </div>              
+    </div>
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <button id="CerrarModal" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.CancelButton_Text)</button>
+    </div>
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <div class="form-group">
+            <div id="ContenedorGridPopUp">
+                <div id="gridPopUp" data-role="grid" class="k-grid k-widget">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="~/Scripts/Application/AutorizarSI/Captura.js"></script>
@@ -54,11 +86,12 @@
 <script src="~/Scripts/Application/AutorizarSI/Ajax.js"></script>
 <script>
     $(document).ready(function () {       
-        ActivarEventos();
+        ActivarEventos();        
         if ($("#grid").hasClass("k-widget")) {
             $("#grid").removeClass("k-widget");
         }
-        //$(".k-header").css("text-align", "center");//Centrar titulo de columnas                              
+        $("#txtSI").prop("autocomplete", "off");
+        $(".k-header").css("text-align", "center");//Centrar titulo de columnas                              
     });               
 </script>
 <style>

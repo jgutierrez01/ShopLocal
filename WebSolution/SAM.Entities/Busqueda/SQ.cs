@@ -84,6 +84,30 @@ namespace SAM.Entities.Busqueda
         [DataMember]
         public bool NoAutorizado { get; set; }
         [DataMember]
-        public int Accion { get; set; }                     
+        public int Accion { get; set; }          
+        [DataMember]
+        public int Incidencias { get; set; }      
+        [DataMember]
+        public string HistorySI { get; set; }     
     }   
+    public class TipoIncidencia
+    {
+        public int TipoIncidenciaID { get; set; }
+        public string Incidencia { get; set; }        
+        public TipoIncidencia()
+        {
+            TipoIncidenciaID = 0;
+            Incidencia = "";            
+        }
+    }
+    public class IncidenciaDetalle
+    {
+        public int ID { get; set; }
+        public string Etiqueta { get; set; }
+        public IncidenciaDetalle()
+        {
+            ID = 0;
+            Etiqueta = "";
+        }
+    }
 }

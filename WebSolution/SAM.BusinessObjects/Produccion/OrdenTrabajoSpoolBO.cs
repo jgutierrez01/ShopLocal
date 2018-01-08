@@ -668,11 +668,7 @@ namespace SAM.BusinessObjects.Produccion
                                 " WHERE " +
                                     " S.sqinterno = '" + Sq + "' AND S.proyectoID = " + proyectoID +
                                 " ORDER BY OS.NumeroControl ASC";
-                //string query = "select c.CuadranteID,c.Nombre,odts.NumeroControl,OrdenTrabajoSpoolID,sqinterno, s.SpoolID, sq SqCliente from OrdenTrabajoSpool odts WITH(NOLOCK)";
-                //query += " inner join  Spool s WITH(NOLOCK) on odts.SpoolID = s.SpoolID";
-                //query += "     inner join Cuadrante c WITH(NOLOCK) on s.CuadranteID = c.CuadranteID";
-                //query += " where s.sqinterno = '" + Sq + "'" + " and s.proyectoID=" + proyectoID;
-
+                
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -718,14 +714,24 @@ namespace SAM.BusinessObjects.Produccion
                                     " S.sq SqCliente, " +
                                     " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END TieneHoldIngenieria, " +
                                     " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd, " +
-                                    " CAST(1 AS BIT) Autorizado, " +
-                                    " CAST(0 AS BIT) NoAutorizado " +
+                                    " CASE WHEN A.Autorizado IS NULL OR A.Autorizado = 0 THEN CAST(0 AS BIT) ELSE CAST(A.Autorizado AS BIT) END Autorizado, " +
+                                    " ISNULL(I.Incidencias, 0) Incidencias, " +
+                                    " ISNULL(HI.HistorySI, '') HistorySI " +
                                 " FROM " +
                                     "   OrdenTrabajoSpool OS WITH(NOLOCK) " +
                                     " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID " +
                                     " INNER JOIN Cuadrante C WITH(NOLOCK) ON S.CuadranteID = C.CuadranteID " +
                                     " LEFT JOIN SpoolHold H WITH(NOLOCK) ON S.SpoolID = H.SpoolID " +
                                     " LEFT JOIN WorkstatusSpool W WITH(NOLOCK) ON OS.OrdenTrabajoSpoolID = W.OrdenTrabajoSpoolID " +
+                                    " LEFT JOIN Shop_AutorizacionSI A WITH(NOLOCK)ON S.SpoolID = A.SpoolID AND A.Activo = 1 " +
+                                    " LEFT JOIN " +
+                                    " ( " +
+                                        " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) GROUP BY SpoolID " +
+                                    " ) I ON S.SpoolID = I.SpoolID" +
+                                    " LEFT JOIN " +
+                                    " ( " +
+                                        " SELECT SpoolID, STUFF((SELECT ',' + SI FROM Shop_HistorialSI ORDER BY FechaModificacion ASC FOR XML PATH('')), 1, 1, '') HistorySI FROM Shop_HistorialSI GROUP BY SpoolID " +
+                                    " ) HI ON S.SpoolID = HI.SpoolID " +
                                 " WHERE " +
                                     " S.sqinterno = '" + Sq + "' AND S.proyectoID = " + proyectoID +
                                 " ORDER BY OS.NumeroControl ASC";
@@ -740,7 +746,7 @@ namespace SAM.BusinessObjects.Produccion
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                     {
                         Autorizar = new AutorizarSI
-                        {                            
+                        {
                             Accion = 2,
                             CuadranteID = int.Parse(ds.Tables[0].Rows[i]["CuadranteID"].ToString()),
                             Cuadrante = ds.Tables[0].Rows[i]["Nombre"].ToString(),
@@ -752,7 +758,9 @@ namespace SAM.BusinessObjects.Produccion
                             Hold = bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
                             OkPnd = bool.Parse(ds.Tables[0].Rows[i]["OkPnd"].ToString()),
                             Autorizado = bool.Parse(ds.Tables[0].Rows[i]["Autorizado"].ToString()),
-                            NoAutorizado = bool.Parse(ds.Tables[0].Rows[i]["NoAutorizado"].ToString())
+                            NoAutorizado = !bool.Parse(ds.Tables[0].Rows[i]["Autorizado"].ToString()),
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
+                            HistorySI = ds.Tables[0].Rows[i]["HistorySI"].ToString()
                         };
                         lista.Add(Autorizar);
                     }
@@ -1006,6 +1014,87 @@ namespace SAM.BusinessObjects.Produccion
                 return e.Message;
             }
 
+        }
+
+        /*AutorizarSI*/
+        public List<TipoIncidencia> ObtenerTipoIncidencias()
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = " SELECT " +
+                                    " TipoIncidenciaID," +
+	                                " Incidencia " +
+                                " FROM " +
+                                    " Shop_TipoIncidencia";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    List<TipoIncidencia> lista = new List<TipoIncidencia>();
+                    TipoIncidencia tipoIncidencia;
+                    lista.Add(new TipoIncidencia());
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        tipoIncidencia = new TipoIncidencia
+                        {
+                           TipoIncidenciaID = int.Parse(ds.Tables[0].Rows[i]["TipoIncidenciaID"].ToString()),
+                           Incidencia = ds.Tables[0].Rows[i]["Incidencia"].ToString()
+                        };
+                        lista.Add(tipoIncidencia);
+                    }
+                    return lista;
+                }
+            }
+        }
+
+        public List<IncidenciaDetalle> ObtenerDetalleIncidencias(int TipoIncidenciaID, int SpoolID)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = "";
+                if(TipoIncidenciaID == 1) //Materiales 
+                {
+                    query = " SELECT " +
+                                " MaterialSpoolID ID, " +
+                                " Etiqueta " +
+                            " FROM " +
+                                " MaterialSpool " +
+                            " WHERE SpoolID = " + SpoolID +
+                            " ORDER BY Etiqueta ASC";
+                }else
+                {
+                    query = " SELECT " +
+                                " JuntaSpoolID ID, " +
+                                " Etiqueta " +
+                            " FROM " +
+                                " JuntaSpool " +
+                            " WHERE SpoolID = " + SpoolID +
+                            " ORDER BY Etiqueta ASC";
+                }
+                
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    List<IncidenciaDetalle> lista = new List<IncidenciaDetalle>();
+                    IncidenciaDetalle detalle;
+                    lista.Add(new IncidenciaDetalle());
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        detalle = new IncidenciaDetalle
+                        {
+                            ID = int.Parse(ds.Tables[0].Rows[i]["ID"].ToString()),
+                            Etiqueta = ds.Tables[0].Rows[i]["Etiqueta"].ToString()
+                        };
+                        lista.Add(detalle);
+                    }
+                    return lista;
+                }
+            }
         }
     }
 }
