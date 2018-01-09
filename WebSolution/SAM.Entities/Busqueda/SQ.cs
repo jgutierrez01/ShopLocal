@@ -110,4 +110,32 @@ namespace SAM.Entities.Busqueda
             Etiqueta = "";
         }
     }
+    public class ListaErrores
+    {
+        public int ErrorID { get; set; }
+        public string Error { get; set; }
+        public ListaErrores()
+        {
+            ErrorID = 0;
+            Error = "";
+        }
+    }
+    public class IncidenciaC
+    {
+        public int Accion { get; set; }
+        public int IncidenciaID { get; set; }
+        public int SpoolID { get; set; }
+        public string NumeroControl { get; set; }
+        public string Incidencia { get; set; }
+        public string MaterialJunta { get; set; }
+        //public int MaterialSpoolID { get; set; }
+        //public string MaterialSpool { get; set; }
+        //public int JuntaSpoolID { get; set; }
+        //public string JuntaSpool { get; set; }
+        public int ErrorID { get; set; }
+        public string Error { get; set; }
+        public string Observaciones { get; set; }
+        public string Usuario { get; set; }            
+        public string FechaIncidencia { get; set; }
+    }
 }

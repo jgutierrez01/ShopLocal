@@ -1096,5 +1096,110 @@ namespace SAM.BusinessObjects.Produccion
                 }
             }
         }
+
+        public List<ListaErrores> ObtenerListaErrores(int TipoIncidenciaID)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = " SELECT ErrorIncidenciaID ErrorID, Error FROM Shop_ErrorIncidencia WHERE TipoIncidenciaID = " + TipoIncidenciaID;                                             
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    List<ListaErrores> lista = new List<ListaErrores>();
+                    ListaErrores detalle;
+                    lista.Add(new ListaErrores());
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        detalle = new ListaErrores
+                        {
+                            ErrorID = int.Parse(ds.Tables[0].Rows[i]["ErrorID"].ToString()),
+                            Error = ds.Tables[0].Rows[i]["Error"].ToString()
+                        };
+                        lista.Add(detalle);
+                    }
+                    return lista;
+                }
+            }
+        }
+
+        public List<IncidenciaC> ObtenerIncidencias(int SpoolID)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = " SELECT " +
+                                    " I.IncidenciaID, " +
+                                    " I.SpoolID, " +
+                                    " OS.NumeroControl, " +
+                                    " CASE WHEN MS.MaterialSpoolID IS NOT NULL AND JS.JuntaSpoolID IS NULL THEN 'Materiales' ELSE 'Junta' END Incidencia, " +
+                                    " CASE WHEN MS.MaterialSpoolID IS NOT NULL AND JS.JuntaSpoolID IS NULL THEN MS.Etiqueta ELSE JS.Etiqueta END MaterialJunta, " +
+                                    //" CASE WHEN MS.MaterialSpoolID IS NULL THEN 0 ELSE MS.MaterialSpoolID END MaterialSpoolID, " +
+                                    //" ISNULL(MS.Etiqueta, '') MaterialSpool, " +
+                                    //" CASE WHEN JS.JuntaSpoolID IS NULL THEN 0 ELSE JS.JuntaSpoolID END JuntaSpoolID, " +
+                                    //" ISNULL(JS.Etiqueta, '') JuntaSpool, " +
+                                    " EI.ErrorIncidenciaID, " +
+                                    " EI.Error, " +
+                                    " I.Observacion, " +
+                                    " I.Usuario, " +
+                                    " CONVERT(VARCHAR(30), I.FechaIncidencia, 103) FechaIncidencia " +
+                                " FROM " +
+                                    " Shop_Incidencia I WITH(NOLOCK) " +
+                                    " LEFT JOIN OrdenTrabajoSpool OS WITH(NOLOCK) ON I.SpoolID = OS.SpoolID " +
+                                    " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID  " +
+                                    " LEFT JOIN MaterialSpool MS WITH(NOLOCK) ON I.MaterialSpoolID = MS.MaterialSpoolID AND I.MaterialSpoolID IS NOT NULL  " +
+                                    " LEFT JOIN JuntaSpool JS WITH(NOLOCK) ON I.JuntaSpoolID = JS.JuntaSpoolID AND I.JuntaSpoolID IS NOT NULL " +
+                                    " INNER JOIN Shop_ErrorIncidencia EI WITH(NOLOCK) ON I.ErrorIncidenciaID = EI.ErrorIncidenciaID AND EI.Activo = 1 " +
+                                " WHERE " +
+                                    " I.SpoolID = " + SpoolID + " AND I.Activo = 1 ";
+                    
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    List<IncidenciaC> lista = new List<IncidenciaC>();
+                    IncidenciaC detalle;                    
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        detalle = new IncidenciaC
+                        {
+                            Accion = 2,
+                            IncidenciaID = int.Parse(ds.Tables[0].Rows[i]["IncidenciaID"].ToString()),
+                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
+                            NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),
+                            Incidencia = ds.Tables[0].Rows[i]["Incidencia"].ToString(),
+                            MaterialJunta = ds.Tables[0].Rows[i]["MaterialJunta"].ToString(),
+                            ErrorID = int.Parse(ds.Tables[0].Rows[i]["ErrorIncidenciaID"].ToString()),
+                            Error = ds.Tables[0].Rows[i]["Error"].ToString(),
+                            Observaciones = ds.Tables[0].Rows[i]["Observacion"].ToString(),
+                            Usuario = ds.Tables[0].Rows[i]["Usuario"].ToString(),
+                            FechaIncidencia = ds.Tables[0].Rows[i]["FechaIncidencia"].ToString()
+                        };
+                        lista.Add(detalle);
+                    }
+                    return lista;
+                }
+            }
+        }
+
+
+        public string GuardarIncidencia(int SpoolID, int TipoIncidenciaID, int DetalleIncidenciaID, int ErrorID, string Observaciones)
+        {
+            try
+            {                
+                ObjetosSQL _SQL = new ObjetosSQL();
+                string[,] parametro = { { "@SpoolID", SpoolID.ToString() }, { "@TipoIncidenciaID", TipoIncidenciaID.ToString() }, { "@DetalleIncidenciaID", DetalleIncidenciaID.ToString() }, { "@ErrorID", ErrorID.ToString() }, { "@Observaciones", Observaciones } };
+                return _SQL.EjecutaInsertUpdateRetornaString(Stords.GuardarIncidencia, parametro);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
     }
 }

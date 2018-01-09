@@ -31,6 +31,7 @@ namespace SAM.BusinessObjects.Sql
         public static string GuardarNumeroControlSQ = "ActualizarNumeroControlSQ";
         public static string ObtieneSpoolIDTabla = "Shop_GET_TablaNumeroControlConSpoolID";
         public static string EliminarSpool = "Shop_SET_EliminarSpool";
+        public static string GuardarIncidencia = "Shop_SET_Incidencia";
     }
 }
 

@@ -1,5 +1,5 @@
 ﻿body {
-     padding-top: 50px;
+    padding-top: 50px;
 }
 
 
@@ -21,12 +21,12 @@
     border-color: #b94a48;
 }
 
-.input-validation-error:focus {
-  border-color: #953b39;
-  -webkit-box-shadow: 0 0 6px #d59392;
-  -moz-box-shadow: 0 0 6px #d59392;
-  box-shadow: 0 0 6px #d59392;
-}
+    .input-validation-error:focus {
+        border-color: #953b39;
+        -webkit-box-shadow: 0 0 6px #d59392;
+        -moz-box-shadow: 0 0 6px #d59392;
+        box-shadow: 0 0 6px #d59392;
+    }
 
 .validation-summary-errors {
     color: #b94a48;
@@ -38,51 +38,50 @@
 
 .delete {
     background-image: url('~/Content/Images/borrar.png');
-    background-repeat:no-repeat;
-    color:white;
-    align-self:baseline;
+    background-repeat: no-repeat;
+    color: white;
+    align-self: baseline;
     background-color: white;
 }
 
-.caption { 
- font-weight:bold; 
+.caption {
+    font-weight: bold;
 }
 
 .logout {
     background-image: url('~/Content/Images/salir.png');
-    background-repeat: no-repeat;   
-    color:orange;
+    background-repeat: no-repeat;
+    color: orange;
 }
 
 .inLine {
-    display:inline;
+    display: inline;
 }
 
 .deleteResults {
     background-image: url('~/Content/Images/borrar.png');
-    background-repeat:no-repeat;
-    color:white;
+    background-repeat: no-repeat;
+    color: white;
 }
 
-.delete:hover
-{
+.delete:hover {
     background-color: white;
-    color:white;
+    color: white;
 }
-.deleteResults:hover
-{
+
+.deleteResults:hover {
     background-color: white;
-    color:white;
+    color: white;
 }
 
-.lbl-OK { 
-     color:green; 
- } 
+.lbl-OK {
+    color: green;
+}
 
- .lbl-ERROR { 
-     color:red; 
- }
- 
+.lbl-ERROR {
+    color: red;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -102,11 +101,11 @@ body.loading {
     pointer-events: none;
 }
 
-/* Anytime the body has the loading class, our
+    /* Anytime the body has the loading class, our
 modal element will be visible */
-body.loading .modal {
-    display: block;
-}
+    body.loading .modal {
+        display: block;
+    }
 
 .k-grid tbody tr td a.k-button.k-grid-Cancelar,
 .k-grid tbody tr td a.k-button.k-grid-Cancel {
@@ -124,19 +123,26 @@ body.loading .modal {
     min-width: 20px !important;
     margin: 0 auto;
 }
- .k-grid tbody tr td a.k-button {
-        display: block;
-        color: transparent !important;
-        height: 27px;
-        max-width: 18px;
-        padding: 0;
-        margin: 0 4px;
-        font-size: 0;
-        border: none;
-        outline: none;
-        background: none;
-        background-color: transparent !important;
-        background-repeat: no-repeat;
-        background-position: center !important;
-        box-shadow: none !important;
-    }
+
+.k-grid tbody tr td a.k-button {
+    display: block;
+    color: transparent !important;
+    height: 27px;
+    max-width: 18px;
+    padding: 0;
+    margin: 0 4px;
+    font-size: 0;
+    border: none;
+    outline: none;
+    background: none;
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-position: center !important;
+    box-shadow: none !important;
+}
+
+.formNav {
+    margin: -5px 0px 33px;
+    padding: 0px 0 20px;
+    border-bottom: 1px solid #CCCCCC;
+}
