@@ -29,6 +29,7 @@ namespace SAM.Entities.Busqueda
         [DataMember]
         public bool TieneHoldIngenieria { get; set; }
         public bool OkPnd { get; set; }
+        public int Incidencias { get; set; }
     }
 
     [Serializable]
@@ -57,6 +58,8 @@ namespace SAM.Entities.Busqueda
         public bool TieneHoldIngenieria { get; set; }
         [DataMember]
         public bool OkPnd { get; set; }        
+        [DataMember]
+        public int Incidencias { get; set; }
     }
     [Serializable]
     public class AutorizarSI
@@ -86,9 +89,7 @@ namespace SAM.Entities.Busqueda
         [DataMember]
         public int Accion { get; set; }          
         [DataMember]
-        public int Incidencias { get; set; }      
-        [DataMember]
-        public string HistorySI { get; set; }     
+        public int Incidencias { get; set; }              
     }   
     public class TipoIncidencia
     {
@@ -127,15 +128,30 @@ namespace SAM.Entities.Busqueda
         public int SpoolID { get; set; }
         public string NumeroControl { get; set; }
         public string Incidencia { get; set; }
-        public string MaterialJunta { get; set; }
-        //public int MaterialSpoolID { get; set; }
-        //public string MaterialSpool { get; set; }
-        //public int JuntaSpoolID { get; set; }
-        //public string JuntaSpool { get; set; }
+        public string MaterialJunta { get; set; }        
         public int ErrorID { get; set; }
         public string Error { get; set; }
         public string Observaciones { get; set; }
+        public string SI { get; set; }
         public string Usuario { get; set; }            
         public string FechaIncidencia { get; set; }
+    }
+    public class DetalleGuardarAutorizacion
+    {
+        public int SpoolID { get; set; }
+        public bool Autorizacion { get; set; }               
+    }
+    public class GuardarAutorizacion
+    {
+        public List<DetalleGuardarAutorizacion> Detalle { get; set; }
+    }
+    public class ListaIncidencia
+    {        
+        public int SpoolID { get; set; }
+        public int CuadranteID { get; set; }
+        public string Cuadrante { get; set; }
+        public string NumeroControl { get; set; }                        
+        public bool Hold { get; set; }                        
+        public int Incidencias { get; set; }
     }
 }

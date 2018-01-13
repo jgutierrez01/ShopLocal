@@ -260,7 +260,7 @@
         </div>
     </fieldset>
 }
-
+<input type="text" id="OrigenIncidencia" style="display: none;" />
 @using (Html.BeginForm("SaveNCSQADD", "SQ", new { role = "form", id = "gridAdd-form" }))
 {
     @*<fieldset id="gridAdd-form" role="form" style="display: @(Model.ViewGridAdd ? "block;" : "none;" )">*@
@@ -282,6 +282,8 @@
         {
             <p class="alert alert-success" id="successMessage">@TempData["ActualizadoCorrecto"]</p>
         }
+        <p class="alert alert-warning" id="seccionErrorAdd" style="display: none;"></p>
+        <p class="alert alert-success" id="seccionSuccessAdd" style="display:none;"></p>
         @*</div>*@
         @* Check Oculto para saber si esta lleno el grid *@
         <input id="TieneDatosGridAdd" type="checkbox" checked="@Model.TieneDatosGridAdd" style="display:none;" />
@@ -304,20 +306,30 @@
                     @if (Model.ListaElementos != null && Model.ListaElementos.Count > 0)
                     {
                         @Html.Grid(Model.ListaElementos).Named("gridAgregar").Columns(columns =>
-                   {
-                       columns.Add(C => C.Accion).Titled("Eliminar")
-                       .Encoded(false)
-                       .Sanitized(false)
-                       .SetWidth(30)
-                       .RenderValueAs(c => new HtmlString
-                            (
-                                "<label class='delete' style='cursor:pointer;' id = '"+c.NumeroControl + Model.ProjectIdADD +"' onclick=\"" + "javascript:EliminarAdd(" + "'" + c.NumeroControl + "'" + "," + "'" + Model.ProjectIdADD + "'" + "," + "'" + c.SQ + "'" + " ) \"" + "  > ... </label> "
+                        {
+                            columns.Add(C => C.Accion).Titled("Eliminar")
+                            .Encoded(false)
+                            .Sanitized(false)
+                            .SetWidth(20)
+                            .RenderValueAs(c => new HtmlString
+                                (
+                                    "<label class='delete' style='cursor:pointer;' id = '"+c.NumeroControl + Model.ProjectIdADD +"' onclick=\"" + "javascript:EliminarAdd(" + "'" + c.NumeroControl + "'" + "," + "'" + Model.ProjectIdADD + "'" + "," + "'" + c.SQ + "'" + " ) \"" + "  > ... </label> "
+                                )
                             )
-                        )                                            
-                       .Filterable(true);
-                       columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(30);
-                       columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(30);
-                   }).WithPaging(10).Sortable(true).EmptyText(" ");
+                            .Filterable(true);
+                            columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(20);
+                            columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(20);
+                            columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
+                            columns.Add().Titled("Incidencias")
+                            .Encoded(false)
+                            .Sanitized(false)
+                            .SetWidth(20)
+                            .RenderValueAs(c => new HtmlString
+                                (
+                                    "<label class='incidencias' style='cursor:pointer;'  onclick=\"" + "javascript:abrirIncidencias(" + "'" + c.SpoolID + "'" + "," + "'" + c.NumeroControl + "', 1" + ") \"" + "  > ..... </label> "
+                                )
+                            ).Filterable(false);
+                        }).WithPaging(10).Sortable(true).EmptyText(" ");
                                     }
                 </div>
                 <div>
@@ -341,7 +353,9 @@
             @if (@TempData["success"] != null)
                 {
                 <p class="alert alert-success" id="successMessage">La SI generada es:  @TempData["success"]</p>
-            }                     
+            }   
+            <p class="alert alert-warning" id="seccionErrorEdit" style="display: none;"></p>
+            <p class="alert alert-success" id="seccionSuccessEdit" style="display:none;"></p>                  
         </div>
         <div class="row" style="padding-top: 5px;">
             @if (@TempData["ActualizadoCorrecto"] != null)
@@ -386,6 +400,16 @@
                        columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(30);
                        columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(30);
                        columns.Add(c => c.TieneHoldIngenieria).Titled("Hold Ingenieria").Filterable(true).SetWidth(30);
+                       columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
+                       columns.Add().Titled("Incidencias")
+                       .Encoded(false)
+                       .Sanitized(false)
+                       .SetWidth(20)
+                       .RenderValueAs(c => new HtmlString
+                           (
+                               "<label class='incidencias' style='cursor:pointer;'  onclick=\"" + "javascript:abrirIncidencias(" + "'" + c.SpoolID + "'" + "," + "'" + c.NumeroControl + "', 2" + ") \"" + "  > ..... </label> "
+                           )
+                       ).Filterable(false);
                    }).WithPaging(10).Sortable(true).EmptyText(" ");
                     }
                 </div>
@@ -396,7 +420,9 @@
         </div>
     </fieldset>
 }
-
+<script src="~/Scripts/Application/Sq/Captura.js"></script>
+<script src="~/Scripts/Application/Sq/Handler.js"></script>
+<script src="~/Scripts/Application/Sq/Ajax.js"></script>
 @section scripts{
     <script type="text/javascript">
         $(function () {            
@@ -408,66 +434,132 @@
             add.init();
             var editar = new sam.pages.sq.editar.index($("#sq-editar-form"));
             editar.init();
+            ActivarEventos();
         });
         function EliminarAdd(NumeroControl, ProjectIdADD, SQ) {
             var currentCulture = $("html").prop("lang");
             var answer;
-            if (currentCulture == "en-US") {
-                answer = confirm('Confirm delete of this control number?');
-            }
-            else {
-                answer = confirm('¿Confirma la eliminación del Número de Control?');
-            }
-            if (answer) {               
-                $.ajax({
-                    url: '@Url.Action("EliminarSpoolAdd", "Controls")',
-                    data: { 'NumeroControl': NumeroControl, 'ProyectoID': ProjectIdADD, 'SQ': SQ },
-                    type: "post",
-                    cache: false,
-                    success: function (data) {
-                        if (data[0].result == "OK") {
-                            //Eliminar la fila con javascript                                                        
-                            $(".grid-mvc").find("table").find('tr').filter(function () {
-                                return $(this).html().indexOf(NumeroControl) != -1;
-                            }).remove();
+            /*Verificar que no tenga incidencias*/
+            //if (VerificarIncidencias(1, NumeroControl) == 0) {
+                if (currentCulture == "en-US") {
+                    answer = confirm('Confirm delete of this control number?');
+                }
+                else {
+                    answer = confirm('¿Confirma la eliminación del Número de Control?');
+                }
+                if (answer) {
+                    $.ajax({
+                        url: '@Url.Action("EliminarSpoolAdd", "Controls")',
+                        data: { 'NumeroControl': NumeroControl, 'ProyectoID': ProjectIdADD, 'SQ': SQ },
+                        type: "post",
+                        cache: false,
+                        success: function (data) {
+                            if (data[0].result == "OK") {
+                                //Eliminar la fila con javascript                                                        
+                                $(".grid-mvc").find("table").find('tr').filter(function () {
+                                    return $(this).html().indexOf(NumeroControl) != -1;
+                                }).remove();
+                            }
+                        },
+                        error: function () {
+                            alert("Error")
                         }
-                    },
-                    error: function () {
-                       alert("Error")
-                    }
-                });                
-            }
+                    });
+                }
+            //} else {
+            //    MostrarErrorAdd($("html").prop("lang") != "en-US" ? "El Spool: " + NumeroControl + " Tiene Capturadas Incidencias, No Se Puede Eliminar." : "The Spool " + NumeroControl + " Has Captured Incidents, Impossible to Remove");
+            //}
+            
         }
 
         function EliminarEdit(NumeroControl, ProjectIdEdit, SQ) {
             var currentCulture = $("html").prop("lang");
             var answer;
-            if (currentCulture == "en-US") {
-                answer = confirm('Confirm delete of this control number?');
-            }
-            else {
-                answer = confirm('¿Confirma la eliminación del Número de Control?');
-            }
-            if (answer) {
-                $.ajax({
-                    url: '@Url.Action("EliminarSpoolEdit", "Controls")',
-                    data: { 'NumeroControl': NumeroControl, 'ProyectoID': ProjectIdEdit, 'SQ': SQ },
-                    type: "post",
-                    cache: false,
-                    success: function (data) {
-                        if (data[0].result == "OK") {
-                            //Eliminar la fila con javascript                                                        
-                            $(".grid-mvc").find("table").find('tr').filter(function () {
-                                return $(this).html().indexOf(NumeroControl) != -1;
-                            }).remove();
+            if (VerificarIncidencias(2, NumeroControl) == 0 || SQ == "") {
+                if (currentCulture == "en-US") {
+                    answer = confirm('Confirm delete of this control number?');
+                }
+                else {
+                    answer = confirm('¿Confirma la eliminación del Número de Control?');
+                }
+                if (answer) {
+                    $.ajax({
+                        url: '@Url.Action("EliminarSpoolEdit", "Controls")',
+                        data: { 'NumeroControl': NumeroControl, 'ProyectoID': ProjectIdEdit, 'SQ': SQ },
+                        type: "post",
+                        cache: false,
+                        success: function (data) {
+                            if (data[0].result == "OK") {
+                                //Eliminar la fila con javascript                                                        
+                                $(".grid-mvc").find("table").find('tr').filter(function () {
+                                    return $(this).html().indexOf(NumeroControl) != -1;
+                                }).remove();
+                            }
+                        },
+                        error: function () {
+                            alert("Error")
                         }
-                    },
-                    error: function () {
-                        alert("Error")
-                    }
-                });
-            }
+                    });
+                }
+            } else {
+                MostrarErrorEdit($("html").prop("lang") != "en-US" ? "El Spool: " + NumeroControl + " Tiene Capturadas Incidencias, No Se Puede Eliminar." : "The Spool " + NumeroControl + " Has Captured Incidents, Impossible to Remove");
+            }            
         }
         
     </script>        
+
+    @*GRID POPUP*@
+    <div id="windowGrid" style="display: none; z-index:inherit;" class="col-xs-12">
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12"><h4 id="txtNumeroControl"></h4></div>
+        <div class="row" style="width:100%; padding-right:20px;">
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label id="lblTipoIncidencia"></label>*
+                    <input id="cmbTipoIncidencia" />
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label id="lblDetalleIncidencia"></label>*
+                    <input id="cmbDetalleIncidencia" />
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label id="lblErrores"></label>*
+                    <input id="cmbErrores" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-11">
+                <div class="form-group">
+                    <label id="lblObservacion"></label>
+                    <textarea id="txtObservacion" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 col-xs-offset-1" style="padding-bottom: 15px; width: 85%; padding-top: 15px;">
+                <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+                    <div class="form-group">
+                        <button id="btnGuardar" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+                    <div class="form-group">
+                        <button id="CerrarModal" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.Close)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">            
+            <p class="alert alert-success" id="seccionAvisoGrid" style="display: none; padding-top: 10px;"></p>
+            <p class="alert alert-warning" id="seccionErrorGrid" style="display: none; padding-top: 10px;"></p>
+            <div id="ContenedorGridPopUp" style="display:none;">
+                <div id="gridPopUp" style="padding-top: 20px; padding-bottom: 20px; margin: 0 auto;"></div>
+            </div>
+        </div>
+    </div>
+
 }

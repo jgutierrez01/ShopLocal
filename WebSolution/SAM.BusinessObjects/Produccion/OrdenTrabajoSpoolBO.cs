@@ -282,7 +282,7 @@ namespace SAM.BusinessObjects.Produccion
                 return datos.Select(a => a.OrdenTrabajoSpoolID).ToList();
             }
         }
-        
+
         /// <summary>
         /// Obtiene el OrdenTabajoSpool en base a ordenTrabajoSpoolID
         /// </summary>
@@ -313,15 +313,20 @@ namespace SAM.BusinessObjects.Produccion
                                     " B.sq SqCliente, " +
                                     " B.sqinterno, " +
                                     " C.TieneHoldIngenieria, " +
-                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd" +
+                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd, " +
+                                    " ISNULL(I.Incidencias, 0) Incidencias" +
                                 " FROM " +
                                     " OrdenTrabajoSpool A WITH(NOLOCK) " +
                                     " LEFT JOIN Spool B WITH(NOLOCK) ON A.SpoolID = B.SpoolID " +
                                     " LEFT JOIN SpoolHold C WITH(NOLOCK) ON B.SpoolID = C.SpoolID " +
                                     " LEFT JOIN WorkstatusSpool W WITH(NOLOCK) ON A.OrdenTrabajoSpoolID = W.OrdenTrabajoSpoolID " +
+                                    " LEFT JOIN " +
+                                    " ( " +
+                                        " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) WHERE Activo = 1 GROUP BY SpoolID " +
+                                    " ) I ON A.SpoolID = I.SpoolID" +
                                 " WHERE " +
                                     " A.OrdenTrabajoSpoolID = " + ordenTrabajoSpoolID;
-                
+
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -340,7 +345,8 @@ namespace SAM.BusinessObjects.Produccion
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
                             sqinterno = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
                             TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
-                            OkPnd = ds.Tables[0].Rows[i]["OkPnd"].ToString() == "0" ? false : true
+                            OkPnd = ds.Tables[0].Rows[i]["OkPnd"].ToString() == "0" ? false : true,
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString())
                         };
                         lista.Add(objeto);
                     }
@@ -348,7 +354,7 @@ namespace SAM.BusinessObjects.Produccion
                 }
             }
         }
-       
+
         /// <summary>
         /// Lista Numeros de Control por ODT
         /// Y que contengan materiales afines al numero unico recibido.
@@ -658,17 +664,22 @@ namespace SAM.BusinessObjects.Produccion
                                     " S.SpoolID,  " +
                                     " S.sq SqCliente, " +
                                     " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END TieneHoldIngenieria, " +
-                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd " +
+                                    " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd, " +
+                                    " ISNULL(I.Incidencias, 0) Incidencias " +
                                 " FROM " +
-                                    "   OrdenTrabajoSpool OS WITH(NOLOCK) " +
+                                    " OrdenTrabajoSpool OS WITH(NOLOCK) " +
                                     " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID " +
                                     " INNER JOIN Cuadrante C WITH(NOLOCK) ON S.CuadranteID = C.CuadranteID " +
                                     " LEFT JOIN SpoolHold H WITH(NOLOCK) ON S.SpoolID = H.SpoolID " +
                                     " LEFT JOIN WorkstatusSpool W WITH(NOLOCK) ON OS.OrdenTrabajoSpoolID = W.OrdenTrabajoSpoolID " +
+                                    " LEFT JOIN " +
+                                    " ( " +
+                                        " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) WHERE Activo = 1 GROUP BY SpoolID " +
+                                    " ) I ON S.SpoolID = I.SpoolID" +
                                 " WHERE " +
                                     " S.sqinterno = '" + Sq + "' AND S.proyectoID = " + proyectoID +
                                 " ORDER BY OS.NumeroControl ASC";
-                
+
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -691,7 +702,8 @@ namespace SAM.BusinessObjects.Produccion
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
                             SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
                             TieneHoldIngenieria = bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
-                            OkPnd = bool.Parse(ds.Tables[0].Rows[i]["OkPnd"].ToString())                            
+                            OkPnd = bool.Parse(ds.Tables[0].Rows[i]["OkPnd"].ToString()),
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString())
                         };
                         lista.Add(cuadranteNumeroControlSQ);
                     }
@@ -715,8 +727,7 @@ namespace SAM.BusinessObjects.Produccion
                                     " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END TieneHoldIngenieria, " +
                                     " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd, " +
                                     " CASE WHEN A.Autorizado IS NULL OR A.Autorizado = 0 THEN CAST(0 AS BIT) ELSE CAST(A.Autorizado AS BIT) END Autorizado, " +
-                                    " ISNULL(I.Incidencias, 0) Incidencias, " +
-                                    " ISNULL(HI.HistorySI, '') HistorySI " +
+                                    " ISNULL(I.Incidencias, 0) Incidencias " +
                                 " FROM " +
                                     "   OrdenTrabajoSpool OS WITH(NOLOCK) " +
                                     " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID " +
@@ -726,15 +737,11 @@ namespace SAM.BusinessObjects.Produccion
                                     " LEFT JOIN Shop_AutorizacionSI A WITH(NOLOCK)ON S.SpoolID = A.SpoolID AND A.Activo = 1 " +
                                     " LEFT JOIN " +
                                     " ( " +
-                                        " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) GROUP BY SpoolID " +
+                                        " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) WHERE Activo = 1 GROUP BY SpoolID " +
                                     " ) I ON S.SpoolID = I.SpoolID" +
-                                    " LEFT JOIN " +
-                                    " ( " +
-                                        " SELECT SpoolID, STUFF((SELECT ',' + SI FROM Shop_HistorialSI ORDER BY FechaModificacion ASC FOR XML PATH('')), 1, 1, '') HistorySI FROM Shop_HistorialSI GROUP BY SpoolID " +
-                                    " ) HI ON S.SpoolID = HI.SpoolID " +
                                 " WHERE " +
                                     " S.sqinterno = '" + Sq + "' AND S.proyectoID = " + proyectoID +
-                                " ORDER BY OS.NumeroControl ASC";
+                                " ORDER BY A.Autorizado ASC";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -760,9 +767,65 @@ namespace SAM.BusinessObjects.Produccion
                             Autorizado = bool.Parse(ds.Tables[0].Rows[i]["Autorizado"].ToString()),
                             NoAutorizado = !bool.Parse(ds.Tables[0].Rows[i]["Autorizado"].ToString()),
                             Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
-                            HistorySI = ds.Tables[0].Rows[i]["HistorySI"].ToString()
                         };
                         lista.Add(Autorizar);
+                    }
+                    return lista;
+                }
+            }
+        }
+
+        public List<ListaIncidencia> ObtenerSpoolsNoResueltos(int proyectoID, int CuadranteID)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string Operador = " OR ";
+                if(proyectoID != 0 && CuadranteID != 0)
+                {
+                    Operador = " AND ";
+                }
+                string query = " SELECT " +
+                                " S.SpoolID,  " +
+                                " C.CuadranteID, " +
+                                " C.Nombre Cuadrante, " +
+                                " OT.NumeroControl, " +
+                                " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END Hold, " +
+                                " ISNULL(II.Incidencias, 0) Incidencias " +
+                            " FROM " +
+                                " Shop_Incidencia I WITH(NOLOCK) " +
+                                " INNER JOIN Spool S WITH(NOLOCK) ON I.SpoolID = S.SpoolID " +
+                                " INNER JOIN OrdenTrabajoSpool OT WITH(NOLOCK) ON S.SpoolID = OT.SpoolID " +
+                                " INNER JOIN Cuadrante C WITH(NOLOCK) ON S.CuadranteID = C.CuadranteID " +
+                                " LEFT JOIN SpoolHold H WITH(NOLOCK) ON S.SpoolID = H.SpoolID " +
+                                " LEFT JOIN " +
+                                " ( " +
+                                    " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) WHERE Activo = 1 GROUP BY SpoolID " +
+                                " ) II ON I.SpoolID = II.SpoolID " +
+                            " WHERE " +
+                                " (S.proyectoID = " + proyectoID + " " + Operador + " C.CuadranteID = " + CuadranteID + ") AND I.Activo = 1 AND(I.Resolucion IS NULL OR I.SI IS NULL) AND I.Inspector IS NOT NULL " +
+                            " GROUP BY " +
+                                " S.SpoolID, C.CuadranteID, C.Nombre, OT.NumeroControl, H.TieneHoldIngenieria, II.Incidencias ";
+                                 
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    List<ListaIncidencia> lista = new List<ListaIncidencia>();
+                    ListaIncidencia Incidencias;
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        Incidencias = new ListaIncidencia
+                        {
+                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
+                            CuadranteID = int.Parse(ds.Tables[0].Rows[i]["CuadranteID"].ToString()),
+                            Cuadrante = ds.Tables[0].Rows[i]["Cuadrante"].ToString(),
+                            NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),                            
+                            Hold = bool.Parse(ds.Tables[0].Rows[i]["Hold"].ToString()),                            
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
+                        };
+                        lista.Add(Incidencias);
                     }
                     return lista;
                 }
@@ -819,13 +882,13 @@ namespace SAM.BusinessObjects.Produccion
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
                 string query = "";
-                if(Opcion == 1)
+                if (Opcion == 1)
                 {
-                    query += " SELECT 1 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd ";
+                    query += " SELECT 1 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd, ISNULL(I.Incidencias, 0) Incidencias ";
                 }
                 else
                 {
-                    query += " SELECT 2 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd ";
+                    query += " SELECT 2 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd, ISNULL(I.Incidencias, 0) Incidencias ";
                 }
                 query += " FROM " +
                             " OrdenTrabajoSpool A WITH(NOLOCK) " +
@@ -833,10 +896,14 @@ namespace SAM.BusinessObjects.Produccion
                             " INNER JOIN Cuadrante C WITH(NOLOCK) ON B.CuadranteID = C.CuadranteID " +
                             " LEFT JOIN SpoolHold D WITH(NOLOCK) ON B.SpoolID = D.SpoolID " +
                             " LEFT JOIN WorkstatusSpool W WITH(NOLOCK) ON A.OrdenTrabajoSpoolID = W.OrdenTrabajoSpoolID " +
+                            " LEFT JOIN " +
+                            " ( " +
+                                " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) WHERE Activo = 1 GROUP BY SpoolID " +
+                            " ) I ON B.SpoolID = I.SpoolID" +
                         " WHERE " +
                             " B.ProyectoID = " + proyectoID + " AND C.CuadranteID = " + cuadranteid +
                         " ORDER BY CuadranteID ";
-                                             
+
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -858,7 +925,8 @@ namespace SAM.BusinessObjects.Produccion
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
                             SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
                             TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
-                            OkPnd = ds.Tables[0].Rows[i]["OkPnd"].ToString() == "0" ? false : true
+                            OkPnd = ds.Tables[0].Rows[i]["OkPnd"].ToString() == "0" ? false : true,
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString())
                         };
                         lista.Add(objeto);
                     }
@@ -948,17 +1016,18 @@ namespace SAM.BusinessObjects.Produccion
 
         public List<LayoutGridSQ> ListaNumControlConSpoolID(DataTable Lista)
         {
-            List<LayoutGridSQ> ListaRetorna = new List<LayoutGridSQ>();     
+            List<LayoutGridSQ> ListaRetorna = new List<LayoutGridSQ>();
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
-                DataSet ds = null;                
+                DataSet ds = null;
                 Lista.Columns.Remove("TieneHoldIngenieria");
                 Lista.Columns.Remove("OkPnd");
+                Lista.Columns.Remove("Incidencias");
                 ObjetosSQL _SQL = new ObjetosSQL();
                 string[,] parametro = null;
                 if (Lista.Rows.Count > 0)
                     ds = _SQL.Coleccion(Stords.ObtieneSpoolIDTabla, Lista, "@TablaNumeroControl", parametro);
-                if(ds != null)
+                if (ds != null)
                 {
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -973,23 +1042,24 @@ namespace SAM.BusinessObjects.Produccion
                             SqCliente = row.Field<string>("SqCliente"),
                             SQ = row.Field<string>("SQ"),
                             TieneHoldIngenieria = row.Field<bool>("TieneHoldIngenieria"),
-                            OkPnd = row.Field<int>("OkPnd") == 0 ? false : true
+                            OkPnd = row.Field<int>("OkPnd") == 0 ? false : true,
+                            Incidencias = row.Field<int>("Incidencias")
                         }).ToList();
                         ListaRetorna = result;
                     }
-                }                                                  
+                }
             }
             return ListaRetorna;
         }
 
         public void EliminarSpool(string NumeroControl, int ProyectoID, string SQ)
-        {            
+        {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
-            {          
+            {
                 ObjetosSQL _SQL = new ObjetosSQL();
                 string[,] parametro = { { "@NumeroControl", NumeroControl }, { "@ProyectoID", ProyectoID.ToString() }, { "@SQ", SQ == null ? "" : SQ } };
-                _SQL.EjecutaInsertUpdate(Stords.EliminarSpool, parametro);                      
-            }            
+                _SQL.EjecutaInsertUpdate(Stords.EliminarSpool, parametro);
+            }
         }
 
         public string GuardarNumeroControlSQ(DataTable listaLayoutSQ, Guid userID, string inspector, int proyectoid, string sq)
@@ -1000,6 +1070,7 @@ namespace SAM.BusinessObjects.Produccion
                 //{
                 listaLayoutSQ.Columns.Remove("TieneHoldIngenieria");
                 listaLayoutSQ.Columns.Remove("OkPnd");
+                listaLayoutSQ.Columns.Remove("Incidencias");
                 ObjetosSQL _SQL = new ObjetosSQL();
                 string[,] parametro = { { "@Usuario", userID.ToString() }, { "@Inspector", inspector }, { "@ProyectoID", proyectoid.ToString() }, { "@SQBuscar", sq }, { "@UltimoSQInternoEncontrado", "" } };
                 if (listaLayoutSQ.Rows.Count > 0)
@@ -1023,7 +1094,7 @@ namespace SAM.BusinessObjects.Produccion
             {
                 string query = " SELECT " +
                                     " TipoIncidenciaID," +
-	                                " Incidencia " +
+                                    " Incidencia " +
                                 " FROM " +
                                     " Shop_TipoIncidencia";
                 using (SqlCommand cmd = new SqlCommand(query, con))
@@ -1039,8 +1110,8 @@ namespace SAM.BusinessObjects.Produccion
                     {
                         tipoIncidencia = new TipoIncidencia
                         {
-                           TipoIncidenciaID = int.Parse(ds.Tables[0].Rows[i]["TipoIncidenciaID"].ToString()),
-                           Incidencia = ds.Tables[0].Rows[i]["Incidencia"].ToString()
+                            TipoIncidenciaID = int.Parse(ds.Tables[0].Rows[i]["TipoIncidenciaID"].ToString()),
+                            Incidencia = ds.Tables[0].Rows[i]["Incidencia"].ToString()
                         };
                         lista.Add(tipoIncidencia);
                     }
@@ -1054,7 +1125,7 @@ namespace SAM.BusinessObjects.Produccion
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
                 string query = "";
-                if(TipoIncidenciaID == 1) //Materiales 
+                if (TipoIncidenciaID == 1) //Materiales 
                 {
                     query = " SELECT " +
                                 " MaterialSpoolID ID, " +
@@ -1063,7 +1134,8 @@ namespace SAM.BusinessObjects.Produccion
                                 " MaterialSpool " +
                             " WHERE SpoolID = " + SpoolID +
                             " ORDER BY Etiqueta ASC";
-                }else
+                }
+                else
                 {
                     query = " SELECT " +
                                 " JuntaSpoolID ID, " +
@@ -1073,7 +1145,7 @@ namespace SAM.BusinessObjects.Produccion
                             " WHERE SpoolID = " + SpoolID +
                             " ORDER BY Etiqueta ASC";
                 }
-                
+
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -1101,7 +1173,7 @@ namespace SAM.BusinessObjects.Produccion
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
-                string query = " SELECT ErrorIncidenciaID ErrorID, Error FROM Shop_ErrorIncidencia WHERE TipoIncidenciaID = " + TipoIncidenciaID;                                             
+                string query = " SELECT ErrorIncidenciaID ErrorID, Error FROM Shop_ErrorIncidencia WHERE TipoIncidenciaID = " + TipoIncidenciaID;
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -1136,14 +1208,12 @@ namespace SAM.BusinessObjects.Produccion
                                     " OS.NumeroControl, " +
                                     " CASE WHEN MS.MaterialSpoolID IS NOT NULL AND JS.JuntaSpoolID IS NULL THEN 'Materiales' ELSE 'Junta' END Incidencia, " +
                                     " CASE WHEN MS.MaterialSpoolID IS NOT NULL AND JS.JuntaSpoolID IS NULL THEN MS.Etiqueta ELSE JS.Etiqueta END MaterialJunta, " +
-                                    //" CASE WHEN MS.MaterialSpoolID IS NULL THEN 0 ELSE MS.MaterialSpoolID END MaterialSpoolID, " +
-                                    //" ISNULL(MS.Etiqueta, '') MaterialSpool, " +
-                                    //" CASE WHEN JS.JuntaSpoolID IS NULL THEN 0 ELSE JS.JuntaSpoolID END JuntaSpoolID, " +
-                                    //" ISNULL(JS.Etiqueta, '') JuntaSpool, " +
                                     " EI.ErrorIncidenciaID, " +
                                     " EI.Error, " +
+                                    //" HI.SI, " +
+                                    " I.SI, " +
                                     " I.Observacion, " +
-                                    " I.Usuario, " +
+                                    " I.Cliente, " +
                                     " CONVERT(VARCHAR(30), I.FechaIncidencia, 103) FechaIncidencia " +
                                 " FROM " +
                                     " Shop_Incidencia I WITH(NOLOCK) " +
@@ -1152,9 +1222,13 @@ namespace SAM.BusinessObjects.Produccion
                                     " LEFT JOIN MaterialSpool MS WITH(NOLOCK) ON I.MaterialSpoolID = MS.MaterialSpoolID AND I.MaterialSpoolID IS NOT NULL  " +
                                     " LEFT JOIN JuntaSpool JS WITH(NOLOCK) ON I.JuntaSpoolID = JS.JuntaSpoolID AND I.JuntaSpoolID IS NOT NULL " +
                                     " INNER JOIN Shop_ErrorIncidencia EI WITH(NOLOCK) ON I.ErrorIncidenciaID = EI.ErrorIncidenciaID AND EI.Activo = 1 " +
+                                    " LEFT JOIN " +
+                                    " ( " +
+                                        " SELECT IncidenciaID, STUFF((SELECT ',' + SI FROM Shop_Incidencia WHERE Activo = 1 GROUP BY SI ORDER BY SI ASC FOR XML PATH('')), 1, 1, '') SI FROM Shop_Incidencia GROUP BY IncidenciaID " +
+                                    " ) HI ON I.IncidenciaID = HI.IncidenciaID " +
                                 " WHERE " +
                                     " I.SpoolID = " + SpoolID + " AND I.Activo = 1 ";
-                    
+
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -1163,7 +1237,7 @@ namespace SAM.BusinessObjects.Produccion
                     da.Fill(ds);
 
                     List<IncidenciaC> lista = new List<IncidenciaC>();
-                    IncidenciaC detalle;                    
+                    IncidenciaC detalle;
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                     {
                         detalle = new IncidenciaC
@@ -1177,7 +1251,8 @@ namespace SAM.BusinessObjects.Produccion
                             ErrorID = int.Parse(ds.Tables[0].Rows[i]["ErrorIncidenciaID"].ToString()),
                             Error = ds.Tables[0].Rows[i]["Error"].ToString(),
                             Observaciones = ds.Tables[0].Rows[i]["Observacion"].ToString(),
-                            Usuario = ds.Tables[0].Rows[i]["Usuario"].ToString(),
+                            SI = ds.Tables[0].Rows[i]["SI"].ToString(),
+                            Usuario = ds.Tables[0].Rows[i]["Cliente"].ToString(),
                             FechaIncidencia = ds.Tables[0].Rows[i]["FechaIncidencia"].ToString()
                         };
                         lista.Add(detalle);
@@ -1187,19 +1262,124 @@ namespace SAM.BusinessObjects.Produccion
             }
         }
 
-
-        public string GuardarIncidencia(int SpoolID, int TipoIncidenciaID, int DetalleIncidenciaID, int ErrorID, string Observaciones)
+        public string GuardarIncidencia(int SpoolID, int TipoIncidenciaID, int MaterialSpoolID, int JuntaSpoolID, int ErrorIncidenciaID, string Observacion, string Usuario, string SI, int TipoUsuario)
         {
             try
-            {                
+            {
                 ObjetosSQL _SQL = new ObjetosSQL();
-                string[,] parametro = { { "@SpoolID", SpoolID.ToString() }, { "@TipoIncidenciaID", TipoIncidenciaID.ToString() }, { "@DetalleIncidenciaID", DetalleIncidenciaID.ToString() }, { "@ErrorID", ErrorID.ToString() }, { "@Observaciones", Observaciones } };
+                string[,] parametro = {
+                    { "@SpoolID", SpoolID.ToString() },
+                    { "@TipoIncidenciaID", TipoIncidenciaID.ToString() },
+                    { "@MaterialSpoolID", MaterialSpoolID.ToString() },
+                    { "@JuntaSpoolID", JuntaSpoolID.ToString() },
+                    { "@ErrorIncidenciaID",  ErrorIncidenciaID.ToString() },
+                    { "@Observacion",  Observacion },
+                    { "@Usuario",  Usuario },
+                    { "@TipoUsuario", TipoUsuario.ToString() },
+                    { "@SI",  SI }
+                };
                 return _SQL.EjecutaInsertUpdateRetornaString(Stords.GuardarIncidencia, parametro);
             }
             catch (Exception e)
             {
                 return e.Message;
             }
+        }
+        public string GuardaAutorizacion(DataTable Detalle, string Usuario)
+        {
+            try
+            {
+                ObjetosSQL _SQL = new ObjetosSQL();
+                string[,] parametro = { { "@Usuario", Usuario } };
+                return _SQL.EjecutaInsertUpdateRetornaString(Stords.GuardaAutorizacion, Detalle, "@Captura", parametro);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
+        public string ResolverEliminarIncidencia(int IncidenciaID, string Origen, string Usuario, int Accion)
+        {
+            try
+            {
+                /*Origen: Ser refiere a la pantalla donde se resolvió la incidencia*/
+                ObjetosSQL _SQL = new ObjetosSQL();
+                string[,] parametro = { { "@IncidenciaID", IncidenciaID.ToString() }, { "@Accion", Accion.ToString() }, { "@Origen", Origen }, { "@Usuario", Usuario } };
+                return _SQL.EjecutaInsertUpdateRetornaString(Stords.ResolverEliminarIncidencia, parametro);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
+        public int ObtenerNumeroIncidencias(int SpoolID)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = "SELECT " +
+                                    " COUNT(*) Incidencias " +
+                                " FROM " +
+                                    " Shop_Incidencia " +
+                                " WHERE " +
+                                    " SpoolID = " + SpoolID + " AND Activo = 1 ";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        return int.Parse(ds.Tables[0].Rows[0]["Incidencias"].ToString());
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+        }
+
+        public string InactivarSpoolDeSI(string NumeroControl, int ProyectoID)
+        {
+            int rowsAffected = 0;
+            try
+            {
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+                {
+                    string query = " UPDATE S SET " +
+                                        " S.sqinterno = NULL, " +
+                                        " S.inspectorSQInterno = NULL, " +
+                                        " S.fechaSQInterno = NULL " +
+                                    " FROM " +
+                                        " Spool S WITH(NOLOCK) " +
+                                        " INNER JOIN OrdenTrabajoSpool OT WITH(NOLOCK) ON S.SpoolID = OT.SpoolID " +
+                                    " WHERE " +
+                                        " OT.NumeroControl = '" + NumeroControl + "' AND S.ProyectoID = " + ProyectoID;
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        if (con.State == ConnectionState.Closed)
+                            con.Open();
+                        rowsAffected = cmd.ExecuteNonQuery();
+                        if (con.State == ConnectionState.Open)
+                            con.Close();
+                    }
+                }
+                if(rowsAffected > 0)
+                {
+                    return "OK";
+                }
+                else
+                {
+                    return "Error";
+                }
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }            
         }
     }
 }

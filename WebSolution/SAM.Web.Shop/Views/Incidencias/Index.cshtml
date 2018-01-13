@@ -6,7 +6,7 @@
 @model SQModel
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Layouts/MasterLayout.cshtml";   
+    Layout = "~/Views/Layouts/MasterLayout.cshtml";
 }
 
 @section breadcrumbs
@@ -23,70 +23,69 @@
         <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
     </ul>
 }
+
 <div id="contenedor" style="padding-bottom: 20px;" class="row">
-    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="width:100%; margin: 0 auto;">    
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="width:100%; margin: 0 auto;">
         <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
             <div id="divproyecto" class="form-group">
                 @Html.Action("ProjectDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredADD(Model, ViewContext.ViewData.ModelState) })
-            </div>
-        </div>
-        <br />
+            </div>            
+        </div>        
         <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
-            <div class="form-group">
-                @Html.Raw(CommonStrings.SQ)
-                @Html.StyledTextBoxFor(x => x.SQ, new { placeholder = CommonStrings.marcaAguaSolInspect, type = "text", id = "txtSI" })
-            </div>
-        </div>
-        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">            
+            <div id="divproyecto" class="form-group">                
+                @Html.Action("QuadrantsDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredCuadrante(Model, ViewContext.ViewData.ModelState, 1) })
+            </div>            
+        </div>        
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
             <p class="alert alert-info" id="seccionAviso" style="display: none; padding-top: 10px;"></p>
             <p class="alert alert-success" id="seccionSuccess" style="display: none; padding-top: 10px;"></p>
             <p class="alert alert-warning" id="seccionError" style="display: none; padding-top: 10px;"></p>
         </div>
         <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
-            <button type="submit" id="BuscarSI" name="Command" value="BuscarSI" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.Search)</button>
+            <button type="submit" id="Buscar" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.Search)</button>
         </div>
     </div>
 </div>
-<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" >
+
+<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <div id="contieneGrid" style="display:none;">
-        <div id="areaPlanchado" class="addedSection">           
-            <label id="lblAutorizaTodo" style="margin-left: 5px; margin-right: 5px;"></label>
-            <input type="checkbox" id="chkAutorizaTodo" style="margin-left: 5px; margin-right: 5px;"/>
+        <div id="areaPlanchado" class="addedSection">                        
             <div id="grid" style="padding-top: 20px; margin: 0 auto;"></div>
-        </div>        
+        </div>
     </div>
 </div>
-<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="padding-top: 20px;">
+
+@*<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="padding-top: 20px;">
     <button id="btnGuardarCaptura" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
-</div>
+</div>*@
 
 @*GRID POPUP*@
-<div id="windowGrid" style="display: none; z-index:inherit;" class="col-xs-12">  
-    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12"><h4 id="txtNumeroControl"></h4></div>  
+<div id="windowGrid" style="display: none; z-index:inherit;" class="col-xs-12">
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12"><h4 id="txtNumeroControl"></h4></div>
     <div class="row" style="width:100%; padding-right:20px;">
         <div class="col-xs-3">
-            <div class="form-group">              
-                <label id="lblTipoIncidencia"></label>  
+            <div class="form-group">
+                <label id="lblTipoIncidencia"></label>
                 <input id="cmbTipoIncidencia" />
             </div>
-        </div>        
+        </div>
         <div class="col-xs-3">
-            <div class="form-group">                
-                <label id="lblDetalleIncidencia"></label>  
+            <div class="form-group">
+                <label id="lblDetalleIncidencia"></label>
                 <input id="cmbDetalleIncidencia" />
             </div>
-        </div>  
+        </div>
         <div class="col-xs-3">
-            <div class="form-group">                
-                <label id="lblErrores"></label>  
+            <div class="form-group">
+                <label id="lblErrores"></label>
                 <input id="cmbErrores" />
             </div>
-        </div>        
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-11">
             <div class="form-group">
-                <label id="lblObservacion"></label> 
+                <label id="lblObservacion"></label>
                 <textarea id="txtObservacion" class="form-control"></textarea>
             </div>
         </div>
@@ -102,24 +101,25 @@
                 <div class="form-group">
                     <button id="CerrarModal" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.Close)</button>
                 </div>
-            </div>
+            </div>            
         </div>
-    </div>       
+    </div>
+    
     <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
         <p class="alert alert-warning" id="seccionErrorGrid" style="display: none; padding-top: 10px;"></p>
         <p class="alert alert-success" id="seccionAvisoGrid" style="display: none; padding-top: 10px;"></p>
-        <div id="ContenedorGridPopUp" style="display:none;">            
+        <div id="ContenedorGridPopUp" style="display:none;">
             <div id="gridPopUp" style="padding-top: 20px; padding-bottom: 20px; margin: 0 auto;"></div>
         </div>
-    </div>     
+    </div>
 </div>
 
-<script src="~/Scripts/Application/AutorizarSI/Captura.js"></script>
-<script src="~/Scripts/Application/AutorizarSI/Handler.js"></script>
-<script src="~/Scripts/Application/AutorizarSI/Ajax.js"></script>
+<script src="~/Scripts/Application/Incidencias/Captura.js"></script>
+<script src="~/Scripts/Application/Incidencias/Handler.js"></script>
+<script src="~/Scripts/Application/Incidencias/Ajax.js"></script>
 <script>
-    $(document).ready(function () {       
-        ActivarEventos();        
+    $(document).ready(function () {
+        ActivarEventos();
         if ($("#grid").hasClass("k-widget")) {
             $("#grid").removeClass("k-widget");
         }
@@ -127,21 +127,16 @@
             $("#gridPopUp").removeClass("k-widget");
         }
         $("#txtSI").prop("autocomplete", "off");
-        $(".k-header").css("text-align", "center");//Centrar titulo de columnas                              
-    });               
+        $(".k-header").css("text-align", "center");//Centrar titulo de columnas
+    });
 </script>
 <style>
-    .k-grid  .k-grid-header  .k-header  .k-link {
+    .k-grid .k-grid-header .k-header .k-link {
         height: auto;
         overflow-wrap: normal;
-    }  
-    .k-grid  .k-grid-header  .k-header {
+    }
+
+    .k-grid .k-grid-header .k-header {
         white-space: normal;
-    }       
-    /*.adaptive-grid-wrapper {
-        position: relative;
-        height: 130px;
-     }*/
+    }    
 </style>
-
-

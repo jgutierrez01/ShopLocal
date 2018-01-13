@@ -1,33 +1,28 @@
 ﻿var SpoolIDGlobal = 0;
 var timeOut;
 var NumeroControlGlobal = "";
-function ActivarEventos() {
-    document.title = $("html").prop("lang") != "en-US" ? "Autorizar Sol. Inspect" : "Authorize Sol. Inspect";
+function ActivarEventos() {    
+    document.title = $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidens";
     IniciaGrid();
-    CargarGridPopUp(); 
+    CargarGridPopUp();
     ObtenerCacheProyecto();    
-    EventoClickBuscarSI();
-    EventoEnterBuscarSI();
-    EventoSelectProyecto();
-    //EventoVerificarSiEsMobil();
+    EventoClickBuscarSpools();
+    NombrarEtiquetas();    
+    EventoSelectProyecto();    
     EventoChangeGrid();
     EventoTipoIncidencia();
     EventoDetalleIncidencia();
     EventoMostrarListaErrores();
     EventoFocusOutCombos();
     CerrarVentanaModal();
-    NombrarEtiquetas();
     EventoGuardarIncidencia();
-    EventoGuardarAutorizacion();
-    EventoClickCheckAutorizarTodo();
 }
 
 function NombrarEtiquetas() {
     $("#lblTipoIncidencia").text($("html").prop("lang") != "en-US" ? "Tipo Incidencia" : "Incident Type");
     $("#lblDetalleIncidencia").text($("html").prop("lang") != "en-US" ? "Detalle Incidencia" : "Incident Detail");
     $("#lblErrores").text("Error");
-    $("#lblObservacion").text($("html").prop("lang") != "en-US" ? "Observaciones" : "Observations");
-    $("#lblAutorizaTodo").text($("html").prop("lang") != "en-US" ? "Autorizar Todos" : "Authorize All");
+    $("#lblObservacion").text($("html").prop("lang") != "en-US" ? "Observaciones" : "Observations");    
     $("#txtObservacion").css("resize", "none");
 }
 function IniciaGrid() {
@@ -57,30 +52,22 @@ function IniciaGrid() {
     $("#grid").kendoGrid({
         autoBind: true,
         edit: function (e) {
-            if (e.model.Incidencias > 0) {                
+            if (e.model.Incidencias > 0) {
                 this.closeCell();
                 MostrarError($("html").prop("lang") != "en-US" ? "El Spool " + e.model.NumeroControl + "  Tiene  Incidencias" : "The Spool " + e.model.NumeroControl + " Has Incidents");
-            }             
+            }
         },
         dataSource: {
             data: [],
             schema: {
                 model: {
-                    fields: {                     
+                    fields: {
                         SpoolID: { type: "int", editable: false },
-                        OrdenTrabajoSpoolID: { type: "int", editable: false },
-                        NumeroControl: { type: "string", editable: false },                        
                         CuadranteID: { type: "int", editable: false },
                         Cuadrante: { type: "string", editable: false },
-                        SI: { type: "string", editable: false },
-                        SqCliente: { type: "string", editable: false },                        
+                        NumeroControl: { type: "string", editable: false },
                         Hold: { type: "boolean", editable: false },
-                        OkPnd: { type: "boolean", editable: false },                                                                        
-                        Autorizado: { type: "boolean", editable: true },
-                        //NoAutorizado: { type: "boolean", editable: true },
-                        Accion: { type: "int", editable: false },
-                        Incidencias: { type: "int", editable: false },
-                        HistorySI: { type: "string", editable: false }
+                        Incidencias: { type: "int", editable: false }
                     }
                 }
             },
@@ -106,48 +93,32 @@ function IniciaGrid() {
         columns: [
             { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", width: "20px" },
             { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", width: "20px" },
-            { field: "Hold", title: "Hold", template: "#=Hold ? 'Si' : 'No' #", width: "10px", attributes: {style: "text-align: center;"} },
+            { field: "Hold", title: "Hold", template: "#=Hold ? 'Si' : 'No' #", width: "10px", attributes: { style: "text-align: center;" } },            
             {
-                field: "Autorizado", title: $("html").prop("lang") != "en-US" ? "Autorizado" : "Authorized", filterable: {
-                    multi: true,
-                    messages: {
-                        isTrue: $("html").prop("lang") != "en-US" ? "V" : "T",
-                        isFalse: "F",
-                        style: "max-width:20px;"
-                    },
-                    dataSource: [{ Autorizado: true }, { Autorizado: false }]
-                }, template: '<input class="chkbx" type="checkbox" name="Autorizado" #= Autorizado ? "checked=checked" : ""# ></input>', width: "20px", attributes: { style: "text-align:center;" }
-            },           
-            {
-                field: "Incidencias", title: $("html").prop("lang") != "en-US" ? "Num. Incidencias" : "Num. Incidents", width: "10px", attributes: {style: "text-align: center;"}
+                field: "Incidencias", title: $("html").prop("lang") != "en-US" ? "Num. Incidencias" : "Num. Incidents", width: "10px", attributes: { style: "text-align: center;" }
             },
             {
                 command: {
                     text: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
                     className: "k-button k-button-icontext k-grid-Incidencias ",
                     click: function (e) {
-                        e.preventDefault();                        
+                        e.preventDefault();
                         var grid = $("#grid").data("kendoGrid");
                         var ds = grid.dataSource;
                         var dataItem = grid.dataItem($(e.target).closest("tr"));
-                        if(!dataItem.Autorizado){
-                            SpoolIDGlobal = dataItem.SpoolID;
-                            NumeroControlGlobal = dataItem.NumeroControl;
-                            VentanaModal();
-                            $("#txtNumeroControl").text(NumeroControlGlobal);                        
-                            AjaxObtenerTipoIncidencias();
-                            AjaxObtenerIncidencias(dataItem.SpoolID);
-                        } else {
-                            e.stopPropagation();
-                            this.closeCell();
-                        }                        
-                    }                    
+                        SpoolIDGlobal = dataItem.SpoolID;
+                        NumeroControlGlobal = dataItem.NumeroControl;
+                        VentanaModal();
+                        $("#txtNumeroControl").text(NumeroControlGlobal);
+                        AjaxObtenerTipoIncidencias();
+                        AjaxObtenerIncidencias(dataItem.SpoolID);
+                    }
                 },
                 title: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
                 width: "10px",
                 attributes: { style: "text-align: center; margin: 0 auto" }
-            }           
-        ]
+            }
+        ]       
     });
 }
 
@@ -160,12 +131,12 @@ function CargarGridPopUp() {
             schema: {
                 model: {
                     fields: {
-                        Accion: { type: "int", editable: false },                        
-                        IncidenciaID: { type: "int", editable: false },                        
+                        Accion: { type: "int", editable: false },
+                        IncidenciaID: { type: "int", editable: false },
                         SpoolID: { type: "int", editable: false },
                         NumeroControl: { type: "string", editable: false },
                         Incidencia: { type: "string", editable: false },
-                        MaterialJunta: { type: "string", editable: false },                        
+                        MaterialJunta: { type: "string", editable: false },
                         ErrorID: { type: "int", editable: false },
                         Error: { type: "string", editable: false },
                         Observaciones: { type: "string", editable: false },
@@ -195,7 +166,7 @@ function CargarGridPopUp() {
         columns: [
             { field: "Incidencia", title: $("html").prop("lang") != "en-US" ? "Incidencia" : "Incident", width: "20px" },
             { field: "MaterialJunta", title: "Material/Junta", width: "20px" },
-            { field: "Error", title: "Error", width: "30px"  },
+            { field: "Error", title: "Error", width: "30px" },
             { field: "Observaciones", title: $("html").prop("lang") != "en-US" ? "Observaciones" : "Observations", width: "20px" },
             { field: "SI", title: "SI", width: "20px" },
             {
@@ -205,12 +176,12 @@ function CargarGridPopUp() {
                     click: function (e) {
                         var grid = $("#gridPopUp").data("kendoGrid");
                         var ds = grid.dataSource;
-                        var dataItem = grid.dataItem($(e.target).closest("tr"));                        
+                        var dataItem = grid.dataItem($(e.target).closest("tr"));
                         if (confirm($("html").prop("lang") != "en-US" ? "Realmente Desea Eliminar Esta Incidencia?" : "Do You Really Want To Eliminate This Incidence?")) {
-                            AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'AutorizarSI');
+                            AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Incidencias');
                         } else {
                             e.preventDefault();
-                        }                        
+                        }
                     }
                 },
                 title: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
@@ -226,7 +197,7 @@ function CargarGridPopUp() {
                         var ds = grid.dataSource;
                         var dataItem = grid.dataItem($(e.target).closest("tr"));
                         if (confirm($("html").prop("lang") != "en-US" ? "Confirma Resolver Esta Incidencia?" : "Confirm Resolve This Incidence?")) {
-                            AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'AutorizarSI');
+                            AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Incidencias');
                         } else {
                             e.preventDefault();
                         }
@@ -237,7 +208,7 @@ function CargarGridPopUp() {
                 attributes: { style: "text-align: center; margin: 0 auto" }
             },
         ]
-    });    
+    });
 }
 
 
@@ -255,10 +226,7 @@ function VentanaModal() {
         position: {
             top: "10px",
             left: "10px"
-        },
-        actions: [
-            "Close"
-        ],
+        },        
         close: function onClose(e) {
             $("#cmbTipoIncidencia").data("kendoComboBox").dataSource.data([]);
             $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data([]);
@@ -271,34 +239,34 @@ function VentanaModal() {
 
 };
 
-function MostrarError(Error) {    
+function MostrarError(Error) {
     $("#seccionError").append("");
     $("#seccionError").html("");
     $("#seccionError").css("display", "block");
     $("#seccionError").append(Error);
     BorrarSeccionError();
 }
-function BorrarSeccionError() {
+function BorrarSeccionError() {    
     clearTimeout(timeOut);
     if (!$("#seccionError").is("visible")) {
         timeOut = setTimeout(function () {
             $("#seccionError").fadeTo(1000, 500).slideUp(500, function () {
+                $("#seccionError").css("display", "none");
                 $("#seccionError").slideUp(500);
                 $("#seccionError").append("");
-                $("#seccionError").html("");
-                $("#seccionError").css("display", "none");
+                $("#seccionError").html("");                
             });
         }, 2000);
-    }    
+    }
 }
-function MostrarSuccess(Error) {        
+function MostrarSuccess(Error) {    
     $("#seccionSuccess").append("");
     $("#seccionSuccess").html("");
     $("#seccionSuccess").css("display", "block");
     $("#seccionSuccess").append(Error);
     BorrarSuccess();
 }
-function BorrarSuccess() {
+function BorrarSuccess() {    
     clearTimeout(timeOut);
     if (!$("#seccionSuccess").is("visible")) {
         timeOut = setTimeout(function () {
@@ -309,19 +277,19 @@ function BorrarSuccess() {
                 $("#seccionSuccess").css("display", "none");
             });
         }, 2000);
-    }    
+    }
 }
 
-function MostrarErrorGrid(Error) {        
+function MostrarErrorGrid(Error) {    
     $("#seccionErrorGrid").append("");
     $("#seccionErrorGrid").html("");
     $("#seccionErrorGrid").css("display", "block");
     $("#seccionErrorGrid").append(Error);
     BorrarSeccionErrorGrid();
-    
+
 }
-function BorrarSeccionErrorGrid() {
-   clearTimeout(timeOut);
+function BorrarSeccionErrorGrid() {    
+    clearTimeout(timeOut);        
     if (!$("#seccionErrorGrid").is("visible")) {
         timeOut = setTimeout(function () {
             $("#seccionErrorGrid").fadeTo(1000, 500).slideUp(500, function () {
@@ -331,9 +299,9 @@ function BorrarSeccionErrorGrid() {
                 $("#seccionErrorGrid").css("display", "none");
             });
         }, 2000);
-    }    
+    }       
 }
-function MostrarAvisoGrid(Error) {        
+function MostrarAvisoGrid(Error) {    
     $("#seccionAvisoGrid").append("");
     $("#seccionAvisoGrid").html("");
     $("#seccionAvisoGrid").css("display", "block");
@@ -351,10 +319,10 @@ function BorrarAvisoGrid() {
                 $("#seccionAvisoGrid").css("display", "none");
             });
         }, 2000);
-    }     
+    }
 }
 
-function MostrarAviso(Aviso) {        
+function MostrarAviso(Aviso) {    
     $("#seccionAviso").append("");
     $("#seccionAviso").html("");
     $("#seccionAviso").css("display", "block");
@@ -362,7 +330,7 @@ function MostrarAviso(Aviso) {
     BorrarSeccionAviso();
 }
 function BorrarSeccionAviso() {
-     clearTimeout(timeOut);
+    clearTimeout(timeOut);
     if (!$("#seccionAviso").is("visible")) {
         timeOut = setTimeout(function () {
             $("#seccionAviso").fadeTo(1000, 500).slideUp(500, function () {
@@ -372,12 +340,12 @@ function BorrarSeccionAviso() {
                 $("#seccionAviso").css("display", "none");
             });
         }, 2000);
-    }   
+    }
 }
 
 function EventoVerificarSiEsMobil() {
     if (isMobile.any()) {
-        MostrarAviso("Para Visualizar Correctamente El Contenido Por Favor Gira tu Dispositivo Movil (Tiene Que Estar Activa La Rotación)");     
+        MostrarAviso("Para Visualizar Correctamente El Contenido Por Favor Gira tu Dispositivo Movil (Tiene Que Estar Activa La Rotación)");
     }
 }
 

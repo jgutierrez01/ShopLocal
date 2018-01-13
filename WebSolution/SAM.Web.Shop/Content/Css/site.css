@@ -39,9 +39,26 @@
 .delete {
     background-image: url('~/Content/Images/borrar.png');
     background-repeat: no-repeat;
-    color: white;
+    color: transparent;
     align-self: baseline;
-    background-color: white;
+    background-color: transparent;
+}
+
+.incidencias {
+    background-image: url('~/Content/Images/Info16x16.png');
+    background-repeat: no-repeat;
+    color: transparent;
+    align-self: baseline;    
+    background-color: transparent;
+}
+
+
+.resolver {
+    background-image: url('~/Content/Images/resolver.png');
+    background-repeat: no-repeat;
+    color: transparent;
+    align-self: baseline;    
+    background-color: transparent;
 }
 
 .caption {
@@ -124,6 +141,13 @@ modal element will be visible */
     margin: 0 auto;
 }
 
+.k-grid tbody tr td a.k-button.k-grid-Resolver {
+    background-image: url("/Content/images/resolver.png");
+    padding-right: 10px;
+    height: 20px;
+    min-width: 20px !important;
+    margin: 0 auto;
+}
 .k-grid tbody tr td a.k-button {
     display: block;
     color: transparent !important;
@@ -145,4 +169,55 @@ modal element will be visible */
     margin: -5px 0px 33px;
     padding: 0px 0 20px;
     border-bottom: 1px solid #CCCCCC;
+}
+
+.addedSection {    
+    margin: 0px 0;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-right: 3px;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    background-color: #F8F8F8;
+}
+
+.checkbox label:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.checkbox .cr {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #a9a9a9;
+  border-radius: .25em;
+  width: 1.3em;
+  height: 1.3em;
+  float: left;
+  margin-right: .5em;
+}
+
+.checkbox .cr .cr-icon {
+  position: absolute;
+  font-size: .8em;
+  line-height: 0;
+  top: 50%;
+  left: 20%;
+}
+
+.checkbox label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label input[type="checkbox"]+.cr>.cr-icon {
+  opacity: 0;
+}
+
+.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
+  opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled+.cr {
+  opacity: .5;
 }

@@ -106,6 +106,15 @@ namespace Resources.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cerrar.
+        /// </summary>
+        public static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Número de Control.
         /// </summary>
         public static string ControlNumber {
@@ -156,6 +165,15 @@ namespace Resources.Views {
         public static string Fitting {
             get {
                 return ResourceManager.GetString("Fitting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INCIDENCIAS.
+        /// </summary>
+        public static string Incident {
+            get {
+                return ResourceManager.GetString("Incident", resourceCulture);
             }
         }
         

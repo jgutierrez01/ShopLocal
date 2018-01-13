@@ -1,76 +1,7 @@
-﻿var SIGlobal = "";
-function ActualizarCacheProyecto(ProyectoID) {
+﻿function AjaxObtenerTipoIncidencias() {    
     $.ajax({
         type: 'GET',
-        url: '/AutorizarSI/ActualizarCacheProyecto/',
-        dataType: 'json',
-        data: { ProyectoID: $("#ProjectIdADD").val() },
-        success: function (data) {
-            if (data[0].result != "OK") {
-                console.log("Error al actualizar cache de proyecto");
-            }
-        },
-        error: function (xhr, textStatus, errorThrown) {
-            loadingStop();
-            alert("Error Obteniendo Información: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
-        }
-    });
-}
-function ObtenerCacheProyecto() {
-    $.ajax({
-        type: 'GET',
-        url: '/AutorizarSI/ObtenerProyecto/',
-        dataType: 'json',
-        data: {},
-        success: function (data) {
-            if (data[0].result != 0) {
-                $("#ProjectIdADD").val(data[0].result);
-            } 
-        },
-        error: function (xhr, textStatus, errorThrown) {
-            loadingStop();
-            alert("Error Obteniendo Información: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
-        }
-    });
-}
-
-function AjaxObtenerSpools() {
-    loadingStart();
-    $.ajax({
-        type: 'GET',
-        url: '/AutorizarSI/ObtenerSpools/',
-        dataType: 'json',
-        data: { SI: $("#txtSI").val(), ProyectoID: $("#ProjectIdADD").val() },
-        success: function (data) {
-            if (data[0].result == "NODATA") {
-                loadingStop();               
-                MostrarError($("html").prop("lang") == "en-US" ? "No Information Was Found With Sol. Inspect: " + $("#txtSI").val() : "No Se Encontró Información Con La Sol. Inspect: " + $("#txtSI").val());
-                $("#grid").data("kendoGrid").dataSource.data([]);                
-                $("#contieneGrid").css("display", "none");
-            } else {
-                if ($("#grid").hasClass("k-widget")) {
-                    $("#grid").removeClass("k-widget");
-                }
-                loadingStop();
-                SIGlobal = $("#txtSI").val();
-                var result = JSON.parse(data[0].result);
-                $("#grid").data("kendoGrid").dataSource.data([]);
-                $("#grid").data("kendoGrid").dataSource.data(result);
-                $("#contieneGrid").css("display", "block");
-                $(".k-grid-pager").css("width", "100%");                
-            }
-        },
-        error: function (xhr, textStatus, errorThrown) {
-            loadingStop();
-            alert("Error Obteniendo Información: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
-        }
-    });
-}
-
-function AjaxObtenerTipoIncidencias() {    
-    $.ajax({
-        type: 'GET',
-        url: '/AutorizarSI/ObtenerTipoIncidencias/',
+        url: '/SQ/ObtenerTipoIncidencias/',
         dataType: 'json',
         data: {},
         success: function (data) {
@@ -92,7 +23,7 @@ function AjaxObtenerTipoIncidencias() {
 function AjaxObtenerDetalleIncidencias(TipoIncidencia) {
     $.ajax({
         type: 'GET',
-        url: '/AutorizarSI/ObtenerDetalleIncidencias/',
+        url: '/SQ/ObtenerDetalleIncidencias/',
         dataType: 'json',
         data: { TipoIncidenciaID: TipoIncidencia, SpoolID: SpoolIDGlobal },
         success: function (data) {
@@ -112,7 +43,7 @@ function AjaxObtenerDetalleIncidencias(TipoIncidencia) {
 function AjaxObtenerListaErrores(TipoIncidencia) {
     $.ajax({
         type: 'GET',
-        url: '/AutorizarSI/ObtenerListaErrores/',
+        url: '/SQ/ObtenerListaErrores/',
         dataType: 'json',
         data: { TipoIncidenciaID: TipoIncidencia },
         success: function (data) {
@@ -130,10 +61,11 @@ function AjaxObtenerListaErrores(TipoIncidencia) {
     });
 }
 
+
 function AjaxObtenerIncidencias(Spool) {
     $.ajax({
         type: 'GET',
-        url: '/AutorizarSI/ObtenerIncidencias/',
+        url: '/SQ/ObtenerIncidencias/',
         dataType: 'json',
         data: { SpoolID: Spool },
         success: function (data) {
@@ -159,7 +91,8 @@ function AjaxObtenerIncidencias(Spool) {
         }
     });
 }
-function AjaxGuardarIncidencia(ds) {
+
+function AjaxGuardarIncidencia() {
     var lista =
         {
             SpoolID: SpoolIDGlobal == null ? 0 : SpoolIDGlobal,
@@ -168,25 +101,26 @@ function AjaxGuardarIncidencia(ds) {
             JuntaSpoolID: $("#cmbTipoIncidencia").data("kendoComboBox").text() == "Juntas" ? parseInt($("#cmbDetalleIncidencia").val()) : 0,
             ErrorIncidenciaID: parseInt($("#cmbErrores").val()),
             Observacion: $("#txtObservacion").val(),
-            SI: SIGlobal
+            SI: $("#OrigenIncidencia").val() == 1 ? "" : $("#SQ").val()
         };
     var json = JSON.stringify(lista);
     loadingStart();
     $.ajax({
-        type: 'GET',        
-        url: '/AutorizarSI/GuardarIncidencia/',
+        type: 'GET',
+        url: '/SQ/GuardarIncidencia/',
         dataType: 'json',
         data: lista,
         success: function (data) {
-            if (data[0].result == "OK") {                
+            if (data[0].result == "OK") {
                 BorrarCampos();
-                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Guardado Exitoso" : "Saved Successful");                
+                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Guardado Correctamente" : "Saved Successful");
                 AjaxObtenerIncidencias(SpoolIDGlobal);
                 AjaxObtenerTipoIncidencias();
-                AjaxObtenerSpools();
+                AjaxObtenerNumeroIncidencias(SpoolIDGlobal);
+                //AjaxObtenerSpools();
                 loadingStop();
             } else {
-                loadingStop();                
+                loadingStop();
                 MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred");
             }
         },
@@ -194,31 +128,21 @@ function AjaxGuardarIncidencia(ds) {
             loadingStop();
             alert("Error Obteniendo Incidencias: " + "\n" + xhr.responseText + "\n" + textStatus + "\n" + errorThrown);
         }
-    });     
+    });
 }
 
-function AjaxGuardarAutorizacion(ds) {    
-    var ListaDetalleCaptura = [];
-    for (var x = 0; x < ds.length; x++) {
-        ListaDetalleCaptura[x] = { SpoolID: 0, Autorizacion: false };
-        ListaDetalleCaptura[x].SpoolID = ds[x].SpoolID;
-        ListaDetalleCaptura[x].Autorizacion = ds[x].Autorizado;
-    }    
-    loadingStart();
+function AjaxObtenerNumeroIncidencias(Spool) {
     $.ajax({
         type: 'GET',
-        url: '/AutorizarSI/GuardarAutorizacion/',
-        contentType: "application/json; charset=utf-8",
+        url: '/SQ/ObtenerNumeroIncidencias/',
         dataType: 'json',
-        data: { Captura: JSON.stringify(ListaDetalleCaptura) },        
+        data: { SpoolID: Spool },
         success: function (data) {
-            if (data[0].result == "OK") {                
-                MostrarSuccess($("html").prop("lang") != "en-US" ? "Guardado Correctamente" : "Saved Successfully");
-                AjaxObtenerSpools();
-                loadingStop();
+            if (data[0].result >= 0) {
+                CambiarNumeroIncidencia(NumeroControlGlobal, data[0].result);
             } else {
-                loadingStop();                
-                MostrarError($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred");
+                loadingStop();
+                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred");
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -226,6 +150,52 @@ function AjaxGuardarAutorizacion(ds) {
             alert("Error Obteniendo Incidencias: " + "\n" + xhr.responseText + "\n" + textStatus + "\n" + errorThrown);
         }
     });
+
+}
+
+function CambiarNumeroIncidencia(NumeroControl, NumeroIncidencia) {
+    var column = 1; //Columna donde se encuentra el NumeroControl
+    var table;
+    var colIncidencia;
+    var origen = $("#OrigenIncidencia").val();
+    if (origen == 1) { //Nuevo       
+        table = $('#gridAdd table'); 
+        colIncidencia = $('#gridAdd tr th').filter(function () { return $(this).text() == 'Num. Incidencias'; }).index(); //Columna donde se modificará el numero de incidencia   
+    } else {//Editar
+        table = $('#gridEditar table'); 
+        colIncidencia = $('#gridEditar tr th').filter(function () { return $(this).text() == 'Num. Incidencias'; }).index(); //Columna donde se modificará el numero de incidencia   
+    }         
+    var tr = $(table).find('tr'); //Filas       
+    for (var i = 0; i < tr.length; i++) {
+        var td = $(tr[i]).find("td"); //Columnas        
+        for (var j = 0; j < td.length; j++) {
+            if (j == column && td[j].innerHTML == NumeroControl) {
+                td[colIncidencia].innerHTML = NumeroIncidencia;                                
+            }
+        }
+    }
+}
+function VerificarIncidencias(Origen, NumeroControl) {    
+    var column = 1; //Columna donde se encuentra el NumeroControl
+    var table;
+    var colIncidencia;
+    //var origen = $("#OrigenIncidencia").val();    
+    if (Origen == 1) { //Nuevo       
+        table = $('#gridAdd table');
+        colIncidencia = $('#gridAdd tr th').filter(function () { return $(this).text() == 'Num. Incidencias'; }).index(); //Columna donde se modificará el numero de incidencia   
+    } else {//Editar
+        table = $('#gridEditar table');
+        colIncidencia = $('#gridEditar tr th').filter(function () { return $(this).text() == 'Num. Incidencias'; }).index(); //Columna donde se modificará el numero de incidencia   
+    }
+    var tr = $(table).find('tr'); //Filas       
+    for (var i = 0; i < tr.length; i++) {
+        var td = $(tr[i]).find("td"); //Columnas        
+        for (var j = 0; j < td.length; j++) {
+            if (j == column && td[j].innerHTML == NumeroControl) {
+                return td[colIncidencia].innerHTML;
+            }
+        }
+    }    
 }
 
 function AjaxEliminarIncidencia(incidenciaID, SpoolID, pantalla) {
@@ -236,9 +206,9 @@ function AjaxEliminarIncidencia(incidenciaID, SpoolID, pantalla) {
         data: { IncidenciaID: incidenciaID, Origen: pantalla, Accion: 1 },
         success: function (data) {
             if (data[0].result == "OK") {
-                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Incidencia Eliminada Correctamente" : "Incident Deleted Correctly");
-                AjaxObtenerIncidencias(SpoolID);
-                AjaxObtenerSpools();
+                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Incidencia Eliminada Correctamente" : "Successfully Eliminated Incidence");
+                AjaxObtenerIncidencias(SpoolID);                
+                AjaxObtenerNumeroIncidencias(SpoolID);
             } else {
                 MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Error Al Eliminar Incidencia" : "Error Deleting Incident");
             }
@@ -256,14 +226,14 @@ function AjaxResolverIncidencia(incidenciaID, SpoolID, pantalla) {
         type: 'GET',
         url: '/SQ/ResolverEliminarIncidencia/',
         dataType: 'json',
-        data: { IncidenciaID: incidenciaID, Origen: pantalla, Accion: 2 },
+        data: { IncidenciaID: incidenciaID, Origen: pantalla, Accion: 2  },
         success: function (data) {
             if (data[0].result == "OK") {
                 MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Incidencia Resuelta Correctamente" : "Incident Resolved Correctly");
-                AjaxObtenerIncidencias(SpoolID);
-                AjaxObtenerSpools();
+                AjaxObtenerIncidencias(SpoolID);                
+                AjaxObtenerNumeroIncidencias(SpoolID);                
             } else {
-                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Error Al Resolver Incidencia" : "Error Resolving Incident");
+                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Error Al Eliminar Incidencia" : "Error Deleting Incident");
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -271,4 +241,27 @@ function AjaxResolverIncidencia(incidenciaID, SpoolID, pantalla) {
             alert("Error Obteniendo Tipos de Incidencias: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
         }
     });
+}
+
+function AjaxInactivarSpoolSI(numeroControl) {
+    loadingStart();
+    $.ajax({
+        type: 'GET',
+        url: '/SQ/InactivarSpoolSI/',
+        dataType: 'json',
+        data: { NumeroControl: numeroControl, ProyectoID: ($("#ProjectIdADD").val() != undefined && $("#ProjectIdADD").val() != 0) ? $("#ProjectIdADD").val() : 0 },
+        success: function (data) {
+            if (data[0].result == "OK") {                
+                EliminarSpoolDeTabla(numeroControl);
+                MostrarErrorEdit($("html").prop("lang") != "en-US" ? "El Spool: " + numeroControl + " Fue Eliminado De La Sol. Inspect: " + $("#SQ").val() + " Porque Tiene Incidencias" : "The Spool: " + numeroControl + " Was Eliminated OF The Sol. Inspect : " + $("#SQ").val() + " Because Has Incidents");
+            } else {
+                MostrarErrorEdit($("html").prop("lang") != "en-US" ? "Error Al Inactivar SI" : "Error To Inactivate SI");
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop();
+            alert("Error Inactivando Spool De SI: " + "\n" + xhr.responseText + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
+    loadingStop();
 }

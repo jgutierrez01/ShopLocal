@@ -168,7 +168,8 @@ namespace SAM.Web.Shop.Controllers
                                     SqCliente = ots.SqCliente,
                                     SQ = ots.sqinterno,
                                     TieneHoldIngenieria = ots.TieneHoldIngenieria,
-                                    OkPnd = ots.OkPnd                                    
+                                    OkPnd = ots.OkPnd,
+                                    Incidencias = ots.Incidencias                             
                                 });
                             }
                             string datosAsignados = "";
@@ -199,7 +200,7 @@ namespace SAM.Web.Shop.Controllers
                             //for(int i = 0; i < ListaNoTieneOkPnd.Count; i++)
                             //{
                             //    datosAsignados += " El Spool " + ListaNoTieneOkPnd[i].NumeroControl + " Le Falta OkPnd <br>";
-                            //}
+                            //}                           
 
                             if (datosAsignados != "")
                             {
@@ -279,7 +280,8 @@ namespace SAM.Web.Shop.Controllers
                                     SqCliente = numeroControl[i].SqCliente,
                                     SQ = numeroControl[i].SQ,
                                     TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria,
-                                    OkPnd = numeroControl[i].OkPnd
+                                    OkPnd = numeroControl[i].OkPnd,
+                                    Incidencias = numeroControl[i].Incidencias
                                 });
                             }
                             string datosAsignados = "";
@@ -479,7 +481,8 @@ namespace SAM.Web.Shop.Controllers
                                 SqCliente = numeroControl[i].SqCliente,
                                 SQ = numeroControl[i].SQ,
                                 TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria,
-                                OkPnd = numeroControl[i].OkPnd
+                                OkPnd = numeroControl[i].OkPnd,
+                                Incidencias = numeroControl[i].Incidencias
                             });
                         }
                         var Lista = listaElementos;
@@ -573,7 +576,8 @@ namespace SAM.Web.Shop.Controllers
                                             SqCliente = ots.SqCliente,
                                             SQ = ots.sqinterno,
                                             TieneHoldIngenieria = ots.TieneHoldIngenieria,
-                                            OkPnd = ots.OkPnd
+                                            OkPnd = ots.OkPnd,
+                                            Incidencias = ots.Incidencias
                                         });
                                     }
                                     string datosAsignados = "";
@@ -679,7 +683,8 @@ namespace SAM.Web.Shop.Controllers
                                             SqCliente = numeroControl[i].SqCliente,
                                             SQ = numeroControl[i].SQ,
                                             TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria,
-                                            OkPnd = numeroControl[i].OkPnd
+                                            OkPnd = numeroControl[i].OkPnd,
+                                            Incidencias = numeroControl[i].Incidencias
                                         });
                                     }
                                     string datosAsignados = "";
@@ -860,16 +865,23 @@ namespace SAM.Web.Shop.Controllers
                         {
                             datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en la SI: " + ListaTieneSQInterno[i].SQ + ", se ignora guardado. <br>";
                         }
-                       
+
+                        List<LayoutGridSQ> ListaTieneIncidencias = (from a in ListaNoTieneHold where a.Incidencias > 0 select a).ToList();
+                        List<LayoutGridSQ> ListaNoTieneIncidencias = (from a in ListaNoTieneHold where a.Incidencias == 0 select a).ToList();
+                        for (int i = 0; i < ListaTieneIncidencias.Count; i++)
+                        {
+                            datosAsignados += " El Spool " + ListaTieneIncidencias[i].NumeroControl + " tiene registradas incidencias, se ignora guardado. <br>";
+                        }
+
                         if (datosAsignados != "")
                         {
                             TempData["errorSaveAdd"] += datosAsignados;
                         }
-                        if (ListaNoTieneSQInterno.Count > 0)
+                        if (ListaNoTieneIncidencias.Count > 0)
                         {
                             try
                             {                                    
-                                string SQConsecutivo = OrdenTrabajoSpoolBO.Instance.GuardarNumeroControlSQ(ToDataTable.Instance.toDataTable(ListaNoTieneSQInterno), SessionFacade.UserId, SessionFacade.NombreCompleto, project.ID, "");                                   
+                                string SQConsecutivo = OrdenTrabajoSpoolBO.Instance.GuardarNumeroControlSQ(ToDataTable.Instance.toDataTable(ListaNoTieneIncidencias), SessionFacade.UserId, SessionFacade.NombreCompleto, project.ID, "");                                   
                                 NavContext.SetDataToSession<string>(Session, "ListaNumControlAdd", "");
                                 if (SQConsecutivo == model.SQ)
                                 {
@@ -994,29 +1006,48 @@ namespace SAM.Web.Shop.Controllers
                     datosAsignados += " El Spool " + ListaTieneHold[a].NumeroControl + " Tiene Hold, Se Ignora Guardado. <br>";
                 }
 
-                List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneHold where (a.SQ != "" && a.SQ != null && a.SQ != model.SQ) select a).ToList();
+                //List<LayoutGridSQ> ListaTieneSQInterno = (from a in ListaNoTieneHold where (a.SQ != "" && a.SQ != null && a.SQ != model.SQ) select a).ToList();
                 List<LayoutGridSQ> ListaNoTieneSQInterno = (from a in ListaNoTieneHold where (a.SQ == "" || a.SQ == null) select a).ToList();
-                for (int i = 0; i < ListaTieneSQInterno.Count; i++)
+                //for (int i = 0; i < ListaTieneSQInterno.Count; i++)
+                //{
+                //    datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en la SI: " + ListaTieneSQInterno[i].SQ + ", se ignora guardado. <br>";
+                //}
+
+                List<LayoutGridSQ> ListaTodos = (from a in ListaNoTieneHold select a).ToList();                
+                for(int i = 0; i < ListaTodos.Count; i++)
                 {
-                    datosAsignados += " El Spool " + ListaTieneSQInterno[i].NumeroControl + " se encuentra en la SI: " + ListaTieneSQInterno[i].SQ + ", se ignora guardado. <br>";
+                    if(ListaTodos[i].Incidencias > 0)
+                    {
+                        datosAsignados += " El Spool " + ListaTodos[i].NumeroControl + " tiene registradas incidencias, se ignora guardado. <br>";
+                    }           
+                    if(ListaTodos[i].SQ != "" && ListaTodos[i].SQ != null && ListaTodos[i].SQ != model.SQ)
+                    {
+                        datosAsignados += " El Spool " + ListaTodos[i].NumeroControl + " se encuentra en la SI: " + ListaTodos[i].SQ + ", se ignora guardado. <br>";
+                    }                    
                 }
-               
+                                
+                List<LayoutGridSQ> ListaNoTieneIncidencias = (from a in ListaNoTieneSQInterno where a.Incidencias == 0 select a).ToList();
+                //for (int i = 0; i < ListaTieneIncidencias.Count; i++)
+                //{
+                //    datosAsignados += " El Spool " + ListaTieneIncidencias[i].NumeroControl + " tiene registradas incidencias, se ignora guardado. <br>";
+                //}
                 if (datosAsignados != "")
                 {
                     TempData["errorSaveEdit"] += datosAsignados;
                 }
-                List<LayoutGridSQ> ListaMismos = (from a in ListaNoTieneSQCliente where a.SQ == model.SQ select a).ToList();
-                if(ListaNoTieneSQCliente.Count == ListaMismos.Count && ListaNoTieneSQInterno.Count == 0)
-                {
-                    TempData["ActualizadoCorrecto"] = "Sol. Inspect: " + model.SQ + " Actualizado Correctamente";
+
+                List<LayoutGridSQ> ListaMismos = (from a in ListaTodos where a.SQ == model.SQ select a).ToList();
+                if (ListaTodos.Count == ListaMismos.Count && ListaNoTieneIncidencias.Count == 0)
+                {                    
+                    TempData["ActualizadoCorrecto"] = "Sol. Inspect: " + model.SQ + " Actualizado Correctamente";                 
                 }
                 else
                 {
-                    if (ListaNoTieneSQInterno.Count > 0)
+                    if (ListaNoTieneIncidencias.Count > 0)
                     {
                         try
                         {
-                            string SQConsecutivo = OrdenTrabajoSpoolBO.Instance.GuardarNumeroControlSQ(ToDataTable.Instance.toDataTable(ListaNoTieneSQInterno), SessionFacade.UserId, SessionFacade.NombreCompleto, model.ProjectIdEditar, model.SQ);
+                            string SQConsecutivo = OrdenTrabajoSpoolBO.Instance.GuardarNumeroControlSQ(ToDataTable.Instance.toDataTable(ListaNoTieneIncidencias), SessionFacade.UserId, SessionFacade.NombreCompleto, model.ProjectIdEditar, model.SQ);
                             NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", "");
                             if (SQConsecutivo == model.SQ)
                             {
@@ -1134,6 +1165,114 @@ namespace SAM.Web.Shop.Controllers
         {
             string resultado = OrdenTrabajoSpoolBO.Instance.ObtenerConsecutivoProyecto(ProyectoID);            
             var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet, ValidateInput(false)]
+        public JsonResult GuardarIncidencia(int SpoolID, int TipoIncidenciaID, int MaterialSpoolID, int JuntaSpoolID, int ErrorIncidenciaID, string Observacion, string SI)
+        {
+            string Usuario = SessionFacade.NombreCompleto;
+            /*
+             * Tipo de Usuario = 1 -----> Inspector
+             * Tipo de Usuario = 2 -----> Cliente
+             */
+            string respuesta = OrdenTrabajoSpoolBO.Instance.GuardarIncidencia(SpoolID, TipoIncidenciaID, MaterialSpoolID, JuntaSpoolID, ErrorIncidenciaID, Observacion, Usuario, SI, 1);
+            var myData = new[] { new { result = respuesta } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult ObtenerIncidencias(int SpoolID)
+        {
+            List<IncidenciaC> Incidencias = OrdenTrabajoSpoolBO.Instance.ObtenerIncidencias(SpoolID);
+            string resultado = "";
+            if (Incidencias != null && Incidencias.Count > 0)
+            {
+                resultado = JsonConvert.SerializeObject(Incidencias);
+            }
+            else
+            {
+                resultado = "NODATA";
+            }
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult ObtenerTipoIncidencias()
+        {
+            List<TipoIncidencia> ListaIncidencias = OrdenTrabajoSpoolBO.Instance.ObtenerTipoIncidencias();
+            string resultado = "";
+            if (ListaIncidencias != null && ListaIncidencias.Count > 0)
+            {
+                resultado = JsonConvert.SerializeObject(ListaIncidencias);
+            }
+            else
+            {
+                resultado = "NODATA";
+            }
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult ObtenerDetalleIncidencias(int TipoIncidenciaID, int SpoolID)
+        {
+            List<IncidenciaDetalle> Detalle = OrdenTrabajoSpoolBO.Instance.ObtenerDetalleIncidencias(TipoIncidenciaID, SpoolID);
+            string resultado = "";
+            if (Detalle != null && Detalle.Count > 0)
+            {
+                resultado = JsonConvert.SerializeObject(Detalle);
+            }
+            else
+            {
+                resultado = "NODATA";
+            }
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult ObtenerListaErrores(int TipoIncidenciaID)
+        {
+            List<ListaErrores> Lista = OrdenTrabajoSpoolBO.Instance.ObtenerListaErrores(TipoIncidenciaID);
+            string resultado = "";
+            if (Lista != null && Lista.Count > 0)
+            {
+                resultado = JsonConvert.SerializeObject(Lista);
+            }
+            else
+            {
+                resultado = "NODATA";
+            }
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult ObtenerNumeroIncidencias(int SpoolID)
+        {
+            int resultado = OrdenTrabajoSpoolBO.Instance.ObtenerNumeroIncidencias(SpoolID);
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+     
+        [HttpGet]
+        public JsonResult ResolverEliminarIncidencia(int IncidenciaID, string Origen, int Accion)
+        {
+            /*Origen =  pantalla donde se elimino la incidencia*/
+            string respuesta = OrdenTrabajoSpoolBO.Instance.ResolverEliminarIncidencia(IncidenciaID, Origen, SessionFacade.NombreCompleto, Accion);
+            var myData = new[] { new { result = respuesta } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public JsonResult InactivarSpoolSI(string  NumeroControl, int ProyectoID)
+        {           
+            List<LayoutGridSQ> ListaActualSpools = JsonConvert.DeserializeObject<List<LayoutGridSQ>>(NavContext.GetDataFromSession<string>(Session, "ListaNumControlEdit"));
+            LayoutGridSQ spoolEncontrado = ListaActualSpools.Where(x => x.NumeroControl == NumeroControl).FirstOrDefault();
+            if(spoolEncontrado != null)
+            {
+                ListaActualSpools.Remove(spoolEncontrado);
+            }
+            NavContext.SetDataToSession<string>(Session, "ListaNumControlEdit", JsonConvert.SerializeObject(ListaActualSpools));
+            string respuesta = OrdenTrabajoSpoolBO.Instance.InactivarSpoolDeSI(NumeroControl, ProyectoID);
+            var myData = new[] { new { result = respuesta } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
 

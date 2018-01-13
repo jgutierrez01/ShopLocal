@@ -1,33 +1,24 @@
-﻿function EventoEnterBuscarSI() {   
+﻿function EventoEnterBuscarSI() {
     $("#txtSI").keydown(function (e) {
         if (e.keyCode == 13) {
-            if (($("#ProjectIdADD").val() == "0" || $("#ProjectIdADD").val() == 0) && $("#txtSI").val() == "") {
-                if ($("html").prop("lang") == "en-US") {
-                    MostrarError("Please Select A Project And Enter Sol. Inspect");
-                } else {
-                    MostrarError("Por Favor Seleccione un Proyecto E Ingrese Sol. Inspect");
-                }
+            if (($("#ProjectIdADD").val() == "0" || $("#ProjectIdADD").val() == 0) && $("#txtSI").val() == "") {                
+                MostrarError($("html").prop("lang") == "en-US" ? "Please Select A Project And Enter Sol. Inspect" : "Por Favor Seleccione un Proyecto E Ingrese Sol. Inspect");                
             } else {
                 if ($("#ProjectIdADD").val() != "0" && $("#ProjectIdADD").val() != 0) {
                     if ($("#txtSI").val() != "") {
-                        //Mostrar Spools          
-                        BorrarSeccionError();
+                        $("#chkAutorizaTodo").prop("checked", false);
                         AjaxObtenerSpools();
                     } else {
                         //Falta SI
-                        if ($("html").prop("lang") == "en-US") {
-                            MostrarError("Please Enter Sol. Inspect");
-                        } else {
-                            MostrarError("Por Favor Ingrese Sol. Inspect");
-                        }
+                        MostrarError($("html").prop("lang") == "en-US" ? "Please Enter Sol. Inspect" : "Por Favor Ingrese Sol. Inspect");
+                        $("#grid").data("kendoGrid").dataSource.data([]);                
+                        $("#contieneGrid").css("display", "none");
                     }
                 } else {
-                    //Falta Proyecto
-                    if ($("html").prop("lang") == "en-US") {
-                        MostrarError("Please Select A Project.");
-                    } else {
-                        MostrarError("Por Favor Seleccione un Proyecto");
-                    }
+                    //Falta Proyecto                    
+                    MostrarError($("html").prop("lang") == "en-US" ? "Please Select A Project." : "Por Favor Seleccione un Proyecto");
+                    $("#grid").data("kendoGrid").dataSource.data([]);
+                    $("#contieneGrid").css("display", "none");
                 }
             }
         }
@@ -36,33 +27,24 @@
 
 function EventoClickBuscarSI() {
     $("#BuscarSI").click(function (e) {
-        if (($("#ProjectIdADD").val() == "0" || $("#ProjectIdADD").val() == 0) && $("#txtSI").val() == "") {
-            if ($("html").prop("lang") == "en-US") {
-                MostrarError("Please Select A Project And Enter Sol. Inspect");
-            } else {
-                MostrarError("Por Favor Seleccione un Proyecto E Ingrese Sol. Inspect");
-            }
+        if (($("#ProjectIdADD").val() == "0" || $("#ProjectIdADD").val() == 0) && $("#txtSI").val() == "") {            
+            MostrarError($("html").prop("lang") == "en-US" ? "Please Select A Project And Enter Sol. Inspect" : "Por Favor Seleccione un Proyecto E Ingrese Sol. Inspect" );            
         } else {
             if ($("#ProjectIdADD").val() != "0" && $("#ProjectIdADD").val() != 0) {
                 if ($("#txtSI").val() != "") {
-                    //Mostrar Spools          
-                    BorrarSeccionError();
+                    $("#chkAutorizaTodo").prop("checked", false);
                     AjaxObtenerSpools();
                 } else {
-                    //Falta SI
-                    if ($("html").prop("lang") == "en-US") {
-                        MostrarError("Please Enter Sol. Inspect");
-                    } else {
-                        MostrarError("Por Favor Ingrese Sol. Inspect");
-                    }
+                    //Falta SI                    
+                    MostrarError($("html").prop("lang") == "en-US" ? "Please Enter Sol. Inspect" : "Por Favor Ingrese Sol. Inspect");
+                    $("#grid").data("kendoGrid").dataSource.data([]);
+                    $("#contieneGrid").css("display", "none");
                 }
             } else {
-                //Falta Proyecto
-                if ($("html").prop("lang") == "en-US") {
-                    MostrarError("Please Select A Project.");
-                } else {
-                    MostrarError("Por Favor Seleccione un Proyecto");
-                }
+                //Falta Proyecto                
+                MostrarError($("html").prop("lang") == "en-US" ? "Please Select A Project." : "Por Favor Seleccione un Proyecto");
+                $("#grid").data("kendoGrid").dataSource.data([]);
+                $("#contieneGrid").css("display", "none");
             }
         }
     });    
@@ -82,8 +64,15 @@ function EventoChangeGrid() {
         var dataItem = grid.dataItem($(e.target).closest("tr"));
         switch (this.name) {
             case "Autorizado":
-                dataItem.set("Autorizado", this.checked);                
-                grid.dataSource.sync();
+                if (dataItem.Incidencias > 0) {
+                    e.stopPropagation();                    
+                    this.checked = false;
+                    MostrarError($("html").prop("lang") != "en-US" ? "El Spool " + dataItem.NumeroControl + " Tiene  Incidencias" : "The Spool " + dataItem.NumeroControl + " Has Incidents");
+                    grid.dataSource.sync();
+                } else {
+                    dataItem.set("Autorizado", this.checked);                    
+                    grid.dataSource.sync();
+                }                
                 break;            
         }
     });
@@ -92,17 +81,16 @@ function EventoChangeGrid() {
 function EventoTipoIncidencia() {
     $("#cmbTipoIncidencia").kendoComboBox({
         dataTextField: "Incidencia",
-        dataValueField: "TipoIncidenciaID",
+        dataValueField: "TipoIncidenciaID",                
         suggest: true,
-        delay: 10,
-        //filter: "endswith",
-        //index: 3,+
+        index: 3,
+        filter: "contains",
         change: function (e) {
             var dataItem = this.dataItem(e.sender.selectedIndex);
             if (dataItem != null) {
                 AjaxObtenerDetalleIncidencias(dataItem.TipoIncidenciaID);
                 AjaxObtenerListaErrores(dataItem.TipoIncidenciaID);
-            }          
+            }
         }
     });
 }
@@ -113,9 +101,8 @@ function EventoDetalleIncidencia() {
         dataTextField: "Etiqueta",
         dataValueField: "ID",
         suggest: true,
-        delay: 10,
-        //filter: "endswith",
-        //index: 3,+
+        index: 3,
+        filter: "contains",
         change: function (e) {
             var dataItem = this.dataItem(e.sender.selectedIndex);            
         }
@@ -126,26 +113,33 @@ function EventoMostrarListaErrores() {
         dataTextField: "Error",
         dataValueField: "ErrorID",
         suggest: true,
-        delay: 10,
-        //filter: "endswith",
-        //index: 3,+
-        change: function (e) {
-            //dataItem = this.dataItem(e.sender.selectedIndex);
-            //if (dataItem != undefined) {
-            //    if ($("#InputID").val().length == 1) {
-            //        $("#InputID").data("kendoComboBox").value(("00" + $("#InputID").val()).slice(-3));
-            //    }
-            //    if ($("#InputID").val() != '' && $("#InputOrdenTrabajo").val() != '') {
-            //        Cookies.set("Proyecto", dataItem.ProyectoID + '°' + dataItem.Proyecto);
-            //        $("#LabelProyecto").text(dataItem.Proyecto);
-            //        //if ($('input:radio[name=TipoAgregado]:checked').val() != "Reporte") {
-            //        //    AjaxJunta($("#InputID").val());
-            //        //}                    
-            //    }
-            //}
+        index: 3,
+        filter: "contains",
+        change: function (e) { }
+    });
+}
+
+function EventoFocusOutCombos() {
+    $("#cmbTipoIncidencia").focusout(function () {
+        var combo = $("#cmbTipoIncidencia").data("kendoComboBox");
+        if (combo.selectedIndex < 0) {
+            combo.text("");
+        }
+    });
+    $("#cmbDetalleIncidencia").focusout(function () {
+        var combo = $("#cmbDetalleIncidencia").data("kendoComboBox");
+        if (combo.selectedIndex < 0) {
+            combo.text("");
+        }
+    });
+    $("#cmbErrores").focusout(function () {
+        var combo = $("#cmbErrores").data("kendoComboBox");
+        if (combo.selectedIndex < 0) {
+            combo.text("");
         }
     });
 }
+
 function CerrarVentanaModal() {
     $("#CerrarModal").click(function (e) {
         e.preventDefault();
@@ -164,10 +158,8 @@ function EventoGuardarIncidencia() {
     $("#btnGuardar").click(function (e) {
         if ($("#cmbTipoIncidencia").val() != 0 && $("#cmbTipoIncidencia").val() != undefined) {
             if ($("#cmbDetalleIncidencia").val() != 0 && $("#cmbDetalleIncidencia").val() != undefined) {
-                if ($("#cmbErrores").val() != 0 && $("#cmbErrores").val() != undefined) {
-                    BorrarSeccionErrorGrid();
-                    var grid = $("#gridPopUp").data("kendoGrid");
-                    var ds = grid.dataSource;                    
+                if ($("#cmbErrores").val() != 0 && $("#cmbErrores").val() != undefined) {                    
+                    AjaxGuardarIncidencia();
                 } else {
                     MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Seleccione un Tipo de Error" : "Select Error Type");
                 }
@@ -176,6 +168,36 @@ function EventoGuardarIncidencia() {
             }
         } else {
             MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Seleccione un Tipo de Incidencia" : "Select Incident Type");
+        }
+    });
+}
+function EventoGuardarAutorizacion() {
+    $("#btnGuardarCaptura").click(function () {
+        var grid = $("#grid").data("kendoGrid");
+        var ds = grid.dataSource;
+        if ($("#txtSI").val() != "") {
+            if (ds.data().length > 0) {
+                AjaxGuardarAutorizacion(ds.data());                
+            } else {
+                MostrarError($("html").prop("lang") != "en-US" ? "No Hay Datos Por Guardar" : "No Data To Save");
+            }
+        } else {
+            MostrarError($("html").prop("lang") != "en-US" ? "Ingrese Sol. Inspect" : "Enter Sol. Inspect");
+        }
+        
+    });
+}
+
+function EventoClickCheckAutorizarTodo() {
+    $("#chkAutorizaTodo").change(function (e) {
+        e.preventDefault();
+        var valor = this.checked;
+        var grid = $("#grid").data("kendoGrid").dataSource._data;
+        for (var i = 0; i < grid.length; i++) {
+            if (grid[i].Incidencias == 0) {
+                grid[i].Autorizado = valor;
+                $("#grid").data("kendoGrid").dataSource.sync();
+            }
         }
     });
 }

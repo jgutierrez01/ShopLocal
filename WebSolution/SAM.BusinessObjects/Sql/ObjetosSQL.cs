@@ -223,7 +223,34 @@ namespace SAM.BusinessObjects.Sql
                     throw new Exception(e.Message);
                 }
             }
+        }        
+        public string EjecutaInsertUpdateRetornaString(string Stord, DataTable TablaSube, String NombreTabla, string[,] Parametros = null)
+        {
+            using (SqlCommand cmd = new SqlCommand(Stord, Conexion()))
+            {
+                int lastRow = 0;
+                if (Parametros != null)
+                    for (int i = Numeros.CERO; i < Parametros.Length / Numeros.DOS; i++)
+                        cmd.Parameters.AddWithValue(Parametros[i, Numeros.CERO].ToString(), Parametros[i, Numeros.UNO].ToString());
+                cmd.Parameters.Add(new SqlParameter(NombreTabla, TablaSube));
+                cmd.Parameters.Add("@Retorno", SqlDbType.VarChar, -1).Direction = ParameterDirection.Output;
+                cmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    cmd.CommandTimeout = 0;
+                    cmd.Connection.Open();
+                    lastRow = cmd.ExecuteNonQuery();
+                    string result = cmd.Parameters["@Retorno"].Value.ToString();
+                    cmd.Connection.Close();
+                    return result;
+                }
+                catch (Exception e)
+                {
+                    cmd.Connection.Close();
+                    throw new Exception(e.Message);
+                }
+            }
         }
-        
+
     }
 }

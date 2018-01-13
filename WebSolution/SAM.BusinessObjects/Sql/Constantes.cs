@@ -32,6 +32,8 @@ namespace SAM.BusinessObjects.Sql
         public static string ObtieneSpoolIDTabla = "Shop_GET_TablaNumeroControlConSpoolID";
         public static string EliminarSpool = "Shop_SET_EliminarSpool";
         public static string GuardarIncidencia = "Shop_SET_Incidencia";
+        public static string GuardaAutorizacion = "Shop_SET_GuardaAutorizacion";        
+        public static string ResolverEliminarIncidencia = "Shop_ResolverEliminarIncidencia";
     }
 }
 

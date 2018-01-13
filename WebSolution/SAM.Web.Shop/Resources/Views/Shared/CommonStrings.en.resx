@@ -216,4 +216,10 @@
   <data name="New" xml:space="preserve">
     <value>New</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Incident" xml:space="preserve">
+    <value>INCIDENTS</value>
+  </data>
 </root>
