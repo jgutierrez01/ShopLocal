@@ -26,31 +26,32 @@ function NombrarEtiquetas() {
     $("#txtObservacion").css("resize", "none");
 }
 function IniciaGrid() {
-    kendo.ui.Grid.fn.editCell = (function (editCell) {
-        return function (cell) {
-            cell = $(cell);
+    //kendo.ui.Grid.fn.editCell = (function (editCell) {
+    //    return function (cell) {
+    //        cell = $(cell);
 
-            var that = this,
-                column = that.columns[that.cellIndex(cell)],
-                model = that._modelForContainer(cell),
-                event = {
-                    container: cell,
-                    model: model,
-                    preventDefault: function () {
-                        this.isDefaultPrevented = true;
-                    }
-                };
+    //        var that = this,
+    //            column = that.columns[that.cellIndex(cell)],
+    //            model = that._modelForContainer(cell),
+    //            event = {
+    //                container: cell,
+    //                model: model,
+    //                preventDefault: function () {
+    //                    this.isDefaultPrevented = true;
+    //                }
+    //            };
 
-            if (model && typeof this.options.beforeEdit === "function") {
-                this.options.beforeEdit.call(this, event);
-                if (event.isDefaultPrevented) return;
-            }
+    //        if (model && typeof this.options.beforeEdit === "function") {
+    //            this.options.beforeEdit.call(this, event);
+    //            if (event.isDefaultPrevented) return;
+    //        }
 
-            editCell.call(this, cell);
-        };
-    })(kendo.ui.Grid.fn.editCell);
+    //        editCell.call(this, cell);
+    //    };
+    //})(kendo.ui.Grid.fn.editCell);
     $("#grid").kendoGrid({
-        autoBind: true,
+        autoBind: false,
+        autoSync: false,
         edit: function (e) {
             if (e.model.Incidencias > 0) {
                 this.closeCell();
@@ -67,7 +68,7 @@ function IniciaGrid() {
                         Cuadrante: { type: "string", editable: false },
                         NumeroControl: { type: "string", editable: false },
                         Hold: { type: "boolean", editable: false },
-                        Incidencias: { type: "int", editable: false }
+                        Incidencias: { type: "number", editable: false }
                     }
                 }
             },
@@ -75,8 +76,7 @@ function IniciaGrid() {
             serverPaging: false,
             serverFiltering: false,
             serverSorting: false
-        },
-        filterable: false,
+        },       
         navigatable: true,
         editable: true,
         //autoWidth: true,
@@ -89,14 +89,13 @@ function IniciaGrid() {
             info: false,
             input: false,
             numeric: true,
-        },
+        },        
+        filterable: filtroGeneral(),
         columns: [
-            { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", width: "20px" },
-            { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", width: "20px" },
-            { field: "Hold", title: "Hold", template: "#=Hold ? 'Si' : 'No' #", width: "10px", attributes: { style: "text-align: center;" } },            
-            {
-                field: "Incidencias", title: $("html").prop("lang") != "en-US" ? "Num. Incidencias" : "Num. Incidents", width: "10px", attributes: { style: "text-align: center;" }
-            },
+            { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", filterable: filtroTexto(), width: "20px" },                       
+            { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", filterable: filtroTexto(), width: "20px" },
+            { field: "Hold", title: "Hold", template: "#=Hold ? 'Si' : 'No' #", width: "10px", filterable: filtroSI_NO(), attributes: { style: "text-align: center;" }, },
+            { field: "Incidencias", title: $("html").prop("lang") != "en-US" ? "Num. Incidencias" : "Num. Incidents", width: "20px", attributes: { style: "text-align: center;" }, filterable: filtroNumero() },
             {
                 command: {
                     text: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
@@ -116,10 +115,11 @@ function IniciaGrid() {
                 },
                 title: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
                 width: "10px",
-                attributes: { style: "text-align: center; margin: 0 auto" }
+                attributes: { style: "text-align: center; margin: 0 auto" },
+                filterable: false
             }
-        ]       
-    });
+        ]      
+    });    
 }
 
 

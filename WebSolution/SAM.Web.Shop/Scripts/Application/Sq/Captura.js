@@ -70,7 +70,11 @@ function CargarGridPopUp() {
                         var ds = grid.dataSource;
                         var dataItem = grid.dataItem($(e.target).closest("tr"));
                         if (confirm($("html").prop("lang") != "en-US" ? "Realmente Desea Eliminar Esta Incidencia?" : "Do You Really Want To Eliminate This Incidence?")) {
-                            AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect');
+                            if ($("#OrigenIncidencia").val() == 1) {
+                                AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Nuevo');
+                            } else {
+                                AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Editar');
+                            }                            
                         } else {
                             e.preventDefault();
                         }
@@ -89,7 +93,12 @@ function CargarGridPopUp() {
                         var ds = grid.dataSource;
                         var dataItem = grid.dataItem($(e.target).closest("tr"));
                         if (confirm($("html").prop("lang") != "en-US" ? "Confirma Resolver Esta Incidencia?" : "Confirm Resolve This Incidence?")) {
-                            AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect');
+                            if ($("#OrigenIncidencia").val() == 1) {
+                                AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Nuevo');
+                            } else {
+                                AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Editar');
+                            }
+                            
                         } else {
                             e.preventDefault();
                         }
