@@ -82,20 +82,3 @@ D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\D
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Debug\en-US\Mimo.Framework.resources.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Debug\Mimo.Framework.dll
 D:\ANBINTEC\SHOP\Anbintec_Steelgo_SamShop-BakV1\WebSolution\Mimo.Framework\obj\Debug\Mimo.Framework.pdb
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\Mimo.Framework.dll.config
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\Mimo.Framework.dll
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\Mimo.Framework.pdb
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\en-US\Mimo.Framework.resources.dll
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\log4net.dll
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\Microsoft.ReportViewer.Common.dll
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\Microsoft.ReportViewer.WebForms.dll
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\Telerik.Web.UI.dll
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\Microsoft.ReportViewer.WebForms.xml
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\bin\Debug\Telerik.Web.UI.xml
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Debug\Mimo.Framework.csprojResolveAssemblyReference.cache
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Debug\Mimo.Framework.Resources.MimossRadGridMessages.resources
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Debug\Mimo.Framework.Resources.MimossRadGridMessages.en-US.resources
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Debug\Mimo.Framework.csproj.GenerateResource.Cache
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Debug\en-US\Mimo.Framework.resources.dll
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Debug\Mimo.Framework.dll
-C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\Mimo.Framework\obj\Debug\Mimo.Framework.pdb

@@ -201,3 +201,40 @@ function EventoClickCheckAutorizarTodo() {
         }
     });
 }
+
+/*Nuevos Requerimientos Fase 1 Proy: 00056 Shop*/
+function CerrarModalResolucion() {
+    $("#CerrarResolucion").click(function (e) {
+        e.preventDefault();
+        $("#txtDetalleResolucion").val("");
+        $("#VentanaResolucion").data("kendoWindow").close();
+    });
+}
+
+function EventoChangeRadioResolverIncidencia() {
+    $('input[type=radio][name=radioOpcionResolver]').change(function () {
+        if (this.value == 'Otro') {
+            $("#campoDetalleResolver").css("display", "block");
+            $("#txtDetalleResolucion").val("");
+        } else {
+            $("#campoDetalleResolver").css("display", "none");
+            $("#txtDetalleResolucion").val("");
+        }
+    });
+}
+
+function EventoGuardarResolucion() {
+    $("#btnGuardarResolucion").click(function (e) {
+        if ($("input[type=radio][value=Otro]").prop("checked")) {
+            if ($("#txtDetalleResolucion").val() != "") {
+                //(spoolID, incidenciaID, origen, resolucion, accion, esModal)
+                AjaxResolucionIncidencias($("#TmpSpoolID").val(), $("#TmpIncidenciaID").val(), 'AutorizarSI', $("#txtDetalleResolucion").val(), 2, true);
+            } else {
+                ErrorResolucion($("html").prop("lang") != "en-US" ? "Ingrese Como Resolvió La Incidencia" : "Enter How the Incident Was Resolved");
+                $("#txtDetalleResolucion").focus();
+            }
+        } else {
+            AjaxResolucionIncidencias($("#TmpSpoolID").val(), $("#TmpIncidenciaID").val(), 'AutorizarSI', '', 1, true);
+        }
+    });
+}

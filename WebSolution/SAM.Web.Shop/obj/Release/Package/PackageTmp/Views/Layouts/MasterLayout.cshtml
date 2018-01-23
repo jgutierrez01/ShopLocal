@@ -8,9 +8,19 @@
     <title>SAM control @(ViewBag.Title != null ? "- " + ViewBag.Title : string.Empty)</title>
     <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/2014.2.716/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/2014.2.716/kendo.default.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/2014.2.716/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/2014.2.716/kendo.dataviz.default.min.css" rel="stylesheet" />
+    
     @Url.CombresLink("siteCss")
     <script src="~/Scripts/Framework/modernizr-2.7.1.js"></script>
     <script src="~/Scripts/Framework/jquery-1.11.0.min.js"></script>
+
+    <script src="~/Scripts/Framework/jquery-1.11.0.min.js"></script>    
+    <script src="~/Scripts/kendo/2014.2.716/kendo.all.min.js"></script>
+    <script src="~/Scripts/kendo/2014.2.716/cultures/kendo.culture.es-MX.min.js"></script> 
+    <script src="~/Scripts/Application/General.js"></script>   
 </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
@@ -48,6 +58,9 @@
         @RenderSection("breadcrumbs", false)
         <div class="container-fluid">
             @RenderBody()
+        </div>
+        <div class="modal">
+            <!-- Place at bottom of page -->
         </div>
         @Url.CombresLink("frameworkJs")
         @Url.CombresLink("extensionsJs")

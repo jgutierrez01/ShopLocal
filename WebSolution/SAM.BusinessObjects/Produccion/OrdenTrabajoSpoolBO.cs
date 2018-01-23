@@ -1096,7 +1096,7 @@ namespace SAM.BusinessObjects.Produccion
                                     " TipoIncidenciaID," +
                                     " Incidencia " +
                                 " FROM " +
-                                    " Shop_TipoIncidencia";
+                                    " Shop_TipoIncidencia WHERE Activo = 1";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -1125,47 +1125,64 @@ namespace SAM.BusinessObjects.Produccion
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
                 string query = "";
-                if (TipoIncidenciaID == 1) //Materiales 
+                //Cuando el tipo de incidencia es spool
+                if(TipoIncidenciaID != 1 && TipoIncidenciaID != 2)
                 {
-                    query = " SELECT " +
-                                " MaterialSpoolID ID, " +
-                                " Etiqueta " +
-                            " FROM " +
-                                " MaterialSpool " +
-                            " WHERE SpoolID = " + SpoolID +
-                            " ORDER BY Etiqueta ASC";
+                    List<IncidenciaDetalle> lista = new List<IncidenciaDetalle>();
+                    IncidenciaDetalle detalle;
+                    lista.Add(new IncidenciaDetalle());                   
+                    detalle = new IncidenciaDetalle
+                    {
+                        ID = 0,
+                        Etiqueta = "N/A"
+                    };
+                        lista.Add(detalle);                    
+                    return lista;
                 }
                 else
                 {
-                    query = " SELECT " +
-                                " JuntaSpoolID ID, " +
-                                " Etiqueta " +
-                            " FROM " +
-                                " JuntaSpool " +
-                            " WHERE SpoolID = " + SpoolID +
-                            " ORDER BY Etiqueta ASC";
-                }
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-
-                    List<IncidenciaDetalle> lista = new List<IncidenciaDetalle>();
-                    IncidenciaDetalle detalle;
-                    lista.Add(new IncidenciaDetalle());
-                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    if (TipoIncidenciaID == 1) //Materiales 
                     {
-                        detalle = new IncidenciaDetalle
-                        {
-                            ID = int.Parse(ds.Tables[0].Rows[i]["ID"].ToString()),
-                            Etiqueta = ds.Tables[0].Rows[i]["Etiqueta"].ToString()
-                        };
-                        lista.Add(detalle);
+                        query = " SELECT " +
+                                    " MaterialSpoolID ID, " +
+                                    " Etiqueta " +
+                                " FROM " +
+                                    " MaterialSpool " +
+                                " WHERE SpoolID = " + SpoolID +
+                                " ORDER BY Etiqueta ASC";
                     }
-                    return lista;
-                }
+                    else
+                    {
+                        query = " SELECT " +
+                                    " JuntaSpoolID ID, " +
+                                    " Etiqueta " +
+                                " FROM " +
+                                    " JuntaSpool " +
+                                " WHERE SpoolID = " + SpoolID +
+                                " ORDER BY Etiqueta ASC";
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+
+                        List<IncidenciaDetalle> lista = new List<IncidenciaDetalle>();
+                        IncidenciaDetalle detalle;
+                        lista.Add(new IncidenciaDetalle());
+                        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                        {
+                            detalle = new IncidenciaDetalle
+                            {
+                                ID = int.Parse(ds.Tables[0].Rows[i]["ID"].ToString()),
+                                Etiqueta = ds.Tables[0].Rows[i]["Etiqueta"].ToString()
+                            };
+                            lista.Add(detalle);
+                        }
+                        return lista;
+                    }
+                }                
             }
         }
 
@@ -1173,7 +1190,7 @@ namespace SAM.BusinessObjects.Produccion
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
             {
-                string query = " SELECT ErrorIncidenciaID ErrorID, Error FROM Shop_ErrorIncidencia WHERE TipoIncidenciaID = " + TipoIncidenciaID;
+                string query = " SELECT ErrorIncidenciaID ErrorID, Error FROM Shop_ErrorIncidencia WHERE TipoIncidenciaID = " + TipoIncidenciaID + " AND Activo = 1";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -1299,13 +1316,30 @@ namespace SAM.BusinessObjects.Produccion
             }
         }
 
-        public string ResolverEliminarIncidencia(int IncidenciaID, string Origen, string Usuario, int Accion)
+        public string GenerarSI(DataTable Detalle, Guid userID, string Inspector)
+        {
+            try
+            {
+                ObjetosSQL _SQL = new ObjetosSQL();
+                string[,] parametro = {                    
+                    { "@Usuario", userID.ToString() },
+                    { "@Inspector", Inspector }                                        
+                };
+                return _SQL.EjecutaInsertUpdateRetornaString(Stords.GenerarSI, Detalle, "@Datos", parametro);
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
+        public string ResolverEliminarIncidencia(int IncidenciaID, string Origen, string Resolucion, string Usuario, int Accion)
         {
             try
             {
                 /*Origen: Ser refiere a la pantalla donde se resolvió la incidencia*/
                 ObjetosSQL _SQL = new ObjetosSQL();
-                string[,] parametro = { { "@IncidenciaID", IncidenciaID.ToString() }, { "@Accion", Accion.ToString() }, { "@Origen", Origen }, { "@Usuario", Usuario } };
+                string[,] parametro = { { "@IncidenciaID", IncidenciaID.ToString() }, { "@Accion", Accion.ToString() }, { "@Origen", Origen }, { "@Resolucion", Resolucion }, { "@Usuario", Usuario } };
                 return _SQL.EjecutaInsertUpdateRetornaString(Stords.ResolverEliminarIncidencia, parametro);
             }
             catch (Exception e)
@@ -1340,6 +1374,35 @@ namespace SAM.BusinessObjects.Produccion
                 }
             }
         }
+
+        //public int ObtenerOrdenTrabajoSpoolID(string NumeroControl)
+        //{
+        //    using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+        //    {
+        //        string query = " SELECT " +
+        //                            " OT.OrdenTrabajoSpoolID " +
+        //                        " FROM " +
+        //                            " OrdenTrabajoSpool OT " +
+        //                            " INNER JOIN Spool S WITH(NOLOCK) ON OT.SpoolID = S.SpoolID " +
+        //                            " INNER JOIN Proyecto P WITH(NOLOCK) ON S.ProyectoID = P.ProyectoID AND P.Activo = 1 " +
+        //                        " WHERE " +
+        //                            " OT.NumeroControl = '" + NumeroControl + "'";
+        //        using (SqlCommand cmd = new SqlCommand(query, con))
+        //        {
+        //            SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //            DataSet ds = new DataSet();
+        //            da.Fill(ds);
+        //            if (ds.Tables[0].Rows.Count > 0)
+        //            {
+        //                return int.Parse(ds.Tables[0].Rows[0]["OrdenTrabajoSpoolID"].ToString());
+        //            }
+        //            else
+        //            {
+        //                return 0;
+        //            }
+        //        }
+        //    }
+        //}
 
         public string InactivarSpoolDeSI(string NumeroControl, int ProyectoID)
         {
@@ -1380,6 +1443,57 @@ namespace SAM.BusinessObjects.Produccion
             {
                 return e.Message;
             }            
+        }
+
+        public List<AgregarSI> ObtenerSpoolAgregarSI(int SpoolID)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = " SELECT " +
+                                    " S.SpoolID, " +
+                                    " S.ProyectoID, " +
+                                    " C.CuadranteID, " +
+                                    " C.Nombre Cuadrante, " +
+                                    " OT.NumeroControl, " +
+                                    " S.sq SqCliente, " +
+                                    " S.sqinterno SI, " +
+                                    " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END Hold " +
+                                " FROM " +
+                                    " Spool S WITH(NOLOCK) " +
+                                    " INNER JOIN OrdenTrabajoSpool OT WITH(NOLOCK) ON S.SpoolID = OT.SpoolID " +
+                                    " INNER JOIN Cuadrante C WITH(NOLOCK) ON S.CuadranteID = C.CuadranteID " +
+                                    " LEFT JOIN SpoolHold H WITH(NOLOCK) ON S.SpoolID = H.SpoolID " +
+                                    " LEFT JOIN " +
+                                    " ( " +
+                                        " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) WHERE Activo = 1 GROUP BY SpoolID " +
+                                    " ) I ON S.SpoolID = I.SpoolID " +
+                                " WHERE " +
+                                    " S.SpoolID = " + SpoolID + " AND (I.Incidencias = 0 OR I.Incidencias IS NULL) ";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    AgregarSI objeto;
+                    List<AgregarSI> Lista = new List<AgregarSI>();
+                    if(ds.Tables[0].Rows.Count > 0)
+                    {
+                        objeto = new AgregarSI{
+                            SpoolID = int.Parse(ds.Tables[0].Rows[0]["SpoolID"].ToString()),
+                            ProyectoID = int.Parse(ds.Tables[0].Rows[0]["ProyectoID"].ToString()),
+                            CuadranteID = int.Parse(ds.Tables[0].Rows[0]["CuadranteID"].ToString()),
+                            Cuadrante = ds.Tables[0].Rows[0]["Cuadrante"].ToString(),
+                            NumeroControl = ds.Tables[0].Rows[0]["NumeroControl"].ToString(),
+                            SqCliente = ds.Tables[0].Rows[0]["SqCliente"].ToString(),
+                            SI = ds.Tables[0].Rows[0]["SI"].ToString(),
+                            Hold = bool.Parse(ds.Tables[0].Rows[0]["Hold"].ToString())
+                        };
+                        Lista.Add(objeto);
+                    }                    
+                    return Lista;
+                }                
+            }
         }
     }
 }

@@ -20,7 +20,7 @@
 }
 
 
-function AjaxObtenerDetalleIncidencias(TipoIncidencia) {
+function AjaxObtenerDetalleIncidencias(TipoIncidencia) {    
     $.ajax({
         type: 'GET',
         url: '/SQ/ObtenerDetalleIncidencias/',
@@ -32,6 +32,9 @@ function AjaxObtenerDetalleIncidencias(TipoIncidencia) {
                 $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data([]);
                 $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data(result);
                 $("#cmbDetalleIncidencia").data("kendoComboBox").select(0);
+                //if (result.length == 2) {                                        
+                //    $("#cmbDetalleIncidencia").data("kendoComboBox").select(1);
+                //}                
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -264,4 +267,29 @@ function AjaxInactivarSpoolSI(numeroControl) {
         }
     });
     loadingStop();
+}
+
+
+/*Nuevos Requerimientos Fase 1 Proy: 00056 Shop*/
+function AjaxResolucionIncidencias(spoolID, incidenciaID, origen, resolucion, accion, esModal) {
+    $.ajax({
+        type: 'GET',
+        url: '/SQ/ResolucionIncidencias/',
+        dataType: 'json',
+        data: { SpoolID: spoolID, IncidenciaID: incidenciaID, Resolucion: resolucion, Origen: origen, Accion: accion },
+        success: function (data) {
+            if (data[0].result == "OK") {
+                AjaxObtenerIncidencias(spoolID);
+                AjaxObtenerNumeroIncidencias(spoolID);                
+                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Incidencia Resuelta Correctamente" : "Incident Resolved Correctly");
+                $("#CerrarResolucion").trigger("click");
+            } else {
+                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Error Al Resolver Incidencia" : "Error Resolving Incident");
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop();
+            alert("Error Resolviendo incidencias: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
 }

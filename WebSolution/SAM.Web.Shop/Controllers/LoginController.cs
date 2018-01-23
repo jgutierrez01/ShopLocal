@@ -48,6 +48,9 @@ namespace SAM.Web.Shop.Controllers
         [HttpGet]
         public ActionResult Logout()
         {
+            Session["ListaSpoolsResueltos"] = null;
+            Session["ListaNumControlEdit"] = null;
+            Session["ListaNumControlAdd"] = null;    
             return View("Index");
         }
     }

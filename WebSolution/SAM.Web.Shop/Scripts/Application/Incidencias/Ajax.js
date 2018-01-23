@@ -44,11 +44,11 @@ function AjaxObtenerSpools(proyecto, cuadranteID) {
             if (data[0].result == "NODATA") {
                 loadingStop();
                 if(proyecto != 0 && cuadranteID != 0){
-                    MostrarError($("html").prop("lang") == "en-US" ? "No Information Was Found With this Project And Quadrant " : "No Se Encontró Información Con Este Proyecto y Cuadrante ");
+                    MostrarMensaje($("html").prop("lang") == "en-US" ? "No Information Was Found With this Project And Quadrant " : "No Se Encontró Información Con Este Proyecto y Cuadrante ", "seccionError");
                 } else if(proyecto != 0 && cuadranteID == 0) {
-                    MostrarError($("html").prop("lang") == "en-US" ? "No Information Was Found With this Project " : "No Se Encontró Información Con Este Proyecto ");
+                    MostrarMensaje($("html").prop("lang") == "en-US" ? "No Information Was Found With this Project " : "No Se Encontró Información Con Este Proyecto ", "seccionError");
                 } else {
-                    MostrarError($("html").prop("lang") == "en-US" ? "No Information Was Found With this Quadrant " : "No Se Encontró Información Con Este Cuadrante ");
+                    MostrarMensaje($("html").prop("lang") == "en-US" ? "No Information Was Found With this Quadrant " : "No Se Encontró Información Con Este Cuadrante ", "seccionError");
                 }                
                 $("#grid").data("kendoGrid").dataSource.data([]);
                 $("#contieneGrid").css("display", "none");
@@ -154,7 +154,7 @@ function AjaxObtenerIncidencias(Spool) {
                 $("#ContenedorGridPopUp").css("display", "block");
                 $(".k-grid-pager").css("width", "100%");
             } else {
-                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "No Hay Incidencias Registradas" : "There are no Registered Incidents");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "No Hay Incidencias Registradas" : "There are no Registered Incidents", "seccionErrorGrid");
                 $("#ContenedorGridPopUp").css("display", "none");
             }
         },
@@ -185,14 +185,14 @@ function AjaxGuardarIncidencia() {
         success: function (data) {
             if (data[0].result == "OK") {
                 BorrarCampos();
-                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Guardado Exitoso" : "Saved Successful");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Guardado Exitoso" : "Saved Successful", "seccionAvisoGrid");
                 AjaxObtenerIncidencias(SpoolIDGlobal);
                 AjaxObtenerTipoIncidencias();
                 AjaxObtenerSpools(($("#ProjectIdADD").val() == undefined || $("#ProjectIdADD").val() == "" ? 0 : $("#ProjectIdADD").val()), ($("#QuadrantIdCADD").val() == undefined || $("#QuadrantIdCADD").val() == "" ? 0 : $("#QuadrantIdCADD").val()));
                 loadingStop();
             } else {
                 loadingStop();
-                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred", "seccionErrorGrid");
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -218,12 +218,12 @@ function AjaxGuardarAutorizacion(ds) {
         data: { Captura: JSON.stringify(ListaDetalleCaptura) },
         success: function (data) {
             if (data[0].result == "OK") {
-                MostrarSuccess($("html").prop("lang") != "en-US" ? "Guardado Correctamente" : "Saved Successfully");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Guardado Correctamente" : "Saved Successfully", "seccionSuccess");
                 AjaxObtenerSpools(($("#ProjectIdADD").val() == undefined || $("#ProjectIdADD").val() == "" ? 0 : $("#ProjectIdADD").val()), ($("#QuadrantIdCADD").val() == undefined || $("#QuadrantIdCADD").val() == "" ? 0 : $("#QuadrantIdCADD").val()));
                 loadingStop();
             } else {
                 loadingStop();
-                MostrarError($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred", "seccionError");
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -233,7 +233,7 @@ function AjaxGuardarAutorizacion(ds) {
     });
 }
 
-function AjaxEliminarIncidencia(incidenciaID, SpoolID, pantalla) {
+function AjaxEliminarIncidencia(incidenciaID, SpoolID, pantalla, esModal) {
     $.ajax({
         type: 'GET',
         url: '/SQ/ResolverEliminarIncidencia/',
@@ -241,11 +241,14 @@ function AjaxEliminarIncidencia(incidenciaID, SpoolID, pantalla) {
         data: { IncidenciaID: incidenciaID, Origen: pantalla, Accion: 1 },
         success: function (data) {
             if (data[0].result == "OK") {
-                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Incidencia Eliminada Correctamente" : "Incident Deleted Correctly");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Incidencia Eliminada Correctamente" : "Incident Deleted Correctly", "seccionAvisoGrid");
                 AjaxObtenerIncidencias(SpoolID);
                 AjaxObtenerSpools(($("#ProjectIdADD").val() == undefined || $("#ProjectIdADD").val() == "" ? 0 : $("#ProjectIdADD").val()), ($("#QuadrantIdCADD").val() == undefined || $("#QuadrantIdCADD").val() == "" ? 0 : $("#QuadrantIdCADD").val()));
+                if (esModal) {
+                    $("#CerrarResolucion").trigger("click");
+                }
             } else {
-                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Error Al Eliminar Incidencia" : "Error Deleting Incident");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Error Al Eliminar Incidencia" : "Error Deleting Incident", "seccionErrorGrid");
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -264,11 +267,11 @@ function AjaxResolverIncidencia(incidenciaID, SpoolID, pantalla) {
         data: { IncidenciaID: incidenciaID, Origen: pantalla, Accion: 2 },
         success: function (data) {
             if (data[0].result == "OK") {
-                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Incidencia Resuelta Correctamente" : "Incident Resolved Correctly");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Incidencia Resuelta Correctamente" : "Incident Resolved Correctly", "seccionAvisoGrid");
                 AjaxObtenerIncidencias(SpoolID);
                 AjaxObtenerSpools(($("#ProjectIdADD").val() == undefined || $("#ProjectIdADD").val() == "" ? 0 : $("#ProjectIdADD").val()), ($("#QuadrantIdCADD").val() == undefined || $("#QuadrantIdCADD").val() == "" ? 0 : $("#QuadrantIdCADD").val()));
             } else {
-                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Error Al Resolver Incidencia" : "Error Resolving Incident");
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Error Al Resolver Incidencia" : "Error Resolving Incident", "seccionErrorGrid");
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -276,4 +279,197 @@ function AjaxResolverIncidencia(incidenciaID, SpoolID, pantalla) {
             alert("Error Obteniendo Tipos de Incidencias: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
         }
     });
+}
+
+
+/*Nuevos Requerimientos Fase 1 Proy: 00056 Shop*/
+function AjaxResolucionIncidencias(spoolID, incidenciaID, origen, resolucion, accion, esModal) {
+    $.ajax({
+        type: 'GET',
+        url: '/SQ/ResolucionIncidencias/',
+        dataType: 'json',
+        data: { SpoolID: spoolID, IncidenciaID: incidenciaID, Resolucion: resolucion, Origen: origen, Accion: accion },
+        success: function (data) {
+            if (data[0].result == "OK") {                
+                AjaxObtenerIncidencias(spoolID);
+                AjaxObtenerSpools(($("#ProjectIdADD").val() == undefined || $("#ProjectIdADD").val() == "" ? 0 : $("#ProjectIdADD").val()), ($("#QuadrantIdCADD").val() == undefined || $("#QuadrantIdCADD").val() == "" ? 0 : $("#QuadrantIdCADD").val()));
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Incidencia Resuelta Correctamente" : "Incident Resolved Correctly", "seccionAvisoGrid");
+                $("#CerrarResolucion").trigger("click");
+            } else {
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Error Al Resolver Incidencia" : "Error Resolving Incident", "seccionErrorGrid");
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop();
+            alert("Error Resolviendo incidencias: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
+}
+
+//Funcion que retorna valor mediante otra function
+function AjaxObtenerNumeroIncidencias(getNumIncidencia) {    
+    $.ajax({
+        async: false,
+        type: 'GET',
+        url: '/SQ/ObtenerNumeroIncidencias/',
+        dataType: 'json',
+        data: { SpoolID: SpoolIDGlobal },
+        success: function (data) {            
+            getNumIncidencia(data[0].result);
+        }
+    });   
+}
+
+
+function AjaxObtenerSpoolAgregarSI(Spool) {
+    loadingStart();
+    $.ajax({
+        type: 'GET',
+        url: '/Incidencias/ObtenerSpoolAgregarSI/',
+        dataType: 'json',
+        data: { SpoolID: Spool },
+        success: function (data) {
+            if (data[0].result != "NODATA") {                
+                if ($("#gridResueltos").hasClass("k-widget")) {
+                    $("#gridResueltos").removeClass("k-widget");
+                }
+                loadingStop();
+                var result = JSON.parse(data[0].result);
+                var grid = $("#gridResueltos").data("kendoGrid");
+                var ds = grid.dataSource;
+                ds.add(result[0]);                
+                //$("#gridResueltos").data("kendoGrid").dataSource.add(result);
+                $("#contenedorSpoolsResueltos").css("display", "block");
+                $(".k-grid-pager").css("width", "100%");
+            } else {
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "No Se Encontró Información" : "Not Data Found", "seccionError");
+                if ($("#gridResueltos").data("kendoGrid").dataSource.data().length == 0) {
+                    $("#contenedorSpoolsResueltos").css("display", "none");
+                }
+                loadingStop();
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop();
+            alert("Error Obteniendo Informacion de Spool: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
+}
+
+function AjaxObtenerSpoolsResueltos() {
+    $.ajax({
+        type: 'GET',
+        url: '/Incidencias/ObtenerSpoolsResueltos/',
+        dataType: 'json',
+        data: {},
+        success: function (data) {
+            if (data[0].result != "NODATA") {                
+                if ($("#gridResueltos").hasClass("k-widget")) {
+                    $("#gridResueltos").removeClass("k-widget");
+                }
+                loadingStop();
+                var result = JSON.parse(data[0].result);
+                $("#gridResueltos").data("kendoGrid").dataSource.data([]);
+                $("#gridResueltos").data("kendoGrid").dataSource.data(result);
+                if ($("#gridResueltos").data("kendoGrid").dataSource.data().length > 0) {
+                    $("#contenedorSpoolsResueltos").css("display", "block");
+                    $(".k-grid-pager").css("width", "100%");
+                } else {
+                    $("#contenedorSpoolsResueltos").css("display", "none");
+                }
+                
+                
+            } else {
+                $("#contenedorSpoolsResueltos").css("display", "none");
+                $("#gridResueltos").data("kendoGrid").dataSource.data([]);                
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop();
+            alert("Error Obteniendo Spools Resueltos: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
+}
+function AjaxEliminarSpoolsDeSession(Spool) {
+    loadingStart();
+    $.ajax({
+        type: 'GET',
+        url: '/Incidencias/EliminarSpoolDeSession/',
+        dataType: 'json',
+        data: {SpoolID: Spool },
+        success: function (data) {
+            if (data[0].result == "OK") {
+                loadingStop();
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Spool Eliminado Correctamente" : "Spoold Deleted Successfully", "seccionSuccess");
+            } 
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop();
+            alert("Error Eliminando Spools de Session: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
+}
+
+function AjaxGenerarSI(ds) {   
+    var data = ds.data();
+    if ($("#gridResueltos").data("kendoGrid").dataSource.data().length > 0) {
+        var msgSqcliente = "", msgSI = "", msgHold = "";
+        for (var i = 0; i < data.length; i++) {
+            if (data[i].SqCliente != "") {
+                msgSqcliente += $("html").prop("lang") != "en-US" ? "El Spool " + data[i].NumeroControl + " Tiene SI Agregado" : "The Spool " + data[i].NumeroControl + " Has IR Added \n";
+            }
+            if (data[i].SI != "") {
+                msgSI += $("html").prop("lang") != "en-US" ? "El Spool " + data[i].NumeroControl + " Se Encuentra En La SI: " + data[i].SI : "The Spool " + data[i].NumeroControl + " Is In IR:  " + data[i].SI + " \n";
+            }
+            if (data[i].Hold) {
+                msgHold += $("html").prop("lang") != "en-US" ? "El Spool " + data[i].NumeroControl + " Tiene Hold." : "The Spool " + data[i].NumeroControl + " Has Hold \n";
+            }
+        }    
+
+        var ListaDetalleCaptura = [];
+        for (var x = 0; x < data.length; x++) {
+            ListaDetalleCaptura[x] = { SpoolID: 0, ProyectoID: 0, CuadranteID: 0 };
+            if (data[x].SqCliente == "" ) {
+                if (data[x].SI == "" ) {
+                    if (!data[x].Hold) {
+                        ListaDetalleCaptura[x].SpoolID = data[x].SpoolID;
+                        ListaDetalleCaptura[x].ProyectoID = data[x].ProyectoID;
+                        ListaDetalleCaptura[x].CuadranteID = data[x].CuadranteID;
+                    }
+                }
+            }        
+        }
+        if (msgSqcliente != "" || msgSI != "" || msgHold != "") {
+            MostrarMensaje(msgSqcliente + "\n" + msgSI + "\n" + msgHold + "\n", "msgError");
+        }
+        if (ListaDetalleCaptura != null) {
+            loadingStart();
+            $.ajax({
+                type: 'GET',
+                url: '/Incidencias/GenerarSI/',
+                contentType: "application/json; charset=utf-8",
+                dataType: 'json',
+                data: { Data: JSON.stringify(ListaDetalleCaptura) },
+                success: function (data) {
+                    if (data[0].result != "") {
+                        //Correcto
+                        loadingStop();
+                        MostrarMensajeConTiempo(data[0].result, "msgExito", 10000);
+                        $("#gridResueltos").data("kendoGrid").dataSource.data([]);
+                        $("#contenedorSpoolsResueltos").css("display", "none");
+                    } else {
+                        //Error
+                        loadingStop();
+                        MostrarMensaje($("html").prop("lang") != "en-US" ? "Ocurrio Un Error: " + data[0].result : "An Error Ocurred: " + data[0].result, "msgError");
+                    }                
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    loadingStop();
+                    MostrarMensaje("Ocurrió un Error: ");
+                }
+            });
+        } 
+    } else {
+        MostrarMensaje($("html").prop("lang") != "en-US" ? "No Hay Spools Para Generar SI" : "Not Spools To Generate IR" , "msgError");
+    }    
 }

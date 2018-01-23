@@ -237,4 +237,10 @@
   <data name="Incident" xml:space="preserve">
     <value>INCIDENCIAS</value>
   </data>
+  <data name="GenerarSI" xml:space="preserve">
+    <value>GenerarSI</value>
+  </data>
+  <data name="SpoolResuelto" xml:space="preserve">
+    <value>Resueltos</value>
+  </data>
 </root>

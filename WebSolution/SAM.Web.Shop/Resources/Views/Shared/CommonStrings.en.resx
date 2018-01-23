@@ -222,4 +222,10 @@
   <data name="Incident" xml:space="preserve">
     <value>INCIDENTS</value>
   </data>
+  <data name="GenerarSI" xml:space="preserve">
+    <value>GenerateIR</value>
+  </data>
+  <data name="SpoolResuelto" xml:space="preserve">
+    <value>Solved</value>
+  </data>
 </root>

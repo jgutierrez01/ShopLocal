@@ -169,6 +169,15 @@ namespace Resources.Views {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GenerarSI.
+        /// </summary>
+        public static string GenerarSI {
+            get {
+                return ResourceManager.GetString("GenerarSI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to INCIDENCIAS.
         /// </summary>
         public static string Incident {
@@ -372,6 +381,15 @@ namespace Resources.Views {
         public static string Spool {
             get {
                 return ResourceManager.GetString("Spool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resueltos.
+        /// </summary>
+        public static string SpoolResuelto {
+            get {
+                return ResourceManager.GetString("SpoolResuelto", resourceCulture);
             }
         }
         

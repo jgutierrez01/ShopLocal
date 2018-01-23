@@ -86,7 +86,7 @@ function CerrarVentanaModal() {
 
 function EventoGuardarIncidencia() {
     $("#btnGuardar").click(function (e) {
-        if ($("#cmbTipoIncidencia").val() != 0 && $("#cmbTipoIncidencia").val() != undefined) {
+        if ($("#cmbTipoIncidencia").val() != 0 && $("#cmbTipoIncidencia").val() != undefined) {                       
             if ($("#cmbDetalleIncidencia").val() != 0 && $("#cmbDetalleIncidencia").val() != undefined) {
                 if ($("#cmbErrores").val() != 0 && $("#cmbErrores").val() != undefined) {
                     AjaxGuardarIncidencia();
@@ -98,6 +98,43 @@ function EventoGuardarIncidencia() {
             }
         } else {
             MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Seleccione un Tipo de Incidencia" : "Select Incident Type");
+        }
+    });
+}
+
+/*Nuevos Requerimientos Fase 1 Proy: 00056 Shop*/
+function CerrarModalResolucion() {
+    $("#CerrarResolucion").click(function (e) {
+        e.preventDefault();
+        $("#txtDetalleResolucion").val("");
+        $("#VentanaResolucion").data("kendoWindow").close();
+    });
+}
+
+function EventoChangeRadioResolverIncidencia() {
+    $('input[type=radio][name=radioOpcionResolver]').change(function () {
+        if (this.value == 'Otro') {
+            $("#campoDetalleResolver").css("display", "block");
+            $("#txtDetalleResolucion").val("");
+        } else {
+            $("#campoDetalleResolver").css("display", "none");
+            $("#txtDetalleResolucion").val("");
+        }
+    });
+}
+
+function EventoGuardarResolucion() {
+    $("#btnGuardarResolucion").click(function (e) {
+        if ($("input[type=radio][value=Otro]").prop("checked")) {
+            if ($("#txtDetalleResolucion").val() != "") {
+                //(spoolID, incidenciaID, origen, resolucion, accion, esModal)
+                AjaxResolucionIncidencias($("#TmpSpoolID").val(), $("#TmpIncidenciaID").val(), $("#OrigenIncidencia").val() == 1 ? "Sol.Inspect Nuevo" : "Sol.Inspect Editar", $("#txtDetalleResolucion").val(), 2, true);
+            } else {
+                ErrorResolucion($("html").prop("lang") != "en-US" ? "Ingrese Como Resolvió La Incidencia" : "Enter How the Incident Was Resolved");
+                $("#txtDetalleResolucion").focus();
+            }
+        } else {
+            AjaxResolucionIncidencias($("#TmpSpoolID").val(), $("#TmpIncidenciaID").val(), $("#OrigenIncidencia").val() == 1 ? "Sol.Inspect Nuevo" : "Sol.Inspect Editar", '', 1, true);
         }
     });
 }

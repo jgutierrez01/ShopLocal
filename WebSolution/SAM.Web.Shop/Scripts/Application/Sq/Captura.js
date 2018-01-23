@@ -12,6 +12,9 @@ function ActivarEventos(){
     CerrarVentanaModal();
     NombrarEtiquetas();
     EventoGuardarIncidencia();
+    CerrarModalResolucion();
+    EventoChangeRadioResolverIncidencia();
+    EventoGuardarResolucion();
 }
 
 function CargarGridPopUp() {
@@ -61,29 +64,29 @@ function CargarGridPopUp() {
             { field: "Error", title: "Error", width: "30px" },
             { field: "Observaciones", title: $("html").prop("lang") != "en-US" ? "Observaciones" : "Observations", width: "20px" },
             //{ field: "SI", title: "SI", width: "20px" },
-            {
-                command: {
-                    text: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-                    className: "k-button k-button-icontext k-grid-Cancelar ",
-                    click: function (e) {
-                        var grid = $("#gridPopUp").data("kendoGrid");
-                        var ds = grid.dataSource;
-                        var dataItem = grid.dataItem($(e.target).closest("tr"));
-                        if (confirm($("html").prop("lang") != "en-US" ? "Realmente Desea Eliminar Esta Incidencia?" : "Do You Really Want To Eliminate This Incidence?")) {
-                            if ($("#OrigenIncidencia").val() == 1) {
-                                AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Nuevo');
-                            } else {
-                                AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Editar');
-                            }                            
-                        } else {
-                            e.preventDefault();
-                        }
-                    }
-                },
-                title: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-                width: "10px",
-                attributes: { style: "text-align: center; margin: 0 auto" }
-            },
+            //{
+            //    command: {
+            //        text: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
+            //        className: "k-button k-button-icontext k-grid-Cancelar ",
+            //        click: function (e) {
+            //            var grid = $("#gridPopUp").data("kendoGrid");
+            //            var ds = grid.dataSource;
+            //            var dataItem = grid.dataItem($(e.target).closest("tr"));
+            //            if (confirm($("html").prop("lang") != "en-US" ? "Realmente Desea Eliminar Esta Incidencia?" : "Do You Really Want To Eliminate This Incidence?")) {
+            //                if ($("#OrigenIncidencia").val() == 1) {
+            //                    AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Nuevo');
+            //                } else {
+            //                    AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Editar');
+            //                }                            
+            //            } else {
+            //                e.preventDefault();
+            //            }
+            //        }
+            //    },
+            //    title: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
+            //    width: "10px",
+            //    attributes: { style: "text-align: center; margin: 0 auto" }
+            //},
             {
                 command: {
                     text: $("html").prop("lang") != "en-US" ? "Resolver" : "Solve",
@@ -91,17 +94,28 @@ function CargarGridPopUp() {
                     click: function (e) {
                         var grid = $("#gridPopUp").data("kendoGrid");
                         var ds = grid.dataSource;
-                        var dataItem = grid.dataItem($(e.target).closest("tr"));
-                        if (confirm($("html").prop("lang") != "en-US" ? "Confirma Resolver Esta Incidencia?" : "Confirm Resolve This Incidence?")) {
-                            if ($("#OrigenIncidencia").val() == 1) {
-                                AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Nuevo');
-                            } else {
-                                AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Editar');
-                            }
+                        var dataItem = grid.dataItem($(e.target).closest("tr"));                                                
+                        $("#txtInfoIncidencia").text(
+                            $("html").prop("lang") != "en-US" ? "Incidencia: " + dataItem.Incidencia + "\n Material/Junta: " + dataItem.MaterialJunta :
+                            "Incidence: " + dataItem.Incidencia + "\n Material/Joint: " + dataItem.MaterialJunta
+                        );
+                        /*Guardo valores para poder identificar que incidencia fue y que spool en la ventana modal*/
+                        $("#TmpSpoolID").val(dataItem.SpoolID);
+                        $("#TmpIncidenciaID").val(dataItem.IncidenciaID);                        
+                        AbrirVentanaResolucion();
+                        //var grid = $("#gridPopUp").data("kendoGrid");
+                        //var ds = grid.dataSource;
+                        //var dataItem = grid.dataItem($(e.target).closest("tr"));
+                        //if (confirm($("html").prop("lang") != "en-US" ? "Confirma Resolver Esta Incidencia?" : "Confirm Resolve This Incidence?")) {
+                        //    if ($("#OrigenIncidencia").val() == 1) {
+                        //        AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Nuevo');
+                        //    } else {
+                        //        AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Editar');
+                        //    }
                             
-                        } else {
-                            e.preventDefault();
-                        }
+                        //} else {
+                        //    e.preventDefault();
+                        //}
                     }
                 },
                 title: $("html").prop("lang") != "en-US" ? "Resolver" : "Solve",
@@ -148,6 +162,11 @@ function NombrarEtiquetas() {
     $("#lblObservacion").text($("html").prop("lang") != "en-US" ? "Observaciones" : "Observations");
     $("#lblAutorizaTodo").text($("html").prop("lang") != "en-US" ? "Autorizar Todos" : "Authorize All");
     $("#txtObservacion").css("resize", "none");
+    /*Nuevos requerimientos Shop*/
+    $("#txtTituloOpcion1").text($("html").prop("lang") != "en-US" ? "Error de Captura" : "Capture Error");
+    $("#txtTituloOpcion2").text($("html").prop("lang") != "en-US" ? "Otro" : "Other");
+    $("#lblDetalleResolucion").text($("html").prop("lang") != "en-US" ? "Indique Como Se Resolvió La Incidencia" : "Indicate How the Incident Was Resolved");
+    $("#txtDetalleResolucion").css("resize", "none");
 }
 
 function MostrarErrorGrid(Error) {    
@@ -250,4 +269,57 @@ function EliminarSpoolDeTabla(NumeroControl) { //Solo Aplica para editar ya que 
     $("#gridEditar table").find('tr').filter(function () {
         return $(this).html().indexOf(NumeroControl) != -1;
     }).remove();
+}
+
+
+
+/*Nuevos Requerimientos Fase 1 Proy: 00056 Shop*/
+function AbrirVentanaResolucion() {
+    $('input[type=radio][value=Otro]').prop("checked", true).trigger("change"); //Por Default es Error de Captura
+    var modalTitle = "";
+    modalTitle = $("html").prop("lang") != "en-US" ? "Resolver Incidencia" : "Resolve Incidence";
+    var window = $("#VentanaResolucion");
+    var win = window.kendoWindow({
+        modal: true,
+        title: modalTitle,
+        resizable: false,
+        visible: true,
+        width: "70%",
+        minWidth: 30,
+        position: {
+            top: "10px",
+            left: "10px"
+        },
+        actions: [
+            "Close"
+        ],
+        close: function onClose(e) {
+            $("#txtDetalleResolucion").val("");
+        }
+    }).data("kendoWindow");
+    window.data("kendoWindow").title(modalTitle);
+    window.data("kendoWindow").center().open();//.element.closest(".k-window").css({ top: 15, left: 15 });
+    window.parent().find(".k-window-action").css("visibility", "hidden");
+}
+
+
+function ErrorResolucion(Error) {
+    $("#ErrorResolucion").append("");
+    $("#ErrorResolucion").html("");
+    $("#ErrorResolucion").css("display", "block");
+    $("#ErrorResolucion").append(Error);
+    BorrarErrorResolucion();
+}
+function BorrarErrorResolucion() {
+    clearTimeout(timeOut);
+    if (!$("#ErrorResolucion").is("visible")) {
+        timeOut = setTimeout(function () {
+            $("#ErrorResolucion").fadeTo(1000, 500).slideUp(500, function () {
+                $("#ErrorResolucion").slideUp(500);
+                $("#ErrorResolucion").append("");
+                $("#ErrorResolucion").html("");
+                $("#ErrorResolucion").css("display", "none");
+            });
+        }, 2000);
+    }
 }

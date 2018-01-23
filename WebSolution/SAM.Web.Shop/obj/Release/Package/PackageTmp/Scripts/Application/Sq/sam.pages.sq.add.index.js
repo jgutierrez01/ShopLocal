@@ -16,7 +16,6 @@
 
             var $selectedRadio;
            
-
             $cuadranteContainer = $cnt.find("#cuadranteContainer");
             $numeroControlContainer = $cnt.find("#numeroControlContainer");
             var ProyectoIDAddAnterior = ($("#ProyectoAnteriorAdd").val() == null || $("#ProyectoAnteriorAdd").val() == undefined) ? 0 : $("#ProyectoAnteriorAdd").val();
@@ -39,9 +38,9 @@
                         $cnt.find("#wo-addon-text").text(item.WorkOrderPrefix);
                         var projectId = $(this).val();
                         $cntWkS.find("input[id^='ProjectIdADD']").val(projectId);
+                        $("#ProjectIdEditar").val(projectId);
                         $.getJSON('/Controls/LimpiarGridAdd', { ProyectoID: projectId }, function (data) {
-                            $.each(data, function (i, item) {
-                                //window.location = "/SQ/AddNC?ProjectId=" + projectId;
+                            $.each(data, function (i, item) {                                
                                 window.location = "/SQ/";
                                 $("#ProyectoAnteriorAdd").val(projectId);
                             });
@@ -50,6 +49,7 @@
                         var projectId = ProyectoIDAddAnterior;
                         $("select#ProjectIdADD").val(projectId).prop("selected", true);
                         $cntWkS.find("input[id^='ProjectIdADD']").val(projectId);
+                        $("#ProjectIdEditar").val(projectId);
                         item = $(this).find("option:selected").data("item");
                         $cnt.find("#wo-addon-text").text(item.WorkOrderPrefix);
                         $.getJSON('/Controls/UpdateProjetId', { ID: projectId }, function (data) {
@@ -67,6 +67,7 @@
                         $cnt.find("#wo-addon-text").text(item.WorkOrderPrefix);
                         var projectId = $(this).val();
                         $cntWkS.find("input[id^='ProjectIdADD']").val(projectId);
+                        $("#ProjectIdEditar").val(projectId);
                         $.getJSON('/Controls/UpdateProjetId', { ID: projectId }, function (data) {
                             $.each(data, function (i, item) {
                                 console.log('value project : ', item.result);
@@ -74,22 +75,173 @@
                             });
                         });
 
+                        //Verifico si el proyecto tiene inicializado algun consecutivo
+                        if ($("#ProjectIdADD").val() != "" && $("#ProjectIdADD").val() != undefined) {
+                            $.ajax({
+                                type: 'GET',
+                                url: '/SQ/VerificarConsecutivoProyecto/',
+                                dataType: 'json',
+                                data: { ProyectoID: $("#ProjectIdADD").val() },
+                                success: function (data) {
+                                    if (data[0].result == "0") {
+                                        $("#errorClient").css("display", "block");
+                                        $("#errorClient").html("");
+                                        $("#errorClient").append("Este Proyecto No Tiene Inicializado Ningun Consecutivo <br>");
+                                        $("#TieneConsecutivoAdd").val("0");
+                                    } else {
+                                        $("#TieneConsecutivoAdd").val("1");
+                                        $("#errorClient").html("");
+                                        $("#errorClient").append("");
+                                        $("#errorClient").css("display", "none");
+
+                                    }
+                                },
+                                error: function () {
+                                    alert("Ocurrio un error");
+                                }
+                            });
+                        }
+                        
                     } else {
                         $cnt.find("#wo-addon-text").text("");
                     }
                 }                                
             });
+                  
+
+            $("#resumenSpool").click(function (e) { //Boton Guardar
+                var msg = "";
+                var cont = 0;
+                if ($("#TieneConsecutivoAdd").val() == "0") {
+                    cont++;
+                    msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                }
+
+                if ($("#gridAdd").find("table").find("tbody").length == 0) {
+                    cont++;
+                    msg += "No Hay Datos Por Guardar <br>";
+                }
+
+                if (cont > 0) {
+                    $("#errorClient").css("display", "block");
+                    $("#errorClient").html("");
+                    $("#errorClient").append(msg);
+                    e.preventDefault();
+                } else {
+                    $("#errorClient").css("display", "none");
+                    $("#errorClient").append("");
+                }
+            });
+
+
+            $("#resumenSpool1Add, #resumenSpool2Add").click(function (e) {
+                var msg = "";
+                var cont = 0;                
+                if ($("input[name=SearchTypeADD]:checked").val() == "c") {
+                    if ($("#TieneConsecutivoAdd").val() == "0") {
+                        cont++;
+                        msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                    }
+
+                    if ($("#ProjectIdADD").val() == 0) {
+                        cont++;
+                        msg += "Seleccione Proyecto <br>";
+                    }
+
+                    if ($("#QuadrantIdCADD").val() == 0) {
+                        cont++;
+                        msg += "Ingrese Cuadrante <br>";
+                    }
+                    
+                    if (cont > 0) {
+                        $("#errorClient").css("display", "block");
+                        $("#errorClient").html("");
+                        $("#errorClient").append("");
+                        $("#errorClient").append(msg);
+                        e.preventDefault();
+                    } else {
+                        $("#errorClient").css("display", "none");
+                        $("#errorClient").append("");
+                    }
+                } else {
+                    if ($("#TieneConsecutivoAdd").val() == "0") {
+                        cont++;
+                        msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
+                    }
+                    if ($("#ProjectIdADD").val() == 0) {
+                        cont++;
+                        msg += "Seleccione Proyecto <br>";
+                    }
+                    if ($("#WorkOrderNumberADD").val() == "") {
+                        cont++;
+                        msg += "Ingrese Orden de Trabajo <br>";
+                    }
+                    if ($("#ControlNumberADD").val() == "") {
+                        cont++;
+                        msg += "Ingrese Numero de Control <br>";
+                    }
+
+                    if ($("#QuadrantIdNCADD").val() == 0) {
+                        cont++;
+                        msg += "Ingrese Cuadrante <br>";
+                    }
+
+                    if (cont > 0) {
+                        $("#errorClient").css("display", "block");
+                        $("#errorClient").html("");
+                        $("#errorClient").append("");
+                        $("#errorClient").append(msg);
+                        e.preventDefault();
+                    } else {
+                        $("#errorClient").css("display", "none");
+                        $("#errorClient").append("");
+                    }
+
+                }                                                               
+            });
+
+            $("#QuadrantIdCADD").change(function () {
+                if ($(this).val() != 0) {
+                    var CuadranteID = $(this).val();
+                    $.getJSON('/Controls/UpdateCuadranteID', { CuadranteID: CuadranteID }, function (data) {
+                        $.each(data, function (i, item) {
+                            if (item.result == "OK") {
+                                console.log('cuadrante Actualizdao : ', item.result);
+                                $("#QuadrantIdCADD").val(CuadranteID);
+                                $("#QuadrantIdNCADD").val(CuadranteID);
+                                $("#QuadrantIdNCEdit").val(CuadranteID);
+                                $("#QuadrantIdCEdit").val(CuadranteID);
+                            }
+                        });
+                    });
+
+                }
+            });
+            $cnt.find("#QuadrantIdNCADD").change(function () {
+                if ($(this).val() != 0) {
+                    var CuadranteID = $(this).val();
+                    $.getJSON('/Controls/UpdateCuadranteID', { CuadranteID: CuadranteID }, function (data) {
+                        $.each(data, function (i, item) {
+                            if (item.result == "OK") {
+                                console.log('cuadrante Actualizdao : ', item.result);
+                                $("#QuadrantIdCADD").val(CuadranteID);
+                                $("#QuadrantIdNCADD").val(CuadranteID);
+                                $("#QuadrantIdNCEdit").val(CuadranteID);
+                                $("#QuadrantIdCEdit").val(CuadranteID);
+                            }
+                        });
+                    });
+                }
+            });
+
 
             $cnt.find("input[id^='SearchType']").click(function () {
-                               
+                $("#errorClient").css("display", "none");
+                $("#errorClient").append("");
                 switch ($(this).val()) {
                     case "c":
                         $cuadranteContainer.show();
-                        $numeroControlContainer.hide();                        
-                        //$cnt.find("input[id^='ControlNumber']").val('');
-                        //$cnt.find("input[id^='WorkOrderNumber']").val('');
-                        //$cnt.find("#ProjectId").trigger("change");
-                        //$cnt.find("input[id^='WorkOrderNumber']").focus();
+                        $numeroControlContainer.hide();                                             
                         break;
                     case "nc":
                         $cuadranteContainer.hide();
@@ -99,22 +251,12 @@
                             $cnt.find("#wo-addon-text").text(item.WorkOrderPrefix);
                         } else {
                             $cnt.find("#wo-addon-text").text("");
-                        }
-                        //$cnt.find("input[id^='SpoolName']").val('');
-                        //$cnt.find("input[id^='SpoolName']").focus();
+                        }                        
                         break;
                     default:
                         throw new Error("Invalid option");
                 }
             });
-
-            //$('#resumenSpool').on('click', function (e) {
-            //    $cntWkS.find("input[id^='typeSearch']").val('1');
-            //});
-
-            //$('#detailSpool').on('click', function (e) {
-            //    $cntWkS.find("input[id^='typeSearch']").val('2');
-            //});
 
             $selectedRadio = $cnt.find("input[id^='SearchType']:checked");
             
@@ -125,70 +267,19 @@
                     .prop("checked", true)
                     .trigger("click");
             }
-
-
-
-            $("a.delete").on('click', function (s) {
-
-                var currentCulture = $("html").prop("lang");
-                var answer = '';
-                if (currentCulture == "en-US") {
-                    answer = confirm('Confirm delete of this control number?');
-                }
-                else {
-                    answer = confirm('¿Confirma la eliminación del Número de Control?');
-                }
-
-                if (answer) {
-
-                    //var dateProcess = $cnt.find("input[id^='datepicker']").val();
-                    //var numberProcess = $cnt.find("input[id^='NumberProcess']").val();
-                    //var typeReport = $cnt.find("select[id^='TypeReportId']").val();
-                    //var quadrant = $cnt.find("select[id^='QuadrantId']").val();
-
-
-                    //if (dateProcess) {
-                    //    var date = new Date(dateProcess);
-                    //    this.href = this.href.replace("DP", dateProcess);
-                    //}
-                    //else {
-                    //    var date = new Date();
-                    //    this.href = this.href.replace("DP", dateProcess);
-                    //}
-
-                    //if (numberProcess) {
-                    //    this.href = this.href.replace("NP", numberProcess);
-                    //}
-                    //else {
-                    //    this.href = this.href.replace("NP", "");
-                    //}
-
-                    //if (typeReport) {
-                    //    this.href = this.href.replace("TR", typeReport);
-                    //}
-                    //else {
-                    //    this.href = this.href.replace("TR", "0");
-                    //}
-
-                    //if (quadrant) {
-                    //    this.href = this.href.replace("QTE", quadrant);
-                    //}
-                    //else {
-                    //    this.href = this.href.replace("QTE", "0");
-                    //}
-                }
-
-                $ejecutar = false;
-
-                return answer;
-
-            });
-
-        };
-
+        };       
         return {
             init: init
         };
     };
 
 })(jQuery);
+function abrirIncidencias(SpoolID, NumeroControl, origen) {
+    SpoolIDGlobal = SpoolID;
+    NumeroControlGlobal = NumeroControl;
+    AjaxObtenerTipoIncidencias();    
+    VentanaModal();    
+    $("#OrigenIncidencia").val(origen);
+    AjaxObtenerIncidencias(SpoolID);
+    $("#txtNumeroControl").text(NumeroControlGlobal);  
+}

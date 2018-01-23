@@ -103,3 +103,78 @@ function filtroSI_NO() {
         }       
     }
 }
+
+/*Mostrar mensajes de errores*/
+function MostrarMensaje(Msg, idMensaje) {
+    $("#" + idMensaje).append("");
+    $("#" + idMensaje).html("");
+    $("#" + idMensaje).css("display", "block");
+    $("#" + idMensaje).append(Msg);
+    BorrarMensaje(idMensaje);
+}
+function BorrarMensaje(idMensaje) {
+    clearTimeout(timeOut);
+    if (!$("#" + idMensaje).is("visible")) {
+        timeOut = setTimeout(function () {
+            $("#" + idMensaje).fadeTo(1000, 500).slideUp(500, function () {
+                $("#" + idMensaje).slideUp(500);
+                $("#" + idMensaje).append("");
+                $("#" + idMensaje).html("");
+                $("#" + idMensaje).css("display", "none");
+            });
+        }, 2000);
+    }
+}
+
+
+/*Mostrar mensajes de errores con tiempo determinado*/
+function MostrarMensajeConTiempo(Msg, idMensaje, tiempo) {
+    $("#" + idMensaje).append("");
+    $("#" + idMensaje).html("");    
+    $("#" + idMensaje).css("display", "block");  
+    $("#" + idMensaje).append(Msg);
+    BorrarMensajeConTiempo(idMensaje, tiempo);
+}
+function BorrarMensajeConTiempo(idMensaje, tiempo) {
+    clearTimeout(timeOut);
+    if (!$("#" + idMensaje).is("visible")) {
+        timeOut = setTimeout(function () {
+            $("#" + idMensaje).fadeTo(1000, 500).slideUp(500, function () {
+                $("#" + idMensaje).slideUp(500);
+                $("#" + idMensaje).append("");
+                $("#" + idMensaje).append("");
+                $("#" + idMensaje).css("display", "none");
+            });
+        }, tiempo);
+    }
+}
+
+//defaultValue = valor de retorno
+function TryParseInt(str,defaultValue) {
+     var retValue = defaultValue;
+     if(str !== null) {
+         if(str.length > 0) {
+             if (!isNaN(str)) {
+                 retValue = parseInt(str);
+             }
+         }
+     }
+     return retValue;
+}
+
+var entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+    '`': '&#x60;',
+    '=': '&#x3D;'
+};
+
+function escapeHtml(string) {
+    return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+        return entityMap[s];
+    });
+}

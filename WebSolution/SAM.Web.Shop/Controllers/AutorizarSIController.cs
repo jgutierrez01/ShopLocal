@@ -144,13 +144,13 @@ namespace SAM.Web.Shop.Controllers
             var myData = new[] { new { result = respuesta } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
-        [HttpGet]
-        public JsonResult EliminarIncidencia(int IncidenciaID, string Origen, int Accion)
-        {
-            /*Origen: Pantalla donde se eliminó la incidencia*/
-            string respuesta = OrdenTrabajoSpoolBO.Instance.ResolverEliminarIncidencia(IncidenciaID, Origen, SessionFacade.NombreCompleto, Accion);
-            var myData = new[] { new { result = respuesta } };
-            return Json(myData, JsonRequestBehavior.AllowGet);
-        }
+        //[HttpGet]
+        //public JsonResult EliminarIncidencia(int IncidenciaID, string Origen, int Accion)
+        //{
+        //    /*Origen: Pantalla donde se eliminó la incidencia*/
+        //    string respuesta = OrdenTrabajoSpoolBO.Instance.ResolverEliminarIncidencia(IncidenciaID, Origen, SessionFacade.NombreCompleto, Accion);
+        //    var myData = new[] { new { result = respuesta } };
+        //    return Json(myData, JsonRequestBehavior.AllowGet);
+        //}
     }   
 }

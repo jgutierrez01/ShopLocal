@@ -272,3 +272,28 @@ function AjaxResolverIncidencia(incidenciaID, SpoolID, pantalla) {
         }
     });
 }
+
+
+/*Nuevos Requerimientos Fase 1 Proy: 00056 Shop*/
+function AjaxResolucionIncidencias(spoolID, incidenciaID, origen, resolucion, accion, esModal) {
+    $.ajax({
+        type: 'GET',
+        url: '/SQ/ResolucionIncidencias/',
+        dataType: 'json',
+        data: { SpoolID: spoolID, IncidenciaID: incidenciaID, Resolucion: resolucion, Origen: origen, Accion: accion },
+        success: function (data) {
+            if (data[0].result == "OK") {
+                AjaxObtenerIncidencias(spoolID);
+                AjaxObtenerSpools(($("#ProjectIdADD").val() == undefined || $("#ProjectIdADD").val() == "" ? 0 : $("#ProjectIdADD").val()), ($("#QuadrantIdCADD").val() == undefined || $("#QuadrantIdCADD").val() == "" ? 0 : $("#QuadrantIdCADD").val()));
+                MostrarAvisoGrid($("html").prop("lang") != "en-US" ? "Incidencia Resuelta Correctamente" : "Incident Resolved Correctly");
+                $("#CerrarResolucion").trigger("click");
+            } else {
+                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Error Al Resolver Incidencia" : "Error Resolving Incident");
+            }
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            loadingStop();
+            alert("Error Resolviendo incidencias: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
+        }
+    });
+}

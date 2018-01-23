@@ -154,4 +154,25 @@ namespace SAM.Entities.Busqueda
         public bool Hold { get; set; }                        
         public int Incidencias { get; set; }
     }
+    public class AgregarSI
+    {
+        public int SpoolID { get; set; }
+        public int ProyectoID { get; set; }
+        public int CuadranteID { get; set; }
+        public string Cuadrante { get; set; }
+        public string NumeroControl { get; set; }
+        public bool Hold { get; set; }
+        public string SqCliente { get; set; }
+        public string SI { get; set; }          
+    }
+    public class Datos
+    {
+        public List<DetalleGenerarSI> Detalle { get; set; }
+    }
+    public class DetalleGenerarSI
+    {
+        public int SpoolID { get; set; }
+        public int ProyectoID { get; set; }
+        public int CuadranteID { get; set; }
+    }
 }
