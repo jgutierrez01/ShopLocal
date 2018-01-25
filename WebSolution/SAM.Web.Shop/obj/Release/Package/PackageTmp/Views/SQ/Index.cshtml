@@ -96,6 +96,10 @@
                     @Html.RadioButtonFor(x => x.SearchTypeADD, "nc")
                     @Html.Raw(CommonStrings.ControlNumber)
                 </label>
+                <label class="radio-inline">
+                    @Html.RadioButtonFor(x => x.SearchTypeADD, "s")
+                    @Html.Raw(CommonStrings.SpoolResuelto)
+                </label>
             </div>
             <div>
                 @if (@TempData["errorADD"] != null && @TempData["errorADD"].ToString() != "")
@@ -195,6 +199,10 @@
                 <label class="radio-inline">
                     @Html.RadioButtonFor(x => x.SearchTypeEdit, "nc")
                     @Html.Raw(CommonStrings.ControlNumber)
+                </label>
+                <label class="radio-inline">
+                    @Html.RadioButtonFor(x => x.SearchTypeEdit, "s")
+                    @Html.Raw(CommonStrings.SpoolResuelto)
                 </label>
             </div>
             <div>
@@ -306,36 +314,45 @@
                     @if (Model.ListaElementos != null && Model.ListaElementos.Count > 0)
                     {
                         @Html.Grid(Model.ListaElementos).Named("gridAgregar").Columns(columns =>
-                        {
-                            columns.Add(C => C.Accion).Titled("Eliminar")
-                            .Encoded(false)
-                            .Sanitized(false)
-                            .SetWidth(20)
-                            .RenderValueAs(c => new HtmlString
-                                (
-                                    "<label class='delete' style='cursor:pointer;' id = '"+c.NumeroControl + Model.ProjectIdADD +"' onclick=\"" + "javascript:EliminarAdd(" + "'" + c.NumeroControl + "'" + "," + "'" + Model.ProjectIdADD + "'" + "," + "'" + c.SQ + "'" + " ) \"" + "  > ... </label> "
-                                )
-                            )
-                            .Filterable(true);
-                            columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(20);
-                            columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(20);
-                            columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
-                            columns.Add().Titled("Incidencias")
-                            .Encoded(false)
-                            .Sanitized(false)
-                            .SetWidth(20)
-                            .RenderValueAs(c => new HtmlString
-                                (
-                                    "<label class='incidencias' style='cursor:pointer;'  onclick=\"" + "javascript:abrirIncidencias(" + "'" + c.SpoolID + "'" + "," + "'" + c.NumeroControl + "', 1" + ") \"" + "  > ..... </label> "
-                                )
-                            ).Filterable(false);
-                        }).WithPaging(10).Sortable(true).EmptyText(" ");
-                                    }
-                </div>
-                <div>
-                    <button type="submit" id="resumenSpool" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
-                </div>
+                   {
+                   columns.Add(C => C.Accion).Titled("Eliminar")
+                   .Encoded(false)
+                   .Sanitized(false)
+                   .SetWidth(20)
+                   .RenderValueAs(c => new HtmlString
+                       (
+                           "<label class='delete' style='cursor:pointer;' id = '"+c.NumeroControl + Model.ProjectIdADD +"' onclick=\"" + "javascript:EliminarAdd(" + "'" + c.NumeroControl + "'" + "," + "'" + Model.ProjectIdADD + "'" + "," + "'" + c.SQ + "'" + " ) \"" + "  > ... </label> "
+                       )
+                   )
+                   .Filterable(true);
+                   columns.Add().Titled("NumeroControl")
+                   .Encoded(false)
+                   .Sanitized(false)
+                   .SetWidth(20)
+                   .RenderValueAs(c => new HtmlString
+                       (
+                            "<a style='cursor:pointer;' href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + c.NumeroControl + "&ProyectoID=" + Model.ProjectIdADD + "' target='_blank'> " + c.NumeroControl + "</a> "                               
+                        )
+                    ).Filterable(false);
+                    //columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(20);
+                    columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(20);
+                    columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
+                    columns.Add().Titled("Incidencias")
+                    .Encoded(false)
+                    .Sanitized(false)
+                    .SetWidth(20)
+                    .RenderValueAs(c => new HtmlString
+                        (
+                            "<label class='incidencias' style='cursor:pointer;'  onclick=\"" + "javascript:abrirIncidencias(" + "'" + c.SpoolID + "'" + "," + "'" + c.NumeroControl + "', 1" + ") \"" + "  > ..... </label> "
+                        )
+                    ).Filterable(false);
+                }).WithPaging(10).Sortable(true).EmptyText(" ");
             }
+        </div>
+        <div>
+            <button type="submit" id="resumenSpool" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
+        </div>
+        }
         </div>
     </fieldset>
 }
@@ -397,7 +414,16 @@
                             )
                         )
                        .Filterable(true);
-                       columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(30);
+                       //columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(30);
+                       columns.Add().Titled("NumeroControl")
+                      .Encoded(false)
+                      .Sanitized(false)
+                      .SetWidth(20)
+                      .RenderValueAs(c => new HtmlString
+                          (
+                               "<a style='cursor:pointer;' href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + c.NumeroControl + "&ProyectoID=" + Model.ProjectIdADD + "' target='_blank'> " + c.NumeroControl + "</a> "
+                           )
+                       ).Filterable(false);
                        columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(30);
                        columns.Add(c => c.TieneHoldIngenieria).Titled("Hold Ingenieria").Filterable(true).SetWidth(30);
                        columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
@@ -420,6 +446,7 @@
         </div>
     </fieldset>
 }
+
 <script src="~/Scripts/Application/Sq/Captura.js"></script>
 <script src="~/Scripts/Application/Sq/Handler.js"></script>
 <script src="~/Scripts/Application/Sq/Ajax.js"></script>
@@ -561,5 +588,65 @@
             </div>
         </div>
     </div>
+
+@* Modal para confirmar resolucion de incidencias *@
+<div id="VentanaResolucion" style="display: none; z-index:inherit;" class="col-xs-12">
+    @* Inputs temporales para guardar valores externos al grid *@
+    <input type="text" id="TmpSpoolID" style="display: none;" />
+    <input type="text" id="TmpIncidenciaID" style="display: none;" />
+
+    <div class="col-xs-11" style="padding-bottom: 10px; padding-top: 10px;">
+        <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+            <h4 id="txtNumeroControlResolucion"></h4>
+            <h4 id="txtInfoIncidencia"></h4>
+        </div>
+    </div>
+
+    <div class="col-xs-11" style="padding-bottom: 10px; padding-top: 10px;">
+        <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+            <label id="txtTituloOpcion2" for="radio2"></label>
+            <input type="radio" id="radio2" name="radioOpcionResolver" value="Otro" />
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+            <label id="txtTituloOpcion1" for="radio1"></label>
+            <input type="radio" id="radio1" name="radioOpcionResolver" value="ErrorCaptura" />
+        </div>
+        
+    </div>
+
+    <div id="campoDetalleResolver" style="display: none;">
+        <div class="col-xs-11">
+            <div class="col-xs-11">
+                <label id="lblDetalleResolucion"></label>*
+            </div>
+            <div class="col-xs-11">
+                <textarea id="txtDetalleResolucion" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+    @* Area de mensajes *@
+    <div class="col-xs-11">
+        <div class="col-xs-11">
+            <p class="alert alert-warning" id="ErrorResolucion" style="display: none; margin-top: 8px; margin-bottom: 8px;"></p>
+        </div>
+        <div class="col-xs-11">
+            <p class="alert alert-success" id="SuccessResolucion" style="display: none; margin-top: 8px; margin-bottom: 8px;"></p>
+        </div>
+    </div>
+    @* Botones Guardar y Cerrar *@
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 col-xs-offset-1" style="padding-bottom: 15px; width: 85%; padding-top: 15px;">
+        <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+            <div class="form-group">
+                <button id="btnGuardarResolucion" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+            <div class="form-group">
+                <button id="CerrarResolucion" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.Close)</button>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 }

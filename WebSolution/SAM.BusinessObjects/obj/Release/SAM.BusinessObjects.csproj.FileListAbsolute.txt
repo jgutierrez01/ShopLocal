@@ -178,3 +178,5 @@ C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\en-US\SAM.BusinessObjects.resources.dll
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.dll
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\obj\Release\SAM.BusinessObjects.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\itextsharp.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.BusinessObjects\bin\Release\itextsharp.xml

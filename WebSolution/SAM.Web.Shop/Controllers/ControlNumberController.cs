@@ -108,6 +108,7 @@ namespace SAM.Web.Shop.Controllers
             crm.Hold = cr.Hold;
 
             crm.Project = NavContext.GetCurrentProject().Nombre;
+            crm.ProjectID = NavContext.GetCurrentProject().ID;
             crm.Yard = NavContext.GetCurrentYard().Nombre;
             crm.NumberControl = NavContext.GetCurrentControlNumber().ControlNumber;
             crm.NumberControlId = NavContext.GetCurrentControlNumber().ControlNumberId;

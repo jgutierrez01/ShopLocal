@@ -28,6 +28,7 @@ namespace SAM.Web.Shop.Models
         public string NumberControl {get; set;}
         public int NumberControlId { get; set; }
         public string Project { get; set; }
+        public int ProjectID { get; set; }
         public string NumeroEmbarque { get; set; }
         public int PorcentajePND { get; set; }
         public string RequierePWHT { get; set; }

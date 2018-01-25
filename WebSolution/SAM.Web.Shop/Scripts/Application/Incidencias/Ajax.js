@@ -104,8 +104,12 @@ function AjaxObtenerDetalleIncidencias(TipoIncidencia) {
             if (data[0].result != "NODATA") {
                 var result = JSON.parse(data[0].result);
                 $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data([]);
-                $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data(result);
-                $("#cmbDetalleIncidencia").data("kendoComboBox").select(0);
+                $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data(result);                
+                if (result.length == 2) {                                        
+                    $("#cmbDetalleIncidencia").data("kendoComboBox").select(1);
+                } else {
+                    $("#cmbDetalleIncidencia").data("kendoComboBox").select(0);
+                }
             }
         },
         error: function (xhr, textStatus, errorThrown) {

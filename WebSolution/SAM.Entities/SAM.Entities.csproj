@@ -923,6 +923,7 @@
     <Compile Include="Grid\GrdTransferenciaSpool.cs" />
     <Compile Include="Grid\GrdWps.cs" />
     <Compile Include="Homologacion\ArchivosWorkstatus.cs" />
+    <Compile Include="LinkTraveler\LinkTravelerModel.cs" />
     <Compile Include="Parciales\Homologacion\Parciales.cs" />
     <Compile Include="Parciales\OrdenTabajoMaterialParcial.cs" />
     <Compile Include="Parciales\OrdenTrabajoMaterialCruceInfo.cs" />

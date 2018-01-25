@@ -76,6 +76,7 @@ function IniciaGrid() {
                 model: {
                     fields: {                     
                         SpoolID: { type: "int", editable: false },
+                        ProyectoID: {type: "int", editable: false},
                         OrdenTrabajoSpoolID: { type: "int", editable: false },
                         NumeroControl: { type: "string", editable: false },                        
                         CuadranteID: { type: "int", editable: false },
@@ -112,7 +113,7 @@ function IniciaGrid() {
             numeric: true,
         },
         columns: [
-            { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", width: "20px" },
+            { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", filterable: filtroTexto(), template: '<a href="/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=#=NumeroControl#&ProyectoID=#=ProyectoID#" target="_blank" > #=NumeroControl# </a>', width: "20px" },
             { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", width: "20px" },
             { field: "Hold", title: "Hold", template: "#=Hold ? 'Si' : 'No' #", width: "10px", attributes: {style: "text-align: center;"} },
             {
@@ -142,7 +143,8 @@ function IniciaGrid() {
                             SpoolIDGlobal = dataItem.SpoolID;
                             NumeroControlGlobal = dataItem.NumeroControl;
                             VentanaModal();
-                            $("#txtNumeroControl").text(NumeroControlGlobal);                        
+                            $("#txtNumeroControl").text("");
+                            $("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
                             AjaxObtenerTipoIncidencias();
                             AjaxObtenerIncidencias(dataItem.SpoolID);
                         } else {
@@ -239,7 +241,9 @@ function CargarGridPopUp() {
                         );
                         /*Guardo valores para poder identificar que incidencia fue y que spool en la ventana modal*/
                         $("#TmpSpoolID").val(dataItem.SpoolID);
-                        $("#TmpIncidenciaID").val(dataItem.IncidenciaID);                        
+                        $("#TmpIncidenciaID").val(dataItem.IncidenciaID);
+                        $("#txtNumeroControlResolucion").text("");
+                        $("#txtNumeroControlResolucion").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
                         AbrirVentanaResolucion();
                         //var grid = $("#gridPopUp").data("kendoGrid");
                         //var ds = grid.dataSource;

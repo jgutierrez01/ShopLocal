@@ -67,6 +67,8 @@ namespace SAM.Entities.Busqueda
         [DataMember]
         public int SpoolID { get; set; }
         [DataMember]
+        public int ProyectoID { get; set; }
+        [DataMember]
         public int OrdenTrabajoSpoolID { get; set; }
         [DataMember]
         public string NumeroControl { get; set; }
@@ -148,6 +150,7 @@ namespace SAM.Entities.Busqueda
     public class ListaIncidencia
     {        
         public int SpoolID { get; set; }
+        public int ProyectoID { get; set; }
         public int CuadranteID { get; set; }
         public string Cuadrante { get; set; }
         public string NumeroControl { get; set; }                        

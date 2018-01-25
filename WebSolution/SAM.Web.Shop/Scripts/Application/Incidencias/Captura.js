@@ -53,6 +53,7 @@ function IniciaGrid() {
                 model: {
                     fields: {
                         SpoolID: { type: "int", editable: false },
+                        ProyectoID: {type: "int", editable: false},
                         CuadranteID: { type: "int", editable: false },
                         Cuadrante: { type: "string", editable: false },
                         NumeroControl: { type: "string", editable: false },
@@ -80,8 +81,8 @@ function IniciaGrid() {
             numeric: true,
         },        
         filterable: filtroGeneral(),
-        columns: [
-            { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", filterable: filtroTexto(), width: "20px" },                       
+        columns: [           
+            { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", filterable: filtroTexto(), template: '<a href="/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=#=NumeroControl#&ProyectoID=#=ProyectoID#" target="_blank" > #=NumeroControl# </a>', width: "20px" },
             { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", filterable: filtroTexto(), width: "20px" },
             { field: "Hold", title: "Hold", template: "#=Hold ? 'Si' : 'No' #", width: "10px", filterable: filtroSI_NO(), attributes: { style: "text-align: center;" }, },
             { field: "Incidencias", title: $("html").prop("lang") != "en-US" ? "Num. Incidencias" : "Num. Incidents", width: "20px", attributes: { style: "text-align: center;" }, filterable: filtroNumero() },
@@ -99,7 +100,8 @@ function IniciaGrid() {
                          AjaxObtenerTipoIncidencias();
                         AjaxObtenerIncidencias(dataItem.SpoolID);
                         VentanaModal();
-                        $("#txtNumeroControl").text(NumeroControlGlobal);                       
+                        $("#txtNumeroControl").text("");                       
+                        $("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
                     }
                 },
                 title: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
@@ -191,7 +193,9 @@ function CargarGridPopUp() {
                         );
                         /*Guardo valores para poder identificar que incidencia fue y que spool en la ventana modal*/
                         $("#TmpSpoolID").val(dataItem.SpoolID);
-                        $("#TmpIncidenciaID").val(dataItem.IncidenciaID);                        
+                        $("#TmpIncidenciaID").val(dataItem.IncidenciaID);
+                        $("#txtNumeroControlResolucion").text("");
+                        $("#txtNumeroControlResolucion").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
                         AbrirVentanaResolucion();
                         //if (confirm($("html").prop("lang") != "en-US" ? "Confirma Resolver Esta Incidencia?" : "Confirm Resolve This Incidence?")) {
                         //    AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Incidencias');
@@ -330,7 +334,7 @@ function IniciaGridResueltos() {
         },        
         filterable: filtroGeneral(),
         columns: [
-            { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", filterable: filtroTexto(), width: "20px" },                       
+            { field: "NumeroControl", title: $("html").prop("lang") != "en-US" ? "Numero de Control" : "Control Number", filterable: filtroTexto(), template: '<a href="/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=#=NumeroControl#&ProyectoID=#=ProyectoID#" target="_blank" > #=NumeroControl# </a>', width: "20px" },
             { field: "Cuadrante", title: $("html").prop("lang") != "en-US" ? "Cuadrante" : "Quadrant", filterable: filtroTexto(), width: "20px" },
             { field: "Hold", title: "Hold", template: "#=Hold == 1 ? 'Si' : 'No' #", width: "10px", filterable: filtroSI_NO(), attributes: { style: "text-align: center;" } },
             //{ field: "Incidencias", title: $("html").prop("lang") != "en-US" ? "Num. Incidencias" : "Num. Incidents", width: "20px", attributes: { style: "text-align: center;" }, filterable: filtroNumero() },

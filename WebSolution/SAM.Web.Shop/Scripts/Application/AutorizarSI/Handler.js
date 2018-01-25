@@ -157,17 +157,25 @@ function CerrarVentanaModal() {
 function EventoGuardarIncidencia() {
     $("#btnGuardar").click(function (e) {
         if ($("#cmbTipoIncidencia").val() != 0 && $("#cmbTipoIncidencia").val() != undefined) {
-            if ($("#cmbDetalleIncidencia").val() != 0 && $("#cmbDetalleIncidencia").val() != undefined) {
-                if ($("#cmbErrores").val() != 0 && $("#cmbErrores").val() != undefined) {                    
+            if (($("#cmbTipoIncidencia").data("kendoComboBox").text() == "Spool" && $("#cmbDetalleIncidencia").val() == 0)) {
+                if ($("#cmbErrores").val() != 0 && $("#cmbErrores").val() != undefined) {
                     AjaxGuardarIncidencia();
                 } else {
-                    MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Seleccione un Tipo de Error" : "Select Error Type");
+                    MostrarMensaje($("html").prop("lang") != "en-US" ? "Seleccione un Tipo de Error" : "Select Error Type", "seccionErrorGrid");
                 }
             } else {
-                MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Seleccione Un Detalle de Incidencia" : "Select Incident Detail");
+                if ($("#cmbDetalleIncidencia").val() != 0 && $("#cmbDetalleIncidencia").val() != undefined) {
+                    if ($("#cmbErrores").val() != 0 && $("#cmbErrores").val() != undefined) {
+                        AjaxGuardarIncidencia();
+                    } else {
+                        MostrarMensaje($("html").prop("lang") != "en-US" ? "Seleccione un Tipo de Error" : "Select Error Type", "seccionErrorGrid");
+                    }
+                } else {
+                    MostrarMensaje($("html").prop("lang") != "en-US" ? "Seleccione Un Detalle de Incidencia" : "Select Incident Detail", "seccionErrorGrid");
+                }
             }
         } else {
-            MostrarErrorGrid($("html").prop("lang") != "en-US" ? "Seleccione un Tipo de Incidencia" : "Select Incident Type");
+            MostrarMensaje($("html").prop("lang") != "en-US" ? "Seleccione un Tipo de Incidencia" : "Select Incident Type", "seccionErrorGrid");
         }
     });
 }

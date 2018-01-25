@@ -252,5 +252,58 @@ namespace SAM.BusinessObjects.Sql
             }
         }
 
+        /// <summary>
+        /// Ejecuta un stord en la BD
+        /// </summary>
+        /// <param name="Stord">Nombre del Stord a ejecutar</param>
+        /// <param name="TablaSube">objeto DataTable que envía al stord</param>
+        /// <param name="NombreTabla">nombre del parametro de tabla</param>
+        /// <param name="Parametros">Parametros que requiere el stord</param>
+        /// <returns>Regresa un objeto Datatable</returns>
+        /// 
+        public DataTable EjecutaDataAdapter(string Stord, string[,] Parametros = null)
+        {
+            using (SqlCommand cmd = new SqlCommand(Stord, Conexion()))
+            {
+                DataTable dt = new DataTable();
+                if (Parametros != null)
+                    for (int i = Numeros.CERO; i < Parametros.Length / Numeros.DOS; i++)
+                        cmd.Parameters.AddWithValue(Parametros[i, Numeros.CERO].ToString(), Parametros[i, Numeros.UNO].ToString());
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        cmd.CommandTimeout = 0;
+                        cmd.Connection.Open();
+                        da.Fill(dt);
+                        cmd.Connection.Close();
+                    }
+
+
+                    return dt;
+                }
+                catch (Exception e)
+                {
+                    cmd.Connection.Close();
+
+                    DataTable dtError = new DataTable("error");
+                    DataColumn dataColumn = null;
+                    for (int i = 0; i < 2; i++)
+                    {
+                        dataColumn = new DataColumn(i.ToString());
+                        dtError.Columns.Add(dataColumn);
+                    }
+
+                    DataRow row = dtError.NewRow();
+                    row["0"] = "error";
+                    row["1"] = "error";
+                    dtError.Rows.Add(row);
+                    return dtError;
+                }
+            }
+        }
+
     }
 }

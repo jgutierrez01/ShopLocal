@@ -184,3 +184,5 @@ C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\en-US\SAM.Web.Common.resources.dll
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.dll
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\obj\Release\SAM.Web.Common.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\itextsharp.dll
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Common\bin\Release\itextsharp.xml

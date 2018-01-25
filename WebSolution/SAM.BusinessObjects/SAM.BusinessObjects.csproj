@@ -34,6 +34,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.12.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.12\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Dlls\log4net.dll</HintPath>
@@ -144,6 +148,7 @@
     <Compile Include="Excepciones\ExcepcionDuplicados.cs" />
     <Compile Include="Excepciones\ExcepcionRelaciones.cs" />
     <Compile Include="Ingenieria\SpoolHoldBO.cs" />
+    <Compile Include="LinkTraveler\LinkTravelerBO.cs" />
     <Compile Include="Materiales\NumeroUnicoBO.cs" />
     <Compile Include="Materiales\PinturaNumeroUnicoBO.cs" />
     <Compile Include="Materiales\RecepcionBO.cs" />
@@ -205,10 +210,13 @@
     <Compile Include="Sql\Constantes.cs" />
     <Compile Include="Sql\ObjetosSQL.cs" />
     <Compile Include="Utilerias\CacheCatalogos.cs" />
+    <Compile Include="Utilerias\CrearArchivo.cs" />
     <Compile Include="Utilerias\EntityConverter.cs" />
     <Compile Include="Utilerias\EtiquetasMaterialUtil.cs" />
     <Compile Include="Utilerias\Mapper.cs" />
+    <Compile Include="Utilerias\NetworkConnection.cs" />
     <Compile Include="Utilerias\RechazosCortesUtil.cs" />
+    <Compile Include="Utilerias\SplitPDF.cs" />
     <Compile Include="Utilerias\TraductorEnumeraciones.cs" />
     <Compile Include="Validations\ValidacionesAcero.cs" />
     <Compile Include="Validations\ValidacionesCantidades.cs" />
@@ -332,6 +340,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SamDbSelfTrackingTemplate.Context.cs</LastGenOutput>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -355,6 +364,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Procesos.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

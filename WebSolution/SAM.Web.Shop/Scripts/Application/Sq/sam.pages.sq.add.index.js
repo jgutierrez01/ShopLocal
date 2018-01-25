@@ -304,8 +304,9 @@ function abrirIncidencias(SpoolID, NumeroControl, origen) {
     SpoolIDGlobal = SpoolID;
     NumeroControlGlobal = NumeroControl;
     AjaxObtenerTipoIncidencias();    
-    VentanaModal();    
+    VentanaModal();
+    $("#OrigenIncidencia").val("")
     $("#OrigenIncidencia").val(origen);
     AjaxObtenerIncidencias(SpoolID);
-    $("#txtNumeroControl").text(NumeroControlGlobal);  
+    
 }

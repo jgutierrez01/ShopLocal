@@ -719,6 +719,7 @@ namespace SAM.BusinessObjects.Produccion
                 string query = " SELECT " +
                                     " C.CuadranteID, " +
                                     " C.Nombre, " +
+                                    " S.ProyectoID, " +
                                     " OS.NumeroControl, " +
                                     " OS.OrdenTrabajoSpoolID, " +
                                     " S.sqinterno,  " +
@@ -759,6 +760,7 @@ namespace SAM.BusinessObjects.Produccion
                             Cuadrante = ds.Tables[0].Rows[i]["Nombre"].ToString(),
                             NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),
                             SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
+                            ProyectoID = int.Parse(ds.Tables[0].Rows[i]["ProyectoID"].ToString()),
                             OrdenTrabajoSpoolID = int.Parse(ds.Tables[0].Rows[i]["OrdenTrabajoSpoolID"].ToString()),
                             SqCliente = ds.Tables[0].Rows[i]["SqCliente"].ToString(),
                             SI = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
@@ -786,6 +788,7 @@ namespace SAM.BusinessObjects.Produccion
                 }
                 string query = " SELECT " +
                                 " S.SpoolID,  " +
+                                " S.ProyectoID,  " +
                                 " C.CuadranteID, " +
                                 " C.Nombre Cuadrante, " +
                                 " OT.NumeroControl, " +
@@ -804,7 +807,7 @@ namespace SAM.BusinessObjects.Produccion
                             " WHERE " +
                                 " (S.proyectoID = " + proyectoID + " " + Operador + " C.CuadranteID = " + CuadranteID + ") AND I.Activo = 1 AND(I.Resolucion IS NULL OR I.SI IS NULL) AND I.Inspector IS NOT NULL " +
                             " GROUP BY " +
-                                " S.SpoolID, C.CuadranteID, C.Nombre, OT.NumeroControl, H.TieneHoldIngenieria, II.Incidencias ";
+                                " S.SpoolID, S.ProyectoID, C.CuadranteID, C.Nombre, OT.NumeroControl, H.TieneHoldIngenieria, II.Incidencias ";
                                  
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -819,6 +822,7 @@ namespace SAM.BusinessObjects.Produccion
                         Incidencias = new ListaIncidencia
                         {
                             SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
+                            ProyectoID = int.Parse(ds.Tables[0].Rows[i]["ProyectoID"].ToString()),
                             CuadranteID = int.Parse(ds.Tables[0].Rows[i]["CuadranteID"].ToString()),
                             Cuadrante = ds.Tables[0].Rows[i]["Cuadrante"].ToString(),
                             NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),                            
@@ -1158,7 +1162,7 @@ namespace SAM.BusinessObjects.Produccion
                                     " Etiqueta " +
                                 " FROM " +
                                     " JuntaSpool " +
-                                " WHERE SpoolID = " + SpoolID +
+                                " WHERE SpoolID = " + SpoolID + " AND FabAreaID = 1" +
                                 " ORDER BY Etiqueta ASC";
                     }
 
@@ -1223,17 +1227,17 @@ namespace SAM.BusinessObjects.Produccion
                                     " I.IncidenciaID, " +
                                     " I.SpoolID, " +
                                     " OS.NumeroControl, " +
-                                    " CASE WHEN MS.MaterialSpoolID IS NOT NULL AND JS.JuntaSpoolID IS NULL THEN 'Materiales' ELSE 'Junta' END Incidencia, " +
-                                    " CASE WHEN MS.MaterialSpoolID IS NOT NULL AND JS.JuntaSpoolID IS NULL THEN MS.Etiqueta ELSE JS.Etiqueta END MaterialJunta, " +
+                                    " TI.Incidencia, " +
+                                    " CASE WHEN MS.MaterialSpoolID IS NULL AND JS.JuntaSpoolID IS NULL THEN 'N/A' WHEN MS.MaterialSpoolID IS NOT NULL AND JS.JuntaSpoolID IS NULL THEN MS.Etiqueta ELSE JS.Etiqueta END MaterialJunta, " +
                                     " EI.ErrorIncidenciaID, " +
-                                    " EI.Error, " +
-                                    //" HI.SI, " +
+                                    " EI.Error, " +                                
                                     " I.SI, " +
                                     " I.Observacion, " +
                                     " I.Cliente, " +
                                     " CONVERT(VARCHAR(30), I.FechaIncidencia, 103) FechaIncidencia " +
                                 " FROM " +
                                     " Shop_Incidencia I WITH(NOLOCK) " +
+                                    " INNER JOIN Shop_TipoIncidencia TI WITH(NOLOCK) ON I.TipoIncidenciaID = TI.TipoIncidenciaID AND TI.Activo = 1 " +
                                     " LEFT JOIN OrdenTrabajoSpool OS WITH(NOLOCK) ON I.SpoolID = OS.SpoolID " +
                                     " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID  " +
                                     " LEFT JOIN MaterialSpool MS WITH(NOLOCK) ON I.MaterialSpoolID = MS.MaterialSpoolID AND I.MaterialSpoolID IS NOT NULL  " +

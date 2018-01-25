@@ -32,9 +32,9 @@ function AjaxObtenerDetalleIncidencias(TipoIncidencia) {
                 $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data([]);
                 $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data(result);
                 $("#cmbDetalleIncidencia").data("kendoComboBox").select(0);
-                //if (result.length == 2) {                                        
-                //    $("#cmbDetalleIncidencia").data("kendoComboBox").select(1);
-                //}                
+                if (result.length == 2) {                                        
+                    $("#cmbDetalleIncidencia").data("kendoComboBox").select(1);
+                }                
             }
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -171,8 +171,8 @@ function CambiarNumeroIncidencia(NumeroControl, NumeroIncidencia) {
     var tr = $(table).find('tr'); //Filas       
     for (var i = 0; i < tr.length; i++) {
         var td = $(tr[i]).find("td"); //Columnas        
-        for (var j = 0; j < td.length; j++) {
-            if (j == column && td[j].innerHTML == NumeroControl) {
+        for (var j = 0; j < td.length; j++) {            
+            if (j == column && td[j].innerHTML.indexOf(NumeroControl) > -1) {
                 td[colIncidencia].innerHTML = NumeroIncidencia;                                
             }
         }
@@ -194,7 +194,7 @@ function VerificarIncidencias(Origen, NumeroControl) {
     for (var i = 0; i < tr.length; i++) {
         var td = $(tr[i]).find("td"); //Columnas        
         for (var j = 0; j < td.length; j++) {
-            if (j == column && td[j].innerHTML == NumeroControl) {
+            if (j == column && td[j].innerHTML.indexOf(NumeroControl) > -1) {
                 return td[colIncidencia].innerHTML;
             }
         }

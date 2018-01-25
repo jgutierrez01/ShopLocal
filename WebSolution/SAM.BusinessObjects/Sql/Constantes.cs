@@ -35,6 +35,7 @@ namespace SAM.BusinessObjects.Sql
         public static string GuardaAutorizacion = "Shop_SET_GuardaAutorizacion";        
         public static string ResolverEliminarIncidencia = "Shop_ResolverEliminarIncidencia";
         public static string GenerarSI = "Shop_Incidencia_GenerarSI";
+        public static string LinkTravelerObtenerSpool = "Shop_GetSpoolsTraveler";
     }
 }
 

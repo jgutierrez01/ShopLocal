@@ -100,7 +100,11 @@ function AjaxObtenerDetalleIncidencias(TipoIncidencia) {
                 var result = JSON.parse(data[0].result);
                 $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data([]);
                 $("#cmbDetalleIncidencia").data("kendoComboBox").dataSource.data(result);
-                $("#cmbDetalleIncidencia").data("kendoComboBox").select(0);
+                if (result.length == 2) {
+                    $("#cmbDetalleIncidencia").data("kendoComboBox").select(1);
+                } else {
+                    $("#cmbDetalleIncidencia").data("kendoComboBox").select(0);
+                }
             }
         },
         error: function (xhr, textStatus, errorThrown) {

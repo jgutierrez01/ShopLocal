@@ -101,8 +101,10 @@ function CargarGridPopUp() {
                         );
                         /*Guardo valores para poder identificar que incidencia fue y que spool en la ventana modal*/
                         $("#TmpSpoolID").val(dataItem.SpoolID);
-                        $("#TmpIncidenciaID").val(dataItem.IncidenciaID);                        
-                        AbrirVentanaResolucion();
+                        $("#TmpIncidenciaID").val(dataItem.IncidenciaID);
+                        $("#txtNumeroControlResolucion").text("");
+                        $("#txtNumeroControlResolucion").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
+                        AbrirVentanaResolucion();                        
                         //var grid = $("#gridPopUp").data("kendoGrid");
                         //var ds = grid.dataSource;
                         //var dataItem = grid.dataItem($(e.target).closest("tr"));
@@ -127,6 +129,8 @@ function CargarGridPopUp() {
 }
 
 function VentanaModal() {
+    $("#txtNumeroControl").text("");
+    $("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
     var modalTitle = "";
     modalTitle = $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents";
     var window = $("#windowGrid");

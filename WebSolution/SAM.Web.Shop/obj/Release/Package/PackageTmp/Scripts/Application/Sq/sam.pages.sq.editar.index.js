@@ -93,7 +93,7 @@
                         $("#errorClientEdit").css("display", "none");
                         $("#errorClientEdit").append("");
                     }
-                } else {
+                } else if($("input[name='SearchTypeEdit']:checked").val() == "nc") {
                     if ($("#TieneConsecutivoEdit").val() == "0") {
                         cont++;
                         msg += "El Proyecto Seleccionado No Tiene Inicializado El Campo Consecutivo <br>";
@@ -122,6 +122,29 @@
                     }
 
                     if ($("#QuadrantIdNCEdit").val() == 0) {
+                        cont++;
+                        msg += "Ingrese Cuadrante <br>";
+                    }
+
+                    if (cont > 0) {
+                        $("#errorClientEdit").css("display", "block");
+                        $("#errorClientEdit").html("");
+                        $("#errorClientEdit").append("");
+                        $("#errorClientEdit").append(msg);
+                        e.preventDefault();
+                    } else {
+                        $("#errorClientEdit").css("display", "none");
+                        $("#errorClientEdit").append("");
+                    }
+                } else {
+                    
+                    //Validacion para Spools Resueltos
+                    if ($("#ProjectIdEditar").val() == 0) {
+                        cont++;
+                        msg += "Seleccione Proyecto <br>";
+                    }
+
+                    if ($("#QuadrantIdCEdit").val() == 0) {
                         cont++;
                         msg += "Ingrese Cuadrante <br>";
                     }
@@ -313,6 +336,10 @@
                         }
                         //$cnt.find("input[id^='SpoolName']").val('');
                         //$cnt.find("input[id^='SpoolName']").focus();
+                        break;
+                    case "s":
+                        $cuadranteContainer.show();
+                        $numeroControlContainer.hide();
                         break;
                     default:
                         throw new Error("Invalid option");

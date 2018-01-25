@@ -677,3 +677,4 @@ C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Shop\obj\Re
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Shop\obj\Release\en\SAM.Web.Shop.resources.dll
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Shop\obj\Release\SAM.Web.Shop.dll
 C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Shop\obj\Release\SAM.Web.Shop.pdb
+C:\Users\Fabian Gutierrez\Source\Repos\ShopLocal\WebSolution\SAM.Web.Shop\bin\itextsharp.xml

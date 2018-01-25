@@ -135,7 +135,9 @@
                                         <tr>
                                             <td style="display:none" >@cn.OrdenTrabajoSpoolID</td>         
                                             <td >@Html.ActionLink(string.Empty+"...", "DeleteLocation", "Location", new { id = cn.SpoolID, projectId = Model.ProjectId, quadrantId = "QTE", dateProcess = "DP" }, new { @class = "delete" })</td>
-                                            <td><a href="#">@cn.NumeroControl</a></td>
+                                            @*<td><a href="#">@cn.NumeroControl</a></td>*@
+                                            <td><a style="cursor: pointer;" href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=@cn.NumeroControl&ProyectoID=@cn.ProyectoID' target="_blank">@cn.NumeroControl</a></td>
+                                            @*<td>@Html.ActionLink(@cn.NumeroControl, "ObtenerPDFTraveler", "LinkTraveler", new { NumeroControl = @cn.NumeroControl, ProyectoID = Model.ProjectId } )</td>*@
                                             <td>@cn.Spool</td> 
                                             <td>@cn.FamiliaAcero</td>
                                             <td>@cn.DiametroMaximo</td>
