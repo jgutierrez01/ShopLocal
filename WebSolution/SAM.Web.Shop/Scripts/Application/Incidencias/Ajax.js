@@ -173,8 +173,10 @@ function AjaxGuardarIncidencia() {
         {
             SpoolID: SpoolIDGlobal == null ? 0 : SpoolIDGlobal,
             TipoIncidenciaID: parseInt($("#cmbTipoIncidencia").val()),
-            MaterialSpoolID: $("#cmbTipoIncidencia").data("kendoComboBox").text() == "Materiales" ? parseInt($("#cmbDetalleIncidencia").val()) : 0,
-            JuntaSpoolID: $("#cmbTipoIncidencia").data("kendoComboBox").text() == "Juntas" ? parseInt($("#cmbDetalleIncidencia").val()) : 0,
+            //MaterialSpoolID: $("#cmbTipoIncidencia").data("kendoComboBox").text() == "Materiales" ? parseInt($("#cmbDetalleIncidencia").val()) : 0,
+            //JuntaSpoolID: $("#cmbTipoIncidencia").data("kendoComboBox").text() == "Juntas" ? parseInt($("#cmbDetalleIncidencia").val()) : 0,
+            MaterialSpoolID: $("#cmbDetalleIncidencia").val(),
+            JuntaSpoolID: $("#cmbDetalleIncidencia").val(),
             ErrorIncidenciaID: parseInt($("#cmbErrores").val()),
             Observacion: $("#txtObservacion").val(),
             SI: ""

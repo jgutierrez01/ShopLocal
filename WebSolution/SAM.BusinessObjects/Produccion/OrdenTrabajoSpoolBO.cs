@@ -1228,7 +1228,7 @@ namespace SAM.BusinessObjects.Produccion
                                     " I.SpoolID, " +
                                     " OS.NumeroControl, " +
                                     " TI.Incidencia, " +
-                                    " CASE WHEN MS.MaterialSpoolID IS NULL AND JS.JuntaSpoolID IS NULL THEN 'N/A' WHEN MS.MaterialSpoolID IS NOT NULL AND JS.JuntaSpoolID IS NULL THEN MS.Etiqueta ELSE JS.Etiqueta END MaterialJunta, " +
+                                    " CASE WHEN I.TipoIncidenciaID = 1 THEN MS.Etiqueta WHEN I.TipoIncidenciaID = 2 THEN JS.Etiqueta ELSE 'N/A' END MaterialJunta, " +
                                     " EI.ErrorIncidenciaID, " +
                                     " EI.Error, " +                                
                                     " I.SI, " +
