@@ -1,0 +1,212 @@
+﻿@using SAM.Web.Shop.Factories
+@using SAM.Web.Shop.Models
+@using Resources.Views
+@using SAM.Web.Shop.Extensions
+@using GridMvc.Html
+@model SQModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/MasterLayout.cshtml";
+}
+
+@section breadcrumbs
+{
+    @Html.Action("YardBreadcrumb", "Controls")
+
+}
+@section menus{
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+    </ul>
+}
+
+<div id="contenedor" style="padding-bottom: 20px;" class="row">
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="width:100%; margin: 0 auto;">
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <div id="divproyecto" class="form-group">
+                @Html.Action("ProjectDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredADD(Model, ViewContext.ViewData.ModelState) })
+            </div>            
+        </div>        
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <div id="divproyecto" class="form-group">                
+                @Html.Action("QuadrantsDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredCuadrante(Model, ViewContext.ViewData.ModelState, 1) })
+            </div>            
+        </div>        
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <p class="alert alert-info" id="seccionAviso" style="display: none; padding-top: 10px;"></p>
+            <p class="alert alert-success" id="seccionSuccess" style="display: none; padding-top: 10px;"></p>
+            <p class="alert alert-warning" id="seccionError" style="display: none; padding-top: 10px;"></p>
+        </div>
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <button type="submit" id="Buscar" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.Search)</button>
+        </div>
+    </div>
+</div>
+
+<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">   
+    <div id="contieneGrid" style="display:none;">
+        <div id="areaPlanchado" class="addedSection">                        
+            <div id="grid" style="padding-top: 20px; margin: 0 auto;"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row col-xs-12" style="margin-top: 10px;">    
+    <p class="alert alert-success" id="msgExito" style="display: none; margin-top: 10px; margin-bottom: 10px;"></p>
+    <p class="alert alert-warning" id="msgError" style="display: none; margin-top: 10px; margin-bottom: 10px;"></p>
+    <div id="contenedorSpoolsResueltos" style="display:none;">
+        <h4 id="lblSpoolResuelto"></h4>        
+        <div id="gridResueltos" style="margin-top: 20px; margin: 0 auto;"></div>   
+        <div class="col-xs-12" style="margin-top: 20px;">
+            <button id="btnGenerarSI" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.GenerarSI)</button>
+        </div>     
+    </div>
+   
+</div>
+
+@*GRID POPUP*@
+<div id="windowGrid" style="display: none; z-index:inherit;" class="col-xs-12">
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12"><h4 id="txtNumeroControl"></h4></div>
+    <div class="row" style="width:100%; padding-right:20px;">
+        <div class="col-xs-3">
+            <div class="form-group">
+                <label id="lblTipoIncidencia"></label>
+                <input id="cmbTipoIncidencia" />
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="form-group">
+                <label id="lblDetalleIncidencia"></label>
+                <input id="cmbDetalleIncidencia" />
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="form-group">
+                <label id="lblErrores"></label>
+                <input id="cmbErrores" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-11">
+            <div class="form-group">
+                <label id="lblObservacion"></label>
+                <textarea id="txtObservacion" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 col-xs-offset-1" style="padding-bottom: 15px; width: 85%; padding-top: 15px;">
+            <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+                <div class="form-group">
+                    <button id="btnGuardar" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+                <div class="form-group">
+                    <button id="CerrarModal" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.Close)</button>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <p class="alert alert-warning" id="seccionErrorGrid" style="display: none; padding-top: 10px;"></p>
+        <p class="alert alert-success" id="seccionAvisoGrid" style="display: none; padding-top: 10px;"></p>
+        <div id="ContenedorGridPopUp" style="display:none;">
+            <div id="gridPopUp" style="padding-top: 20px; padding-bottom: 20px; margin: 0 auto;"></div>
+        </div>
+    </div>
+</div>
+
+@* Modal para confirmar resolucion de incidencias *@
+<div id="VentanaResolucion" style="display: none; z-index:inherit;" class="col-xs-12">
+    @* Inputs temporales para guardar valores externos al grid *@
+    <input type="text" id="TmpSpoolID" style="display: none;" />
+    <input type="text" id="TmpIncidenciaID" style="display: none;" />    
+
+    <div class="col-xs-11" style="padding-bottom: 10px; padding-top: 10px;">
+        <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+            <h4 id="txtNumeroControlResolucion"></h4>
+            <h4 id="txtInfoIncidencia"></h4>
+        </div>
+    </div>
+      
+    <div class="col-xs-11" style="padding-bottom: 10px; padding-top: 10px;">
+        <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+            <label id="txtTituloOpcion2" for="radio2"></label>
+            <input type="radio" id="radio2" name="radioOpcionResolver" value="Otro" />
+        </div>   
+        <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+            <label id="txtTituloOpcion1" for="radio1"></label>
+            <input type="radio" id="radio1" name="radioOpcionResolver" value="ErrorCaptura" />
+        </div>                     
+    </div>
+  
+    <div id="campoDetalleResolver" style="display: none;">
+        <div class="col-xs-11">           
+            <div class="col-xs-11">
+                <label id="lblDetalleResolucion"></label>*
+            </div>                       
+            <div class="col-xs-11">
+                <textarea id="txtDetalleResolucion" class="form-control"></textarea>
+            </div>           
+        </div>
+    </div>
+    @* Area de mensajes *@
+    <div class="col-xs-11">
+        <div class="col-xs-11">
+            <p class="alert alert-warning" id="ErrorResolucion" style="display: none; margin-top: 8px; margin-bottom: 8px;"></p>
+        </div>
+        <div class="col-xs-11">
+            <p class="alert alert-success" id="SuccessResolucion" style="display: none; margin-top: 8px; margin-bottom: 8px;"></p>        
+        </div>        
+    </div>
+    @* Botones Guardar y Cerrar *@
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 col-xs-offset-1" style="padding-bottom: 15px; width: 85%; padding-top: 15px;">
+        <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+            <div class="form-group">
+                <button id="btnGuardarResolucion" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.SaveButton_Text)</button>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+            <div class="form-group">
+                <button id="CerrarResolucion" class="btn btn-primary btn-block">@Html.Raw(CommonStrings.Close)</button>
+            </div>
+        </div>
+    </div>
+  
+</div>
+
+
+<script src="~/Scripts/Application/Incidencias/Captura.js"></script>
+<script src="~/Scripts/Application/Incidencias/Handler.js"></script>
+<script src="~/Scripts/Application/Incidencias/Ajax.js"></script>
+<script>
+    $(document).ready(function () {
+        ActivarEventos();
+        if ($("#grid").hasClass("k-widget")) {
+            $("#grid").removeClass("k-widget");
+        }
+        if ($("#gridPopUp").hasClass("k-widget")) {
+            $("#gridPopUp").removeClass("k-widget");
+        }
+        $("#txtSI").prop("autocomplete", "off");
+        $(".k-header").css("text-align", "center");//Centrar titulo de columnas
+    });
+</script>
+<style>
+    .k-grid .k-grid-header .k-header .k-link {
+        height: auto;
+        overflow-wrap: normal;
+    }
+
+    .k-grid .k-grid-header .k-header {
+        white-space: normal;
+    }    
+</style>
