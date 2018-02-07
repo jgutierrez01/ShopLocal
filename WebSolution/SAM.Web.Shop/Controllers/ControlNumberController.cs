@@ -74,7 +74,7 @@ namespace SAM.Web.Shop.Controllers
             crm.Project = NavContext.GetCurrentProject().Nombre;
             crm.Yard = NavContext.GetCurrentYard().Nombre;
             crm.NumberControl = NavContext.GetCurrentControlNumber().ControlNumber;
-
+            //crm.Granel = OrdenTrabajoSpoolBO.Instance.EsGranel(controlNumber.SpoolID);
             return View("CertificationReport", crm);
         }
 
@@ -112,6 +112,7 @@ namespace SAM.Web.Shop.Controllers
             crm.Yard = NavContext.GetCurrentYard().Nombre;
             crm.NumberControl = NavContext.GetCurrentControlNumber().ControlNumber;
             crm.NumberControlId = NavContext.GetCurrentControlNumber().ControlNumberId;
+            crm.Granel = OrdenTrabajoSpoolBO.Instance.EsGranel(controlNumber.SpoolID);
 
             return View("SummarySpool", crm);
         }

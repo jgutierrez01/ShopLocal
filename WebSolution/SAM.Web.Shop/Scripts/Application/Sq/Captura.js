@@ -62,31 +62,7 @@ function CargarGridPopUp() {
             { field: "Incidencia", title: $("html").prop("lang") != "en-US" ? "Incidencia" : "Incident", width: "20px" },
             { field: "MaterialJunta", title: "Material/Junta", width: "20px" },
             { field: "Error", title: "Error", width: "30px" },
-            { field: "Observaciones", title: $("html").prop("lang") != "en-US" ? "Observaciones" : "Observations", width: "20px" },
-            //{ field: "SI", title: "SI", width: "20px" },
-            //{
-            //    command: {
-            //        text: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-            //        className: "k-button k-button-icontext k-grid-Cancelar ",
-            //        click: function (e) {
-            //            var grid = $("#gridPopUp").data("kendoGrid");
-            //            var ds = grid.dataSource;
-            //            var dataItem = grid.dataItem($(e.target).closest("tr"));
-            //            if (confirm($("html").prop("lang") != "en-US" ? "Realmente Desea Eliminar Esta Incidencia?" : "Do You Really Want To Eliminate This Incidence?")) {
-            //                if ($("#OrigenIncidencia").val() == 1) {
-            //                    AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Nuevo');
-            //                } else {
-            //                    AjaxEliminarIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Editar');
-            //                }                            
-            //            } else {
-            //                e.preventDefault();
-            //            }
-            //        }
-            //    },
-            //    title: $("html").prop("lang") != "en-US" ? "Eliminar" : "Delete",
-            //    width: "10px",
-            //    attributes: { style: "text-align: center; margin: 0 auto" }
-            //},
+            { field: "Observaciones", title: $("html").prop("lang") != "en-US" ? "Observaciones" : "Observations", width: "20px" },            
             {
                 command: {
                     text: $("html").prop("lang") != "en-US" ? "Resolver" : "Solve",
@@ -103,21 +79,15 @@ function CargarGridPopUp() {
                         $("#TmpSpoolID").val(dataItem.SpoolID);
                         $("#TmpIncidenciaID").val(dataItem.IncidenciaID);
                         $("#txtNumeroControlResolucion").text("");
-                        $("#txtNumeroControlResolucion").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
-                        AbrirVentanaResolucion();                        
-                        //var grid = $("#gridPopUp").data("kendoGrid");
-                        //var ds = grid.dataSource;
-                        //var dataItem = grid.dataItem($(e.target).closest("tr"));
-                        //if (confirm($("html").prop("lang") != "en-US" ? "Confirma Resolver Esta Incidencia?" : "Confirm Resolve This Incidence?")) {
-                        //    if ($("#OrigenIncidencia").val() == 1) {
-                        //        AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Nuevo');
-                        //    } else {
-                        //        AjaxResolverIncidencia(dataItem.IncidenciaID, dataItem.SpoolID, 'Sol.Inspect Editar');
-                        //    }
-                            
-                        //} else {
-                        //    e.preventDefault();
-                        //}
+                        AjaxVerificarEsGranel(function (data) {
+                            if (data != "GRANEL") {
+                                $("#txtNumeroControlResolucion").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
+                            } else {
+                                $("#txtNumeroControlResolucion").append("<label>" + NumeroControlGlobal + "</label>");
+                            }
+                        });
+                        //$("#txtNumeroControlResolucion").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
+                        AbrirVentanaResolucion();                                                
                     }
                 },
                 title: $("html").prop("lang") != "en-US" ? "Resolver" : "Solve",
@@ -130,7 +100,14 @@ function CargarGridPopUp() {
 
 function VentanaModal() {
     $("#txtNumeroControl").text("");
-    $("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
+    AjaxVerificarEsGranel(function (data) {
+        if (data != "GRANEL") {
+            $("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
+        } else {
+            $("#txtNumeroControl").append("<label>" + NumeroControlGlobal + "</label>");
+        }
+    });    
+    //$("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
     var modalTitle = "";
     modalTitle = $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents";
     var window = $("#windowGrid");

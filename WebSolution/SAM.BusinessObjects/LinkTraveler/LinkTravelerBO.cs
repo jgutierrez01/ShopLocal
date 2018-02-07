@@ -128,6 +128,33 @@ namespace SAM.BusinessObjects.LinkTraveler
             {
                 return reader.NumberOfPages;
             }
-        }            
+        }          
+        
+        public string ValidarGranel(string NumeroControl, int ProyectoID)
+        {
+            string campo7 = "";
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = " SELECT " +
+                                    " ISNULL(S.Campo7, '') Campo7 " +
+                                " FROM " +
+                                    " OrdenTrabajoSpool OT WITH(NOLOCK) " +
+                                    " INNER JOIN Spool S WITH(NOLOCK) ON OT.SpoolID = S.SpoolID " +
+                                " WHERE " +
+                                    " OT.NumeroControl = '" + NumeroControl + "' AND S.ProyectoID = " + ProyectoID;
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        campo7 = ds.Tables[0].Rows[0]["Campo7"].ToString();                       
+                    }
+                }
+            }
+            return campo7;
+        }  
     }
 }

@@ -30,6 +30,7 @@ namespace SAM.Entities.Busqueda
         public bool TieneHoldIngenieria { get; set; }
         public bool OkPnd { get; set; }
         public int Incidencias { get; set; }
+        public bool Granel { get; set; }
     }
 
     [Serializable]
@@ -60,6 +61,8 @@ namespace SAM.Entities.Busqueda
         public bool OkPnd { get; set; }        
         [DataMember]
         public int Incidencias { get; set; }
+        [DataMember]
+        public bool Granel { get; set; }
     }
     [Serializable]
     public class AutorizarSI
@@ -91,7 +94,9 @@ namespace SAM.Entities.Busqueda
         [DataMember]
         public int Accion { get; set; }          
         [DataMember]
-        public int Incidencias { get; set; }              
+        public int Incidencias { get; set; }      
+        [DataMember]
+        public bool Granel { get; set; }        
     }   
     public class TipoIncidencia
     {
@@ -156,6 +161,7 @@ namespace SAM.Entities.Busqueda
         public string NumeroControl { get; set; }                        
         public bool Hold { get; set; }                        
         public int Incidencias { get; set; }
+        public bool Granel { get; set; }
     }
     public class AgregarSI
     {
@@ -166,7 +172,8 @@ namespace SAM.Entities.Busqueda
         public string NumeroControl { get; set; }
         public bool Hold { get; set; }
         public string SqCliente { get; set; }
-        public string SI { get; set; }          
+        public string SI { get; set; }
+        public bool Granel { get; set; }
     }
     public class Datos
     {

@@ -479,3 +479,16 @@ function AjaxGenerarSI(ds) {
         MostrarMensaje($("html").prop("lang") != "en-US" ? "No Hay Spools Para Generar SI" : "Not Spools To Generate IR" , "msgError");
     }    
 }
+
+function AjaxVerificarEsGranel(getGranel) {    
+    $.ajax({
+        async: false,
+        type: 'GET',
+        url: '/LinkTraveler/ValidaGranel/',
+        dataType: 'json',
+        data: { NumeroControl: NumeroControlGlobal, ProyectoID: $("#ProjectIdADD").val() },
+        success: function (data) {
+            getGranel(data[0].result);
+        }
+    });
+}

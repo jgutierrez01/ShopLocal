@@ -315,38 +315,38 @@
                     {
                         @Html.Grid(Model.ListaElementos).Named("gridAgregar").Columns(columns =>
                    {
-                   columns.Add(C => C.Accion).Titled("Eliminar")
-                   .Encoded(false)
-                   .Sanitized(false)
-                   .SetWidth(20)
-                   .RenderValueAs(c => new HtmlString
-                       (
-                           "<label class='delete' style='cursor:pointer;' id = '"+c.NumeroControl + Model.ProjectIdADD +"' onclick=\"" + "javascript:EliminarAdd(" + "'" + c.NumeroControl + "'" + "," + "'" + Model.ProjectIdADD + "'" + "," + "'" + c.SQ + "'" + " ) \"" + "  > ... </label> "
+                       columns.Add(C => C.Accion).Titled("Eliminar")
+                       .Encoded(false)
+                       .Sanitized(false)
+                       .SetWidth(20)
+                       .RenderValueAs(c => new HtmlString
+                           (
+                               "<label class='delete' style='cursor:pointer;' id = '"+c.NumeroControl + Model.ProjectIdADD +"' onclick=\"" + "javascript:EliminarAdd(" + "'" + c.NumeroControl + "'" + "," + "'" + Model.ProjectIdADD + "'" + "," + "'" + c.SQ + "'" + " ) \"" + "  > ... </label> "
+                           )
                        )
-                   )
-                   .Filterable(true);
-                   columns.Add().Titled("NumeroControl")
-                   .Encoded(false)
-                   .Sanitized(false)
-                   .SetWidth(20)
-                   .RenderValueAs(c => new HtmlString
-                       (
-                            "<a style='cursor:pointer;' href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + c.NumeroControl + "&ProyectoID=" + Model.ProjectIdADD + "' target='_blank'> " + c.NumeroControl + "</a> "                               
-                        )
-                    ).Filterable(false);
-                    //columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(20);
-                    columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(20);
-                    columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
-                    columns.Add().Titled("Incidencias")
-                    .Encoded(false)
-                    .Sanitized(false)
-                    .SetWidth(20)
-                    .RenderValueAs(c => new HtmlString
-                        (
-                            "<label class='incidencias' style='cursor:pointer;'  onclick=\"" + "javascript:abrirIncidencias(" + "'" + c.SpoolID + "'" + "," + "'" + c.NumeroControl + "', 1" + ") \"" + "  > ..... </label> "
-                        )
-                    ).Filterable(false);
-                }).WithPaging(10).Sortable(true).EmptyText(" ");
+                       .Filterable(true);
+                       columns.Add().Titled("NumeroControl")
+                       .Encoded(false)
+                       .Sanitized(false)
+                       .SetWidth(20)
+                       .RenderValueAs(c => new HtmlString
+                           (
+                                !c.Granel ?  "<a style='cursor:pointer;' href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + c.NumeroControl + "&ProyectoID=" + Model.ProjectIdADD + "' target='_blank'> " + c.NumeroControl + "</a> " : c.NumeroControl
+                            )
+                        ).Filterable(true);
+                       //columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(20);
+                       columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(20);
+                       columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
+                       columns.Add().Titled("Incidencias")
+                       .Encoded(false)
+                       .Sanitized(false)
+                       .SetWidth(20)
+                       .RenderValueAs(c => new HtmlString
+                           (
+                               "<label class='incidencias' style='cursor:pointer;'  onclick=\"" + "javascript:abrirIncidencias(" + "'" + c.SpoolID + "'" + "," + "'" + c.NumeroControl + "', 1" + ") \"" + "  > ..... </label> "
+                           )
+                       ).Filterable(false);
+                   }).WithPaging(10).Sortable(true).EmptyText(" ");
             }
         </div>
         <div>
@@ -421,9 +421,9 @@
                       .SetWidth(20)
                       .RenderValueAs(c => new HtmlString
                           (
-                               "<a style='cursor:pointer;' href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + c.NumeroControl + "&ProyectoID=" + Model.ProjectIdADD + "' target='_blank'> " + c.NumeroControl + "</a> "
+                               !c.Granel ? "<a style='cursor:pointer;' href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + c.NumeroControl + "&ProyectoID=" + Model.ProjectIdADD + "' target='_blank'> " + c.NumeroControl + "</a> " : c.NumeroControl
                            )
-                       ).Filterable(false);
+                       ).Filterable(true);
                        columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(30);
                        columns.Add(c => c.TieneHoldIngenieria).Titled("Hold Ingenieria").Filterable(true).SetWidth(30);
                        columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);

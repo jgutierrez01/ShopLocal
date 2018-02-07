@@ -314,7 +314,8 @@ namespace SAM.BusinessObjects.Produccion
                                     " B.sqinterno, " +
                                     " C.TieneHoldIngenieria, " +
                                     " CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd, " +
-                                    " ISNULL(I.Incidencias, 0) Incidencias" +
+                                    " ISNULL(I.Incidencias, 0) Incidencias, " +
+                                    " CASE WHEN B.Campo7 = 'GRANEL' THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END Granel " +
                                 " FROM " +
                                     " OrdenTrabajoSpool A WITH(NOLOCK) " +
                                     " LEFT JOIN Spool B WITH(NOLOCK) ON A.SpoolID = B.SpoolID " +
@@ -346,7 +347,8 @@ namespace SAM.BusinessObjects.Produccion
                             sqinterno = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
                             TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
                             OkPnd = ds.Tables[0].Rows[i]["OkPnd"].ToString() == "0" ? false : true,
-                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString())
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
+                            Granel = bool.Parse(ds.Tables[0].Rows[i]["Granel"].ToString())
                         };
                         lista.Add(objeto);
                     }
@@ -665,7 +667,8 @@ namespace SAM.BusinessObjects.Produccion
                                     " S.sq SqCliente, " +
                                     " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END TieneHoldIngenieria, " +
                                     " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd, " +
-                                    " ISNULL(I.Incidencias, 0) Incidencias " +
+                                    " ISNULL(I.Incidencias, 0) Incidencias, " +
+                                    " CASE WHEN S.Campo7 = 'GRANEL' THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END Granel " +
                                 " FROM " +
                                     " OrdenTrabajoSpool OS WITH(NOLOCK) " +
                                     " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID " +
@@ -703,7 +706,8 @@ namespace SAM.BusinessObjects.Produccion
                             SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
                             TieneHoldIngenieria = bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
                             OkPnd = bool.Parse(ds.Tables[0].Rows[i]["OkPnd"].ToString()),
-                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString())
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
+                            Granel = bool.Parse(ds.Tables[0].Rows[i]["Granel"].ToString())
                         };
                         lista.Add(cuadranteNumeroControlSQ);
                     }
@@ -728,7 +732,8 @@ namespace SAM.BusinessObjects.Produccion
                                     " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END TieneHoldIngenieria, " +
                                     " CASE WHEN W.UsuarioOkPnd IS NULL THEN CAST(0 AS BIT) ELSE CAST(1 AS BIT) END OkPnd, " +
                                     " CASE WHEN A.Autorizado IS NULL OR A.Autorizado = 0 THEN CAST(0 AS BIT) ELSE CAST(A.Autorizado AS BIT) END Autorizado, " +
-                                    " ISNULL(I.Incidencias, 0) Incidencias " +
+                                    " ISNULL(I.Incidencias, 0) Incidencias, " +
+                                    " CASE WHEN S.Campo7 = 'GRANEL' THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END Granel " +
                                 " FROM " +
                                     "   OrdenTrabajoSpool OS WITH(NOLOCK) " +
                                     " INNER JOIN Spool S WITH(NOLOCK) ON OS.SpoolID = S.SpoolID " +
@@ -769,6 +774,7 @@ namespace SAM.BusinessObjects.Produccion
                             Autorizado = bool.Parse(ds.Tables[0].Rows[i]["Autorizado"].ToString()),
                             NoAutorizado = !bool.Parse(ds.Tables[0].Rows[i]["Autorizado"].ToString()),
                             Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
+                            Granel = bool.Parse(ds.Tables[0].Rows[i]["Granel"].ToString())
                         };
                         lista.Add(Autorizar);
                     }
@@ -793,7 +799,8 @@ namespace SAM.BusinessObjects.Produccion
                                 " C.Nombre Cuadrante, " +
                                 " OT.NumeroControl, " +
                                 " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END Hold, " +
-                                " ISNULL(II.Incidencias, 0) Incidencias " +
+                                " ISNULL(II.Incidencias, 0) Incidencias, " +
+                                " CASE WHEN S.Campo7 = 'GRANEL' THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END Granel " +
                             " FROM " +
                                 " Shop_Incidencia I WITH(NOLOCK) " +
                                 " INNER JOIN Spool S WITH(NOLOCK) ON I.SpoolID = S.SpoolID " +
@@ -807,7 +814,7 @@ namespace SAM.BusinessObjects.Produccion
                             " WHERE " +
                                 " (S.proyectoID = " + proyectoID + " " + Operador + " C.CuadranteID = " + CuadranteID + ") AND I.Activo = 1 AND(I.Resolucion IS NULL OR I.SI IS NULL) AND I.Inspector IS NOT NULL " +
                             " GROUP BY " +
-                                " S.SpoolID, S.ProyectoID, C.CuadranteID, C.Nombre, OT.NumeroControl, H.TieneHoldIngenieria, II.Incidencias ";
+                                " S.SpoolID, S.ProyectoID, C.CuadranteID, C.Nombre, OT.NumeroControl, H.TieneHoldIngenieria, II.Incidencias, S.Campo7 ";
                                  
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -828,6 +835,7 @@ namespace SAM.BusinessObjects.Produccion
                             NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),                            
                             Hold = bool.Parse(ds.Tables[0].Rows[i]["Hold"].ToString()),                            
                             Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
+                            Granel = bool.Parse(ds.Tables[0].Rows[i]["Granel"].ToString())
                         };
                         lista.Add(Incidencias);
                     }
@@ -888,11 +896,11 @@ namespace SAM.BusinessObjects.Produccion
                 string query = "";
                 if (Opcion == 1)
                 {
-                    query += " SELECT 1 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd, ISNULL(I.Incidencias, 0) Incidencias ";
+                    query += " SELECT 1 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd, ISNULL(I.Incidencias, 0) Incidencias, CASE WHEN B.Campo7 = 'GRANEL' THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END Granel ";
                 }
                 else
                 {
-                    query += " SELECT 2 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd, ISNULL(I.Incidencias, 0) Incidencias ";
+                    query += " SELECT 2 Accion,C.Nombre Cuadrante,C.CuadranteID,c.Nombre,A.NumeroControl,A.OrdenTrabajoSpoolID, B.SpoolID, B.sq SqCliente, B.sqinterno,D.TieneHoldIngenieria, CASE WHEN W.UsuarioOkPnd IS NULL THEN 0 ELSE 1 END OkPnd, ISNULL(I.Incidencias, 0) Incidencias, CASE WHEN B.Campo7 = 'GRANEL' THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END Granel ";
                 }
                 query += " FROM " +
                             " OrdenTrabajoSpool A WITH(NOLOCK) " +
@@ -930,7 +938,8 @@ namespace SAM.BusinessObjects.Produccion
                             SQ = ds.Tables[0].Rows[i]["sqinterno"].ToString(),
                             TieneHoldIngenieria = ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString() == "" ? false : bool.Parse(ds.Tables[0].Rows[i]["TieneHoldIngenieria"].ToString()),
                             OkPnd = ds.Tables[0].Rows[i]["OkPnd"].ToString() == "0" ? false : true,
-                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString())
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
+                            Granel = bool.Parse(ds.Tables[0].Rows[i]["Granel"].ToString())
                         };
                         lista.Add(objeto);
                     }
@@ -943,8 +952,9 @@ namespace SAM.BusinessObjects.Produccion
         {
             using (SamContext ctx = new SamContext())
             {
+                bool esgranel = EsGranel(idSpool);
                 var query =
-                    (from odts in ctx.OrdenTrabajoSpool
+                    (from odts in ctx.OrdenTrabajoSpool                     
                      join c in ctx.Cuadrante on odts.Spool.CuadranteID equals c.CuadranteID into cuadranteDef
                      from t2 in cuadranteDef.DefaultIfEmpty()
                      join f1 in ctx.FamiliaAcero on odts.Spool.FamiliaAcero1ID equals f1.FamiliaAceroID into familiaDef1
@@ -963,7 +973,8 @@ namespace SAM.BusinessObjects.Produccion
                          DiametroMaximo = odts.Spool.DiametroMayor,
                          Cuadrante = string.IsNullOrEmpty(t2.Nombre) ? string.Empty : t2.Nombre,
                          CuadranteId = (t2.CuadranteID == null) ? 0 : t2.CuadranteID,
-                         TipoNC = TipoNumeroControlEnum.AProcesar
+                         TipoNC = TipoNumeroControlEnum.AProcesar,
+                         Granel = esgranel
                      });
 
                 return query.FirstOrDefault();
@@ -1027,6 +1038,7 @@ namespace SAM.BusinessObjects.Produccion
                 Lista.Columns.Remove("TieneHoldIngenieria");
                 Lista.Columns.Remove("OkPnd");
                 Lista.Columns.Remove("Incidencias");
+                Lista.Columns.Remove("Granel");
                 ObjetosSQL _SQL = new ObjetosSQL();
                 string[,] parametro = null;
                 if (Lista.Rows.Count > 0)
@@ -1047,7 +1059,8 @@ namespace SAM.BusinessObjects.Produccion
                             SQ = row.Field<string>("SQ"),
                             TieneHoldIngenieria = row.Field<bool>("TieneHoldIngenieria"),
                             OkPnd = row.Field<int>("OkPnd") == 0 ? false : true,
-                            Incidencias = row.Field<int>("Incidencias")
+                            Incidencias = row.Field<int>("Incidencias"),
+                            Granel = row.Field<bool>("Granel")
                         }).ToList();
                         ListaRetorna = result;
                     }
@@ -1075,6 +1088,7 @@ namespace SAM.BusinessObjects.Produccion
                 listaLayoutSQ.Columns.Remove("TieneHoldIngenieria");
                 listaLayoutSQ.Columns.Remove("OkPnd");
                 listaLayoutSQ.Columns.Remove("Incidencias");
+                listaLayoutSQ.Columns.Remove("Granel");
                 ObjetosSQL _SQL = new ObjetosSQL();
                 string[,] parametro = { { "@Usuario", userID.ToString() }, { "@Inspector", inspector }, { "@ProyectoID", proyectoid.ToString() }, { "@SQBuscar", sq }, { "@UltimoSQInternoEncontrado", "" } };
                 if (listaLayoutSQ.Rows.Count > 0)
@@ -1461,7 +1475,8 @@ namespace SAM.BusinessObjects.Produccion
                                     " OT.NumeroControl, " +
                                     " S.sq SqCliente, " +
                                     " S.sqinterno SI, " +
-                                    " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END Hold " +
+                                    " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END Hold, " +
+                                    " CASE WHEN S.Campo7 = 'GRANEL' THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END Granel " +
                                 " FROM " +
                                     " Spool S WITH(NOLOCK) " +
                                     " INNER JOIN OrdenTrabajoSpool OT WITH(NOLOCK) ON S.SpoolID = OT.SpoolID " +
@@ -1491,7 +1506,8 @@ namespace SAM.BusinessObjects.Produccion
                             NumeroControl = ds.Tables[0].Rows[0]["NumeroControl"].ToString(),
                             SqCliente = ds.Tables[0].Rows[0]["SqCliente"].ToString(),
                             SI = ds.Tables[0].Rows[0]["SI"].ToString(),
-                            Hold = bool.Parse(ds.Tables[0].Rows[0]["Hold"].ToString())
+                            Hold = bool.Parse(ds.Tables[0].Rows[0]["Hold"].ToString()),
+                            Granel = bool.Parse(ds.Tables[0].Rows[0]["Granel"].ToString())
                         };
                         Lista.Add(objeto);
                     }                    
@@ -1499,5 +1515,33 @@ namespace SAM.BusinessObjects.Produccion
                 }                
             }
         }
+
+        public bool EsGranel(int SpoolID)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {
+                string query = " SELECT ISNULL(Campo7, '') Campo7 FROM Spool WHERE SpoolID = " + SpoolID;
+                SqlCommand cmd = new SqlCommand(query, con);
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    if (reader["Campo7"].ToString() == "GRANEL")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                reader.Close();
+                con.Close();                                    
+            }
+            return false;
+        }
+
+
     }
 }

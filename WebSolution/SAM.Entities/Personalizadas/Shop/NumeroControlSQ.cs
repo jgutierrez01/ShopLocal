@@ -19,6 +19,7 @@ namespace SAM.Entities.Personalizadas.Shop
         public bool TieneHoldIngenieria { get; set; }
         public bool OkPnd { get; set; }
         public int Incidencias { get; set; }
+        public bool Granel { get; set; }
         public LayoutGridSQ()
         {
             this.NumeroControl = "";
@@ -32,6 +33,7 @@ namespace SAM.Entities.Personalizadas.Shop
             this.TieneHoldIngenieria = false;
             this.OkPnd = false;
             this.Incidencias = 0;
+            this.Granel = false;
         }
     }
 

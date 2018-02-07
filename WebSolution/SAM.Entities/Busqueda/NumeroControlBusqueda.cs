@@ -36,5 +36,6 @@ namespace SAM.Entities.Busqueda
         //solo para version Shop
         public TipoNumeroControlEnum TipoNC { get; set; }
         public int? TieneWorkstatusSpool { get; set; }
+        public bool Granel { get; set; }
     }
 }

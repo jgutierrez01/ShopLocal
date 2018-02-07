@@ -303,3 +303,16 @@ function AjaxResolucionIncidencias(spoolID, incidenciaID, origen, resolucion, ac
         }
     });
 }
+
+function AjaxVerificarEsGranel(getGranel) {
+    $.ajax({
+        async: false,
+        type: 'GET',
+        url: '/LinkTraveler/ValidaGranel/',
+        dataType: 'json',
+        data: { NumeroControl: NumeroControlGlobal, ProyectoID: $("#ProjectIdADD").val() },
+        success: function (data) {
+            getGranel(data[0].result);
+        }
+    });
+}

@@ -14,6 +14,7 @@ namespace SAM.Web.Shop.Models
         public string Yard { get; set; }
         public string NumberControl {get; set;}
         public string Project { get; set; }
+        //public bool Granel { get; set; }
 
         public CertificationReportModel() 
         { 

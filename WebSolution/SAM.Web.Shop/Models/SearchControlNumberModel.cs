@@ -45,6 +45,7 @@ namespace SAM.Web.Shop.Models
    
         public int QuadrantId { get; set; }
         public int TypeSearch { get; set; }
+        public bool Granel { get; set; }
 
     }
 }

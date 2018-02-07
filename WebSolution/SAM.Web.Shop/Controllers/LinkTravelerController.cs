@@ -105,5 +105,13 @@ namespace SAM.Web.Shop.Controllers
             }                                             
         }
         
+        [HttpGet]
+        public JsonResult ValidaGranel(string NumeroControl, int ProyectoID)
+        {
+            string Respuesta = LinkTravelerBO.Instance.ValidarGranel(NumeroControl, ProyectoID);
+            var myData = new[] { new { result = Respuesta } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

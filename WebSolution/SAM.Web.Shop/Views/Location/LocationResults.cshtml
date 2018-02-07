@@ -49,8 +49,15 @@
                                             {                                      
                                                 <tr>
                                                     <td style="display:none" >@cn.OrdenTrabajoSpoolID</td> 
-                                                    <td>@Html.ActionLink("...", "DeleteLocationResults", "Location", new { id = cn.SpoolID, projectId = Model.ProjectId,  quadrantId = Model.QuadrantId, processDate = Model.ProcessDate , dateProcess = Model.ProcessDate  }, new { @class = "deleteResults" })</td>                                                                                                                                                         
-                                                    <td><a style="cursor: pointer;" href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=@cn.NumeroControl&ProyectoID=@cn.ProyectoID' target="_blank">@cn.NumeroControl</a></td>
+                                                    <td>@Html.ActionLink("...", "DeleteLocationResults", "Location", new { id = cn.SpoolID, projectId = Model.ProjectId,  quadrantId = Model.QuadrantId, processDate = Model.ProcessDate , dateProcess = Model.ProcessDate  }, new { @class = "deleteResults" })</td> 
+                                                    @if (cn.Granel)
+                                                    {
+                                                        <td>@cn.NumeroControl</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><a style="cursor: pointer;" href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=@cn.NumeroControl&ProyectoID=@cn.ProyectoID' target="_blank">@cn.NumeroControl</a></td>
+                                                    }                                                    
                                                     <td>@cn.Spool</td> 
                                                     <td>@cn.FamiliaAcero</td>
                                                     <td>@cn.DiametroMaximo</td>
@@ -97,8 +104,15 @@
                                         @foreach (NumeroControlBusqueda cn in Model.ControlNumberToProcess)
                                         {                                      
                                             <tr>
-                                                <td style="display:none" >@cn.OrdenTrabajoSpoolID</td>                                                                                          
-                                                <td><a style="cursor: pointer;" href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=@cn.NumeroControl&ProyectoID=@cn.ProyectoID' target="_blank">@cn.NumeroControl</a></td>
+                                                <td style="display:none" >@cn.OrdenTrabajoSpoolID</td>           
+                                                @if (cn.Granel)
+                                                {
+                                                    <td>@cn.NumeroControl</td>
+                                                }
+                                                else
+                                                {
+                                                    <td><a style="cursor: pointer;" href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=@cn.NumeroControl&ProyectoID=@cn.ProyectoID' target="_blank">@cn.NumeroControl</a></td>
+                                                }                                                
                                                 <td>@cn.Spool</td> 
                                                 <td>@cn.FamiliaAcero</td>
                                                 <td>@cn.DiametroMaximo</td>

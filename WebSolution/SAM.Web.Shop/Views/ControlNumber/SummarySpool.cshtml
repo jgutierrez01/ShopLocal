@@ -37,8 +37,15 @@
                         <th> @Html.Raw(SummarySpoolStrings.DateOkPnd)          </th>
                         <th>@Html.Raw(SummarySpoolStrings.NumeroEmbarque) </th>
                     </tr>
-                    <tr>                                                
-                        <td><a style="cursor: pointer;" href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=@Html.DisplayTextFor(a => a.NumberControl)&ProyectoID=@Html.DisplayTextFor(b => b.ProjectID)' target="_blank">@Html.DisplayTextFor(m => m.NumberControl)</a></td>                        
+                    <tr>    
+                        @if (Model.Granel)
+                        {
+                            <td>@Html.DisplayTextFor(n => n.NumberControl) </td>
+                        }
+                        else
+                        {
+                            <td><a style="cursor: pointer;" href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=@Html.DisplayTextFor(a => a.NumberControl)&ProyectoID=@Html.DisplayTextFor(b => b.ProjectID)' target="_blank">@Html.DisplayTextFor(m => m.NumberControl)</a></td>
+                        }                        
                         <td>@Html.DisplayTextFor(m => m.Spool)</td>
                         <td>@Html.DisplayTextFor(m => m.DiametroMayor)</td>
                         <td>@Html.DisplayTextFor(m => m.Kg)</td>

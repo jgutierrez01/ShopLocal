@@ -67,6 +67,7 @@ namespace SAM.Web.Shop.Models
         public bool ViewFormEdit { get; set; }
         public bool ViewGridAdd { get; set; }
         public bool ViewGridEdit { get; set; }
+        public bool Granel { get; set; }
 
         public SQModel(string seleccionAgregarEditar, string quadrantIdCADD, string quadrantIdNCADD, string quadrantIdCEdit, string quadrantIdNCEdit, string projectIdADD, string projectIdEdit, string searchTypeADD, string searchTypeEdit, string sQ, string workOrderNumberADD, string workOrderNumberEdit, string controlNumberADD, string controlNumberEDIT, string CuadranteID)
         {

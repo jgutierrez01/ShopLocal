@@ -169,7 +169,8 @@ namespace SAM.Web.Shop.Controllers
                                     SQ = ots.sqinterno,
                                     TieneHoldIngenieria = ots.TieneHoldIngenieria,
                                     OkPnd = ots.OkPnd,
-                                    Incidencias = ots.Incidencias
+                                    Incidencias = ots.Incidencias,
+                                    Granel = ots.Granel
                                 });
                             }
                             string datosAsignados = "";
@@ -281,7 +282,8 @@ namespace SAM.Web.Shop.Controllers
                                     SQ = numeroControl[i].SQ,
                                     TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria,
                                     OkPnd = numeroControl[i].OkPnd,
-                                    Incidencias = numeroControl[i].Incidencias
+                                    Incidencias = numeroControl[i].Incidencias,
+                                    Granel = numeroControl[i].Granel
                                 });
                             }
                             string datosAsignados = "";
@@ -388,7 +390,8 @@ namespace SAM.Web.Shop.Controllers
                                     SQ = item.SI,
                                     TieneHoldIngenieria = item.Hold,
                                     OkPnd = false,
-                                    Incidencias = OrdenTrabajoSpoolBO.Instance.ObtenerNumeroIncidencias(item.SpoolID)
+                                    Incidencias = OrdenTrabajoSpoolBO.Instance.ObtenerNumeroIncidencias(item.SpoolID),
+                                    Granel = item.Granel
                                 });
                             }
                             string errores = "";
@@ -591,7 +594,9 @@ namespace SAM.Web.Shop.Controllers
                                 SQ = numeroControl[i].SQ,
                                 TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria,
                                 OkPnd = numeroControl[i].OkPnd,
-                                Incidencias = numeroControl[i].Incidencias
+                                Incidencias = numeroControl[i].Incidencias,
+                                Granel = numeroControl[i].Granel
+
                             });
                         }
                         var Lista = listaElementos;
@@ -686,7 +691,8 @@ namespace SAM.Web.Shop.Controllers
                                         SQ = ots.sqinterno,
                                         TieneHoldIngenieria = ots.TieneHoldIngenieria,
                                         OkPnd = ots.OkPnd,
-                                        Incidencias = ots.Incidencias
+                                        Incidencias = ots.Incidencias,
+                                        Granel = ots.Granel
                                     });
                                 }
                                 string datosAsignados = "";
@@ -793,7 +799,8 @@ namespace SAM.Web.Shop.Controllers
                                         SQ = numeroControl[i].SQ,
                                         TieneHoldIngenieria = numeroControl[i].TieneHoldIngenieria,
                                         OkPnd = numeroControl[i].OkPnd,
-                                        Incidencias = numeroControl[i].Incidencias
+                                        Incidencias = numeroControl[i].Incidencias,
+                                        Granel = numeroControl[i].Granel
                                     });
                                 }
                                 string datosAsignados = "";
@@ -891,7 +898,8 @@ namespace SAM.Web.Shop.Controllers
                                         SQ = item.SI,
                                         TieneHoldIngenieria = item.Hold,
                                         OkPnd = false,
-                                        Incidencias = OrdenTrabajoSpoolBO.Instance.ObtenerNumeroIncidencias(item.SpoolID)
+                                        Incidencias = OrdenTrabajoSpoolBO.Instance.ObtenerNumeroIncidencias(item.SpoolID),
+                                        Granel = item.Granel
                                     });
                                 }
                                 string errores = "";

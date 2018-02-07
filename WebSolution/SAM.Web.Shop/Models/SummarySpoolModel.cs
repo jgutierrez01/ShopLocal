@@ -65,5 +65,6 @@ namespace SAM.Web.Shop.Models
         {
             get { return FechaOkPnd.HasValue ? FechaOkPnd.Value.ToShortDateString() : string.Empty; }
         }
+        public bool Granel { get; set; }
     } 
 }
