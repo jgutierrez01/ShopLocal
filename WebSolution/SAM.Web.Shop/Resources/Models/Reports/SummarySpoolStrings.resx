@@ -246,4 +246,7 @@
   <data name="Campo54" xml:space="preserve">
     <value>Ultimo Proceso</value>
   </data>
+  <data name="GrupoAcero" xml:space="preserve">
+    <value>Grupo Acero</value>
+  </data>
 </root>

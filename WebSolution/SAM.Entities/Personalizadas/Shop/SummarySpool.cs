@@ -33,6 +33,7 @@ namespace SAM.Entities.Personalizadas.Shop
         public string InspectorLiberacionDimensional { get; set; }
         public DateTime? FechaOkPnd { get; set; }
         public decimal DiametroMayor { get; set; }
+        public string GrupoAcero { get; set; }
         public SummarySpool() 
         {
             this.DetailJoints = new List<DetailSummaryJoint>(); 

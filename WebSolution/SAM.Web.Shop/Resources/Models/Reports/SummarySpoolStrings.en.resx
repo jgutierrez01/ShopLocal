@@ -210,4 +210,7 @@
   <data name="Cantidad" xml:space="preserve">
     <value>Quantity</value>
   </data>
+  <data name="GrupoAcero" xml:space="preserve">
+    <value>SteelGroup</value>
+  </data>
 </root>

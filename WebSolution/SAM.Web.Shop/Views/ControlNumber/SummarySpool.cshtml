@@ -24,6 +24,7 @@
                     <tr>
                         <th>@Html.Raw(SummarySpoolStrings.NumberControl)</th>
                         <th>@Html.Raw(SummarySpoolStrings.Spool)   </th>
+                        <th>@Html.Raw(SummarySpoolStrings.GrupoAcero) </th>
                         <th>@Html.Raw(SummarySpoolStrings.LargDiam)   </th>
                         <th>@Html.Raw(SummarySpoolStrings.Kg)   </th>
                         <th>@Html.Raw(SummarySpoolStrings.KGSGRUPO)   </th>
@@ -47,6 +48,7 @@
                             <td><a style="cursor: pointer;" href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=@Html.DisplayTextFor(a => a.NumberControl)&ProyectoID=@Html.DisplayTextFor(b => b.ProjectID)' target="_blank">@Html.DisplayTextFor(m => m.NumberControl)</a></td>
                         }                        
                         <td>@Html.DisplayTextFor(m => m.Spool)</td>
+                        <td>@Html.DisplayTextFor(m => m.GrupoAcero)</td>
                         <td>@Html.DisplayTextFor(m => m.DiametroMayor)</td>
                         <td>@Html.DisplayTextFor(m => m.Kg)</td>
                         <td>@Html.DisplayTextFor(m => m.KGSGRUPO)</td>

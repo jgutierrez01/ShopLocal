@@ -196,6 +196,15 @@ namespace SAM.Web.Shop.Resources.Models.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Grupo Acero.
+        /// </summary>
+        public static string GrupoAcero {
+            get {
+                return ResourceManager.GetString("GrupoAcero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hold.
         /// </summary>
         public static string Hold {

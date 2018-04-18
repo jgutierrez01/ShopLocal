@@ -15,6 +15,7 @@ namespace SAM.Web.Shop.Models
         public string Campo54 { get; set; }
         public string Cuadrante { get; set; }
         public string Spool{ get; set; }
+        public string GrupoAcero { get; set; }
         public int NumeroControlId { get; set; }
         public decimal M2 { get; set; }
         public decimal Kg { get; set; }

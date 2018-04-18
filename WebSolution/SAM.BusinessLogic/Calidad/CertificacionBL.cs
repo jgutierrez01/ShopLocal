@@ -1930,6 +1930,7 @@ namespace SAM.BusinessLogic.Calidad
                 cr.FechaPrimario = dr.Field<DateTime?>("FechaPrimario");
                 cr.FechaAcabado = dr.Field<DateTime?>("FechaAcabadoVisual");
                 cr.Spool = dr.Field<string>("Spool");
+                cr.GrupoAcero = dr.Field<string>("GrupoAcero");
                 cr.NumeroEmbarque = dr.Field<string>("NumeroEmbarque");
                 cr.RequierePWHT = dr.Field<string>("RequierePWHT");
                 cr.PorcentajePND = dr.Field<int>("PorcentajePND");

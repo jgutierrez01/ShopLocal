@@ -106,7 +106,7 @@ namespace SAM.Web.Shop.Controllers
             crm.Cuadrante = cr.Cuadrante;
             crm.SistemaPintura = cr.SistemaPintura;
             crm.Hold = cr.Hold;
-
+            crm.GrupoAcero = cr.GrupoAcero; //Add- 13-02-2018
             crm.Project = NavContext.GetCurrentProject().Nombre;
             crm.ProjectID = NavContext.GetCurrentProject().ID;
             crm.Yard = NavContext.GetCurrentYard().Nombre;
