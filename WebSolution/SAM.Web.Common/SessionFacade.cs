@@ -176,6 +176,7 @@ namespace SAM.Web.Common
             Nombre = usuario.Nombre;
             ApellidoPaterno = usuario.ApPaterno;
             PerfilID = usuario.PerfilID;
+            Session["PerfilID"] = PerfilID == null ? "0" : PerfilID.ToString();
             EsAdministradorSistema = usuario.EsAdministradorSistema;
 
             if (!usuario.EsAdministradorSistema)

@@ -6,12 +6,20 @@
 
 
 @section menus{
-    <ul class="nav navbar-nav">
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+    <ul class="nav navbar-nav">                
+        @if (Session["PerfilID"].ToString() == "39")
+        {
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+        }
+        else
+        {
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+        }
     </ul>
 }
 @section breadcrumbs
