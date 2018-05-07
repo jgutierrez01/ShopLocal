@@ -159,5 +159,97 @@ namespace SAM.Web.Shop.Controllers
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
 
+
+        [HttpGet]
+        public JsonResult ActualizarCacheProyectoNuevo(string ProyectoID)
+        {
+            HttpNavigationContext nav = new HttpNavigationContext();
+            nav.SetDataToSession<string>(Session, "ProyectoIdNuevo", ProyectoID);
+            var myData = new[] { new { result = "OK" } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult ObtenerProyectoNuevo()
+        {
+            HttpNavigationContext nav = new HttpNavigationContext();
+            string ProyectoID = "0";
+            if (nav.GetDataFromSession<string>(Session, "ProyectoIdNuevo") != null)
+            {
+                ProyectoID = nav.GetDataFromSession<string>(Session, "ProyectoIdNuevo");
+            }
+            var myData = new[] { new { result = ProyectoID.ToString() } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult SetVistaForm(int opc)
+        {
+            HttpNavigationContext nav = new HttpNavigationContext();
+            nav.SetDataToSession<string>(Session, "VistaIncidencia", opc);
+            var myData = new[] { new { result = "OK" } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult GetVistaForm()
+        {
+            HttpNavigationContext nav = new HttpNavigationContext();
+            string Vista = "0";
+            try
+            {
+                if (nav.GetDataFromSession<string>(Session, "VistaIncidencia") != null)
+                {
+                    Vista = nav.GetDataFromSession<string>(Session, "VistaIncidencia");
+                }
+            }
+            catch (System.Exception e)
+            {
+                Vista = "0";
+            }            
+            var myData = new[] { new { result = Vista } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult GetNumeroControl(string Prefijo, int ProyectoID, int ODT, int NumControl)
+        {
+            string Respuesta = "";
+            int numDigitosODT = OrdenTrabajoSpoolBO.Instance.ObtenerDigitosODT(ProyectoID);
+            List<string> ListaNumControl = new List<string>();
+            for (int i = 1; i <= numDigitosODT; i++)
+            {
+                ListaNumControl.Add(Prefijo + ODT.ToString().PadLeft(i, '0') + "-" + NumControl.ToString().PadLeft(3, '0'));
+            }                        
+            ObjectoSpool Spool = OrdenTrabajoSpoolBO.Instance.ObtenerDatosSpool(ListaNumControl, ProyectoID);
+            if(Spool.NumeroControl != null)
+            {
+                Respuesta = JsonConvert.SerializeObject(Spool);
+            }
+            else
+            {
+                Respuesta = "ERROR";
+            }           
+            var myData = new[] { new { result = Respuesta } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult ObtenerDatosPorNumeroControl(int ProyectoID, string NumeroControl)
+        {
+            List<ListaIncidencia> ListaSpools = OrdenTrabajoSpoolBO.Instance.ObtenerSpoolsPorNumeroControl(ProyectoID, NumeroControl);
+            string resultado = "";
+            if (ListaSpools != null && ListaSpools.Count > 0)
+            {
+                resultado = JsonConvert.SerializeObject(ListaSpools);
+            }
+            else
+            {
+                resultado = "NODATA";
+            }
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

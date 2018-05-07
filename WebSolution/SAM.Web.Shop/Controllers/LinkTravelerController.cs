@@ -82,7 +82,7 @@ namespace SAM.Web.Shop.Controllers
                     Document document = new Document();
                     PdfWriter.GetInstance(document, workStream).CloseStream = false;
                     document.Open();
-                    document.Add(new Paragraph("No se Encontro Traveler"));
+                    document.Add(new Paragraph("Conexion Incorrecta O No se Encontró Traveler"));
                     document.Close();
                     byte[] byteInfo = workStream.ToArray();
                     workStream.Write(byteInfo, 0, byteInfo.Length);

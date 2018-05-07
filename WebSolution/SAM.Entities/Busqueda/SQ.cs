@@ -185,4 +185,9 @@ namespace SAM.Entities.Busqueda
         public int ProyectoID { get; set; }
         public int CuadranteID { get; set; }
     }
+
+    public class ObjectoSpool {
+        public int SpoolID { get; set; }
+        public string NumeroControl { get; set; }
+    }
 }
