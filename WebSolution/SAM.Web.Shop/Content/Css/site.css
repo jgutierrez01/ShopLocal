@@ -134,7 +134,7 @@ modal element will be visible */
 }
 
 .k-grid tbody tr td a.k-button.k-grid-Incidencias {
-    background-image: url("/Content/images/Info16x16.png");
+    background-image: url("/Content/images/info.png");
     padding-right: 10px;
     height: 20px;
     min-width: 20px !important;

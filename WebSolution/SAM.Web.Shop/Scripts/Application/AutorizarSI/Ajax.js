@@ -52,19 +52,21 @@ function AjaxObtenerSpools() {
                     $("#grid").removeClass("k-widget");
                 }
                 loadingStop();
-                SIGlobal = $("#txtSI").val();
+                SIGlobal = $("#txtSI").val();                
                 var result = JSON.parse(data[0].result);
+                
                 $("#grid").data("kendoGrid").dataSource.data([]);
-                $("#grid").data("kendoGrid").dataSource.data(result);
+                $("#grid").data("kendoGrid").dataSource.data(result);                
                 $("#contieneGrid").css("display", "block");
-                $(".k-grid-pager").css("width", "100%");                
+                $(".k-grid-pager").css("width", "100%");
+                
             }
         },
         error: function (xhr, textStatus, errorThrown) {
             loadingStop();
             alert("Error Obteniendo Información: " + "\n" + xhr + "\n" + textStatus + "\n" + errorThrown);
         }
-    });
+    });   
 }
 
 function AjaxObtenerTipoIncidencias() {    

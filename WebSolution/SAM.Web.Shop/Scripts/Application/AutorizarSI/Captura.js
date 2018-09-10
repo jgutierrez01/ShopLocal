@@ -23,6 +23,7 @@ function ActivarEventos() {
     CerrarModalResolucion();
     EventoChangeRadioResolverIncidencia();
     EventoGuardarResolucion();
+   
 }
 
 function NombrarEtiquetas() {
@@ -59,7 +60,7 @@ function IniciaGrid() {
                 if (event.isDefaultPrevented) return;
             }
 
-            editCell.call(this, cell);
+            //editCell.call(this, cell);
         };
     })(kendo.ui.Grid.fn.editCell);
     $("#grid").kendoGrid({
@@ -90,7 +91,7 @@ function IniciaGrid() {
                         Accion: { type: "int", editable: false },
                         Incidencias: { type: "int", editable: false },
                         HistorySI: { type: "string", editable: false },
-                        Granel: { type: "boolean", editable: false }
+                        Granel: { type: "boolean", editable: false }                       
                     }
                 }
             },
@@ -130,10 +131,18 @@ function IniciaGrid() {
                     messages: {
                         isTrue: $("html").prop("lang") != "en-US" ? "V" : "T",
                         isFalse: "F",
-                        style: "max-width:20px;"
+                        //style: "max-width:20px;"
                     },
                     dataSource: [{ Autorizado: true }, { Autorizado: false }]
-                }, template: '<input class="chkbx" type="checkbox" name="Autorizado" #= Autorizado ? "checked=checked" : ""# ></input>', width: "20px", attributes: { style: "text-align:center;" }
+                    //}, template: '<input class="" type="checkbox" id="Autorizado" name="Autorizado" #= Autorizado ? "checked=checked" : ""# >', width: "20px", attributes: { style: "text-align:center;" }
+                },
+                template: '<input type="checkbox" class="apple-switch" id="Autorizado" name="Autorizado" #= Autorizado ? "checked=checked" : "" # />',
+                width: "10px",               
+                attributes:
+                    {
+                        style: "text-align:center;",
+                        "class": "close-cell"
+                    }
             },           
             {
                 field: "Incidencias", title: $("html").prop("lang") != "en-US" ? "Num. Incidencias" : "Num. Incidents", width: "10px", attributes: {style: "text-align: center;"}
@@ -176,7 +185,6 @@ function IniciaGrid() {
         ]
     });
 }
-
 
 function CargarGridPopUp() {
     $("#gridPopUp").kendoGrid({

@@ -45,22 +45,30 @@ namespace SAM.BusinessObjects.LinkTraveler
 
         public bool ExisteNumeroOrdenPath(string pathBusqueda, string numeroOrden)
         {
-            string buscarArchivoEnPath = System.IO.Path.Combine(pathBusqueda, "ODT " + numeroOrden + ".pdf");
-            string usuario = ConfigurationManager.AppSettings["usuario"];
-            string pass = ConfigurationManager.AppSettings["pass"];
             bool existeArchivo = false;
-            using (new NetworkConnection(pathBusqueda, new NetworkCredential(usuario, pass)))
+            try
             {
-                if (File.Exists(buscarArchivoEnPath))
+                string buscarArchivoEnPath = System.IO.Path.Combine(pathBusqueda, "ODT " + numeroOrden + ".pdf");
+                string usuario = ConfigurationManager.AppSettings["usuario"];
+                string pass = ConfigurationManager.AppSettings["pass"];
+
+                using (new NetworkConnection(pathBusqueda, new NetworkCredential(usuario, pass)))
                 {
-                    existeArchivo = true;
+                    if (File.Exists(buscarArchivoEnPath))
+                    {
+                        existeArchivo = true;
+                    }
+                    else
+                    {
+                        existeArchivo = false;
+                    }
                 }
-                else
-                {
-                    existeArchivo = false;
-                }
+                return existeArchivo;
             }
-            return existeArchivo;
+            catch (Exception)
+            {
+                return false;
+            }            
         }
 
         public DataTable ObtieneSpools(string NumeroControl, int proyectoID)

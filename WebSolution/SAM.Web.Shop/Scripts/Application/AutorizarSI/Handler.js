@@ -7,7 +7,7 @@
                 if ($("#ProjectIdADD").val() != "0" && $("#ProjectIdADD").val() != 0) {
                     if ($("#txtSI").val() != "") {
                         $("#chkAutorizaTodo").prop("checked", false);
-                        AjaxObtenerSpools();
+                        AjaxObtenerSpools();                        
                     } else {
                         //Falta SI
                         MostrarError($("html").prop("lang") == "en-US" ? "Please Enter Sol. Inspect" : "Por Favor Ingrese Sol. Inspect");

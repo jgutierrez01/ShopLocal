@@ -844,6 +844,62 @@ namespace SAM.BusinessObjects.Produccion
             }
         }
 
+        public List<ListaIncidencia> ObtenerSpoolsPorNumeroControl(int proyectoID, string NumeroControl)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlSam2"].ConnectionString))
+            {                               
+                string query = " SELECT " +
+                                " S.SpoolID,  " +
+                                " S.ProyectoID,  " +
+                                " C.CuadranteID, " +
+                                " C.Nombre Cuadrante, " +
+                                " OT.NumeroControl, " +
+                                " CASE WHEN H.TieneHoldIngenieria IS NULL THEN CAST(0 AS BIT) ELSE CAST(H.TieneHoldIngenieria AS BIT) END Hold, " +
+                                " ISNULL(II.Incidencias, 0) Incidencias, " +
+                                " CASE WHEN S.Campo7 = 'GRANEL' THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END Granel " +
+                            " FROM " +
+                                " Shop_Incidencia I WITH(NOLOCK) " +
+                                " INNER JOIN Spool S WITH(NOLOCK) ON I.SpoolID = S.SpoolID " +
+                                " INNER JOIN OrdenTrabajoSpool OT WITH(NOLOCK) ON S.SpoolID = OT.SpoolID " +
+                                " INNER JOIN Cuadrante C WITH(NOLOCK) ON S.CuadranteID = C.CuadranteID " +
+                                " LEFT JOIN SpoolHold H WITH(NOLOCK) ON S.SpoolID = H.SpoolID " +
+                                " LEFT JOIN " +
+                                " ( " +
+                                    " SELECT SpoolID, COUNT(*) Incidencias FROM Shop_Incidencia WITH(NOLOCK) WHERE Activo = 1 GROUP BY SpoolID " +
+                                " ) II ON I.SpoolID = II.SpoolID " +
+                            " WHERE " +
+                                " (S.proyectoID = " + proyectoID + " AND OT.NumeroControl = '" + NumeroControl + "') AND I.Activo = 1 AND(I.Resolucion IS NULL OR I.SI IS NULL) AND I.Inspector IS NOT NULL " +
+                            " GROUP BY " +
+                                " S.SpoolID, S.ProyectoID, C.CuadranteID, C.Nombre, OT.NumeroControl, H.TieneHoldIngenieria, II.Incidencias, S.Campo7 ";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+
+                    List<ListaIncidencia> lista = new List<ListaIncidencia>();
+                    ListaIncidencia Incidencias;
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        Incidencias = new ListaIncidencia
+                        {
+                            SpoolID = int.Parse(ds.Tables[0].Rows[i]["SpoolID"].ToString()),
+                            ProyectoID = int.Parse(ds.Tables[0].Rows[i]["ProyectoID"].ToString()),
+                            CuadranteID = int.Parse(ds.Tables[0].Rows[i]["CuadranteID"].ToString()),
+                            Cuadrante = ds.Tables[0].Rows[i]["Cuadrante"].ToString(),
+                            NumeroControl = ds.Tables[0].Rows[i]["NumeroControl"].ToString(),
+                            Hold = bool.Parse(ds.Tables[0].Rows[i]["Hold"].ToString()),
+                            Incidencias = int.Parse(ds.Tables[0].Rows[i]["Incidencias"].ToString()),
+                            Granel = bool.Parse(ds.Tables[0].Rows[i]["Granel"].ToString())
+                        };
+                        lista.Add(Incidencias);
+                    }
+                    return lista;
+                }
+            }
+        }
+
         public List<CuadranteNumeroControlSQ> BuscarPorCuadrante(int cuadranteid, int? proyectoID)
         {
             using (SamContext ctx = new SamContext())
@@ -1542,6 +1598,27 @@ namespace SAM.BusinessObjects.Produccion
             return false;
         }
 
+        public int ObtenerDigitosODT(int proyectoID)
+        {            
+            using (SamContext ctx = new SamContext())
+            {
+                return (from a in ctx.ProyectoConfiguracion where a.ProyectoID == proyectoID select a.DigitosOrdenTrabajo).FirstOrDefault();
+            }
+        }
 
+        public ObjectoSpool ObtenerDatosSpool(List<string> noControl, int ProyectoID)
+        {            
+            using (SamContext ctx = new SamContext())
+            {
+                ObjectoSpool Spool = new ObjectoSpool();
+                var datos = (from a in ctx.OrdenTrabajoSpool
+                             join b in ctx.OrdenTrabajo on a.OrdenTrabajoID equals b.OrdenTrabajoID
+                             select new { a.OrdenTrabajoSpoolID, b.ProyectoID, a.NumeroControl, a.SpoolID }).Where(x => noControl.Contains(x.NumeroControl)).Where(a => a.ProyectoID == ProyectoID).ToList();
+
+                Spool.SpoolID = datos.Select(a => a.SpoolID).FirstOrDefault();
+                Spool.NumeroControl = datos.Select(a => a.NumeroControl).FirstOrDefault();
+                return Spool;
+            }
+        }
     }
 }
