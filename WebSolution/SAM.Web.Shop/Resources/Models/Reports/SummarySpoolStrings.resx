@@ -249,4 +249,7 @@
   <data name="GrupoAcero" xml:space="preserve">
     <value>Grupo Acero</value>
   </data>
+  <data name="Prioridad" xml:space="preserve">
+    <value>Prioridad</value>
+  </data>
 </root>

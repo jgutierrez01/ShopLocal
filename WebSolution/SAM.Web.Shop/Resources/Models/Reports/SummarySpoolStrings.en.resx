@@ -213,4 +213,7 @@
   <data name="GrupoAcero" xml:space="preserve">
     <value>SteelGroup</value>
   </data>
+  <data name="Prioridad" xml:space="preserve">
+    <value>Priority</value>
+  </data>
 </root>

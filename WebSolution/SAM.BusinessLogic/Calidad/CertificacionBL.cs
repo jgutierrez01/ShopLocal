@@ -1943,7 +1943,7 @@ namespace SAM.BusinessLogic.Calidad
                 cr.DiametroMayor = dr.Field<decimal>("DiametroMayor");
                 var juntasSpool = ds.Tables["JuntaSpool"].AsEnumerable().Where(x => x.Field<int>("SpoolID") == spoolID.SafeIntParse());
                 var reportesJuntas = ds.Tables["ReqRepPNDTT"].AsEnumerable().Where(x => x.Field<int>("SpoolID") == spoolID.SafeIntParse());
-
+                cr.Prioridad = dr.Field<int>("Prioridad");
                 IEnumerable<DetailReport> reportes = from r in reportesJuntas
                                                      select new DetailReport
                                                      {

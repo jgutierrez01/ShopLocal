@@ -105,6 +105,7 @@ namespace SAM.Web.Shop.Controllers
             crm.ReporteLiberacionDimensional = cr.ReporteLiberacionDimensional;
             crm.Cuadrante = cr.Cuadrante;
             crm.SistemaPintura = cr.SistemaPintura;
+            crm.Prioridad = cr.Prioridad;
             crm.Hold = cr.Hold;
             crm.GrupoAcero = cr.GrupoAcero; //Add- 13-02-2018
             crm.Project = NavContext.GetCurrentProject().Nombre;
@@ -113,7 +114,7 @@ namespace SAM.Web.Shop.Controllers
             crm.NumberControl = NavContext.GetCurrentControlNumber().ControlNumber;
             crm.NumberControlId = NavContext.GetCurrentControlNumber().ControlNumberId;
             crm.Granel = OrdenTrabajoSpoolBO.Instance.EsGranel(controlNumber.SpoolID);
-
+            
             return View("SummarySpool", crm);
         }
     }	

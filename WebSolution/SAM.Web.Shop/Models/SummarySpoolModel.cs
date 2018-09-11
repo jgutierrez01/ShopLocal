@@ -21,7 +21,8 @@ namespace SAM.Web.Shop.Models
         public decimal Kg { get; set; }
         public string KGSGRUPO { get; set; }
         public string InspectorLiberacionDimensional { get; set; }
-        
+        public int Prioridad { get; set; }
+
         public List<DetailSummaryJointModel> DetailJoints { get; set; } 
         public List<DetailMaterialSummaryModel> DetailMaterials{ get; set; }
        

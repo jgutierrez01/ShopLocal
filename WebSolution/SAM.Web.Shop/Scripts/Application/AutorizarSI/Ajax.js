@@ -205,27 +205,29 @@ function AjaxGuardarIncidencia(ds) {
     });     
 }
 
-function AjaxGuardarAutorizacion(ds) {    
+
+function AjaxGuardarAutorizacion(ds) {
     var ListaDetalleCaptura = [];
     for (var x = 0; x < ds.length; x++) {
         ListaDetalleCaptura[x] = { SpoolID: 0, Autorizacion: false };
         ListaDetalleCaptura[x].SpoolID = ds[x].SpoolID;
         ListaDetalleCaptura[x].Autorizacion = ds[x].Autorizado;
-    }    
+    }
     loadingStart();
     $.ajax({
-        type: 'GET',
+        type: 'POST',
         url: '/AutorizarSI/GuardarAutorizacion/',
         contentType: "application/json; charset=utf-8",
         dataType: 'json',
-        data: { Captura: JSON.stringify(ListaDetalleCaptura) },        
+        data: JSON.stringify(ListaDetalleCaptura),
+        //data: { Captura: JSON.stringify(ListaDetalleCaptura) },
         success: function (data) {
-            if (data[0].result == "OK") {                
+            if (data[0].result == "OK") {
                 MostrarSuccess($("html").prop("lang") != "en-US" ? "Guardado Correctamente" : "Saved Successfully");
                 AjaxObtenerSpools();
                 loadingStop();
             } else {
-                loadingStop();                
+                loadingStop();
                 MostrarError($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred");
             }
         },
@@ -235,6 +237,39 @@ function AjaxGuardarAutorizacion(ds) {
         }
     });
 }
+
+
+
+//function AjaxGuardarAutorizacion(ds) {    
+//    var ListaDetalleCaptura = [];
+//    for (var x = 0; x < ds.length; x++) {
+//        ListaDetalleCaptura[x] = { SpoolID: 0, Autorizacion: false };
+//        ListaDetalleCaptura[x].SpoolID = ds[x].SpoolID;
+//        ListaDetalleCaptura[x].Autorizacion = ds[x].Autorizado;
+//    }    
+//    loadingStart();
+//    $.ajax({
+//        type: 'GET',
+//        url: '/AutorizarSI/GuardarAutorizacion/',
+//        contentType: "application/json; charset=utf-8",
+//        dataType: 'json',
+//        data: { Captura: JSON.stringify(ListaDetalleCaptura) },        
+//        success: function (data) {
+//            if (data[0].result == "OK") {                
+//                MostrarSuccess($("html").prop("lang") != "en-US" ? "Guardado Correctamente" : "Saved Successfully");
+//                AjaxObtenerSpools();
+//                loadingStop();
+//            } else {
+//                loadingStop();                
+//                MostrarError($("html").prop("lang") != "en-US" ? "Ocurrio Un Error" : "An Error Ocurred");
+//            }
+//        },
+//        error: function (xhr, textStatus, errorThrown) {
+//            loadingStop();
+//            alert("Error Obteniendo Incidencias: " + "\n" + xhr.responseText + "\n" + textStatus + "\n" + errorThrown);
+//        }
+//    });
+//}
 
 function AjaxEliminarIncidencia(incidenciaID, SpoolID, pantalla) {
     $.ajax({

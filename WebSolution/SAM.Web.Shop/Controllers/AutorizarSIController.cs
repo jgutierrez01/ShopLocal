@@ -14,7 +14,7 @@ using System.Web.Mvc;
 namespace SAM.Web.Shop.Controllers
 {
     public class AutorizarSIController : Controller
-    {        
+    {
         // GET: AutorizarSI
         public ActionResult Index()
         {
@@ -22,19 +22,19 @@ namespace SAM.Web.Shop.Controllers
         }
 
         [HttpGet]
-        public JsonResult ObtenerSpools(string SI, int ProyectoID)        
+        public JsonResult ObtenerSpools(string SI, int ProyectoID)
         {
             List<AutorizarSI> ListaSpools = OrdenTrabajoSpoolBO.Instance.ObtenerSpoolsPorSQyProyecto(SI, ProyectoID);
-            string resultado = "";            
-            if(ListaSpools != null && ListaSpools.Count > 0)
-            {                
+            string resultado = "";
+            if (ListaSpools != null && ListaSpools.Count > 0)
+            {
                 resultado = JsonConvert.SerializeObject(ListaSpools);
-                
-            }else
+
+            } else
             {
                 resultado = "NODATA";
-            }            
-            var myData = new[] { new { result = resultado } };            
+            }
+            var myData = new[] { new { result = resultado } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
 
@@ -44,7 +44,7 @@ namespace SAM.Web.Shop.Controllers
             HttpNavigationContext nav = new HttpNavigationContext();
             nav.SetDataToSession<string>(Session, "ProyectoID", ProyectoID);
             var myData = new[] { new { result = "OK" } };
-            return Json(myData, JsonRequestBehavior.AllowGet);           
+            return Json(myData, JsonRequestBehavior.AllowGet);
         }
 
         [HttpGet]
@@ -52,7 +52,7 @@ namespace SAM.Web.Shop.Controllers
         {
             HttpNavigationContext nav = new HttpNavigationContext();
             string ProyectoID = "0";
-            if(nav.GetDataFromSession<string>(Session, "ProyectoID") != null)
+            if (nav.GetDataFromSession<string>(Session, "ProyectoID") != null)
             {
                 ProyectoID = nav.GetDataFromSession<string>(Session, "ProyectoID");
             }
@@ -96,10 +96,10 @@ namespace SAM.Web.Shop.Controllers
         {
             List<ListaErrores> Lista = OrdenTrabajoSpoolBO.Instance.ObtenerListaErrores(TipoIncidenciaID);
             string resultado = "";
-            if(Lista != null && Lista.Count > 0)
+            if (Lista != null && Lista.Count > 0)
             {
                 resultado = JsonConvert.SerializeObject(Lista);
-            }else
+            } else
             {
                 resultado = "NODATA";
             }
@@ -109,13 +109,13 @@ namespace SAM.Web.Shop.Controllers
 
         [HttpGet]
         public JsonResult ObtenerIncidencias(int SpoolID)
-        {            
+        {
             List<IncidenciaC> Incidencias = OrdenTrabajoSpoolBO.Instance.ObtenerIncidencias(SpoolID);
-            string resultado = "";            
-            if(Incidencias != null && Incidencias.Count > 0)
+            string resultado = "";
+            if (Incidencias != null && Incidencias.Count > 0)
             {
                 resultado = JsonConvert.SerializeObject(Incidencias);
-            }else
+            } else
             {
                 resultado = "NODATA";
             }
@@ -134,16 +134,29 @@ namespace SAM.Web.Shop.Controllers
             var myData = new[] { new { result = respuesta } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
-        [HttpGet]        
-        public JsonResult GuardarAutorizacion(string Captura)
+        //[HttpGet]        
+        //public JsonResult GuardarAutorizacion(string Captura)
+        //{
+        //    List<DetalleGuardarAutorizacion> Lista = JsonConvert.DeserializeObject<List<DetalleGuardarAutorizacion>>(Captura);
+        //    string Usuario = SessionFacade.NombreCompleto;
+        //    DataTable dt = ToDataTable.Instance.toDataTable(Lista);
+        //    string respuesta = OrdenTrabajoSpoolBO.Instance.GuardaAutorizacion(dt, Usuario);
+        //    var myData = new[] { new { result = respuesta } };
+        //    return Json(myData, JsonRequestBehavior.AllowGet);
+        //}
+
+        [HttpPost]
+        public JsonResult GuardarAutorizacion(List<DetalleGuardarAutorizacion> Captura)
         {
-            List<DetalleGuardarAutorizacion> Lista = JsonConvert.DeserializeObject<List<DetalleGuardarAutorizacion>>(Captura);
+            //List<DetalleGuardarAutorizacion> Lista = JsonConvert.DeserializeObject<List<DetalleGuardarAutorizacion>>(Captura);
+
             string Usuario = SessionFacade.NombreCompleto;
-            DataTable dt = ToDataTable.Instance.toDataTable(Lista);
+            DataTable dt = ToDataTable.Instance.toDataTable(Captura);
             string respuesta = OrdenTrabajoSpoolBO.Instance.GuardaAutorizacion(dt, Usuario);
             var myData = new[] { new { result = respuesta } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
+
         //[HttpGet]
         //public JsonResult EliminarIncidencia(int IncidenciaID, string Origen, int Accion)
         //{

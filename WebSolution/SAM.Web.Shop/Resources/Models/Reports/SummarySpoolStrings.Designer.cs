@@ -403,6 +403,15 @@ namespace SAM.Web.Shop.Resources.Models.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Prioridad.
+        /// </summary>
+        public static string Prioridad {
+            get {
+                return ResourceManager.GetString("Prioridad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cuadrante.
         /// </summary>
         public static string Quadrant {
