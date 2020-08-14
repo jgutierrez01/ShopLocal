@@ -1927,6 +1927,7 @@ namespace SAM.BusinessLogic.Calidad
                 cr.Cuadrante = dr.Field<string>("Cuadrante");
                 cr.FechaLiberacionDimensional = dr.Field<DateTime?>("FechaLiberacionDimensional") != null ? dr.Field<DateTime?>("FechaLiberacionDimensional") : null;
                 cr.ReporteLiberacionDimensional = dr.Field<string>("LiberacionDimensional");
+                cr.ResultadoLiberacionDimensional = dr.Field<string>("ResultadoDimensional");
                 cr.FechaPrimario = dr.Field<DateTime?>("FechaPrimario");
                 cr.FechaAcabado = dr.Field<DateTime?>("FechaAcabadoVisual");
                 cr.Spool = dr.Field<string>("Spool");
@@ -1967,6 +1968,7 @@ namespace SAM.BusinessLogic.Calidad
                                                              TypeJoint = j.Field<string>("TipoJunta"),
                                                              DateWelding = j.Field<DateTime?>("FechaSoldadura"),
                                                              DateVisualInspection = j.Field<DateTime?>("FechaInspeccionVisual"),
+                                                             ResultadoVisual = j.Field<string>("ResultadoVisual"),
                                                              ClasifPND = j.Field<string>("ClasifPND"),
                                                              Diameter = j.Field<decimal>("Diametro"),
                                                              RequiredPWHT = j.Field<string>("RequierePWHT"),

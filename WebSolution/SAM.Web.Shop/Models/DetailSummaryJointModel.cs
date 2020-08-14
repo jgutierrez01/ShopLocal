@@ -65,7 +65,7 @@ namespace SAM.Web.Shop.Models
             get { return FechaReqRT.HasValue ? FechaReqRT.Value.ToShortDateString() : string.Empty; }
         }
 
-
+        public string ResultadoVisual { get; set; }
         public DetailSummaryJointModel() 
         { 
 

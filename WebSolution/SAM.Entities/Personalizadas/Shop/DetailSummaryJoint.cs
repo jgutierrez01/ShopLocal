@@ -67,6 +67,7 @@ namespace SAM.Entities.Personalizadas.Shop
 
         [DataMember]
         public string InspectorVisual { get; set; }
-
+        [DataMember]
+        public string ResultadoVisual { get; set; }
     }
 }

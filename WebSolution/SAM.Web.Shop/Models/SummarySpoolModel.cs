@@ -9,6 +9,7 @@ namespace SAM.Web.Shop.Models
     {
         public string ReporteLiberacionDimensional { get; set; }
         public DateTime? FechaLiberacionDimensional { get; set; }
+        public string ResultadoLiberacionDimensional { get; set; }
         public string SistemaPintura { get; set; }
         public DateTime? FechaPrimario { get; set; }
         public DateTime? FechaAcabado { get; set; }

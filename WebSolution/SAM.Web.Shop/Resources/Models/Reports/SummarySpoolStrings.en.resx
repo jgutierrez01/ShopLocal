@@ -216,4 +216,10 @@
   <data name="Prioridad" xml:space="preserve">
     <value>Priority</value>
   </data>
+  <data name="ResultadoDimensional" xml:space="preserve">
+    <value>Dimensional Result</value>
+  </data>
+  <data name="ResultadoVisual" xml:space="preserve">
+    <value>Visual Result</value>
+  </data>
 </root>

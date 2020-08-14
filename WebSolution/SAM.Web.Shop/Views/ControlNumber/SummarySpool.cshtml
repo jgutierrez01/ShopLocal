@@ -82,6 +82,7 @@
                             <th>@Html.Raw(CertificationReportStrings.Type)</th>
                             <th>@Html.Raw(SummarySpoolStrings.DateWelding)</th>
                             <th>@Html.Raw(CertificationReportStrings.DateVisualInspection)</th>
+                            <th>@Html.Raw(SummarySpoolStrings.ResultadoVisual)</th>
                             <th>@Html.Raw(SummarySpoolStrings.InspectorVisual)</th>
                             <th>@Html.Raw(CertificationReportStrings.RequiredPWHT)</th>
                             <th>@Html.Raw(SummarySpoolStrings.ClasifPND)</th>
@@ -107,6 +108,7 @@
                                 <td>@dj.TypeJoint</td>
                                 <td>@dj.WeldingDate</td>
                                 <td>@dj.VIDate</td>
+                                <td>@dj.ResultadoVisual</td>
                                 <td>@dj.InspectorVisual</td>
                                 <td>@dj.RequiredPWHT</td>
                                 <td>@dj.ClasifPND</td>
@@ -136,6 +138,7 @@
                         <table class="table table-striped table-condensed">
                             <thead>
                                 <tr>
+                                    <th>@Html.Raw(SummarySpoolStrings.ResultadoDimensional)</th>
                                     <th>@Html.Raw(SummarySpoolStrings.DateLibDimentional)</th>
                                     <th>@Html.Raw(SummarySpoolStrings.RepLibDimentional)</th>
                                     <th>@Html.Raw(SummarySpoolStrings.InspectorLibDim)</th>
@@ -143,6 +146,7 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>@Model.ResultadoLiberacionDimensional</td>
                                     <td>@Model.LibDimFecha</td>
                                     <td>@Model.ReporteLiberacionDimensional</td>
                                     <td>@Model.InspectorLiberacionDimensional</td>

@@ -103,6 +103,7 @@ namespace SAM.Web.Shop.Controllers
             crm.FechaPrimario = cr.FechaPrimario;
             crm.FechaLiberacionDimensional = cr.FechaLiberacionDimensional;
             crm.ReporteLiberacionDimensional = cr.ReporteLiberacionDimensional;
+            crm.ResultadoLiberacionDimensional = cr.ResultadoLiberacionDimensional;
             crm.Cuadrante = cr.Cuadrante;
             crm.SistemaPintura = cr.SistemaPintura;
             crm.Prioridad = cr.Prioridad;

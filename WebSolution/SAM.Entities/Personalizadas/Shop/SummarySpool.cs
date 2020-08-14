@@ -10,7 +10,8 @@ namespace SAM.Entities.Personalizadas.Shop
     public class SummarySpool
     {        
         public string ReporteLiberacionDimensional { get; set; }
-        public DateTime? FechaLiberacionDimensional { get; set; }  
+        public DateTime? FechaLiberacionDimensional { get; set; } 
+        public string ResultadoLiberacionDimensional { get; set; }
         public string SistemaPintura { get; set; }        
         public DateTime? FechaPrimario { get; set; }        
         public DateTime? FechaAcabado { get; set; }
@@ -41,13 +42,14 @@ namespace SAM.Entities.Personalizadas.Shop
             this.DetailMaterials = new List<DetailMaterialSummary>(); 
         }
 
-        public SummarySpool(string ReporteLiberacionDimensional, DateTime? FechaLiberacionDimensional, string SistemaPintura, DateTime? FechaPrimario, DateTime? FechaAcabado,
+        public SummarySpool(string ReporteLiberacionDimensional, DateTime? FechaLiberacionDimensional, string ResultadoDimensional, string SistemaPintura, DateTime? FechaPrimario, DateTime? FechaAcabado,
                     string Cuadrante, string NumeroEmbarque, int PorcentajePND, string RequierePWHT, List<DetailSummaryJoint> detJoints, List<DetailMaterialSummary> detMaterials, decimal M2, decimal Kg,string InspectorLiberacionDimensional, DateTime? FechaOkPnd,decimal DiametroMayor)
         {
             this.DetailJoints.AddRange(detJoints);
             this.DetailMaterials.AddRange(detMaterials);
             this.ReporteLiberacionDimensional = ReporteLiberacionDimensional;
             this.FechaLiberacionDimensional = FechaLiberacionDimensional;
+            this.ResultadoLiberacionDimensional = ResultadoDimensional;
             this.SistemaPintura = SistemaPintura;
             this.FechaAcabado = FechaAcabado;
             this.FechaPrimario = FechaPrimario;

@@ -448,6 +448,24 @@ namespace SAM.Web.Shop.Resources.Models.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resultado Dimensional.
+        /// </summary>
+        public static string ResultadoDimensional {
+            get {
+                return ResourceManager.GetString("ResultadoDimensional", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result Insp Vis.
+        /// </summary>
+        public static string ResultadoVisual {
+            get {
+                return ResourceManager.GetString("ResultadoVisual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spool.
         /// </summary>
         public static string Spool {
