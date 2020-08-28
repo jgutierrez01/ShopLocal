@@ -1,13 +1,108 @@
-﻿function EventoClickBuscarSpools() {
-    //QuadrantIdCADD
-    $("#Buscar").click(function () {
-        if (($("#ProjectIdADD").val() != "0" && $("#ProjectIdADD").val() != 0) || ($("#QuadrantIdCADD").val() != "0" && $("#QuadrantIdCADD").val() != 0)) {
-            AjaxObtenerSpools(($("#ProjectIdADD").val() == undefined || $("#ProjectIdADD").val() == "" ? 0 : $("#ProjectIdADD").val()), ($("#QuadrantIdCADD").val() == undefined || $("#QuadrantIdCADD").val() == "" ? 0 : $("#QuadrantIdCADD").val()));
-        } else {
-            MostrarMensaje($("html").prop("lang") != "en-US" ? "Seleccione Proyecto O Cuadrante" : "Select Project Or Quadrant", "seccionError");
-            $("#grid").data("kendoGrid").dataSource.data([]);
-            $("#contieneGrid").css("display", "none");
+﻿function EventoTabNumeroControl() {
+    $("#WorkOrderNumberADD").keydown(function (e) {
+        if (e.keyCode == 13 || e.keyCode == 39) {
+            $("#ControlNumberADD").focus();
         }
+    });
+    $("#ControlNumberADD").keydown(function (e) {
+        if (e.keyCode == 13) {
+            $("#Buscar").trigger("click");
+        }
+    });
+    $("#WorkOrderNumberADD").focusin(function (e) {
+        this.value = "";
+    });
+    $("#ControlNumberADD").focusin(function (e) {
+        this.value = "";
+    });
+
+    $("#WorkOrderNumberADD").soloNumeros(function (value) {
+        return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+    });
+    $("#ControlNumberADD").soloNumeros(function (value) {
+        return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+    });
+}
+$.fn.soloNumeros = function (soloNumeros) {
+    return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function () {
+        if (soloNumeros(this.value)) {
+            this.oldValue = this.value;
+            this.oldSelectionStart = this.selectionStart;
+            this.oldSelectionEnd = this.selectionEnd;
+        } else if (this.hasOwnProperty("oldValue")) {
+            this.value = this.oldValue;
+            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+        } else {
+            this.value = "";
+        }
+    });
+}
+
+function EventoClickBuscarSpools() {
+    /*SE AGREGA BUSCAR POR CUADRANTE Y NUMERO DE CONTROL*/
+    $("#Buscar").click(function (e) {
+        var opcion = $('input[type=radio][name=SearchTypeADD]:checked').val();
+        if(opcion != undefined && opcion != null)
+        {
+            var proyectoID = $("#ProjectIdADD").val();
+            if (proyectoID != null && proyectoID != undefined && proyectoID != "" && proyectoID > 0) {
+                if (opcion == "C") { //Busqueda por cuadrante
+                    var cuadranteID = $("#QuadrantIdCADD").val();
+                    if (cuadranteID != null && cuadranteID != undefined && cuadranteID != "" && cuadranteID > 0) {
+                        AjaxObtenerSpoolPorCuadrante(proyectoID, cuadranteID);
+                    } else {
+                        MostrarMensaje($("html").prop("lang") != "en-US" ? "Seleccione Cuadrante" : "Select Quadrant", "seccionError");
+                    }
+                } else { //busqueda por numero de control
+                    var OT = $("#WorkOrderNumberADD").val();
+                    var Consecutivo = $("#ControlNumberADD").val();
+                    if (OT != null && OT != undefined && OT != "" && Consecutivo != null && Consecutivo != undefined && Consecutivo != "") {
+                        if (OT > 0 && Consecutivo > 0) {
+                            AjaxObtenerSpoolPorNumeroControl(proyectoID, OT, Consecutivo, 0);
+                        } else {
+                            MostrarMensaje($("html").prop("lang") != "en-US" ? "Ingrese Numero de Control Válido" : "Enter valid control number", "seccionError");
+                        }                        
+                    } else {
+                        MostrarMensaje($("html").prop("lang") != "en-US" ? "Ingrese Numero de Control" : "Enter control number", "seccionError");
+                    }
+                }
+            } else {
+                MostrarMensaje($("html").prop("lang") != "en-US" ? "Seleccione Proyecto" : "Select Project", "seccionError");
+            }
+            
+        } else {
+            MostrarMensaje($("html").prop("lang") != "en-US" ? "Opción desconocida" : "Unknown option", "seccionError");
+        }
+    });
+
+
+    //$("#Buscar").click(function () {
+    //    if (($("#ProjectIdADD").val() != "0" && $("#ProjectIdADD").val() != 0) || ($("#QuadrantIdCADD").val() != "0" && $("#QuadrantIdCADD").val() != 0)) {
+    //        AjaxObtenerSpools(($("#ProjectIdADD").val() == undefined || $("#ProjectIdADD").val() == "" ? 0 : $("#ProjectIdADD").val()), ($("#QuadrantIdCADD").val() == undefined || $("#QuadrantIdCADD").val() == "" ? 0 : $("#QuadrantIdCADD").val()));
+    //    } else {
+    //        MostrarMensaje($("html").prop("lang") != "en-US" ? "Seleccione Proyecto O Cuadrante" : "Select Project Or Quadrant", "seccionError");
+    //        $("#grid").data("kendoGrid").dataSource.data([]);
+    //        $("#contieneGrid").css("display", "none");
+    //    }
+    //});
+}
+
+function EventoOpcionBuscar() {   
+    $('input[type=radio][name="SearchTypeADD"]').change(function (e) {
+        if ($(this).val() == "C") {
+            $("#divNumeroControl").css("display", "none");
+            $("#divCuadrante").css("display", "block");
+        } else {
+            $("#divNumeroControl").css("display", "block");
+            $("#divCuadrante").css("display", "none");
+            $("#WorkOrderNumberADD").val("");
+            $("#ControlNumberADD").val("");
+            var dataItem = $("#ProjectIdADD").find(':selected').data("item");
+            if (dataItem != null && dataItem != undefined) {
+                $("#wo-addon-text").text(dataItem.WorkOrderPrefix);
+            }
+        }
+        $("#grid").data("kendoGrid").dataSource.data([]);
     });
 }
 
@@ -15,6 +110,10 @@ function EventoSelectProyecto() {
     $("#ProjectIdADD").on("change", function () {
         if ($(this).val() != 0) {
             ActualizarCacheProyecto($(this).val());
+        }
+        var dataItem = $("#ProjectIdADD").find(':selected').data("item");
+        if (dataItem != null && dataItem != undefined) {
+            $("#wo-addon-text").text(dataItem.WorkOrderPrefix);
         }
     });
 }
@@ -116,11 +215,11 @@ function CerrarVentanaModal() {
         $("#seccionAvisoGrid").css("display", "none");
         $("#windowGrid").data("kendoWindow").close();
         //Verificar si incidencias == 0 para agregar a grid de spools resueltos
-        AjaxObtenerNumeroIncidencias(function (data) {
-            if (data == 0) {
-                AjaxObtenerSpoolAgregarSI(SpoolIDGlobal);
-            }
-        });
+        //AjaxObtenerNumeroIncidencias(function (data) {
+        //    if (data == 0) {
+        //        AjaxObtenerSpoolAgregarSI(SpoolIDGlobal);
+        //    }
+        //});
     });
 }
 function EventoGuardarIncidencia() {

@@ -147,41 +147,41 @@ function IniciaGrid() {
             {
                 field: "Incidencias", title: $("html").prop("lang") != "en-US" ? "Num. Incidencias" : "Num. Incidents", width: "10px", attributes: {style: "text-align: center;"}
             },
-            {
-                command: {
-                    text: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
-                    className: "k-button k-button-icontext k-grid-Incidencias ",
-                    click: function (e) {
-                        e.preventDefault();                        
-                        var grid = $("#grid").data("kendoGrid");
-                        var ds = grid.dataSource;
-                        var dataItem = grid.dataItem($(e.target).closest("tr"));
-                        if(!dataItem.Autorizado){
-                            SpoolIDGlobal = dataItem.SpoolID;
-                            NumeroControlGlobal = dataItem.NumeroControl;
-                            VentanaModal();
-                            $("#txtNumeroControl").text("");
-                            AjaxVerificarEsGranel(function (data) {
-                                if (data != "GRANEL") {
-                                    $("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
-                                } else {
-                                    $("#txtNumeroControl").append("<label>" + NumeroControlGlobal + "</label>");
-                                }
-                            });   
+            //{
+            //    command: {
+            //        text: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
+            //        className: "k-button k-button-icontext k-grid-Incidencias ",
+            //        click: function (e) {
+            //            e.preventDefault();                        
+            //            var grid = $("#grid").data("kendoGrid");
+            //            var ds = grid.dataSource;
+            //            var dataItem = grid.dataItem($(e.target).closest("tr"));
+            //            if(!dataItem.Autorizado){
+            //                SpoolIDGlobal = dataItem.SpoolID;
+            //                NumeroControlGlobal = dataItem.NumeroControl;
+            //                VentanaModal();
+            //                $("#txtNumeroControl").text("");
+            //                AjaxVerificarEsGranel(function (data) {
+            //                    if (data != "GRANEL") {
+            //                        $("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
+            //                    } else {
+            //                        $("#txtNumeroControl").append("<label>" + NumeroControlGlobal + "</label>");
+            //                    }
+            //                });   
 
-                            //$("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
-                            AjaxObtenerTipoIncidencias();
-                            AjaxObtenerIncidencias(dataItem.SpoolID);
-                        } else {
-                            e.stopPropagation();
-                            this.closeCell();
-                        }                        
-                    }                    
-                },
-                title: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
-                width: "10px",
-                attributes: { style: "text-align: center; margin: 0 auto" }
-            }           
+            //                //$("#txtNumeroControl").append("<a href='/LinkTraveler/ObtenerPDFTraveler/?NumeroControl=" + NumeroControlGlobal + "&ProyectoID=" + $("#ProjectIdADD").val() + "' target='_blank'>" + NumeroControlGlobal + "</a> ");
+            //                AjaxObtenerTipoIncidencias();
+            //                AjaxObtenerIncidencias(dataItem.SpoolID);
+            //            } else {
+            //                e.stopPropagation();
+            //                this.closeCell();
+            //            }                        
+            //        }                    
+            //    },
+            //    title: $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidents",
+            //    width: "10px",
+            //    attributes: { style: "text-align: center; margin: 0 auto" }
+            //}           
         ]
     });
 }

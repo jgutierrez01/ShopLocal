@@ -2,8 +2,8 @@
 var timeOut;
 var NumeroControlGlobal = "";
 function ActivarEventos() {
-    document.title = $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidens";
-    AjaxObtenerSpoolsResueltos();
+    document.title = $("html").prop("lang") != "en-US" ? "Incidencias" : "Incidens";    
+    //AjaxObtenerSpoolsResueltos();   
     IniciaGrid();
     CargarGridPopUp();
     IniciaGridResueltos();
@@ -22,6 +22,8 @@ function ActivarEventos() {
     EventoChangeRadioResolverIncidencia();
     EventoGuardarResolucion();
     EventoGenerarSI();
+    EventoOpcionBuscar();
+    EventoTabNumeroControl();
 }
 
 function NombrarEtiquetas() {

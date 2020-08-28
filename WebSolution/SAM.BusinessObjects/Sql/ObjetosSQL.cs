@@ -305,5 +305,34 @@ namespace SAM.BusinessObjects.Sql
             }
         }
 
+        public DataTable EjecutaDataAdapter(string Stord, DataTable TablaSube, String NombreTabla, string[,] Parametros = null)
+        {
+            using (SqlCommand cmd = new SqlCommand(Stord, Conexion()))
+            {
+                DataTable dt = new DataTable();
+                if (Parametros != null)
+                    for (int i = Numeros.CERO; i < Parametros.Length / Numeros.DOS; i++)
+                        cmd.Parameters.AddWithValue(Parametros[i, Numeros.CERO].ToString(), Parametros[i, Numeros.UNO].ToString());
+                cmd.Parameters.Add(new SqlParameter(NombreTabla, TablaSube));
+                cmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        cmd.CommandTimeout = 0;
+                        cmd.Connection.Open();
+                        da.Fill(dt);
+                        cmd.Connection.Close();
+                    }
+                    return dt;
+                }
+                catch (Exception e)
+                {
+                    cmd.Connection.Close();
+                    throw new Exception(e.Message);
+                }
+            }
+        }
+
     }
 }

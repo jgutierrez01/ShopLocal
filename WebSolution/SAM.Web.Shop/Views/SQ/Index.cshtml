@@ -96,10 +96,10 @@
                     @Html.RadioButtonFor(x => x.SearchTypeADD, "nc")
                     @Html.Raw(CommonStrings.ControlNumber)
                 </label>
-                <label class="radio-inline">
+                @*<label class="radio-inline">
                     @Html.RadioButtonFor(x => x.SearchTypeADD, "s")
                     @Html.Raw(CommonStrings.SpoolResuelto)
-                </label>
+                </label>*@
             </div>
             <div>
                 @if (@TempData["errorADD"] != null && @TempData["errorADD"].ToString() != "")
@@ -200,10 +200,10 @@
                     @Html.RadioButtonFor(x => x.SearchTypeEdit, "nc")
                     @Html.Raw(CommonStrings.ControlNumber)
                 </label>
-                <label class="radio-inline">
+                @*<label class="radio-inline">
                     @Html.RadioButtonFor(x => x.SearchTypeEdit, "s")
                     @Html.Raw(CommonStrings.SpoolResuelto)
-                </label>
+                </label>*@
             </div>
             <div>
                 @if (@TempData["FaltaSQ"] != null)
@@ -337,7 +337,7 @@
                        //columns.Add(c => c.NumeroControl).Titled("NumeroControl").Filterable(true).SetWidth(20);
                        columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(20);
                        columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
-                       columns.Add().Titled("Incidencias")
+                       /*columns.Add().Titled("Incidencias")
                        .Encoded(false)
                        .Sanitized(false)
                        .SetWidth(20)
@@ -345,7 +345,7 @@
                            (
                                "<label class='incidencias' style='cursor:pointer;'  onclick=\"" + "javascript:abrirIncidencias(" + "'" + c.SpoolID + "'" + "," + "'" + c.NumeroControl + "', 1" + ") \"" + "  > ..... </label> "
                            )
-                       ).Filterable(false);
+                       ).Filterable(false);*/
                    }).WithPaging(10).Sortable(true).EmptyText(" ");
             }
         </div>
@@ -427,7 +427,7 @@
                        columns.Add(c => c.Cuadrante).Titled("Cuadrante").Filterable(true).SetWidth(30);
                        columns.Add(c => c.TieneHoldIngenieria).Titled("Hold Ingenieria").Filterable(true).SetWidth(30);
                        columns.Add(c => c.Incidencias).Titled("Num. Incidencias").Filterable(true).SetWidth(20);
-                       columns.Add().Titled("Incidencias")
+                       /*columns.Add().Titled("Incidencias")
                        .Encoded(false)
                        .Sanitized(false)
                        .SetWidth(20)
@@ -435,7 +435,7 @@
                            (
                                "<label class='incidencias' style='cursor:pointer;'  onclick=\"" + "javascript:abrirIncidencias(" + "'" + c.SpoolID + "'" + "," + "'" + c.NumeroControl + "', 2" + ") \"" + "  > ..... </label> "
                            )
-                       ).Filterable(false);
+                       ).Filterable(false);*/
                    }).WithPaging(10).Sortable(true).EmptyText(" ");
                     }
                 </div>

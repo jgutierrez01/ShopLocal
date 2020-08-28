@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using SAM.BusinessObjects.Produccion;
 using SAM.Entities.Busqueda;
+using SAM.Entities.Cache;
 using SAM.Entities.Personalizadas.Shop;
 using SAM.Web.Common;
 using SAM.Web.Shop.Utils;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -18,8 +20,74 @@ namespace SAM.Web.Shop.Controllers
         {
             return View();
         }
+
         [HttpGet]
-        public JsonResult ObtenerSpools(int ProyectoID, int CuadranteID)
+        public JsonResult ObtenerSpoolsPorCuadrante(int ProyectoID, int CuadranteID)
+        {
+            List<ListaIncidencia> ListaSpools = OrdenTrabajoSpoolBO.Instance.ObtenerSpoolsNoResueltos(ProyectoID, CuadranteID, null, 1, 0);
+            string resultado = "";
+            if (ListaSpools != null && ListaSpools.Count > 0)
+            {
+                resultado = JsonConvert.SerializeObject(ListaSpools);
+            }
+            else
+            {
+                resultado = "NODATA";
+            }
+            var myData = new[] { new { result = resultado } };
+            return Json(myData, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public JsonResult ObtenerSpoolsPorNumeroControl(int ProyectoID, string OT, string Consecutivo, int SpoolID)
+        {
+            string resultado = "";
+            try
+            {
+                ProyectoCache proyecto = UserScope.MisProyectos.FirstOrDefault(a => a.ID == ProyectoID);
+                List<string> numControl = new List<string>();
+                DataTable tabla = new DataTable();
+                if(SpoolID == 0)
+                {
+                    for (int i = 1; i <= proyecto.DigitosOdt; i++)
+                        numControl.Add(proyecto.PrefijoOdt + OT.PadLeft(i, '0') + "-" + Consecutivo.PadLeft(3, '0'));
+
+                    tabla.Columns.Add("NumeroControl");
+                    numControl = numControl.Distinct().ToList();
+                    foreach (var item in numControl)
+                    {
+                        DataRow fila = tabla.NewRow();
+                        fila["NumeroControl"] = item.ToString();
+                        tabla.Rows.Add(fila);
+                    }
+                }else
+                {
+                    tabla.Columns.Add("NumeroControl");
+                }                                 
+                List<ListaIncidencia> ListaSpools = OrdenTrabajoSpoolBO.Instance.ObtenerSpoolsNoResueltos(ProyectoID, 0, tabla, 2, SpoolID);
+
+                if (ListaSpools != null && ListaSpools.Count > 0)
+                {
+                    resultado = JsonConvert.SerializeObject(ListaSpools);
+                }
+                else
+                {
+                    resultado = "NODATA";
+                }
+                var myData = new[] { new { result = resultado } };
+                return Json(myData, JsonRequestBehavior.AllowGet);                                          
+            }
+            catch (System.Exception ex)
+            {
+                resultado = "ERROR: " + ex.Message;
+                var myData = new[] { new { result = resultado } };
+                return Json(myData, JsonRequestBehavior.AllowGet);
+            }            
+        }
+
+
+        [HttpGet]
+        public JsonResult ObtenerSpools(int ProyectoID, int? CuadranteID)
         {
             List<ListaIncidencia> ListaSpools = OrdenTrabajoSpoolBO.Instance.ObtenerSpoolsNoResueltos(ProyectoID, CuadranteID);
             string resultado = "";
@@ -34,6 +102,23 @@ namespace SAM.Web.Shop.Controllers
             var myData = new[] { new { result = resultado } };
             return Json(myData, JsonRequestBehavior.AllowGet);
         }
+        //[HttpGet]
+        //public JsonResult ObtenerSpool(int SpoolID)
+        //{
+        //    List<ListaIncidencia> ListaSpools = OrdenTrabajoSpoolBO.Instance.ObtenerSpoolsNoResueltos(ProyectoID, CuadranteID);
+        //    string resultado = "";
+        //    if (ListaSpools != null && ListaSpools.Count > 0)
+        //    {
+        //        resultado = JsonConvert.SerializeObject(ListaSpools);
+        //    }
+        //    else
+        //    {
+        //        resultado = "NODATA";
+        //    }
+        //    var myData = new[] { new { result = resultado } };
+        //    return Json(myData, JsonRequestBehavior.AllowGet);
+        //}
+
 
         [HttpGet, ValidateInput(false)]
         public JsonResult GuardarIncidencia(int SpoolID, int TipoIncidenciaID, int MaterialSpoolID, int JuntaSpoolID, int ErrorIncidenciaID, string Observacion, string SI)

@@ -25,10 +25,20 @@ namespace SAM.Web.Shop.Controllers
         public ActionResult Index(int? yardId, int? projectId)
         {
 
+            //int PerfilID = 0, total = 0;
+            //List<int> ListaPerfilesCalidad = new List<int>();
+            //ListaPerfilesCalidad.Add(6);
+            //ListaPerfilesCalidad.Add(58);
+            //ListaPerfilesCalidad.Add(59);
+            //ListaPerfilesCalidad.Add(62);
+            //ListaPerfilesCalidad.Add(67);
+            //ListaPerfilesCalidad.Add(72);
+            //ListaPerfilesCalidad.Add(76);
+            //ListaPerfilesCalidad.Add(87);
             try
             {
                 NavContext.SetNumbersControl(string.Empty);
-
+                
                 if (yardId.HasValue)
                 {
                     NavContext.SetYard(yardId.Value);
@@ -39,35 +49,145 @@ namespace SAM.Web.Shop.Controllers
                 }
 
                 if (NavContext.GetCurrentProject().ID > 0)
-                {
-                    SearchControlNumberModel modelNw = new SearchControlNumberModel()
-                    {
-                        ProjectId = NavContext.GetCurrentProject().ID,
-                        Spools = new List<NumeroControlBusqueda>(),
-                        DateProcess = DateTime.Now.ToShortDateString(),
-                        NumberProcess = string.Empty,
-                        Exit = false
-                    };
-
-
-                    return View(modelNw);
+                {                                        
+                    //try
+                    //{
+                    //    PerfilID = int.Parse(Session["PerfilID"].ToString());
+                    //}
+                    //catch (Exception)
+                    //{
+                    //    PerfilID = 0;
+                    //}
+                   
+                    //if(PerfilID > 0)
+                    //{
+                    //    try
+                    //    {
+                    //        total = (from a in ListaPerfilesCalidad where a == PerfilID select a).ToList().Count;
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        total = 0;
+                    //    }                        
+                    //}
+                    
+                    //if(total > 0)
+                    //{
+                    //    return RedirectToAction("Index", "Incidencias");
+                    //}
+                    //else
+                    //{
+                        SearchControlNumberModel modelNw = new SearchControlNumberModel()
+                        {
+                            ProjectId = NavContext.GetCurrentProject().ID,
+                            Spools = new List<NumeroControlBusqueda>(),
+                            DateProcess = DateTime.Now.ToShortDateString(),
+                            NumberProcess = string.Empty,
+                            Exit = false
+                        };
+                        return View(modelNw);
+                    //}                    
                 }
             }
             catch (InvalidDataException e)
             {
                 //ModelState.AddModelError("ProjectId", e.Message);
+                //try
+                //{
+                //    PerfilID = int.Parse(Session["PerfilID"].ToString());
+                //}
+                //catch (Exception)
+                //{
+                //    PerfilID = 0;
+                //}
+                //if (PerfilID > 0)
+                //{
 
+                //    try
+                //    {
+                //        total = (from a in ListaPerfilesCalidad where a == PerfilID select a).ToList().Count;
+                //    }
+                //    catch (Exception)
+                //    {
+                //        total = 0;
+                //    }
 
-                return View();
+                //}
+
+                //if (total > 0)
+                //{
+                //    return RedirectToAction("Index", "Incidencias");
+                //}
+                //else
+                //{
+                    return View();
+                //}
             }
             catch (SecurityException e)
             {
                 //ModelState.AddModelError("ProjectId", e.Message);
+                //try
+                //{
+                //    PerfilID = int.Parse(Session["PerfilID"].ToString());
+                //}
+                //catch (Exception)
+                //{
+                //    PerfilID = 0;
+                //}
+                //if (PerfilID > 0)
+                //{
+
+                //    try
+                //    {
+                //        total = (from a in ListaPerfilesCalidad where a == PerfilID select a).ToList().Count;
+                //    }
+                //    catch (Exception)
+                //    {
+                //        total = 0;
+                //    }
+
+                //}
+
+                //if (total > 0)
+                //{
+                //    return RedirectToAction("Index", "Incidencias");
+                //}
+                //else
+                //{
+                    return View();
+                //}
+            }          
+                        
+            //try
+            //{
+            //    PerfilID = int.Parse(Session["PerfilID"].ToString());
+            //}
+            //catch (Exception)
+            //{
+            //    PerfilID = 0;
+            //}            
+            //if (PerfilID > 0)
+            //{
+
+            //    try
+            //    {
+            //        total = (from a in ListaPerfilesCalidad where a == PerfilID select a).ToList().Count;
+            //    }
+            //    catch (Exception)
+            //    {
+            //        total = 0;
+            //    }
+
+            //}
+
+            //if (total > 0)
+            //{
+            //    return RedirectToAction("Index", "Incidencias");
+            //}
+            //else
+            //{
                 return View();
-            }
-
-
-            return View();
+            //}            
         }
 
         [HttpGet]

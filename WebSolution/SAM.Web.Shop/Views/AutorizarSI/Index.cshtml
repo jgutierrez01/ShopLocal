@@ -7,7 +7,7 @@
 @model SQModel
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Layouts/MasterLayout.cshtml";   
+    Layout = "~/Views/Layouts/MasterLayout.cshtml";
 }
 @section breadcrumbs
 {
@@ -16,15 +16,48 @@
 }
 @section menus{
     <ul class="nav navbar-nav">
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+        @if (Session["PerfilID"].ToString() == "39")
+        {
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+            <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+        }
+        else
+        {
+            int PerfilID = int.Parse(Session["PerfilID"].ToString());
+            switch (PerfilID)
+            {
+                case 1:
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+                    break;
+                case 6:
+                case 58:
+                case 59:
+                case 62:
+                case 67:
+                case 72:
+                case 76:
+                case 87:
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
+                    break;
+                default:
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+                    break;
+            }
+        }
     </ul>
+
 }
 <div id="contenedor" style="padding-bottom: 20px;" class="row">
-    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="width:100%; margin: 0 auto;">    
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="width:100%; margin: 0 auto;">
         <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
             <div id="divproyecto" class="form-group">
                 @Html.Action("ProjectDropDown", "Controls", new { config = DropDownConfigurationFactory.GetRequiredADD(Model, ViewContext.ViewData.ModelState) })
@@ -37,7 +70,7 @@
                 @Html.StyledTextBoxFor(x => x.SQ, new { placeholder = CommonStrings.marcaAguaSolInspect, type = "text", id = "txtSI" })
             </div>
         </div>
-        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">            
+        <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
             <p class="alert alert-info" id="seccionAviso" style="display: none; padding-top: 10px;"></p>
             <p class="alert alert-success" id="seccionSuccess" style="display: none; padding-top: 10px;"></p>
             <p class="alert alert-warning" id="seccionError" style="display: none; padding-top: 10px;"></p>
@@ -47,18 +80,18 @@
         </div>
     </div>
 </div>
-<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" >
+<div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <div id="contieneGrid" style="display:none;">
-        <div id="areaPlanchado" class="addedSection">           
+        <div id="areaPlanchado" class="addedSection">
             <label id="lblAutorizaTodo" style="margin-left: 5px; margin-right: 5px;"></label>
-            <input type="checkbox" class="apple-switch" id="chkAutorizaTodo" style="margin-left: 5px; margin-right: 5px;"/>                                    
+            <input type="checkbox" class="apple-switch" id="chkAutorizaTodo" style="margin-left: 5px; margin-right: 5px;" />
             @*<label id="lblAutorizaTodo" style="margin-left: 5px; margin-right: 5px;"></label>
-            <div class="material-switch">
-                <input id="chkAutorizaTodo" type="checkbox" />
-                <label for="chkAutorizaTodo" class="label-primary"></label>
-            </div>*@
+                <div class="material-switch">
+                    <input id="chkAutorizaTodo" type="checkbox" />
+                    <label for="chkAutorizaTodo" class="label-primary"></label>
+                </div>*@
             <div id="grid" style="padding-top: 20px; margin: 0 auto;"></div>
-        </div>        
+        </div>
     </div>
 </div>
 <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12" style="padding-top: 20px;">
@@ -66,32 +99,32 @@
 </div>
 
 @*GRID POPUP*@
-<div id="windowGrid" style="display: none; z-index:inherit;" class="col-xs-12">  
-    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12"><h4 id="txtNumeroControl"></h4></div>  
+<div id="windowGrid" style="display: none; z-index:inherit;" class="col-xs-12">
+    <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12"><h4 id="txtNumeroControl"></h4></div>
     <div class="row" style="width:100%; padding-right:20px;">
         <div class="col-xs-3">
-            <div class="form-group">              
-                <label id="lblTipoIncidencia"></label>  
+            <div class="form-group">
+                <label id="lblTipoIncidencia"></label>
                 <input id="cmbTipoIncidencia" />
             </div>
-        </div>        
+        </div>
         <div class="col-xs-3">
-            <div class="form-group">                
-                <label id="lblDetalleIncidencia"></label>  
+            <div class="form-group">
+                <label id="lblDetalleIncidencia"></label>
                 <input id="cmbDetalleIncidencia" />
             </div>
-        </div>  
+        </div>
         <div class="col-xs-3">
-            <div class="form-group">                
-                <label id="lblErrores"></label>  
+            <div class="form-group">
+                <label id="lblErrores"></label>
                 <input id="cmbErrores" />
             </div>
-        </div>        
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-11">
             <div class="form-group">
-                <label id="lblObservacion"></label> 
+                <label id="lblObservacion"></label>
                 <textarea id="txtObservacion" class="form-control"></textarea>
             </div>
         </div>
@@ -109,14 +142,14 @@
                 </div>
             </div>
         </div>
-    </div>       
+    </div>
     <div class="row col-lg-12 col-md-12 col-xs-12 col-sm-12">
         <p class="alert alert-warning" id="seccionErrorGrid" style="display: none; padding-top: 10px;"></p>
         <p class="alert alert-success" id="seccionAvisoGrid" style="display: none; padding-top: 10px;"></p>
-        <div id="ContenedorGridPopUp" style="display:none;">            
+        <div id="ContenedorGridPopUp" style="display:none;">
             <div id="gridPopUp" style="padding-top: 20px; padding-bottom: 20px; margin: 0 auto;"></div>
         </div>
-    </div>     
+    </div>
 </div>
 
 @* Modal para confirmar resolucion de incidencias *@
@@ -140,7 +173,7 @@
         <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
             <label id="txtTituloOpcion1" for="radio1"></label>
             <input type="radio" id="radio1" name="radioOpcionResolver" value="ErrorCaptura" />
-        </div>        
+        </div>
     </div>
 
     <div id="campoDetalleResolver" style="display: none;">
@@ -185,10 +218,10 @@
 
 <script>
     $(document).ready(function () {
-              
-        
 
-        ActivarEventos();        
+
+
+        ActivarEventos();
         if ($("#grid").hasClass("k-widget")) {
             $("#grid").removeClass("k-widget");
         }
@@ -196,55 +229,54 @@
             $("#gridPopUp").removeClass("k-widget");
         }
         $("#txtSI").prop("autocomplete", "off");
-        $(".k-header").css("text-align", "center");//Centrar titulo de columnas  
+        $(".k-header").css("text-align", "center");//Centrar titulo de columnas
 
-        
+
     });
-  
+
 </script>
 <style>
-.k-grid  .k-grid-header  .k-header  .k-link {
-    height: auto;
-    overflow-wrap: normal;
-}  
-.k-grid  .k-grid-header  .k-header {
-    white-space: normal;
-}       
-    
-/*ESTILO DE IPHONE*/
-input.apple-switch {
-  position: relative;
-  -webkit-appearance: none;
-  outline: none;
-  width: 80px;
-  height: 40px;
-  background-color: #fff;
-  border: 1px solid #2d6ca2;
-  border-radius: 60px;
-  box-shadow: inset -20px 0 0 0 #fff;
-}
+    .k-grid .k-grid-header .k-header .k-link {
+        height: auto;
+        overflow-wrap: normal;
+    }
 
-input.apple-switch:after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  background: transparent;
-  width: 36px;
-  height: 36px;
-  border-radius: 60%;
-  box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
-}
+    .k-grid .k-grid-header .k-header {
+        white-space: normal;
+    }
 
-input.apple-switch:checked {  
-  box-shadow: inset 35px 0 0 0 #2d6ca2;
-  border-color: #2d6ca2;
-}
+    /*ESTILO DE IPHONE*/
+    input.apple-switch {
+        position: relative;
+        -webkit-appearance: none;
+        outline: none;
+        width: 80px;
+        height: 40px;
+        background-color: #fff;
+        border: 1px solid #2d6ca2;
+        border-radius: 60px;
+        box-shadow: inset -20px 0 0 0 #fff;
+    }
 
-input.apple-switch:checked:after {
-  left: 30px;
-  box-shadow: -2px 4px 3px rgba(0,0,0,0.05);  
-}
+        input.apple-switch:after {
+            content: "";
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            background: transparent;
+            width: 36px;
+            height: 36px;
+            border-radius: 60%;
+            box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+        }
+
+        input.apple-switch:checked {
+            box-shadow: inset 35px 0 0 0 #2d6ca2;
+            border-color: #2d6ca2;
+        }
+
+            input.apple-switch:checked:after {
+                left: 30px;
+                box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
+            }
 </style>
-
-

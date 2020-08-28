@@ -31,6 +31,7 @@ namespace SAM.Entities.Busqueda
         public bool OkPnd { get; set; }
         public int Incidencias { get; set; }
         public bool Granel { get; set; }
+        public bool OkFab { get; set; }
     }
 
     [Serializable]
@@ -63,6 +64,8 @@ namespace SAM.Entities.Busqueda
         public int Incidencias { get; set; }
         [DataMember]
         public bool Granel { get; set; }
+        [DataMember]
+        public bool OkFab { get; set; }
     }
     [Serializable]
     public class AutorizarSI

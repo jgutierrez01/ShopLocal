@@ -7,40 +7,56 @@
 
 @section menus{
     <ul class="nav navbar-nav">
-        @if (Session["PerfilID"].ToString() == "39")
-        {
-            <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+    @if (Session["PerfilID"].ToString() == "39")
+    {
+        <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
             <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
-        }
-        else
+    }
+    else
+    {
+        int PerfilID = int.Parse(Session["PerfilID"].ToString());
+        switch (PerfilID)
         {
-            <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
-            <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
-            <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
-            <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
-            <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+            case 1:
+                <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+                break;
+            case 6:
+            case 58:
+            case 59:
+            case 62:
+            case 67:
+            case 72:
+            case 76:
+            case 87:
+                <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
+                break;
+            default:
+                <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
+                break;
         }
-       
-       
-         @*<li>@Html.ActionLink(Resources.Views.CommonStrings.Fitting, "Index", "Home")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.Welding, "Index", "Home")</li>        
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.RequisitionPainting, "Index", "RequisitionPainting")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.Painting, "Index", "Painting")</li>       
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.QualityRelease, "Index", "Quality")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.OkPND, "Index", "OkPND")</li>  
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.PreparationShipment, "Index", "PreparationShipment")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.Shipment, "Index", "Shipment")</li>
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.ShipmentOut, "Index", "ShipmentOut")</li>         
-       <li>@Html.ActionLink(Resources.Views.CommonStrings.Yards, "Index", "Home")</li>*@
-    </ul>
- }      
+    }
+</ul>
+
+
+
+ }
  @section breadcrumbs
 {
-    @Html.Action("ProjectBreadcrumbLabel", "Controls")
-    
+            @Html.Action("ProjectBreadcrumbLabel", "Controls")
+
+
 }
-@RenderBody()
+        @RenderBody()
 @section scripts
 {
-    @RenderSection("scripts", false)
+            @RenderSection("scripts", false)
 }
