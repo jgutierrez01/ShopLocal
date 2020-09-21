@@ -36,6 +36,9 @@ namespace SAM.Entities.Personalizadas.Shop
         public decimal DiametroMayor { get; set; }
         public string GrupoAcero { get; set; }
         public int Prioridad { get; set; }
+        public string SI { get; set; }
+        public string IWP { get; set; }
+        public string CWP { get; set; }
         public SummarySpool() 
         {
             this.DetailJoints = new List<DetailSummaryJoint>(); 

@@ -7,24 +7,24 @@
 
 @section menus{
     <ul class="nav navbar-nav">
-    @if (Session["PerfilID"].ToString() == "39")
-    {
-        <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
-            <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
-    }
-    else
-    {
+    @{
         int PerfilID = int.Parse(Session["PerfilID"].ToString());
         switch (PerfilID)
         {
-            case 1:
+            case 1: //admin
                 <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
                     <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
                     <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
                     <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
                     <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
                 break;
-            case 6:
+            case 40: //todos los de embarque
+            case 85:
+                <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
+                break;
+            case 6: //todos los de calidad
             case 58:
             case 59:
             case 62:
@@ -32,15 +32,15 @@
             case 72:
             case 76:
             case 87:
+            case 90:
                 <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
                     <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
                     <li>@Html.ActionLink(Resources.Views.CommonStrings.Incident, "Index", "Incidencias")</li>
+                    <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
                 break;
-            default:
+            default: //por default solo detalle spool y cuadrante
                 <li>@Html.ActionLink(Resources.Views.CommonStrings.SearchMenu, "Index", "Yard")</li>
                     <li>@Html.ActionLink(Resources.Views.CommonStrings.Location, "Index", "Location")</li>
-                    <li>@Html.ActionLink(Resources.Views.CommonStrings.SQ, "Index", "SQ")</li>
-                    <li>@Html.ActionLink(Resources.Views.CommonStrings.AutorizaSI, "Index", "AutorizarSI")</li>
                 break;
         }
     }

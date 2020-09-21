@@ -258,4 +258,13 @@
   <data name="ResultadoVisual" xml:space="preserve">
     <value>Result Insp Vis</value>
   </data>
+  <data name="CWP" xml:space="preserve">
+    <value>CWP</value>
+  </data>
+  <data name="IWP" xml:space="preserve">
+    <value>IWP</value>
+  </data>
+  <data name="SI" xml:space="preserve">
+    <value>SI</value>
+  </data>
 </root>

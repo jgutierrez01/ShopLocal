@@ -133,6 +133,15 @@ namespace SAM.Web.Shop.Resources.Models.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CWP.
+        /// </summary>
+        public static string CWP {
+            get {
+                return ResourceManager.GetString("CWP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fecha Acabado.
         /// </summary>
         public static string DateFinished {
@@ -237,6 +246,15 @@ namespace SAM.Web.Shop.Resources.Models.Reports {
         public static string ItemCodeID {
             get {
                 return ResourceManager.GetString("ItemCodeID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IWP.
+        /// </summary>
+        public static string IWP {
+            get {
+                return ResourceManager.GetString("IWP", resourceCulture);
             }
         }
         
@@ -462,6 +480,15 @@ namespace SAM.Web.Shop.Resources.Models.Reports {
         public static string ResultadoVisual {
             get {
                 return ResourceManager.GetString("ResultadoVisual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SI.
+        /// </summary>
+        public static string SI {
+            get {
+                return ResourceManager.GetString("SI", resourceCulture);
             }
         }
         

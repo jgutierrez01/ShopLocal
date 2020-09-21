@@ -69,5 +69,8 @@ namespace SAM.Web.Shop.Models
             get { return FechaOkPnd.HasValue ? FechaOkPnd.Value.ToShortDateString() : string.Empty; }
         }
         public bool Granel { get; set; }
+        public string SI { get; set; }
+        public string IWP { get; set; }
+        public string CWP { get; set; }
     } 
 }

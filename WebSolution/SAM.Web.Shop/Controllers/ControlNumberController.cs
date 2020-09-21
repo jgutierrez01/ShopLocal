@@ -115,7 +115,9 @@ namespace SAM.Web.Shop.Controllers
             crm.NumberControl = NavContext.GetCurrentControlNumber().ControlNumber;
             crm.NumberControlId = NavContext.GetCurrentControlNumber().ControlNumberId;
             crm.Granel = OrdenTrabajoSpoolBO.Instance.EsGranel(controlNumber.SpoolID);
-            
+            crm.SI = cr.SI;
+            crm.IWP = cr.IWP;
+            crm.CWP = cr.CWP;            
             return View("SummarySpool", crm);
         }
     }	
